@@ -11,6 +11,11 @@
   },
   "spawn_time_generation_defects": [],
   "per_program": {
+   "random": {
+    "distinct_AB_pairs": 11,
+    "shipped": 2,
+    "fresh": 9
+   },
    "repeat_random": {
     "distinct_AB_pairs": 18,
     "shipped": 4,
@@ -21,14 +26,19 @@
     "shipped": 3,
     "fresh": 10
    },
-   "cand2_gen001_0.6943": {
-    "distinct_AB_pairs": 3,
-    "shipped": 3,
-    "fresh": 0
+   "wallbreaker": {
+    "distinct_AB_pairs": 13,
+    "shipped": 1,
+    "fresh": 12
    },
    "resonator": {
     "distinct_AB_pairs": 15,
     "shipped": 3,
+    "fresh": 12
+   },
+   "macrosweep": {
+    "distinct_AB_pairs": 14,
+    "shipped": 2,
     "fresh": 12
    },
    "contact_ucb": {
@@ -56,20 +66,10 @@
     "shipped": 3,
     "fresh": 10
    },
-   "random": {
-    "distinct_AB_pairs": 11,
-    "shipped": 2,
-    "fresh": 9
-   },
-   "macrosweep": {
-    "distinct_AB_pairs": 14,
-    "shipped": 2,
-    "fresh": 12
-   },
-   "wallbreaker": {
-    "distinct_AB_pairs": 13,
-    "shipped": 1,
-    "fresh": 12
+   "cand2_gen001_0.6943": {
+    "distinct_AB_pairs": 3,
+    "shipped": 3,
+    "fresh": 0
    }
   },
   "union_pairs": 28
