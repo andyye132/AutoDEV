@@ -1,31 +1,33 @@
 \begin{table}[t]\centering\footnotesize
 \begin{tabular}{lccccccccccc}
 \toprule
-Suite / split & Random & Action-repeat & Go-Explore & Split-and-pump & Saturation & Searched multi-engine (run 7) & Searched run 1 & Opus macrosweep & Opus elites & PPO+count & PPO+RND \\
+Suite / split & Random & Action-repeat & Go-Explore & Split-and-pump & Saturation & Searched multi-engine (run 7) & Searched multi-engine x regret (run 13) & Searched run 1 & Opus macrosweep & PPO+count & PPO+RND \\
 \midrule
-K-Defect / srch (n=119) & 49$\pm$1 & 60$\pm$0 & 57$\pm$0 & 66$\pm$1 & -- & -- & 63$\pm$1 & 63$\pm$1 & 62$\pm$1 & 56$\pm$2 & 51$\pm$0 \\
-K-Defect / h-lvl (n=58) & 56$\pm$1 & 60$\pm$0 & 59$\pm$1 & 61$\pm$1 & -- & -- & 59$\pm$2 & 60$\pm$1 & 60$\pm$0 & 58$\pm$3 & 55$\pm$0 \\
-K-Defect / h-cls (n=148) & 12$\pm$1 & 29$\pm$1 & 27$\pm$1 & 37$\pm$1 & -- & -- & 31$\pm$1 & 33$\pm$1 & 34$\pm$1 & 27$\pm$2 & 17$\pm$2 \\
-K-Goal / srch (n=52) & 36$\pm$3 & 58$\pm$1 & 53$\pm$2 & -- & -- & -- & 59$\pm$2 & 67$\pm$2 & -- & 52$\pm$6 & 38$\pm$3 \\
-K-Goal / h-lvl (n=22) & 29$\pm$2 & 82$\pm$3 & 71$\pm$6 & -- & -- & -- & 81$\pm$3 & 76$\pm$3 & -- & 65$\pm$3 & 38$\pm$3 \\
-K-Fresh / srch (n=444) & 30$\pm$1 & 37$\pm$1 & 35$\pm$0 & 41$\pm$0 & 43$\pm$0 & -- & 40$\pm$1 & -- & -- & -- & -- \\
-G-MountainCar / srch (n=6) & 0$\pm$0 & 100$\pm$0 & 67$\pm$15 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
-G-MountainCar / h-lvl (n=2) & 0$\pm$0 & 100$\pm$0 & 60$\pm$37 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
-G-Acrobot / srch (n=6) & 90$\pm$8 & 100$\pm$0 & 93$\pm$8 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
-G-Acrobot / h-lvl (n=2) & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
-G-DeepSea8 / srch (n=6) & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
-G-DeepSea8 / h-lvl (n=2) & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
-G-DeepSea24 / srch (n=6) & 0$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
-G-DeepSea24 / h-lvl (n=2) & 0$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+K-Defect / srch (n=119) & 49$\pm$1 & 60$\pm$0 & 57$\pm$0 & 66$\pm$1 & -- & -- & -- & 63$\pm$1 & 63$\pm$1 & 56$\pm$2 & 51$\pm$0 \\
+K-Defect / h-lvl (n=58) & 56$\pm$1 & 60$\pm$0 & 59$\pm$1 & 61$\pm$1 & -- & -- & -- & 59$\pm$2 & 60$\pm$1 & 58$\pm$3 & 55$\pm$0 \\
+K-Defect / h-cls (n=148) & 12$\pm$1 & 29$\pm$1 & 27$\pm$1 & 37$\pm$1 & -- & -- & -- & 31$\pm$1 & 33$\pm$1 & 27$\pm$2 & 17$\pm$2 \\
+K-Goal / srch (n=52) & 36$\pm$3 & 58$\pm$1 & 53$\pm$2 & -- & -- & -- & -- & 59$\pm$2 & 67$\pm$2 & 52$\pm$6 & 38$\pm$3 \\
+K-Goal / h-lvl (n=22) & 29$\pm$2 & 82$\pm$3 & 71$\pm$6 & -- & -- & -- & -- & 81$\pm$3 & 76$\pm$3 & 65$\pm$3 & 38$\pm$3 \\
+K-Fresh / srch (n=444) & 30$\pm$1 & 37$\pm$1 & 35$\pm$0 & 41$\pm$0 & 43$\pm$0 & -- & -- & 40$\pm$1 & -- & -- & -- \\
+G-MountainCar / srch (n=6) & 0$\pm$0 & 100$\pm$0 & 67$\pm$15 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+G-MountainCar / h-lvl (n=2) & 0$\pm$0 & 100$\pm$0 & 60$\pm$37 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+G-Acrobot / srch (n=6) & 90$\pm$8 & 100$\pm$0 & 93$\pm$8 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+G-Acrobot / h-lvl (n=2) & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+G-DeepSea8 / srch (n=6) & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+G-DeepSea8 / h-lvl (n=2) & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+G-DeepSea24 / srch (n=6) & 0$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
+G-DeepSea24 / h-lvl (n=2) & 0$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & 100$\pm$0 & -- & 100$\pm$0 & 100$\pm$0 & -- & -- \\
 B-Breakout / srch (n=18) & 33$\pm$0 & 33$\pm$0 & 33$\pm$0 & 29$\pm$4 & 86$\pm$9 & 100$\pm$0 & -- & -- & -- & -- & -- \\
 B-Breakout / h-lvl (n=6) & 33$\pm$0 & 33$\pm$0 & 33$\pm$0 & 33$\pm$0 & 93$\pm$8 & 100$\pm$0 & -- & -- & -- & -- & -- \\
-X-DoorKey / srch (n=6) & 77$\pm$13 & 33$\pm$10 & 10$\pm$8 & 23$\pm$8 & 37$\pm$7 & 100$\pm$0 & 17$\pm$0 & 40$\pm$13 & 27$\pm$8 & -- & -- \\
-X-DoorKey / h-lvl (n=2) & 100$\pm$0 & 0$\pm$0 & 0$\pm$0 & 10$\pm$20 & 50$\pm$0 & 100$\pm$0 & 0$\pm$0 & 70$\pm$24 & 0$\pm$0 & -- & -- \\
-X-FourRooms / srch (n=6) & 27$\pm$8 & 40$\pm$8 & 40$\pm$8 & 37$\pm$16 & 80$\pm$7 & 87$\pm$12 & 23$\pm$13 & 80$\pm$12 & 13$\pm$12 & -- & -- \\
-X-FourRooms / h-lvl (n=2) & 20$\pm$24 & 50$\pm$0 & 40$\pm$20 & 40$\pm$20 & 70$\pm$24 & 20$\pm$24 & 50$\pm$0 & 60$\pm$20 & 0$\pm$0 & -- & -- \\
-X-Unlock / srch (n=6) & 100$\pm$0 & 93$\pm$8 & 53$\pm$16 & 100$\pm$0 & 93$\pm$13 & 100$\pm$0 & 80$\pm$19 & 97$\pm$7 & 53$\pm$12 & -- & -- \\
-X-Unlock / h-lvl (n=2) & 100$\pm$0 & 70$\pm$24 & 20$\pm$39 & 100$\pm$0 & 70$\pm$24 & 100$\pm$0 & 50$\pm$0 & 100$\pm$0 & 10$\pm$20 & -- & -- \\
-C-Ach / srch (n=40) & 25$\pm$3 & 16$\pm$2 & 10$\pm$0 & 10$\pm$0 & 35$\pm$3 & 27$\pm$3 & 12$\pm$3 & 17$\pm$0 & 12$\pm$3 & -- & -- \\
+S-Sokoban / srch (n=18) & 66$\pm$7 & 56$\pm$3 & 51$\pm$4 & 60$\pm$4 & 54$\pm$2 & 79$\pm$5 & 60$\pm$2 & -- & -- & -- & -- \\
+S-Sokoban / h-lvl (n=6) & 70$\pm$7 & 47$\pm$7 & 40$\pm$13 & 50$\pm$10 & 50$\pm$0 & 80$\pm$7 & 63$\pm$7 & -- & -- & -- & -- \\
+X-DoorKey / srch (n=6) & 77$\pm$13 & 33$\pm$10 & 10$\pm$8 & 23$\pm$8 & 37$\pm$7 & 100$\pm$0 & -- & 17$\pm$0 & 40$\pm$13 & -- & -- \\
+X-DoorKey / h-lvl (n=2) & 100$\pm$0 & 0$\pm$0 & 0$\pm$0 & 10$\pm$20 & 50$\pm$0 & 100$\pm$0 & -- & 0$\pm$0 & 70$\pm$24 & -- & -- \\
+X-FourRooms / srch (n=6) & 27$\pm$8 & 40$\pm$8 & 40$\pm$8 & 37$\pm$16 & 80$\pm$7 & 87$\pm$12 & -- & 23$\pm$13 & 80$\pm$12 & -- & -- \\
+X-FourRooms / h-lvl (n=2) & 20$\pm$24 & 50$\pm$0 & 40$\pm$20 & 40$\pm$20 & 70$\pm$24 & 20$\pm$24 & -- & 50$\pm$0 & 60$\pm$20 & -- & -- \\
+X-Unlock / srch (n=6) & 100$\pm$0 & 93$\pm$8 & 53$\pm$16 & 100$\pm$0 & 93$\pm$13 & 100$\pm$0 & -- & 80$\pm$19 & 97$\pm$7 & -- & -- \\
+X-Unlock / h-lvl (n=2) & 100$\pm$0 & 70$\pm$24 & 20$\pm$39 & 100$\pm$0 & 70$\pm$24 & 100$\pm$0 & -- & 50$\pm$0 & 100$\pm$0 & -- & -- \\
+C-Ach / srch (n=40) & 25$\pm$3 & 16$\pm$2 & 10$\pm$0 & 10$\pm$0 & 35$\pm$3 & 27$\pm$3 & -- & 12$\pm$3 & 17$\pm$0 & -- & -- \\
 \bottomrule
 \end{tabular}
 \caption{Accuracy across breadth: fraction of targets reached within the suite's budget (\%, mean $\pm$ 95\% CI over seeds) for the same frozen programs on every suite; -- = not evaluated.}

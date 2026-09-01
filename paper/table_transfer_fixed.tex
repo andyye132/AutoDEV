@@ -14,6 +14,7 @@ Root CEM (survey) & 0.594$\pm$0.004 (63\%) & 0.584$\pm$0.003 (60\%) & 0.278$\pm$
 Death-aware checkpoints (survey) & 0.590$\pm$0.005 (63\%) & 0.591$\pm$0.003 (61\%) & 0.267$\pm$0.006 (30\%) \\
 Resonance sweep (survey) & 0.587$\pm$0.013 (63\%) & 0.548$\pm$0.013 (57\%) & 0.276$\pm$0.005 (30\%) \\
 \midrule
+Searched: multi-engine regret (run 13) & 0.627$\pm$0.007 (65\%) & 0.598$\pm$0.005 (62\%) & 0.326$\pm$0.006 (36\%) \\
 Searched: hard-tier fitness (run 11) & 0.632$\pm$0.003 (66\%) & 0.595$\pm$0.007 (61\%) & 0.327$\pm$0.005 (36\%) \\
 Searched: fixed harness (run 9) & 0.613$\pm$0.007 (64\%) & 0.583$\pm$0.007 (61\%) & 0.344$\pm$0.007 (38\%) \\
 Searched: racy era (run 1) & 0.579$\pm$0.007 (63\%) & 0.566$\pm$0.006 (59\%) & 0.267$\pm$0.010 (31\%) \\
@@ -29,6 +30,6 @@ PPO+RND & 0.461$\pm$0.019 (51\%) & 0.502$\pm$0.017 (55\%) & 0.124$\pm$0.016 (17\
 PPO+ICM & 0.451$\pm$0.028 (50\%) & 0.491$\pm$0.011 (52\%) & 0.117$\pm$0.019 (16\%) \\
 \bottomrule
 \end{tabular}
-\caption{Score $=1-\min(\text{steps},\text{budget})/\text{budget}$ (mean $\pm$ 95\% CI over 5 seeds) and fraction of planted defects witnessed, per split; budget $128\times2048$ env steps per instance; size-l configuration, 74 shipped levels. Instances unwitnessable by construction or witnessed by no-ops alone are excluded from the denominators (0 of 148, 8 of 127, 1 of 59).Fixed harness; program rows evaluation seeds 100--104, PPO rows training seeds 0--2. Run 11 (reachable-hard fitness) holds the only instance-significant gain over split-and-pump (search $+0.011\pm0.009$); run 9 searched from the Go-Explore seed.}
+\caption{Score $=1-\min(\text{steps},\text{budget})/\text{budget}$ (mean $\pm$ 95\% CI over 5 seeds) and fraction of planted defects witnessed, per split; budget $128\times2048$ env steps per instance; size-l configuration, 74 shipped levels. Instances unwitnessable by construction or witnessed by no-ops alone are excluded from the denominators (0 of 148, 8 of 127, 1 of 59).Fixed harness; program rows evaluation seeds 100--104, PPO rows training seeds 0--2. Run 11 holds the only significant search gain over split-and-pump ($+0.011\pm0.009$); run 13 ties run 11 on every split while transferring to five held-out engine families (Table~\ref{tab:breadth}); run 12 trades sealed-class gain for search speed.}
 \label{tab:transfer_fixed}
 \end{table}

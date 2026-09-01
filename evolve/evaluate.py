@@ -19,6 +19,30 @@ def aggregate(results):
     pub = {"detected": r["detected"], **{f"cls_{k}": v for k, v in r["per_class"].items()},
            **{f"det_{k}": v for k, v in r["detected_per_class"].items()}, "wall_s": r.get("wall", 0.0)}
     score = float(r["score"]); fb_lines = []
+    # multi-engine result: compute per-substrate regret with a {kind: {name: {"s":..}}} norm table and weight-combine
+    if r.get("per_substrate") and not r.get("names"):
+        import os as _os, json as _json2
+        npth = _os.environ.get("AUTODEV_TARGET_NORM")
+        N = _json2.load(open(npth)) if npth and _os.path.exists(npth) else {}
+        W = {k: float(v) for k, v in _json2.loads(_os.environ.get("AUTODEV_SUB_WEIGHTS", "{}")).items()}
+        tot = 0.0; wsum = 0.0
+        for kind, sub in r["per_substrate"].items():
+            w = W.get(kind, 1.0)
+            if sub.get("names") and sub.get("first_hit") is not None and sub.get("budget"):
+                f2 = _np.asarray(sub["first_hit"], float); b2 = sub["budget"]
+                if f2.ndim == 1: f2 = f2[:, None]
+                if f2.shape[0] != len(sub["names"]): f2 = f2.T
+                s2 = _np.clip(1.0 - _np.minimum(f2, b2) / b2, 0, 1).mean(1)
+                nk = N.get(kind, {})
+                sstar = _np.array([max(float(nk.get(n, {"s": 0.05}).get("s", 0.05)), 0.05) for n in sub["names"]])
+                val = float(_np.minimum(s2 / sstar, 2.0).mean())
+                worst = _np.argsort(s2 / sstar)[:3]
+                fb_lines.append(f"{kind} worst-vs-best: " + "; ".join(f"{sub['names'][i]} {s2[i]:.2f}/{sstar[i]:.2f}" for i in worst))
+            else:
+                val = float(sub["score"])
+            tot += w * val; wsum += w
+            fb_lines.append(f"{kind}: regret {val:.3f} detected {sub['detected']:.2f}")
+        score = tot / max(wsum, 1e-9)
     names = r.get("names"); fh = r.get("first_hit"); B = r.get("budget")
     if names and fh is not None and B:
         fh = _np.asarray(fh, float)

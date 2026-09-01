@@ -1,0 +1,199 @@
+{
+ "search": [
+  {
+   "name": "Sokoban__thr1_seed0",
+   "seed": 0,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr1_seed1",
+   "seed": 1,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr1_seed2",
+   "seed": 2,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr1_seed3",
+   "seed": 3,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr1_seed4",
+   "seed": 4,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr1_seed5",
+   "seed": 5,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed0",
+   "seed": 0,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed1",
+   "seed": 1,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed2",
+   "seed": 2,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed3",
+   "seed": 3,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed4",
+   "seed": 4,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed5",
+   "seed": 5,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed0",
+   "seed": 0,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed1",
+   "seed": 1,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed2",
+   "seed": 2,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed3",
+   "seed": 3,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed4",
+   "seed": 4,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed5",
+   "seed": 5,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "Sokoban__thr1_seed6",
+   "seed": 6,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr1_seed7",
+   "seed": 7,
+   "target": [
+    1.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed6",
+   "seed": 6,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr2_seed7",
+   "seed": 7,
+   "target": [
+    2.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed6",
+   "seed": 6,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  },
+  {
+   "name": "Sokoban__thr3_seed7",
+   "seed": 7,
+   "target": [
+    3.0
+   ],
+   "cls": "Sokoban"
+  }
+ ],
+ "heldout_class_instances": []
+}

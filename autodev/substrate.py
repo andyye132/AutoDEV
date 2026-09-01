@@ -61,6 +61,22 @@ class CraftaxSubstrate(Substrate):
         return levels, metas, info
 
 
+class JumanjiSubstrate(Substrate):
+    def __init__(self, env_name="Sokoban-v0"):
+        from autodev.jumanji_adapter import JumanjiEnvShim, make_feature_fn, witness, meta_for
+        self.env = JumanjiEnvShim(env_name); self.ep = None; self.env_name = env_name; self.sp = None
+        self.feat_fn = make_feature_fn(env_name)
+        self.oracle = lambda st, r, d, meta: witness(st, r, d, meta)[None]; self.n_flags = 1
+    def tasks(self, split_path, which):
+        import json, os, jax
+        from autodev.jumanji_adapter import meta_for
+        rows = json.load(open(split_path))[which]
+        levels = [jax.random.PRNGKey(r["seed"]) for r in rows]
+        metas = [meta_for(self.env_name, r["target"]) for r in rows]
+        info = [dict(name=r["name"], cls=r["cls"], level=str(r["seed"])) for r in rows]
+        return levels, metas, info
+
+
 class GymnaxSubstrate(Substrate):
     name = "gymnax"
     def __init__(self, env_name="MountainCar-v0", size=None):
@@ -92,6 +108,8 @@ class XMiniGridSubstrate(Substrate):
 
 
 def make_substrate(spec: str):
+    if spec.startswith("jumanji:"):
+        return JumanjiSubstrate(spec.split(":", 1)[1])
     """'kinetix' | 'kinetix:m' | 'craftax' | 'craftax:classic' | 'gymnax:MountainCar-v0' | 'xminigrid:MiniGrid-DoorKey-8x8'"""
     kind, _, arg = spec.partition(":")
     if kind == "kinetix": return KinetixSubstrate(size=arg or "l")

@@ -1,0 +1,444 @@
+{
+"kinetix:l": {
+"s_h1_thrust_over_ball__ANOMALY__0": {
+"s": 0.9775
+},
+"s_h1_thrust_over_ball__DISARMED__0": {
+"s": 0.9805
+},
+"s_h2_one_wheel_car__ANOMALY__0": {
+"s": 0.8955
+},
+"s_h4_thrust_aim__ANOMALY__0": {
+"s": 0.9756
+},
+"s_h4_thrust_aim__DISARMED__0": {
+"s": 0.9766
+},
+"s_h6_unicycle_right__ANOMALY__0": {
+"s": 0.8965
+},
+"s_h7_unicycle_left__ANOMALY__0": {
+"s": 0.8965
+},
+"s_h8_unicycle_balance__ANOMALY__0": {
+"s": 0.05
+},
+"m_arm_left__SHORTCUT__0": {
+"s": 0.9883
+},
+"m_arm_left__ANOMALY__0": {
+"s": 0.9541
+},
+"m_arm_left__DISARMED__0": {
+"s": 0.9676
+},
+"m_arm_right__SHORTCUT__0": {
+"s": 0.9883
+},
+"m_arm_right__ANOMALY__0": {
+"s": 0.9408
+},
+"m_arm_right__DISARMED__0": {
+"s": 0.9814
+},
+"m_arm_up__ANOMALY__0": {
+"s": 0.9682
+},
+"m_h10_thrust_right_easy__ANOMALY__0": {
+"s": 0.9785
+},
+"m_h11_thrust_left_easy__ANOMALY__0": {
+"s": 0.9744
+},
+"m_h12_thrustfall_left__ANOMALY__0": {
+"s": 0.9824
+},
+"m_h12_thrustfall_left__DISARMED__0": {
+"s": 0.9824
+},
+"m_h15_thrustshoot__ANOMALY__0": {
+"s": 0.9869
+},
+"m_h16_thrustcontrol_right__TUNNEL__0": {
+"s": 0.9811
+},
+"m_h16_thrustcontrol_right__SHORTCUT__0": {
+"s": 0.9873
+},
+"m_h16_thrustcontrol_right__ANOMALY__0": {
+"s": 0.9754
+},
+"m_h16_thrustcontrol_right__DISARMED__0": {
+"s": 0.9668
+},
+"m_h17_thrustcontrol_left__TUNNEL__0": {
+"s": 0.9713
+},
+"m_h17_thrustcontrol_left__SHORTCUT__0": {
+"s": 0.9766
+},
+"m_h17_thrustcontrol_left__ANOMALY__0": {
+"s": 0.9639
+},
+"m_h17_thrustcontrol_left__DISARMED__0": {
+"s": 0.9668
+},
+"m_h19_thrust_left_very_easy__ANOMALY__0": {
+"s": 0.9742
+},
+"m_h1_car_left__DISARMED__0": {
+"s": 0.9598
+},
+"m_h2_car_right__DISARMED__0": {
+"s": 0.9609
+},
+"m_h3_car_thrust__ANOMALY__0": {
+"s": 0.9736
+},
+"m_h3_car_thrust__DISARMED__0": {
+"s": 0.9795
+},
+"m_h4_thrust_the_needle__ANOMALY__0": {
+"s": 0.9844
+},
+"m_h9_spin_the_right_way__TUNNEL__0": {
+"s": 0.9863
+},
+"m_h9_spin_the_right_way__SHORTCUT__0": {
+"s": 0.9863
+},
+"m_h9_spin_the_right_way__ANOMALY__0": {
+"s": 0.9742
+},
+"l_car_launch__TUNNEL__0": {
+"s": 0.05
+},
+"l_car_launch__SHORTCUT__0": {
+"s": 0.9594
+},
+"l_car_launch__ANOMALY__0": {
+"s": 0.9746
+},
+"l_car_swing_around__TUNNEL__0": {
+"s": 0.9641
+},
+"l_car_swing_around__TUNNEL__1": {
+"s": 0.05
+},
+"l_car_swing_around__SHORTCUT__0": {
+"s": 0.9242
+},
+"l_car_swing_around__SHORTCUT__1": {
+"s": 0.05
+},
+"l_car_swing_around__ANOMALY__0": {
+"s": 0.9492
+},
+"l_chain_thrust__TUNNEL__0": {
+"s": 0.9873
+},
+"l_chain_thrust__ANOMALY__0": {
+"s": 0.0
+},
+"l_chain_thrust__DISARMED__0": {
+"s": 0.9596
+},
+"l_grasp_hard__TUNNEL__0": {
+"s": 0.0
+},
+"l_grasp_hard__SHORTCUT__0": {
+"s": 0.9824
+},
+"l_grasp_hard__SHORTCUT__1": {
+"s": 0.9824
+},
+"l_grasp_hard__ANOMALY__0": {
+"s": 0.9578
+},
+"l_h0_angrybirds__TUNNEL__0": {
+"s": 0.9713
+},
+"l_h0_angrybirds__SHORTCUT__0": {
+"s": 0.05
+},
+"l_h0_angrybirds__SHORTCUT__1": {
+"s": 0.05
+},
+"l_h0_angrybirds__ANOMALY__0": {
+"s": 0.0
+},
+"l_h11_obstacle_avoidance__ANOMALY__0": {
+"s": 0.05
+},
+"l_h15_swing_up__SHORTCUT__0": {
+"s": 0.05
+},
+"l_h15_swing_up__SHORTCUT__1": {
+"s": 0.05
+},
+"l_h15_swing_up__ANOMALY__0": {
+"s": 0.05
+},
+"l_h16_thruster_goal__ANOMALY__0": {
+"s": 0.05
+},
+"l_h1_car_left__ANOMALY__0": {
+"s": 0.9016
+},
+"l_h3_car_right__ANOMALY__0": {
+"s": 0.9105
+},
+"l_h4_cartpole__ANOMALY__0": {
+"s": 0.0
+},
+"l_h5_flappy_bird__ANOMALY__0": {
+"s": 0.9668
+},
+"l_h5_flappy_bird__DISARMED__0": {
+"s": 0.8092
+},
+"l_h5_flappy_bird__DISARMED__1": {
+"s": 0.9521
+},
+"l_h7_maze_1__ANOMALY__0": {
+"s": 0.4254
+},
+"l_h7_maze_1__DISARMED__1": {
+"s": 0.9209
+},
+"l_h9_morph_direction__TUNNEL__0": {
+"s": 0.05
+},
+"l_h9_morph_direction__TUNNEL__1": {
+"s": 0.8861
+},
+"l_h9_morph_direction__SHORTCUT__0": {
+"s": 0.9082
+},
+"l_h9_morph_direction__ANOMALY__0": {
+"s": 0.9615
+},
+"l_hard_beam_balance__ANOMALY__0": {
+"s": 0.9736
+},
+"l_hard_cartpole_thrust__ANOMALY__0": {
+"s": 0.05
+},
+"l_hard_cartpole_thrust__DISARMED__0": {
+"s": 0.8271
+},
+"l_hard_cartpole_thrust__DISARMED__1": {
+"s": 0.9473
+},
+"l_hard_cartpole_wheels__ANOMALY__0": {
+"s": 0.05
+},
+"l_hard_cartpole_wheels__DISARMED__0": {
+"s": 0.9086
+},
+"l_hard_cartpole_wheels__DISARMED__1": {
+"s": 0.9051
+},
+"l_hard_lunar_lander__ANOMALY__0": {
+"s": 0.9766
+},
+"l_hard_pinball__TUNNEL__0": {
+"s": 0.9732
+},
+"l_hard_pinball__TUNNEL__1": {
+"s": 0.9682
+},
+"l_hard_pinball__SHORTCUT__0": {
+"s": 0.9752
+},
+"l_hard_pinball__SHORTCUT__1": {
+"s": 0.9754
+},
+"l_hard_pinball__ANOMALY__0": {
+"s": 0.9781
+},
+"l_lever_puzzle__TUNNEL__0": {
+"s": 0.9727
+},
+"l_lever_puzzle__TUNNEL__1": {
+"s": 0.05
+},
+"l_lever_puzzle__SHORTCUT__0": {
+"s": 0.5945
+},
+"l_lever_puzzle__SHORTCUT__1": {
+"s": 0.9729
+},
+"l_lever_puzzle__ANOMALY__0": {
+"s": 0.9541
+},
+"l_mjc_half_cheetah__ANOMALY__0": {
+"s": 0.0
+},
+"l_mjc_half_cheetah_easy__ANOMALY__0": {
+"s": 0.0
+},
+"l_mjc_hopper__ANOMALY__0": {
+"s": 0.0619
+},
+"l_mjc_hopper_easy__ANOMALY__0": {
+"s": 0.9586
+},
+"l_mjc_swimmer__ANOMALY__0": {
+"s": 0.9107
+},
+"l_mjc_walker__SHORTCUT__0": {
+"s": 0.05
+},
+"l_mjc_walker__ANOMALY__0": {
+"s": 0.0869
+},
+"l_mjc_walker_easy__SHORTCUT__0": {
+"s": 0.05
+},
+"l_mjc_walker_easy__ANOMALY__0": {
+"s": 0.6822
+},
+"l_rail__TUNNEL__0": {
+"s": 0.9883
+},
+"l_rail__TUNNEL__1": {
+"s": 0.9863
+},
+"l_rail__ANOMALY__0": {
+"s": 0.9398
+}
+},
+"craftax": {
+"world0__COLLECT_WOOD": {
+"s": 0.9982
+},
+"world0__PLACE_TABLE": {
+"s": 0.9476
+},
+"world0__MAKE_WOOD_PICKAXE": {
+"s": 0.5117
+},
+"world1__COLLECT_WOOD": {
+"s": 1.0
+},
+"world1__PLACE_TABLE": {
+"s": 0.9736
+},
+"world1__MAKE_WOOD_PICKAXE": {
+"s": 0.4422
+},
+"world2__COLLECT_WOOD": {
+"s": 0.9995
+},
+"world2__PLACE_TABLE": {
+"s": 0.853
+},
+"world2__ENTER_DUNGEON": {
+"s": 0.5721
+},
+"world3__COLLECT_WOOD": {
+"s": 0.999
+},
+"world3__PLACE_TABLE": {
+"s": 0.9391
+},
+"world3__MAKE_WOOD_PICKAXE": {
+"s": 0.8099
+},
+"world2__MAKE_WOOD_PICKAXE": {
+"s": 0.7518
+},
+"world2__MAKE_IRON_PICKAXE": {
+"s": 0.3436
+},
+"world2__OPEN_CHEST": {
+"s": 0.6619
+},
+"world3__COLLECT_STONE": {
+"s": 0.3086
+},
+"world0__COLLECT_STONE": {
+"s": 0.0436
+}
+},
+"gymnax:MountainCar-v0": {
+"MountainCar-v0__seed0": {
+"s": 0.7688
+},
+"MountainCar-v0__seed1": {
+"s": 0.7438
+},
+"MountainCar-v0__seed2": {
+"s": 0.709
+},
+"MountainCar-v0__seed3": {
+"s": 0.7715
+},
+"MountainCar-v0__seed4": {
+"s": 0.725
+},
+"MountainCar-v0__seed5": {
+"s": 0.7328
+},
+"MountainCar-v0__seed6": {
+"s": 0.7152
+},
+"MountainCar-v0__seed7": {
+"s": 0.7656
+}
+},
+"gymnax:Acrobot-v1": {
+"Acrobot-v1__seed0": {
+"s": 0.7473
+},
+"Acrobot-v1__seed1": {
+"s": 0.7527
+},
+"Acrobot-v1__seed2": {
+"s": 0.7605
+},
+"Acrobot-v1__seed3": {
+"s": 0.7309
+},
+"Acrobot-v1__seed4": {
+"s": 0.7426
+},
+"Acrobot-v1__seed5": {
+"s": 0.748
+},
+"Acrobot-v1__seed6": {
+"s": 0.7359
+},
+"Acrobot-v1__seed7": {
+"s": 0.773
+}
+},
+"gymnax:DeepSea-bsuite": {
+"DeepSea-bsuite__seed0": {
+"s": 0.9863
+},
+"DeepSea-bsuite__seed1": {
+"s": 0.9863
+},
+"DeepSea-bsuite__seed2": {
+"s": 0.9863
+},
+"DeepSea-bsuite__seed3": {
+"s": 0.9863
+},
+"DeepSea-bsuite__seed4": {
+"s": 0.9863
+},
+"DeepSea-bsuite__seed5": {
+"s": 0.9863
+},
+"DeepSea-bsuite__seed6": {
+"s": 0.9863
+},
+"DeepSea-bsuite__seed7": {
+"s": 0.9863
+}
+}
+}

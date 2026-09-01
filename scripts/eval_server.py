@@ -53,8 +53,40 @@ if a.substrates:
     log("substrates: " + ", ".join(f"{x['kind']} w={x['weight']} {x['cfg']}" for x in SUBS))
 
 
+RACE = os.environ.get("AUTODEV_RACE") == "1"
+RACE_SPLIT = os.environ.get("AUTODEV_RACE_SPLIT", "")
+RACE_MARGIN = float(os.environ.get("AUTODEV_RACE_MARGIN", "0.02"))
+_race_ref = {"vec": None}
+
+def _rung1(path):
+    """Rung-1 evaluation: the race split, 1 seed. Returns (per-target score vector dict, result)."""
+    from autodev.search_eval import evaluate_hooks
+    import numpy as _np
+    mod = load_program(path)
+    r = evaluate_hooks(mod.init, mod.restore, mod.act, mod.archive, split_path=RACE_SPLIT, which=a.which, size=a.size,
+                       seeds=(seeds[0],), workers=a.workers, steps=a.steps, chunk=a.chunk, log=None)
+    fh = _np.asarray(r["first_hit"], float); B = r["budget"]
+    if fh.ndim == 1: fh = fh[:, None]
+    if fh.shape[0] != len(r["names"]): fh = fh.T
+    vec = {n: float(_np.clip(1 - min(row.mean(), B) / B, 0, 1)) for n, row in zip(r["names"], fh)}
+    return vec, r
+
+
 def evaluate(path):
     from autodev.search_eval import evaluate_hooks
+    if RACE and RACE_SPLIT and not SUBS:
+        if _race_ref["vec"] is None and os.environ.get("AUTODEV_RACE_REF_PROG"):
+            log("racing: caching rung-1 reference"); _race_ref["vec"], _ = _rung1(os.environ["AUTODEV_RACE_REF_PROG"])
+        if _race_ref["vec"] is not None:
+            vec, r1 = _rung1(path)
+            common = [n for n in vec if n in _race_ref["vec"]]
+            delta = sum(vec[n] - _race_ref["vec"][n] for n in common) / max(len(common), 1)
+            if delta < -RACE_MARGIN:
+                log(f"raced out at rung 1 (paired delta {delta:+.4f} on {len(common)} targets)")
+                r1["raced_out"] = True; r1["rung1_delta"] = delta
+                r1["score"] = max(0.0, r1["score"] - 0.2)   # pessimistic: keep raced-out candidates below real ones
+                return r1
+            log(f"rung 1 passed (paired delta {delta:+.4f}); full evaluation")
     mod = load_program(path)
     if not SUBS:
         return evaluate_hooks(mod.init, mod.restore, mod.act, mod.archive, split_path=a.split, which=a.which, size=a.size, seeds=seeds,
@@ -63,7 +95,8 @@ def evaluate(path):
     for x in SUBS:
         r = evaluate_hooks(mod.init, mod.restore, mod.act, mod.archive, split_path=x["split"], which=a.which, seeds=seeds, substrate=x["sub"],
                            workers=x["cfg"]["workers"], steps=x["cfg"]["steps"], slots=x["cfg"]["slots"], chunk=x["cfg"]["chunk"], log=log)
-        per[x["kind"]] = dict(score=r["score"], detected=r["detected"], per_class=r["per_class"], detected_per_class=r["detected_per_class"], wall=r["wall"])
+        per[x["kind"]] = dict(score=r["score"], detected=r["detected"], per_class=r["per_class"], detected_per_class=r["detected_per_class"], wall=r["wall"],
+                              names=r.get("names"), first_hit=(r.get("first_hit").tolist() if hasattr(r.get("first_hit"), "tolist") else r.get("first_hit")), budget=r.get("budget"))
         total += x["weight"] * r["score"]; wsum += x["weight"]
         log(f"  {x['kind']}: score {r['score']:.4f} detected {r['detected']:.3f} ({r['wall']:.0f}s)")
     return dict(score=total / max(wsum, 1e-9), detected=float(sum(v["detected"] for v in per.values()) / len(per)),

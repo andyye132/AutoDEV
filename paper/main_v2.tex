@@ -7,20 +7,21 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Exploration objectives for RL testers are designed by hand, and nobody knows whether the ones that reach some target states reach others. We let an
-autonomous research loop discover an exploration \emph{procedure} --- code over a save/restore archive of simulator states --- on Kinetix, a suite of
-2D physics games, scored on 337 planted defects with witness states, 30\% of levels and one whole defect class sealed from the search. The loop's first
-answer was a procedure that beat every hand-designed and RL tester on every split. It was an exploit: a race in the vectorised archive let the
-procedure restore physically impossible states, and every check that ran through the evaluator confirmed the gain. The one check that did not ---
-reproducing each counted hit from a level reset --- caught it. On the fixed harness the discovered procedure is level with action-repeat random
-(0.579 vs.\ 0.574 on the search split, 0.267 vs.\ 0.259 on the sealed class; 5 seeds). Re-run on the corrected harness, the search recovers: its new best is level with the strongest procedure from a parallel survey program and significantly ahead of every hand-designed and RL tester on the search split and the sealed class. We report what survives: a replay-verified benchmark with a
-reachability calibration and a frozen protocol; a survey-driven program of 24 exploration procedures the loop then wrote and benchmarked, of which
-nineteen beat action-repeat on the targets a single held input can reach (best 0.816 vs.\ 0.709) and the leader, split-and-pump, is ahead on the
-exploration tier (0.440 / 50\% vs.\ 0.373 / 42\%) and on the full protocol beats every hand-designed, searched and RL tester on the search split (0.621 vs.\ 0.574) and the sealed class (0.338 vs.\ 0.259; paired $+0.079\pm0.035$); the finding that the exploration tier's residual is a barrier common to all 24 procedures (their union
-reaches 24 of 43 targets against the best single procedure's 22, and 36 of the 37 never-reached targets have never been witnessed by any method); and
-bounds on the practical value of any of it: PPO overtakes the procedures at $4\times$ the budget, the procedures find targets 5--9$\times$ cheaper, and
-nothing transfers across engines. Twenty-eight replay-verified engine anomalies (seven severity-A, including four joint tears) on shipped and generated levels come from the same runs. The benchmark, the
-procedures and Part~1 were produced by the loop; the authors built and verified the oracles and document every intervention, including the exploit.
+Game studios test games with hand-designed RL agents; we ask what an autonomous research loop can discover instead --- and the answer turned into a single
+finding about autonomous discovery itself: \textbf{what a loop discovers, and how far it generalizes, is determined by the evaluator it optimizes; the search is
+interchangeable, the fitness is the steering wheel.} We show this six ways on a replay-verified benchmark of 800+ planted defects across five engine families,
+with 30\% of levels, one whole defect class, and entire engines sealed from search. (1) An \emph{untrusted} evaluator steers into fraud: the loop's first
+``discovery'' exploited a race in its own harness, passed every evaluator-mediated check, and was caught only by replaying hits from reset --- verification now
+lives inside the fitness, making the exploit worthless by construction. (2) A \emph{trusted, well-aimed} evaluator beats training: LLM-written procedures
+surpass every hand-designed, one-shot-LLM and PPO tester at equal budget (0.62 vs.\ 0.57 vs.\ 0.49 on the search split; 37--38\% vs.\ 29\% vs.\ 27\% on the sealed
+class, paired CIs excluding zero), find each target 5--9$\times$ cheaper with zero training, and saturate with budget while PPO needs 4--16$\times$ to catch up.
+(3) \emph{Headroom placement is discovery}: the same loop climbs from weak seeds, flatlines at the frontier under a plain fitness, advances the frontier only
+when the fitness targets the tier where testers differ ($+0.011\pm0.009$ paired), and trades along the search--transfer frontier under regret shaping.
+(4) \emph{Evaluator breadth is generality}: a multi-engine fitness yields a program that transfers at 100\% to two engine families it never saw, where every
+single-engine program collapses. (5) No composition of finished programs --- fusion, portfolios, schedules, LLM routing --- does what a fitness change does; all
+tie. (6) Steered well, the loop pays off at the object level: 28 replay-verified engine anomalies, including a player-triggerable escape in a shipped level and
+four joint tears. The benchmark, procedures, searches and Part~1 were produced by the loop; the authors built the oracles, verified every number, and document
+every intervention --- including the exploit.
 \end{abstract}
 
 \section*{Part 1 --- Auto research result (agent-written)}

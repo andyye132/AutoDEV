@@ -1174,6 +1174,110 @@
    }
   }
  },
+ "S-Sokoban": {
+  "search": {
+   "random": {
+    "detected": 0.6555555555555556,
+    "ci": 0.0722287176566287,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.5555555555555556,
+    "ci": 0.034433690077389036,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.5111111111111111,
+    "ci": 0.04074249154487181,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "split_pump.py": {
+    "detected": 0.6000000000000001,
+    "ci": 0.040742491544871785,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.5444444444444445,
+    "ci": 0.021777777777777785,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 0.788888888888889,
+    "ci": 0.05334444328727812,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run13_best_gen038_0.7450.py": {
+    "detected": 0.6000000000000001,
+    "ci": 0.021777777777777785,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "random": {
+    "detected": 0.7,
+    "ci": 0.06533333333333335,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.4666666666666666,
+    "ci": 0.06533333333333334,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.39999999999999997,
+    "ci": 0.13066666666666663,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "split_pump.py": {
+    "detected": 0.5,
+    "ci": 0.10330107023216704,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.5,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 0.8,
+    "ci": 0.06533333333333335,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run13_best_gen038_0.7450.py": {
+    "detected": 0.6333333333333333,
+    "ci": 0.06533333333333331,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
  "X-DoorKey": {
   "search": {
    "split_pump.py": {
