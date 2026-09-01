@@ -1,0 +1,19 @@
+{
+ "union": 28,
+ "best_single": 18,
+ "portfolio6": 27,
+ "exclusive_pairs": 6,
+ "exclusive_severityA": [
+  [
+   "fresh_0033",
+   "JOINT_TEAR",
+   "wallbreaker"
+  ],
+  [
+   "fresh_0085",
+   "JOINT_TEAR",
+   "contact_ucb"
+  ]
+ ],
+ "note": "contact_ucb bottom-of-benchmark (0.534) but #2 scanner (16); diversity != rank"
+}
