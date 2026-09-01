@@ -1,0 +1,8 @@
+WARNING:absl:Grain multiprocess worker profiling requires jaxlib extension version 448 or later (jaxlib >= 0.11.0). Current version: 397.
+  seed 100 0-7 found 0.12 (133s)
+  seed 100 8-11 found 0.25 (202s)
+  seed 101 0-7 found 0.25 (322s)
+  seed 101 8-11 found 0.25 (380s)
+RUN deathaware.py heldout_class_instances: score 0.167 detected 0.21 hits 6 unverified 1 (388s)
+CHAIN l_grasp_easy__OOB__1 seed 100 t=290 worker=31 origin=223 len=197 buf_len=5 replay: B=1:False, B=64:False, B=128:False
+AUDIT_DONE 1 unverified chains

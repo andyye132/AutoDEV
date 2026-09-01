@@ -1,0 +1,71 @@
+{
+ "search": [
+  {
+   "name": "DeepSea-bsuite__seed0",
+   "seed": 0,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  },
+  {
+   "name": "DeepSea-bsuite__seed1",
+   "seed": 1,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  },
+  {
+   "name": "DeepSea-bsuite__seed2",
+   "seed": 2,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  },
+  {
+   "name": "DeepSea-bsuite__seed3",
+   "seed": 3,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  },
+  {
+   "name": "DeepSea-bsuite__seed4",
+   "seed": 4,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  },
+  {
+   "name": "DeepSea-bsuite__seed5",
+   "seed": 5,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "DeepSea-bsuite__seed6",
+   "seed": 6,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  },
+  {
+   "name": "DeepSea-bsuite__seed7",
+   "seed": 7,
+   "target": [
+    0.0
+   ],
+   "cls": "DeepSea-bsuite"
+  }
+ ],
+ "heldout_class_instances": []
+}

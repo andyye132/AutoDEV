@@ -1,0 +1,433 @@
+<title>AutoDev, Second Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --paper: #F4F7F6; --surface: #FFFFFF; --ink: #182028; --ink-2: #3A4852; --slate: #5A6B77; --line: #D6DFE2;
+  --accent: #0E6F8E; --accent-soft: #DCEBF0; --signal: #B8541F; --signal-soft: #F6E4D8; --code-bg: #EAF0F1;
+  --rail-bg: #EDF2F2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+    --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+    --rail-bg: #141D25;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+  --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+  --rail-bg: #141D25;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+a:hover, a:focus-visible { border-bottom-color: var(--accent); outline: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.shell { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 3rem; max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+.rail { position: sticky; top: 1.5rem; align-self: start; max-height: calc(100vh - 3rem); overflow-y: auto; font-size: 0.86rem; line-height: 1.4; padding: 1rem 1rem 1rem 0; border-right: 1px solid var(--line); }
+.rail .eyebrow { margin-bottom: 0.6rem; }
+.rail ul { list-style: none; margin: 0; padding: 0; }
+.rail > ul > li { margin: 0.35rem 0; }
+.rail > ul > li > ul { padding-left: 0.9rem; border-left: 1px solid var(--line); margin: 0.25rem 0 0.4rem; }
+.rail > ul > li > ul li { margin: 0.2rem 0; color: var(--slate); }
+.rail a { color: var(--ink-2); border: none; }
+.rail a:hover { color: var(--accent); }
+main { min-width: 0; max-width: 72ch; }
+.eyebrow { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); }
+header.masthead { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+header.masthead h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin: 0.4rem 0 0.8rem; letter-spacing: -0.01em; text-wrap: balance; }
+header.masthead p.dek { font-size: 1.1rem; color: var(--ink-2); margin: 0 0 1rem; max-width: 62ch; }
+header.masthead .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.85rem; color: var(--slate); }
+h1, h2, h3, h4 { text-wrap: balance; }
+main > h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2.1rem, 4vw, 2.9rem); line-height: 1.08; letter-spacing: -0.012em; margin: 0 0 0.9rem; }
+main > h1 + p { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); max-width: 62ch; margin-bottom: 0.9rem; }
+main > h1 + p + p { font-size: 0.86rem; color: var(--slate); padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); margin-bottom: 1.6rem; }
+a.cite { border: none; font-variant-numeric: tabular-nums; }
+h2#references + ol { padding-left: 2.2rem; font-size: 0.88rem; color: var(--ink-2); }
+h2#references + ol li { margin: 0.45rem 0; overflow-wrap: anywhere; }
+h2#references + ol li:target { background: var(--accent-soft); border-radius: 3px; }
+h2 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 1.8rem; line-height: 1.15; margin: 3rem 0 1rem; padding-top: 1.2rem; border-top: 1px solid var(--line); letter-spacing: -0.005em; }
+h3 { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.28rem; line-height: 1.25; margin: 2rem 0 0.6rem; }
+h4 { font-size: 0.95rem; font-weight: 600; margin: 1.4rem 0 0.4rem; color: var(--ink-2); }
+p { margin: 0 0 1rem; }
+ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+li { margin: 0.3rem 0; }
+li > ul, li > ol { margin: 0.3rem 0 0.3rem; }
+strong { font-weight: 600; }
+code { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86em; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 3px; }
+pre { background: var(--code-bg); padding: 1rem 1.1rem; overflow-x: auto; border-radius: 4px; font-size: 0.84rem; line-height: 1.5; margin: 0 0 1.2rem; }
+pre code { background: none; padding: 0; font-size: inherit; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+.table-wrap { overflow-x: auto; margin: 0 0 1.4rem; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; line-height: 1.4; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); }
+th { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); font-weight: 500; background: var(--rail-bg); }
+tr:last-child td { border-bottom: 0; }
+.callout { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 4px 4px 0; }
+.callout p:last-child { margin-bottom: 0; }
+.callout-warn { border-left-color: var(--signal); background: var(--signal-soft); }
+.callout-accent { border-left-color: var(--accent); background: var(--accent-soft); }
+.callout-note { border-left-color: var(--slate); }
+sup { font-size: 0.72em; }
+.footnote { font-size: 0.9rem; color: var(--ink-2); }
+.refs ol { padding-left: 2rem; font-size: 0.9rem; }
+.refs li { margin: 0.45rem 0; word-break: break-word; }
+@media (max-width: 860px) {
+  .shell { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem 1rem 4rem; }
+  .rail { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 1rem; }
+  main { max-width: none; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<div class="shell">
+  <nav class="rail" aria-label="Contents">
+    <div class="eyebrow">Contents</div>
+    <div class="toc">
+<ul>
+<li><a href="#1-what-we-built-in-plain-terms">1. What we built, in plain terms</a></li>
+<li><a href="#2-what-72-means-and-what-the-ceiling-looks-like">2. What "72%" means — and what the ceiling looks like</a></li>
+<li><a href="#3-side-plan-how-to-make-the-tester-better-ordered-by-expected-gain-per-day">3. Side plan: how to make the tester better (ordered by expected gain per day)</a></li>
+<li><a href="#4-other-games-and-where-bug-finding-has-and-hasnt-been-tried">4. Other games, and where bug finding has and hasn't been tried</a><ul>
+<li><a href="#41-games-we-can-test-against">4.1 Games we can test against</a></li>
+<li><a href="#42-benchmarks-for-bug-finding-what-exists-what-it-scores-what-you-can-run">4.2 Benchmarks for bug finding — what exists, what it scores, what you can run</a></li>
+<li><a href="#43-where-no-automated-bug-finding-paper-was-found-and-two-corrections-to-our-own-claims">4.3 Where no automated bug-finding paper was found — and two corrections to our own claims</a></li>
+<li><a href="#44-ground-truth-that-could-anchor-a-real-games-paper">4.4 Ground truth that could anchor a real-games paper</a></li>
+</ul>
+</li>
+<li><a href="#5-three-paths">5. Three paths</a><ul>
+<li><a href="#path-1-kinetix-done-right-deadline-path">Path 1 — Kinetix, done right (deadline path)</a></li>
+<li><a href="#path-2-a-second-engine-breadth">Path 2 — A second engine (breadth)</a></li>
+<li><a href="#path-3-games-people-actually-play-the-headline-you-asked-for">Path 3 — Games people actually play (the headline you asked for)</a></li>
+<li><a href="#recommendation">Recommendation</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+
+  </nav>
+  <main>
+    <h1 id="autodev-second-proposal">AutoDev, Second Proposal</h1>
+<p>Where the system stands after the first night of autonomous runs, what the "72%" actually measures, a side plan for making the tester better, and three paths forward with a recommendation.</p>
+<p>Prepared 29 Aug 2026 (Saturday morning) · Paper deadline Fri 4 Sep, 5 PM PDT · All numbers below are from Hyak runs (size-l configuration, 74 shipped Kinetix levels, 5 seeds, 262,144 simulator steps per instance) unless marked <em>local</em>.</p>
+<h2 id="1-what-we-built-in-plain-terms">1. What we built, in plain terms</h2>
+<p><strong>The game.</strong> Kinetix [<a class="cite" href="#ref-1">1</a>]: 2D physics puzzles (vehicles, arms, thrusters, balls) inside a 5 m × 5 m arena; a level is a JSON file; the whole simulator state is a data structure we can save and restore at will, and thousands of copies run in parallel on one GPU.</p>
+<p><strong>The bugs we plant.</strong> For every shipped level we create broken variants in five classes, each with a <em>witness state</em> — a condition that, if a tester ever reaches it, proves the bug: a boundary wall removed (witness: a moving shape leaves the arena), a static obstacle made non-solid (a moving shape's center ends up inside it), a neutral shape given the goal role (the level is "won" by touching the wrong thing), physics made bouncy (speed exceeds a per-level threshold), a hazard made harmless (a green shape touches it and survives). 337 instances across the 74 levels; 3 that any tester finds within 512 steps are excluded as trivial.</p>
+<p><strong>The bugs we look for without planting.</strong> On unmodified levels: a moving shape leaves the arena; a moving shape's center sits inside a solid it should collide with (honoring the engine's own collision matrix); a joint's two anchors tear apart; speed or spin runs away or the state goes NaN. Each has a persistence requirement so one-frame solver hiccups don't count, and every flagged state is re-simulated from the level's reset along the recorded action chain before it is counted. A post-hoc classifier assigns severity (A: escapes/tears; B: deep or long penetration, long runaway; C: minor transient).</p>
+<p><strong>The testers.</strong> A tester is a <em>program</em> controlling B parallel workers through three hooks — <em>act</em> (choose actions), <em>restore</em> (jump a worker back to an archived state), <em>archive</em> (decide which states to keep) — over an archive of saved simulator states. Hand-designed baselines: uniform random, action-repeat random, a Go-Explore-style archive search. RL baselines: PPO with count, RND, ICM, curiosity-proximity, or task-return objectives. Seven independent designs written by Claude Opus on request (boundary-seeking, energy pumping, macro tree search, contact-hunting, pair-covering, distance-ladder frontier, goal-biased RRT), and two portfolios that run several designs side by side.</p>
+<p><strong>The search.</strong> ShinkaEvolve [<a class="cite" href="#ref-2">2</a>] evolves the tester program: an LLM (Claude Sonnet 5; Opus 5 in run 2) proposes patches to the hook code, each candidate is scored by how fast its workers reach witness states on the <em>search</em> split, and an island-model archive keeps the best. Two splits are sealed before the search starts: 22 of the 74 levels, and one entire defect class — leaving the arena — which the search never sees.</p>
+<p><strong>The score.</strong> For each instance, 1 − (steps to first witness / budget), or 0 if never; averaged over instances and seeds. "Detection" is the fraction of instances witnessed within budget. Every claim is a comparison at equal budget.</p>
+<h2 id="2-what-72-means-and-what-the-ceiling-looks-like">2. What "72%" means — and what the ceiling looks like</h2>
+<p>72% is the fraction of planted defects the evolved tester reaches within 262k simulator steps in a single run (search split). It is not an accuracy, and the reference points are: action-repeat random 59%, the Go-Explore seed 57%, the best RL tester 56%, uniform random 49%. The headline is the <em>held-out class</em>: 44–47% of arena-escape defects for the evolved program vs. 30% for the best hand-designed tester and 25% for the seed it evolved from — a class the search never scored.</p>
+<p>Two measurements say how much room is left:</p>
+<ul>
+<li><strong>Union ceiling.</strong> Taking every tester we have and every seed, the union reaches 81% on the search split, 66% on held-out levels, 61% on the held-out class. The evolved program <em>by itself</em>, across its five seeds, reaches 80% / 66% / 56%. In other words, one evolved program already finds nearly everything the entire population of testers can find at this budget; the per-run number (72%) is lower than the across-seed number (80%) because different seeds find different instances — so restarts or ensembles of seeds are the cheapest way to raise single-run detection.</li>
+<li><strong>Feasibility ceiling (measured this morning).</strong> An <em>oracle-guided</em> probe — a tester that is told where the witness is and descends on it — reaches 63% / 58% / 24% of instances by itself, <em>less</em> than the evolved tester, and adds <strong>no</strong> instance the union of testers had not already reached. So the union (81% / 66% / 62%) is the best reachability bound we have, and the probe's failure to extend it says the remainder is hard or infeasible at this budget rather than overlooked. Normalized by the reachable set, one run of the evolved tester finds <strong>88% / 96% / 76%</strong> of what is findable, against 73% / 90% / 48% for action-repeat random. The honest headline is therefore not "72%" but "88% of the reachable search instances, 76% of the reachable held-out-class instances, in a single run".</li>
+</ul>
+<p>What would be bad: if the feasible ceiling turns out to be ~75% on the search split, then 72% is near saturation and the remaining gains lie in budget and breadth, not in cleverer testers. What would be good: if the guided probe reaches 90%+, there is a real 15-point gap for better methods to close.</p>
+<h2 id="3-side-plan-how-to-make-the-tester-better-ordered-by-expected-gain-per-day">3. Side plan: how to make the tester better (ordered by expected gain per day)</h2>
+<ol>
+<li><strong>Metric hygiene (½ day).</strong> Report per-run, across-seed and feasibility-normalized detection; per-class budgets; paired per-instance tests with CIs. Already scripted; waiting on the guided probe.</li>
+<li><strong>Fix the search signal (done this morning, no token needed).</strong> The search plateaued after generation 1 because a two-seed fitness on the small local pool cannot rank the 0.69-band candidates (noise ±0.02). Instead of moving the LLM to the cluster, a <em>fitness server</em> now runs on a Hyak GPU (<code>scripts/eval_server.py</code>): the evolution loop stays on the laptop, and every candidate program is shipped to the server and scored on the full size-l search split (127 instances, 3 seeds, 128×1024 steps, ~10 min). Run 4 — seeded from the run-1 best, Sonnet+Opus proposals, 40 generations — starts automatically when the server job begins. A <code>claude setup-token</code> would still let me run several searches in parallel on the cluster, but it is no longer a blocker.</li>
+<li><strong>Restarts and adaptive portfolios (1 day).</strong> Same total budget, split over k independent seeds, is a free lift (80% vs 72% here). An <em>adaptive</em> portfolio — a bandit that reallocates workers among sub-programs by their recent archive growth — is the natural next design; the fixed 4- and 7-program portfolios are being evaluated now.</li>
+<li><strong>Harder search distributions (1 day).</strong> Use the fresh-level generator to produce a <em>bug-rich</em> search pool (the generated levels already yield 10 severity-A/B real anomalies in 64 levels), and rotate the held-out class (run 3, started this morning, holds out runaway physics instead of escapes) for a second transfer data point.</li>
+<li><strong>Pool hygiene (½ day, found this afternoon).</strong> An Opus agent's per-instance diagnostic showed that 3 of the 7 TUNNEL instances on the local search split are <em>geometrically unreachable</em> — the jointed arm's workspace never comes within 0.47 m of the injected obstacle — so the class's ceiling there is 4/7, which action-repeat random already attains. <code>inject_tunnel</code> (and the other injectors) should run a reachability probe at pool-build time, and infeasible instances should be excluded from the <em>search fitness</em> (they are constant zeros that shrink its dynamic range) while staying in held-out evaluation. The one TUNNEL instance that separates random from obstacle-targeting testers is a thin slab that must be swept <em>through</em> at speed — a traversal objective, not closest approach.</li>
+<li><strong>Broaden defect classes (1–2 days).</strong> Planted joint tears, one-way collisions, trigger/timer bugs, reward loops; these also sharpen the real-bug oracles.</li>
+<li><strong>Tester capability (2+ days, after the deadline).</strong> Learned components inside the archive loop (a small policy that returns to and extends promising states), deeper restore trees with explicit tree search over macro sequences, and per-level-type macro libraries.</li>
+<li><strong>Real-bug pipeline (ongoing).</strong> Scans of shipped and fresh levels with the evolved and Opus testers are queued; severity triage and rendered clips are automatic; the h15 wall-face tunnelling (a block at 16 m/s momentarily inside the right wall / 10 cm into the floor — <em>not</em> a ceiling escape; corrected by step-by-step replay) and the generator's spawn-outside-the-arena defects should be reported to the Kinetix authors (draft in <code>runs/kinetix_issue/</code>).</li>
+</ol>
+<h2 id="4-other-games-and-where-bug-finding-has-and-hasnt-been-tried">4. Other games, and where bug finding has and hasn't been tried</h2>
+<p>The survey below was run this morning by an Opus reading agent (163 tool calls; every arXiv ID re-resolved through the arXiv API, repository facts through the GitHub API); I aggregated and checked the parts that touch our claims. Two things it found change what we say about ourselves; they are in 4.3.</p>
+<h3 id="41-games-we-can-test-against">4.1 Games we can test against</h3>
+<p>The harness needs three things from a game: a <em>state we can save and restore</em>, a <em>fast step</em>, and <em>something to write oracles against</em> (rules, physics, or a reference implementation). Sorted by how much of our current machinery transfers:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Substrate</th>
+<th>Content</th>
+<th>Save/restore</th>
+<th>Oracle material</th>
+<th>Prior bug-finding work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JAX (state is an immutable pytree: restore = copy a variable; <code>vmap</code> on GPU; <strong>our harness runs as is</strong>)</td>
+<td>Craftax [<a class="cite" href="#ref-3">3</a>]</td>
+<td>67 achievements; crafting, hunger, mobs, dungeon floors; MIT</td>
+<td>free</td>
+<td>symbolic rules (inventory, stats, tiles)</td>
+<td>none found</td>
+</tr>
+<tr>
+<td></td>
+<td>PuzzleJAX [<a class="cite" href="#ref-4">4</a>]</td>
+<td>~900 human-authored PuzzleScript games (93 curated); JS/C++ reference engine; MIT, source install</td>
+<td>free (purity unverified)</td>
+<td><em>differential</em>: JAX vs. reference; <code>broken_games.md</code> already lists real engine bugs</td>
+<td>none (ScriptDoctor [<a class="cite" href="#ref-5">5</a>] checks generated <em>design</em> playability)</td>
+</tr>
+<tr>
+<td></td>
+<td>Pgx [<a class="cite" href="#ref-6">6</a>]</td>
+<td>23 board games incl. chess, shogi, Go; Apache-2.0</td>
+<td>free</td>
+<td>built-in <code>legal_action_mask</code>; published <em>perft</em> move counts for chess/shogi = external ground truth</td>
+<td>none found</td>
+</tr>
+<tr>
+<td></td>
+<td>Ludax [<a class="cite" href="#ref-7">7</a>], Jumanji [<a class="cite" href="#ref-8">8</a>], XLand-MiniGrid [<a class="cite" href="#ref-9">9</a>], Gymnax, JaxMARL, NAVIX [<a class="cite" href="#ref-10">10</a>]</td>
+<td>16 board games + DSL; 22 routing/logic envs; ~3M grid tasks; 26 classic; 11 multi-agent; MiniGrid</td>
+<td>free</td>
+<td>rules per env</td>
+<td>none found</td>
+</tr>
+<tr>
+<td></td>
+<td>Brax</td>
+<td>12 robotics envs</td>
+<td>free</td>
+<td>physics laws</td>
+<td><strong>already fuzzed</strong> by PhyFu [<a class="cite" href="#ref-11">11</a>] — not a novelty target</td>
+</tr>
+<tr>
+<td>C/CUDA throughput</td>
+<td>PufferLib Ocean [<a class="cite" href="#ref-12">12</a>] (54 games), envpool, CuLE</td>
+<td>arcade/grid games</td>
+<td><strong>none</strong> (no snapshot API in the code base)</td>
+<td>pixels + scalar state</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Classic RL suites with real snapshot APIs</td>
+<td>ALE [<a class="cite" href="#ref-13">13</a>]</td>
+<td>97 Atari games; <code>cloneState/restoreState</code> (RNG-excluded, "for planning"); 128-byte RAM</td>
+<td>yes</td>
+<td>RAM addresses</td>
+<td>RL agents as <em>players</em>; no bug search found</td>
+</tr>
+<tr>
+<td></td>
+<td>Procgen [<a class="cite" href="#ref-14">14</a>]</td>
+<td>16 games; <code>get_state/set_state</code> with a restore-determinism test; MIT</td>
+<td>yes</td>
+<td>internal state</td>
+<td>none</td>
+</tr>
+<tr>
+<td></td>
+<td>stable-retro [<a class="cite" href="#ref-15">15</a>]</td>
+<td>~1,000 console games; <code>get_state/set_state</code>; <strong><code>data.json</code> names RAM variables (lives, HP, x/y)</strong></td>
+<td>yes</td>
+<td>named RAM = free oracles</td>
+<td>none</td>
+</tr>
+<tr>
+<td></td>
+<td>NLE / MiniHack</td>
+<td>roguelike; structured state (<code>glyphs</code>, <code>blstats</code>)</td>
+<td><strong>no</strong> snapshot; seed replay only</td>
+<td>rich symbolic</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Emulators</td>
+<td>PyBoy [<a class="cite" href="#ref-16">16</a>]</td>
+<td>Game Boy; <code>memory[addr]</code>, <code>save_state/load_state</code>, headless ~395× realtime, 7 game wrappers</td>
+<td>yes</td>
+<td>RAM + wiki glitch lists</td>
+<td>none as bug search; [<a class="cite" href="#ref-17">17</a>] <em>generates and verifies</em> environments from it</td>
+</tr>
+<tr>
+<td></td>
+<td>mGBA</td>
+<td>GBA; <code>save_raw_state/load_raw_state</code>, memory API</td>
+<td>yes</td>
+<td>RAM</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Open-source PC games with shipped determinism checks</td>
+<td>Wesnoth, Endless Sky, OpenTTD, 0 A.D., SuperTuxKart</td>
+<td>strategy/space/tycoon/RTS/kart</td>
+<td>replay/rewind (Wesnoth validates replays by default; Endless Sky <code>--test --rngseed</code>; OpenTTD desync logs; 0 A.D. per-turn state hashes; STK <code>rewind_manager</code>)</td>
+<td><strong>their own desync/state-hash checks</strong> + public bug trackers</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Disqualified</td>
+<td>Godot</td>
+<td>—</td>
+<td>—</td>
+<td>docs state physics is <em>not deterministic</em></td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>Kinetix, for reference, ships <strong>74</strong> hand-designed levels (10 S / 24 M / 40 L, counted from the JSONs; the "90" in one secondary source is wrong).</p>
+<h3 id="42-benchmarks-for-bug-finding-what-exists-what-it-scores-what-you-can-run">4.2 Benchmarks for bug finding — what exists, what it scores, what you can run</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>What it holds</th>
+<th>What the agent sees</th>
+<th>Metric</th>
+<th>Runnable?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GBQA [<a class="cite" href="#ref-18">18</a>] (ICLR 2026 wksp)</td>
+<td>30 web games, <strong>124 human-verified bugs</strong>, 3 difficulty tiers</td>
+<td>backend API state (not video)</td>
+<td><strong>recall of ground-truth bugs</strong> at a step budget; best 48.4% (Claude Opus 4.6, 500 steps)</td>
+<td><strong>no</strong> code or data released</td>
+</tr>
+<tr>
+<td>GameXpert-Bench / GameFix [<a class="cite" href="#ref-19">19</a>] (Aug 2026)</td>
+<td>50 real HTML5 games, 19–27 <strong>injected</strong> defects each (reversible mutation patches), 100 repair tasks</td>
+<td>source + headless Chromium</td>
+<td>SWE-bench style Fail-to-Pass / Pass-to-Pass</td>
+<td><strong>no</strong> ("closed set remains internal")</td>
+</tr>
+<tr>
+<td>VideoGameQA-Bench [<a class="cite" href="#ref-20">20</a>] (NeurIPS 2025 D&amp;B)</td>
+<td>4,786 questions, 2,236 images + 1,200 videos, &gt;800 games, 9 tasks (glitch detection, visual regression, bug-report generation…)</td>
+<td>pixels</td>
+<td>per-task accuracy; LLM judge for reports</td>
+<td>yes, CC-BY-4.0</td>
+</tr>
+<tr>
+<td>VideoGlitchBench [<a class="cite" href="#ref-21">21</a>]</td>
+<td>5,238 videos / 120 games with <strong>temporal spans</strong></td>
+<td>pixels</td>
+<td>detection + grounding</td>
+<td>yes, Apache-2.0</td>
+</tr>
+<tr>
+<td>TempGlitch [<a class="cite" href="#ref-22">22</a>]</td>
+<td>750 glitch + 750 clean videos; includes a <strong>"stuck in place"</strong> class</td>
+<td>pixels</td>
+<td>accuracy/F1; best of 12 VLMs 54.1% ≈ chance</td>
+<td>yes, MIT</td>
+</tr>
+<tr>
+<td>PhysGame → GameBench [<a class="cite" href="#ref-23">23</a>, <a class="cite" href="#ref-24">24</a>]</td>
+<td>880 physics-violation videos, 12 categories</td>
+<td>pixels</td>
+<td>accuracy</td>
+<td>yes, Apache-2.0</td>
+</tr>
+<tr>
+<td>GlitchBench [<a class="cite" href="#ref-25">25</a>] (CVPR 2024)</td>
+<td>607 glitch images (public release)</td>
+<td>pixels</td>
+<td>LLM-judged open answers; GPT-4V 43.4%</td>
+<td>yes, MIT</td>
+</tr>
+<tr>
+<td>CLIP meets GamePhysics [<a class="cite" href="#ref-26">26</a>]; GameBugDescriptions [<a class="cite" href="#ref-27">27</a>]</td>
+<td>26,954 r/GamePhysics videos / 1,873 games; 167 videos + 334 QA</td>
+<td>pixels</td>
+<td>retrieval / QA accuracy</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>BugCraft [<a class="cite" href="#ref-28">28</a>] (ASE 2025)</td>
+<td>86 Minecraft crash reports</td>
+<td>game + report text</td>
+<td>end-to-end <strong>reproduction</strong> rate 34.9%</td>
+<td>code yes (AGPL), data gated</td>
+</tr>
+<tr>
+<td>World of Bugs [<a class="cite" href="#ref-29">29</a>] (CoG 2022)</td>
+<td>Unity "bug zoo" with injected bugs</td>
+<td>pixels</td>
+<td>detection</td>
+<td>yes, GPL</td>
+</tr>
+<tr>
+<td>NEATEST [<a class="cite" href="#ref-30">30</a>] (ASE 2022)</td>
+<td>25 Scratch games; neuroevolved networks act as tests <em>and</em> oracles</td>
+<td>game attributes</td>
+<td><strong>mutation score &gt;65%</strong></td>
+<td>yes</td>
+</tr>
+<tr>
+<td>PhyFu [<a class="cite" href="#ref-11">11</a>] (ASE 2023); IcFuzz [<a class="cite" href="#ref-31">31</a>]</td>
+<td>physics <em>engines</em> (Taichi, Nimble, Warp, Brax 0.1.0); Isaac Sim</td>
+<td>engine state</td>
+<td>physics-law consistency incl. gradients; &gt;5,000 error-triggering inputs</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Industrial reality check [<a class="cite" href="#ref-32">32</a>]</td>
+<td>19,738 real keyframes from 41 h of gameplay</td>
+<td>pixels</td>
+<td>VLM precision 0.50 / accuracy 0.72 vs 82.8% on curated sets</td>
+<td>data no</td>
+</tr>
+</tbody>
+</table></div>
+<p>Three consequences. (i) <strong>Every published game-bug benchmark judges from pixels or source; none reads simulator state</strong>, and the one field study says pixel-based QA does not transfer to real footage — that is our one-sentence differentiator, and the reason our results are not comparable to any VLM number. (ii) The two benchmarks closest to us in spirit (GBQA: recall of verified bugs at an interaction budget; GameXpert: injected defects) released nothing, so there is <em>no public state-based bug-finding benchmark</em> — our planted-defect suite with witness oracles can be released as one, and we should score it the way GBQA does (recall at budget), which is what "detection within 262k steps" already is. (iii) There is <strong>no softlock benchmark or dataset</strong>; the only softlock papers are verification (Super Metroid with CTL model checking [<a class="cite" href="#ref-33">33</a>]; softlock-free level generation [<a class="cite" href="#ref-34">34</a>]), which makes "stuck states" a natural extra oracle for a save/restore tester (a state from which no branch reaches the goal).</p>
+<h3 id="43-where-no-automated-bug-finding-paper-was-found-and-two-corrections-to-our-own-claims">4.3 Where no automated bug-finding paper was found — and two corrections to our own claims</h3>
+<p><em>No paper found</em> (not "never done"): Kinetix, Craftax, Jumanji, Pgx, XLand-MiniGrid, Gymnax, NAVIX; roguelikes (NetHack/NLE, Cataclysm-DDA); PuzzleScript games; open-source strategy games (OpenTTD, 0 A.D., FreeCiv, Wesnoth); emulated retro games driven by RL; board games. Every arXiv hit for "Kinetix" is the original paper, a robotics/VLA paper <em>using</em> it as a benchmark, or an unrelated chemical-kinetics tool. Two structural gaps: save/restore as a bug-search primitive is nearly unexploited in games (Nyx-Net [<a class="cite" href="#ref-35">35</a>] showed snapshot fuzzing gives 10–30× on Super Mario but used the game only as a speed benchmark), and LLM-evolved test programs have targeted compilers and unit tests, never games.</p>
+<p>The corrections: <strong>PhyFu already fuzzes Brax</strong> with, verbatim, our penetration oracle as its motivating example (a robot palm below the ground plane that the engine never flags). It is a different problem — engine numerics on robotics micro-scenarios, no levels, rules, win conditions, exploration, or evolved testers — but our novelty claim must narrow to: <em>no published work searches for game-level rule and physics violations in GPU game environments using save/restore-driven tester programs discovered by LLM search.</em> (Done in the paper this morning.) And the NEATEST ID we had cited (2507.09414) is a branch-coverage paper; the tests-and-oracles paper is 2208.13632 [<a class="cite" href="#ref-30">30</a>].</p>
+<h3 id="44-ground-truth-that-could-anchor-a-real-games-paper">4.4 Ground truth that could anchor a real-games paper</h3>
+<p>TASVideos [<a class="cite" href="#ref-36">36</a>] publishes 4,615 deterministic tool-assisted runs with an <em>applied</em> glitch taxonomy (<code>ace</code> "executes arbitrary code" ×62, <code>warpbug</code>, <code>rambugs</code>, <code>savebugs</code> ×39, <code>skipboss</code> ×99) — a labeled corpus of known exploitable states, and a measurable target ("does the tester rediscover the known warp?"). The Mario wikis hold 237 catalogued glitches across SMB1/SMB3/SMW/SM64, already classified against software-weakness taxonomies [<a class="cite" href="#ref-37">37</a>]. Open-source trackers give live defect sets: 0 A.D. 852 open defects (on its Gitea; the GitHub mirror is archived), OpenRCT2 774, Cataclysm-DDA 579, PCSX2 503, Wesnoth 500, Luanti 365, SuperTuxKart 147, Endless Sky ~100, OpenTTD 53. Minecraft's Mojira is no longer scrapable; BugCraft's 86 curated crash reports are the usable derivative.</p>
+<h2 id="5-three-paths">5. Three paths</h2>
+<h3 id="path-1-kinetix-done-right-deadline-path">Path 1 — Kinetix, done right (deadline path)</h3>
+<p>Finish the paper on the current substrate with the improvements that change conclusions: feasibility-normalized detection, GPU-side five-seed search, held-out-class rotation, the evolved testers' real-bug scans, portfolios, the tuning-vs-structure ablation, and the RL baselines — all of which are queued or running. Deliverable: the AutoMLR submission with a defensible transfer claim and a real-bug table. Risk: low. Ceiling: a good workshop paper whose result is specific to one engine.</p>
+<h3 id="path-2-a-second-engine-breadth">Path 2 — A second engine (breadth)</h3>
+<p>Port the harness to a second JAX game family and test whether a tester program discovered on Kinetix transfers <em>across engines</em>, not just across bug classes. The hooks are engine-agnostic (they see a feature vector, not Kinetix); what changes is the feature layout, the planted-defect generator, and the oracles. Best candidates from the survey: <strong>Craftax</strong> first (MIT; <code>flax.struct.dataclass</code> state, so save/restore and <code>vmap</code> transfer unchanged; 67 achievements plus crafting, hunger and mob rules give a <em>symbolic</em> rule surface — planted defects and oracles: item produced without consuming ingredients, achievement unlocked without its precondition, HP/food/energy outside range, entity inside a solid tile, floor transition landing off-map); <strong>Pgx</strong> second (23 board games; the built-in legal-action mask is an oracle we do not have to invent, and chess/shogi have published perft counts — an <em>external</em> ground truth, rare and persuasive; oracles: perft divergence, illegal move accepted, king left in check, piece non-conservation, terminal-state disagreement); <strong>PuzzleJAX</strong> third (~900 human-authored PuzzleScript games with a JS reference engine, so bugs are <em>differential</em> — JAX vs. reference on the same action sequence — and its <code>broken_games.md</code> is pre-labelled ground truth; risks: source install, unverified state purity, slow per-game JIT). Deliverable: a two-engine transfer result and a second set of never-before-scanned real bugs. Risk: medium-high in one week (a new planted-bug generator and oracles are 2–3 days of work); the pilot is worth 1–2 days if the Path 1 queue is idle.</p>
+<h3 id="path-3-games-people-actually-play-the-headline-you-asked-for">Path 3 — Games people actually play (the headline you asked for)</h3>
+<p>Point the tester at real games through emulators or open-source engines with RAM- or state-based oracles — "the agent found N previously unknown bugs in game X" is the result that lands outside ML. Candidates from the survey: <strong>stable-retro</strong> [<a class="cite" href="#ref-15">15</a>] (~1,000 console games; <code>get_state/set_state</code>; <code>data.json</code> names RAM variables such as lives, HP and position, so oracles come free; TASVideos and wiki glitch lists give ground truth), <strong>PyBoy</strong> [<a class="cite" href="#ref-16">16</a>] (Game Boy; memory access and save/load state, headless ~395× realtime, 7 game wrappers), <strong>ALE</strong> [<a class="cite" href="#ref-13">13</a>] (97 games, <code>cloneState/restoreState</code>, 128-byte RAM), <strong>Procgen</strong> [<a class="cite" href="#ref-14">14</a>] (16 games, <code>get_state/set_state</code>), and open-source PC games that already ship determinism oracles — Wesnoth (replay validation by default), Endless Sky (<code>--test</code>, fixed seed), OpenTTD (desync logs, NoAI API), SuperTuxKart (rewind manager) — with their public bug trackers as the reference set. Not Godot (non-deterministic physics by its own docs), not PufferLib Ocean (no snapshot API), not Brax (PhyFu's ground). Risk: high before Sep 4 (no vectorized simulation, per-game oracle engineering, slow emulators); but it is the right follow-up paper and thesis direction, and the methodology (save/restore search + programmatic oracles + severity triage + replay verification) carries over intact.</p>
+<h3 id="recommendation">Recommendation</h3>
+<p><strong>Path 1 for the September 4 submission, with the Path 2 pilot as a stretch goal if the queue frees up, and Path 3 as the follow-up.</strong> The transfer claim on Kinetix is already the strongest evidence we will have by Friday, and its weak points (feasibility ceiling, search noise, real-bug counts) are all fixable within the deadline; a second engine started now would land half-finished and weaken both halves. Two survey-driven additions to Path 1 cost little and matter to reviewers: release the planted-defect suite as the first <em>state-based</em> bug-finding benchmark (scored GBQA-style: recall at an interaction budget), and add a "stuck state" oracle (no branch from the archive reaches the goal) since no softlock benchmark exists. The GPU-fitness search (run 4) is the single change most likely to improve the numbers before Friday; it is already running.</p>
+<h2 id="references">References</h2>
+<ol>
+<li id="ref-1">Matthews, Beukman, Lu, Foerster. <em>Kinetix: Investigating the Training of General Agents through Open-Ended Physics-Based Control Tasks</em>. ICLR 2025 (oral); arXiv:2410.23208; code github.com/FLAIROx/Kinetix. <a href="https://arxiv.org/abs/2410.23208">https://arxiv.org/abs/2410.23208</a></li>
+<li id="ref-2">Lange, Imajuku, Cetin (Sakana AI). <em>ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution</em>. arXiv:2509.19349, 2025; code github.com/SakanaAI/ShinkaEvolve. <a href="https://arxiv.org/abs/2509.19349">https://arxiv.org/abs/2509.19349</a></li>
+<li id="ref-3">Matthews et al.. <em>Craftax: A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning</em>. ICML 2024; arXiv:2402.16801. <a href="https://arxiv.org/abs/2402.16801">https://arxiv.org/abs/2402.16801</a></li>
+<li id="ref-4">Earle, Todd, Li, Jiang, Khalifa, Nasir, Banburski-Fahey, Togelius. <em>PuzzleJAX: A Benchmark for Reasoning and Learning</em>. arXiv:2508.16821, 2025; code github.com/smearle/script-doctor. <a href="https://arxiv.org/abs/2508.16821">https://arxiv.org/abs/2508.16821</a></li>
+<li id="ref-5">Earle et al.. <em>ScriptDoctor: Automatic Generation of PuzzleScript Games via Large Language Models and Tree Search</em>. arXiv:2506.06524, 2025. <a href="https://arxiv.org/abs/2506.06524">https://arxiv.org/abs/2506.06524</a></li>
+<li id="ref-6">Koyamada, Okano, Nishimori et al.. <em>Pgx: Hardware-Accelerated Parallel Game Simulators for Reinforcement Learning</em>. NeurIPS 2023; arXiv:2303.17503. <a href="https://arxiv.org/abs/2303.17503">https://arxiv.org/abs/2303.17503</a></li>
+<li id="ref-7">Todd, Padula, Soemers et al.. <em>Ludax: A GPU-Accelerated Domain Specific Language for Board Games</em>. arXiv:2506.22609, 2025 (25 pages, 6 figures). <a href="https://arxiv.org/abs/2506.22609">https://arxiv.org/abs/2506.22609</a></li>
+<li id="ref-8">Bonnet et al. (InstaDeep). <em>Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX</em>. ICLR 2024; arXiv:2306.09884. <a href="https://arxiv.org/abs/2306.09884">https://arxiv.org/abs/2306.09884</a></li>
+<li id="ref-9">Nikulin et al.. <em>XLand-MiniGrid: Scalable Meta-Reinforcement Learning Environments in JAX</em>. arXiv:2312.12044; code github.com/corl-team/xland-minigrid. <a href="https://arxiv.org/abs/2312.12044">https://arxiv.org/abs/2312.12044</a></li>
+<li id="ref-10">Pignatelli et al.. <em>NAVIX: Scaling MiniGrid Environments with JAX</em>. arXiv:2407.19396, 2024. <a href="https://arxiv.org/abs/2407.19396">https://arxiv.org/abs/2407.19396</a></li>
+<li id="ref-11">Xiao, Liu, Wang. <em>PHYFU: Fuzzing Modern Physics Simulation Engines</em>. arXiv:2307.10818, 2023. <a href="https://arxiv.org/abs/2307.10818">https://arxiv.org/abs/2307.10818</a></li>
+<li id="ref-12">PufferAI. <em>PufferLib / Puffer Ocean environments</em>. GitHub, accessed Aug 2026. <a href="https://github.com/PufferAI/PufferLib">https://github.com/PufferAI/PufferLib</a></li>
+<li id="ref-13">Bellemare, Naddaf, Veness et al.. <em>The Arcade Learning Environment: An Evaluation Platform for General Agents</em>. JAIR 47, 2013; arXiv:1207.4708. <a href="https://arxiv.org/abs/1207.4708">https://arxiv.org/abs/1207.4708</a></li>
+<li id="ref-14">Cobbe, Hesse, Hilton et al.. <em>Leveraging Procedural Generation to Benchmark Reinforcement Learning</em>. ICML 2020; arXiv:1912.01588. <a href="https://arxiv.org/abs/1912.01588">https://arxiv.org/abs/1912.01588</a></li>
+<li id="ref-15">Farama Foundation. <em>stable-retro: Gym Retro fork with ~1000 emulated console games, state save/load and RAM-variable definitions</em>. GitHub, MIT license (accessed 29 Aug 2026). <a href="https://github.com/Farama-Foundation/stable-retro">https://github.com/Farama-Foundation/stable-retro</a></li>
+<li id="ref-16">Baekalfen et al.. <em>PyBoy: Game Boy emulator written in Python with memory access and save/load state</em>. GitHub, LGPL-3.0, v2.7.0 (accessed 29 Aug 2026). <a href="https://github.com/Baekalfen/PyBoy">https://github.com/Baekalfen/PyBoy</a></li>
+<li id="ref-17">Karten, Appapogu, Jin. <em>Automatic Generation of High-Performance RL Environments</em>. arXiv 2026; arXiv:2603.12145. <a href="https://arxiv.org/abs/2603.12145">https://arxiv.org/abs/2603.12145</a></li>
+<li id="ref-18">Jiang, Chen, Chen. <em>GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers</em>. ICLR 2026 workshop; arXiv:2604.02648. <a href="https://arxiv.org/abs/2604.02648">https://arxiv.org/abs/2604.02648</a></li>
+<li id="ref-19">Chen, Hong, Gao, Lin et al.. <em>GameXpert-Bench: How Far Are Coding Agents from Expert Game Development?</em>. arXiv:2608.21833, 2026. <a href="https://arxiv.org/abs/2608.21833">https://arxiv.org/abs/2608.21833</a></li>
+<li id="ref-20">Taesiri, Ghildyal, Zadtootaghaj et al.. <em>VideoGameQA-Bench: Evaluating Vision-Language Models for Video Game Quality Assurance</em>. NeurIPS 2025 Datasets &amp; Benchmarks; arXiv:2505.15952. <a href="https://arxiv.org/abs/2505.15952">https://arxiv.org/abs/2505.15952</a></li>
+<li id="ref-21">Zheng, Zhou, Wu et al.. <em>Open-Ended Video Game Glitch Detection with Agentic Reasoning and Temporal Grounding</em>. arXiv:2604.07818, 2026. <a href="https://arxiv.org/abs/2604.07818">https://arxiv.org/abs/2604.07818</a></li>
+<li id="ref-22">Yu, Wiens, Barahona-Ríos et al.. <em>TempGlitch: Evaluating Vision-Language Models for Temporal Glitch Detection in Gameplay Videos</em>. arXiv:2605.21443, 2026. <a href="https://arxiv.org/abs/2605.21443">https://arxiv.org/abs/2605.21443</a></li>
+<li id="ref-23">Cao, Tang, Zhao et al.. <em>PhysGame: Uncovering Physical Commonsense Violations in Gameplay Videos</em>. arXiv:2412.01800, 2024. <a href="https://arxiv.org/abs/2412.01800">https://arxiv.org/abs/2412.01800</a></li>
+<li id="ref-24">Cao, Tang, Zhao et al.. <em>Order from Chaos: Physical World Understanding from Glitchy Gameplay Videos</em>. arXiv:2601.16471, 2026. <a href="https://arxiv.org/abs/2601.16471">https://arxiv.org/abs/2601.16471</a></li>
+<li id="ref-25">Taesiri, Feng, Nguyen, Bezemer. <em>GlitchBench: Can large multimodal models detect video game glitches?</em>. CVPR 2024; arXiv:2312.05291. <a href="https://arxiv.org/abs/2312.05291">https://arxiv.org/abs/2312.05291</a></li>
+<li id="ref-26">Taesiri, Macklon, Bezemer. <em>CLIP meets GamePhysics: Towards bug identification in gameplay videos using zero-shot transfer learning</em>. MSR 2022; arXiv:2203.11096. <a href="https://arxiv.org/abs/2203.11096">https://arxiv.org/abs/2203.11096</a></li>
+<li id="ref-27">Taesiri, Macklon, Wang et al.. <em>Large Language Models are Pretty Good Zero-Shot Video Game Bug Detectors</em>. arXiv 2022; arXiv:2210.02506. <a href="https://arxiv.org/abs/2210.02506">https://arxiv.org/abs/2210.02506</a></li>
+<li id="ref-28">Yapağcı, Öztürk, Tüzün. <em>Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft</em>. arXiv:2503.20036, 2025 (Accepted into ASE'25 (Automated Software Engineering). https://conf.re). <a href="https://arxiv.org/abs/2503.20036">https://arxiv.org/abs/2503.20036</a></li>
+<li id="ref-29">Wilkins, Stathis. <em>World of Bugs: A Platform for Automated Bug Detection in 3D Video Games</em>. IEEE CoG 2022; arXiv:2206.11037. <a href="https://arxiv.org/abs/2206.11037">https://arxiv.org/abs/2206.11037</a></li>
+<li id="ref-30">Feldmeier, Fraser. <em>Neuroevolution-Based Generation of Tests and Oracles for Games</em>. arXiv:2208.13632, 2022. <a href="https://arxiv.org/abs/2208.13632">https://arxiv.org/abs/2208.13632</a></li>
+<li id="ref-31">Chen, Chen, Jia et al.. <em>IcFuzz: Fuzzing Isaac Sim with Semantic Stage Guidance and Multi-level Mutation</em>. arXiv 2026; arXiv:2608.06088. <a href="https://arxiv.org/abs/2608.06088">https://arxiv.org/abs/2608.06088</a></li>
+<li id="ref-32">Lu, Senchenko, Sayle et al.. <em>How Far Can VLMs Go for Visual Bug Detection? Studying 19,738 Keyframes from 41 Hours of Gameplay Videos</em>. arXiv:2603.22706, 2026. <a href="https://arxiv.org/abs/2603.22706">https://arxiv.org/abs/2603.22706</a></li>
+<li id="ref-33">Mawhorter, Smith. <em>Softlock Detection for Super Metroid with Computation Tree Logic</em>. FDG 2021, doi:10.1145/3472538.3472542. <a href="https://doi.org/10.1145/3472538.3472542">https://doi.org/10.1145/3472538.3472542</a></li>
+<li id="ref-34">Cooper, Bazzaz. <em>Stuck in the Middle: Generating Levels without (or with) Softlocks</em>. FDG 2025, doi:10.1145/3723498.3723844. <a href="https://doi.org/10.1145/3723498.3723844">https://doi.org/10.1145/3723498.3723844</a></li>
+<li id="ref-35">Schumilo, Aschermann, Jemmett et al.. <em>Nyx-Net: Network Fuzzing with Incremental Snapshots</em>. EuroSys 2022; arXiv:2111.03013. <a href="https://arxiv.org/abs/2111.03013">https://arxiv.org/abs/2111.03013</a></li>
+<li id="ref-36">TASVideos. <em>TASVideos publications API (4,615 published tool-assisted movies with glitch tags)</em>. REST API v1 (accessed 29 Aug 2026). <a href="https://tasvideos.org/api">https://tasvideos.org/api</a></li>
+<li id="ref-37">Forward, Limmer, Hallett et al.. <em>Super Mario in the Pernicious Kingdoms: Classifying glitches in old games</em>. arXiv:2404.14870, 2024. <a href="https://arxiv.org/abs/2404.14870">https://arxiv.org/abs/2404.14870</a></li>
+</ol>
+  </main>
+</div>

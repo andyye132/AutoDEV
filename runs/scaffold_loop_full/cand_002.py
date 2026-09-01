@@ -1,0 +1,168 @@
+"""Tester program (evolvable). The four hooks below define how a batch of B workers explores a Kinetix level.
+Kinetix states are save/restore-able: the harness keeps K archive slots: `restore` may jump a worker to a stored
+state, `archive` may store the worker's current state. Everything must be pure JAX (jit/vmap-compatible, fixed shapes).
+Feature vector `feats` (per worker, F floats, oracle-blind):
+  [0:2] dyn_pos (centroid of moving shapes), [2:4] dyn_vel, [4] dyn_max_speed, [5:7] green_pos, [7] green_blue_dist,
+  [8] time_frac, [9:11] blue_pos, then per-polygon pos/vel/rot/active/role blocks, per-circle pos/vel/active/role blocks,
+  then contact flags. `obs` is Kinetix's symbolic observation. Actions: 0..2*NM-1 motor +/- (NM=4 motor bindings),
+  2*NM = no-op, 2*NM+1.. thrusters (2 bindings).
+Goal of the search: reach states that expose planted defects as fast as possible (steps-to-first-witness), and do so
+in a way that generalizes to defect classes the search never saw."""
+import jax, jax.numpy as jnp
+# EVOLVE-BLOCK-START
+BITS = 12            # hash bits for coverage-pool archive cells
+P_RESTORE = 0.06      # per-step probability that a worker jumps to an archived state
+MAX_SHORT = 5         # max repeat length for short random-exploration holds
+MAX_MED = 14          # max repeat length for medium thruster-biased holds
+MAX_LONG = 42         # max repeat length for long single-direction / thruster holds (energy pumping)
+MAX_PUMP = 60          # max repeat length for resonant motor-oscillation holds (swing-pump energy buildup)
+CELL_DIMS = (0, 1, 2, 3, 5, 6, 9, 10)   # feature dims used to define coverage cells
+CELL_RES = 0.5        # coarse grid resolution for coverage cells
+POOL_FRAC = (0.50, 0.20, 0.15, 0.15)   # coverage / speed / green-proximity / blue-proximity pool fractions of K
+EXTREME_BONUS = 0.38  # restore-logit bonus for speed/proximity pool slots
+NM = 4                # motor bindings (fixed by env spec)
+GOAL_LR = 0.15         # EMA learning rate for the per-action goal-progress bandit
+GOAL_TEMP = 0.6        # exploration temperature (gumbel scale) for the goal-seek modes
+def _split(K):
+    K1 = max(1, int(round(POOL_FRAC[0] * K)))
+    K2 = max(1, int(round(POOL_FRAC[1] * K)))
+    K3 = max(1, int(round(POOL_FRAC[2] * K)))
+    rem = max(1, K - K1 - K2 - K3)
+    K4 = rem
+    tot = K1 + K2 + K3 + K4
+    K1 = K1 - (tot - K)
+    K1 = max(1, K1)
+    diff = K - (K1 + K2 + K3 + K4)
+    K1 += diff
+    return K1, K2, K3, K4
+def init(rng, F, n_act, K, B):
+    K1, K2, K3, K4 = _split(K)
+    return {"n_act": jnp.int32(n_act), "K": jnp.int32(K), "cur": jnp.zeros(B, jnp.int32),
+            "left": jnp.zeros(B, jnp.int32), "mode": jnp.zeros(B, jnp.int32),
+            "osc_motor": jnp.zeros(B, jnp.int32), "osc_period": jnp.ones(B, jnp.int32),
+            "act_val": jnp.zeros((B, n_act)), "act_val2": jnp.zeros((B, n_act)), "last_action": jnp.zeros(B, jnp.int32),
+            "last_dist": jnp.zeros(B), "have_dist": jnp.zeros(B, jnp.bool_),
+            "last_dist2": jnp.zeros(B), "have_dist2": jnp.zeros(B, jnp.bool_),
+            "proj": jax.random.normal(rng, (len(CELL_DIMS), BITS)),
+            "cell_slot": jnp.full(2 ** BITS, -1, jnp.int32), "next_free": jnp.int32(0)}
+def _cell(mem, feats):
+    x = jnp.round(feats[:, jnp.array(CELL_DIMS)] / CELL_RES) * CELL_RES
+    return ((x @ mem["proj"] > 0) * (2 ** jnp.arange(BITS))).sum(-1).astype(jnp.int32)
+def _blue_dist(feats):
+    d = feats[:, 0:2] - feats[:, 9:11]
+    return jnp.sqrt((d * d).sum(-1) + 1e-8)
+def restore(mem, feats, arch_feats, arch_valid, arch_visits, rng):
+    B = feats.shape[0]; K = arch_valid.shape[0]
+    K1, K2, K3, K4 = _split(K)
+    k1, k2 = jax.random.split(rng)
+    do = jax.random.uniform(k1, (B,)) < P_RESTORE
+    idx = jnp.arange(K)
+    bonus = jnp.where(idx >= K1, EXTREME_BONUS, 0.0)
+    logits = jnp.where(arch_valid, -0.5 * jnp.log1p(arch_visits.astype(jnp.float32)) + bonus, -jnp.inf)
+    slot = jnp.argmax(logits[None, :] + jax.random.gumbel(k2, (B, K)), axis=1)
+    return do & arch_valid.any(), slot, mem
+def act(mem, feats, obs, rng):
+    B = feats.shape[0]; n_act = mem["n_act"]
+    k1, k2, k3, k4, k5, k6, k7, k8, k9 = jax.random.split(rng, 9)
+    # bandit 1: reward = shrinkage of green_blue_dist attributed to the action just played
+    reward = jnp.where(mem["have_dist"], mem["last_dist"] - feats[:, 7], 0.0)
+    bidx = jnp.arange(B)
+    old_val = mem["act_val"][bidx, mem["last_action"]]
+    new_val = old_val + GOAL_LR * (reward - old_val)
+    act_val = mem["act_val"].at[bidx, mem["last_action"]].set(new_val)
+    # bandit 2: reward = shrinkage of dyn->blue distance (reach blue directly, bypassing green)
+    bd = _blue_dist(feats)
+    reward2 = jnp.where(mem["have_dist2"], mem["last_dist2"] - bd, 0.0)
+    old_val2 = mem["act_val2"][bidx, mem["last_action"]]
+    new_val2 = old_val2 + GOAL_LR * (reward2 - old_val2)
+    act_val2 = mem["act_val2"].at[bidx, mem["last_action"]].set(new_val2)
+    new = mem["left"] <= 0
+    # 0: short random exploration, 1: long single-motor energy pump, 2: medium thruster hold,
+    # 3: long thruster burst, 4: resonant motor oscillation (swing-pump for extra kinetic energy),
+    # 5: goal-seek (toward actions that shrink green_blue_dist), 6: blue-seek (toward actions that
+    # shrink dyn->blue distance directly, favoring unintended/shortcut routes to the alt target)
+    mode_probs = jnp.array([0.11, 0.16, 0.11, 0.14, 0.18, 0.16, 0.14])
+    mode = jnp.where(new, jax.random.choice(k1, 7, (B,), p=mode_probs), mem["mode"])
+    rand_action = jax.random.randint(k2, (B,), 0, n_act)
+    thr_lo = 2 * NM + 1
+    thr_span = jnp.maximum(n_act - thr_lo, 1)
+    thr_action = thr_lo + jax.random.randint(k3, (B,), 0, thr_span)
+    thr_action = jnp.where(n_act > thr_lo, thr_action, rand_action)
+    goal_action = jnp.argmax(act_val + GOAL_TEMP * jax.random.gumbel(k8, act_val.shape), axis=1)
+    blue_action = jnp.argmax(act_val2 + GOAL_TEMP * jax.random.gumbel(k9, act_val2.shape), axis=1)
+    is_thruster_mode = (mode == 2) | (mode == 3)
+    new_action = jnp.where(is_thruster_mode, thr_action,
+                            jnp.where(mode == 5, goal_action,
+                                      jnp.where(mode == 6, blue_action, rand_action)))
+    short_len = jax.random.randint(k4, (B,), 1, MAX_SHORT + 1)
+    med_len = jax.random.randint(k4, (B,), 6, MAX_MED + 1)
+    long_len = jax.random.randint(k5, (B,), 15, MAX_LONG + 1)
+    pump_len = jax.random.randint(k5, (B,), 30, MAX_PUMP + 1)
+    rep_len = jnp.where(mode == 4, pump_len,
+                         jnp.where((mode == 1) | (mode == 3), long_len,
+                                   jnp.where(mode == 2, med_len, short_len)))
+    osc_motor = jnp.where(new & (mode == 4), jax.random.randint(k6, (B,), 0, NM), mem["osc_motor"])
+    osc_period = jnp.where(new & (mode == 4), jax.random.randint(k7, (B,), 2, 17), mem["osc_period"])
+    left = jnp.where(new, rep_len, mem["left"]) - 1
+    osc_sign = jnp.mod(left // jnp.maximum(osc_period, 1), 2)
+    pump_action = 2 * osc_motor + osc_sign
+    cur = jnp.where(new, new_action, mem["cur"])
+    cur = jnp.where(mode == 4, pump_action, cur)
+    return cur, {**mem, "cur": cur, "left": left, "mode": mode, "osc_motor": osc_motor, "osc_period": osc_period,
+                 "act_val": act_val, "act_val2": act_val2, "last_action": cur,
+                 "last_dist": feats[:, 7], "have_dist": jnp.ones(B, jnp.bool_),
+                 "last_dist2": bd, "have_dist2": jnp.ones(B, jnp.bool_)}
+def archive(mem, feats, done, arch_feats, arch_valid, rng):
+    K = arch_valid.shape[0]
+    K1, K2, K3, K4 = _split(K)
+    live = ~done
+    # coverage pool: hash-grid novelty over first K1 slots
+    cell = _cell(mem, feats)
+    is_new_cell = (mem["cell_slot"][cell] < 0) & live
+    order = jnp.cumsum(is_new_cell) - 1
+    cov_slot = (mem["next_free"] + order) % K1
+    # speed pool: keep the K2 highest dyn_max_speed states seen
+    sub_speed = arch_feats[K1:K1 + K2, 4]
+    sub_speed_valid = arch_valid[K1:K1 + K2]
+    masked_speed = jnp.where(sub_speed_valid, sub_speed, -jnp.inf)
+    worst_speed_idx = jnp.argmin(masked_speed)
+    worst_speed_val = masked_speed[worst_speed_idx]
+    speed_beats = (feats[:, 4] > worst_speed_val) & live
+    speed_slot = K1 + worst_speed_idx
+    # green-proximity pool: keep the K3 states with smallest green_blue_dist
+    g0 = K1 + K2
+    sub_gdist = arch_feats[g0:g0 + K3, 7]
+    sub_gdist_valid = arch_valid[g0:g0 + K3]
+    masked_gdist = jnp.where(sub_gdist_valid, sub_gdist, jnp.inf)
+    worst_gdist_idx = jnp.argmin(-masked_gdist) if False else jnp.argmax(masked_gdist)
+    worst_gdist_val = masked_gdist[worst_gdist_idx]
+    gdist_beats = (feats[:, 7] < worst_gdist_val) & live
+    gdist_slot = g0 + worst_gdist_idx
+    # blue-proximity pool: keep the K4 states with smallest dyn->blue distance (unintended-route seeds)
+    b0 = K1 + K2 + K3
+    bd = _blue_dist(feats)
+    ab = arch_feats[b0:b0 + K4, 0:2] - arch_feats[b0:b0 + K4, 9:11]
+    sub_bdist = jnp.sqrt((ab * ab).sum(-1) + 1e-8)
+    sub_bdist_valid = arch_valid[b0:b0 + K4]
+    masked_bdist = jnp.where(sub_bdist_valid, sub_bdist, jnp.inf)
+    worst_bdist_idx = jnp.argmax(masked_bdist)
+    worst_bdist_val = masked_bdist[worst_bdist_idx]
+    bdist_beats = (bd < worst_bdist_val) & live
+    bdist_slot = b0 + worst_bdist_idx
+    use_speed = speed_beats & ~is_new_cell
+    use_gdist = gdist_beats & ~is_new_cell & ~use_speed
+    use_bdist = bdist_beats & ~is_new_cell & ~use_speed & ~use_gdist
+    do = is_new_cell | use_speed | use_gdist | use_bdist
+    slot = jnp.where(is_new_cell, cov_slot,
+                      jnp.where(use_speed, speed_slot,
+                                jnp.where(use_gdist, gdist_slot, bdist_slot)))
+    cell_slot = mem["cell_slot"].at[jnp.where(is_new_cell, cell, 0)].set(
+        jnp.where(is_new_cell, cov_slot, mem["cell_slot"][0]))
+    return do, slot, {**mem, "cell_slot": cell_slot, "next_free": (mem["next_free"] + is_new_cell.sum()) % K1}
+# EVOLVE-BLOCK-END
+def run_experiment(**kwargs):
+    """Called by the evaluation harness; returns the search-split fitness. Do not edit."""
+    import sys, os
+    sys.path.insert(0, os.environ.get("AUTODEV_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    from autodev.search_eval import evaluate_hooks
+    return evaluate_hooks(init, restore, act, archive, **kwargs)

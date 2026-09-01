@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=autodev-throughput
+#SBATCH --account=raivn
+#SBATCH --partition=gpu-a40
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
+#SBATCH --time=00:20:00
+#SBATCH --nodes=1
+#SBATCH --output=/gscratch/raivn/andy132/AutoDev/logs/%x-%j.out
+source /gscratch/raivn/andy132/AutoDev/scripts/slurm/_common.sh
+python tests/test_tester.py
+python tests/test_ppo.py

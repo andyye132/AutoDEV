@@ -1,0 +1,5464 @@
+{
+ "generated": "2026-08-30",
+ "sources": {
+  "planted_pool": "runs/hyak/pool.json",
+  "splits": "runs/hyak/split.json",
+  "search_and_heldout_first_hits": "runs/hyak_eval_merged.json (valid non-restoring rows only)",
+  "heldout_4x": "runs/hyak/eval_longbudget4x_cand1.json",
+  "kgoal": "runs/hyak/eval_goal.json + runs/hyak/eval_ppo_goal.json",
+  "structural": "results/structural.json",
+  "guided_ceiling": "runs/hyak/guided_ceiling.json"
+ },
+ "protocol": {
+  "budget": 262144,
+  "budget_4x": 1048576,
+  "episode_steps": 256,
+  "env_step_seconds": 0.03333333333333333,
+  "n_actions": 11,
+  "gravity": -9.81,
+  "anomaly_speed_threshold": 12.0,
+  "free_fall_speed_from_box_top": 9.5,
+  "anomaly_restitution": 1.6,
+  "restitution_combination": "min(a,b) -> only green-agent <-> static bounces amplify",
+  "done_rule": "reward != 0 (win or hazard) or timestep >= 256"
+ },
+ "splits": {
+  "search": {
+   "n": 127,
+   "testers": [
+    "random",
+    "repeat_random",
+    "ppo_count",
+    "ppo_rnd",
+    "ppo_icm",
+    "ppo_curiosity_proximity",
+    "ppo_task"
+   ],
+   "reached_union": 83,
+   "best_single": 80,
+   "uniquely_reached_by_one_tester": [
+    "m_h16_thrustcontrol_right__DISARMED__0"
+   ],
+   "missed": [
+    "l_car_swing_around__SHORTCUT__1",
+    "l_chain_thrust__ANOMALY__0",
+    "l_grasp_hard__TUNNEL__0",
+    "l_h0_angrybirds__ANOMALY__0",
+    "l_h0_angrybirds__SHORTCUT__0",
+    "l_h0_angrybirds__SHORTCUT__1",
+    "l_h11_obstacle_avoidance__ANOMALY__0",
+    "l_h11_obstacle_avoidance__DISARMED__0",
+    "l_h11_obstacle_avoidance__DISARMED__1",
+    "l_h15_swing_up__ANOMALY__0",
+    "l_h15_swing_up__SHORTCUT__0",
+    "l_h15_swing_up__SHORTCUT__1",
+    "l_h15_swing_up__TUNNEL__0",
+    "l_h16_thruster_goal__ANOMALY__0",
+    "l_h17_unicycle__ANOMALY__0",
+    "l_h17_unicycle__SHORTCUT__0",
+    "l_h4_cartpole__ANOMALY__0",
+    "l_h4_cartpole__SHORTCUT__0",
+    "l_h4_cartpole__SHORTCUT__1",
+    "l_h7_maze_1__DISARMED__0",
+    "l_h8_maze_2__ANOMALY__0",
+    "l_h8_maze_2__DISARMED__0",
+    "l_h8_maze_2__DISARMED__1",
+    "l_hard_cartpole_thrust__ANOMALY__0",
+    "l_hard_cartpole_wheels__ANOMALY__0",
+    "l_mjc_half_cheetah__ANOMALY__0",
+    "l_mjc_half_cheetah_easy__ANOMALY__0",
+    "l_mjc_hopper__SHORTCUT__0",
+    "l_mjc_hopper_easy__SHORTCUT__0",
+    "l_mjc_walker__ANOMALY__0",
+    "l_mjc_walker__SHORTCUT__0",
+    "l_mjc_walker__SHORTCUT__1",
+    "l_mjc_walker_easy__SHORTCUT__0",
+    "l_mjc_walker_easy__SHORTCUT__1",
+    "m_arm_left__TUNNEL__0",
+    "m_arm_right__TUNNEL__0",
+    "m_arm_up__TUNNEL__0",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h6_unicycle_right__SHORTCUT__0",
+    "s_h7_unicycle_left__SHORTCUT__0",
+    "s_h8_unicycle_balance__ANOMALY__0"
+   ],
+   "missed_by_class": {
+    "SHORTCUT": 17,
+    "ANOMALY": 17,
+    "TUNNEL": 5,
+    "DISARMED": 5
+   },
+   "unwitnessable": [
+    "l_h15_swing_up__TUNNEL__0",
+    "m_arm_left__TUNNEL__0",
+    "m_arm_right__TUNNEL__0",
+    "m_arm_up__TUNNEL__0"
+   ],
+   "free_hits": [
+    "l_car_launch__TUNNEL__0",
+    "l_car_swing_around__TUNNEL__1",
+    "l_h9_morph_direction__TUNNEL__0",
+    "l_lever_puzzle__TUNNEL__1"
+   ],
+   "genuine_misses": [
+    "l_car_swing_around__SHORTCUT__1",
+    "l_chain_thrust__ANOMALY__0",
+    "l_grasp_hard__TUNNEL__0",
+    "l_h0_angrybirds__ANOMALY__0",
+    "l_h0_angrybirds__SHORTCUT__0",
+    "l_h0_angrybirds__SHORTCUT__1",
+    "l_h11_obstacle_avoidance__ANOMALY__0",
+    "l_h11_obstacle_avoidance__DISARMED__0",
+    "l_h11_obstacle_avoidance__DISARMED__1",
+    "l_h15_swing_up__ANOMALY__0",
+    "l_h15_swing_up__SHORTCUT__0",
+    "l_h15_swing_up__SHORTCUT__1",
+    "l_h16_thruster_goal__ANOMALY__0",
+    "l_h17_unicycle__ANOMALY__0",
+    "l_h17_unicycle__SHORTCUT__0",
+    "l_h4_cartpole__ANOMALY__0",
+    "l_h4_cartpole__SHORTCUT__0",
+    "l_h4_cartpole__SHORTCUT__1",
+    "l_h7_maze_1__DISARMED__0",
+    "l_h8_maze_2__ANOMALY__0",
+    "l_h8_maze_2__DISARMED__0",
+    "l_h8_maze_2__DISARMED__1",
+    "l_hard_cartpole_thrust__ANOMALY__0",
+    "l_hard_cartpole_wheels__ANOMALY__0",
+    "l_mjc_half_cheetah__ANOMALY__0",
+    "l_mjc_half_cheetah_easy__ANOMALY__0",
+    "l_mjc_hopper__SHORTCUT__0",
+    "l_mjc_hopper_easy__SHORTCUT__0",
+    "l_mjc_walker__ANOMALY__0",
+    "l_mjc_walker__SHORTCUT__0",
+    "l_mjc_walker__SHORTCUT__1",
+    "l_mjc_walker_easy__SHORTCUT__0",
+    "l_mjc_walker_easy__SHORTCUT__1",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h6_unicycle_right__SHORTCUT__0",
+    "s_h7_unicycle_left__SHORTCUT__0",
+    "s_h8_unicycle_balance__ANOMALY__0"
+   ]
+  },
+  "heldout_levels_instances": {
+   "n": 59,
+   "reached_union": 37,
+   "missed": [
+    "l_h12_platformer_1__ANOMALY__0",
+    "l_h12_platformer_1__DISARMED__0",
+    "l_h12_platformer_1__DISARMED__1",
+    "l_h12_platformer_1__SHORTCUT__0",
+    "l_h12_platformer_1__SHORTCUT__1",
+    "l_h12_platformer_1__TUNNEL__0",
+    "l_h12_platformer_1__TUNNEL__1",
+    "l_h13_platformer_2__ANOMALY__0",
+    "l_h13_platformer_2__DISARMED__0",
+    "l_h13_platformer_2__DISARMED__1",
+    "l_h13_platformer_2__SHORTCUT__0",
+    "l_h13_platformer_2__SHORTCUT__1",
+    "l_h13_platformer_2__TUNNEL__0",
+    "l_h13_platformer_2__TUNNEL__1",
+    "l_h6_lorry__ANOMALY__0",
+    "l_pr__ANOMALY__0",
+    "l_pr__SHORTCUT__0",
+    "l_pr__SHORTCUT__1",
+    "m_arm_hard__ANOMALY__0",
+    "m_arm_hard__TUNNEL__0",
+    "s_h0_weak_thrust__ANOMALY__0",
+    "s_h5_rotate_fall__ANOMALY__0"
+   ],
+   "missed_by_class": {
+    "ANOMALY": 7,
+    "TUNNEL": 5,
+    "SHORTCUT": 6,
+    "DISARMED": 4
+   },
+   "unwitnessable": [
+    "m_arm_hard__TUNNEL__0"
+   ]
+  },
+  "heldout_class_instances_OOB": {
+   "n": 148,
+   "reached_union": 60,
+   "missed": [
+    "l_car_launch__OOB__0",
+    "l_car_swing_around__OOB__0",
+    "l_chain_lander__OOB__0",
+    "l_chain_thrust__OOB__0",
+    "l_gears__OOB__0",
+    "l_h0_angrybirds__OOB__0",
+    "l_h10_morph_direction_2__OOB__0",
+    "l_h11_obstacle_avoidance__OOB__0",
+    "l_h11_obstacle_avoidance__OOB__1",
+    "l_h12_platformer_1__OOB__0",
+    "l_h12_platformer_1__OOB__1",
+    "l_h13_platformer_2__OOB__0",
+    "l_h13_platformer_2__OOB__1",
+    "l_h15_swing_up__OOB__0",
+    "l_h15_swing_up__OOB__1",
+    "l_h16_thruster_goal__OOB__0",
+    "l_h16_thruster_goal__OOB__1",
+    "l_h17_unicycle__OOB__0",
+    "l_h1_car_left__OOB__0",
+    "l_h2_car_ramp__OOB__0",
+    "l_h3_car_right__OOB__0",
+    "l_h3_car_right__OOB__1",
+    "l_h4_cartpole__OOB__0",
+    "l_h6_lorry__OOB__0",
+    "l_h8_maze_2__OOB__0",
+    "l_h8_maze_2__OOB__1",
+    "l_h9_morph_direction__OOB__0",
+    "l_hard_beam_balance__OOB__0",
+    "l_hard_cartpole_thrust__OOB__0",
+    "l_hard_cartpole_thrust__OOB__1",
+    "l_hard_cartpole_wheels__OOB__0",
+    "l_hard_cartpole_wheels__OOB__1",
+    "l_hard_lunar_lander__OOB__0",
+    "l_lever_puzzle__OOB__0",
+    "l_mjc_half_cheetah__OOB__0",
+    "l_mjc_half_cheetah__OOB__1",
+    "l_mjc_half_cheetah_easy__OOB__0",
+    "l_mjc_half_cheetah_easy__OOB__1",
+    "l_mjc_hopper__OOB__0",
+    "l_mjc_hopper__OOB__1",
+    "l_mjc_hopper_easy__OOB__0",
+    "l_mjc_hopper_easy__OOB__1",
+    "l_mjc_swimmer__OOB__0",
+    "l_mjc_swimmer__OOB__1",
+    "l_mjc_walker__OOB__0",
+    "l_mjc_walker__OOB__1",
+    "l_mjc_walker_easy__OOB__0",
+    "l_mjc_walker_easy__OOB__1",
+    "l_pr__OOB__0",
+    "l_rail__OOB__0",
+    "m_arm_hard__OOB__0",
+    "m_arm_hard__OOB__1",
+    "m_arm_left__OOB__0",
+    "m_arm_left__OOB__1",
+    "m_arm_right__OOB__0",
+    "m_arm_right__OOB__1",
+    "m_arm_up__OOB__0",
+    "m_arm_up__OOB__1",
+    "m_h0_unicycle__OOB__0",
+    "m_h0_unicycle__OOB__1",
+    "m_h12_thrustfall_left__OOB__0",
+    "m_h13_thrustfall_right__OOB__0",
+    "m_h14_thrustblock__OOB__0",
+    "m_h14_thrustblock__OOB__1",
+    "m_h1_car_left__OOB__0",
+    "m_h1_car_left__OOB__1",
+    "m_h2_car_right__OOB__0",
+    "m_h2_car_right__OOB__1",
+    "m_h4_thrust_the_needle__OOB__0",
+    "m_h4_thrust_the_needle__OOB__1",
+    "m_h5_angry_birds__OOB__0",
+    "m_h8_weird_vehicle__OOB__0",
+    "m_h8_weird_vehicle__OOB__1",
+    "s_h0_weak_thrust__OOB__0",
+    "s_h0_weak_thrust__OOB__1",
+    "s_h1_thrust_over_ball__OOB__0",
+    "s_h1_thrust_over_ball__OOB__1",
+    "s_h2_one_wheel_car__OOB__0",
+    "s_h3_point_the_thruster__OOB__0",
+    "s_h4_thrust_aim__OOB__0",
+    "s_h4_thrust_aim__OOB__1",
+    "s_h5_rotate_fall__OOB__0",
+    "s_h5_rotate_fall__OOB__1",
+    "s_h6_unicycle_right__OOB__0",
+    "s_h6_unicycle_right__OOB__1",
+    "s_h7_unicycle_left__OOB__0",
+    "s_h8_unicycle_balance__OOB__0",
+    "s_h8_unicycle_balance__OOB__1"
+   ],
+   "reach_by_removed_wall": {
+    "ceiling": {
+     "n": 74,
+     "reached": 18
+    },
+    "right": {
+     "n": 74,
+     "reached": 42
+    }
+   },
+   "reach_by_thrust": {
+    "ceiling_thrust_over_g": {
+     "n": 26,
+     "reached": 14
+    },
+    "ceiling_thrust_under_g": {
+     "n": 48,
+     "reached": 4
+    }
+   }
+  },
+  "kgoal_search": {
+   "n": 52,
+   "reached_by_baselines": 36,
+   "reached_by_any_program": 41,
+   "missed_by_baselines": [
+    "l_h11_obstacle_avoidance__GOAL__0",
+    "l_h15_swing_up__GOAL__0",
+    "l_h16_thruster_goal__GOAL__0",
+    "l_h5_flappy_bird__GOAL__0",
+    "l_h8_maze_2__GOAL__0",
+    "l_hard_beam_balance__GOAL__0",
+    "l_hard_cartpole_thrust__GOAL__0",
+    "l_hard_cartpole_wheels__GOAL__0",
+    "l_lever_puzzle__GOAL__0",
+    "l_mjc_half_cheetah__GOAL__0",
+    "l_mjc_half_cheetah_easy__GOAL__0",
+    "l_mjc_hopper__GOAL__0",
+    "l_mjc_walker__GOAL__0",
+    "l_mjc_walker_easy__GOAL__0",
+    "m_h16_thrustcontrol_right__GOAL__0",
+    "m_h17_thrustcontrol_left__GOAL__0"
+   ],
+   "missed_by_all": [
+    "l_h11_obstacle_avoidance__GOAL__0",
+    "l_h16_thruster_goal__GOAL__0",
+    "l_h5_flappy_bird__GOAL__0",
+    "l_h8_maze_2__GOAL__0",
+    "l_hard_beam_balance__GOAL__0",
+    "l_hard_cartpole_thrust__GOAL__0",
+    "l_hard_cartpole_wheels__GOAL__0",
+    "l_lever_puzzle__GOAL__0",
+    "l_mjc_half_cheetah__GOAL__0",
+    "l_mjc_hopper__GOAL__0",
+    "l_mjc_walker__GOAL__0"
+   ],
+   "per_program": {
+    "random": 22,
+    "repeat_random": 31,
+    "goexplore": 31,
+    "cand1_gen037_0.6994.py": 34,
+    "cand4_gen035_0.6934.py": 35,
+    "macrosweep.py": 38,
+    "ppo_count": 32,
+    "ppo_rnd": 26,
+    "ppo_icm": 28,
+    "ppo_curiosity_proximity": 34,
+    "ppo_task": 28
+   }
+  }
+ },
+ "aggregate": {
+  "reach_rate_by_actuation_and_constraint": {
+   "OOB": {
+    "free+thrust>g": "30/42",
+    "free+noThrust": "15/40",
+    "jointed+thrust>g": "5/10",
+    "jointed+noThrust": "10/56"
+   },
+   "ANOMALY": {
+    "free+thrust>g": "19/21",
+    "free+noThrust": "10/20",
+    "jointed+thrust>g": "4/5",
+    "jointed+noThrust": "17/28"
+   },
+   "SHORTCUT": {
+    "free+thrust>g": "3/5",
+    "free+noThrust": "11/20",
+    "jointed+thrust>g": "2/2",
+    "jointed+noThrust": "7/19"
+   },
+   "DISARMED": {
+    "free+thrust>g": "14/15",
+    "free+noThrust": "3/11",
+    "jointed+thrust>g": "3/3",
+    "jointed+noThrust": "7/7"
+   },
+   "TUNNEL": {
+    "free+thrust>g": "3/3",
+    "free+noThrust": "7/13",
+    "jointed+noThrust": "10/14"
+   }
+  },
+  "held_action_envelope_missed": {
+   "n": 149,
+   "median_episode_len": 206.0,
+   "frac_episode_len_below_40": 0.35570469798657717,
+   "median_climb_m": 0.0,
+   "median_travel_m": 0.45,
+   "median_max_speed": 4.81
+  },
+  "blockers": {
+   "no_lift_observed": 29,
+   "null": 86,
+   "speed_shortfall": 22,
+   "thrust_to_weight_below_1": 12
+  },
+  "guided_ceiling_reaches_missed": 1
+ },
+ "easy_contrast": {
+  "definition": "search-split instances repeat_random hits within 6000 of 262144 steps",
+  "n": 55,
+  "instances": [
+   "l_car_launch__ANOMALY__0",
+   "l_car_launch__SHORTCUT__0",
+   "l_car_launch__TUNNEL__0",
+   "l_car_swing_around__TUNNEL__1",
+   "l_chain_thrust__DISARMED__0",
+   "l_chain_thrust__TUNNEL__0",
+   "l_grasp_hard__ANOMALY__0",
+   "l_grasp_hard__SHORTCUT__0",
+   "l_grasp_hard__SHORTCUT__1",
+   "l_h0_angrybirds__TUNNEL__0",
+   "l_h5_flappy_bird__ANOMALY__0",
+   "l_h9_morph_direction__ANOMALY__0",
+   "l_h9_morph_direction__TUNNEL__0",
+   "l_hard_beam_balance__ANOMALY__0",
+   "l_hard_lunar_lander__ANOMALY__0",
+   "l_hard_pinball__ANOMALY__0",
+   "l_hard_pinball__SHORTCUT__0",
+   "l_hard_pinball__SHORTCUT__1",
+   "l_hard_pinball__TUNNEL__0",
+   "l_hard_pinball__TUNNEL__1",
+   "l_lever_puzzle__ANOMALY__0",
+   "l_lever_puzzle__SHORTCUT__1",
+   "l_lever_puzzle__TUNNEL__0",
+   "l_lever_puzzle__TUNNEL__1",
+   "l_mjc_hopper_easy__ANOMALY__0",
+   "l_rail__TUNNEL__0",
+   "l_rail__TUNNEL__1",
+   "m_arm_left__ANOMALY__0",
+   "m_arm_left__DISARMED__0",
+   "m_arm_left__SHORTCUT__0",
+   "m_arm_right__DISARMED__0",
+   "m_arm_right__SHORTCUT__0",
+   "m_h10_thrust_right_easy__ANOMALY__0",
+   "m_h11_thrust_left_easy__ANOMALY__0",
+   "m_h12_thrustfall_left__ANOMALY__0",
+   "m_h12_thrustfall_left__DISARMED__0",
+   "m_h15_thrustshoot__ANOMALY__0",
+   "m_h16_thrustcontrol_right__ANOMALY__0",
+   "m_h16_thrustcontrol_right__SHORTCUT__0",
+   "m_h16_thrustcontrol_right__TUNNEL__0",
+   "m_h17_thrustcontrol_left__ANOMALY__0",
+   "m_h17_thrustcontrol_left__SHORTCUT__0",
+   "m_h17_thrustcontrol_left__TUNNEL__0",
+   "m_h19_thrust_left_very_easy__ANOMALY__0",
+   "m_h1_car_left__DISARMED__0",
+   "m_h2_car_right__DISARMED__0",
+   "m_h3_car_thrust__DISARMED__0",
+   "m_h4_thrust_the_needle__ANOMALY__0",
+   "m_h9_spin_the_right_way__ANOMALY__0",
+   "m_h9_spin_the_right_way__SHORTCUT__0",
+   "m_h9_spin_the_right_way__TUNNEL__0",
+   "s_h1_thrust_over_ball__ANOMALY__0",
+   "s_h1_thrust_over_ball__DISARMED__0",
+   "s_h4_thrust_aim__ANOMALY__0",
+   "s_h4_thrust_aim__DISARMED__0"
+  ],
+  "envelope": {
+   "median_episode_len": 214.0,
+   "median_travel_m": 0.38,
+   "median_max_speed": 9.2,
+   "n": 55
+  }
+ },
+ "probes": {
+  "hold": {
+   "detected": 0.0,
+   "budget": 16384,
+   "n": 62,
+   "hits": []
+  },
+  "rep64": {
+   "detected": 0.0,
+   "budget": 16384,
+   "n": 62,
+   "hits": []
+  },
+  "ratchet": {
+   "detected": 0.0,
+   "budget": 16384,
+   "n": 62,
+   "hits": []
+  },
+  "resonate": {
+   "detected": 0.0,
+   "budget": 16384,
+   "n": 62,
+   "hits": []
+  },
+  "erestore": {
+   "detected": 0.0,
+   "budget": 16384,
+   "n": 62,
+   "hits": []
+  }
+ },
+ "mechanisms": [
+  {
+   "id": "M1",
+   "name": "Death-aware checkpoint chaining (survival go-explore)",
+   "what": "Archive only non-terminal states, key slots by (depth-since-reset, coarse novelty); restore preferentially to the deepest surviving states and suppress the action that ended the last episode.",
+   "computable_from": "the harness `done` flag passed to archive(), feats time_frac, dyn_pos/vel",
+   "why": "In the maze/platformer levels every one of the 11 held actions ends the episode by hazard contact in 13-19 steps, so the whole 262k budget is spent on ~15k restarts of a half-second episode; depth is only reachable by chaining checkpoints.",
+   "unlocks": [
+    "l_chain_lander__OOB__0",
+    "l_h11_obstacle_avoidance__ANOMALY__0",
+    "l_h11_obstacle_avoidance__DISARMED__0",
+    "l_h11_obstacle_avoidance__DISARMED__1",
+    "l_h11_obstacle_avoidance__OOB__0",
+    "l_h11_obstacle_avoidance__OOB__1",
+    "l_h12_platformer_1__ANOMALY__0",
+    "l_h12_platformer_1__DISARMED__0",
+    "l_h12_platformer_1__DISARMED__1",
+    "l_h12_platformer_1__OOB__0",
+    "l_h12_platformer_1__OOB__1",
+    "l_h12_platformer_1__SHORTCUT__0",
+    "l_h12_platformer_1__SHORTCUT__1",
+    "l_h12_platformer_1__TUNNEL__0",
+    "l_h12_platformer_1__TUNNEL__1",
+    "l_h13_platformer_2__ANOMALY__0",
+    "l_h13_platformer_2__DISARMED__0",
+    "l_h13_platformer_2__DISARMED__1",
+    "l_h13_platformer_2__OOB__0",
+    "l_h13_platformer_2__OOB__1",
+    "l_h13_platformer_2__SHORTCUT__0",
+    "l_h13_platformer_2__SHORTCUT__1",
+    "l_h13_platformer_2__TUNNEL__0",
+    "l_h13_platformer_2__TUNNEL__1",
+    "l_h16_thruster_goal__ANOMALY__0",
+    "l_h16_thruster_goal__OOB__0",
+    "l_h16_thruster_goal__OOB__1",
+    "l_h17_unicycle__ANOMALY__0",
+    "l_h17_unicycle__OOB__0",
+    "l_h17_unicycle__SHORTCUT__0",
+    "l_h4_cartpole__ANOMALY__0",
+    "l_h4_cartpole__OOB__0",
+    "l_h4_cartpole__SHORTCUT__0",
+    "l_h4_cartpole__SHORTCUT__1",
+    "l_h7_maze_1__DISARMED__0",
+    "l_h8_maze_2__ANOMALY__0",
+    "l_h8_maze_2__DISARMED__0",
+    "l_h8_maze_2__DISARMED__1",
+    "l_h8_maze_2__OOB__0",
+    "l_h8_maze_2__OOB__1",
+    "l_hard_beam_balance__OOB__0",
+    "l_hard_cartpole_thrust__ANOMALY__0",
+    "l_hard_cartpole_thrust__OOB__0",
+    "l_hard_cartpole_thrust__OOB__1",
+    "l_hard_cartpole_wheels__ANOMALY__0",
+    "l_hard_cartpole_wheels__OOB__0",
+    "l_hard_cartpole_wheels__OOB__1",
+    "l_hard_lunar_lander__OOB__0",
+    "m_arm_up__OOB__0",
+    "m_arm_up__OOB__1",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h0_unicycle__OOB__0",
+    "m_h0_unicycle__OOB__1",
+    "m_h14_thrustblock__OOB__0",
+    "m_h14_thrustblock__OOB__1",
+    "m_h4_thrust_the_needle__OOB__0",
+    "m_h4_thrust_the_needle__OOB__1",
+    "s_h0_weak_thrust__ANOMALY__0",
+    "s_h0_weak_thrust__OOB__0",
+    "s_h0_weak_thrust__OOB__1",
+    "s_h4_thrust_aim__OOB__0",
+    "s_h4_thrust_aim__OOB__1",
+    "s_h5_rotate_fall__ANOMALY__0",
+    "s_h5_rotate_fall__OOB__0",
+    "s_h5_rotate_fall__OOB__1",
+    "s_h8_unicycle_balance__ANOMALY__0",
+    "s_h8_unicycle_balance__OOB__0",
+    "s_h8_unicycle_balance__OOB__1"
+   ],
+   "n_unlocks": 68
+  },
+  {
+   "id": "M2",
+   "name": "Full-episode coherent holds (macro length swept to the 256-step horizon)",
+   "what": "Sweep hold length over {8,32,96,256} instead of capping at 12 (sticky-random) / 20 (macrosweep); one action, or one 2-action alternation, held for the whole episode.",
+   "computable_from": "nothing but the action index and a step counter",
+   "why": "For thrust-to-weight near 1 the climb needs 57-172 steps of uninterrupted thrust; 37/45 thrust-actuated misses need a hold longer than sticky-random can emit and 25/45 longer than a macrosweep macro.",
+   "unlocks": [
+    "l_chain_lander__OOB__0",
+    "l_h11_obstacle_avoidance__OOB__1",
+    "l_h12_platformer_1__DISARMED__0",
+    "l_h12_platformer_1__OOB__1",
+    "l_h12_platformer_1__SHORTCUT__0",
+    "l_h12_platformer_1__TUNNEL__0",
+    "l_h13_platformer_2__DISARMED__0",
+    "l_h13_platformer_2__OOB__1",
+    "l_h13_platformer_2__SHORTCUT__0",
+    "l_h13_platformer_2__TUNNEL__0",
+    "l_h16_thruster_goal__OOB__1",
+    "l_h7_maze_1__DISARMED__0",
+    "l_h8_maze_2__OOB__1",
+    "l_hard_cartpole_thrust__OOB__0",
+    "l_hard_lunar_lander__OOB__0",
+    "l_pr__OOB__0",
+    "m_h12_thrustfall_left__OOB__0",
+    "m_h13_thrustfall_right__OOB__0",
+    "m_h14_thrustblock__OOB__0",
+    "m_h14_thrustblock__OOB__1",
+    "s_h0_weak_thrust__OOB__1",
+    "s_h1_thrust_over_ball__OOB__0",
+    "s_h3_point_the_thruster__OOB__0",
+    "s_h4_thrust_aim__OOB__0"
+   ],
+   "n_unlocks": 24
+  },
+  {
+   "id": "M3",
+   "name": "Velocity-aligned drive (\"keep pushing the way it is already moving\")",
+   "what": "Every H steps score each action by the sign of the change it produced in the projection of dyn velocity on its own previous direction; keep the action while the projection grows.",
+   "computable_from": "feats dyn_vel, poly_vel/circle_vel, dyn_max_speed",
+   "why": "Wheeled and thruster bodies need net drift of 0.4-4.7 m; sticky-random reverses every <=12 steps and nets ~0 displacement (held actions travel a median 0.45 m in one episode, and that is the *best* of 11).",
+   "unlocks": [
+    "l_h11_obstacle_avoidance__OOB__1",
+    "l_h12_platformer_1__OOB__1",
+    "l_h13_platformer_2__OOB__1",
+    "l_h15_swing_up__OOB__1",
+    "l_h16_thruster_goal__OOB__1",
+    "l_h3_car_right__OOB__1",
+    "l_h8_maze_2__OOB__1",
+    "l_hard_cartpole_thrust__OOB__1",
+    "l_hard_cartpole_wheels__OOB__1",
+    "l_mjc_half_cheetah__OOB__1",
+    "l_mjc_half_cheetah_easy__OOB__1",
+    "l_mjc_hopper__OOB__1",
+    "l_mjc_hopper_easy__OOB__1",
+    "l_mjc_swimmer__OOB__1",
+    "l_mjc_walker__OOB__1",
+    "l_mjc_walker_easy__OOB__1",
+    "m_arm_hard__OOB__1",
+    "m_arm_left__OOB__1",
+    "m_arm_right__OOB__1",
+    "m_arm_up__OOB__1",
+    "m_h0_unicycle__OOB__1",
+    "m_h14_thrustblock__OOB__1",
+    "m_h1_car_left__OOB__1",
+    "m_h2_car_right__OOB__1",
+    "m_h4_thrust_the_needle__OOB__1",
+    "m_h8_weird_vehicle__OOB__1",
+    "s_h0_weak_thrust__OOB__1",
+    "s_h1_thrust_over_ball__OOB__1",
+    "s_h4_thrust_aim__OOB__1",
+    "s_h5_rotate_fall__OOB__1",
+    "s_h6_unicycle_right__OOB__1",
+    "s_h8_unicycle_balance__OOB__1"
+   ],
+   "n_unlocks": 32
+  },
+  {
+   "id": "M4",
+   "name": "Energy ratchet with restore-to-max-energy",
+   "what": "Key the archive by a mechanical-energy proxy E = v_max^2 + 2 g y of the dynamic bodies; restore to the top-E slots and only keep an action while E increases.",
+   "computable_from": "feats dyn_max_speed, poly_pos/circle_pos (heights)",
+   "why": "ANOMALY needs 12 m/s where free fall from the box top gives 9.5 m/s; the amplification is a *multiplicative* ladder (restitution 1.6, combined as min(a,b), so only green<->static bounces gain) so states must be chained by energy, not by novelty. The best single held action reaches a median 7.0 m/s (max 10.7).",
+   "unlocks": [
+    "l_chain_thrust__ANOMALY__0",
+    "l_h0_angrybirds__ANOMALY__0",
+    "l_h11_obstacle_avoidance__ANOMALY__0",
+    "l_h12_platformer_1__ANOMALY__0",
+    "l_h13_platformer_2__ANOMALY__0",
+    "l_h15_swing_up__ANOMALY__0",
+    "l_h16_thruster_goal__ANOMALY__0",
+    "l_h17_unicycle__ANOMALY__0",
+    "l_h4_cartpole__ANOMALY__0",
+    "l_h6_lorry__ANOMALY__0",
+    "l_h8_maze_2__ANOMALY__0",
+    "l_hard_cartpole_thrust__ANOMALY__0",
+    "l_hard_cartpole_wheels__ANOMALY__0",
+    "l_mjc_half_cheetah__ANOMALY__0",
+    "l_mjc_half_cheetah_easy__ANOMALY__0",
+    "l_mjc_walker__ANOMALY__0",
+    "l_pr__ANOMALY__0",
+    "m_arm_hard__ANOMALY__0",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0",
+    "s_h0_weak_thrust__ANOMALY__0",
+    "s_h5_rotate_fall__ANOMALY__0",
+    "s_h8_unicycle_balance__ANOMALY__0"
+   ],
+   "n_unlocks": 24
+  },
+  {
+   "id": "M5",
+   "name": "Resonant square-wave drive (period sweep)",
+   "what": "Alternate two opposed actuator actions with the half-period swept over {1,2,4,...,128} steps per worker; keep the period whose amplitude/energy grows fastest.",
+   "computable_from": "action indices + step counter; scored by the same E as M4",
+   "why": "43 misses have a jointed agent driven by motors (pendulum/cartpole/unicycle/arm/walker). A constant hold saturates against the joint; only a drive matched to the pendulum period pumps amplitude.",
+   "unlocks": [
+    "l_car_launch__OOB__0",
+    "l_car_swing_around__OOB__0",
+    "l_car_swing_around__SHORTCUT__1",
+    "l_h10_morph_direction_2__OOB__0",
+    "l_h15_swing_up__ANOMALY__0",
+    "l_h15_swing_up__OOB__0",
+    "l_h15_swing_up__SHORTCUT__0",
+    "l_h15_swing_up__SHORTCUT__1",
+    "l_h17_unicycle__ANOMALY__0",
+    "l_h17_unicycle__OOB__0",
+    "l_h1_car_left__OOB__0",
+    "l_h2_car_ramp__OOB__0",
+    "l_h3_car_right__OOB__0",
+    "l_h4_cartpole__ANOMALY__0",
+    "l_h4_cartpole__OOB__0",
+    "l_h9_morph_direction__OOB__0",
+    "l_hard_cartpole_wheels__ANOMALY__0",
+    "l_hard_cartpole_wheels__OOB__0",
+    "l_lever_puzzle__OOB__0",
+    "l_mjc_half_cheetah__ANOMALY__0",
+    "l_mjc_half_cheetah__OOB__0",
+    "l_mjc_half_cheetah_easy__ANOMALY__0",
+    "l_mjc_half_cheetah_easy__OOB__0",
+    "l_mjc_hopper__OOB__0",
+    "l_mjc_hopper_easy__OOB__0",
+    "l_mjc_swimmer__OOB__0",
+    "l_mjc_walker__ANOMALY__0",
+    "l_mjc_walker__OOB__0",
+    "l_mjc_walker_easy__OOB__0",
+    "l_rail__OOB__0",
+    "m_arm_left__OOB__0",
+    "m_arm_right__OOB__0",
+    "m_arm_up__OOB__0",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h0_unicycle__OOB__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h1_car_left__OOB__0",
+    "m_h2_car_right__ANOMALY__0",
+    "m_h2_car_right__OOB__0",
+    "m_h8_weird_vehicle__OOB__0",
+    "s_h3_point_the_thruster__OOB__0",
+    "s_h8_unicycle_balance__ANOMALY__0",
+    "s_h8_unicycle_balance__OOB__0"
+   ],
+   "n_unlocks": 43
+  },
+  {
+   "id": "M6",
+   "name": "Static-shape contact enumeration",
+   "what": "Enumerate the active static (inverse_mass == 0) shapes; for each, steer the nearest dynamic body toward it with bang-bang on the sign of the position error and hold until contact or termination; then move to the next.",
+   "computable_from": "feats poly_pos/circle_pos/poly_active + which shapes never move (zero velocity over a window)",
+   "why": "Every DISARMED and TUNNEL target and 8 SHORTCUT targets are static shapes 0.6-3.0 m away; the witness is literally \"touch that shape\", and touching every static shape in turn is oracle-blind.",
+   "unlocks": [
+    "l_grasp_hard__TUNNEL__0",
+    "l_h0_angrybirds__SHORTCUT__1",
+    "l_h11_obstacle_avoidance__DISARMED__0",
+    "l_h11_obstacle_avoidance__DISARMED__1",
+    "l_h12_platformer_1__DISARMED__0",
+    "l_h12_platformer_1__DISARMED__1",
+    "l_h12_platformer_1__SHORTCUT__0",
+    "l_h12_platformer_1__SHORTCUT__1",
+    "l_h12_platformer_1__TUNNEL__0",
+    "l_h12_platformer_1__TUNNEL__1",
+    "l_h13_platformer_2__DISARMED__0",
+    "l_h13_platformer_2__DISARMED__1",
+    "l_h13_platformer_2__SHORTCUT__0",
+    "l_h13_platformer_2__SHORTCUT__1",
+    "l_h13_platformer_2__TUNNEL__0",
+    "l_h13_platformer_2__TUNNEL__1",
+    "l_h15_swing_up__SHORTCUT__1",
+    "l_h7_maze_1__DISARMED__0",
+    "l_h8_maze_2__DISARMED__0",
+    "l_h8_maze_2__DISARMED__1",
+    "l_pr__SHORTCUT__0"
+   ],
+   "n_unlocks": 21
+  },
+  {
+   "id": "M7",
+   "name": "Actuator saturation / self-folding",
+   "what": "Cycle all motor-binding actions in the SAME direction for the whole episode so every joint is driven to its stop simultaneously (and the mirrored version).",
+   "computable_from": "action indices only (2 actions per motor binding)",
+   "why": "11 SHORTCUT misses put the injected goal on a link of the agent's own linkage 0.38-0.87 m from the green body: the witness fires when the mechanism folds onto itself, which needs all joints at their stops at once.",
+   "unlocks": [
+    "l_car_swing_around__SHORTCUT__1",
+    "l_h15_swing_up__SHORTCUT__0",
+    "l_h17_unicycle__SHORTCUT__0",
+    "l_h4_cartpole__SHORTCUT__0",
+    "l_h4_cartpole__SHORTCUT__1",
+    "l_mjc_hopper__SHORTCUT__0",
+    "l_mjc_hopper_easy__SHORTCUT__0",
+    "l_mjc_walker__SHORTCUT__0",
+    "l_mjc_walker__SHORTCUT__1",
+    "l_mjc_walker_easy__SHORTCUT__0",
+    "l_mjc_walker_easy__SHORTCUT__1"
+   ],
+   "n_unlocks": 11
+  },
+  {
+   "id": "M8",
+   "name": "Boundary seeking",
+   "what": "Compute the world box from the shapes that never move, and drive the nearest dynamic body at the nearest box face; hold until it crosses or the episode ends.",
+   "computable_from": "feats poly_pos/poly_active (static extent) + dyn_pos",
+   "why": "OOB is 148/337 of the pool and 88 of the 149 misses; the witness is purely \"a moving body leaves the box\", and no current tester has any term that points outward.",
+   "unlocks": [
+    "l_h11_obstacle_avoidance__OOB__1",
+    "l_h12_platformer_1__OOB__1",
+    "l_h13_platformer_2__OOB__1",
+    "l_h15_swing_up__OOB__1",
+    "l_h16_thruster_goal__OOB__1",
+    "l_h3_car_right__OOB__1",
+    "l_h8_maze_2__OOB__1",
+    "l_hard_cartpole_thrust__OOB__1",
+    "l_hard_cartpole_wheels__OOB__1",
+    "l_mjc_half_cheetah__OOB__1",
+    "l_mjc_half_cheetah_easy__OOB__1",
+    "l_mjc_hopper__OOB__1",
+    "l_mjc_hopper_easy__OOB__1",
+    "l_mjc_swimmer__OOB__1",
+    "l_mjc_walker__OOB__1",
+    "l_mjc_walker_easy__OOB__1",
+    "m_arm_hard__OOB__1",
+    "m_arm_left__OOB__1",
+    "m_arm_right__OOB__1",
+    "m_arm_up__OOB__1",
+    "m_h0_unicycle__OOB__1",
+    "m_h14_thrustblock__OOB__1",
+    "m_h1_car_left__OOB__1",
+    "m_h2_car_right__OOB__1",
+    "m_h4_thrust_the_needle__OOB__1",
+    "m_h8_weird_vehicle__OOB__1",
+    "s_h0_weak_thrust__OOB__1",
+    "s_h1_thrust_over_ball__OOB__1",
+    "s_h4_thrust_aim__OOB__1",
+    "s_h5_rotate_fall__OOB__1",
+    "s_h6_unicycle_right__OOB__1",
+    "s_h8_unicycle_balance__OOB__1"
+   ],
+   "n_unlocks": 32
+  },
+  {
+   "id": "M9",
+   "name": "Termination avoidance (goal shunning)",
+   "what": "After the level has been won once, penalise actions that reduce green-blue distance, so workers keep exploring past the win instead of being reset.",
+   "computable_from": "feats green_blue_dist and the reward/done seen by the harness",
+   "why": "36 misses lie in levels where at least one held action ends the episode with a win at ~200 steps; winning truncates exactly the long-horizon rollouts in which OOB/ANOMALY witnesses live.",
+   "unlocks": [
+    "l_car_swing_around__SHORTCUT__1",
+    "l_h1_car_left__OOB__0",
+    "l_h3_car_right__OOB__0",
+    "l_h3_car_right__OOB__1",
+    "l_pr__ANOMALY__0",
+    "l_pr__OOB__0",
+    "l_pr__SHORTCUT__0",
+    "l_pr__SHORTCUT__1",
+    "m_arm_left__OOB__0",
+    "m_arm_left__OOB__1",
+    "m_arm_up__OOB__0",
+    "m_arm_up__OOB__1",
+    "m_h13_thrustfall_right__OOB__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h1_car_left__OOB__0",
+    "m_h1_car_left__OOB__1",
+    "m_h2_car_right__ANOMALY__0",
+    "m_h2_car_right__OOB__0",
+    "m_h2_car_right__OOB__1",
+    "m_h8_weird_vehicle__OOB__0",
+    "m_h8_weird_vehicle__OOB__1",
+    "s_h0_weak_thrust__ANOMALY__0",
+    "s_h0_weak_thrust__OOB__0",
+    "s_h0_weak_thrust__OOB__1",
+    "s_h1_thrust_over_ball__OOB__0",
+    "s_h1_thrust_over_ball__OOB__1",
+    "s_h2_one_wheel_car__OOB__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h5_rotate_fall__ANOMALY__0",
+    "s_h5_rotate_fall__OOB__0",
+    "s_h5_rotate_fall__OOB__1",
+    "s_h6_unicycle_right__OOB__0",
+    "s_h6_unicycle_right__OOB__1",
+    "s_h6_unicycle_right__SHORTCUT__0",
+    "s_h7_unicycle_left__OOB__0",
+    "s_h7_unicycle_left__SHORTCUT__0"
+   ],
+   "n_unlocks": 36
+  }
+ ],
+ "per_instance": {
+  "l_car_launch__OOB__0": {
+   "cls": "OOB",
+   "level": "l/car_launch.json",
+   "requirement": "climb",
+   "distance_m": 2.01,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 3,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 211,
+    "max_climb": 0.44,
+    "max_travel": 0.0,
+    "max_speed": 7.82,
+    "endings": {
+     "win": 0,
+     "death": 3,
+     "timeout": 8
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.44 m of 2.01 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_car_swing_around__OOB__0": {
+   "cls": "OOB",
+   "level": "l/car_swing_around.json",
+   "requirement": "climb",
+   "distance_m": 1.22,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 238,
+    "max_climb": 0.31,
+    "max_travel": 2.34,
+    "max_speed": 8.88,
+    "endings": {
+     "win": 0,
+     "death": 1,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_car_swing_around__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/car_swing_around.json",
+   "requirement": "climb",
+   "distance_m": 1.74,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 238,
+    "max_climb": 0.31,
+    "max_travel": 2.34,
+    "max_speed": 8.88,
+    "endings": {
+     "win": 1,
+     "death": 1,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.31 m of 1.74 m)"
+   ],
+   "mechanisms": [
+    "M5",
+    "M7",
+    "M9"
+   ]
+  },
+  "l_chain_lander__OOB__0": {
+   "cls": "OOB",
+   "level": "l/chain_lander.json",
+   "requirement": "climb",
+   "distance_m": 2.59,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": 157,
+   "held_action": {
+    "episode_len": 70,
+    "max_climb": -0.0,
+    "max_travel": 0.0,
+    "max_speed": 8.7,
+    "endings": {
+     "win": 0,
+     "death": 10,
+     "timeout": 1
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2"
+   ]
+  },
+  "l_chain_thrust__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/chain_thrust.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 3.67,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 6,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.2,
+    "max_travel": 1.24,
+    "max_speed": 9.03,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 9.0 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4"
+   ]
+  },
+  "l_chain_thrust__OOB__0": {
+   "cls": "OOB",
+   "level": "l/chain_thrust.json",
+   "requirement": "climb",
+   "distance_m": 2.4,
+   "actuation": "thrust",
+   "thrust_to_weight": 3.67,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 6,
+   "required_hold_steps": 13,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.2,
+    "max_travel": 1.24,
+    "max_speed": 9.03,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": []
+  },
+  "l_gears__OOB__0": {
+   "cls": "OOB",
+   "level": "l/gears.json",
+   "requirement": "climb",
+   "distance_m": 0.33,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 217,
+    "max_climb": -0.01,
+    "max_travel": 2.28,
+    "max_speed": 8.28,
+    "endings": {
+     "win": 0,
+     "death": 2,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": []
+  },
+  "l_grasp_hard__TUNNEL__0": {
+   "cls": "TUNNEL",
+   "level": "l/grasp_hard.json",
+   "requirement": "climb",
+   "distance_m": 1.87,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 6,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 206,
+    "max_climb": 1.87,
+    "max_travel": 0.66,
+    "max_speed": 9.18,
+    "endings": {
+     "win": 0,
+     "death": 3,
+     "timeout": 8
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M6"
+   ]
+  },
+  "l_h0_angrybirds__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h0_angrybirds.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 1.89,
+    "max_travel": 1.88,
+    "max_speed": 7.8,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 7.8 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4"
+   ]
+  },
+  "l_h0_angrybirds__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h0_angrybirds.json",
+   "requirement": "climb",
+   "distance_m": 3.75,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 1.89,
+    "max_travel": 1.88,
+    "max_speed": 7.8,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": []
+  },
+  "l_h0_angrybirds__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/h0_angrybirds.json",
+   "requirement": "climb",
+   "distance_m": 0.57,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 1.89,
+    "max_travel": 1.88,
+    "max_speed": 7.8,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": []
+  },
+  "l_h0_angrybirds__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/h0_angrybirds.json",
+   "requirement": "traverse",
+   "distance_m": 0.86,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 1.89,
+    "max_travel": 1.88,
+    "max_speed": 7.8,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M6"
+   ]
+  },
+  "l_h10_morph_direction_2__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h10_morph_direction_2.json",
+   "requirement": "climb",
+   "distance_m": 3.97,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.0,
+    "max_travel": 0.0,
+    "max_speed": 3.03,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.00 m of 3.97 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_h11_obstacle_avoidance__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h11_obstacle_avoidance.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.36,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 3,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 16,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 8.58,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 8.6 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4"
+   ]
+  },
+  "l_h11_obstacle_avoidance__DISARMED__0": {
+   "cls": "DISARMED",
+   "level": "l/h11_obstacle_avoidance.json",
+   "requirement": "climb",
+   "distance_m": 0.95,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.36,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 2,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 16,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.21,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h11_obstacle_avoidance__DISARMED__1": {
+   "cls": "DISARMED",
+   "level": "l/h11_obstacle_avoidance.json",
+   "requirement": "climb",
+   "distance_m": 1.88,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.36,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 2,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 16,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.21,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h11_obstacle_avoidance__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h11_obstacle_avoidance.json",
+   "requirement": "climb",
+   "distance_m": 3.25,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.36,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 3,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 16,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.21,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1"
+   ]
+  },
+  "l_h11_obstacle_avoidance__OOB__1": {
+   "cls": "OOB",
+   "level": "l/h11_obstacle_avoidance.json",
+   "requirement": "traverse",
+   "distance_m": 2.74,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.36,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 3,
+   "n_dyn": 1,
+   "required_hold_steps": 37,
+   "held_action": {
+    "episode_len": 16,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.21,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M3",
+    "M8"
+   ]
+  },
+  "l_h12_platformer_1__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 7.23,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 7.2 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4"
+   ]
+  },
+  "l_h12_platformer_1__DISARMED__0": {
+   "cls": "DISARMED",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "traverse",
+   "distance_m": 1.84,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 3,
+   "n_dyn": 1,
+   "required_hold_steps": 26,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M6"
+   ]
+  },
+  "l_h12_platformer_1__DISARMED__1": {
+   "cls": "DISARMED",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "climb",
+   "distance_m": 1.54,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 3,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h12_platformer_1__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "climb",
+   "distance_m": 3.7,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1"
+   ]
+  },
+  "l_h12_platformer_1__OOB__1": {
+   "cls": "OOB",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "traverse",
+   "distance_m": 4.74,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": 41,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M3",
+    "M8"
+   ]
+  },
+  "l_h12_platformer_1__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "traverse",
+   "distance_m": 1.83,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": 26,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M6"
+   ]
+  },
+  "l_h12_platformer_1__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "traverse",
+   "distance_m": 0.61,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": 15,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h12_platformer_1__TUNNEL__0": {
+   "cls": "TUNNEL",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "traverse",
+   "distance_m": 1.83,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": 26,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M6"
+   ]
+  },
+  "l_h12_platformer_1__TUNNEL__1": {
+   "cls": "TUNNEL",
+   "level": "l/h12_platformer_1.json",
+   "requirement": "traverse",
+   "distance_m": 0.61,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": 15,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h13_platformer_2__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 7.23,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 7.2 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4"
+   ]
+  },
+  "l_h13_platformer_2__DISARMED__0": {
+   "cls": "DISARMED",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "traverse",
+   "distance_m": 3.04,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": 33,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M6"
+   ]
+  },
+  "l_h13_platformer_2__DISARMED__1": {
+   "cls": "DISARMED",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "climb",
+   "distance_m": 1.54,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h13_platformer_2__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "climb",
+   "distance_m": 3.7,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1"
+   ]
+  },
+  "l_h13_platformer_2__OOB__1": {
+   "cls": "OOB",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "traverse",
+   "distance_m": 4.74,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": 41,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M3",
+    "M8"
+   ]
+  },
+  "l_h13_platformer_2__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "traverse",
+   "distance_m": 1.83,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": 26,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M6"
+   ]
+  },
+  "l_h13_platformer_2__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "traverse",
+   "distance_m": 0.61,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": 15,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h13_platformer_2__TUNNEL__0": {
+   "cls": "TUNNEL",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "traverse",
+   "distance_m": 1.83,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": 26,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M6"
+   ]
+  },
+  "l_h13_platformer_2__TUNNEL__1": {
+   "cls": "TUNNEL",
+   "level": "l/h13_platformer_2.json",
+   "requirement": "traverse",
+   "distance_m": 0.61,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.51,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": 15,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.4,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h15_swing_up__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h15_swing_up.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.29,
+    "max_travel": 1.02,
+    "max_speed": 2.06,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 2.1 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4",
+    "M5"
+   ]
+  },
+  "l_h15_swing_up__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h15_swing_up.json",
+   "requirement": "climb",
+   "distance_m": 2.7,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.29,
+    "max_travel": 1.02,
+    "max_speed": 2.06,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.29 m of 2.70 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_h15_swing_up__OOB__1": {
+   "cls": "OOB",
+   "level": "l/h15_swing_up.json",
+   "requirement": "traverse",
+   "distance_m": 2.66,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.29,
+    "max_travel": 1.02,
+    "max_speed": 2.06,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_h15_swing_up__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/h15_swing_up.json",
+   "requirement": "climb",
+   "distance_m": 0.92,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.29,
+    "max_travel": 1.02,
+    "max_speed": 2.06,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M5",
+    "M7"
+   ]
+  },
+  "l_h15_swing_up__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/h15_swing_up.json",
+   "requirement": "climb",
+   "distance_m": 1.17,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.29,
+    "max_travel": 1.02,
+    "max_speed": 2.06,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.29 m of 1.17 m)"
+   ],
+   "mechanisms": [
+    "M5",
+    "M6"
+   ]
+  },
+  "l_h16_thruster_goal__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h16_thruster_goal.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.54,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 21,
+    "max_climb": -0.0,
+    "max_travel": 1.17,
+    "max_speed": 10.68,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M4"
+   ]
+  },
+  "l_h16_thruster_goal__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h16_thruster_goal.json",
+   "requirement": "climb",
+   "distance_m": 2.45,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.54,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 21,
+    "max_climb": -0.0,
+    "max_travel": 1.17,
+    "max_speed": 7.05,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1"
+   ]
+  },
+  "l_h16_thruster_goal__OOB__1": {
+   "cls": "OOB",
+   "level": "l/h16_thruster_goal.json",
+   "requirement": "traverse",
+   "distance_m": 4.1,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.54,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 1,
+   "required_hold_steps": 37,
+   "held_action": {
+    "episode_len": 21,
+    "max_climb": -0.0,
+    "max_travel": 1.17,
+    "max_speed": 7.05,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M3",
+    "M8"
+   ]
+  },
+  "l_h17_unicycle__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h17_unicycle.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 66,
+    "max_climb": 0.0,
+    "max_travel": 0.5,
+    "max_speed": 8.61,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 8.6 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4",
+    "M5"
+   ]
+  },
+  "l_h17_unicycle__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h17_unicycle.json",
+   "requirement": "climb",
+   "distance_m": 3.44,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 66,
+    "max_climb": 0.0,
+    "max_travel": 0.49,
+    "max_speed": 4.81,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.00 m of 3.44 m)"
+   ],
+   "mechanisms": [
+    "M1",
+    "M5"
+   ]
+  },
+  "l_h17_unicycle__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/h17_unicycle.json",
+   "requirement": "traverse",
+   "distance_m": 0.47,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 66,
+    "max_climb": 0.0,
+    "max_travel": 0.49,
+    "max_speed": 4.81,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M7"
+   ]
+  },
+  "l_h1_car_left__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h1_car_left.json",
+   "requirement": "climb",
+   "distance_m": 4.34,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 236,
+    "max_climb": 0.44,
+    "max_travel": 0.25,
+    "max_speed": 3.99,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.44 m of 4.34 m)"
+   ],
+   "mechanisms": [
+    "M5",
+    "M9"
+   ]
+  },
+  "l_h2_car_ramp__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h2_car_ramp.json",
+   "requirement": "climb",
+   "distance_m": 4.34,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 236,
+    "max_climb": 0.44,
+    "max_travel": 1.71,
+    "max_speed": 3.97,
+    "endings": {
+     "win": 0,
+     "death": 1,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.44 m of 4.34 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_h3_car_right__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h3_car_right.json",
+   "requirement": "climb",
+   "distance_m": 4.48,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 237,
+    "max_climb": 0.58,
+    "max_travel": 3.58,
+    "max_speed": 4.05,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.58 m of 4.48 m)"
+   ],
+   "mechanisms": [
+    "M5",
+    "M9"
+   ]
+  },
+  "l_h3_car_right__OOB__1": {
+   "cls": "OOB",
+   "level": "l/h3_car_right.json",
+   "requirement": "traverse",
+   "distance_m": 4.24,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 237,
+    "max_climb": 0.58,
+    "max_travel": 3.58,
+    "max_speed": 4.05,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "l_h4_cartpole__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h4_cartpole.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 41,
+    "max_climb": -0.01,
+    "max_travel": 1.19,
+    "max_speed": 10.2,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M4",
+    "M5"
+   ]
+  },
+  "l_h4_cartpole__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h4_cartpole.json",
+   "requirement": "climb",
+   "distance_m": 3.36,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 41,
+    "max_climb": -0.01,
+    "max_travel": 1.18,
+    "max_speed": 5.76,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 3.36 m)"
+   ],
+   "mechanisms": [
+    "M1",
+    "M5"
+   ]
+  },
+  "l_h4_cartpole__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/h4_cartpole.json",
+   "requirement": "traverse",
+   "distance_m": 0.83,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 41,
+    "max_climb": -0.01,
+    "max_travel": 1.18,
+    "max_speed": 5.76,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M7"
+   ]
+  },
+  "l_h4_cartpole__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/h4_cartpole.json",
+   "requirement": "traverse",
+   "distance_m": 0.87,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 41,
+    "max_climb": -0.01,
+    "max_travel": 1.18,
+    "max_speed": 5.76,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M7"
+   ]
+  },
+  "l_h6_lorry__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h6_lorry.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 235,
+    "max_climb": -0.01,
+    "max_travel": 1.32,
+    "max_speed": 3.97,
+    "endings": {
+     "win": 0,
+     "death": 1,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 4.0 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4"
+   ]
+  },
+  "l_h6_lorry__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h6_lorry.json",
+   "requirement": "climb",
+   "distance_m": 4.06,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 235,
+    "max_climb": -0.01,
+    "max_travel": 1.32,
+    "max_speed": 2.65,
+    "endings": {
+     "win": 0,
+     "death": 1,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 4.06 m)"
+   ],
+   "mechanisms": []
+  },
+  "l_h7_maze_1__DISARMED__0": {
+   "cls": "DISARMED",
+   "level": "l/h7_maze_1.json",
+   "requirement": "climb",
+   "distance_m": 2.83,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 3,
+   "n_dyn": 1,
+   "required_hold_steps": 164,
+   "held_action": {
+    "episode_len": 19,
+    "max_climb": 0.71,
+    "max_travel": 0.95,
+    "max_speed": 5.6,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M6"
+   ]
+  },
+  "l_h8_maze_2__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/h8_maze_2.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.49,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 6.58,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 6.6 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4"
+   ]
+  },
+  "l_h8_maze_2__DISARMED__0": {
+   "cls": "DISARMED",
+   "level": "l/h8_maze_2.json",
+   "requirement": "climb",
+   "distance_m": 0.41,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.49,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.36,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h8_maze_2__DISARMED__1": {
+   "cls": "DISARMED",
+   "level": "l/h8_maze_2.json",
+   "requirement": "climb",
+   "distance_m": 2.77,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.49,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 4,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.36,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1",
+    "M6"
+   ]
+  },
+  "l_h8_maze_2__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h8_maze_2.json",
+   "requirement": "climb",
+   "distance_m": 3.68,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.49,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.36,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1"
+   ]
+  },
+  "l_h8_maze_2__OOB__1": {
+   "cls": "OOB",
+   "level": "l/h8_maze_2.json",
+   "requirement": "traverse",
+   "distance_m": 4.24,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.49,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 5,
+   "n_dyn": 1,
+   "required_hold_steps": 40,
+   "held_action": {
+    "episode_len": 13,
+    "max_climb": -0.0,
+    "max_travel": 0.45,
+    "max_speed": 4.36,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M3",
+    "M8"
+   ]
+  },
+  "l_h9_morph_direction__OOB__0": {
+   "cls": "OOB",
+   "level": "l/h9_morph_direction.json",
+   "requirement": "climb",
+   "distance_m": 2.71,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.0,
+    "max_travel": 1.68,
+    "max_speed": 5.92,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.00 m of 2.71 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_hard_beam_balance__OOB__0": {
+   "cls": "OOB",
+   "level": "l/hard_beam_balance.json",
+   "requirement": "climb",
+   "distance_m": 1.89,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 39,
+    "max_climb": -0.01,
+    "max_travel": 0.74,
+    "max_speed": 7.07,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 1.89 m)"
+   ],
+   "mechanisms": [
+    "M1"
+   ]
+  },
+  "l_hard_cartpole_thrust__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/hard_cartpole_thrust.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.67,
+   "n_motor": 0,
+   "agent_jointed": true,
+   "n_live_hazards": 3,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 44,
+    "max_climb": -0.01,
+    "max_travel": 1.2,
+    "max_speed": 6.96,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 7.0 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4"
+   ]
+  },
+  "l_hard_cartpole_thrust__OOB__0": {
+   "cls": "OOB",
+   "level": "l/hard_cartpole_thrust.json",
+   "requirement": "climb",
+   "distance_m": 3.88,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.67,
+   "n_motor": 0,
+   "agent_jointed": true,
+   "n_live_hazards": 3,
+   "n_dyn": 2,
+   "required_hold_steps": 33,
+   "held_action": {
+    "episode_len": 44,
+    "max_climb": -0.01,
+    "max_travel": 1.19,
+    "max_speed": 5.14,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2"
+   ]
+  },
+  "l_hard_cartpole_thrust__OOB__1": {
+   "cls": "OOB",
+   "level": "l/hard_cartpole_thrust.json",
+   "requirement": "traverse",
+   "distance_m": 2.96,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.67,
+   "n_motor": 0,
+   "agent_jointed": true,
+   "n_live_hazards": 3,
+   "n_dyn": 2,
+   "required_hold_steps": 18,
+   "held_action": {
+    "episode_len": 44,
+    "max_climb": -0.01,
+    "max_travel": 1.19,
+    "max_speed": 5.14,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8"
+   ]
+  },
+  "l_hard_cartpole_wheels__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/hard_cartpole_wheels.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 3,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 38,
+    "max_climb": 0.0,
+    "max_travel": 1.03,
+    "max_speed": 5.44,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 5.4 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4",
+    "M5"
+   ]
+  },
+  "l_hard_cartpole_wheels__OOB__0": {
+   "cls": "OOB",
+   "level": "l/hard_cartpole_wheels.json",
+   "requirement": "climb",
+   "distance_m": 3.84,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 3,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 38,
+    "max_climb": 0.0,
+    "max_travel": 1.02,
+    "max_speed": 3.75,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.00 m of 3.84 m)"
+   ],
+   "mechanisms": [
+    "M1",
+    "M5"
+   ]
+  },
+  "l_hard_cartpole_wheels__OOB__1": {
+   "cls": "OOB",
+   "level": "l/hard_cartpole_wheels.json",
+   "requirement": "traverse",
+   "distance_m": 2.64,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 3,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 38,
+    "max_climb": 0.0,
+    "max_travel": 1.02,
+    "max_speed": 3.75,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8"
+   ]
+  },
+  "l_hard_lunar_lander__OOB__0": {
+   "cls": "OOB",
+   "level": "l/hard_lunar_lander.json",
+   "requirement": "climb",
+   "distance_m": 1.28,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.52,
+   "n_motor": 0,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": 21,
+   "held_action": {
+    "episode_len": 26,
+    "max_climb": 0.05,
+    "max_travel": 1.82,
+    "max_speed": 10.36,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2"
+   ]
+  },
+  "l_lever_puzzle__OOB__0": {
+   "cls": "OOB",
+   "level": "l/lever_puzzle.json",
+   "requirement": "climb",
+   "distance_m": 0.57,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 6,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 7.06,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_half_cheetah__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/mjc_half_cheetah.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.03,
+    "max_travel": 0.32,
+    "max_speed": 2.85,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 2.9 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4",
+    "M5"
+   ]
+  },
+  "l_mjc_half_cheetah__OOB__0": {
+   "cls": "OOB",
+   "level": "l/mjc_half_cheetah.json",
+   "requirement": "climb",
+   "distance_m": 4.14,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.03,
+    "max_travel": 0.26,
+    "max_speed": 2.85,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.03 m of 4.14 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_half_cheetah__OOB__1": {
+   "cls": "OOB",
+   "level": "l/mjc_half_cheetah.json",
+   "requirement": "traverse",
+   "distance_m": 3.97,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.03,
+    "max_travel": 0.26,
+    "max_speed": 2.85,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_mjc_half_cheetah_easy__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/mjc_half_cheetah_easy.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.03,
+    "max_travel": 0.32,
+    "max_speed": 2.85,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": true,
+   "blockers": [
+    "best single-action speed 2.9 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4",
+    "M5"
+   ]
+  },
+  "l_mjc_half_cheetah_easy__OOB__0": {
+   "cls": "OOB",
+   "level": "l/mjc_half_cheetah_easy.json",
+   "requirement": "climb",
+   "distance_m": 4.14,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.03,
+    "max_travel": 0.26,
+    "max_speed": 2.85,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.03 m of 4.14 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_half_cheetah_easy__OOB__1": {
+   "cls": "OOB",
+   "level": "l/mjc_half_cheetah_easy.json",
+   "requirement": "traverse",
+   "distance_m": 3.97,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.03,
+    "max_travel": 0.26,
+    "max_speed": 2.85,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_mjc_hopper__OOB__0": {
+   "cls": "OOB",
+   "level": "l/mjc_hopper.json",
+   "requirement": "climb",
+   "distance_m": 3.78,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 3,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 124,
+    "max_climb": -0.0,
+    "max_travel": 0.61,
+    "max_speed": 3.18,
+    "endings": {
+     "win": 0,
+     "death": 7,
+     "timeout": 4
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.00 m of 3.78 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_hopper__OOB__1": {
+   "cls": "OOB",
+   "level": "l/mjc_hopper.json",
+   "requirement": "traverse",
+   "distance_m": 4.68,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 3,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 124,
+    "max_climb": -0.0,
+    "max_travel": 0.61,
+    "max_speed": 3.18,
+    "endings": {
+     "win": 0,
+     "death": 7,
+     "timeout": 4
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_mjc_hopper__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/mjc_hopper.json",
+   "requirement": "traverse",
+   "distance_m": 0.38,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 3,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 124,
+    "max_climb": -0.0,
+    "max_travel": 0.61,
+    "max_speed": 3.18,
+    "endings": {
+     "win": 0,
+     "death": 7,
+     "timeout": 4
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M7"
+   ]
+  },
+  "l_mjc_hopper_easy__OOB__0": {
+   "cls": "OOB",
+   "level": "l/mjc_hopper_easy.json",
+   "requirement": "climb",
+   "distance_m": 3.78,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 3,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.0,
+    "max_travel": 0.61,
+    "max_speed": 3.18,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.00 m of 3.78 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_hopper_easy__OOB__1": {
+   "cls": "OOB",
+   "level": "l/mjc_hopper_easy.json",
+   "requirement": "traverse",
+   "distance_m": 4.68,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 3,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.0,
+    "max_travel": 0.61,
+    "max_speed": 3.18,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_mjc_hopper_easy__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/mjc_hopper_easy.json",
+   "requirement": "traverse",
+   "distance_m": 0.38,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 3,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.0,
+    "max_travel": 0.61,
+    "max_speed": 3.18,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M7"
+   ]
+  },
+  "l_mjc_swimmer__OOB__0": {
+   "cls": "OOB",
+   "level": "l/mjc_swimmer.json",
+   "requirement": "climb",
+   "distance_m": 4.55,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.05,
+    "max_travel": 0.02,
+    "max_speed": 1.31,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.05 m of 4.55 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_swimmer__OOB__1": {
+   "cls": "OOB",
+   "level": "l/mjc_swimmer.json",
+   "requirement": "traverse",
+   "distance_m": 4.15,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.05,
+    "max_travel": 0.02,
+    "max_speed": 1.31,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_mjc_walker__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/mjc_walker.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 2.27,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 2.3 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4",
+    "M5"
+   ]
+  },
+  "l_mjc_walker__OOB__0": {
+   "cls": "OOB",
+   "level": "l/mjc_walker.json",
+   "requirement": "climb",
+   "distance_m": 3.78,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 3.78 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_walker__OOB__1": {
+   "cls": "OOB",
+   "level": "l/mjc_walker.json",
+   "requirement": "traverse",
+   "distance_m": 4.68,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_mjc_walker__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/mjc_walker.json",
+   "requirement": "traverse",
+   "distance_m": 0.42,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M7"
+   ]
+  },
+  "l_mjc_walker__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/mjc_walker.json",
+   "requirement": "traverse",
+   "distance_m": 0.42,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M7"
+   ]
+  },
+  "l_mjc_walker_easy__OOB__0": {
+   "cls": "OOB",
+   "level": "l/mjc_walker_easy.json",
+   "requirement": "climb",
+   "distance_m": 3.78,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 3.78 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "l_mjc_walker_easy__OOB__1": {
+   "cls": "OOB",
+   "level": "l/mjc_walker_easy.json",
+   "requirement": "traverse",
+   "distance_m": 4.68,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "l_mjc_walker_easy__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/mjc_walker_easy.json",
+   "requirement": "traverse",
+   "distance_m": 0.42,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M7"
+   ]
+  },
+  "l_mjc_walker_easy__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/mjc_walker_easy.json",
+   "requirement": "traverse",
+   "distance_m": 0.42,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 4,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": -0.01,
+    "max_travel": 0.43,
+    "max_speed": 1.83,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M7"
+   ]
+  },
+  "l_pr__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "l/pr.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 237,
+    "max_climb": 0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.0,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 5.0 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4",
+    "M9"
+   ]
+  },
+  "l_pr__OOB__0": {
+   "cls": "OOB",
+   "level": "l/pr.json",
+   "requirement": "climb",
+   "distance_m": 3.13,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": 172,
+   "held_action": {
+    "episode_len": 237,
+    "max_climb": 0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.0,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M2",
+    "M9"
+   ]
+  },
+  "l_pr__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "l/pr.json",
+   "requirement": "traverse",
+   "distance_m": 0.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": 1,
+   "held_action": {
+    "episode_len": 237,
+    "max_climb": 0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.0,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M6",
+    "M9"
+   ]
+  },
+  "l_pr__SHORTCUT__1": {
+   "cls": "SHORTCUT",
+   "level": "l/pr.json",
+   "requirement": "traverse",
+   "distance_m": 0.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 7,
+   "required_hold_steps": 1,
+   "held_action": {
+    "episode_len": 237,
+    "max_climb": 0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.0,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M9"
+   ]
+  },
+  "l_rail__OOB__0": {
+   "cls": "OOB",
+   "level": "l/rail.json",
+   "requirement": "climb",
+   "distance_m": 2.01,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 224,
+    "max_climb": -0.01,
+    "max_travel": 2.44,
+    "max_speed": 5.88,
+    "endings": {
+     "win": 0,
+     "death": 2,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 2.01 m)"
+   ],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "m_arm_hard__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "m/arm_hard.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 198,
+    "max_climb": 2.05,
+    "max_travel": 1.25,
+    "max_speed": 7.43,
+    "endings": {
+     "win": 0,
+     "death": 3,
+     "timeout": 8
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 7.4 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4"
+   ]
+  },
+  "m_arm_hard__OOB__0": {
+   "cls": "OOB",
+   "level": "m/arm_hard.json",
+   "requirement": "climb",
+   "distance_m": 2.95,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 198,
+    "max_climb": 2.05,
+    "max_travel": 1.25,
+    "max_speed": 7.43,
+    "endings": {
+     "win": 0,
+     "death": 3,
+     "timeout": 8
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": []
+  },
+  "m_arm_hard__OOB__1": {
+   "cls": "OOB",
+   "level": "m/arm_hard.json",
+   "requirement": "traverse",
+   "distance_m": 2.23,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 198,
+    "max_climb": 2.05,
+    "max_travel": 1.25,
+    "max_speed": 7.43,
+    "endings": {
+     "win": 0,
+     "death": 3,
+     "timeout": 8
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "m_arm_left__OOB__0": {
+   "cls": "OOB",
+   "level": "m/arm_left.json",
+   "requirement": "climb",
+   "distance_m": 2.95,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 214,
+    "max_climb": 1.76,
+    "max_travel": 1.25,
+    "max_speed": 9.2,
+    "endings": {
+     "win": 2,
+     "death": 1,
+     "timeout": 8
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M5",
+    "M9"
+   ]
+  },
+  "m_arm_left__OOB__1": {
+   "cls": "OOB",
+   "level": "m/arm_left.json",
+   "requirement": "traverse",
+   "distance_m": 2.23,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 214,
+    "max_climb": 1.76,
+    "max_travel": 1.25,
+    "max_speed": 9.2,
+    "endings": {
+     "win": 2,
+     "death": 1,
+     "timeout": 8
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "m_arm_right__OOB__0": {
+   "cls": "OOB",
+   "level": "m/arm_right.json",
+   "requirement": "climb",
+   "distance_m": 2.95,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 214,
+    "max_climb": 1.76,
+    "max_travel": 1.25,
+    "max_speed": 9.2,
+    "endings": {
+     "win": 0,
+     "death": 2,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M5"
+   ]
+  },
+  "m_arm_right__OOB__1": {
+   "cls": "OOB",
+   "level": "m/arm_right.json",
+   "requirement": "traverse",
+   "distance_m": 2.23,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 214,
+    "max_climb": 1.76,
+    "max_travel": 1.25,
+    "max_speed": 9.2,
+    "endings": {
+     "win": 0,
+     "death": 2,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8"
+   ]
+  },
+  "m_arm_up__OOB__0": {
+   "cls": "OOB",
+   "level": "m/arm_up.json",
+   "requirement": "climb",
+   "distance_m": 2.95,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 51,
+    "max_climb": 2.06,
+    "max_travel": 1.05,
+    "max_speed": 7.86,
+    "endings": {
+     "win": 2,
+     "death": 9,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M5",
+    "M9"
+   ]
+  },
+  "m_arm_up__OOB__1": {
+   "cls": "OOB",
+   "level": "m/arm_up.json",
+   "requirement": "traverse",
+   "distance_m": 2.03,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 51,
+    "max_climb": 2.06,
+    "max_travel": 1.05,
+    "max_speed": 7.86,
+    "endings": {
+     "win": 2,
+     "death": 9,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "m_h0_unicycle__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "m/h0_unicycle.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 22,
+    "max_climb": 0.01,
+    "max_travel": 0.54,
+    "max_speed": 5.49,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 5.5 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4",
+    "M5"
+   ]
+  },
+  "m_h0_unicycle__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h0_unicycle.json",
+   "requirement": "climb",
+   "distance_m": 3.86,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 22,
+    "max_climb": 0.01,
+    "max_travel": 0.54,
+    "max_speed": 2.87,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.01 m of 3.86 m)"
+   ],
+   "mechanisms": [
+    "M1",
+    "M5"
+   ]
+  },
+  "m_h0_unicycle__OOB__1": {
+   "cls": "OOB",
+   "level": "m/h0_unicycle.json",
+   "requirement": "traverse",
+   "distance_m": 3.65,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 22,
+    "max_climb": 0.01,
+    "max_travel": 0.54,
+    "max_speed": 2.87,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8"
+   ]
+  },
+  "m_h12_thrustfall_left__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h12_thrustfall_left.json",
+   "requirement": "climb",
+   "distance_m": 0.34,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 1,
+   "required_hold_steps": 57,
+   "held_action": {
+    "episode_len": 234,
+    "max_climb": -0.01,
+    "max_travel": 2.01,
+    "max_speed": 9.16,
+    "endings": {
+     "win": 0,
+     "death": 1,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M2"
+   ]
+  },
+  "m_h13_thrustfall_right__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h13_thrustfall_right.json",
+   "requirement": "climb",
+   "distance_m": 0.34,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 1,
+   "required_hold_steps": 57,
+   "held_action": {
+    "episode_len": 234,
+    "max_climb": -0.01,
+    "max_travel": 2.01,
+    "max_speed": 9.16,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M2",
+    "M9"
+   ]
+  },
+  "m_h14_thrustblock__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h14_thrustblock.json",
+   "requirement": "climb",
+   "distance_m": 0.53,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": 71,
+   "held_action": {
+    "episode_len": 28,
+    "max_climb": -0.01,
+    "max_travel": 2.06,
+    "max_speed": 8.83,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2"
+   ]
+  },
+  "m_h14_thrustblock__OOB__1": {
+   "cls": "OOB",
+   "level": "m/h14_thrustblock.json",
+   "requirement": "traverse",
+   "distance_m": 3.23,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": 24,
+   "held_action": {
+    "episode_len": 28,
+    "max_climb": -0.01,
+    "max_travel": 2.06,
+    "max_speed": 8.83,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M3",
+    "M8"
+   ]
+  },
+  "m_h1_car_left__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "m/h1_car_left.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 217,
+    "max_climb": 0.01,
+    "max_travel": 0.01,
+    "max_speed": 1.15,
+    "endings": {
+     "win": 1,
+     "death": 1,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 1.1 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4",
+    "M5",
+    "M9"
+   ]
+  },
+  "m_h1_car_left__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h1_car_left.json",
+   "requirement": "climb",
+   "distance_m": 4.45,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 217,
+    "max_climb": 0.01,
+    "max_travel": 0.01,
+    "max_speed": 1.15,
+    "endings": {
+     "win": 1,
+     "death": 1,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.01 m of 4.45 m)"
+   ],
+   "mechanisms": [
+    "M5",
+    "M9"
+   ]
+  },
+  "m_h1_car_left__OOB__1": {
+   "cls": "OOB",
+   "level": "m/h1_car_left.json",
+   "requirement": "traverse",
+   "distance_m": 0.45,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 217,
+    "max_climb": 0.01,
+    "max_travel": 0.01,
+    "max_speed": 1.15,
+    "endings": {
+     "win": 1,
+     "death": 1,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "m_h2_car_right__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "m/h2_car_right.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 217,
+    "max_climb": 0.01,
+    "max_travel": 0.01,
+    "max_speed": 1.15,
+    "endings": {
+     "win": 1,
+     "death": 1,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 1.1 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M4",
+    "M5",
+    "M9"
+   ]
+  },
+  "m_h2_car_right__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h2_car_right.json",
+   "requirement": "climb",
+   "distance_m": 4.45,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 217,
+    "max_climb": 0.01,
+    "max_travel": 0.01,
+    "max_speed": 1.15,
+    "endings": {
+     "win": 1,
+     "death": 1,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.01 m of 4.45 m)"
+   ],
+   "mechanisms": [
+    "M5",
+    "M9"
+   ]
+  },
+  "m_h2_car_right__OOB__1": {
+   "cls": "OOB",
+   "level": "m/h2_car_right.json",
+   "requirement": "traverse",
+   "distance_m": 0.45,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 5,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 217,
+    "max_climb": 0.01,
+    "max_travel": 0.01,
+    "max_speed": 1.15,
+    "endings": {
+     "win": 1,
+     "death": 1,
+     "timeout": 9
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "m_h4_thrust_the_needle__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h4_thrust_the_needle.json",
+   "requirement": "climb",
+   "distance_m": 0.64,
+   "actuation": "thrust",
+   "thrust_to_weight": 2.04,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": 11,
+   "held_action": {
+    "episode_len": 27,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 13.37,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1"
+   ]
+  },
+  "m_h4_thrust_the_needle__OOB__1": {
+   "cls": "OOB",
+   "level": "m/h4_thrust_the_needle.json",
+   "requirement": "traverse",
+   "distance_m": 0.52,
+   "actuation": "thrust",
+   "thrust_to_weight": 2.04,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": 7,
+   "held_action": {
+    "episode_len": 27,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 13.37,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8"
+   ]
+  },
+  "m_h5_angry_birds__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h5_angry_birds.json",
+   "requirement": "climb",
+   "distance_m": 3.29,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 237,
+    "max_climb": 1.71,
+    "max_travel": 0.27,
+    "max_speed": 6.37,
+    "endings": {
+     "win": 0,
+     "death": 1,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": []
+  },
+  "m_h8_weird_vehicle__OOB__0": {
+   "cls": "OOB",
+   "level": "m/h8_weird_vehicle.json",
+   "requirement": "climb",
+   "distance_m": 3.41,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 239,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.43,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 3.41 m)"
+   ],
+   "mechanisms": [
+    "M5",
+    "M9"
+   ]
+  },
+  "m_h8_weird_vehicle__OOB__1": {
+   "cls": "OOB",
+   "level": "m/h8_weird_vehicle.json",
+   "requirement": "traverse",
+   "distance_m": 0.8,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 2,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 4,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 239,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 5.43,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "s_h0_weak_thrust__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "s/h0_weak_thrust.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.62,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 19,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 9.59,
+    "endings": {
+     "win": 1,
+     "death": 10,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 9.6 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4",
+    "M9"
+   ]
+  },
+  "s_h0_weak_thrust__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h0_weak_thrust.json",
+   "requirement": "climb",
+   "distance_m": 0.26,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.62,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 19,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 7.52,
+    "endings": {
+     "win": 1,
+     "death": 10,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "thrust/weight<1: body cannot gain height"
+   ],
+   "mechanisms": [
+    "M1",
+    "M9"
+   ]
+  },
+  "s_h0_weak_thrust__OOB__1": {
+   "cls": "OOB",
+   "level": "s/h0_weak_thrust.json",
+   "requirement": "traverse",
+   "distance_m": 2.76,
+   "actuation": "thrust",
+   "thrust_to_weight": 0.62,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 2,
+   "required_hold_steps": 29,
+   "held_action": {
+    "episode_len": 19,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 7.52,
+    "endings": {
+     "win": 1,
+     "death": 10,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2",
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "s_h1_thrust_over_ball__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h1_thrust_over_ball.json",
+   "requirement": "climb",
+   "distance_m": 1.53,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": 120,
+   "held_action": {
+    "episode_len": 235,
+    "max_climb": -0.01,
+    "max_travel": 0.02,
+    "max_speed": 9.29,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M2",
+    "M9"
+   ]
+  },
+  "s_h1_thrust_over_ball__OOB__1": {
+   "cls": "OOB",
+   "level": "s/h1_thrust_over_ball.json",
+   "requirement": "traverse",
+   "distance_m": 1.73,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": 18,
+   "held_action": {
+    "episode_len": 235,
+    "max_climb": -0.01,
+    "max_travel": 0.02,
+    "max_speed": 9.29,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "s_h2_one_wheel_car__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h2_one_wheel_car.json",
+   "requirement": "climb",
+   "distance_m": 4.46,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 238,
+    "max_climb": 0.06,
+    "max_travel": 0.29,
+    "max_speed": 0.98,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs 0.06 m of 4.46 m)"
+   ],
+   "mechanisms": [
+    "M9"
+   ]
+  },
+  "s_h2_one_wheel_car__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "s/h2_one_wheel_car.json",
+   "requirement": "traverse",
+   "distance_m": 1.28,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 238,
+    "max_climb": 0.06,
+    "max_travel": 0.29,
+    "max_speed": 0.98,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M9"
+   ]
+  },
+  "s_h3_point_the_thruster__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h3_point_the_thruster.json",
+   "requirement": "climb",
+   "distance_m": 4.34,
+   "actuation": "thrust",
+   "thrust_to_weight": 2.87,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": 21,
+   "held_action": {
+    "episode_len": 256,
+    "max_climb": 0.08,
+    "max_travel": 2.95,
+    "max_speed": 3.91,
+    "endings": {
+     "win": 0,
+     "death": 0,
+     "timeout": 11
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M2",
+    "M5"
+   ]
+  },
+  "s_h4_thrust_aim__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h4_thrust_aim.json",
+   "requirement": "climb",
+   "distance_m": 0.67,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": 79,
+   "held_action": {
+    "episode_len": 46,
+    "max_climb": -0.01,
+    "max_travel": 0.02,
+    "max_speed": 12.14,
+    "endings": {
+     "win": 0,
+     "death": 10,
+     "timeout": 1
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M2"
+   ]
+  },
+  "s_h4_thrust_aim__OOB__1": {
+   "cls": "OOB",
+   "level": "s/h4_thrust_aim.json",
+   "requirement": "traverse",
+   "distance_m": 0.56,
+   "actuation": "thrust",
+   "thrust_to_weight": 1.02,
+   "n_motor": 0,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": 10,
+   "held_action": {
+    "episode_len": 46,
+    "max_climb": -0.01,
+    "max_travel": 0.02,
+    "max_speed": 12.14,
+    "endings": {
+     "win": 0,
+     "death": 10,
+     "timeout": 1
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8"
+   ]
+  },
+  "s_h5_rotate_fall__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "s/h5_rotate_fall.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 27,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 8.77,
+    "endings": {
+     "win": 2,
+     "death": 9,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 8.8 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4",
+    "M9"
+   ]
+  },
+  "s_h5_rotate_fall__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h5_rotate_fall.json",
+   "requirement": "climb",
+   "distance_m": 0.45,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 27,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 8.77,
+    "endings": {
+     "win": 2,
+     "death": 9,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M9"
+   ]
+  },
+  "s_h5_rotate_fall__OOB__1": {
+   "cls": "OOB",
+   "level": "s/h5_rotate_fall.json",
+   "requirement": "traverse",
+   "distance_m": 1.57,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 27,
+    "max_climb": -0.01,
+    "max_travel": 0.0,
+    "max_speed": 8.77,
+    "endings": {
+     "win": 2,
+     "death": 9,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "s_h6_unicycle_right__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h6_unicycle_right.json",
+   "requirement": "climb",
+   "distance_m": 4.3,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 239,
+    "max_climb": -0.01,
+    "max_travel": 0.02,
+    "max_speed": 1.64,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 4.30 m)"
+   ],
+   "mechanisms": [
+    "M9"
+   ]
+  },
+  "s_h6_unicycle_right__OOB__1": {
+   "cls": "OOB",
+   "level": "s/h6_unicycle_right.json",
+   "requirement": "traverse",
+   "distance_m": 0.84,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 239,
+    "max_climb": -0.01,
+    "max_travel": 0.02,
+    "max_speed": 1.64,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M3",
+    "M8",
+    "M9"
+   ]
+  },
+  "s_h6_unicycle_right__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "s/h6_unicycle_right.json",
+   "requirement": "traverse",
+   "distance_m": 1.82,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 239,
+    "max_climb": -0.01,
+    "max_travel": 0.02,
+    "max_speed": 1.64,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M9"
+   ]
+  },
+  "s_h7_unicycle_left__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h7_unicycle_left.json",
+   "requirement": "climb",
+   "distance_m": 4.3,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 238,
+    "max_climb": -0.01,
+    "max_travel": 2.46,
+    "max_speed": 1.64,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "no single-action lift observed (best hold climbs -0.01 m of 4.30 m)"
+   ],
+   "mechanisms": [
+    "M9"
+   ]
+  },
+  "s_h7_unicycle_left__SHORTCUT__0": {
+   "cls": "SHORTCUT",
+   "level": "s/h7_unicycle_left.json",
+   "requirement": "traverse",
+   "distance_m": 1.4,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": false,
+   "n_live_hazards": 0,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 238,
+    "max_climb": -0.01,
+    "max_travel": 2.46,
+    "max_speed": 1.64,
+    "endings": {
+     "win": 1,
+     "death": 0,
+     "timeout": 10
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M9"
+   ]
+  },
+  "s_h8_unicycle_balance__ANOMALY__0": {
+   "cls": "ANOMALY",
+   "level": "s/h8_unicycle_balance.json",
+   "requirement": "speed",
+   "distance_m": 12.0,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 19,
+    "max_climb": -0.01,
+    "max_travel": 0.28,
+    "max_speed": 6.21,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [
+    "best single-action speed 6.2 m/s vs 12.0 needed"
+   ],
+   "mechanisms": [
+    "M1",
+    "M4",
+    "M5"
+   ]
+  },
+  "s_h8_unicycle_balance__OOB__0": {
+   "cls": "OOB",
+   "level": "s/h8_unicycle_balance.json",
+   "requirement": "climb",
+   "distance_m": 0.34,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 19,
+    "max_climb": -0.01,
+    "max_travel": 0.28,
+    "max_speed": 6.21,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M5"
+   ]
+  },
+  "s_h8_unicycle_balance__OOB__1": {
+   "cls": "OOB",
+   "level": "s/h8_unicycle_balance.json",
+   "requirement": "traverse",
+   "distance_m": 3.51,
+   "actuation": "motor",
+   "thrust_to_weight": 0.0,
+   "n_motor": 1,
+   "agent_jointed": true,
+   "n_live_hazards": 1,
+   "n_dyn": 3,
+   "required_hold_steps": null,
+   "held_action": {
+    "episode_len": 19,
+    "max_climb": -0.01,
+    "max_travel": 0.28,
+    "max_speed": 6.21,
+    "endings": {
+     "win": 0,
+     "death": 11,
+     "timeout": 0
+    }
+   },
+   "guided_ceiling_reached": false,
+   "blockers": [],
+   "mechanisms": [
+    "M1",
+    "M3",
+    "M8"
+   ]
+  }
+ }
+}

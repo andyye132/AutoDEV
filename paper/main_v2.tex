@@ -1,0 +1,37 @@
+% AutoMLR (NeurIPS 2026) submission skeleton — swap \documentclass/preamble for the official Overleaf template before submitting.
+% Part 1 (<=4 pages): agent-written research result. Part 2 (<=4 pages): human-written system account. Part 3 (<=1 page): reflections.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}\usepackage{graphicx,booktabs,amsmath,hyperref,xcolor}
+\title{Do Discovered Exploration Procedures Generalize?\\An Autonomous Loop, the Harness Exploit It Found, and What Survives Replay}
+\author{Andy Ye \\ University of Washington}
+\begin{document}
+\maketitle
+\begin{abstract}
+Exploration objectives for RL testers are designed by hand, and nobody knows whether the ones that reach some target states reach others. We let an
+autonomous research loop discover an exploration \emph{procedure} --- code over a save/restore archive of simulator states --- on Kinetix, a suite of
+2D physics games, scored on 337 planted defects with witness states, 30\% of levels and one whole defect class sealed from the search. The loop's first
+answer was a procedure that beat every hand-designed and RL tester on every split. It was an exploit: a race in the vectorised archive let the
+procedure restore physically impossible states, and every check that ran through the evaluator confirmed the gain. The one check that did not ---
+reproducing each counted hit from a level reset --- caught it. On the fixed harness the discovered procedure is level with action-repeat random
+(0.579 vs.\ 0.574 on the search split, 0.267 vs.\ 0.259 on the sealed class; 5 seeds). Re-run on the corrected harness, the search recovers: its new best is level with the strongest procedure from a parallel survey program and significantly ahead of every hand-designed and RL tester on the search split and the sealed class. We report what survives: a replay-verified benchmark with a
+reachability calibration and a frozen protocol; a survey-driven program of 24 exploration procedures the loop then wrote and benchmarked, of which
+nineteen beat action-repeat on the targets a single held input can reach (best 0.816 vs.\ 0.709) and the leader, split-and-pump, is ahead on the
+exploration tier (0.440 / 50\% vs.\ 0.373 / 42\%) and on the full protocol beats every hand-designed, searched and RL tester on the search split (0.621 vs.\ 0.574) and the sealed class (0.338 vs.\ 0.259; paired $+0.079\pm0.035$); the finding that the exploration tier's residual is a barrier common to all 24 procedures (their union
+reaches 24 of 43 targets against the best single procedure's 22, and 36 of the 37 never-reached targets have never been witnessed by any method); and
+bounds on the practical value of any of it: PPO overtakes the procedures at $4\times$ the budget, the procedures find targets 5--9$\times$ cheaper, and
+nothing transfers across engines. Twenty-eight replay-verified engine anomalies (seven severity-A, including four joint tears) on shipped and generated levels come from the same runs. The benchmark, the
+procedures and Part~1 were produced by the loop; the authors built and verified the oracles and document every intervention, including the exploit.
+\end{abstract}
+
+\section*{Part 1 --- Auto research result (agent-written)}
+\input{part1_v2.tex}
+
+\section*{Part 2 --- System design (human-written)}
+\input{part2_v2.tex}
+
+\section*{Part 3 --- Reflections}
+\input{part3_v2.tex}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}

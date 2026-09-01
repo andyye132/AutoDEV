@@ -1,0 +1,23 @@
+\begin{table}[t]\centering\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Tester & Search & Held-out levels & Held-out class (OOB) \\
+\midrule
+Random & 0.464$\pm$0.003 (49\%) & 0.525$\pm$0.009 (55\%) & 0.103$\pm$0.006 (12\%) \\
+Action-repeat random & 0.566$\pm$0.005 (59\%) & 0.575$\pm$0.004 (60\%) & 0.266$\pm$0.009 (30\%) \\
+Go-Explore (seed) & 0.537$\pm$0.003 (57\%) & 0.559$\pm$0.002 (58\%) & 0.214$\pm$0.009 (25\%) \\
+\midrule
+Evolved run 1 gen 37 (best) & 0.666$\pm$0.015 (72\%) & 0.617$\pm$0.008 (64\%) & 0.418$\pm$0.007 (47\%) \\
+Evolved run 1 gen 35 & 0.653$\pm$0.003 (69\%) & 0.639$\pm$0.011 (66\%) & 0.425$\pm$0.012 (47\%) \\
+\midrule
+Opus: macrosweep & 0.588$\pm$0.004 (61\%) & 0.573$\pm$0.006 (60\%) & 0.296$\pm$0.002 (34\%) \\
+Opus: wallbreaker & 0.568$\pm$0.009 (63\%) & 0.570$\pm$0.013 (60\%) & 0.300$\pm$0.008 (37\%) \\
+Portfolio of 4 & 0.628$\pm$0.010 (67\%) & 0.604$\pm$0.008 (62\%) & 0.370$\pm$0.008 (43\%) \\
+\midrule
+PPO+count & 0.487$\pm$0.016 (56\%) & 0.529$\pm$0.007 (57\%) & 0.184$\pm$0.014 (27\%) \\
+PPO+curiosity-prox. & 0.492$\pm$0.013 (56\%) & 0.526$\pm$0.005 (56\%) & 0.179$\pm$0.016 (26\%) \\
+\bottomrule
+\end{tabular}
+\caption{Score $=1-\min(\text{steps},\text{budget})/\text{budget}$ (mean $\pm$ 95\% CI over 5 seeds) and fraction of planted defects witnessed, per split; budget $128\times2048$ env steps per instance; size-l configuration, 74 shipped levels. Best of each family shown; all testers in the full table (Part~2).}
+\label{tab:transfer}
+\end{table}

@@ -1,0 +1,782 @@
+{
+ "random": {
+  "search": {
+   "score": 0.0,
+   "detected": 0.0,
+   "per_class": {
+    "MountainCar-v0": 0.0
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 0.0
+   },
+   "wall": 3.7873146533966064,
+   "n": 6,
+   "budget": 65536,
+   "first_hit": [
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     6.0,
+     6.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ]
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.0,
+   "detected": 0.0,
+   "per_class": {
+    "MountainCar-v0": 0.0
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 0.0
+   },
+   "wall": 3.3266212940216064,
+   "n": 2,
+   "budget": 65536,
+   "first_hit": [
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed6",
+    "MountainCar-v0__seed7"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     6.0,
+     6.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ]
+   ]
+  }
+ },
+ "repeat_random": {
+  "search": {
+   "score": 0.7064887152777778,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.7064887152777778
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 3.0359621047973633,
+   "n": 6,
+   "budget": 65536,
+   "first_hit": [
+    [
+     12224.0,
+     23488.0,
+     9984.0
+    ],
+    [
+     25280.0,
+     10560.0,
+     35520.0
+    ],
+    [
+     49024.0,
+     11392.0,
+     22912.0
+    ],
+    [
+     9216.0,
+     24640.0,
+     7744.0
+    ],
+    [
+     9920.0,
+     11072.0,
+     10752.0
+    ],
+    [
+     10944.0,
+     37312.0,
+     24256.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.63720703125,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.63720703125
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 3.2873775959014893,
+   "n": 2,
+   "budget": 65536,
+   "first_hit": [
+    [
+     12096.0,
+     23872.0,
+     23616.0
+    ],
+    [
+     37056.0,
+     10432.0,
+     35584.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed6",
+    "MountainCar-v0__seed7"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  }
+ },
+ "goexplore": {
+  "search": {
+   "score": 0.07036675347222222,
+   "detected": 0.16666666666666666,
+   "per_class": {
+    "MountainCar-v0": 0.07036675347222222
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 0.16666666666666666
+   },
+   "wall": 6.097081184387207,
+   "n": 6,
+   "budget": 65536,
+   "first_hit": [
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     54144.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     25728.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     33728.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     6.0
+    ],
+    [
+     6.0,
+     8.0,
+     8.0
+    ],
+    [
+     6.0,
+     8.0,
+     6.0
+    ],
+    [
+     6.0,
+     8.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ],
+    [
+     6.0,
+     8.0,
+     8.0
+    ]
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.06787109375,
+   "detected": 0.16666666666666666,
+   "per_class": {
+    "MountainCar-v0": 0.06787109375
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 0.16666666666666666
+   },
+   "wall": 6.056143045425415,
+   "n": 2,
+   "budget": 65536,
+   "first_hit": [
+    [
+     65536.0,
+     38848.0,
+     65536.0
+    ],
+    [
+     65536.0,
+     65536.0,
+     65536.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed6",
+    "MountainCar-v0__seed7"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     6.0
+    ],
+    [
+     6.0,
+     6.0,
+     6.0
+    ]
+   ]
+  }
+ },
+ "cand1_gen037_0.6994.py": {
+  "search": {
+   "score": 0.7862955729166666,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.7862955729166666
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 8.023248195648193,
+   "n": 6,
+   "budget": 65536,
+   "first_hit": [
+    [
+     16704.0,
+     19904.0,
+     15296.0
+    ],
+    [
+     20544.0,
+     8768.0,
+     14336.0
+    ],
+    [
+     16448.0,
+     13376.0,
+     16064.0
+    ],
+    [
+     13312.0,
+     8832.0,
+     10624.0
+    ],
+    [
+     14528.0,
+     13568.0,
+     11200.0
+    ],
+    [
+     15360.0,
+     13312.0,
+     9920.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.7599283854166666,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.7599283854166667
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 7.858904600143433,
+   "n": 2,
+   "budget": 65536,
+   "first_hit": [
+    [
+     16640.0,
+     16256.0,
+     15808.0
+    ],
+    [
+     15808.0,
+     11712.0,
+     18176.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed6",
+    "MountainCar-v0__seed7"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  }
+ },
+ "macrosweep.py": {
+  "search": {
+   "score": 0.8541124131944444,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.8541124131944445
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 4.785054445266724,
+   "n": 6,
+   "budget": 65536,
+   "first_hit": [
+    [
+     9536.0,
+     9600.0,
+     9536.0
+    ],
+    [
+     9920.0,
+     9856.0,
+     9856.0
+    ],
+    [
+     10048.0,
+     9728.0,
+     9600.0
+    ],
+    [
+     8768.0,
+     8832.0,
+     8832.0
+    ],
+    [
+     9536.0,
+     9536.0,
+     9472.0
+    ],
+    [
+     9920.0,
+     9728.0,
+     9792.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.8527018229166666,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.8527018229166667
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 4.19234561920166,
+   "n": 2,
+   "budget": 65536,
+   "first_hit": [
+    [
+     9664.0,
+     9664.0,
+     9664.0
+    ],
+    [
+     9728.0,
+     9600.0,
+     9600.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed6",
+    "MountainCar-v0__seed7"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  }
+ },
+ "elites.py": {
+  "search": {
+   "score": 0.8716362847222222,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.8716362847222222
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 6.646786451339722,
+   "n": 6,
+   "budget": 65536,
+   "first_hit": [
+    [
+     5760.0,
+     9216.0,
+     9792.0
+    ],
+    [
+     8256.0,
+     7360.0,
+     7872.0
+    ],
+    [
+     9920.0,
+     9920.0,
+     9408.0
+    ],
+    [
+     7424.0,
+     7424.0,
+     7744.0
+    ],
+    [
+     7488.0,
+     7552.0,
+     9728.0
+    ],
+    [
+     7872.0,
+     8512.0,
+     10176.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.85546875,
+   "detected": 1.0,
+   "per_class": {
+    "MountainCar-v0": 0.85546875
+   },
+   "detected_per_class": {
+    "MountainCar-v0": 1.0
+   },
+   "wall": 6.600388288497925,
+   "n": 2,
+   "budget": 65536,
+   "first_hit": [
+    [
+     9856.0,
+     9152.0,
+     8896.0
+    ],
+    [
+     8896.0,
+     9472.0,
+     10560.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed6",
+    "MountainCar-v0__seed7"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     8.0,
+     8.0,
+     8.0
+    ],
+    [
+     8.0,
+     8.0,
+     8.0
+    ]
+   ]
+  }
+ }
+}

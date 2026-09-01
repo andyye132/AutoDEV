@@ -1,0 +1,92 @@
+{
+ "program": "runs/evolved/candidates/cand1_gen037_0.6994.py",
+ "n": 16,
+ "workers": 128,
+ "steps": 2048,
+ "results": {
+  "fixed": {
+   "mode": "fixed",
+   "score": 0.46759033203125,
+   "detected": 0.5,
+   "detected_per_class": {
+    "ANOMALY": 0.5,
+    "DISARMED": 0.6666666666666666,
+    "SHORTCUT": 0.25,
+    "TUNNEL": 1.0
+   },
+   "names": [
+    "l_grasp_hard__SHORTCUT__0",
+    "l_h0_angrybirds__SHORTCUT__0",
+    "l_h15_swing_up__ANOMALY__0",
+    "l_h1_car_left__ANOMALY__0",
+    "l_h4_cartpole__ANOMALY__0",
+    "l_h9_morph_direction__ANOMALY__0",
+    "l_hard_cartpole_thrust__DISARMED__0",
+    "l_hard_cartpole_wheels__DISARMED__0",
+    "l_mjc_half_cheetah_easy__ANOMALY__0",
+    "l_mjc_walker_easy__SHORTCUT__1",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h17_thrustcontrol_left__TUNNEL__0",
+    "m_h19_thrust_left_very_easy__ANOMALY__0",
+    "s_h1_thrust_over_ball__DISARMED__0",
+    "s_h4_thrust_aim__ANOMALY__0",
+    "s_h7_unicycle_left__SHORTCUT__0"
+   ],
+   "chimera": [
+    {
+     "instance": "l_grasp_hard__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 0
+    },
+    {
+     "instance": "l_h0_angrybirds__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 0
+    }
+   ],
+   "wall": 286.6903176307678
+  },
+  "legacy": {
+   "mode": "legacy",
+   "score": 0.577911376953125,
+   "detected": 0.625,
+   "detected_per_class": {
+    "ANOMALY": 0.75,
+    "DISARMED": 0.6666666666666666,
+    "SHORTCUT": 0.25,
+    "TUNNEL": 1.0
+   },
+   "names": [
+    "l_grasp_hard__SHORTCUT__0",
+    "l_h0_angrybirds__SHORTCUT__0",
+    "l_h15_swing_up__ANOMALY__0",
+    "l_h1_car_left__ANOMALY__0",
+    "l_h4_cartpole__ANOMALY__0",
+    "l_h9_morph_direction__ANOMALY__0",
+    "l_hard_cartpole_thrust__DISARMED__0",
+    "l_hard_cartpole_wheels__DISARMED__0",
+    "l_mjc_half_cheetah_easy__ANOMALY__0",
+    "l_mjc_walker_easy__SHORTCUT__1",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h17_thrustcontrol_left__TUNNEL__0",
+    "m_h19_thrust_left_very_easy__ANOMALY__0",
+    "s_h1_thrust_over_ball__DISARMED__0",
+    "s_h4_thrust_aim__ANOMALY__0",
+    "s_h7_unicycle_left__SHORTCUT__0"
+   ],
+   "chimera": [
+    {
+     "instance": "l_grasp_hard__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 62
+    },
+    {
+     "instance": "l_h0_angrybirds__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 17
+    }
+   ],
+   "wall": 256.6926851272583
+  }
+ }
+}

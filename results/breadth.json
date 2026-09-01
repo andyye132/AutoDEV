@@ -1,0 +1,1647 @@
+{
+ "K-Defect": {
+  "search": {
+   "goexplore": {
+    "detected": 0.573109243697479,
+    "ci": 0.0032941176470588553,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "repeat_random": {
+    "detected": 0.6016806722689075,
+    "ci": 0.004034453693995808,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.6285714285714286,
+    "ci": 0.0061627298135099986,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "pairladder.py": {
+    "detected": 0.6403361344537815,
+    "ci": 0.006162729813510045,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "ppo_count": {
+    "detected": 0.5602240896358542,
+    "ci": 0.019795183473135677,
+    "n": 119,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_rnd": {
+    "detected": 0.5126050420168067,
+    "ci": 0.0,
+    "n": 119,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_icm": {
+    "detected": 0.5014005602240896,
+    "ci": 0.014525693472511463,
+    "n": 119,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_curiosity_proximity": {
+    "detected": 0.5658263305322129,
+    "ci": 0.014525693472511494,
+    "n": 119,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_task": {
+    "detected": 0.5434173669467787,
+    "ci": 0.03843137254901966,
+    "n": 119,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "random": {
+    "detected": 0.49411764705882355,
+    "ci": 0.006162729813510022,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "macrosweep.py": {
+    "detected": 0.6302521008403361,
+    "ci": 0.005208457322630253,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "elites.py": {
+    "detected": 0.6201680672268908,
+    "ci": 0.00960392076798046,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand4_gen035_0.6934.py": {
+    "detected": 0.6050420168067226,
+    "ci": 0.011646464631307845,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "split_pump.py": {
+    "detected": 0.6554621848739496,
+    "ci": 0.005208457322630253,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cem_root.py": {
+    "detected": 0.626890756302521,
+    "ci": 0.008398385081211615,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "velmax.py": {
+    "detected": 0.6403361344537815,
+    "ci": 0.006162729813510045,
+    "n": 119,
+    "seeds": 5,
+    "budget": 262144
+   }
+  },
+  "heldout_levels_instances": {
+   "goexplore": {
+    "detected": 0.5862068965517241,
+    "ci": 0.010686317610224165,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "repeat_random": {
+    "detected": 0.603448275862069,
+    "ci": 0.0,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.5931034482758621,
+    "ci": 0.017231169390761827,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "pairladder.py": {
+    "detected": 0.603448275862069,
+    "ci": 0.0,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "ppo_count": {
+    "detected": 0.5804597701149425,
+    "ci": 0.029802715917739062,
+    "n": 58,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_rnd": {
+    "detected": 0.5517241379310345,
+    "ci": 0.0,
+    "n": 58,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_icm": {
+    "detected": 0.5172413793103449,
+    "ci": 0.0,
+    "n": 58,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_curiosity_proximity": {
+    "detected": 0.574712643678161,
+    "ci": 0.02980271591773906,
+    "n": 58,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_task": {
+    "detected": 0.5517241379310345,
+    "ci": 0.0,
+    "n": 58,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "random": {
+    "detected": 0.5586206896551724,
+    "ci": 0.008277586027336274,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "macrosweep.py": {
+    "detected": 0.596551724137931,
+    "ci": 0.008277586027336274,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "elites.py": {
+    "detected": 0.603448275862069,
+    "ci": 0.0,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand4_gen035_0.6934.py": {
+    "detected": 0.5827586206896551,
+    "ci": 0.006758620689655143,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "split_pump.py": {
+    "detected": 0.6103448275862069,
+    "ci": 0.008277586027336274,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cem_root.py": {
+    "detected": 0.603448275862069,
+    "ci": 0.0,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "velmax.py": {
+    "detected": 0.6206896551724139,
+    "ci": 0.010686317610224198,
+    "n": 58,
+    "seeds": 5,
+    "budget": 262144
+   }
+  },
+  "heldout_class_instances": {
+   "goexplore": {
+    "detected": 0.2662162162162162,
+    "ci": 0.00529729729729731,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "repeat_random": {
+    "detected": 0.28918918918918923,
+    "ci": 0.012137632921774928,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.30945945945945946,
+    "ci": 0.006487837697101378,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "pairladder.py": {
+    "detected": 0.3324324324324325,
+    "ci": 0.006487837697101378,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "ppo_count": {
+    "detected": 0.268018018018018,
+    "ci": 0.024578419259339727,
+    "n": 148,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_rnd": {
+    "detected": 0.17117117117117117,
+    "ci": 0.024578419259339738,
+    "n": 148,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_icm": {
+    "detected": 0.16216216216216217,
+    "ci": 0.027568009182119064,
+    "n": 148,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_curiosity_proximity": {
+    "detected": 0.26126126126126126,
+    "ci": 0.028947251143315117,
+    "n": 148,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_task": {
+    "detected": 0.22522522522522523,
+    "ci": 0.011679442724519358,
+    "n": 148,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "random": {
+    "detected": 0.12162162162162163,
+    "ci": 0.01025817210617099,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "macrosweep.py": {
+    "detected": 0.3297297297297297,
+    "ci": 0.012839800703427032,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "elites.py": {
+    "detected": 0.3432432432432432,
+    "ci": 0.011392268596894288,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand4_gen035_0.6934.py": {
+    "detected": 0.3202702702702702,
+    "ci": 0.008982004572246977,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "split_pump.py": {
+    "detected": 0.3716216216216216,
+    "ci": 0.007253623058852206,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cem_root.py": {
+    "detected": 0.3216216216216216,
+    "ci": 0.0215990760833704,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "velmax.py": {
+    "detected": 0.37027027027027026,
+    "ci": 0.007722071428308648,
+    "n": 148,
+    "seeds": 5,
+    "budget": 262144
+   }
+  }
+ },
+ "K-Goal": {
+  "search": {
+   "random": {
+    "detected": 0.36153846153846153,
+    "ci": 0.027698076322240556,
+    "n": 52,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "repeat_random": {
+    "detected": 0.5807692307692307,
+    "ci": 0.0075384615384615555,
+    "n": 52,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "goexplore": {
+    "detected": 0.5269230769230769,
+    "ci": 0.01921938124354203,
+    "n": 52,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.5923076923076923,
+    "ci": 0.018465384214827033,
+    "n": 52,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand4_gen035_0.6934.py": {
+    "detected": 0.6038461538461539,
+    "ci": 0.015076923076923068,
+    "n": 52,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "macrosweep.py": {
+    "detected": 0.6730769230769231,
+    "ci": 0.01685651244576763,
+    "n": 52,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "ppo_count": {
+    "detected": 0.5192307692307693,
+    "ci": 0.05757595103918873,
+    "n": 52,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_rnd": {
+    "detected": 0.3782051282051282,
+    "ci": 0.02512820512820515,
+    "n": 52,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_icm": {
+    "detected": 0.358974358974359,
+    "ci": 0.03324149083132435,
+    "n": 52,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_curiosity_proximity": {
+    "detected": 0.5576923076923077,
+    "ci": 0.021761663992532033,
+    "n": 52,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_task": {
+    "detected": 0.4615384615384615,
+    "ci": 0.05757595103918876,
+    "n": 52,
+    "seeds": 3,
+    "budget": 262144
+   }
+  },
+  "heldout_levels_instances": {
+   "random": {
+    "detected": 0.2909090909090909,
+    "ci": 0.021822726799341045,
+    "n": 22,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "repeat_random": {
+    "detected": 0.8181818181818181,
+    "ci": 0.028173019154227385,
+    "n": 22,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "goexplore": {
+    "detected": 0.709090909090909,
+    "ci": 0.06042439439511606,
+    "n": 22,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.8090909090909092,
+    "ci": 0.033334765809440586,
+    "n": 22,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand4_gen035_0.6934.py": {
+    "detected": 0.8090909090909092,
+    "ci": 0.017818181818181844,
+    "n": 22,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "macrosweep.py": {
+    "detected": 0.7636363636363637,
+    "ci": 0.03333476580944057,
+    "n": 22,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "ppo_count": {
+    "detected": 0.6515151515151515,
+    "ci": 0.02969696969696967,
+    "n": 22,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_rnd": {
+    "detected": 0.37878787878787884,
+    "ci": 0.029696969696969708,
+    "n": 22,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_icm": {
+    "detected": 0.3181818181818182,
+    "ci": 0.05143666034598486,
+    "n": 22,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_curiosity_proximity": {
+    "detected": 0.6969696969696969,
+    "ci": 0.11878787878787883,
+    "n": 22,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "ppo_task": {
+    "detected": 0.5,
+    "ci": 0.08909090909090905,
+    "n": 22,
+    "seeds": 3,
+    "budget": 262144
+   }
+  }
+ },
+ "K-Fresh": {
+  "search": {
+   "random": {
+    "detected": 0.29909909909909904,
+    "ci": 0.006606890520790026,
+    "n": 444,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "repeat_random": {
+    "detected": 0.37297297297297294,
+    "ci": 0.006636320022885343,
+    "n": 444,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "goexplore": {
+    "detected": 0.35360360360360354,
+    "ci": 0.0034193907020569846,
+    "n": 444,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.3986486486486487,
+    "ci": 0.01176257147980608,
+    "n": 444,
+    "seeds": 5,
+    "budget": 262144
+   },
+   "split_pump.py": {
+    "detected": 0.4144144144144144,
+    "ci": 0.004414414414414442,
+    "n": 444,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "saturate.py": {
+    "detected": 0.4339339339339339,
+    "ci": 0.0014714714714714565,
+    "n": 444,
+    "seeds": 3,
+    "budget": 262144
+   },
+   "cem_root.py": {
+    "detected": 0.3828828828828829,
+    "ci": 0.008828828828828812,
+    "n": 444,
+    "seeds": 3,
+    "budget": 262144
+   }
+  }
+ },
+ "G-MountainCar": {
+  "search": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.6666666666666667,
+    "ci": 0.14608977452998628,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.6,
+    "ci": 0.36668242390384626,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "G-Acrobot": {
+  "search": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.9,
+    "ci": 0.08001666493091712,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.9333333333333333,
+    "ci": 0.08001666493091714,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "G-DeepSea8": {
+  "search": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "G-DeepSea24": {
+  "search": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "B-Breakout": {
+  "search": {
+   "random": {
+    "detected": 0.3333333333333333,
+    "ci": 0.0,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.3333333333333333,
+    "ci": 0.0,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.3333333333333333,
+    "ci": 0.0,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "split_pump.py": {
+    "detected": 0.28888888888888886,
+    "ci": 0.0407424915448718,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.8555555555555555,
+    "ci": 0.0949271325482191,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 18,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "random": {
+    "detected": 0.3333333333333333,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.3333333333333333,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.3333333333333333,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "split_pump.py": {
+    "detected": 0.3333333333333333,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.9333333333333333,
+    "ci": 0.08001666493091714,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "X-DoorKey": {
+  "search": {
+   "split_pump.py": {
+    "detected": 0.2333333333333333,
+    "ci": 0.08001666493091715,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.36666666666666664,
+    "ci": 0.06533333333333333,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.7666666666666667,
+    "ci": 0.13066666666666665,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.3333333333333333,
+    "ci": 0.10330107023216704,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.1,
+    "ci": 0.08001666493091715,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.16666666666666666,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 0.4,
+    "ci": 0.13066666666666665,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 0.26666666666666666,
+    "ci": 0.08001666493091715,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "split_pump.py": {
+    "detected": 0.1,
+    "ci": 0.196,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.5,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 0.7,
+    "ci": 0.24004999479275144,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "X-FourRooms": {
+  "search": {
+   "split_pump.py": {
+    "detected": 0.36666666666666664,
+    "ci": 0.1600333298618343,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.8,
+    "ci": 0.06533333333333335,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 0.8666666666666666,
+    "ci": 0.12222747463461542,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.26666666666666666,
+    "ci": 0.08001666493091715,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.4,
+    "ci": 0.08001666493091716,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.39999999999999997,
+    "ci": 0.08001666493091716,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.2333333333333333,
+    "ci": 0.13066666666666668,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 0.8,
+    "ci": 0.12222747463461542,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 0.13333333333333333,
+    "ci": 0.12222747463461542,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "split_pump.py": {
+    "detected": 0.4,
+    "ci": 0.196,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.7,
+    "ci": 0.24004999479275144,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 0.2,
+    "ci": 0.2400499947927515,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 0.2,
+    "ci": 0.2400499947927515,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.5,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.4,
+    "ci": 0.196,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.5,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 0.6,
+    "ci": 0.196,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 0.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "X-Unlock": {
+  "search": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.9333333333333332,
+    "ci": 0.13066666666666668,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.9333333333333333,
+    "ci": 0.08001666493091712,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.5333333333333334,
+    "ci": 0.16003332986183433,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.8,
+    "ci": 0.1904777618982798,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 0.9666666666666668,
+    "ci": 0.06533333333333331,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 0.5333333333333333,
+    "ci": 0.1222274746346154,
+    "n": 6,
+    "seeds": 5,
+    "budget": 131072
+   }
+  },
+  "heldout_levels_instances": {
+   "split_pump.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "saturate.py": {
+    "detected": 0.7,
+    "ci": 0.24004999479275144,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "random": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "repeat_random": {
+    "detected": 0.7,
+    "ci": 0.24004999479275144,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "goexplore": {
+    "detected": 0.2,
+    "ci": 0.392,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.5,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "macrosweep.py": {
+    "detected": 1.0,
+    "ci": 0.0,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   },
+   "elites.py": {
+    "detected": 0.1,
+    "ci": 0.196,
+    "n": 2,
+    "seeds": 5,
+    "budget": 131072
+   }
+  }
+ },
+ "C-Ach": {
+  "search": {
+   "random": {
+    "detected": 0.25,
+    "ci": 0.028290163190291675,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "repeat_random": {
+    "detected": 0.15833333333333333,
+    "ci": 0.01633333333333333,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "goexplore": {
+    "detected": 0.10000000000000002,
+    "ci": 1.9233632618876244e-17,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "cand1_gen037_0.6994.py": {
+    "detected": 0.125,
+    "ci": 0.028290163190291658,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "cand4_gen035_0.6934.py": {
+    "detected": 0.125,
+    "ci": 0.0,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "macrosweep.py": {
+    "detected": 0.17499999999999996,
+    "ci": 3.846726523775249e-17,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "elites.py": {
+    "detected": 0.125,
+    "ci": 0.028290163190291658,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "split_pump.py": {
+    "detected": 0.10000000000000002,
+    "ci": 1.9233632618876244e-17,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "saturate.py": {
+    "detected": 0.3499999999999999,
+    "ci": 0.028290163190291658,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   },
+   "run7_best_gen035_0.5888.py": {
+    "detected": 0.26666666666666666,
+    "ci": 0.03266666666666666,
+    "n": 40,
+    "seeds": 3,
+    "budget": 65536
+   }
+  }
+ }
+}

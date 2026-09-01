@@ -1,0 +1,152 @@
+{
+ "random": {
+  "search": {
+   "score": 0.48490934551886794,
+   "detected": 0.5283018867924528,
+   "per_class": {
+    "TUNNEL": 0.259765625,
+    "SHORTCUT": 0.3534268465909091,
+    "ANOMALY": 0.6011962890625,
+    "DISARMED": 0.5059481534090909
+   },
+   "detected_per_class": {
+    "TUNNEL": 0.2857142857142857,
+    "SHORTCUT": 0.36363636363636365,
+    "ANOMALY": 0.6666666666666666,
+    "DISARMED": 0.5454545454545454
+   },
+   "wall": 248.43024325370789,
+   "n": 53
+  },
+  "heldout_levels_instances": {
+   "score": 0.6977751358695652,
+   "detected": 0.7391304347826086,
+   "per_class": {
+    "TUNNEL": 0.0,
+    "SHORTCUT": 0.7120535714285714,
+    "ANOMALY": 0.75302734375,
+    "DISARMED": 0.7068359375
+   },
+   "detected_per_class": {
+    "TUNNEL": 0.0,
+    "SHORTCUT": 0.7142857142857143,
+    "ANOMALY": 0.8,
+    "DISARMED": 0.8
+   },
+   "wall": 108.77062201499939,
+   "n": 23
+  },
+  "heldout_class_instances": {
+   "score": 0.05014935661764706,
+   "detected": 0.058823529411764705,
+   "per_class": {
+    "OOB": 0.05014935661764706
+   },
+   "detected_per_class": {
+    "OOB": 0.058823529411764705
+   },
+   "wall": 307.69593596458435,
+   "n": 68
+  }
+ },
+ "repeat_random": {
+  "search": {
+   "score": 0.6711011202830188,
+   "detected": 0.7169811320754716,
+   "per_class": {
+    "TUNNEL": 0.5121372767857143,
+    "SHORTCUT": 0.5321377840909091,
+    "ANOMALY": 0.7265218098958334,
+    "DISARMED": 0.7903053977272727
+   },
+   "detected_per_class": {
+    "TUNNEL": 0.5714285714285714,
+    "SHORTCUT": 0.5454545454545454,
+    "ANOMALY": 0.7916666666666666,
+    "DISARMED": 0.8181818181818182
+   },
+   "wall": 234.3486888408661,
+   "n": 53
+  },
+  "heldout_levels_instances": {
+   "score": 0.7974269701086957,
+   "detected": 0.8260869565217391,
+   "per_class": {
+    "TUNNEL": 0.0,
+    "SHORTCUT": 0.8318917410714286,
+    "ANOMALY": 0.76044921875,
+    "DISARMED": 0.9826171875
+   },
+   "detected_per_class": {
+    "TUNNEL": 0.0,
+    "SHORTCUT": 0.8571428571428571,
+    "ANOMALY": 0.8,
+    "DISARMED": 1.0
+   },
+   "wall": 114.43997383117676,
+   "n": 23
+  },
+  "heldout_class_instances": {
+   "score": 0.2599666819852941,
+   "detected": 0.29411764705882354,
+   "per_class": {
+    "OOB": 0.2599666819852941
+   },
+   "detected_per_class": {
+    "OOB": 0.29411764705882354
+   },
+   "wall": 320.5024218559265,
+   "n": 68
+  }
+ },
+ "goexplore": {
+  "search": {
+   "score": 0.6309699292452831,
+   "detected": 0.6792452830188679,
+   "per_class": {
+    "TUNNEL": 0.37862723214285715,
+    "SHORTCUT": 0.5268110795454546,
+    "ANOMALY": 0.6802164713541666,
+    "DISARMED": 0.7882634943181818
+   },
+   "detected_per_class": {
+    "TUNNEL": 0.42857142857142855,
+    "SHORTCUT": 0.5454545454545454,
+    "ANOMALY": 0.75,
+    "DISARMED": 0.8181818181818182
+   },
+   "wall": 258.480397939682,
+   "n": 53
+  },
+  "heldout_levels_instances": {
+   "score": 0.7729704483695652,
+   "detected": 0.8260869565217391,
+   "per_class": {
+    "TUNNEL": 0.0,
+    "SHORTCUT": 0.7657645089285714,
+    "ANOMALY": 0.75224609375,
+    "DISARMED": 0.9791015625
+   },
+   "detected_per_class": {
+    "TUNNEL": 0.0,
+    "SHORTCUT": 0.8571428571428571,
+    "ANOMALY": 0.8,
+    "DISARMED": 1.0
+   },
+   "wall": 124.04906892776489,
+   "n": 23
+  },
+  "heldout_class_instances": {
+   "score": 0.24085190716911764,
+   "detected": 0.3088235294117647,
+   "per_class": {
+    "OOB": 0.24085190716911764
+   },
+   "detected_per_class": {
+    "OOB": 0.3088235294117647
+   },
+   "wall": 318.52237820625305,
+   "n": 68
+  }
+ }
+}

@@ -1,0 +1,46 @@
+% Reframe-lite: drop-in replacements for the title, abstract and §1.1 if the paper is submitted under the
+% "exploration-strategy discovery" framing with the CURRENT experiments (no new runs). Everything else in Part 1 stays;
+% only the lens changes: targets instead of defects, exploration objectives instead of testers.
+%
+% ---- title ----
+% Do Discovered Exploration Strategies Generalize?\\Autonomous Program Search Finds Exploration Procedures That Reach Unseen Target Classes
+%
+% ---- abstract ----
+% Exploration in reinforcement learning is driven by hand-designed intrinsic objectives (curiosity, novelty, coverage), and the
+% field's own results say they are unreliable: random exploration beats RND asymptotically in large 3D games, more search can make a
+% tester worse, and coverage anti-correlates with what testers exist to find. We ask whether an autonomous research loop can discover
+% an exploration \emph{procedure} instead --- code over a save/restore archive of simulator states, the family that contains Go-Explore
+% --- and whether the discovered procedure generalizes. On Kinetix, a suite of 2D physics games, we build a target-state benchmark
+% from 337 planted defects (five classes, each with a witness state; random floors and a reachability calibration), seal 30\% of levels
+% and one entire target class from the search, and let an LLM-driven program search write the procedure. \textbf{Qualifying result:}
+% a single run of the discovered procedure reaches 72\% of targets on the search split vs.\ 59\% for the strongest hand-designed
+% procedure and 56\% for the best of five PPO intrinsic-motivation testers at equal simulator budget, 64\% vs.\ 60\% on held-out
+% levels, and 47\% vs.\ 30\% on the sealed target class (+0.15 paired per-instance gain, 95\% CI $\pm$0.05); normalized by the reachable
+% set it finds 88\% / 94\% / 74\% of what any method reaches. Constant tuning of the discovered program recovers a tenth of its gain
+% and fixed portfolios of designs lose to it, so the gain is structural; every search makes it in its first generations and then
+% moves inside evaluation noise. The benchmark, the search, the baselines and Part~1 were produced by the autonomous loop; the authors
+% built and verified the oracles and document every intervention.
+%
+% ---- §1.1 replacement ----
+\subsection*{1.1 Hypothesis}
+Exploration objectives in RL are hand-designed, and where they have been tested as \emph{testers} --- agents whose job is to reach
+states someone cares about --- they disappoint: random exploration beats RND asymptotically in large 3D maps~\cite{goexplore-reach},
+more search made MCTS worse at reaching injected faults~\cite{ariyurek-mcts}, and coverage anti-correlates with the bugs a tester
+surfaces~\cite{ccpt}. The one precedent for searching over the exploration algorithm itself, meta-learned curiosity~\cite{alet},
+transferred across control tasks but had no game, no target-state benchmark and no held-out target class. We hypothesized that (H1)
+an LLM-driven program search over exploration \emph{procedures} --- code over a save/restore archive --- reaches target states faster
+than hand-designed procedures and learned intrinsic motivation at equal budget; (H2) the discovered procedure \emph{transfers} to
+levels it never saw and to a target class it was never scored on; and (H3) the same procedure surfaces real, unplanted anomalies.
+H2 is decisive: searched objectives are known to overfit their fitness~\cite{dmmultiagent}. Game testing supplies the targets
+(planted defects with witness states) and the real anomalies that validate the oracles.
+
+% ---- §1.2 addition (exploration-framing related work; replaces the game-benchmark sentences when the reframe is used) ----
+% Exploration objectives for RL --- prediction-error curiosity~\cite{icm}, random-network distillation~\cite{rnd}, count-based
+% novelty --- and archive-based procedures such as Go-Explore~\cite{goexplore} are the standard tools for hard-exploration
+% problems; when used as \emph{testers}, whose success is reaching particular states, the evidence is mixed at best: in large 3D maps
+% random exploration beats RND asymptotically~\cite{goexplore-reach}, more search made MCTS worse at reaching injected faults
+% \cite{ariyurek-mcts}, and coverage anti-correlates with the bugs a tester surfaces~\cite{ccpt}. The one precedent for
+% \emph{searching} over the exploration algorithm, meta-learned curiosity~\cite{alet}, discovered programs on par with human designs
+% that transferred across control tasks, but had no game, no target-state benchmark and no held-out target class. Our benchmark scores
+% target reaching the way injected-fault testing scores bug finding (recall at an interaction budget~\cite{ariyurek,gbqa}) with two
+% additions those protocols lack: a reachability calibration and splits sealed by level \emph{and by target class}.

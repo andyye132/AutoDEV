@@ -1,0 +1,361 @@
+[
+ {
+  "level": "s/h0_weak_thrust.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 18.0,
+  "random_win": 0.0,
+  "random_death": 1.0,
+  "random_win_median_t": null,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ },
+ {
+  "level": "s/h1_thrust_over_ball.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.9765625,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "s/h2_one_wheel_car.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "s/h3_point_the_thruster.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "s/h4_thrust_aim.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 24.0,
+  "random_win": 0.1015625,
+  "random_death": 0.8984375,
+  "random_win_median_t": 25.0,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ },
+ {
+  "level": "s/h5_rotate_fall.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 26.0,
+  "random_win": 0.6171875,
+  "random_death": 0.3828125,
+  "random_win_median_t": 26.0,
+  "flags": [
+   "NOOP_DEATH",
+   "TRIVIAL_WIN"
+  ]
+ },
+ {
+  "level": "s/h6_unicycle_right.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "s/h7_unicycle_left.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "s/h8_unicycle_balance.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 18.0,
+  "random_win": 0.1328125,
+  "random_death": 0.8671875,
+  "random_win_median_t": 25.0,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ },
+ {
+  "level": "s/h9_explode_then_thrust_over.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/arm_hard.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0078125,
+  "random_death": 0.0234375,
+  "random_win_median_t": 120.0,
+  "flags": []
+ },
+ {
+  "level": "m/arm_left.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/arm_right.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/arm_up.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 13.0,
+  "random_win": 0.0,
+  "random_death": 0.9921875,
+  "random_win_median_t": null,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ },
+ {
+  "level": "m/h0_unicycle.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 23.0,
+  "random_win": 0.0,
+  "random_death": 1.0,
+  "random_win_median_t": null,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ },
+ {
+  "level": "m/h10_thrust_right_easy.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h11_thrust_left_easy.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h12_thrustfall_left.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h13_thrustfall_right.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h14_thrustblock.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 27.0,
+  "random_win": 0.0,
+  "random_death": 1.0,
+  "random_win_median_t": null,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ },
+ {
+  "level": "m/h15_thrustshoot.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.2890625,
+  "random_death": 0.0,
+  "random_win_median_t": 172.0,
+  "flags": []
+ },
+ {
+  "level": "m/h16_thrustcontrol_right.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h17_thrustcontrol_left.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h18_thrust_right_very_easy.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h19_thrust_left_very_easy.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h1_car_left.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.3125,
+  "random_death": 0.390625,
+  "random_win_median_t": 128.0,
+  "flags": []
+ },
+ {
+  "level": "m/h2_car_right.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.390625,
+  "random_death": 0.3125,
+  "random_win_median_t": 127.5,
+  "flags": []
+ },
+ {
+  "level": "m/h3_car_thrust.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.734375,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h4_thrust_the_needle.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 26.0,
+  "random_win": 0.0,
+  "random_death": 1.0,
+  "random_win_median_t": null,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ },
+ {
+  "level": "m/h5_angry_birds.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.078125,
+  "random_death": 0.0,
+  "random_win_median_t": 51.5,
+  "flags": []
+ },
+ {
+  "level": "m/h6_thrust_over.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 1.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h7_car_flip.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.8359375,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h8_weird_vehicle.json",
+  "noop_win": 0.0,
+  "noop_death": 0.0,
+  "noop_t": 255.0,
+  "random_win": 0.0,
+  "random_death": 0.0,
+  "random_win_median_t": null,
+  "flags": []
+ },
+ {
+  "level": "m/h9_spin_the_right_way.json",
+  "noop_win": 0.0,
+  "noop_death": 1.0,
+  "noop_t": 65.0,
+  "random_win": 0.0859375,
+  "random_death": 0.9140625,
+  "random_win_median_t": 44.0,
+  "flags": [
+   "NOOP_DEATH"
+  ]
+ }
+]

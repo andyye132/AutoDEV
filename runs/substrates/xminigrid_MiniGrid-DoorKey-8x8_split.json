@@ -1,0 +1,55 @@
+{
+ "search": [
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed0",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 0,
+   "cls": "MiniGrid-DoorKey-8x8"
+  },
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed1",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 1,
+   "cls": "MiniGrid-DoorKey-8x8"
+  },
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed2",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 2,
+   "cls": "MiniGrid-DoorKey-8x8"
+  },
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed3",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 3,
+   "cls": "MiniGrid-DoorKey-8x8"
+  },
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed4",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 4,
+   "cls": "MiniGrid-DoorKey-8x8"
+  },
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed5",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 5,
+   "cls": "MiniGrid-DoorKey-8x8"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed6",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 6,
+   "cls": "MiniGrid-DoorKey-8x8"
+  },
+  {
+   "name": "MiniGrid-DoorKey-8x8__seed7",
+   "env": "MiniGrid-DoorKey-8x8",
+   "seed": 7,
+   "cls": "MiniGrid-DoorKey-8x8"
+  }
+ ],
+ "heldout_class_instances": []
+}

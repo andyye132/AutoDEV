@@ -1,0 +1,301 @@
+<title>Exploration Discovery Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --paper: #F4F7F6; --surface: #FFFFFF; --ink: #182028; --ink-2: #3A4852; --slate: #5A6B77; --line: #D6DFE2;
+  --accent: #0E6F8E; --accent-soft: #DCEBF0; --signal: #B8541F; --signal-soft: #F6E4D8; --code-bg: #EAF0F1;
+  --rail-bg: #EDF2F2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+    --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+    --rail-bg: #141D25;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+  --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+  --rail-bg: #141D25;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+a:hover, a:focus-visible { border-bottom-color: var(--accent); outline: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.shell { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 3rem; max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+.rail { position: sticky; top: 1.5rem; align-self: start; max-height: calc(100vh - 3rem); overflow-y: auto; font-size: 0.86rem; line-height: 1.4; padding: 1rem 1rem 1rem 0; border-right: 1px solid var(--line); }
+.rail .eyebrow { margin-bottom: 0.6rem; }
+.rail ul { list-style: none; margin: 0; padding: 0; }
+.rail > ul > li { margin: 0.35rem 0; }
+.rail > ul > li > ul { padding-left: 0.9rem; border-left: 1px solid var(--line); margin: 0.25rem 0 0.4rem; }
+.rail > ul > li > ul li { margin: 0.2rem 0; color: var(--slate); }
+.rail a { color: var(--ink-2); border: none; }
+.rail a:hover { color: var(--accent); }
+main { min-width: 0; max-width: 72ch; }
+.eyebrow { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); }
+header.masthead { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+header.masthead h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin: 0.4rem 0 0.8rem; letter-spacing: -0.01em; text-wrap: balance; }
+header.masthead p.dek { font-size: 1.1rem; color: var(--ink-2); margin: 0 0 1rem; max-width: 62ch; }
+header.masthead .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.85rem; color: var(--slate); }
+h1, h2, h3, h4 { text-wrap: balance; }
+main > h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2.1rem, 4vw, 2.9rem); line-height: 1.08; letter-spacing: -0.012em; margin: 0 0 0.9rem; }
+main > h1 + p { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); max-width: 62ch; margin-bottom: 0.9rem; }
+main > h1 + p + p { font-size: 0.86rem; color: var(--slate); padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); margin-bottom: 1.6rem; }
+a.cite { border: none; font-variant-numeric: tabular-nums; }
+h2#references + ol { padding-left: 2.2rem; font-size: 0.88rem; color: var(--ink-2); }
+h2#references + ol li { margin: 0.45rem 0; overflow-wrap: anywhere; }
+h2#references + ol li:target { background: var(--accent-soft); border-radius: 3px; }
+h2 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 1.8rem; line-height: 1.15; margin: 3rem 0 1rem; padding-top: 1.2rem; border-top: 1px solid var(--line); letter-spacing: -0.005em; }
+h3 { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.28rem; line-height: 1.25; margin: 2rem 0 0.6rem; }
+h4 { font-size: 0.95rem; font-weight: 600; margin: 1.4rem 0 0.4rem; color: var(--ink-2); }
+p { margin: 0 0 1rem; }
+ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+li { margin: 0.3rem 0; }
+li > ul, li > ol { margin: 0.3rem 0 0.3rem; }
+strong { font-weight: 600; }
+code { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86em; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 3px; }
+pre { background: var(--code-bg); padding: 1rem 1.1rem; overflow-x: auto; border-radius: 4px; font-size: 0.84rem; line-height: 1.5; margin: 0 0 1.2rem; }
+pre code { background: none; padding: 0; font-size: inherit; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+.table-wrap { overflow-x: auto; margin: 0 0 1.4rem; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; line-height: 1.4; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); }
+th { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); font-weight: 500; background: var(--rail-bg); }
+tr:last-child td { border-bottom: 0; }
+.callout { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 4px 4px 0; }
+.callout p:last-child { margin-bottom: 0; }
+.callout-warn { border-left-color: var(--signal); background: var(--signal-soft); }
+.callout-accent { border-left-color: var(--accent); background: var(--accent-soft); }
+.callout-note { border-left-color: var(--slate); }
+sup { font-size: 0.72em; }
+.footnote { font-size: 0.9rem; color: var(--ink-2); }
+.refs ol { padding-left: 2rem; font-size: 0.9rem; }
+.refs li { margin: 0.45rem 0; word-break: break-word; }
+@media (max-width: 860px) {
+  .shell { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem 1rem 4rem; }
+  .rail { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 1rem; }
+  main { max-width: none; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<div class="shell">
+  <nav class="rail" aria-label="Contents">
+    <div class="eyebrow">Contents</div>
+    <div class="toc">
+<ul>
+<li><a href="#chapter-1-what-we-are-going-to-do">Chapter 1 — What we are going to do</a><ul>
+<li><a href="#11-the-overarching-goal">1.1 The overarching goal</a></li>
+<li><a href="#12-the-benchmark-target-state-reaching-under-a-simulator-budget">1.2 The benchmark: target-state reaching under a simulator budget</a></li>
+<li><a href="#13-methods-under-comparison">1.3 Methods under comparison</a></li>
+<li><a href="#14-the-90-target-pre-registered">1.4 The "&gt;90%" target, pre-registered</a></li>
+</ul>
+</li>
+<li><a href="#chapter-2-tests-that-decide-whether-this-works-at-all">Chapter 2 — Tests that decide whether this works at all</a></li>
+<li><a href="#chapter-3-running-the-tests-and-making-the-framing-better-as-we-go">Chapter 3 — Running the tests, and making the framing better as we go</a><ul>
+<li><a href="#31-schedule-all-times-pdt-the-humans-tasks-are-marked-h">3.1 Schedule (all times PDT; the human's tasks are marked [H])</a></li>
+<li><a href="#32-ways-the-framing-gets-stronger">3.2 Ways the framing gets stronger</a></li>
+<li><a href="#33-what-would-make-us-stop">3.3 What would make us stop</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+
+  </nav>
+  <main>
+    <h1 id="exploration-discovery-plan">Exploration Discovery Plan</h1>
+<p>Reframing AutoDev as <em>exploration-strategy discovery</em>: an autonomous loop that writes exploration procedures — programs over a save/restore archive — and a benchmark that says, honestly, how much of the reachable world they reach. Three chapters: how we will do it, the tests that decide whether it works at all, and the schedule for running them, with the ways the framing gets stronger as results come in.</p>
+<p>Prepared 29 Aug 2026, Saturday evening · Deadline Fri 4 Sep, 5 PM PDT (OpenReview expiry Sep 5 00:00 UTC; abstract editable until then) · The "&gt;90%" target is defined in §1.4 <em>before</em> any new run, so it cannot be met by relabeling.</p>
+<h2 id="chapter-1-what-we-are-going-to-do">Chapter 1 — What we are going to do</h2>
+<h3 id="11-the-overarching-goal">1.1 The overarching goal</h3>
+<aside class="callout callout-note">
+<p><strong>An autonomous research loop discovers exploration procedures that reach target states faster than learned intrinsic motivation, and the discovered procedures generalize: to games they never saw, and to a class of targets they were never scored on.</strong></p>
+</aside>
+<p>Three words carry the claim. <em>Discovers</em> — the procedure is written by an LLM search, not designed by us; the loop, not the program, is the method. <em>Procedures</em> — code over a save/restore archive (<code>act</code> / <code>restore</code> / <code>archive</code> hooks), the family that includes Go-Explore [<a class="cite" href="#ref-1">1</a>] and that the field's own negative results point at (random exploration beats RND asymptotically in 3D games [<a class="cite" href="#ref-2">2</a>]; more search made MCTS <em>worse</em> at finding bugs [<a class="cite" href="#ref-3">3</a>]; coverage anti-correlates with what testers are for [<a class="cite" href="#ref-4">4</a>]). <em>Generalize</em> — the sealed held-out class is the decisive test; the precedent for searching over exploration algorithms, meta-learned curiosity [<a class="cite" href="#ref-5">5</a>], reported transfer across control tasks but had no game, no target-state benchmark, and no held-out class.</p>
+<p>Game testing stays as the application that makes target states meaningful (a planted defect's witness state is a target with a reason to exist) and supplies replay-verified real anomalies as a sanity check that the oracles mean something. It is no longer the headline.</p>
+<h3 id="12-the-benchmark-target-state-reaching-under-a-simulator-budget">1.2 The benchmark: target-state reaching under a simulator budget</h3>
+<p>A <em>task</em> is (game level, target predicate); a <em>tester</em> gets B parallel workers and T steps each; the score is steps-to-first-witness normalised to [<a class="cite" href="#ref-0">0</a>, <a class="cite" href="#ref-1">1</a>], and <em>detection</em> is the fraction of tasks witnessed within budget. This is the injected-fault protocol of Ariyurek et al. [<a class="cite" href="#ref-6">6</a>] and GBQA [<a class="cite" href="#ref-7">7</a>] (recall at an interaction budget) with three additions those benchmarks lack: a random floor, a <strong>reachability calibration</strong>, and sealed held-out splits by level <em>and by target class</em>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Suite</th>
+<th>Tasks</th>
+<th>Target predicate</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>K-Defect</strong> (Kinetix [<a class="cite" href="#ref-8">8</a>], 74 shipped levels)</td>
+<td>337 planted defects in 5 classes</td>
+<td>witness oracle per class</td>
+<td>built; splits sealed; 5-seed results for 20 testers</td>
+</tr>
+<tr>
+<td><strong>K-Goal</strong> (Kinetix, same levels)</td>
+<td>74 (+64 generated)</td>
+<td>the level's own win condition (green touches blue)</td>
+<td><em>new</em>: zero-cost — the oracle is the environment reward; gives RL reviewers the comparison they expect (Kinetix reports PPO success rates per level tier)</td>
+</tr>
+<tr>
+<td><strong>K-Defect-rot</strong> (rotated held-out class)</td>
+<td>337</td>
+<td>ANOMALY held out instead of OOB</td>
+<td>built; run-3 candidates being evaluated</td>
+</tr>
+<tr>
+<td><strong>C-Ach</strong> (Craftax [<a class="cite" href="#ref-9">9</a>])</td>
+<td>65+ achievements × seeds</td>
+<td>achievement unlocked</td>
+<td><em>stretch</em>: a second engine, symbolic rules instead of physics; a feature adapter is the risk (Test T3)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reachability is defined <strong>now</strong>, before new runs: a task is <em>reachable</em> if any tester, seed, or the oracle-guided probe witnesses it within <strong>4× the standard budget</strong> (the "long-budget union"). Detection is reported on all tasks <em>and</em> on reachable tasks, with the reachable fraction printed next to it. The current single-run numbers on K-Defect are 72% / 64% / 47% of all tasks (search / held-out levels / held-out class) and 88% / 96% / 76% of the reachable set at 1× budget; the long-budget union will lower the "reachable" numbers somewhat, which is the point — it makes 90% harder, not easier.</p>
+<h3 id="13-methods-under-comparison">1.3 Methods under comparison</h3>
+<p><em>Baselines that the exploration literature expects.</em> Uniform random; action-repeat (sticky) random; Go-Explore-style archive search (the seed); PPO with count-based novelty, RND [<a class="cite" href="#ref-10">10</a>], ICM [<a class="cite" href="#ref-11">11</a>], curiosity-proximity and task reward (already evaluated); a CCPT-style curiosity ⊕ imitation tester [<a class="cite" href="#ref-4">4</a>] (new; Kinetix's shipped solution trajectories stand in for expert demos); coverage reported as a secondary metric for all of them.</p>
+<p><em>Discovery methods on the same problem, equal proposal budget, equal GPU fitness (3 seeds, 128×1024 steps, size-l search split).</em> (i) Evolutionary program search — ShinkaEvolve [<a class="cite" href="#ref-12">12</a>] (runs 1–5, done or running); (ii) one-shot expert design — Claude Opus asked once, no fitness access (rounds 1–3, eleven programs); (iii) no-LLM search — random perturbation of the best program's constants, restart ensembles; (iv) <strong>agentic loop</strong> — a Claude Code session iterating edit → evaluate → reflect against the fitness server (the autoresearch pattern [<a class="cite" href="#ref-13">13</a>]); (v) <strong>tree search</strong> — AIDE-style [<a class="cite" href="#ref-14">14</a>] solution tree with debug/improve operators. (iv) and (v) are new; the comparison is the same one Meta's AIRA made for Kaggle tasks [<a class="cite" href="#ref-15">15</a>], on a problem with no known solution and a sealed transfer test.</p>
+<p><em>What is measured for each method:</em> best fitness vs evaluations spent; the best program's held-out numbers; what changed (structure vs constants, via diff + a rubric); cost in LLM tokens and GPU minutes.</p>
+<h3 id="14-the-90-target-pre-registered">1.4 The "&gt;90%" target, pre-registered</h3>
+<p>We will call the result a success if a <strong>single run</strong> of one discovered procedure, at the standard budget, witnesses <strong>≥ 90% of reachable tasks on the held-out splits</strong> — held-out levels <em>and</em> the held-out class — where reachable is the long-budget union of §1.2, computed once and frozen. Today the numbers are 96% and 76%, so the held-out class is the whole fight. Three legitimate levers, in the order we will pull them: search on a cleaner signal (GPU fitness on the reachable-only search split; run 5 from a structurally different seed), budget-matched restart ensembles (the 5-seed union already reaches 80% of all tasks vs 72% single-run), and better procedures for the class that no tester improves (obstacle/target-directed designs, round 3). Illegitimate levers, named so nobody reaches for them: changing the reachable set after seeing results, dropping hard instances without the pre-registered rule, counting across-seed unions as single-run numbers, or raising the budget without raising it for every baseline. If 90% on the held-out class is not reached by Thursday, the paper reports the number we have and says why.</p>
+<h2 id="chapter-2-tests-that-decide-whether-this-works-at-all">Chapter 2 — Tests that decide whether this works at all</h2>
+<p>Each test is cheap, has a pass/fail criterion written before it runs, and kills or confirms one assumption of the framing. They run in parallel on the two fitness servers and the free A40s.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Test</th>
+<th>Pass</th>
+<th>Fail → consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T1</strong></td>
+<td>Is the discovered procedure an <em>exploration</em> result, or only a defect-finding result?</td>
+<td>K-Goal: run the discovered procedure, the seed, random/sticky-random, and the four PPO objectives with the level win condition as the only target, same budget, 5 seeds</td>
+<td>discovered ≥ every baseline on goal-reaching detection on held-out levels</td>
+<td>the reframe is unsupported; keep the game-testing framing (current paper)</td>
+</tr>
+<tr>
+<td><strong>T2</strong></td>
+<td>Is 90% of the reachable held-out class <em>possible</em> at 1× budget?</td>
+<td>compute the long-budget (4×) union for the held-out class; measure the best single run against it; measure the budget-matched 4-restart ensemble</td>
+<td>best single run or budget-matched ensemble ≥ 85% of the long-budget reachable set</td>
+<td>90% is out of reach by Friday; the paper's target becomes the honest number</td>
+</tr>
+<tr>
+<td><strong>T3</strong></td>
+<td>Does the procedure family transfer <em>across engines</em>?</td>
+<td>Craftax adapter: generic feature vector (agent position, inventory hash, map hash, achievement bits), the Go-Explore seed and the discovered program run unmodified on 10 achievements, 1 GPU-hour</td>
+<td>both run; the discovered program ≥ seed on ≥ 6 of 10 achievements</td>
+<td>drop C-Ach from this submission; keep it as the stated next step</td>
+</tr>
+<tr>
+<td><strong>T4</strong></td>
+<td>Can the fitness discriminate candidates at all?</td>
+<td>test–retest: re-score 10 run-4 candidates with 3 fresh seeds; Spearman between the two scorings</td>
+<td>ρ ≥ 0.6</td>
+<td>search results are noise-dominated; the paper's method section says so and the scaffold comparison becomes a study of that</td>
+</tr>
+<tr>
+<td><strong>T5</strong></td>
+<td>Do the two new scaffolds produce valid programs on this problem?</td>
+<td>agentic-loop and tree-search plumbing: 6 evaluations each against the fitness server</td>
+<td>≥ 4 of 6 valid programs, ≥ 1 above the seed</td>
+<td>fix plumbing or drop the scaffold from the comparison (report as "attempted")</td>
+</tr>
+<tr>
+<td><strong>T6</strong></td>
+<td>Is the CCPT-style baseline implementable from shipped solutions?</td>
+<td>imitation term from Kinetix solution trajectories + RND, 1 seed, search split</td>
+<td>runs; score within 0.05 of PPO+RND or better</td>
+<td>report PPO+RND as the curiosity baseline and say the imitation term was not available</td>
+</tr>
+</tbody>
+</table></div>
+<p>T1 and T2 are the ones that matter: T1 decides whether the reframe is honest, T2 decides whether the 90% target is honest. Both are one GPU-hour each and can start tonight.</p>
+<h2 id="chapter-3-running-the-tests-and-making-the-framing-better-as-we-go">Chapter 3 — Running the tests, and making the framing better as we go</h2>
+<h3 id="31-schedule-all-times-pdt-the-humans-tasks-are-marked-h">3.1 Schedule (all times PDT; the human's tasks are marked [H])</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>When</th>
+<th>Agent</th>
+<th>Cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sat night</strong></td>
+<td>T1 + T2 scripts; agentic-loop scaffold; long-budget union job; K-Goal eval job</td>
+<td>run 5 (movertarget seed) on both servers; scans + design evals in the chains</td>
+</tr>
+<tr>
+<td><strong>Sun</strong></td>
+<td>T4, T5, T6; Craftax adapter (T3); tree-search scaffold; new §1.1–1.3 text (exploration framing, RL related work)</td>
+<td>run 6 on the reachable-only split; scaffold pilots; K-Goal 5-seed eval</td>
+</tr>
+<tr>
+<td><strong>Mon</strong></td>
+<td>read T1–T6 → go/no-go on each claim; full scaffold runs (equal budget); restart-ensemble and adaptive-portfolio results into tables</td>
+<td>scaffold runs (2 servers); round-3 designs eval</td>
+</tr>
+<tr>
+<td><strong>Tue</strong></td>
+<td>held-out evaluation of every scaffold's best program; figures (steps-to-target curves; scaffold curves; per-class); abstract rewritten on OpenReview [H: approve]</td>
+<td>evaluations</td>
+</tr>
+<tr>
+<td><strong>Wed</strong></td>
+<td>Part 1 complete draft (≤4 pp in the template); Part 2 [H] from the ledger; bug table and Craftax pilot as validation sections</td>
+<td>buffer</td>
+</tr>
+<tr>
+<td><strong>Thu</strong></td>
+<td>numbers frozen; reproducibility pass (every number regenerated from logs); Part 3 [H]</td>
+<td>buffer</td>
+</tr>
+<tr>
+<td><strong>Fri</strong></td>
+<td>final PDF by noon [H: read-through]; submit by 5 PM</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="32-ways-the-framing-gets-stronger">3.2 Ways the framing gets stronger</h3>
+<ol>
+<li><strong>Report steps-to-target curves, not just detection at one budget.</strong> Exploration papers read curves; ours already show the gap opening within 10⁴ steps.</li>
+<li><strong>Coverage as the secondary metric</strong>, computed for every tester from the same runs (cells visited in the coarse feature hash). Expect the CCPT inversion — more coverage, fewer targets — and say so: it is the reason to optimise procedures against targets rather than coverage.</li>
+<li><strong>Name the discovered mechanisms in exploration language.</strong> Three archive pools (coverage / high-energy / goal-proximity), biased restores, long single-direction holds: this is a hand-readable exploration algorithm, and the paper should print it, as Alet et al. printed their discovered curiosity programs.</li>
+<li><strong>Make the scaffold comparison a finding, not a table.</strong> The interesting sentence is "every discovery method makes its gain in the first evaluations and then moves within evaluation noise" — if T4 confirms the noise floor, that is a result about autonomous research, stated on a problem with no known solution.</li>
+<li><strong>Pool hygiene as a contribution.</strong> The reachability calibration (long-budget union; geometric unreachability found by the round-3 agent) is what the injected-fault benchmarks of the field do not do; publish the suite with it.</li>
+<li><strong>Keep the real anomalies, demoted.</strong> One paragraph: the oracles were validated on unmodified levels (momentary wall-face tunnelling at 16.5 m/s; one sustained escape on a generated level; 15 unreproduced hits dropped), with the upstream report drafted.</li>
+<li><strong>Second engine as the closing sentence, not a claim.</strong> If T3 passes, the Craftax pilot is one figure and one honest sentence; if it fails, it is the stated next step.</li>
+</ol>
+<h3 id="33-what-would-make-us-stop">3.3 What would make us stop</h3>
+<p>If T1 fails — the discovered procedure is not better than learned intrinsic motivation at plain goal-reaching — the exploration framing is not supported and the paper stays a game-testing paper (still submittable). If T2 fails and T4 shows ρ &lt; 0.6, the honest paper is about <em>why</em> autonomous search stalls on this problem, and the 90% target is dropped in writing, not quietly.</p>
+<h2 id="references">References</h2>
+<ol>
+<li id="ref-1">Ecoffet, Huizinga, Lehman et al.. <em>Go-Explore: a New Approach for Hard-Exploration Problems</em>. Nature 2021 / arXiv 2019; arXiv:1901.10995. <a href="https://arxiv.org/abs/1901.10995">https://arxiv.org/abs/1901.10995</a></li>
+<li id="ref-2">Lu, Georgescu, Verwey. <em>Go-Explore Complex 3D Game Environments for Automated Reachability Testing</em>. IEEE ToG 2022 (Microsoft Research); arXiv:2209.00570. <a href="https://arxiv.org/abs/2209.00570">https://arxiv.org/abs/2209.00570</a></li>
+<li id="ref-3">Ariyurek, Betin-Can, Surer. <em>Enhancing the Monte Carlo Tree Search Algorithm for Video Game Testing</em>. IEEE CoG 2020; arXiv:2003.07813. <a href="https://arxiv.org/abs/2003.07813">https://arxiv.org/abs/2003.07813</a></li>
+<li id="ref-4">Sestini, Gisslén, Bergdahl, Tollmar, Bagdanov (EA SEED). <em>Automated Gameplay Testing and Validation with Curiosity-Conditioned Proximal Trajectories (CCPT)</em>. arXiv:2202.10057, 2022. <a href="https://arxiv.org/abs/2202.10057">https://arxiv.org/abs/2202.10057</a></li>
+<li id="ref-5">Alet, Schneider, Lozano-Pérez, Kaelbling. <em>Meta-learning curiosity algorithms</em>. ICLR 2020; arXiv:2003.05325. <a href="https://arxiv.org/abs/2003.05325">https://arxiv.org/abs/2003.05325</a></li>
+<li id="ref-6">Ariyurek, Betin-Can, Surer. <em>Automated Video Game Testing Using Synthetic and Humanlike Agents</em>. IEEE Transactions on Games, 2021. <a href="https://doi.org/10.1109/TG.2019.2947597">https://doi.org/10.1109/TG.2019.2947597</a></li>
+<li id="ref-7">Jiang, Chen, Chen. <em>GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers</em>. ICLR 2026 workshop; arXiv:2604.02648. <a href="https://arxiv.org/abs/2604.02648">https://arxiv.org/abs/2604.02648</a></li>
+<li id="ref-8">Matthews, Beukman, Lu, Foerster. <em>Kinetix: Investigating the Training of General Agents through Open-Ended Physics-Based Control Tasks</em>. ICLR 2025 (oral); arXiv:2410.23208; code github.com/FLAIROx/Kinetix. <a href="https://arxiv.org/abs/2410.23208">https://arxiv.org/abs/2410.23208</a></li>
+<li id="ref-9">Matthews et al.. <em>Craftax: A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning</em>. ICML 2024; arXiv:2402.16801. <a href="https://arxiv.org/abs/2402.16801">https://arxiv.org/abs/2402.16801</a></li>
+<li id="ref-10">Burda, Edwards, Storkey et al.. <em>Exploration by Random Network Distillation</em>. ICLR 2019; arXiv:1810.12894. <a href="https://arxiv.org/abs/1810.12894">https://arxiv.org/abs/1810.12894</a></li>
+<li id="ref-11">Pathak, Agrawal, Efros et al.. <em>Curiosity-driven Exploration by Self-supervised Prediction</em>. ICML 2017; arXiv:1705.05363. <a href="https://arxiv.org/abs/1705.05363">https://arxiv.org/abs/1705.05363</a></li>
+<li id="ref-12">Lange, Imajuku, Cetin (Sakana AI). <em>ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution</em>. arXiv:2509.19349, 2025; code github.com/SakanaAI/ShinkaEvolve. <a href="https://arxiv.org/abs/2509.19349">https://arxiv.org/abs/2509.19349</a></li>
+<li id="ref-13">Karpathy. <em>autoresearch (agent-driven overnight training-script optimization loop)</em>. GitHub, 2026. <a href="https://github.com/karpathy/autoresearch">https://github.com/karpathy/autoresearch</a></li>
+<li id="ref-14">Jiang, Schmidt, Srikanth et al.. <em>AIDE: AI-Driven Exploration in the Space of Code</em>. arXiv:2502.13138, 2025. <a href="https://arxiv.org/abs/2502.13138">https://arxiv.org/abs/2502.13138</a></li>
+<li id="ref-15">Meta FAIR. <em>AI Research Agents for Machine Learning: Search, Exploration, and Generalization in MLE-bench (AIRA-dojo)</em>. arXiv:2507.02554, 2025. <a href="https://arxiv.org/abs/2507.02554">https://arxiv.org/abs/2507.02554</a></li>
+</ol>
+  </main>
+</div>

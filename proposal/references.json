@@ -1,0 +1,752 @@
+{
+ "automlr": {
+  "t": "Workshop for Autonomous Machine Learning Research (AutoMLR), NeurIPS 2026 — call for papers, format, dates and FAQ",
+  "a": "AutoMLR organizing committee",
+  "v": "automlr.com, accessed 27 Aug 2026",
+  "u": "https://automlr.com/"
+ },
+ "neurips-llm": {
+  "t": "NeurIPS 2026 Main Track Handbook — Author Use of Agents and Large Language Models",
+  "a": "NeurIPS 2026",
+  "v": "neurips.cc, accessed 27 Aug 2026",
+  "u": "https://neurips.cc/Conferences/2026/MainTrackHandbook"
+ },
+ "sakana-first": {
+  "t": "The AI Scientist Generates its First Peer-Reviewed Scientific Publication",
+  "a": "Sakana AI",
+  "v": "sakana.ai blog, 2025",
+  "u": "https://sakana.ai/ai-scientist-first-publication/"
+ },
+ "aisci": {
+  "t": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+  "a": "Lu, Lu, Lange, Foerster, Clune, Ha",
+  "v": "arXiv:2408.06292, 2024",
+  "u": "https://arxiv.org/abs/2408.06292"
+ },
+ "aisci2": {
+  "t": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+  "a": "Yamada, Lange, Lu, Hu, Lu, Foerster, Clune, Ha",
+  "v": "arXiv:2504.08066, 2025",
+  "u": "https://arxiv.org/abs/2504.08066"
+ },
+ "a4s": {
+  "t": "Agents4Science 2025 — Open Conference of AI Agents for Science (accepted papers)",
+  "a": "Stanford / Together AI organizers",
+  "v": "agents4science.stanford.edu, 2025",
+  "u": "https://agents4science.stanford.edu/"
+ },
+ "kosmos": {
+  "t": "Kosmos: An AI Scientist for Autonomous Discovery",
+  "a": "Mitchener et al.",
+  "v": "arXiv:2511.02824, 2025",
+  "u": "https://arxiv.org/abs/2511.02824"
+ },
+ "agentlab": {
+  "t": "Agent Laboratory: Using LLM Agents as Research Assistants",
+  "a": "Schmidgall et al.",
+  "v": "arXiv:2501.04227, 2025",
+  "u": "https://arxiv.org/abs/2501.04227"
+ },
+ "mlgym": {
+  "t": "MLGym: A New Framework and Benchmark for Advancing AI Research Agents",
+  "a": "Nathani et al. (Meta)",
+  "v": "arXiv:2502.14499, 2025",
+  "u": "https://arxiv.org/abs/2502.14499"
+ },
+ "rebench": {
+  "t": "RE-Bench: Evaluating Frontier AI R&D Capabilities of Language Model Agents Against Human Experts",
+  "a": "Wijk et al. (METR)",
+  "v": "arXiv:2411.15114, 2024",
+  "u": "https://arxiv.org/abs/2411.15114"
+ },
+ "mlebench": {
+  "t": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
+  "a": "Chan et al. (OpenAI)",
+  "v": "arXiv:2410.07095, 2024",
+  "u": "https://arxiv.org/abs/2410.07095"
+ },
+ "researchgym": {
+  "t": "ResearchGym: Evaluating Language Model Agents on Real-World AI Research",
+  "a": "Garikaparthi, Patwardhan, Cohan",
+  "v": "arXiv:2602.15112, 2026 (ICLR 2026 Agents in the Wild workshop)",
+  "u": "https://arxiv.org/abs/2602.15112"
+ },
+ "agent2": {
+  "t": "Agent^2: An Agent-Generates-Agent Framework for Reinforcement Learning Automation",
+  "a": "Wei, Shan, Miao et al.",
+  "v": "arXiv:2509.13368, 2025",
+  "u": "https://arxiv.org/abs/2509.13368"
+ },
+ "agent2bench": {
+  "t": "Agent^2 RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?",
+  "a": "Chen, Yang, Yang et al.",
+  "v": "arXiv:2604.10547, 2026",
+  "u": "https://arxiv.org/abs/2604.10547"
+ },
+ "limen": {
+  "t": "LIMEN: Discovering Reinforcement Learning Interfaces with Large Language Models",
+  "a": "Jaswal, Baghel, Chopra",
+  "v": "arXiv:2605.03408, 2026",
+  "u": "https://arxiv.org/abs/2605.03408"
+ },
+ "autoresearch": {
+  "t": "autoresearch (agent-driven overnight training-script optimization loop)",
+  "a": "Karpathy",
+  "v": "GitHub, 2026",
+  "u": "https://github.com/karpathy/autoresearch"
+ },
+ "aide": {
+  "t": "AIDE: AI-Driven Exploration in the Space of Code (aideml)",
+  "a": "Weco AI",
+  "v": "GitHub",
+  "u": "https://github.com/WecoAI/aideml"
+ },
+ "aira": {
+  "t": "AI Research Agents for Machine Learning: Search, Exploration, and Generalization in MLE-bench (AIRA-dojo)",
+  "a": "Meta FAIR",
+  "v": "arXiv:2507.02554, 2025",
+  "u": "https://arxiv.org/abs/2507.02554"
+ },
+ "shinka": {
+  "t": "ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution",
+  "a": "Lange, Imajuku, Cetin (Sakana AI)",
+  "v": "arXiv:2509.19349, 2025; code github.com/SakanaAI/ShinkaEvolve",
+  "u": "https://arxiv.org/abs/2509.19349"
+ },
+ "openevolve": {
+  "t": "OpenEvolve: open-source implementation of AlphaEvolve-style evolutionary coding",
+  "a": "codelion et al.",
+  "v": "GitHub",
+  "u": "https://github.com/codelion/openevolve"
+ },
+ "eureka": {
+  "t": "Eureka: Human-Level Reward Design via Coding Large Language Models",
+  "a": "Ma et al. (NVIDIA)",
+  "v": "arXiv:2310.12931, ICLR 2024",
+  "u": "https://arxiv.org/abs/2310.12931"
+ },
+ "alet": {
+  "t": "Meta-learning curiosity algorithms",
+  "a": "Alet, Schneider, Lozano-Pérez, Kaelbling",
+  "v": "ICLR 2020; arXiv:2003.05325",
+  "u": "https://arxiv.org/abs/2003.05325"
+ },
+ "discopop": {
+  "t": "Discovering Preference Optimization Algorithms with and for Large Language Models (DiscoPOP)",
+  "a": "Lu et al. (Sakana AI)",
+  "v": "NeurIPS 2024; arXiv:2406.08414",
+  "u": "https://arxiv.org/abs/2406.08414"
+ },
+ "alphaevolve": {
+  "t": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+  "a": "Novikov et al. (Google DeepMind)",
+  "v": "arXiv:2506.13131, 2025",
+  "u": "https://arxiv.org/abs/2506.13131"
+ },
+ "revolve": {
+  "t": "Evolutionary Discovery of Reinforcement Learning Algorithms via Large Language Models",
+  "a": "Sygkounas, Loutfi, Persson",
+  "v": "arXiv:2603.28416, 2026",
+  "u": "https://arxiv.org/abs/2603.28416"
+ },
+ "dm-multiagent": {
+  "t": "Discovering Multiagent Learning Algorithms with Large Language Models",
+  "a": "Li, Schultz, Hennes, Lanctot (Google DeepMind)",
+  "v": "arXiv:2602.16928, 2026",
+  "u": "https://arxiv.org/abs/2602.16928"
+ },
+ "omniepic": {
+  "t": "OMNI-EPIC: Open-endedness via Models of human Notions of Interestingness with Environments Programmed in Code",
+  "a": "Faldor, Zhang, Cully, Clune",
+  "v": "arXiv:2405.15568, 2024",
+  "u": "https://arxiv.org/abs/2405.15568"
+ },
+ "eurekaverse": {
+  "t": "Eurekaverse: Environment Curriculum Generation via Large Language Models",
+  "a": "Liang et al.",
+  "v": "arXiv:2411.01775, 2024",
+  "u": "https://arxiv.org/abs/2411.01775"
+ },
+ "envgen": {
+  "t": "EnvGen: Generating and Adapting Environments via LLMs for Training Embodied Agents",
+  "a": "Zala et al.",
+  "v": "arXiv:2403.12014, 2024",
+  "u": "https://arxiv.org/abs/2403.12014"
+ },
+ "bergdahl": {
+  "t": "Augmenting Automated Game Testing with Deep Reinforcement Learning",
+  "a": "Bergdahl, Gordillo, Tollmar, Gisslén (EA SEED)",
+  "v": "IEEE CoG 2020; arXiv:2103.15819",
+  "u": "https://arxiv.org/abs/2103.15819"
+ },
+ "gordillo": {
+  "t": "Improving Playtesting Coverage via Curiosity Driven Reinforcement Learning Agents",
+  "a": "Gordillo, Bergdahl, Tollmar, Gisslén (EA SEED)",
+  "v": "IEEE CoG 2021; arXiv:2103.13798",
+  "u": "https://arxiv.org/abs/2103.13798"
+ },
+ "ccpt": {
+  "t": "Automated Gameplay Testing and Validation with Curiosity-Conditioned Proximal Trajectories (CCPT)",
+  "a": "Sestini, Gisslén, Bergdahl, Tollmar, Bagdanov (EA SEED)",
+  "v": "arXiv:2202.10057, 2022",
+  "u": "https://arxiv.org/abs/2202.10057"
+ },
+ "raid": {
+  "t": "Reward-Adaptive Iterative Discovery: A Case Study on Automated Game Testing for NHL 26",
+  "a": "Fuchs, Gosselin-Grant, Skuin et al. (EA)",
+  "v": "arXiv:2607.07498, 2026",
+  "u": "https://arxiv.org/abs/2607.07498"
+ },
+ "taesiri22": {
+  "t": "Large Language Models are Pretty Good Zero-Shot Video Game Bug Detectors",
+  "a": "Taesiri, Macklon, Wang, Shen, Bezemer",
+  "v": "arXiv:2210.02506, 2022",
+  "u": "https://arxiv.org/abs/2210.02506"
+ },
+ "glitchbench": {
+  "t": "GlitchBench: Can large multimodal models detect video game glitches?",
+  "a": "Taesiri, Feng, Nguyen, Bezemer",
+  "v": "CVPR 2024; arXiv:2312.05291",
+  "u": "https://arxiv.org/abs/2312.05291"
+ },
+ "wob": {
+  "t": "World of Bugs: A Platform for Automated Bug Detection in 3D Video Games",
+  "a": "Wilkins, Stathis",
+  "v": "IEEE CoG 2022; arXiv:2206.11037",
+  "u": "https://arxiv.org/abs/2206.11037"
+ },
+ "gbqa": {
+  "t": "GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers",
+  "a": "Jiang, Chen, Chen",
+  "v": "ICLR 2026 workshop; arXiv:2604.02648",
+  "u": "https://arxiv.org/abs/2604.02648"
+ },
+ "neatest": {
+  "t": "Enhancing NeuroEvolution-Based Game Testing: A Branch Coverage Approach for Scratch Programs",
+  "a": "Sohail, Jilani, Butt",
+  "v": "arXiv:2507.09414, 2025",
+  "u": "https://arxiv.org/abs/2507.09414"
+ },
+ "smart": {
+  "t": "Synergizing Code Coverage and Gameplay Intent: Coverage-Aware Game Playtesting with LLM-Guided Reinforcement Learning",
+  "a": "Mu, Yoda, Zhang et al.",
+  "v": "arXiv:2512.12706, 2025",
+  "u": "https://arxiv.org/abs/2512.12706"
+ },
+ "curefuzz": {
+  "t": "CureFuzz: Curiosity-Driven Testing for Sequential Decision-Making Processes",
+  "a": "He, Yang, Shi et al.",
+  "v": "ICSE 2024; arXiv:2509.02025",
+  "u": "https://arxiv.org/abs/2509.02025"
+ },
+ "modl": {
+  "t": "modl.ai — AI game testing (product pages)",
+  "a": "modl.ai",
+  "v": "accessed Aug 2026",
+  "u": "https://modl.ai/"
+ },
+ "politowski": {
+  "t": "A Survey of Video Game Testing",
+  "a": "Politowski, Petrillo, Guéhéneuc",
+  "v": "arXiv:2103.06431, 2021",
+  "u": "https://arxiv.org/abs/2103.06431"
+ },
+ "cradle": {
+  "t": "Cradle: Empowering Foundation Agents Towards General Computer Control",
+  "a": "Tan et al.",
+  "v": "arXiv:2403.03186, 2024",
+  "u": "https://arxiv.org/abs/2403.03186"
+ },
+ "balrog": {
+  "t": "BALROG: Benchmarking Agentic LLM and VLM Reasoning On Games",
+  "a": "Paglieri et al.",
+  "v": "ICLR 2025; arXiv:2411.13543",
+  "u": "https://arxiv.org/abs/2411.13543"
+ },
+ "vgbench": {
+  "t": "VideoGameBench: Can Vision-Language Models complete popular video games?",
+  "a": "Zhang et al.",
+  "v": "arXiv:2505.18134, 2025",
+  "u": "https://arxiv.org/abs/2505.18134"
+ },
+ "lmgame": {
+  "t": "lmgame-Bench: How Good are LLMs at Playing Games?",
+  "a": "Hu et al.",
+  "v": "arXiv:2505.15146, 2025",
+  "u": "https://arxiv.org/abs/2505.15146"
+ },
+ "orak": {
+  "t": "Orak: A Foundational Benchmark for Training and Evaluating LLM Agents on Diverse Video Games",
+  "a": "Park et al.",
+  "v": "arXiv:2506.03610, 2025",
+  "u": "https://arxiv.org/abs/2506.03610"
+ },
+ "portal": {
+  "t": "PORTAL: Agents Play Thousands of 3D Video Games",
+  "a": "Xu, Wang, Li et al. (Tencent)",
+  "v": "arXiv:2503.13356, 2025",
+  "u": "https://arxiv.org/abs/2503.13356"
+ },
+ "gvgai-llm": {
+  "t": "GVGAI-LLM: Evaluating Large Language Model Agents with Infinite Games",
+  "a": "Li, Lin, Nasir et al.",
+  "v": "arXiv:2508.08501, 2025",
+  "u": "https://arxiv.org/abs/2508.08501"
+ },
+ "puzzlejax": {
+  "t": "PuzzleJAX: A Benchmark for Reasoning and Learning",
+  "a": "Earle, Todd, Li, Jiang, Khalifa, Nasir, Banburski-Fahey, Togelius",
+  "v": "arXiv:2508.16821, 2025; code github.com/smearle/script-doctor",
+  "u": "https://arxiv.org/abs/2508.16821"
+ },
+ "kinetix": {
+  "t": "Kinetix: Investigating the Training of General Agents through Open-Ended Physics-Based Control Tasks",
+  "a": "Matthews, Beukman, Lu, Foerster",
+  "v": "ICLR 2025 (oral); arXiv:2410.23208; code github.com/FLAIROx/Kinetix",
+  "u": "https://arxiv.org/abs/2410.23208"
+ },
+ "xland": {
+  "t": "XLand-MiniGrid: Scalable Meta-Reinforcement Learning Environments in JAX",
+  "a": "Nikulin et al.",
+  "v": "arXiv:2312.12044; code github.com/corl-team/xland-minigrid",
+  "u": "https://arxiv.org/abs/2312.12044"
+ },
+ "craftax": {
+  "t": "Craftax: A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning",
+  "a": "Matthews et al.",
+  "v": "ICML 2024; arXiv:2402.16801",
+  "u": "https://arxiv.org/abs/2402.16801"
+ },
+ "pufferlib": {
+  "t": "PufferLib / Puffer Ocean environments",
+  "a": "PufferAI",
+  "v": "GitHub, accessed Aug 2026",
+  "u": "https://github.com/PufferAI/PufferLib"
+ },
+ "navix": {
+  "t": "NAVIX: Scaling MiniGrid Environments with JAX",
+  "a": "Pignatelli et al.",
+  "v": "arXiv:2407.19396, 2024",
+  "u": "https://arxiv.org/abs/2407.19396"
+ },
+ "jumanji": {
+  "t": "Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX",
+  "a": "Bonnet et al. (InstaDeep)",
+  "v": "ICLR 2024; arXiv:2306.09884",
+  "u": "https://arxiv.org/abs/2306.09884"
+ },
+ "gvgai": {
+  "t": "General Video Game AI: a Multi-Track Framework for Evaluating Agents, Games and Content Generation Algorithms",
+  "a": "Pérez-Liébana et al.",
+  "v": "arXiv:1802.10363, 2018",
+  "u": "https://arxiv.org/abs/1802.10363"
+ },
+ "gavel": {
+  "t": "GAVEL: Generating Games Via Evolution and Language Models",
+  "a": "Todd, Padula, Stephenson, Piette, Soemers, Togelius",
+  "v": "NeurIPS 2024; arXiv:2407.09388",
+  "u": "https://arxiv.org/abs/2407.09388"
+ },
+ "word2world": {
+  "t": "Word2World: Generating Stories and Worlds through Large Language Models",
+  "a": "Nasir, James, Togelius",
+  "v": "arXiv:2405.06686, 2024",
+  "u": "https://arxiv.org/abs/2405.06686"
+ },
+ "ggbench": {
+  "t": "Measuring General Intelligence with Generated Games (gg-bench)",
+  "a": "Verma, Huang, Chen, Klein, Tomlin",
+  "v": "arXiv:2505.07215, 2025",
+  "u": "https://arxiv.org/abs/2505.07215"
+ },
+ "scriptdoctor": {
+  "t": "ScriptDoctor: Automatic Generation of PuzzleScript Games via Large Language Models and Tree Search",
+  "a": "Earle et al.",
+  "v": "arXiv:2506.06524, 2025",
+  "u": "https://arxiv.org/abs/2506.06524"
+ },
+ "serapio": {
+  "t": "Distilling Game Code World Model Generation into Lightweight Large Language Models",
+  "a": "Serapio, Prakash, Xu, Wang, Greenwald",
+  "v": "arXiv:2605.24375, 2026",
+  "u": "https://arxiv.org/abs/2605.24375"
+ },
+ "roohi20": {
+  "t": "Predicting Game Difficulty and Churn Without Players",
+  "a": "Roohi, Relas, Takatalo, Heiskanen, Hämäläinen",
+  "v": "CHI PLAY 2020; arXiv:2008.12937",
+  "u": "https://arxiv.org/abs/2008.12937"
+ },
+ "roohi21": {
+  "t": "Predicting Game Engagement and Difficulty Using AI Players",
+  "a": "Roohi, Guckelsberger, Relas, Heiskanen, Takatalo, Hämäläinen",
+  "v": "CHI PLAY 2021; arXiv:2107.12061",
+  "u": "https://arxiv.org/abs/2107.12061"
+ },
+ "alphazero-chess": {
+  "t": "Assessing Game Balance with AlphaZero: Exploring Alternative Rule Sets in Chess",
+  "a": "Tomašev, Paquet, Hassabis, Kramnik (DeepMind)",
+  "v": "arXiv:2009.04374, 2020",
+  "u": "https://arxiv.org/abs/2009.04374"
+ },
+ "tetris-diff": {
+  "t": "Evaluating Game Difficulty in Tetris Block Puzzle",
+  "a": "Wang, Guo, Guei et al.",
+  "v": "arXiv:2603.18994, 2026",
+  "u": "https://arxiv.org/abs/2603.18994"
+ },
+ "synth-mon": {
+  "t": "Synthetic Monitoring Environments for Reinforcement Learning",
+  "a": "Pleiss, Schmidt, Schiffer",
+  "v": "arXiv:2603.06252, 2026",
+  "u": "https://arxiv.org/abs/2603.06252"
+ },
+ "noregrets": {
+  "t": "No Regrets: Investigating and Improving Regret Approximations for Curriculum Discovery (learnability / SFL)",
+  "a": "Rutherford et al.",
+  "v": "NeurIPS 2024; arXiv:2408.15099",
+  "u": "https://arxiv.org/abs/2408.15099"
+ },
+ "pic": {
+  "t": "Policy Information Capacity: Information-Theoretic Measure for Task Complexity in Deep Reinforcement Learning",
+  "a": "Furuta et al.",
+  "v": "ICML 2021; arXiv:2103.12726",
+  "u": "https://arxiv.org/abs/2103.12726"
+ },
+ "rulesmith": {
+  "t": "RuleSmith: Multi-Agent LLMs for Automated Game Balancing",
+  "a": "Zeng, Liu, Liu et al.",
+  "v": "arXiv:2602.06232, 2026",
+  "u": "https://arxiv.org/abs/2602.06232"
+ },
+ "xiao-yang": {
+  "t": "LLMs May Not Be Human-Level Players, But They Can Be Testers: Measuring Game Difficulty with LLM Agents",
+  "a": "Xiao, Yang",
+  "v": "Proc. ACM HCI (CHI PLAY) 2025",
+  "u": "https://doi.org/10.1145/3748634"
+ },
+ "codescientist": {
+  "t": "CodeScientist: End-to-End Semi-Automated Scientific Discovery with Code-based Experimentation",
+  "a": "Jansen et al. (AI2)",
+  "v": "arXiv:2503.22708, 2025",
+  "u": "https://arxiv.org/abs/2503.22708"
+ },
+ "autorl": {
+  "t": "Automated Reinforcement Learning (AutoRL): A Survey and Open Problems",
+  "a": "Parker-Holder et al.",
+  "v": "JAIR 2022; arXiv:2201.03916",
+  "u": "https://arxiv.org/abs/2201.03916"
+ },
+ "adas": {
+  "t": "Automated Design of Agentic Systems",
+  "a": "Hu, Lu, Clune",
+  "v": "arXiv:2408.08435, 2024",
+  "u": "https://arxiv.org/abs/2408.08435"
+ },
+ "godot-rl": {
+  "t": "Godot RL Agents",
+  "a": "Beeching et al.",
+  "v": "GitHub, accessed Aug 2026",
+  "u": "https://github.com/edbeeching/godot_rl_agents"
+ },
+ "mlagents": {
+  "t": "Unity ML-Agents Toolkit",
+  "a": "Unity Technologies",
+  "v": "GitHub, accessed Aug 2026 (PyPI release 1.1.0, Oct 2024)",
+  "u": "https://github.com/Unity-Technologies/ml-agents"
+ },
+ "griddly": {
+  "t": "Griddly: a platform for AI research in games (YAML game description language)",
+  "a": "Bamford",
+  "v": "GitHub",
+  "u": "https://github.com/Bam4d/Griddly"
+ },
+ "hooks": {
+  "t": "Claude Code hooks reference (PreToolUse / PostToolUse / SessionStart / Stop events)",
+  "a": "Anthropic",
+  "v": "docs, accessed Aug 2026",
+  "u": "https://code.claude.com/docs/en/hooks"
+ },
+ "claude-science": {
+  "t": "Claude Science (beta) — background reviewer and artifact provenance",
+  "a": "Anthropic",
+  "v": "claude.com product page, accessed Aug 2026",
+  "u": "https://claude.com/product/claude-science"
+ },
+ "beyond-exec": {
+  "t": "Beyond Execution: Auditing Experimental Fidelity in LLM-Driven Scientific Research",
+  "a": "Yu, Xu, Zhou, He",
+  "v": "arXiv:2608.26753, 2026",
+  "u": "https://arxiv.org/abs/2608.26753"
+ },
+ "hp-envs": {
+  "t": "Automatic Generation of High-Performance RL Environments (LLM loop producing GPU environments)",
+  "a": "Karten, Appapogu, Jin",
+  "v": "arXiv:2603.12145, 2026",
+  "u": "https://arxiv.org/abs/2603.12145"
+ },
+ "sima2": {
+  "t": "SIMA 2: A Generalist Embodied Agent for Virtual Worlds",
+  "a": "SIMA team (Google DeepMind)",
+  "v": "arXiv:2512.04797, Dec 2025",
+  "u": "https://arxiv.org/abs/2512.04797"
+ },
+ "wuji": {
+  "t": "Wuji: Automatic Online Combat Game Testing Using Evolutionary Deep Reinforcement Learning",
+  "a": "Zheng, Xie, Su et al. (NetEase Fuxi)",
+  "v": "ASE 2019",
+  "u": "https://doi.org/10.1109/ASE.2019.00077"
+ },
+ "inspector": {
+  "t": "Inspector: Pixel-Based Automated Game Testing via Exploration, Detection, and Investigation",
+  "a": "Liu et al. (Microsoft)",
+  "v": "IEEE CoG 2022; arXiv:2207.08379",
+  "u": "https://arxiv.org/abs/2207.08379"
+ },
+ "kristensen": {
+  "t": "Estimating Player Completion Rate in Mobile Puzzle Games Using Reinforcement Learning",
+  "a": "Kristensen, Valdivia, Burelli (King)",
+  "v": "IEEE CoG 2020; arXiv:2306.14626",
+  "u": "https://arxiv.org/abs/2306.14626"
+ },
+ "lewis": {
+  "t": "What Went Wrong: A Taxonomy of Video Game Bugs",
+  "a": "Lewis, Whitehead, Wardrip-Fruin",
+  "v": "FDG 2010",
+  "u": "https://dl.acm.org/doi/10.1145/1822348.1822363"
+ },
+ "discorl": {
+  "t": "Discovering state-of-the-art reinforcement learning algorithms (DiscoRL)",
+  "a": "Oh et al. (Google DeepMind)",
+  "v": "Nature, 2025",
+  "u": "https://www.nature.com/articles/s41586-025-09761-x"
+ },
+ "gamexpert": {
+  "t": "GameXpert-Bench: How Far Are Coding Agents from Expert Game Development?",
+  "a": "Chen, Hong, Gao, Lin et al.",
+  "v": "arXiv:2608.21833, 2026",
+  "u": "https://arxiv.org/abs/2608.21833"
+ },
+ "badscientist": {
+  "t": "BadScientist: Can a Research Agent Write Convincing but Unsound Papers that Fool LLM Reviewers?",
+  "a": "Jiang, Feng, Li, Niu et al.",
+  "v": "arXiv:2510.18003, 2025; accepted at Agents4Science 2025",
+  "u": "https://arxiv.org/abs/2510.18003"
+ },
+ "mlrbench": {
+  "t": "MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research",
+  "a": "Chen, Xiong, Lu et al.",
+  "v": "arXiv:2505.19955, 2025 (49 pages, 9 figures. Accepted by NeurIPS 2025 D&B Track)",
+  "u": "https://arxiv.org/abs/2505.19955"
+ },
+ "expbench": {
+  "t": "EXP-Bench: Can AI Conduct AI Research Experiments?",
+  "a": "Kon, Liu, Zhu et al.",
+  "v": "arXiv:2505.24785, 2025 (45 pages, 13 figures)",
+  "u": "https://arxiv.org/abs/2505.24785"
+ },
+ "pharos": {
+  "t": "On the Limits of Tabular Hardness Metrics for Deep RL: A Study with the Pharos Benchmark",
+  "a": "Conserva, Sasso, Rauber",
+  "v": "arXiv:2509.17092, 2025",
+  "u": "https://arxiv.org/abs/2509.17092"
+ },
+ "titan": {
+  "t": "Leveraging LLM Agents for Automated Video Game Testing",
+  "a": "Wang, Tang, Yuan et al.",
+  "v": "arXiv:2509.22170, 2025 (17 pages)",
+  "u": "https://arxiv.org/abs/2509.22170"
+ },
+ "ca2": {
+  "t": "CA2: Code-Aware Agent for Automated Game Testing",
+  "a": "Adaikkappan, Martineau, Romoff et al.",
+  "v": "arXiv:2605.13918, 2026",
+  "u": "https://arxiv.org/abs/2605.13918"
+ },
+ "nodrift": {
+  "t": "An AI Scientist that Doesn't Drift: Taste, Structure, and Falsifiable Findings in a Quadruped Navigation Research Loop",
+  "a": "Zhang, Zeng, Lee et al.",
+  "v": "arXiv:2608.07542, 2026",
+  "u": "https://arxiv.org/abs/2608.07542"
+ },
+ "acd": {
+  "t": "Automated Capability Discovery via Foundation Model Self-Exploration",
+  "a": "Lu, Hu, Clune",
+  "v": "arXiv:2502.07577, 2025",
+  "u": "https://arxiv.org/abs/2502.07577"
+ },
+ "narrow": {
+  "t": "AI Research Agents Narrow Scientific Exploration",
+  "a": "Tang, Yang",
+  "v": "arXiv:2605.27905, 2026",
+  "u": "https://arxiv.org/abs/2605.27905"
+ },
+ "wrongmech": {
+  "t": "Position: Correct Answer, Wrong Mechanism -- When AI Scientists Defend General Claims Their Own Data Contradicts",
+  "a": "Eulig",
+  "v": "arXiv:2606.23175, 2026 (8 pages body plus 12 pages references and appendix, non-archival uploa)",
+  "u": "https://arxiv.org/abs/2606.23175"
+ },
+ "vgdl-llm": {
+  "t": "Game Generation via Large Language Models",
+  "a": "Hu, Zhao, Liu",
+  "v": "arXiv:2404.08706, 2024 (2024 IEEE Conference on Games)",
+  "u": "https://arxiv.org/abs/2404.08706"
+ },
+ "ludii": {
+  "t": "Ludii -- The Ludemic General Game System",
+  "a": "Piette, Soemers, Stephenson et al.",
+  "v": "arXiv:1905.05013, 2019 (Accepted at ECAI 2020)",
+  "u": "https://arxiv.org/abs/1905.05013"
+ },
+ "llm-games-survey": {
+  "t": "Large Language Models and Games: A Survey and Roadmap",
+  "a": "Gallotta, Todd, Zammit et al.",
+  "v": "arXiv:2402.18659, 2024 (Accepted for publication at the IEEE Transactions on Games (19 pages, )",
+  "u": "https://arxiv.org/abs/2402.18659"
+ },
+ "autoverse": {
+  "t": "Autoverse: An Evolvable Game Language for Learning Robust Embodied Agents",
+  "a": "Earle, Togelius",
+  "v": "arXiv:2407.04221, 2024 (9 pages, 4 figures)",
+  "u": "https://arxiv.org/abs/2407.04221"
+ },
+ "ludax": {
+  "t": "Ludax: A GPU-Accelerated Domain Specific Language for Board Games",
+  "a": "Todd, Padula, Soemers et al.",
+  "v": "arXiv:2506.22609, 2025 (25 pages, 6 figures)",
+  "u": "https://arxiv.org/abs/2506.22609"
+ },
+ "paperbench": {
+  "t": "PaperBench: Evaluating AI's Ability to Replicate AI Research",
+  "a": "Starace, Jaffe, Sherburn et al.",
+  "v": "arXiv:2504.01848, 2025 (30 pages, 14 figures)",
+  "u": "https://arxiv.org/abs/2504.01848"
+ },
+ "aide-paper": {
+  "t": "AIDE: AI-Driven Exploration in the Space of Code",
+  "a": "Jiang, Schmidt, Srikanth et al.",
+  "v": "arXiv:2502.13138, 2025",
+  "u": "https://arxiv.org/abs/2502.13138"
+ },
+ "bugcraft": {
+  "t": "Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft",
+  "a": "Yapağcı, Öztürk, Tüzün",
+  "v": "arXiv:2503.20036, 2025 (Accepted into ASE'25 (Automated Software Engineering). https://conf.re)",
+  "u": "https://arxiv.org/abs/2503.20036"
+ },
+ "meeplelm": {
+  "t": "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
+  "a": "Li, Li, Wang et al.",
+  "v": "arXiv:2601.07251, 2026 (ACL 2026 MainConference)",
+  "u": "https://arxiv.org/abs/2601.07251"
+ },
+ "prefmodels": {
+  "t": "AI Research Preference Models",
+  "a": "Foster, Omari, Fu et al.",
+  "v": "arXiv:2608.13940, 2026 (34 pages, 17 figures, 6 tables)",
+  "u": "https://arxiv.org/abs/2608.13940"
+ },
+ "pcgrllm": {
+  "t": "PCGRLLM: Large Language Model-Driven Reward Design for Procedural Content Generation Reinforcement Learning",
+  "a": "Baek, Kim, Earle et al.",
+  "v": "arXiv:2502.10906, 2025 (14 pages, 8 figures, Acccepted to Transactions on Games)",
+  "u": "https://arxiv.org/abs/2502.10906"
+ },
+ "gudmundsson": {
+  "t": "Human-Like Playtesting with Deep Learning",
+  "a": "Gudmundsson, Eisen, Poromaa et al. (King)",
+  "v": "IEEE CIG 2018",
+  "u": "https://doi.org/10.1109/CIG.2018.8490442"
+ },
+ "ariyurek": {
+  "t": "Automated Video Game Testing Using Synthetic and Humanlike Agents",
+  "a": "Ariyurek, Betin-Can, Surer",
+  "v": "IEEE Transactions on Games, 2021",
+  "u": "https://doi.org/10.1109/TG.2019.2947597"
+ },
+ "glib": {
+  "t": "GLIB: Towards Automated Test Oracle for Graphically-Rich Applications",
+  "a": "Chen, Li, Chen et al. (NetEase)",
+  "v": "ESEC/FSE 2021",
+  "u": "https://doi.org/10.1145/3468264.3468586"
+ },
+ "genie3": {
+  "t": "Genie 3: A New Frontier for World Models",
+  "a": "Google DeepMind",
+  "v": "blog, Aug 2025",
+  "u": "https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/"
+ },
+ "traced": {
+  "t": "TRACED: Transition-aware Regret Approximation with Co-learnability for Environment Design",
+  "a": "Cho, Im, Lee et al.",
+  "v": "ICLR 2026",
+  "u": "https://openreview.net/forum?id=J0OdFoOhSN"
+ },
+ "autoenv": {
+  "t": "AutoEnv: Automated Environments for Measuring Cross-Environment Agent Learning",
+  "a": "Zhang, Peng, Kong et al.",
+  "v": "arXiv:2511.19304, 2025",
+  "u": "https://arxiv.org/abs/2511.19304"
+ },
+ "envharness": {
+  "t": "EnvHarness: Awakening Static Worlds for Agent Learning",
+  "a": "Huang, Wang, Han et al.",
+  "v": "arXiv:2608.19880, 2026",
+  "u": "https://arxiv.org/abs/2608.19880"
+ },
+ "gift": {
+  "t": "GIFT: LLM-Guided State-Reward Interface for Financial Reinforcement Learning",
+  "a": "Wu, Zhang, Liu et al.",
+  "v": "arXiv:2606.08450, 2026 (25 pages, 7 figures. Code and data are available at https://)",
+  "u": "https://arxiv.org/abs/2606.08450"
+ },
+ "ros-evo": {
+  "t": "Boosting Universal LLM Reward Design through Heuristic Reward Observation Space Evolution",
+  "a": "Heng, Zhao, Wu et al.",
+  "v": "arXiv:2504.07596, 2025 (7 pages, 5 figures)",
+  "u": "https://arxiv.org/abs/2504.07596"
+ },
+ "env-engineer": {
+  "t": "From Trainee to Trainer: LLM-Designed Training Environment for RL with Multi-Agent Reasoning",
+  "a": "Chen, Li, Li et al.",
+  "v": "arXiv:2606.17682, 2026",
+  "u": "https://arxiv.org/abs/2606.17682"
+ },
+ "discogen": {
+  "t": "DiscoGen: Procedural Generation of Algorithm Discovery Tasks in Machine Learning",
+  "a": "Goldie, Wang, Hayler et al.",
+  "v": "arXiv:2603.17863, 2026 (Accepted to ICML 2026)",
+  "u": "https://arxiv.org/abs/2603.17863"
+ },
+ "camyla": {
+  "t": "Camyla: Scaling Autonomous Research in Medical Image Segmentation",
+  "a": "Gao, Li, Yuan et al.",
+  "v": "arXiv:2604.10696, 2026 (Project page: https://yifangao112.github.io/camyla-page/)",
+  "u": "https://arxiv.org/abs/2604.10696"
+ },
+ "llm-also": {
+  "t": "LLM-ALSO: LLM-Driven Adaptive Learning-Signal Optimization for Multi-Agent Reinforcement Learning",
+  "a": "Wu, Zheng, Xiong",
+  "v": "arXiv:2605.29293, 2026 (14 pages, 6 figures, 6 tables)",
+  "u": "https://arxiv.org/abs/2605.29293"
+ },
+ "diag-refine": {
+  "t": "When LLM Reward Design Fails: Diagnostic-Driven Refinement for Sparse Structured RL",
+  "a": "Wang, Tang, Liu et al.",
+  "v": "arXiv:2605.28918, 2026",
+  "u": "https://arxiv.org/abs/2605.28918"
+ },
+ "arlbench": {
+  "t": "ARLBench: Flexible and Efficient Benchmarking for Hyperparameter Optimization in Reinforcement Learning",
+  "a": "Becktepe, Dierkes, Benjamins et al.",
+  "v": "arXiv:2409.18827, 2024",
+  "u": "https://arxiv.org/abs/2409.18827"
+ },
+ "agentodyssey": {
+  "t": "AgentOdyssey: Open-Ended Long-Horizon Text Game Generation for Test-Time Continual Learning Agents",
+  "a": "Zhang, Wen, Zhang et al.",
+  "v": "arXiv:2606.24893, 2026 (Project page: https://agentodyssey.github.io/)",
+  "u": "https://arxiv.org/abs/2606.24893"
+ }
+}

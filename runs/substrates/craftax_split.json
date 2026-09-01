@@ -1,0 +1,491 @@
+{
+ "n_worlds": 8,
+ "base_seed": 0,
+ "search": [
+  {
+   "name": "world0__COLLECT_WOOD",
+   "world": 0,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world0__PLACE_TABLE",
+   "world": 0,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world0__MAKE_WOOD_PICKAXE",
+   "world": 0,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world0__COLLECT_STONE",
+   "world": 0,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world0__EAT_PLANT",
+   "world": 0,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world0__MAKE_IRON_PICKAXE",
+   "world": 0,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world0__ENTER_DUNGEON",
+   "world": 0,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world0__DEFEAT_NECROMANCER",
+   "world": 0,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  },
+  {
+   "name": "world1__COLLECT_WOOD",
+   "world": 1,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world1__PLACE_TABLE",
+   "world": 1,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world1__MAKE_WOOD_PICKAXE",
+   "world": 1,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world1__COLLECT_STONE",
+   "world": 1,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world1__EAT_PLANT",
+   "world": 1,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world1__MAKE_IRON_PICKAXE",
+   "world": 1,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world1__ENTER_DUNGEON",
+   "world": 1,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world1__DEFEAT_NECROMANCER",
+   "world": 1,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  },
+  {
+   "name": "world2__COLLECT_WOOD",
+   "world": 2,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world2__PLACE_TABLE",
+   "world": 2,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world2__MAKE_WOOD_PICKAXE",
+   "world": 2,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world2__COLLECT_STONE",
+   "world": 2,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world2__EAT_PLANT",
+   "world": 2,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world2__MAKE_IRON_PICKAXE",
+   "world": 2,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world2__ENTER_DUNGEON",
+   "world": 2,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world2__DEFEAT_NECROMANCER",
+   "world": 2,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  },
+  {
+   "name": "world3__COLLECT_WOOD",
+   "world": 3,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world3__PLACE_TABLE",
+   "world": 3,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world3__MAKE_WOOD_PICKAXE",
+   "world": 3,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world3__COLLECT_STONE",
+   "world": 3,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world3__EAT_PLANT",
+   "world": 3,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world3__MAKE_IRON_PICKAXE",
+   "world": 3,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world3__ENTER_DUNGEON",
+   "world": 3,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world3__DEFEAT_NECROMANCER",
+   "world": 3,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  },
+  {
+   "name": "world4__COLLECT_WOOD",
+   "world": 4,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world4__PLACE_TABLE",
+   "world": 4,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world4__MAKE_WOOD_PICKAXE",
+   "world": 4,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world4__COLLECT_STONE",
+   "world": 4,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world4__EAT_PLANT",
+   "world": 4,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world4__MAKE_IRON_PICKAXE",
+   "world": 4,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world4__ENTER_DUNGEON",
+   "world": 4,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world4__DEFEAT_NECROMANCER",
+   "world": 4,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  },
+  {
+   "name": "world5__COLLECT_WOOD",
+   "world": 5,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world5__PLACE_TABLE",
+   "world": 5,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world5__MAKE_WOOD_PICKAXE",
+   "world": 5,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world5__COLLECT_STONE",
+   "world": 5,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world5__EAT_PLANT",
+   "world": 5,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world5__MAKE_IRON_PICKAXE",
+   "world": 5,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world5__ENTER_DUNGEON",
+   "world": 5,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world5__DEFEAT_NECROMANCER",
+   "world": 5,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "world6__COLLECT_WOOD",
+   "world": 6,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world6__PLACE_TABLE",
+   "world": 6,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world6__MAKE_WOOD_PICKAXE",
+   "world": 6,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world6__COLLECT_STONE",
+   "world": 6,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world6__EAT_PLANT",
+   "world": 6,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world6__MAKE_IRON_PICKAXE",
+   "world": 6,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world6__ENTER_DUNGEON",
+   "world": 6,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world6__DEFEAT_NECROMANCER",
+   "world": 6,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  },
+  {
+   "name": "world7__COLLECT_WOOD",
+   "world": 7,
+   "achievement": 0,
+   "cls": "COLLECT_WOOD"
+  },
+  {
+   "name": "world7__PLACE_TABLE",
+   "world": 7,
+   "achievement": 1,
+   "cls": "PLACE_TABLE"
+  },
+  {
+   "name": "world7__MAKE_WOOD_PICKAXE",
+   "world": 7,
+   "achievement": 5,
+   "cls": "MAKE_WOOD_PICKAXE"
+  },
+  {
+   "name": "world7__COLLECT_STONE",
+   "world": 7,
+   "achievement": 9,
+   "cls": "COLLECT_STONE"
+  },
+  {
+   "name": "world7__EAT_PLANT",
+   "world": 7,
+   "achievement": 11,
+   "cls": "EAT_PLANT"
+  },
+  {
+   "name": "world7__MAKE_IRON_PICKAXE",
+   "world": 7,
+   "achievement": 20,
+   "cls": "MAKE_IRON_PICKAXE"
+  },
+  {
+   "name": "world7__ENTER_DUNGEON",
+   "world": 7,
+   "achievement": 29,
+   "cls": "ENTER_DUNGEON"
+  },
+  {
+   "name": "world7__DEFEAT_NECROMANCER",
+   "world": 7,
+   "achievement": 49,
+   "cls": "DEFEAT_NECROMANCER"
+  }
+ ],
+ "heldout_class_instances": [
+  {
+   "name": "world0__OPEN_CHEST",
+   "world": 0,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world0__ENTER_GNOMISH_MINES",
+   "world": 0,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  },
+  {
+   "name": "world1__OPEN_CHEST",
+   "world": 1,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world1__ENTER_GNOMISH_MINES",
+   "world": 1,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  },
+  {
+   "name": "world2__OPEN_CHEST",
+   "world": 2,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world2__ENTER_GNOMISH_MINES",
+   "world": 2,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  },
+  {
+   "name": "world3__OPEN_CHEST",
+   "world": 3,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world3__ENTER_GNOMISH_MINES",
+   "world": 3,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  },
+  {
+   "name": "world4__OPEN_CHEST",
+   "world": 4,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world4__ENTER_GNOMISH_MINES",
+   "world": 4,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  },
+  {
+   "name": "world5__OPEN_CHEST",
+   "world": 5,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world5__ENTER_GNOMISH_MINES",
+   "world": 5,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  },
+  {
+   "name": "world6__OPEN_CHEST",
+   "world": 6,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world6__ENTER_GNOMISH_MINES",
+   "world": 6,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  },
+  {
+   "name": "world7__OPEN_CHEST",
+   "world": 7,
+   "achievement": 61,
+   "cls": "OPEN_CHEST"
+  },
+  {
+   "name": "world7__ENTER_GNOMISH_MINES",
+   "world": 7,
+   "achievement": 28,
+   "cls": "ENTER_GNOMISH_MINES"
+  }
+ ],
+ "note": "C-Ach: worlds x achievements; held-out worlds; held-out achievements as the sealed class"
+}

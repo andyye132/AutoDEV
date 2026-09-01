@@ -1,0 +1,199 @@
+{
+ "search": [
+  {
+   "name": "Breakout-MinAtar__thr3_seed0",
+   "seed": 0,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr3_seed1",
+   "seed": 1,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr3_seed2",
+   "seed": 2,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr3_seed3",
+   "seed": 3,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr3_seed4",
+   "seed": 4,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr3_seed5",
+   "seed": 5,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed0",
+   "seed": 0,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed1",
+   "seed": 1,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed2",
+   "seed": 2,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed3",
+   "seed": 3,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed4",
+   "seed": 4,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed5",
+   "seed": 5,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed0",
+   "seed": 0,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed1",
+   "seed": 1,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed2",
+   "seed": 2,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed3",
+   "seed": 3,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed4",
+   "seed": 4,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed5",
+   "seed": 5,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "Breakout-MinAtar__thr3_seed6",
+   "seed": 6,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr3_seed7",
+   "seed": 7,
+   "target": [
+    3.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed6",
+   "seed": 6,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr8_seed7",
+   "seed": 7,
+   "target": [
+    8.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed6",
+   "seed": 6,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  },
+  {
+   "name": "Breakout-MinAtar__thr15_seed7",
+   "seed": 7,
+   "target": [
+    15.0
+   ],
+   "cls": "Breakout-MinAtar"
+  }
+ ],
+ "heldout_class_instances": []
+}

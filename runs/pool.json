@@ -1,0 +1,6412 @@
+{
+ "cfg": {
+  "workers": 64,
+  "steps": 1024,
+  "slots": 256,
+  "budget": 65536,
+  "size": "m",
+  "programs": "random,repeat_random,goexplore"
+ },
+ "instances": [
+  {
+   "name": "s_h0_weak_thrust__OOB__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h0_weak_thrust__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "905d9178b5795a8f",
+   "hash": "d12358e683019566",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h0_weak_thrust__OOB__1",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h0_weak_thrust__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "905d9178b5795a8f",
+   "hash": "5b2c6a09d5ac440f",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h0_weak_thrust__ANOMALY__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h0_weak_thrust__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "905d9178b5795a8f",
+   "hash": "3f9e539a65f9465d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h1_thrust_over_ball__OOB__0",
+   "level": "s/h1_thrust_over_ball.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h1_thrust_over_ball__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "214c02835dbb5e0f",
+   "hash": "7bb3cc0e77d666d4",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h1_thrust_over_ball__OOB__1",
+   "level": "s/h1_thrust_over_ball.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h1_thrust_over_ball__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "214c02835dbb5e0f",
+   "hash": "0cd531b82aa6f3c7",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h1_thrust_over_ball__ANOMALY__0",
+   "level": "s/h1_thrust_over_ball.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h1_thrust_over_ball__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "214c02835dbb5e0f",
+   "hash": "edd35c6a7b67d449",
+   "probes": {
+    "random": 1472.0,
+    "repeat_random": 1472.0,
+    "goexplore": 1472.0
+   }
+  },
+  {
+   "name": "s_h1_thrust_over_ball__DISARMED__0",
+   "level": "s/h1_thrust_over_ball.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/s_h1_thrust_over_ball__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "214c02835dbb5e0f",
+   "hash": "74baf21b80273d9d",
+   "probes": {
+    "random": 1408.0,
+    "repeat_random": 1280.0,
+    "goexplore": 1344.0
+   }
+  },
+  {
+   "name": "s_h2_one_wheel_car__OOB__0",
+   "level": "s/h2_one_wheel_car.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h2_one_wheel_car__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "bb8eeb1ec303e3e4",
+   "hash": "f8d9ed5a0cd593ea",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h2_one_wheel_car__OOB__1",
+   "level": "s/h2_one_wheel_car.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h2_one_wheel_car__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "bb8eeb1ec303e3e4",
+   "hash": "5a4b09df5169203f",
+   "probes": {
+    "random": null,
+    "repeat_random": 3392.0,
+    "goexplore": 51520.0
+   }
+  },
+  {
+   "name": "s_h2_one_wheel_car__SHORTCUT__0",
+   "level": "s/h2_one_wheel_car.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/s_h2_one_wheel_car__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8773412108421326,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "bb8eeb1ec303e3e4",
+   "hash": "7b2712b125e49cfd",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h2_one_wheel_car__ANOMALY__0",
+   "level": "s/h2_one_wheel_car.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h2_one_wheel_car__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "bb8eeb1ec303e3e4",
+   "hash": "ca1b83750101a417",
+   "probes": {
+    "random": 6848.0,
+    "repeat_random": 6848.0,
+    "goexplore": 7104.0
+   }
+  },
+  {
+   "name": "s_h3_point_the_thruster__OOB__0",
+   "level": "s/h3_point_the_thruster.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h3_point_the_thruster__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b53489ebf3167af2",
+   "hash": "00bbe4d1640c69cd",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h3_point_the_thruster__OOB__1",
+   "level": "s/h3_point_the_thruster.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h3_point_the_thruster__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b53489ebf3167af2",
+   "hash": "04012d6f31aa8579",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h3_point_the_thruster__SHORTCUT__0",
+   "level": "s/h3_point_the_thruster.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/s_h3_point_the_thruster__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.560416042804718,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b53489ebf3167af2",
+   "hash": "d9f67e5e848c0c07",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "s_h3_point_the_thruster__ANOMALY__0",
+   "level": "s/h3_point_the_thruster.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h3_point_the_thruster__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b53489ebf3167af2",
+   "hash": "c4949ab49b2e8250",
+   "probes": {
+    "random": 4480.0,
+    "repeat_random": 5184.0,
+    "goexplore": 6400.0
+   }
+  },
+  {
+   "name": "s_h4_thrust_aim__OOB__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h4_thrust_aim__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "e4f0138a838f3bc8",
+   "hash": "c59879ad3e634312",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h4_thrust_aim__OOB__1",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h4_thrust_aim__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "e4f0138a838f3bc8",
+   "hash": "c148246545e7e900",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h4_thrust_aim__ANOMALY__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h4_thrust_aim__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "e4f0138a838f3bc8",
+   "hash": "55570ae1042b944b",
+   "probes": {
+    "random": null,
+    "repeat_random": 1664.0,
+    "goexplore": 1664.0
+   }
+  },
+  {
+   "name": "s_h4_thrust_aim__DISARMED__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/s_h4_thrust_aim__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "e4f0138a838f3bc8",
+   "hash": "a6a131acb5042a6a",
+   "probes": {
+    "random": 1536.0,
+    "repeat_random": 1536.0,
+    "goexplore": 1536.0
+   }
+  },
+  {
+   "name": "s_h5_rotate_fall__OOB__0",
+   "level": "s/h5_rotate_fall.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h5_rotate_fall__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "93ac63d18be2638d",
+   "hash": "85e0fa01f0ac1fb2",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h5_rotate_fall__OOB__1",
+   "level": "s/h5_rotate_fall.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h5_rotate_fall__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "93ac63d18be2638d",
+   "hash": "c5b8708844853a50",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h5_rotate_fall__SHORTCUT__0",
+   "level": "s/h5_rotate_fall.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/s_h5_rotate_fall__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 5.639999866485596,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "93ac63d18be2638d",
+   "hash": "27f95a06e0df6b84",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "s_h5_rotate_fall__ANOMALY__0",
+   "level": "s/h5_rotate_fall.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h5_rotate_fall__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "93ac63d18be2638d",
+   "hash": "474c69ff39ae0f5e",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h5_rotate_fall__DISARMED__0",
+   "level": "s/h5_rotate_fall.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/s_h5_rotate_fall__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 1,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "93ac63d18be2638d",
+   "hash": "826e6d423defbb52",
+   "probes": {
+    "random": 1664.0,
+    "repeat_random": 1664.0,
+    "goexplore": 1664.0
+   }
+  },
+  {
+   "name": "s_h6_unicycle_right__OOB__0",
+   "level": "s/h6_unicycle_right.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h6_unicycle_right__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9dcd15b9b17d68fe",
+   "hash": "ef1e19b2bea00960",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h6_unicycle_right__OOB__1",
+   "level": "s/h6_unicycle_right.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h6_unicycle_right__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9dcd15b9b17d68fe",
+   "hash": "af8f3a2581211d84",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h6_unicycle_right__SHORTCUT__0",
+   "level": "s/h6_unicycle_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/s_h6_unicycle_right__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.49468666315078735,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9dcd15b9b17d68fe",
+   "hash": "ec887e6dbb47217d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h6_unicycle_right__ANOMALY__0",
+   "level": "s/h6_unicycle_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h6_unicycle_right__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9dcd15b9b17d68fe",
+   "hash": "f4c8cbd3b4a153c2",
+   "probes": {
+    "random": 6784.0,
+    "repeat_random": 6784.0,
+    "goexplore": 7232.0
+   }
+  },
+  {
+   "name": "s_h7_unicycle_left__OOB__0",
+   "level": "s/h7_unicycle_left.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h7_unicycle_left__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "8df81fbc3a372f93",
+   "hash": "6ff16738886ca48e",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h7_unicycle_left__OOB__1",
+   "level": "s/h7_unicycle_left.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h7_unicycle_left__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "8df81fbc3a372f93",
+   "hash": "eed2beb059ddf4ae",
+   "probes": {
+    "random": null,
+    "repeat_random": 13760.0,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h7_unicycle_left__SHORTCUT__0",
+   "level": "s/h7_unicycle_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/s_h7_unicycle_left__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.49468666315078735,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "8df81fbc3a372f93",
+   "hash": "86b48b387c9826a8",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h7_unicycle_left__ANOMALY__0",
+   "level": "s/h7_unicycle_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h7_unicycle_left__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "8df81fbc3a372f93",
+   "hash": "91f792e381f6ea49",
+   "probes": {
+    "random": 6784.0,
+    "repeat_random": 6784.0,
+    "goexplore": 6784.0
+   }
+  },
+  {
+   "name": "s_h8_unicycle_balance__OOB__0",
+   "level": "s/h8_unicycle_balance.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h8_unicycle_balance__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95c68365090a0ba6",
+   "hash": "96efc7ff2dc22721",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h8_unicycle_balance__OOB__1",
+   "level": "s/h8_unicycle_balance.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h8_unicycle_balance__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95c68365090a0ba6",
+   "hash": "60b3f79db3a3a4ec",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h8_unicycle_balance__SHORTCUT__0",
+   "level": "s/h8_unicycle_balance.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/s_h8_unicycle_balance__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 1,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.7187047600746155,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95c68365090a0ba6",
+   "hash": "720988da4ed75cd0",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "s_h8_unicycle_balance__ANOMALY__0",
+   "level": "s/h8_unicycle_balance.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h8_unicycle_balance__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95c68365090a0ba6",
+   "hash": "84c2c5016a414ce5",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h9_explode_then_thrust_over__OOB__0",
+   "level": "s/h9_explode_then_thrust_over.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/s_h9_explode_then_thrust_over__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "70f411f2bb9dfbbc",
+   "hash": "a04aea3e23b9ac06",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "s_h9_explode_then_thrust_over__OOB__1",
+   "level": "s/h9_explode_then_thrust_over.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/s_h9_explode_then_thrust_over__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "70f411f2bb9dfbbc",
+   "hash": "54a8439fcfce4ba6",
+   "probes": {
+    "random": 1472.0,
+    "repeat_random": 1472.0,
+    "goexplore": 1472.0
+   }
+  },
+  {
+   "name": "s_h9_explode_then_thrust_over__SHORTCUT__0",
+   "level": "s/h9_explode_then_thrust_over.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/s_h9_explode_then_thrust_over__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9368552565574646,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "70f411f2bb9dfbbc",
+   "hash": "ae65e71c38b46653",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "s_h9_explode_then_thrust_over__ANOMALY__0",
+   "level": "s/h9_explode_then_thrust_over.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/s_h9_explode_then_thrust_over__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "70f411f2bb9dfbbc",
+   "hash": "bbe288c9f57600fb",
+   "probes": {
+    "random": 4608.0,
+    "repeat_random": 4608.0,
+    "goexplore": 4608.0
+   }
+  },
+  {
+   "name": "m_arm_hard__OOB__0",
+   "level": "m/arm_hard.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_arm_hard__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f9093f8f817a075d",
+   "hash": "513dc90d3a241d67",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_hard__OOB__1",
+   "level": "m/arm_hard.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_arm_hard__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f9093f8f817a075d",
+   "hash": "e2ea36f96aa1e8f7",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_hard__TUNNEL__0",
+   "level": "m/arm_hard.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_arm_hard__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f9093f8f817a075d",
+   "hash": "c92d2b7eddf37bc7",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_hard__SHORTCUT__0",
+   "level": "m/arm_hard.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_arm_hard__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.6875154972076416,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f9093f8f817a075d",
+   "hash": "4adbb486d148f1be",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_hard__ANOMALY__0",
+   "level": "m/arm_hard.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_arm_hard__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f9093f8f817a075d",
+   "hash": "ba88fbd78399a5ff",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_hard__DISARMED__0",
+   "level": "m/arm_hard.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_arm_hard__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f9093f8f817a075d",
+   "hash": "5277109728c6879a",
+   "probes": {
+    "random": 20096.0,
+    "repeat_random": 1088.0,
+    "goexplore": 1088.0
+   }
+  },
+  {
+   "name": "m_arm_left__OOB__0",
+   "level": "m/arm_left.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_arm_left__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "0ca4f34071aa2304",
+   "hash": "c39f889e463c246c",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_left__OOB__1",
+   "level": "m/arm_left.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_arm_left__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "0ca4f34071aa2304",
+   "hash": "c4f8d000ef43d9a0",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_left__TUNNEL__0",
+   "level": "m/arm_left.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_arm_left__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "0ca4f34071aa2304",
+   "hash": "987b97c1e304fa6d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_left__SHORTCUT__0",
+   "level": "m/arm_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_arm_left__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.0282492637634277,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "0ca4f34071aa2304",
+   "hash": "31c734d6567e577c",
+   "probes": {
+    "random": 3520.0,
+    "repeat_random": 768.0,
+    "goexplore": 768.0
+   }
+  },
+  {
+   "name": "m_arm_left__SHORTCUT__1",
+   "level": "m/arm_left.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_arm_left__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.3363656997680664,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "0ca4f34071aa2304",
+   "hash": "11bd9ba61dfd1de7",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_arm_left__ANOMALY__0",
+   "level": "m/arm_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_arm_left__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "0ca4f34071aa2304",
+   "hash": "a1fb79231ef50931",
+   "probes": {
+    "random": null,
+    "repeat_random": 22848.0,
+    "goexplore": 33792.0
+   }
+  },
+  {
+   "name": "m_arm_left__DISARMED__0",
+   "level": "m/arm_left.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_arm_left__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "0ca4f34071aa2304",
+   "hash": "3c3836316006a105",
+   "probes": {
+    "random": null,
+    "repeat_random": 4800.0,
+    "goexplore": 10048.0
+   }
+  },
+  {
+   "name": "m_arm_right__OOB__0",
+   "level": "m/arm_right.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_arm_right__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "6dba80a499297121",
+   "hash": "20b94d0029bed81f",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_right__OOB__1",
+   "level": "m/arm_right.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_arm_right__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "6dba80a499297121",
+   "hash": "b8bd27aad3d1f550",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_right__TUNNEL__0",
+   "level": "m/arm_right.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_arm_right__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "6dba80a499297121",
+   "hash": "57b081a512948cf7",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_right__SHORTCUT__0",
+   "level": "m/arm_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_arm_right__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.0282492637634277,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "6dba80a499297121",
+   "hash": "b7026bdf53b30609",
+   "probes": {
+    "random": 6272.0,
+    "repeat_random": 1536.0,
+    "goexplore": 1344.0
+   }
+  },
+  {
+   "name": "m_arm_right__SHORTCUT__1",
+   "level": "m/arm_right.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_arm_right__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.3363656997680664,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "6dba80a499297121",
+   "hash": "4f30410c3f3e14b8",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_arm_right__ANOMALY__0",
+   "level": "m/arm_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_arm_right__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "6dba80a499297121",
+   "hash": "af52b0eae2606889",
+   "probes": {
+    "random": null,
+    "repeat_random": 6080.0,
+    "goexplore": 43904.0
+   }
+  },
+  {
+   "name": "m_arm_right__DISARMED__0",
+   "level": "m/arm_right.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_arm_right__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 1,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "6dba80a499297121",
+   "hash": "e074bb1665e83266",
+   "probes": {
+    "random": null,
+    "repeat_random": 4160.0,
+    "goexplore": 4032.0
+   }
+  },
+  {
+   "name": "m_arm_up__OOB__0",
+   "level": "m/arm_up.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_arm_up__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8e8cf67910d94c41",
+   "hash": "85598d92ea7a3510",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_up__OOB__1",
+   "level": "m/arm_up.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_arm_up__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8e8cf67910d94c41",
+   "hash": "7742cfa4178130d1",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_up__TUNNEL__0",
+   "level": "m/arm_up.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_arm_up__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8e8cf67910d94c41",
+   "hash": "f0e4be0f5fb44b4d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_arm_up__SHORTCUT__0",
+   "level": "m/arm_up.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_arm_up__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.146883487701416,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8e8cf67910d94c41",
+   "hash": "73d053aaf3ff24c2",
+   "probes": {
+    "random": 960.0,
+    "repeat_random": 512.0,
+    "goexplore": 512.0
+   }
+  },
+  {
+   "name": "m_arm_up__SHORTCUT__1",
+   "level": "m/arm_up.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_arm_up__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.4550000429153442,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8e8cf67910d94c41",
+   "hash": "da101b235a0ed7a5",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_arm_up__ANOMALY__0",
+   "level": "m/arm_up.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_arm_up__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8e8cf67910d94c41",
+   "hash": "e56644f3e9cc8ba4",
+   "probes": {
+    "random": null,
+    "repeat_random": 14400.0,
+    "goexplore": 15616.0
+   }
+  },
+  {
+   "name": "m_h0_unicycle__OOB__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h0_unicycle__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "24dbdef3de214301",
+   "hash": "deca95a37ab1bb82",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h0_unicycle__OOB__1",
+   "level": "m/h0_unicycle.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h0_unicycle__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "24dbdef3de214301",
+   "hash": "a685c3a84c021d36",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h0_unicycle__SHORTCUT__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h0_unicycle__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.7518171668052673,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "24dbdef3de214301",
+   "hash": "5e9ab3725a9f1c3d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h0_unicycle__SHORTCUT__1",
+   "level": "m/h0_unicycle.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h0_unicycle__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8574999570846558,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "24dbdef3de214301",
+   "hash": "306d6bf40a3fe259",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_h0_unicycle__ANOMALY__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h0_unicycle__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "24dbdef3de214301",
+   "hash": "7c082fed4db7cee9",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h10_thrust_right_easy__OOB__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h10_thrust_right_easy__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "1c047da807213f13",
+   "hash": "5de3c7aa151841fc",
+   "probes": {
+    "random": null,
+    "repeat_random": 23744.0,
+    "goexplore": 3648.0
+   }
+  },
+  {
+   "name": "m_h10_thrust_right_easy__OOB__1",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h10_thrust_right_easy__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "1c047da807213f13",
+   "hash": "ae0ae3ae99ce367c",
+   "probes": {
+    "random": 26496.0,
+    "repeat_random": 1472.0,
+    "goexplore": 1472.0
+   }
+  },
+  {
+   "name": "m_h10_thrust_right_easy__ANOMALY__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h10_thrust_right_easy__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "1c047da807213f13",
+   "hash": "ffa9dd6c5ff06db3",
+   "probes": {
+    "random": 4096.0,
+    "repeat_random": 2496.0,
+    "goexplore": 3456.0
+   }
+  },
+  {
+   "name": "m_h11_thrust_left_easy__OOB__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h11_thrust_left_easy__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "e924d69192eae72d",
+   "hash": "7b282586cea3a76c",
+   "probes": {
+    "random": null,
+    "repeat_random": 9088.0,
+    "goexplore": 11200.0
+   }
+  },
+  {
+   "name": "m_h11_thrust_left_easy__OOB__1",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h11_thrust_left_easy__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "e924d69192eae72d",
+   "hash": "361587cc5e7c9191",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h11_thrust_left_easy__ANOMALY__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h11_thrust_left_easy__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "e924d69192eae72d",
+   "hash": "865e0d2be267cdee",
+   "probes": {
+    "random": 4608.0,
+    "repeat_random": 3072.0,
+    "goexplore": 5760.0
+   }
+  },
+  {
+   "name": "m_h12_thrustfall_left__OOB__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h12_thrustfall_left__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "6096c68a1fd7b4be",
+   "hash": "0cb14b747ba3ca9d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h12_thrustfall_left__OOB__1",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h12_thrustfall_left__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "6096c68a1fd7b4be",
+   "hash": "7a4eaf1f607abd1a",
+   "probes": {
+    "random": null,
+    "repeat_random": 5760.0,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h12_thrustfall_left__ANOMALY__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h12_thrustfall_left__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "6096c68a1fd7b4be",
+   "hash": "506905e9ac5d7bd2",
+   "probes": {
+    "random": 1792.0,
+    "repeat_random": 1792.0,
+    "goexplore": 1280.0
+   }
+  },
+  {
+   "name": "m_h12_thrustfall_left__DISARMED__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h12_thrustfall_left__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 1,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "6096c68a1fd7b4be",
+   "hash": "b31f10bc5360c723",
+   "probes": {
+    "random": null,
+    "repeat_random": 1152.0,
+    "goexplore": 1856.0
+   }
+  },
+  {
+   "name": "m_h13_thrustfall_right__OOB__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h13_thrustfall_right__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "6c23f01a2e648cbe",
+   "hash": "6b3f0d8880f26697",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h13_thrustfall_right__OOB__1",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h13_thrustfall_right__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "6c23f01a2e648cbe",
+   "hash": "2539dbb93fb634a7",
+   "probes": {
+    "random": null,
+    "repeat_random": 8256.0,
+    "goexplore": 13888.0
+   }
+  },
+  {
+   "name": "m_h13_thrustfall_right__ANOMALY__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h13_thrustfall_right__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "6c23f01a2e648cbe",
+   "hash": "e9f24435423f0483",
+   "probes": {
+    "random": 1792.0,
+    "repeat_random": 1792.0,
+    "goexplore": 1472.0
+   }
+  },
+  {
+   "name": "m_h13_thrustfall_right__DISARMED__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h13_thrustfall_right__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "6c23f01a2e648cbe",
+   "hash": "76014c2fb2321b5d",
+   "probes": {
+    "random": null,
+    "repeat_random": 1152.0,
+    "goexplore": 1152.0
+   }
+  },
+  {
+   "name": "m_h14_thrustblock__OOB__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h14_thrustblock__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "68f2de7bb35abc14",
+   "hash": "8d3f4adeb4bd400d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h14_thrustblock__OOB__1",
+   "level": "m/h14_thrustblock.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h14_thrustblock__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "68f2de7bb35abc14",
+   "hash": "d1b56afa496bcea0",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h14_thrustblock__ANOMALY__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h14_thrustblock__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "68f2de7bb35abc14",
+   "hash": "4ee5b1981763211b",
+   "probes": {
+    "random": 1728.0,
+    "repeat_random": 1728.0,
+    "goexplore": 1728.0
+   }
+  },
+  {
+   "name": "m_h15_thrustshoot__OOB__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h15_thrustshoot__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "632300d0b20c9616",
+   "hash": "3224ade95ea4868a",
+   "probes": {
+    "random": null,
+    "repeat_random": 1024.0,
+    "goexplore": 1152.0
+   }
+  },
+  {
+   "name": "m_h15_thrustshoot__OOB__1",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h15_thrustshoot__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "632300d0b20c9616",
+   "hash": "870bb4ac6b7c8c8c",
+   "probes": {
+    "random": 23808.0,
+    "repeat_random": 2304.0,
+    "goexplore": 1856.0
+   }
+  },
+  {
+   "name": "m_h15_thrustshoot__TUNNEL__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_h15_thrustshoot__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "632300d0b20c9616",
+   "hash": "eab064fb2e71594e",
+   "probes": {
+    "random": 192.0,
+    "repeat_random": 192.0,
+    "goexplore": 192.0
+   }
+  },
+  {
+   "name": "m_h15_thrustshoot__SHORTCUT__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h15_thrustshoot__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.332430899143219,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "632300d0b20c9616",
+   "hash": "143c13146cd3389a",
+   "probes": {
+    "random": 256.0,
+    "repeat_random": 128.0,
+    "goexplore": 128.0
+   }
+  },
+  {
+   "name": "m_h15_thrustshoot__SHORTCUT__1",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h15_thrustshoot__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.6626834869384766,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "632300d0b20c9616",
+   "hash": "866670df41ba2a28",
+   "probes": {
+    "random": 128.0,
+    "repeat_random": 128.0,
+    "goexplore": 128.0
+   }
+  },
+  {
+   "name": "m_h15_thrustshoot__ANOMALY__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h15_thrustshoot__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "632300d0b20c9616",
+   "hash": "cd342c0394364ee5",
+   "probes": {
+    "random": 2432.0,
+    "repeat_random": 3136.0,
+    "goexplore": 6656.0
+   }
+  },
+  {
+   "name": "m_h16_thrustcontrol_right__OOB__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h16_thrustcontrol_right__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "9e5e795cce270ede",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h16_thrustcontrol_right__OOB__1",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h16_thrustcontrol_right__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "ae0f71698ec26721",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h16_thrustcontrol_right__TUNNEL__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_h16_thrustcontrol_right__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b30f5dffea7e5b09",
+   "probes": {
+    "random": null,
+    "repeat_random": 2176.0,
+    "goexplore": 3712.0
+   }
+  },
+  {
+   "name": "m_h16_thrustcontrol_right__SHORTCUT__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h16_thrustcontrol_right__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b91776b0dc101f05",
+   "probes": {
+    "random": null,
+    "repeat_random": 1344.0,
+    "goexplore": 1344.0
+   }
+  },
+  {
+   "name": "m_h16_thrustcontrol_right__ANOMALY__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h16_thrustcontrol_right__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "6f93f223c15d3bce",
+   "probes": {
+    "random": 2816.0,
+    "repeat_random": 2176.0,
+    "goexplore": 2496.0
+   }
+  },
+  {
+   "name": "m_h16_thrustcontrol_right__DISARMED__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h16_thrustcontrol_right__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "84986af2c61b327f",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h17_thrustcontrol_left__OOB__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h17_thrustcontrol_left__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "b6d3384ff96e3ec7",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h17_thrustcontrol_left__OOB__1",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h17_thrustcontrol_left__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "e5546bfe348cfd44",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h17_thrustcontrol_left__TUNNEL__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_h17_thrustcontrol_left__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "16898d0772713173",
+   "probes": {
+    "random": null,
+    "repeat_random": 8896.0,
+    "goexplore": 16960.0
+   }
+  },
+  {
+   "name": "m_h17_thrustcontrol_left__SHORTCUT__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h17_thrustcontrol_left__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "d2e78843835bab7f",
+   "probes": {
+    "random": null,
+    "repeat_random": 1664.0,
+    "goexplore": 3904.0
+   }
+  },
+  {
+   "name": "m_h17_thrustcontrol_left__ANOMALY__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h17_thrustcontrol_left__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "fb2248cf086933c7",
+   "probes": {
+    "random": 3072.0,
+    "repeat_random": 2432.0,
+    "goexplore": 3072.0
+   }
+  },
+  {
+   "name": "m_h17_thrustcontrol_left__DISARMED__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h17_thrustcontrol_left__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "10485ad6372c9469",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h18_thrust_right_very_easy__OOB__0",
+   "level": "m/h18_thrust_right_very_easy.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h18_thrust_right_very_easy__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3fd4878309b980f7",
+   "hash": "a60f15c6a054dd43",
+   "probes": {
+    "random": null,
+    "repeat_random": 2240.0,
+    "goexplore": 2432.0
+   }
+  },
+  {
+   "name": "m_h18_thrust_right_very_easy__OOB__1",
+   "level": "m/h18_thrust_right_very_easy.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h18_thrust_right_very_easy__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3fd4878309b980f7",
+   "hash": "a3f9a066c2dc07f2",
+   "probes": {
+    "random": 11136.0,
+    "repeat_random": 1536.0,
+    "goexplore": 4160.0
+   }
+  },
+  {
+   "name": "m_h18_thrust_right_very_easy__ANOMALY__0",
+   "level": "m/h18_thrust_right_very_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h18_thrust_right_very_easy__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3fd4878309b980f7",
+   "hash": "35885c59067b5564",
+   "probes": {
+    "random": 4032.0,
+    "repeat_random": 2240.0,
+    "goexplore": 2368.0
+   }
+  },
+  {
+   "name": "m_h19_thrust_left_very_easy__OOB__0",
+   "level": "m/h19_thrust_left_very_easy.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h19_thrust_left_very_easy__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "1561eff0e2d79e47",
+   "hash": "c0c91982f3df5524",
+   "probes": {
+    "random": null,
+    "repeat_random": 8320.0,
+    "goexplore": 12608.0
+   }
+  },
+  {
+   "name": "m_h19_thrust_left_very_easy__OOB__1",
+   "level": "m/h19_thrust_left_very_easy.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h19_thrust_left_very_easy__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "1561eff0e2d79e47",
+   "hash": "1c18abdc8c835bf5",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h19_thrust_left_very_easy__ANOMALY__0",
+   "level": "m/h19_thrust_left_very_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h19_thrust_left_very_easy__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "1561eff0e2d79e47",
+   "hash": "b815854f02a282a6",
+   "probes": {
+    "random": 4992.0,
+    "repeat_random": 3584.0,
+    "goexplore": 4928.0
+   }
+  },
+  {
+   "name": "m_h1_car_left__OOB__0",
+   "level": "m/h1_car_left.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h1_car_left__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "147a40328437f3f5",
+   "hash": "34ebf1639bfbd43c",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h1_car_left__OOB__1",
+   "level": "m/h1_car_left.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h1_car_left__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "147a40328437f3f5",
+   "hash": "ade296bf405d0262",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h1_car_left__SHORTCUT__0",
+   "level": "m/h1_car_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h1_car_left__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 1,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9578830003738403,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "147a40328437f3f5",
+   "hash": "30d62a06708a1a46",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_h1_car_left__SHORTCUT__1",
+   "level": "m/h1_car_left.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h1_car_left__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9781466126441956,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "147a40328437f3f5",
+   "hash": "c7debf7f469d35b8",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_h1_car_left__ANOMALY__0",
+   "level": "m/h1_car_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h1_car_left__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "147a40328437f3f5",
+   "hash": "4a70b6b24637514a",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h1_car_left__DISARMED__0",
+   "level": "m/h1_car_left.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h1_car_left__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "147a40328437f3f5",
+   "hash": "bca6eb6b28f2c4a6",
+   "probes": {
+    "random": 4544.0,
+    "repeat_random": 2752.0,
+    "goexplore": 3584.0
+   }
+  },
+  {
+   "name": "m_h2_car_right__OOB__0",
+   "level": "m/h2_car_right.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h2_car_right__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "239413d1fdfd36f6",
+   "hash": "a42eed501dd17c89",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h2_car_right__OOB__1",
+   "level": "m/h2_car_right.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h2_car_right__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "239413d1fdfd36f6",
+   "hash": "50b5d73fcc2eb34c",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h2_car_right__SHORTCUT__0",
+   "level": "m/h2_car_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h2_car_right__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 1,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9578830003738403,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "239413d1fdfd36f6",
+   "hash": "735c77c1fc5c986a",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_h2_car_right__SHORTCUT__1",
+   "level": "m/h2_car_right.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h2_car_right__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9781466126441956,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "239413d1fdfd36f6",
+   "hash": "669e94ba6d84e129",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_h2_car_right__ANOMALY__0",
+   "level": "m/h2_car_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h2_car_right__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "239413d1fdfd36f6",
+   "hash": "fe6a50c40f740e3d",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h2_car_right__DISARMED__0",
+   "level": "m/h2_car_right.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h2_car_right__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "239413d1fdfd36f6",
+   "hash": "7f3d19673116f678",
+   "probes": {
+    "random": 5056.0,
+    "repeat_random": 2688.0,
+    "goexplore": 3008.0
+   }
+  },
+  {
+   "name": "m_h3_car_thrust__OOB__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h3_car_thrust__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "889dcd73bd60ab9e",
+   "hash": "2679dc675adf441d",
+   "probes": {
+    "random": null,
+    "repeat_random": 6592.0,
+    "goexplore": 7680.0
+   }
+  },
+  {
+   "name": "m_h3_car_thrust__OOB__1",
+   "level": "m/h3_car_thrust.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h3_car_thrust__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "889dcd73bd60ab9e",
+   "hash": "9c34b1acaf32ad75",
+   "probes": {
+    "random": null,
+    "repeat_random": 2752.0,
+    "goexplore": 2752.0
+   }
+  },
+  {
+   "name": "m_h3_car_thrust__SHORTCUT__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h3_car_thrust__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.6968593001365662,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "889dcd73bd60ab9e",
+   "hash": "040b0c5a2a169dc5",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h3_car_thrust__SHORTCUT__1",
+   "level": "m/h3_car_thrust.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h3_car_thrust__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8135609030723572,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "889dcd73bd60ab9e",
+   "hash": "b9e2ba02b04d7d44",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_h3_car_thrust__ANOMALY__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h3_car_thrust__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "889dcd73bd60ab9e",
+   "hash": "97a1ec6f4b74141e",
+   "probes": {
+    "random": 10496.0,
+    "repeat_random": 4544.0,
+    "goexplore": 7424.0
+   }
+  },
+  {
+   "name": "m_h3_car_thrust__DISARMED__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h3_car_thrust__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "889dcd73bd60ab9e",
+   "hash": "668c9f196c2b328b",
+   "probes": {
+    "random": 2432.0,
+    "repeat_random": 1408.0,
+    "goexplore": 1408.0
+   }
+  },
+  {
+   "name": "m_h4_thrust_the_needle__OOB__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h4_thrust_the_needle__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "10632e465f60bcf7",
+   "hash": "92a71bf0893b20b0",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h4_thrust_the_needle__OOB__1",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h4_thrust_the_needle__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "10632e465f60bcf7",
+   "hash": "1f6f7bc3bd7477ec",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h4_thrust_the_needle__ANOMALY__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h4_thrust_the_needle__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "goal_c": [
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "10632e465f60bcf7",
+   "hash": "d6743983e1591d42",
+   "probes": {
+    "random": 1664.0,
+    "repeat_random": 1664.0,
+    "goexplore": 1664.0
+   }
+  },
+  {
+   "name": "m_h5_angry_birds__OOB__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h5_angry_birds__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "c84fc997b1c76f26",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h5_angry_birds__OOB__1",
+   "level": "m/h5_angry_birds.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h5_angry_birds__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "b6b2c916f8ddaa23",
+   "probes": {
+    "random": null,
+    "repeat_random": 2240.0,
+    "goexplore": 2240.0
+   }
+  },
+  {
+   "name": "m_h5_angry_birds__TUNNEL__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_h5_angry_birds__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "c99369479e406c6c",
+   "probes": {
+    "random": 8384.0,
+    "repeat_random": 14464.0,
+    "goexplore": 36736.0
+   }
+  },
+  {
+   "name": "m_h5_angry_birds__SHORTCUT__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h5_angry_birds__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8071077466011047,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "a7a5624fbbbbb463",
+   "probes": {
+    "random": 1600.0,
+    "repeat_random": 45376.0,
+    "goexplore": 2624.0
+   }
+  },
+  {
+   "name": "m_h5_angry_birds__SHORTCUT__1",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h5_angry_birds__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.024214506149292,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "46f58e5d6995c5f0",
+   "probes": {
+    "random": 128.0,
+    "repeat_random": 128.0,
+    "goexplore": 128.0
+   }
+  },
+  {
+   "name": "m_h5_angry_birds__ANOMALY__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h5_angry_birds__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "2d80e2bdb7882f2b",
+   "probes": {
+    "random": 2304.0,
+    "repeat_random": 4032.0,
+    "goexplore": 3584.0
+   }
+  },
+  {
+   "name": "m_h5_angry_birds__DISARMED__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h5_angry_birds__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "dcd82109393cae6a",
+   "probes": {
+    "random": 2496.0,
+    "repeat_random": 2752.0,
+    "goexplore": 3392.0
+   }
+  },
+  {
+   "name": "m_h6_thrust_over__OOB__0",
+   "level": "m/h6_thrust_over.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h6_thrust_over__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "49d3402cd2e9fdb2",
+   "hash": "622d98ae23e35f25",
+   "probes": {
+    "random": null,
+    "repeat_random": 3200.0,
+    "goexplore": 9152.0
+   }
+  },
+  {
+   "name": "m_h6_thrust_over__OOB__1",
+   "level": "m/h6_thrust_over.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h6_thrust_over__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "49d3402cd2e9fdb2",
+   "hash": "4c918ee5c03af61f",
+   "probes": {
+    "random": null,
+    "repeat_random": 3776.0,
+    "goexplore": 4288.0
+   }
+  },
+  {
+   "name": "m_h6_thrust_over__ANOMALY__0",
+   "level": "m/h6_thrust_over.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h6_thrust_over__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "49d3402cd2e9fdb2",
+   "hash": "22204a358a176440",
+   "probes": {
+    "random": 6144.0,
+    "repeat_random": 1344.0,
+    "goexplore": 1472.0
+   }
+  },
+  {
+   "name": "m_h6_thrust_over__DISARMED__0",
+   "level": "m/h6_thrust_over.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h6_thrust_over__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 1,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "49d3402cd2e9fdb2",
+   "hash": "e3e0b36566018e87",
+   "probes": {
+    "random": 832.0,
+    "repeat_random": 512.0,
+    "goexplore": 512.0
+   }
+  },
+  {
+   "name": "m_h7_car_flip__OOB__0",
+   "level": "m/h7_car_flip.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h7_car_flip__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "ca0bbe741a460ff5",
+   "hash": "5c853a83c9da261e",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h7_car_flip__OOB__1",
+   "level": "m/h7_car_flip.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h7_car_flip__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "ca0bbe741a460ff5",
+   "hash": "fb856154fb1d3c5b",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h7_car_flip__SHORTCUT__0",
+   "level": "m/h7_car_flip.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h7_car_flip__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.2546067237854004,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "ca0bbe741a460ff5",
+   "hash": "c87eac9a264b8988",
+   "probes": {
+    "random": null,
+    "repeat_random": 5184.0,
+    "goexplore": 40640.0
+   }
+  },
+  {
+   "name": "m_h7_car_flip__ANOMALY__0",
+   "level": "m/h7_car_flip.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h7_car_flip__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "ca0bbe741a460ff5",
+   "hash": "21c16970ca44a5a3",
+   "probes": {
+    "random": 3776.0,
+    "repeat_random": 3776.0,
+    "goexplore": 3776.0
+   }
+  },
+  {
+   "name": "m_h7_car_flip__DISARMED__0",
+   "level": "m/h7_car_flip.json",
+   "cls": "DISARMED",
+   "seed": 0,
+   "path": "runs/instances/m_h7_car_flip__DISARMED__0.json",
+   "meta": {
+    "cls": 4,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "ca0bbe741a460ff5",
+   "hash": "c018caaea25ba906",
+   "probes": {
+    "random": 1984.0,
+    "repeat_random": 1152.0,
+    "goexplore": 1536.0
+   }
+  },
+  {
+   "name": "m_h8_weird_vehicle__OOB__0",
+   "level": "m/h8_weird_vehicle.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h8_weird_vehicle__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8d54f9c1abd18bbd",
+   "hash": "9580b97ec566a872",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h8_weird_vehicle__OOB__1",
+   "level": "m/h8_weird_vehicle.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h8_weird_vehicle__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8d54f9c1abd18bbd",
+   "hash": "0d03940cd6112eb6",
+   "probes": {
+    "random": null,
+    "repeat_random": null,
+    "goexplore": null
+   }
+  },
+  {
+   "name": "m_h8_weird_vehicle__SHORTCUT__0",
+   "level": "m/h8_weird_vehicle.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h8_weird_vehicle__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9536418318748474,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8d54f9c1abd18bbd",
+   "hash": "aa405e2ae0415584",
+   "probes": {
+    "random": 0.0,
+    "repeat_random": 0.0,
+    "goexplore": 0.0
+   }
+  },
+  {
+   "name": "m_h8_weird_vehicle__SHORTCUT__1",
+   "level": "m/h8_weird_vehicle.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h8_weird_vehicle__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 1.1532479524612427,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8d54f9c1abd18bbd",
+   "hash": "b90ed7994a8a938a",
+   "probes": {
+    "random": 896.0,
+    "repeat_random": 576.0,
+    "goexplore": 576.0
+   }
+  },
+  {
+   "name": "m_h8_weird_vehicle__ANOMALY__0",
+   "level": "m/h8_weird_vehicle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h8_weird_vehicle__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8d54f9c1abd18bbd",
+   "hash": "1305dd53e48550c2",
+   "probes": {
+    "random": 10880.0,
+    "repeat_random": 5888.0,
+    "goexplore": 34112.0
+   }
+  },
+  {
+   "name": "m_h9_spin_the_right_way__OOB__0",
+   "level": "m/h9_spin_the_right_way.json",
+   "cls": "OOB",
+   "seed": 0,
+   "path": "runs/instances/m_h9_spin_the_right_way__OOB__0.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 3,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "f8725ba69e420b2c",
+   "hash": "1dc616a3f744aef8",
+   "probes": {
+    "random": null,
+    "repeat_random": 2560.0,
+    "goexplore": 12032.0
+   }
+  },
+  {
+   "name": "m_h9_spin_the_right_way__OOB__1",
+   "level": "m/h9_spin_the_right_way.json",
+   "cls": "OOB",
+   "seed": 1,
+   "path": "runs/instances/m_h9_spin_the_right_way__OOB__1.json",
+   "meta": {
+    "cls": 0,
+    "target_is_poly": true,
+    "target_idx": 2,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "f8725ba69e420b2c",
+   "hash": "3762fd942bd7f0b2",
+   "probes": {
+    "random": 4800.0,
+    "repeat_random": 3072.0,
+    "goexplore": 3136.0
+   }
+  },
+  {
+   "name": "m_h9_spin_the_right_way__TUNNEL__0",
+   "level": "m/h9_spin_the_right_way.json",
+   "cls": "TUNNEL",
+   "seed": 0,
+   "path": "runs/instances/m_h9_spin_the_right_way__TUNNEL__0.json",
+   "meta": {
+    "cls": 1,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "f8725ba69e420b2c",
+   "hash": "befa557496f758f6",
+   "probes": {
+    "random": 896.0,
+    "repeat_random": 896.0,
+    "goexplore": 896.0
+   }
+  },
+  {
+   "name": "m_h9_spin_the_right_way__SHORTCUT__0",
+   "level": "m/h9_spin_the_right_way.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/instances/m_h9_spin_the_right_way__SHORTCUT__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.5602277517318726,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "f8725ba69e420b2c",
+   "hash": "616ac944aef48fa5",
+   "probes": {
+    "random": 896.0,
+    "repeat_random": 896.0,
+    "goexplore": 896.0
+   }
+  },
+  {
+   "name": "m_h9_spin_the_right_way__SHORTCUT__1",
+   "level": "m/h9_spin_the_right_way.json",
+   "cls": "SHORTCUT",
+   "seed": 1,
+   "path": "runs/instances/m_h9_spin_the_right_way__SHORTCUT__1.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 4,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9235309958457947,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "f8725ba69e420b2c",
+   "hash": "100837cf43b23321",
+   "probes": {
+    "random": 256.0,
+    "repeat_random": 256.0,
+    "goexplore": 256.0
+   }
+  },
+  {
+   "name": "m_h9_spin_the_right_way__ANOMALY__0",
+   "level": "m/h9_spin_the_right_way.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/instances/m_h9_spin_the_right_way__ANOMALY__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true
+    ]
+   },
+   "base_hash": "f8725ba69e420b2c",
+   "hash": "c63ac1e2193a3e1d",
+   "probes": {
+    "random": 1664.0,
+    "repeat_random": 1792.0,
+    "goexplore": 1792.0
+   }
+  }
+ ]
+}

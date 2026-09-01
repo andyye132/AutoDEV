@@ -1,0 +1,11 @@
+{
+ "strategy": "tree",
+ "evaluations": 6,
+ "best_score": 0.6317974901574803,
+ "best_node": 1,
+ "seed_score": 0.6080395956364829,
+ "tokens_in": 22,
+ "tokens_out": 38935,
+ "cost": 0.8589278,
+ "model": "headless/claude@claude-sonnet-5?effort=medium"
+}

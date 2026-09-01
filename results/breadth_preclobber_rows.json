@@ -1,0 +1,128 @@
+{
+ "G-MountainCar": {
+  "srch": {
+   "random": 0,
+   "repeat_random": 100,
+   "goexplore": 50,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  },
+  "h-lvl": {
+   "random": 0,
+   "repeat_random": 100,
+   "goexplore": 17,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  }
+ },
+ "G-Acrobot": {
+  "srch": {
+   "random": 72,
+   "repeat_random": 100,
+   "goexplore": 94,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  },
+  "h-lvl": {
+   "random": 100,
+   "repeat_random": 100,
+   "goexplore": 83,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  }
+ },
+ "G-DeepSea8": {
+  "srch": {
+   "random": 100,
+   "repeat_random": 100,
+   "goexplore": 100,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  },
+  "h-lvl": {
+   "random": 100,
+   "repeat_random": 100,
+   "goexplore": 100,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  }
+ },
+ "G-DeepSea24": {
+  "srch": {
+   "random": 0,
+   "repeat_random": 100,
+   "goexplore": 100,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  },
+  "h-lvl": {
+   "random": 0,
+   "repeat_random": 100,
+   "goexplore": 100,
+   "cand1": 100,
+   "macrosweep": 100,
+   "elites": 100
+  }
+ },
+ "X-DoorKey": {
+  "srch": {
+   "random": 83,
+   "repeat_random": 28,
+   "goexplore": 17,
+   "cand1": 17,
+   "macrosweep": 33,
+   "elites": 22
+  },
+  "h-lvl": {
+   "random": 100,
+   "repeat_random": 0,
+   "goexplore": 0,
+   "cand1": 0,
+   "macrosweep": 67,
+   "elites": 0
+  }
+ },
+ "X-FourRooms": {
+  "srch": {
+   "random": 28,
+   "repeat_random": 33,
+   "goexplore": 39,
+   "cand1": 28,
+   "macrosweep": 83,
+   "elites": 6
+  },
+  "h-lvl": {
+   "random": 0,
+   "repeat_random": 50,
+   "goexplore": 33,
+   "cand1": 50,
+   "macrosweep": 67,
+   "elites": 0
+  }
+ },
+ "X-Unlock": {
+  "srch": {
+   "random": 100,
+   "repeat_random": 94,
+   "goexplore": 61,
+   "cand1": 72,
+   "macrosweep": 100,
+   "elites": 44
+  },
+  "h-lvl": {
+   "random": 100,
+   "repeat_random": 67,
+   "goexplore": 0,
+   "cand1": 50,
+   "macrosweep": 100,
+   "elites": 0
+  }
+ }
+}

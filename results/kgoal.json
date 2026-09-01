@@ -1,0 +1,59 @@
+{
+ "search": {
+  "n": 52,
+  "procedure_solved": 30,
+  "ppo_any_solved": 32,
+  "ppo4x_any_solved": 38,
+  "solved_by_procedure_not_ppo": [
+   {
+    "level": "m_h16_thrustcontrol_right__GOAL__0",
+    "median_steps": 56192.0
+   },
+   {
+    "level": "m_h17_thrustcontrol_left__GOAL__0",
+    "median_steps": 61952.0
+   }
+  ],
+  "solved_by_procedure_not_ppo4x": [
+   "m_h16_thrustcontrol_right__GOAL__0"
+  ],
+  "solved_by_ppo_not_procedure": [
+   "l_car_launch__GOAL__0",
+   "l_h17_unicycle__GOAL__0",
+   "l_h4_cartpole__GOAL__0",
+   "l_h7_maze_1__GOAL__0"
+  ],
+  "solve_rate_by_program": {
+   "random": 0.38461538461538464,
+   "repeat_random": 0.5769230769230769,
+   "goexplore": 0.5192307692307693,
+   "cand1_gen037_0.6994.py": 0.5769230769230769,
+   "cand4_gen035_0.6934.py": 0.6153846153846154,
+   "macrosweep.py": 0.6730769230769231
+  }
+ },
+ "heldout_levels_instances": {
+  "n": 22,
+  "procedure_solved": 18,
+  "ppo_any_solved": 18,
+  "ppo4x_any_solved": 20,
+  "solved_by_procedure_not_ppo": [
+   {
+    "level": "s_h9_explode_then_thrust_over__GOAL__0",
+    "median_steps": 87552.0
+   }
+  ],
+  "solved_by_procedure_not_ppo4x": [],
+  "solved_by_ppo_not_procedure": [
+   "l_h14_simple_thruster__GOAL__0"
+  ],
+  "solve_rate_by_program": {
+   "random": 0.2727272727272727,
+   "repeat_random": 0.8181818181818182,
+   "goexplore": 0.7272727272727273,
+   "cand1_gen037_0.6994.py": 0.8181818181818182,
+   "cand4_gen035_0.6934.py": 0.8181818181818182,
+   "macrosweep.py": 0.7727272727272727
+  }
+ }
+}

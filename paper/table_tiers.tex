@@ -1,0 +1,18 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llcc}
+\toprule
+Tester & split & constant-input tier & exploration tier \\
+\midrule
+goexplore & search & 93\% (42) & 38\% (77) \\
+goexplore & heldout & 82\% (22) & 17\% (126) \\
+repeat\_random & search & 93\% (42) & 42\% (77) \\
+repeat\_random & heldout & 88\% (22) & 19\% (126) \\
+cand1\_gen037\_0.6994 & search & 100\% (42) & 43\% (77) \\
+cand1\_gen037\_0.6994 & heldout & 91\% (22) & 20\% (126) \\
+pairladder & search & 98\% (42) & 46\% (77) \\
+pairladder & heldout & 95\% (22) & 22\% (126) \\
+\bottomrule
+\end{tabular}
+\caption{Detection by hardness tier: targets a single held input reaches vs.\ targets that need exploration (unwitnessable and free-hit instances excluded).}
+\label{tab:tiers}
+\end{table}

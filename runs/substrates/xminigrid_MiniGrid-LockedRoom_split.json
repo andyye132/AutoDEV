@@ -1,0 +1,55 @@
+{
+ "search": [
+  {
+   "name": "MiniGrid-LockedRoom__seed0",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 0,
+   "cls": "MiniGrid-LockedRoom"
+  },
+  {
+   "name": "MiniGrid-LockedRoom__seed1",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 1,
+   "cls": "MiniGrid-LockedRoom"
+  },
+  {
+   "name": "MiniGrid-LockedRoom__seed2",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 2,
+   "cls": "MiniGrid-LockedRoom"
+  },
+  {
+   "name": "MiniGrid-LockedRoom__seed3",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 3,
+   "cls": "MiniGrid-LockedRoom"
+  },
+  {
+   "name": "MiniGrid-LockedRoom__seed4",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 4,
+   "cls": "MiniGrid-LockedRoom"
+  },
+  {
+   "name": "MiniGrid-LockedRoom__seed5",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 5,
+   "cls": "MiniGrid-LockedRoom"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "MiniGrid-LockedRoom__seed6",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 6,
+   "cls": "MiniGrid-LockedRoom"
+  },
+  {
+   "name": "MiniGrid-LockedRoom__seed7",
+   "env": "MiniGrid-LockedRoom",
+   "seed": 7,
+   "cls": "MiniGrid-LockedRoom"
+  }
+ ],
+ "heldout_class_instances": []
+}

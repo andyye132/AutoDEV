@@ -1,0 +1,55 @@
+{
+ "search": [
+  {
+   "name": "MiniGrid-FourRooms__seed0",
+   "env": "MiniGrid-FourRooms",
+   "seed": 0,
+   "cls": "MiniGrid-FourRooms"
+  },
+  {
+   "name": "MiniGrid-FourRooms__seed1",
+   "env": "MiniGrid-FourRooms",
+   "seed": 1,
+   "cls": "MiniGrid-FourRooms"
+  },
+  {
+   "name": "MiniGrid-FourRooms__seed2",
+   "env": "MiniGrid-FourRooms",
+   "seed": 2,
+   "cls": "MiniGrid-FourRooms"
+  },
+  {
+   "name": "MiniGrid-FourRooms__seed3",
+   "env": "MiniGrid-FourRooms",
+   "seed": 3,
+   "cls": "MiniGrid-FourRooms"
+  },
+  {
+   "name": "MiniGrid-FourRooms__seed4",
+   "env": "MiniGrid-FourRooms",
+   "seed": 4,
+   "cls": "MiniGrid-FourRooms"
+  },
+  {
+   "name": "MiniGrid-FourRooms__seed5",
+   "env": "MiniGrid-FourRooms",
+   "seed": 5,
+   "cls": "MiniGrid-FourRooms"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "MiniGrid-FourRooms__seed6",
+   "env": "MiniGrid-FourRooms",
+   "seed": 6,
+   "cls": "MiniGrid-FourRooms"
+  },
+  {
+   "name": "MiniGrid-FourRooms__seed7",
+   "env": "MiniGrid-FourRooms",
+   "seed": 7,
+   "cls": "MiniGrid-FourRooms"
+  }
+ ],
+ "heldout_class_instances": []
+}

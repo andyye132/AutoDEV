@@ -1,0 +1,35 @@
+% AutoMLR (NeurIPS 2026) submission skeleton — swap \documentclass/preamble for the official Overleaf template before submitting.
+% Part 1 (<=4 pages): agent-written research result. Part 2 (<=4 pages): human-written system account. Part 3 (<=1 page): reflections.
+\documentclass[10pt]{article}
+\usepackage[textwidth=5.5in,textheight=9in,heightrounded]{geometry}\usepackage{times}\usepackage{graphicx,booktabs,amsmath,hyperref,xcolor}
+\title{Do Discovered Exploration Strategies Generalize?\\Autonomous Program Search Finds Exploration Procedures That Reach Unseen Target Classes}
+\author{Andy Ye \\ University of Washington}
+\begin{document}
+\maketitle
+\begin{abstract}
+Exploration in reinforcement learning is driven by hand-designed intrinsic objectives (curiosity, novelty, coverage), and the
+field's own results say they are unreliable as testers: random exploration beats RND asymptotically in large 3D games, more search
+can make a tester worse, and coverage anti-correlates with what testers exist to find. We ask whether an autonomous research loop can
+discover an exploration \emph{procedure} instead --- code over a save/restore archive of simulator states --- and whether it generalizes.
+On Kinetix, a suite of 2D physics games, we build a target-state benchmark from 337 planted defects (five classes, each with a witness
+state, random floors and a reachability calibration), seal 30\% of levels and one entire target class from the search, and let an
+LLM-driven program search write the procedure. \textbf{Qualifying result:} a single run of the discovered procedure reaches 72\% of
+targets on the search split vs.\ 59\% for the strongest hand-designed procedure and 56\% for the best of five PPO intrinsic-motivation
+testers at equal budget, 64\% vs.\ 60\% on held-out levels, and 47\% vs.\ 30\% on the sealed target class (+0.15 paired gain, 95\% CI
+$\pm$0.05); normalized by the reachable set it finds 88\% / 94\% / 74\% of what any method reaches. Constant tuning recovers a tenth
+of the gain and portfolios of designs lose to it, so the gain is structural; every search makes it early and then moves inside
+evaluation noise. The benchmark, search, baselines and Part~1 were produced by the loop; the authors built and verified the oracles.
+\end{abstract}
+
+\section*{Part 1 --- Auto research result (agent-written)}
+\input{part1_reframe.tex}
+
+\section*{Part 2 --- System design (human-written)}
+\input{part2.tex}
+
+\section*{Part 3 --- Reflections}
+\input{part3.tex}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}

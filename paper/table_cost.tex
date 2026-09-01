@@ -1,0 +1,17 @@
+\begin{table}[t]\centering\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+Tester & \multicolumn{2}{c}{Search (common $n$=60)} & \multicolumn{2}{c}{Held-out levels (common $n$=30)} & \multicolumn{2}{c}{Held-out class (common $n$=21)} \\
+ & median steps & found & median steps & found & median steps & found \\
+\midrule
+Action-repeat random & 3.8k & 60\% & 3.3k & 59\% & 5.2k & 29\% \\
+Go-Explore (seed) & 4.2k & 57\% & 3.3k & 58\% & 6.0k & 27\% \\
+Discovered (run 1 best) & 3.8k & 62\% & 3.3k & 58\% & 7.5k & 31\% \\
+Opus: pair-ladder & 3.7k & 63\% & 3.3k & 59\% & 4.9k & 33\% \\
+PPO+count & 5.2k & 56\% & 4.2k & 57\% & 45.1k & 27\% \\
+PPO+RND & 5.2k & 51\% & 4.2k & 54\% & 23.9k & 17\% \\
+\bottomrule
+\end{tabular}
+\caption{Cost per target: median simulator steps to the first witness over the instances every compared tester finds, and the fraction of all instances found, per split (5 seeds; RL testers 3 seeds).}
+\label{tab:cost}
+\end{table}

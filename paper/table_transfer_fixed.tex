@@ -1,0 +1,34 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{lccc}
+\toprule
+Tester & Search & Held-out levels & Held-out class (OOB) \\
+\midrule
+Random & 0.456$\pm$0.006 (49\%) & 0.539$\pm$0.008 (56\%) & 0.105$\pm$0.006 (12\%) \\
+Action-repeat random & 0.574$\pm$0.007 (60\%) & 0.589$\pm$0.002 (60\%) & 0.259$\pm$0.008 (29\%) \\
+Go-Explore (seed) & 0.540$\pm$0.004 (57\%) & 0.566$\pm$0.007 (59\%) & 0.220$\pm$0.011 (27\%) \\
+\midrule
+Split-and-pump (survey) & 0.621$\pm$0.004 (66\%) & 0.590$\pm$0.003 (61\%) & 0.338$\pm$0.005 (37\%) \\
+Actuator saturation (survey) & 0.622$\pm$0.003 (65\%) & 0.590$\pm$0.012 (61\%) & 0.330$\pm$0.008 (38\%) \\
+Velocity maximisation (survey) & 0.603$\pm$0.003 (64\%) & 0.596$\pm$0.003 (62\%) & 0.333$\pm$0.004 (37\%) \\
+Root CEM (survey) & 0.594$\pm$0.004 (63\%) & 0.584$\pm$0.003 (60\%) & 0.278$\pm$0.011 (32\%) \\
+Death-aware checkpoints (survey) & 0.590$\pm$0.005 (63\%) & 0.591$\pm$0.003 (61\%) & 0.267$\pm$0.006 (30\%) \\
+Resonance sweep (survey) & 0.587$\pm$0.013 (63\%) & 0.548$\pm$0.013 (57\%) & 0.276$\pm$0.005 (30\%) \\
+\midrule
+Searched: hard-tier fitness (run 11) & 0.632$\pm$0.003 (66\%) & 0.595$\pm$0.007 (61\%) & 0.327$\pm$0.005 (36\%) \\
+Searched: fixed harness (run 9) & 0.613$\pm$0.007 (64\%) & 0.583$\pm$0.007 (61\%) & 0.344$\pm$0.007 (38\%) \\
+Searched: racy era (run 1) & 0.579$\pm$0.007 (63\%) & 0.566$\pm$0.006 (59\%) & 0.267$\pm$0.010 (31\%) \\
+\midrule
+Opus design: pair-ladder & 0.600$\pm$0.009 (64\%) & 0.582$\pm$0.003 (60\%) & 0.300$\pm$0.007 (33\%) \\
+Opus design: macrosweep & 0.600$\pm$0.003 (63\%) & 0.575$\pm$0.003 (60\%) & 0.294$\pm$0.008 (33\%) \\
+Opus design: elites & 0.595$\pm$0.007 (62\%) & 0.579$\pm$0.003 (60\%) & 0.318$\pm$0.009 (34\%) \\
+\midrule
+PPO+count & 0.487$\pm$0.017 (56\%) & 0.538$\pm$0.007 (58\%) & 0.184$\pm$0.014 (27\%) \\
+PPO+curiosity-proximity & 0.492$\pm$0.014 (57\%) & 0.535$\pm$0.005 (57\%) & 0.179$\pm$0.016 (26\%) \\
+PPO+task & 0.481$\pm$0.033 (54\%) & 0.510$\pm$0.025 (55\%) & 0.161$\pm$0.003 (23\%) \\
+PPO+RND & 0.461$\pm$0.019 (51\%) & 0.502$\pm$0.017 (55\%) & 0.124$\pm$0.016 (17\%) \\
+PPO+ICM & 0.451$\pm$0.028 (50\%) & 0.491$\pm$0.011 (52\%) & 0.117$\pm$0.019 (16\%) \\
+\bottomrule
+\end{tabular}
+\caption{Score $=1-\min(\text{steps},\text{budget})/\text{budget}$ (mean $\pm$ 95\% CI over 5 seeds) and fraction of planted defects witnessed, per split; budget $128\times2048$ env steps per instance; size-l configuration, 74 shipped levels. Instances unwitnessable by construction or witnessed by no-ops alone are excluded from the denominators (0 of 148, 8 of 127, 1 of 59).Fixed harness; program rows evaluation seeds 100--104, PPO rows training seeds 0--2. Run 11 (reachable-hard fitness) holds the only instance-significant gain over split-and-pump (search $+0.011\pm0.009$); run 9 searched from the Go-Explore seed.}
+\label{tab:transfer_fixed}
+\end{table}

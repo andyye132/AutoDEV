@@ -1,0 +1,768 @@
+<title>AutoDev at AutoMLR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --paper: #F4F7F6; --surface: #FFFFFF; --ink: #182028; --ink-2: #3A4852; --slate: #5A6B77; --line: #D6DFE2;
+  --accent: #0E6F8E; --accent-soft: #DCEBF0; --signal: #B8541F; --signal-soft: #F6E4D8; --code-bg: #EAF0F1;
+  --rail-bg: #EDF2F2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+    --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+    --rail-bg: #141D25;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+  --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+  --rail-bg: #141D25;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+a:hover, a:focus-visible { border-bottom-color: var(--accent); outline: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.shell { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 3rem; max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+.rail { position: sticky; top: 1.5rem; align-self: start; max-height: calc(100vh - 3rem); overflow-y: auto; font-size: 0.86rem; line-height: 1.4; padding: 1rem 1rem 1rem 0; border-right: 1px solid var(--line); }
+.rail .eyebrow { margin-bottom: 0.6rem; }
+.rail ul { list-style: none; margin: 0; padding: 0; }
+.rail > ul > li { margin: 0.35rem 0; }
+.rail > ul > li > ul { padding-left: 0.9rem; border-left: 1px solid var(--line); margin: 0.25rem 0 0.4rem; }
+.rail > ul > li > ul li { margin: 0.2rem 0; color: var(--slate); }
+.rail a { color: var(--ink-2); border: none; }
+.rail a:hover { color: var(--accent); }
+main { min-width: 0; max-width: 72ch; }
+.eyebrow { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); }
+header.masthead { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+header.masthead h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin: 0.4rem 0 0.8rem; letter-spacing: -0.01em; text-wrap: balance; }
+header.masthead p.dek { font-size: 1.1rem; color: var(--ink-2); margin: 0 0 1rem; max-width: 62ch; }
+header.masthead .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.85rem; color: var(--slate); }
+h1, h2, h3, h4 { text-wrap: balance; }
+main > h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2.1rem, 4vw, 2.9rem); line-height: 1.08; letter-spacing: -0.012em; margin: 0 0 0.9rem; }
+main > h1 + p { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); max-width: 62ch; margin-bottom: 0.9rem; }
+main > h1 + p + p { font-size: 0.86rem; color: var(--slate); padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); margin-bottom: 1.6rem; }
+a.cite { border: none; font-variant-numeric: tabular-nums; }
+h2#references + ol { padding-left: 2.2rem; font-size: 0.88rem; color: var(--ink-2); }
+h2#references + ol li { margin: 0.45rem 0; overflow-wrap: anywhere; }
+h2#references + ol li:target { background: var(--accent-soft); border-radius: 3px; }
+h2 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 1.8rem; line-height: 1.15; margin: 3rem 0 1rem; padding-top: 1.2rem; border-top: 1px solid var(--line); letter-spacing: -0.005em; }
+h3 { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.28rem; line-height: 1.25; margin: 2rem 0 0.6rem; }
+h4 { font-size: 0.95rem; font-weight: 600; margin: 1.4rem 0 0.4rem; color: var(--ink-2); }
+p { margin: 0 0 1rem; }
+ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+li { margin: 0.3rem 0; }
+li > ul, li > ol { margin: 0.3rem 0 0.3rem; }
+strong { font-weight: 600; }
+code { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86em; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 3px; }
+pre { background: var(--code-bg); padding: 1rem 1.1rem; overflow-x: auto; border-radius: 4px; font-size: 0.84rem; line-height: 1.5; margin: 0 0 1.2rem; }
+pre code { background: none; padding: 0; font-size: inherit; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+.table-wrap { overflow-x: auto; margin: 0 0 1.4rem; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; line-height: 1.4; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); }
+th { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); font-weight: 500; background: var(--rail-bg); }
+tr:last-child td { border-bottom: 0; }
+.callout { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 4px 4px 0; }
+.callout p:last-child { margin-bottom: 0; }
+.callout-warn { border-left-color: var(--signal); background: var(--signal-soft); }
+.callout-accent { border-left-color: var(--accent); background: var(--accent-soft); }
+.callout-note { border-left-color: var(--slate); }
+sup { font-size: 0.72em; }
+.footnote { font-size: 0.9rem; color: var(--ink-2); }
+.refs ol { padding-left: 2rem; font-size: 0.9rem; }
+.refs li { margin: 0.45rem 0; word-break: break-word; }
+@media (max-width: 860px) {
+  .shell { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem 1rem 4rem; }
+  .rail { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 1rem; }
+  main { max-width: none; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<div class="shell">
+  <nav class="rail" aria-label="Contents">
+    <div class="eyebrow">Contents</div>
+    <div class="toc">
+<ul>
+<li><a href="#bottom-line">Bottom line</a></li>
+<li><a href="#what-automlr-actually-wants">What AutoMLR actually wants</a></li>
+<li><a href="#feedback-on-the-auto-game-dev-idea">Feedback on the auto-game-dev idea</a><ul>
+<li><a href="#what-is-genuinely-good-about-it">What is genuinely good about it</a></li>
+<li><a href="#what-will-not-work-as-literally-stated">What will not work as literally stated</a></li>
+<li><a href="#how-to-constrain-the-game-space-the-scope-rules">How to constrain the game space — the scope rules</a></li>
+<li><a href="#substrate-options-facts-verified-2728-aug-2026">Substrate options (facts verified 27–28 Aug 2026)</a></li>
+<li><a href="#other-ideas-worth-keeping-on-the-shelf">Other ideas worth keeping on the shelf</a></li>
+</ul>
+</li>
+<li><a href="#previous-work-and-where-it-falls-short">Previous work and where it falls short</a><ul>
+<li><a href="#a-autonomous-ml-research-systems-and-their-benchmarks">A. Autonomous ML-research systems and their benchmarks</a></li>
+<li><a href="#b-llm-driven-rl-automation-and-objectivealgorithm-discovery">B. LLM-driven RL automation and objective/algorithm discovery</a></li>
+<li><a href="#c-learning-based-game-testing-and-injected-bug-benchmarks">C. Learning-based game testing and injected-bug benchmarks</a></li>
+<li><a href="#d-foundation-model-game-agents-and-benchmarks">D. Foundation-model game agents and benchmarks</a></li>
+<li><a href="#e-game-generation-and-dsl-substrates">E. Game generation and DSL substrates</a></li>
+<li><a href="#f-difficulty-learnability-and-ai-playtesting">F. Difficulty, learnability and AI playtesting</a></li>
+</ul>
+</li>
+<li><a href="#direction-1-fresh-game-autorl">Direction 1 — Fresh-game AutoRL</a></li>
+<li><a href="#direction-2-discovered-testing-objectives">Direction 2 — Discovered testing objectives</a></li>
+<li><a href="#direction-3-causes-of-rl-unlearnability">Direction 3 — Causes of RL unlearnability</a></li>
+<li><a href="#comparison-and-recommendation">Comparison and recommendation</a><ul>
+<li><a href="#nine-day-plan-for-d2">Nine-day plan for D2</a></li>
+<li><a href="#abstract-drafts">Abstract drafts</a></li>
+<li><a href="#provenance-and-verification-checklist-part-2-material">Provenance and verification checklist (Part 2 material)</a></li>
+<li><a href="#part-3-seeds-one-page">Part 3 seeds (one page)</a></li>
+<li><a href="#what-to-decide-today">What to decide today</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+
+  </nav>
+  <main>
+    <h1 id="autodev-at-automlr">AutoDev at AutoMLR</h1>
+<p>Feedback on the auto-game-dev idea, the prior work it has to clear, and three fully specified directions — each reframed so that an autonomous agent's contribution <em>is</em> the paper's result — with a recommendation and a nine-day plan.</p>
+<p>Prepared 28 Aug 2026 for Andy (UW) · Venue: Workshop for Autonomous Machine Learning Research (AutoMLR), NeurIPS 2026, Sydney · Deadlines: abstract <strong>Sat 29 Aug</strong>, paper <strong>Sat 5 Sep</strong> (both already extended once; time zone to be posted) · Every citation below was checked against arXiv/Crossref/the live page on 27–28 Aug 2026.</p>
+<h2 id="bottom-line">Bottom line</h2>
+<aside class="callout callout-accent">
+<p><strong>Recommendation.</strong> Submit <strong>Direction 2 — "Discovered testing objectives."</strong> An autonomous code-evolution loop discovers an exploration objective for finding injected game defects; the paper's result is a <em>held-out transfer</em> claim (unseen games and unseen bug classes) against tuned hand-designed baselines. It has the crispest "decisive agent contribution" story (the discovered objective is agent-authored code), the harness already exists (ShinkaEvolve has native SLURM evaluation), it is the direction that converts unlimited GPU time most directly into evidence, and it keeps the auto-game-dev vision — an agent that plays your game and finds what is broken — at the center. Take <strong>Direction 1</strong> if you want the paper to be about the research agent itself rather than an artifact it discovered; take <strong>Direction 3</strong> only with a second person to own experimental design.</p>
+</aside>
+<p>Three facts change the shape of the whole project:</p>
+<ol>
+<li><strong>AutoMLR is not a games venue and not a systems venue.</strong> It accepts "machine learning research in which an autonomous agent either conducted the research end-to-end or made a decisive contribution to the paper's primary result," and the FAQ answers "Can I submit a systems-only paper?" with "No" [<a class="cite" href="#ref-1">1</a>]. A paper <em>about</em> a game-testing tool is out. The fix is a reframing, not a new idea: <strong>the game is the research problem, the "checker loop" is the autonomous researcher, and the paper's result is what that researcher discovered.</strong></li>
+<li><strong>The deadline is nine days from when this was scoped</strong>: abstract 29 August, paper 5 September [<a class="cite" href="#ref-1">1</a>]. Every design below is scoped to one full run on Hyak. Unity is out for this paper and stays the long-term target.</li>
+<li><strong>The prior art is dense and very recent.</strong> Each direction as first sketched has a 2025–26 near-neighbour — Agent² and LIMEN for D1, GBQA and GameXpert-Bench for D2's benchmark half and REvolve/Alet et al. for its discovery half, the Tetris-difficulty and Synthetic-Monitoring-Environments papers for D3. None is fatal, but each forces a narrower, more specific claim. Those claims are what the three directions are built on.</li>
+</ol>
+<h2 id="what-automlr-actually-wants">What AutoMLR actually wants</h2>
+<p>Quoted or paraphrased from automlr.com as of 28 Aug 2026 [<a class="cite" href="#ref-1">1</a>]; the site says final disclosure instructions ship with the submission portal.</p>
+<ul>
+<li><strong>Eligibility.</strong> "The paper must state the qualifying result in its abstract. Without the agent's contribution, the qualifying result could not have been established, or the paper's main conclusions would be materially different." Both a qualifying ML result <em>and</em> a detailed account of the system are required — "Neither component is sufficient on its own." Non-ML science is out of scope.</li>
+<li><strong>Three labelled parts; page limits cannot be reallocated.</strong> Part 1 (≤4 pp) "Auto research result — the hypothesis, method, evidence, and primary result generated or developed by the agent." Part 2 (≤4 pp) "System design — the agent, harness, tools, research loop, etc.," plus "commentary on the significance of the main result." Part 3 (≤1 p) "Reflections" on how the field should adapt, feeding the closing town hall. Nine pages total excluding references; Overleaf template provided.</li>
+<li><strong>Who writes what.</strong> "We expect much of Part 1 to be generated and written by the agent (including writing, figures, etc.)." "We expect Part 2 to be human-written; this will include details on the agent, prompts, harness, tools, research loop, human interventions, and verification." Authorship is exclusively human; authors "verify its claims, disclose agent involvement," and are responsible for "guarding against hallucinated results, figures, or citations." This tracks NeurIPS 2026's policy that agents cannot be authors and that non-standard LLM use must be documented [<a class="cite" href="#ref-2">2</a>].</li>
+<li><strong>Review.</strong> Blind review under the NeurIPS conflict-of-interest policy; at least three reviews; every submission must supply min(3, #authors) reviewers; accepted papers "will be published with their reviews and reviewers"; a non-author <strong>discussant</strong> prepares "an account of the contribution, strongest evidence, unresolved limitations, and questions for the author" and leads the session.</li>
+<li><strong>Logistics.</strong> Non-archival. "An individual who is listed as first author on one submission may not appear as an author on any other workshop submission." At least one author presents in person in Sydney on 11 or 12 December. Decisions 29 Sep; discussant notification 6 Oct; camera-ready 13 Nov.</li>
+<li><strong>Who is in the room.</strong> Invited speakers: Sherry Yang (RL, world models, agents for ML engineering), Mengdi Wang (RL theory, agents for discovery), Nik Dawson (AI and labour markets). Three organizers — Prakash, Wang and Greenwald — are co-authors of a May 2026 paper on training a 3B model to turn game-rule descriptions into executable "game code world models" with a rule-verification framework [<a class="cite" href="#ref-3">3</a>]. RL-on-games research done by agents is squarely in this committee's taste.</li>
+</ul>
+<p>What that implies for the design:</p>
+<ul>
+<li><strong>The primary result must be a falsifiable ML claim with a number</strong>, stated in the abstract, that the agent produced. "We built a system that finds bugs" is not one. "An agent-discovered objective reduces steps-to-defect by X% on held-out games" is.</li>
+<li><strong>The agent must visibly decide things</strong> — hypotheses, method, analysis — not merely execute a human-specified sweep. Every prior-art hunter in this study flagged the same failure mode independently: if humans build the substrate, the benchmark, the baselines and the analysis, the agent's contribution collapses to "ran the loop," which reads as human research with an LLM inside.</li>
+<li><strong>Provenance is a deliverable.</strong> Part 2 needs prompts, the loop, every human intervention, and how the numbers were verified. Plan the audit trail on day 1; Claude Code's hook events give a timestamped tool-call ledger for free [<a class="cite" href="#ref-4">4</a>].</li>
+<li><strong>Overclaiming novelty is the cheapest way to lose.</strong> Reviews are published and a discussant reads the paper adversarially. Related work must name the 2026 near-neighbours.</li>
+</ul>
+<h2 id="feedback-on-the-auto-game-dev-idea">Feedback on the auto-game-dev idea</h2>
+<h3 id="what-is-genuinely-good-about-it">What is genuinely good about it</h3>
+<ul>
+<li><strong>It decomposes exactly into an autonomous-research loop.</strong> "Look at the game → build an agent that can play it → get it good → use its play to find problems" is perceive → hypothesize → implement → experiment → analyze. Every step is checkable by execution, which is the property this community has learned to care about most: benchmarks of research agents find that roughly 80% of agent-produced experimental results are fabricated or invalid [<a class="cite" href="#ref-5">5</a>], that agents complete a fully correct end-to-end experiment 0.5% of the time [<a class="cite" href="#ref-6">6</a>], and that even frontier scaffolds beat a paper's own baselines in 1 of 15 attempts [<a class="cite" href="#ref-7">7</a>].</li>
+<li><strong>Games are the cheapest honest testbed for agent-run research.</strong> Programmatic state gives oracles — "the agent is outside the level bounds," "the goal is unreachable from here" — so the agent's claims can be verified without a human replaying anything. That directly answers the CFP's warning about hallucinated results.</li>
+<li><strong>Compute is your comparative advantage.</strong> All three directions are bottlenecked by simulator throughput and seed counts, not by ideas. JAX substrates on Hyak turn "thousands of PPO runs" into hours.</li>
+<li><strong>Contamination control comes for free.</strong> Games generated on 1 September are in no pretraining corpus. Almost no RL-automation or research-agent benchmark can say that: Agent² runs on MuJoCo/MetaDrive/MPE/SMAC [<a class="cite" href="#ref-8">8</a>]; MLGym and RE-Bench use public tasks [<a class="cite" href="#ref-9">9</a>, <a class="cite" href="#ref-10">10</a>]. The one recent exception treats a privately synthesized environment explicitly as a contamination control [<a class="cite" href="#ref-11">11</a>], which shows reviewers value the property.</li>
+</ul>
+<h3 id="what-will-not-work-as-literally-stated">What will not work as literally stated</h3>
+<ul>
+<li><strong>"Build your game in Unity" is a 2027 sentence.</strong> Unity ML-Agents' PyPI package has been frozen at 1.1.0 since October 2024, each new game needs Editor and C# work, and there is no headless vectorized path [<a class="cite" href="#ref-12">12</a>]; Godot RL Agents is lighter and explicitly lists automated gameplay testing as a goal, but still runs one OS process per environment [<a class="cite" href="#ref-13">13</a>]. Neither saturates a cluster in nine days. Keep engine integration as the product vision in Part 3.</li>
+<li><strong>"Games of all shapes and horizons" must become "one game family with a DSL."</strong> The agent needs a uniform way to read the game (a text spec), a uniform action/observation contract, and short fixed horizons; otherwise interface construction eats the schedule. That is exactly why PuzzleScript-in-JAX, Kinetix and XLand-MiniGrid exist [<a class="cite" href="#ref-14">14</a>, <a class="cite" href="#ref-15">15</a>, <a class="cite" href="#ref-16">16</a>].</li>
+<li><strong>"The agent finds bugs" is an application, not an ML result.</strong> Curiosity-driven RL testers are an EA SEED production line from 2020 to a July 2026 NHL 26 case study [<a class="cite" href="#ref-17">17</a>, <a class="cite" href="#ref-18">18</a>, <a class="cite" href="#ref-19">19</a>, <a class="cite" href="#ref-20">20</a>]; NetEase and Microsoft shipped Wuji and Inspector [<a class="cite" href="#ref-21">21</a>, <a class="cite" href="#ref-22">22</a>]; modl.ai sells integration-free VLM playtesters [<a class="cite" href="#ref-23">23</a>]; an LLM-agent bug-hunting benchmark with 124 injected bugs appeared this April [<a class="cite" href="#ref-24">24</a>]. To fit AutoMLR the <em>discovery</em> has to be the result — a discovered objective, a discovered recipe, a discovered causal explanation.</li>
+<li><strong>"An autonomous agent did science end-to-end" is no longer a headline.</strong> The AI Scientist, Agent Laboratory, Kosmos and CodeScientist own that sentence [<a class="cite" href="#ref-25">25</a>, <a class="cite" href="#ref-26">26</a>, <a class="cite" href="#ref-27">27</a>, <a class="cite" href="#ref-28">28</a>, <a class="cite" href="#ref-29">29</a>]; a July 2026 paper already runs a semi-autonomous RL research loop with pre-registered, falsifiable hypotheses [<a class="cite" href="#ref-30">30</a>]; and an audit literature now documents agents silently shrinking datasets and training budgets [<a class="cite" href="#ref-31">31</a>], narrowing exploration toward their source material [<a class="cite" href="#ref-32">32</a>], and defending general claims their own data contradicts [<a class="cite" href="#ref-33">33</a>]. Novelty has to live in the <em>object of study</em>, and the process has to be logged well enough to survive that audit.</li>
+</ul>
+<h3 id="how-to-constrain-the-game-space-the-scope-rules">How to constrain the game space — the scope rules</h3>
+<ol>
+<li><strong>Games are data, not engine code.</strong> Choose a substrate where a game or level is a text/JSON spec the agent can read and a program can mutate. This is what makes "the agent reads the game" and "inject a bug" both one-line operations.</li>
+<li><strong>Full programmatic state</strong>, so bug oracles and learnability labels are computed, never eyeballed.</li>
+<li><strong>Fixed horizon, discrete-ish actions, GPU-vectorized simulator</strong> — thousands of parallel environments per GPU; PPO runs that finish in minutes.</li>
+<li><strong>A frozen evaluation harness the agent cannot edit</strong>, with a sealed held-out split (games and, for D2, bug classes) fixed <em>before</em> the agent starts. This is the defence against the two documented failure modes of agent-driven search: overfitting to the training distribution [<a class="cite" href="#ref-34">34</a>] and the agent editing its own evaluation (Sakana's system once removed its own timeout) [<a class="cite" href="#ref-35">35</a>].</li>
+<li><strong>Contamination check by construction</strong>: generate games after the model's training cutoff and hash-check them against public corpora (e.g., the 951 scraped PuzzleScript games shipped with PuzzleJAX).</li>
+</ol>
+<h3 id="substrate-options-facts-verified-2728-aug-2026">Substrate options (facts verified 27–28 Aug 2026)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Substrate</th>
+<th>A game is…</th>
+<th>GPU-vectorized</th>
+<th>Full state</th>
+<th>Best for</th>
+<th>Caveats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PuzzleJAX</strong> [<a class="cite" href="#ref-14">14</a>] — <code>smearle/script-doctor</code>, MIT</td>
+<td>PuzzleScript text DSL; 951 scraped community games, 414 fully valid</td>
+<td>Yes (JAX; 2–16× the JS engine at large batch)</td>
+<td>Yes (multi-hot grids) + tree-search solver → exact reachability oracle</td>
+<td>D1 (heterogeneous interfaces), D2 softlock oracles, D3</td>
+<td>Not on PyPI; Python 3.13; <code>rigid</code> keyword unimplemented; small deterministic games → tree search may find defects without learning</td>
+</tr>
+<tr>
+<td><strong>Kinetix</strong> [<a class="cite" href="#ref-15">15</a>] — <code>pip install kinetix-env</code>, MIT, pushed May 2026</td>
+<td>JSON levels (shapes, joints, thrusters) with a level editor</td>
+<td>Yes (Jax2D physics)</td>
+<td>Yes (pytree)</td>
+<td><strong>D2</strong> — one JSON field = one defect; continuous state defeats tabular novelty; D1</td>
+<td>Fixed physics and action space → "unseen games" are unseen <em>levels</em>; one genre</td>
+</tr>
+<tr>
+<td><strong>XLand-MiniGrid</strong> [<a class="cite" href="#ref-16">16</a>] — <code>pip install xminigrid</code>, Apache-2.0</td>
+<td>Rule-tree tasks as <em>data</em>; millions of pre-sampled tasks</td>
+<td>Yes (millions of steps/s claimed)</td>
+<td>Yes</td>
+<td><strong>D3</strong> — interpretable design features (rule depth, goals, distractors)</td>
+<td>Gridworld only; well-known family</td>
+</tr>
+<tr>
+<td>Craftax [<a class="cite" href="#ref-36">36</a>] / NAVIX [<a class="cite" href="#ref-37">37</a>] / Jumanji [<a class="cite" href="#ref-38">38</a>] / Gymnax</td>
+<td>Fixed catalogs (one world / MiniGrid ports / 22 puzzles / classic control)</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Baselines and sanity checks</td>
+<td>New games need JAX code; heavily represented in pretraining</td>
+</tr>
+<tr>
+<td>PufferLib Ocean [<a class="cite" href="#ref-39">39</a>] — MIT, pushed 20 Aug 2026</td>
+<td>~55 C environments; a new one is ≈140 lines of C</td>
+<td>CUDA (20M steps/s claimed)</td>
+<td>Yes (C struct)</td>
+<td>Long-term option for LLM-written games</td>
+<td>Compiles from source; not JAX</td>
+</tr>
+<tr>
+<td>GVGAI/VGDL [<a class="cite" href="#ref-40">40</a>, <a class="cite" href="#ref-41">41</a>], Ludii/Ludax [<a class="cite" href="#ref-42">42</a>, <a class="cite" href="#ref-43">43</a>], Griddly [<a class="cite" href="#ref-44">44</a>]</td>
+<td>Text/YAML DSLs, 100+ games</td>
+<td>No (Java/CPU), or new JAX ports</td>
+<td>Yes</td>
+<td>Vocabulary and corpora</td>
+<td>Python paths stale since 2019–22; would burn the nine days</td>
+</tr>
+<tr>
+<td>Unity ML-Agents [<a class="cite" href="#ref-12">12</a>], Godot RL Agents [<a class="cite" href="#ref-13">13</a>]</td>
+<td>Engine scenes + scripts</td>
+<td>No</td>
+<td>Per-game instrumentation</td>
+<td>The product vision (Part 3)</td>
+<td>Not for this paper</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="other-ideas-worth-keeping-on-the-shelf">Other ideas worth keeping on the shelf</h3>
+<ul>
+<li><strong>Fresh-game contamination control as a reusable protocol</strong> (D1's core) bolts onto D2 or D3 at low cost: generate the held-out games on the day, hash-check them, report the "never-seen" number separately.</li>
+<li><strong>Agent-versus-agent breaking.</strong> One agent evolves levels a fixed tester fails on (unsupervised environment design), the other evolves the tester — a self-play QA curriculum. Strong follow-up; too much for nine days.</li>
+<li><strong>Human-feedback validation.</strong> Correlate agent playtest reports with human game-jam feedback. A real study, but human data is out of reach before 5 September, and it is not an ML result.</li>
+<li><strong>Self-improving play as the product loop.</strong> SIMA 2 already uses Gemini to generate tasks and rewards so the agent learns new skills in a new environment on its own [<a class="cite" href="#ref-45">45</a>]; the same shape, with a game DSL instead of 3D worlds, is the long-run auto-game-dev architecture.</li>
+</ul>
+<h2 id="previous-work-and-where-it-falls-short">Previous work and where it falls short</h2>
+<h3 id="a-autonomous-ml-research-systems-and-their-benchmarks">A. Autonomous ML-research systems and their benchmarks</h3>
+<p><strong>What exists.</strong> The AI Scientist closed the loop from idea to LaTeX at roughly $15 per paper [<a class="cite" href="#ref-25">25</a>]; AI Scientist-v2 replaced fixed templates with agentic tree search built on AIDE [<a class="cite" href="#ref-46">46</a>] and produced the first fully AI-generated manuscript to clear workshop peer review — at ICLR 2025's ICBINB workshop, scores 6/7/6, with humans choosing only the broad topic and the best of three candidates; the paper was withdrawn before publication [<a class="cite" href="#ref-26">26</a>, <a class="cite" href="#ref-35">35</a>]. Agent Laboratory automates literature review, experiments and report writing from a human-supplied idea [<a class="cite" href="#ref-27">27</a>]. Kosmos runs 12-hour cycles (about 42,000 lines of code and 1,500 papers per run) and reports 79.4% of its statements verified accurate [<a class="cite" href="#ref-28">28</a>]. CodeScientist ran hundreds of agent-generated experiments "broadly in the domain of agents and virtual environments," returning 19 discoveries of which 6 survived external review [<a class="cite" href="#ref-29">29</a>]. Agents4Science 2025 accepted 48 AI-first-authored papers — two tagged RL, none on games [<a class="cite" href="#ref-47">47</a>] — and among them BadScientist, which shows a fabrication-oriented agent can get past multi-model LLM reviewers [<a class="cite" href="#ref-48">48</a>]. Karpathy's autoresearch popularized the minimal pattern: an agent edits one training script under a five-minute budget, overnight [<a class="cite" href="#ref-49">49</a>]. A July 2026 paper runs a semi-autonomous RL research loop on quadruped navigation with immutable experiment cards and reports falsification rates [<a class="cite" href="#ref-30">30</a>].</p>
+<p>Benchmarks grade the same capability: MLE-bench (Kaggle) [<a class="cite" href="#ref-50">50</a>]; RE-Bench, where agents out-score human experts 4× at a two-hour budget but humans reach 2× the agents' score at 32 hours [<a class="cite" href="#ref-10">10</a>]; MLGym, whose 13 tasks include RL and game theory and where frontier models "usually" improve baselines "by finding better hyperparameters, but do not generate novel hypotheses, algorithms, architectures" [<a class="cite" href="#ref-9">9</a>]; MLR-Bench (201 workshop-style tasks; roughly 80% of results fabricated or invalid) [<a class="cite" href="#ref-5">5</a>]; EXP-Bench (461 tasks; 0.5% fully correct experiments) [<a class="cite" href="#ref-6">6</a>]; PaperBench (replication of 20 ICML papers; best agent 21%) [<a class="cite" href="#ref-51">51</a>]; ResearchGym (methods withheld from five ICML/ICLR/ACL repositories; a GPT-5 agent beats the baseline in 1 of 15 evaluations, Claude Code and Codex show the same gap) [<a class="cite" href="#ref-7">7</a>]; AIRA-dojo (scheduler-integrated search over solutions; medal rate 39.6% → 47.7%) [<a class="cite" href="#ref-52">52</a>]; and Agent² RL-Bench (can agents engineer RL post-training pipelines end-to-end under a fixed budget? — sometimes, but "stable agent-driven RL post-training remains rare") [<a class="cite" href="#ref-53">53</a>]. Audits find "methodological hallucinations": silently reduced datasets and budgets, oracles substituted for failed components [<a class="cite" href="#ref-31">31</a>]; agents narrowing exploration toward their sources [<a class="cite" href="#ref-32">32</a>]; and correct answers reached by the wrong mechanism [<a class="cite" href="#ref-33">33</a>].</p>
+<p><strong>Where it falls short for this project.</strong> (i) Almost none of it does RL <em>from scratch on an unseen environment</em>: MLGym's RL tasks are standard environments; Agent² RL-Bench targets LLM post-training on ALFWorld and DeepSearchQA. (ii) Every task is public and in pretraining corpora; contamination is unaddressed. (iii) "The agent did science" is saturated; the discussant will ask what was discovered and how it was verified. (iv) Reliability is the known weakness — Sakana's own list of failure modes (removed its own timeout, misreported numbers, cannot compare magnitudes) and BadScientist define the bar.</p>
+<h3 id="b-llm-driven-rl-automation-and-objectivealgorithm-discovery">B. LLM-driven RL automation and objective/algorithm discovery</h3>
+<p><strong>What exists.</strong> Eureka evolves reward code from training statistics and beats expert-written rewards on 83% of 29 Isaac Gym tasks [<a class="cite" href="#ref-54">54</a>]. Agent² takes a task description plus environment code and autonomously produces the MDP mapping, algorithm, architecture and hyperparameters, beating manually designed baselines by up to 55% on MuJoCo, MetaDrive, MPE and SMAC [<a class="cite" href="#ref-8">8</a>]. LIMEN evolves observation mappings <em>and</em> reward functions as executable programs from policy-training feedback, on novel gridworlds and continuous control, and finds that optimizing either alone "fails catastrophically on at least one domain" [<a class="cite" href="#ref-55">55</a>]. Environments themselves are generated by OMNI-EPIC (a foundation model writes environment and reward code filtered by learnability and interestingness) [<a class="cite" href="#ref-56">56</a>], Eurekaverse [<a class="cite" href="#ref-57">57</a>], EnvGen [<a class="cite" href="#ref-58">58</a>], and a 2026 closed loop that emits verified GPU implementations, using a privately synthesized environment as a contamination control [<a class="cite" href="#ref-11">11</a>]. Objective and algorithm discovery predates LLMs: Alet et al. searched a program DSL of curiosity mechanisms and found two that perform "on par or better than human-designed published curiosity algorithms" across gridworlds, Acrobot, Lunar Lander, Ant and Hopper [<a class="cite" href="#ref-59">59</a>]. The LLM-evolution wave then made "LLM evolves code, validated by full training runs" a standard recipe: DiscoPOP for preference losses [<a class="cite" href="#ref-60">60</a>]; DiscoRL's discovered update rules [<a class="cite" href="#ref-61">61</a>]; AlphaEvolve [<a class="cite" href="#ref-62">62</a>] and its open implementations ShinkaEvolve (native SLURM evaluation; bandit LLM ensemble; a circle-packing state of the art in 150 samples) [<a class="cite" href="#ref-63">63</a>] and OpenEvolve [<a class="cite" href="#ref-64">64</a>]; REvolve, which evolves complete RL update rules competitive with SAC/PPO/DQN/A2C on Gymnasium (GECCO 2026) [<a class="cite" href="#ref-65">65</a>]; and DeepMind's AlphaEvolve search over CFR/PSRO, which documents that the evolved code "optimizes for fitness on a specific training set," so only a distilled minimal core generalizes [<a class="cite" href="#ref-34">34</a>]. Surveys: AutoRL [<a class="cite" href="#ref-66">66</a>]; ADAS for agent architectures [<a class="cite" href="#ref-67">67</a>]; PCGRLLM for LLM-designed rewards in content generation [<a class="cite" href="#ref-68">68</a>].</p>
+<p><strong>Where it falls short.</strong> (i) Nobody searches for <em>testing or exploration objectives with a defect-detection fitness</em>; the target has always been task return or a learning rule. (ii) Nobody evaluates on environments that did not exist before the run. (iii) Held-out-operator or held-out-game generalization is rarely the headline, even though overfitting is the documented failure. (iv) None of these systems is framed as an autonomous <em>researcher</em> that states a falsifiable recipe and tests it.</p>
+<h3 id="c-learning-based-game-testing-and-injected-bug-benchmarks">C. Learning-based game testing and injected-bug benchmarks</h3>
+<p><strong>What exists.</strong> Wuji analyzed 1,349 real bugs to derive four test oracles and combined evolution with DRL to test NetEase combat games [<a class="cite" href="#ref-21">21</a>]. EA SEED's line runs from RL testers with tunable explore/exploit rewards [<a class="cite" href="#ref-17">17</a>], to curiosity-driven coverage in 3D levels [<a class="cite" href="#ref-18">18</a>], to CCPT — curiosity plus imitation near expert trajectories in a AAA-scale navigation environment [<a class="cite" href="#ref-19">19</a>] — to RAID, which adapts rewards across a population and found six distinct exploits against the NHL 26 goalie AI in a single experiment [<a class="cite" href="#ref-20">20</a>]. Inspector detects bugs from pixels via curiosity-driven exploration, object detection and imitation-based investigation, finding two potential bugs in two commercial games [<a class="cite" href="#ref-22">22</a>]; Ariyurek et al. compare synthetic and human-like testers [<a class="cite" href="#ref-69">69</a>]; GLIB learns a visual oracle for graphics glitches [<a class="cite" href="#ref-70">70</a>]; CA² conditions an RL tester on call-stack traces [<a class="cite" href="#ref-71">71</a>]. LLMs enter as oracles and testers: Taesiri et al. show zero-shot bug detection from event descriptions at up to 70.66% accuracy over 8 games [<a class="cite" href="#ref-72">72</a>] and build GlitchBench for multimodal glitch detection [<a class="cite" href="#ref-73">73</a>]; TITAN reaches 95% task completion testing commercial MMORPGs [<a class="cite" href="#ref-74">74</a>]; BugCraft reproduces Minecraft crash reports [<a class="cite" href="#ref-75">75</a>]; SMART reads AST diffs and constructs coverage-aware hybrid rewards for RL playtesters, reaching over 94% branch coverage of modified code at 98% task completion on Overcooked and Minecraft [<a class="cite" href="#ref-76">76</a>]; CureFuzz uses curiosity to fuzz trained policies [<a class="cite" href="#ref-77">77</a>]. Benchmarks with <em>injected</em> bugs: World of Bugs (Unity, perceptual bugs) [<a class="cite" href="#ref-78">78</a>]; GBQA — 30 games and 124 human-verified bugs built by a multi-agent pipeline, where the best frontier model finds 48.39% [<a class="cite" href="#ref-24">24</a>]; GameXpert-Bench (Aug 2026) — 100 repair tasks from 50 levels with 19–27 injected bugs each, and the finding that coding agents are "more reliable at producing playable foundations… than at discovering defects" [<a class="cite" href="#ref-79">79</a>]; and NEATEST's mutation analysis over 25 Scratch games [<a class="cite" href="#ref-80">80</a>]. Surveys and taxonomies: Politowski et al. [<a class="cite" href="#ref-81">81</a>], Lewis et al. [<a class="cite" href="#ref-82">82</a>]. Industry has converged on integration-free VLM testers [<a class="cite" href="#ref-23">23</a>].</p>
+<p><strong>Where it falls short.</strong> (i) Every testing objective is hand-designed — CCPT's curiosity form, RAID's diversity mechanism, SMART's per-diff template. (ii) The injected-bug benchmarks target prompted LLM agents or Unity; none is RL-trainable at the thousands-of-runs scale a discovery loop needs, and none ships RND/ICM/count-based baselines. (iii) Evaluation is coverage or qualitative agreement with human-found exploits, not steps-to-detection on ground-truth defects with held-out bug classes. (iv) CCPT's environment is proprietary; "beats CCPT" can only mean a re-implementation of its objective form.</p>
+<h3 id="d-foundation-model-game-agents-and-benchmarks">D. Foundation-model game agents and benchmarks</h3>
+<p><strong>What exists.</strong> Cradle plays commercial games from screenshots [<a class="cite" href="#ref-83">83</a>]; SIMA 2 follows instructions across 3D games and self-improves from Gemini-generated tasks and rewards [<a class="cite" href="#ref-45">45</a>]; PORTAL synthesizes behavior-tree policies for thousands of FPS games in production, deliberately avoiding RL [<a class="cite" href="#ref-84">84</a>]. Benchmarks: BALROG [<a class="cite" href="#ref-85">85</a>]; VideoGameBench, where the best models complete 0.48% of ten 1990s games (three kept secret) [<a class="cite" href="#ref-86">86</a>]; lmgame-Bench [<a class="cite" href="#ref-87">87</a>]; Orak [<a class="cite" href="#ref-88">88</a>]; GVGAI-LLM, 118 VGDL games "very far from being solved" with "persistent limitations of LLMs in spatial reasoning and basic planning" [<a class="cite" href="#ref-89">89</a>]; and gg-bench, whose LLM-generated games with RL self-play opponents yield 7–9% win rates for GPT-4o-class models and 31–36% for reasoning models [<a class="cite" href="#ref-90">90</a>].</p>
+<p><strong>Where it falls short.</strong> They measure <em>playing</em>, not research. LLM agents are consistently weak at spatial, long-horizon play in exactly the 2D families we would use — so an "LLM policy" arm is a known negative result, worth one paragraph, not a week. None injects bugs or studies learnability.</p>
+<h3 id="e-game-generation-and-dsl-substrates">E. Game generation and DSL substrates</h3>
+<p><strong>What exists.</strong> PuzzleJAX compiles any PuzzleScript game to a GPU engine and validates several hundred human-authored games, reporting that they are "simple and intuitive to understand, yet often deeply challenging to master" for search, RL and LLMs alike [<a class="cite" href="#ref-14">14</a>]; ScriptDoctor generates and play-tests PuzzleScript games with LLMs and tree search [<a class="cite" href="#ref-91">91</a>]; Autoverse [<a class="cite" href="#ref-92">92</a>] and Ludax [<a class="cite" href="#ref-43">43</a>] are the same group's evolvable and board-game DSLs. Kinetix procedurally generates tens of millions of 2D physics tasks and shows zero-shot transfer to unseen human-designed levels [<a class="cite" href="#ref-15">15</a>]; XLand-MiniGrid composes millions of rule-tree tasks [<a class="cite" href="#ref-16">16</a>]. LLM game generation spans VGDL rules and levels [<a class="cite" href="#ref-41">41</a>], Ludii games via evolution [<a class="cite" href="#ref-93">93</a>, <a class="cite" href="#ref-42">42</a>], story-driven worlds [<a class="cite" href="#ref-94">94</a>], and the organizers' own distillation of game-code world models into a 3B model with rule verification [<a class="cite" href="#ref-3">3</a>]; surveys cover the LLMs-and-games landscape [<a class="cite" href="#ref-95">95</a>]. Genie 3 generates interactive worlds from text [<a class="cite" href="#ref-96">96</a>].</p>
+<p><strong>Where it falls short.</strong> These are substrates and generators. No autonomous agent runs research on top of them, and none reports contamination-controlled, fresh-game generalization of an RL pipeline.</p>
+<h3 id="f-difficulty-learnability-and-ai-playtesting">F. Difficulty, learnability and AI playtesting</h3>
+<p><strong>What exists.</strong> King's group predicts per-level pass rates and churn from DRL (and DRL+MCTS) play, finding that an agent's best-case runs correlate with human data better than its average [<a class="cite" href="#ref-97">97</a>, <a class="cite" href="#ref-98">98</a>]; Kristensen et al. find the moves taken by the best ~5% of RL runs are the strongest predictor of human completion rate [<a class="cite" href="#ref-99">99</a>]; Gudmundsson et al. train human-like playtesters for difficulty QA [<a class="cite" href="#ref-100">100</a>]. DeepMind retrained AlphaZero per chess-rule variant to assess balance [<a class="cite" href="#ref-101">101</a>]; a March 2026 paper reads Tetris-variant difficulty off AlphaZero training reward and convergence [<a class="cite" href="#ref-102">102</a>]; Synthetic Monitoring Environments run controlled ablations of how state/action size, reward sparsity and optimal-policy complexity affect PPO/TD3/SAC [<a class="cite" href="#ref-103">103</a>]. No Regrets defines <em>learnability</em> as the levels an agent "can sometimes solve, but not always," shows regret proxies fail to predict it, and trains directly on it (the curriculum Kinetix uses) [<a class="cite" href="#ref-104">104</a>]; TRACED refines the proxy [<a class="cite" href="#ref-105">105</a>]; PIC/POIC predict task difficulty before training [<a class="cite" href="#ref-106">106</a>]; the Pharos study shows tabular hardness metrics miss "representation hardness" in deep RL [<a class="cite" href="#ref-107">107</a>]. RuleSmith autonomously balances a civilization-style game with LLM self-play and Bayesian optimization [<a class="cite" href="#ref-108">108</a>]; Xiao &amp; Yang show LLM testers' scores correlate with human-reported difficulty on Wordle and Slay the Spire [<a class="cite" href="#ref-109">109</a>]; MeepleLM simulates diverse subjective playtesters for board-game critique [<a class="cite" href="#ref-110">110</a>]; OMNI-EPIC uses foundation-model-judged learnability as a generation filter [<a class="cite" href="#ref-56">56</a>]; Automated Capability Discovery has one model propose thousands of tasks to map another's failure modes [<a class="cite" href="#ref-111">111</a>].</p>
+<p><strong>Where it falls short.</strong> Human-run studies on single game families with hand-picked knobs; correlational, not interventional; no predictor validated on sealed held-out designs; nothing attributes unlearnability to interpretable design features or tests repairs; and none of it is done by an autonomous agent.</p>
+<h2 id="direction-1-fresh-game-autorl">Direction 1 — Fresh-game AutoRL</h2>
+<p><em>Does an RL-automation agent's recipe transfer to games that did not exist yesterday?</em></p>
+<p><strong>Question.</strong> Given games generated after every model's training cutoff, can an autonomous research agent induce an explicit pipeline recipe — observation/action interface, reward shaping, algorithm and hyperparameters, conditioned on game properties — that transfers to a sealed second batch of fresh games, and does it beat both default PPO and the published automation recipes? The sharpest version, which the prior-art hunt surfaced: hand the recipe to a <em>search-free executor</em> with no iteration budget on the sealed batch. If recipe plus cheap executor matches the expensive agent-from-scratch, the agent produced transferable <em>knowledge</em>, not transferable compute — which is exactly the workshop's bar, and something none of the near-neighbours claims.</p>
+<p><strong>Why it fits AutoMLR.</strong> The agent does the research: it decides what to try per game, induces a written, falsifiable recipe, runs the transfer sweep, analyzes it and writes Part 1. The result — the recipe's held-out transfer number plus the taxonomy of game properties on which every recipe fails — cannot exist without the agent. It also targets precisely what MLGym found agents do <em>not</em> do: generate hypotheses rather than tune hyperparameters [<a class="cite" href="#ref-9">9</a>].</p>
+<p><strong>Qualifying result (abstract template).</strong> "On a sealed batch of <em>N</em> freshly generated PuzzleScript games unseen by any model, the recipe induced by an autonomous research agent on a disjoint batch — executed one-shot by a search-free executor with no iteration budget — raised the fixed-budget solve rate from <em>X</em>% (default PPO) and <em>Y</em>% (re-implemented Agent²/LIMEN-style automation) to <em>Z</em>% (95% CI over 10 seeds), within <em>W</em> points of the full research agent at a fraction of its cost, and identified {property classes} on which every recipe fails."</p>
+<p><strong>Hypotheses the agent starts from (it may replace them — that is the point).</strong> H1: observation design (object-channel encodings, action masking) explains more variance in solve rate than algorithm or hyperparameter choice. H2: LLM-written potential-based shaping derived from the win condition helps sparse-reward games but hurts games with irreversible moves. H3: a recipe induced on batch A transfers to batch B with at most ε loss in solve rate. H4: recipe plus a search-free executor matches the iterating agent on batch B — knowledge transfers without compute.</p>
+<p><strong>Substrate and game space.</strong> PuzzleJAX as the engine [<a class="cite" href="#ref-14">14</a>]. Fresh games come from (a) rule and level mutation of validated corpus games and (b) LLM-authored PuzzleScript in the ScriptDoctor pattern [<a class="cite" href="#ref-91">91</a>], compiled through PuzzleJAX. Keep a game only if it compiles, the tree-search solver certifies solvability within a depth bound, a random policy solves fewer than 5% of episodes, and a short PPO probe places it in the learnability band [<a class="cite" href="#ref-104">104</a>] — PuzzleJAX's own suite is far from solved, and floor effects would zero every arm. Hash every accepted game against the 951-game scraped corpus. Fallback: Kinetix levels [<a class="cite" href="#ref-15">15</a>] — faster and JSON-native, but the fixed interface removes the interface-construction task that distinguishes D1 from plain hyperparameter optimization.</p>
+<p><strong>The autonomous system.</strong> A coding agent (Claude Code driven by a <code>program.md</code>-style brief, in the autoresearch pattern [<a class="cite" href="#ref-49">49</a>]) with tools to read a game spec, write JAX wrappers, shaping functions and configs, submit SLURM arrays, read metrics, plot, and write LaTeX. A frozen evaluation script for batch B that the agent cannot modify. Every tool call is logged through hooks [<a class="cite" href="#ref-4">4</a>]; one git commit per experiment with the generating prompt in the message.</p>
+<p><strong>Arms.</strong> (a) default PPO (PuzzleJAX baseline); (b) time-boxed re-implementations of Agent²-style MDP mapping + HPO [<a class="cite" href="#ref-8">8</a>] and LIMEN-style joint observation/reward evolution [<a class="cite" href="#ref-55">55</a>]; (c) the research agent iterating from scratch on batch B (expensive reference); (d) the agent's written recipe applied one-shot by a search-free executor (the headline arm); (e) optional: learnability-sampled curriculum [<a class="cite" href="#ref-104">104</a>]. Equal environment-step budgets per game; 10 seeds; report the LLM/GPU cost of each arm.</p>
+<p><strong>Metrics.</strong> Solve rate at budget; normalized return; area under the learning curve; per-property breakdown; transfer gap (batch A → B); recipe length and specificity.</p>
+<p><strong>Novelty positioning.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Closest work</th>
+<th>What it does</th>
+<th>What D1 keeps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent² [<a class="cite" href="#ref-8">8</a>]</td>
+<td>LLM builds MDP mapping, picks algorithm/architecture/hyperparameters, iterates; up to 55% over manual baselines on public suites</td>
+<td>Fresh-game contamination control; an explicit induced recipe as artifact; published recipes as baselines; a negative-result taxonomy</td>
+</tr>
+<tr>
+<td>LIMEN [<a class="cite" href="#ref-55">55</a>]</td>
+<td>Evolves observation and reward programs from training feedback; co-design finding</td>
+<td>Algorithm/hyperparameter choice, cross-game recipe, transfer to sealed games</td>
+</tr>
+<tr>
+<td>Agent² RL-Bench [<a class="cite" href="#ref-53">53</a>]</td>
+<td>Benchmarks agents engineering RL post-training pipelines under a budget</td>
+<td>From-scratch game-playing policies; never-seen environments</td>
+</tr>
+<tr>
+<td>MLGym / ResearchGym [<a class="cite" href="#ref-9">9</a>, <a class="cite" href="#ref-7">7</a>]</td>
+<td>Research-agent benchmarks; withheld-method protocol</td>
+<td>RL on generated games; contamination-free tasks</td>
+</tr>
+<tr>
+<td>PuzzleJAX / GVGAI-LLM [<a class="cite" href="#ref-14">14</a>, <a class="cite" href="#ref-89">89</a>]</td>
+<td>Substrates reporting that the suites are far from solved</td>
+<td>No autonomous agent configures RL there</td>
+</tr>
+<tr>
+<td>PORTAL [<a class="cite" href="#ref-84">84</a>]</td>
+<td>LLM writes behavior-tree policies for thousands of FPS games</td>
+<td>Actual RL research; empirical findings about learning</td>
+</tr>
+<tr>
+<td>AutoEnv [<a class="cite" href="#ref-112">112</a>]</td>
+<td>Auto-generates heterogeneous environments (AutoEnv-36) to measure whether one learning method transfers; finds fixed methods plateau</td>
+<td>Learners are in-context LLM agents there; D1 trains RL policies, engineers interfaces, uses a sealed second batch, and transfers a written recipe. Use its plateau finding as the motivating negative result</td>
+</tr>
+<tr>
+<td>EnvHarness, GIFT, reward-observation-space evolution [<a class="cite" href="#ref-113">113</a>, <a class="cite" href="#ref-114">114</a>, <a class="cite" href="#ref-115">115</a>]</td>
+<td>Automated wrapper synthesis; LLM-designed state features and shaping refined from PPO diagnostics</td>
+<td>Cross-game recipe; fresh-game generalization; algorithm choice</td>
+</tr>
+<tr>
+<td>DiscoGen / Camyla [<a class="cite" href="#ref-116">116</a>, <a class="cite" href="#ref-117">117</a>]</td>
+<td>Procedurally generated, contamination-free tasks for automated ML discovery / autonomous research</td>
+<td>Playable games; interface and shaping engineering; the executor test. Cite both or the contamination framing reads as derivative</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Risks and mitigations.</strong> <em>Floor effects</em> — filter to the learnability band before the agent starts. <em>Prior-work collision</em> — treat Agent²/LIMEN as baselines, not as omitted related work. <em>Contamination leakage</em> — mutation of corpus games can leak; hash-check and prefer LLM-authored games. <em>Compile rate</em> of LLM-authored PuzzleScript is unreported; budget a day-1 spike. <em>Seed variance</em> — 10 seeds per game per arm; cheap on Hyak, but the logging must exist. <em>Human-pipeline baseline</em> — unaffordable in nine days; use published recipes instead and say so. <em>Decisiveness</em> — if the agent only tunes, reviewers will read "HPO"; require it to emit and test a recipe. <em>"Novel conjunction" reviews badly</em> — every ingredient (interface co-design [<a class="cite" href="#ref-114">114</a>, <a class="cite" href="#ref-55">55</a>], wrapper synthesis [<a class="cite" href="#ref-113">113</a>], diagnostic-driven shaping [<a class="cite" href="#ref-118">118</a>, <a class="cite" href="#ref-119">119</a>], fresh-environment measurement [<a class="cite" href="#ref-112">112</a>]) is individually claimed; the executor experiment is what makes D1 a result rather than a combination. No published work combines Kinetix or PuzzleJAX with an LLM-driven RL pipeline — that hole is real, but it is a hole, not a contribution.</p>
+<p><strong>Nine-day feasibility: medium-hard.</strong> Needs an agent that drives SLURM, a generator with four filters, two baseline re-implementations and the sealed split. One person can do it only with a mutation-only generator and simplified baselines.</p>
+<p><strong>Paper sketch.</strong> Part 1 (agent-written): the recipe, the transfer table, the failure taxonomy, learning curves. Part 2 (human): the brief, tools, filters, the frozen evaluator, every intervention, how numbers were recomputed from logs. Part 3: contamination-controlled evaluation as a norm for autonomous RL research.</p>
+<h2 id="direction-2-discovered-testing-objectives">Direction 2 — Discovered testing objectives</h2>
+<p><em>Does an agent-discovered exploration objective transfer across bug classes and games?</em></p>
+<p><strong>Question.</strong> Can an autonomous code-evolution loop discover a single exploration objective, expressed as code, that finds injected defects faster than tuned hand-designed objectives on held-out games <em>and held-out bug classes</em> — and does searching against a defect-detection fitness produce something that task-return search does not?</p>
+<p><strong>Why it fits AutoMLR.</strong> The discovered objective is agent-authored code; the transfer study is agent-run; Part 1 is agent-written. Without the loop there is no result. Humans pose the question, build the substrate, the mutation catalogue, the oracles, the baselines and the sealed split — all disclosed in Part 2. To keep the agent's contribution decisive rather than "mutation operator," the agent also proposes the hypotheses, designs the transfer ablations, and writes the analysis, with its reasoning logged.</p>
+<p><strong>Qualifying result (abstract template).</strong> "An autonomous discovery loop found an exploration objective that reduced expected steps-to-first-defect by <em>X</em>% relative to the best tuned hand-designed baseline (count-based / RND / ICM / curiosity-proximity) on held-out games and held-out defect classes (95% CI over <em>K</em> mutants × 10 seeds), whereas objectives evolved against task return transferred to only <em>Y</em>% of held-out classes."</p>
+<p><strong>Hypotheses.</strong> H1: objectives evolved against defect-detection fitness transfer to unseen defect classes; objectives evolved against task return do not. H2: the transferable core of a discovered objective is small (distillation reduces complexity without losing transfer, as in [<a class="cite" href="#ref-34">34</a>]). H3: tabular count-based novelty is the strongest hand-designed baseline in discrete DSL games but not in continuous physics games.</p>
+<p><strong>Substrate.</strong> Kinetix primary [<a class="cite" href="#ref-15">15</a>]: JSON levels, so a defect is a field edit; continuous physics state gives headroom over tabular novelty; <code>pip install kinetix-env</code>; active repository. PuzzleJAX secondary [<a class="cite" href="#ref-14">14</a>]: its tree-search solver provides <em>exact</em> reachability oracles for softlocks, but small deterministic state spaces let search find defects without learning — a search baseline must be shown insufficient before learning is claimed.</p>
+<p><strong>Defect catalogue — witness-state bugs with programmatic oracles.</strong> Detection = first visit to a witness state.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Injection (Kinetix JSON)</th>
+<th>Oracle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collision hole</td>
+<td>Remove or thin a wall segment</td>
+<td>Agent body intersects previously solid geometry</td>
+</tr>
+<tr>
+<td>Out-of-bounds</td>
+<td>Delete a boundary polygon</td>
+<td>Position outside level extents</td>
+</tr>
+<tr>
+<td>Unintended shortcut</td>
+<td>Open a path through a region designed impassable</td>
+<td>Goal reached while trajectory crosses the flagged region</td>
+</tr>
+<tr>
+<td>Reward exploit</td>
+<td>Make a reward object re-triggerable</td>
+<td>Episode return exceeds the designed maximum</td>
+</tr>
+<tr>
+<td>Physics anomaly</td>
+<td>Perturb mass/restitution/motor limits</td>
+<td>Speed or penetration beyond engine tolerances</td>
+</tr>
+<tr>
+<td>Softlock (PuzzleJAX only)</td>
+<td>Rule edit that makes the goal unreachable from some visited states</td>
+<td>Solver certifies goal unreachable from the current state</td>
+</tr>
+</tbody>
+</table></div>
+<p>Calibrate before searching: discard mutants a random policy triggers within budget and mutants nothing triggers; report the discarded fraction. Be explicit that this construction follows GBQA, World of Bugs and mutation analysis [<a class="cite" href="#ref-24">24</a>, <a class="cite" href="#ref-78">78</a>, <a class="cite" href="#ref-80">80</a>] rather than inventing the idea.</p>
+<p><strong>Splits, frozen before the loop starts.</strong> Games: search set / held-out set (fresh levels generated on the day, hash-checked). Defect classes: leave-one-class-out rotation; the headline number is on the held-out class.</p>
+<p><strong>The loop.</strong> ShinkaEvolve [<a class="cite" href="#ref-63">63</a>] (native SLURM job backends, multi-run noisy fitness, novelty rejection) or OpenEvolve [<a class="cite" href="#ref-64">64</a>]. The LLM proposes <code>intrinsic_reward(state, next_state, history)</code> in JAX inside the evolve block; fitness = normalized expected steps-to-first-witness aggregated over search games × search classes × seeds, with a dense surrogate (area under the detection curve) to tame binary noise; oracle predicates are <em>not</em> visible to the proposer — the interface exposes only raw state, so oracle-matching solutions cannot be written by construction. A control run uses the same loop with task-return fitness. Scale: hundreds of candidates, each scored by dozens of short vectorized PPO runs — hours on a few GPUs. Eureka's reward-reflection loop is the closest published analogue of the inner mechanism [<a class="cite" href="#ref-54">54</a>].</p>
+<p><strong>Baselines — tuned, not strawmen.</strong> Count-based novelty over hashed state; RND; ICM; a re-implementation of CCPT's curiosity-plus-proximity objective form (its environment is proprietary [<a class="cite" href="#ref-19">19</a>]); random and task-return PPO; tree search where applicable. Each gets a small hyperparameter sweep on the search set.</p>
+<p><strong>Metrics.</strong> Steps-to-first-trigger (mean, median); detection AUC; fraction detected within budget; the class × class transfer matrix; objective complexity before and after distillation.</p>
+<p><strong>Novelty positioning.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Closest work</th>
+<th>What it does</th>
+<th>What D2 keeps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alet et al. 2020 [<a class="cite" href="#ref-59">59</a>]</td>
+<td>Program search over a hand-built curiosity DSL, task-return fitness, transfer across environments</td>
+<td>LLM proposer over open code; defect-detection fitness; held-out defect-class transfer as the claim</td>
+</tr>
+<tr>
+<td>GBQA / GameXpert-Bench / World of Bugs [<a class="cite" href="#ref-24">24</a>, <a class="cite" href="#ref-79">79</a>, <a class="cite" href="#ref-78">78</a>]</td>
+<td>Injected-bug benchmarks for LLM agents or Unity</td>
+<td>RL-trainable, GPU-vectorized suite with witness oracles and exploration baselines</td>
+</tr>
+<tr>
+<td>CCPT / RAID / SMART [<a class="cite" href="#ref-19">19</a>, <a class="cite" href="#ref-20">20</a>, <a class="cite" href="#ref-76">76</a>]</td>
+<td>Hand-designed or per-diff LLM-written testing rewards</td>
+<td>A discovered, general objective evaluated on ground-truth defects</td>
+</tr>
+<tr>
+<td>REvolve / DeepMind multiagent discovery [<a class="cite" href="#ref-65">65</a>, <a class="cite" href="#ref-34">34</a>]</td>
+<td>LLM evolves RL update rules / game-theoretic solvers</td>
+<td>Different target (exploration objectives), defect fitness, explicit anti-overfitting protocol</td>
+</tr>
+<tr>
+<td>Eureka [<a class="cite" href="#ref-54">54</a>]</td>
+<td>Reward code evolved from training statistics for robot tasks</td>
+<td>Testing objectives; games; transfer across bug classes</td>
+</tr>
+<tr>
+<td>CureFuzz [<a class="cite" href="#ref-77">77</a>]</td>
+<td>Curiosity to fuzz a trained policy</td>
+<td>The environment, not the policy, is the system under test</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Risks and mitigations.</strong> <em>Baseline collapse</em> — count-based novelty is near-optimal in small discrete games; that is why Kinetix is primary. <em>Overfitting to operators</em> — the documented failure of evolved code [<a class="cite" href="#ref-34">34</a>]; the held-out class is the headline and the objective is distilled. <em>Degenerate oracle-matching objectives</em> — oracle-blind interface plus held-out classes. <em>Noisy binary fitness</em> — dense surrogate, many mutants and seeds. <em>"Agent = mutation operator"</em> — the agent proposes hypotheses, designs ablations, writes Part 1; the loop's reasoning is logged. <em>Time</em> — the mutation harness and oracles are the unglamorous 2–3 days; start them first.</p>
+<p><strong>Nine-day feasibility: medium.</strong> The search loop exists; the substrate installs with pip; the new code is the defect injector, five oracles, four baselines and the frozen evaluator.</p>
+<p><strong>Paper sketch.</strong> Part 1 (agent-written): the discovered objective (code), the transfer matrix, detection curves against baselines, the task-return control, the distillation ablation. Part 2 (human): substrate, catalogue, oracles, splits, loop configuration, prompts, interventions ledger, verification. Part 3: what counts as "decisive" when a human designs the search space — and why witness oracles make agent claims cheap to check.</p>
+<h2 id="direction-3-causes-of-rl-unlearnability">Direction 3 — Causes of RL unlearnability</h2>
+<p><em>Can an agent discover, and interventionally validate, which design features make games unlearnable?</em></p>
+<p><strong>Question.</strong> Can an autonomous agent discover which design features cause games to be unlearnable for RL, validate them with matched-pair ablations, and produce a predictor plus repair rules that hold on sealed held-out designs — beating expert priors and published difficulty measures?</p>
+<p><strong>Why it fits AutoMLR.</strong> The hypotheses, the minimal-pair designs, the predictor and the repairs are the agent's; the human fixes the substrate, the learnability definition and the sealed pool. The headline is a held-out prediction number, which makes non-obviousness a measured quantity rather than an assertion.</p>
+<p><strong>Qualifying result (abstract template).</strong> "An autonomous agent proposed and tested <em>K</em> design-feature hypotheses with compute-matched matched-pair ablations (effect sizes with CIs), yielding a learnability predictor with AUROC <em>X</em> on a sealed held-out pool versus <em>Y</em> for PIC/POIC and <em>Z</em> for an LLM prior without experiments; its repair rules raised the solve rate of predicted-unlearnable held-out levels from <em>A</em>% to <em>B</em>%."</p>
+<p><strong>Substrate.</strong> XLand-MiniGrid primary [<a class="cite" href="#ref-16">16</a>]: rule trees as data, millions of tasks, interpretable features (rule depth, number of goals, distractors, grid size). PuzzleJAX secondary [<a class="cite" href="#ref-14">14</a>] for developer-authored puzzles (closer to the product vision, harder to control confounds). Learnability is inherited, not claimed: the sometimes-solvable band under a fixed budget [<a class="cite" href="#ref-104">104</a>], measured over seeds and a small hyperparameter grid to break the "unlearnable for default PPO" confound.</p>
+<p><strong>The loop.</strong> (1) The agent explores a discovery pool; (2) proposes hypotheses of the form "feature F raises unlearnability via mechanism M"; (3) <em>writes the mutation</em> — a DSL edit that toggles F while holding size, object count, horizon and solution length fixed; (4) runs compute-matched sweeps (many seeds, many pairs); (5) fits and validates a predictor on the sealed pool; (6) proposes repairs and tests them. Baselines for the predictor: PIC/POIC [<a class="cite" href="#ref-106">106</a>], optimal solution length, reward sparsity, a learnability proxy [<a class="cite" href="#ref-104">104</a>, <a class="cite" href="#ref-105">105</a>], and an LLM prior without experiments.</p>
+<p><strong>Novelty positioning.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Closest work</th>
+<th>What it does</th>
+<th>What D3 keeps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tetris difficulty / Synthetic Monitoring Environments [<a class="cite" href="#ref-102">102</a>, <a class="cite" href="#ref-103">103</a>]</td>
+<td>Human-run difficulty and ablation studies, single families, correlational</td>
+<td>Agent-run; generated design space; interventional minimal pairs; prediction on sealed designs; repair test</td>
+</tr>
+<tr>
+<td>King / Roohi et al. / Kristensen et al. [<a class="cite" href="#ref-97">97</a>, <a class="cite" href="#ref-98">98</a>, <a class="cite" href="#ref-99">99</a>]</td>
+<td>Human difficulty estimated from agent play</td>
+<td>Learnability of training itself; feature-level explanation</td>
+</tr>
+<tr>
+<td>OMNI-EPIC / Eurekaverse [<a class="cite" href="#ref-56">56</a>, <a class="cite" href="#ref-57">57</a>]</td>
+<td>Learnability as a generation filter</td>
+<td>Learnability as the object of study</td>
+</tr>
+<tr>
+<td>No Regrets / PIC / Pharos [<a class="cite" href="#ref-104">104</a>, <a class="cite" href="#ref-106">106</a>, <a class="cite" href="#ref-107">107</a>]</td>
+<td>Measure or predict learnability/difficulty; no design-feature attribution</td>
+<td>Attribution to authored features; validated repairs</td>
+</tr>
+<tr>
+<td>CodeScientist / "AI Scientist that doesn't drift" [<a class="cite" href="#ref-29">29</a>, <a class="cite" href="#ref-30">30</a>]</td>
+<td>Agent-run science in virtual environments and RL</td>
+<td>The specific validated object; the developer-facing repair rule</td>
+</tr>
+<tr>
+<td>RuleSmith / Xiao &amp; Yang [<a class="cite" href="#ref-108">108</a>, <a class="cite" href="#ref-109">109</a>]</td>
+<td>LLM agents balance a game or proxy human difficulty</td>
+<td>RL learnability, generated games, causal claims</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Risks and mitigations.</strong> <em>Obviousness</em> — "sparse reward and long horizons are hard" is folklore; the prediction contest against priors on sealed designs, and at least one replicated counter-intuitive pair, are the answer. <em>Confounds</em> — rule complexity, horizon and solution length co-vary in generated games; genuine minimal pairs with held-fixed covariates are the hard engineering. <em>Label cost</em> — learnability labels need many seeds; only vectorized substrates make this affordable. <em>Recipe dependence</em> — a small hyperparameter grid per design point. <em>Faithfulness</em> — publish experiment cards with seeds and budgets [<a class="cite" href="#ref-31">31</a>, <a class="cite" href="#ref-30">30</a>]. <em>Decisiveness</em> — the factor grid must visibly be the agent's. <em>Scoop risk</em> — the PuzzleJAX/ScriptDoctor group holds the substrate and publishes continuously; differentiate on causality and prediction.</p>
+<p><strong>Nine-day feasibility: medium-hard.</strong> The substrate is ready, but rigorous causal design under a deadline is the heaviest load of the three; it wants a second person.</p>
+<p><strong>Paper sketch.</strong> Part 1: hypotheses, minimal-pair effect sizes, predictor performance on the sealed pool, repair results. Part 2: substrate, learnability protocol, sealed split, agent loop and prompts, interventions, verification. Part 3: agent-run controlled experiments as the unit of autonomous science, versus benchmark optimization.</p>
+<h2 id="comparison-and-recommendation">Comparison and recommendation</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>D1 Fresh-game AutoRL</th>
+<th>D2 Discovered testing objectives</th>
+<th>D3 Causes of unlearnability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent's decisive contribution</td>
+<td>An induced recipe and its transfer test — visible, but reads as "HPO" unless the recipe is explicit</td>
+<td>A discovered objective (agent-authored code) plus the transfer study — the clearest artifact</td>
+<td>Hypotheses, minimal-pair designs, predictor, repairs — decisive only if the factor grid is visibly the agent's</td>
+</tr>
+<tr>
+<td>Novelty after the 2026 prior art</td>
+<td>Partial: Agent² and LIMEN own the pipeline; the fresh-game protocol is the defensible axis</td>
+<td>The conjunction (LLM code search × exploration objective × defect fitness) is unoccupied; held-out-class transfer is the claim</td>
+<td>Causal + predictive + repair on a generated design space is unoccupied; the measurement instrument is not</td>
+</tr>
+<tr>
+<td>Chance of a null result</td>
+<td>Medium-high (floor effects; may not beat tuned baselines)</td>
+<td>Medium (count-based may tie in discrete games; mitigated by Kinetix); a mixed transfer matrix is still a result</td>
+<td>High (folklore rediscovery; confounds)</td>
+</tr>
+<tr>
+<td>Engineering to build</td>
+<td>Agent-on-SLURM harness, generator with filters, two baseline re-implementations</td>
+<td>Defect injector, five oracles, four baselines, frozen evaluator; the loop exists</td>
+<td>Minimal-pair mutation operators with held-fixed covariates; label pipeline</td>
+</tr>
+<tr>
+<td>Compute leverage</td>
+<td>High</td>
+<td>Very high (fitness = many short vectorized runs)</td>
+<td>Very high (label sweeps)</td>
+</tr>
+<tr>
+<td>Fit to the auto-game-dev vision</td>
+<td>Medium (the "build the agent" half)</td>
+<td>High (the "find what's broken" half)</td>
+<td>High (the "explain why the level fails" half)</td>
+</tr>
+<tr>
+<td>Likely discussant attack</td>
+<td>"This is Agent² on PuzzleScript"</td>
+<td>"Alet 2020 plus GBQA" — answered by the held-out-class transfer</td>
+<td>"You rediscovered sparse reward"</td>
+</tr>
+<tr>
+<td>Nine-day feasibility (one person)</td>
+<td>Medium-hard</td>
+<td><strong>Medium</strong></td>
+<td>Medium-hard</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="callout callout-accent">
+<p><strong>Verdict.</strong> D2. It is the only direction where the agent's output is an artifact a reviewer can run, where the harness already exists, where a mixed result is still a result, and where the paper's framing — <em>does a discovered testing objective generalize, or does objective search overfit the faults it was searched on?</em> — is a question none of the near-neighbours asked. It also feeds directly back into the auto-game-dev product: the discovered objective is the thing the checker loop would ship.</p>
+</aside>
+<p>If the paper's identity matters more than the artifact — you want to be known for "an autonomous RL researcher" — take D1 and borrow D2's discipline (frozen evaluator, sealed split, contamination hashes). Do not attempt D3 alone before 5 September.</p>
+<h3 id="nine-day-plan-for-d2">Nine-day plan for D2</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Work</th>
+<th>Output that must exist by the end of the day</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fri 28 Aug</strong></td>
+<td>Decide. Create the OpenReview submission (title, authors, provisional abstract). Install <code>kinetix-env</code> + JAX/CUDA on Hyak; PPO throughput test on one GPU. Install ShinkaEvolve with the SLURM backend; run its shipped example end to end. Turn on hook-based logging and a git-per-experiment convention.</td>
+<td>Throughput number; ShinkaEvolve job runs on SLURM; provenance ledger writing</td>
+</tr>
+<tr>
+<td><strong>Sat 29 Aug</strong> — abstract deadline</td>
+<td>Submit the abstract (state the qualifying result as the claim under test; confirm on the portal whether edits are allowed until 5 Sep). Implement the defect injector (five classes) and oracles; calibrate on ~20 base levels; discard trivial and impossible mutants.</td>
+<td>Injector + oracles + calibration table</td>
+</tr>
+<tr>
+<td><strong>Sun 30 Aug</strong></td>
+<td>Baselines (count-based, RND, ICM, curiosity-proximity, random, task-return PPO) with small sweeps on the search set. Generate fresh held-out levels; hash-check; freeze the split and the evaluation script (read-only for the agent). Write the agent's research brief and hypothesis prompt.</td>
+<td>Baseline table on the search set; sealed split committed</td>
+</tr>
+<tr>
+<td><strong>Mon 31 Aug</strong></td>
+<td>Launch the discovery loop (defect fitness) and the control loop (task-return fitness). Target: hundreds of candidates × (games × classes × seeds) short PPO runs.</td>
+<td>Both loops running; archive growing</td>
+</tr>
+<tr>
+<td><strong>Tue 1 Sep</strong></td>
+<td>Monitor; the agent writes an interim analysis; second generation if the archive stalls; distill top objectives to minimal cores.</td>
+<td>Candidate objective(s) + distilled versions</td>
+</tr>
+<tr>
+<td><strong>Wed 2 Sep</strong></td>
+<td>Held-out evaluation through the frozen script (held-out games × held-out classes × 10 seeds). The agent builds the transfer matrix and detection curves and drafts Part 1 with figures.</td>
+<td>Part 1 draft, figures, numbers file</td>
+</tr>
+<tr>
+<td><strong>Thu 3 Sep</strong></td>
+<td>Human verification: recompute every number in Part 1 from logs; check each figure against its data; check every citation. Write Part 2 (harness, prompts, interventions ledger, verification). Draft Part 3.</td>
+<td>Verified Part 1; Part 2 and Part 3 drafts</td>
+</tr>
+<tr>
+<td><strong>Fri 4 Sep</strong></td>
+<td>Adversarial internal review (an LLM reviewer plus a colleague), fixes, and — if time — the oracle-blindness and complexity ablations.</td>
+<td>Near-final PDF in the Overleaf template</td>
+</tr>
+<tr>
+<td><strong>Sat 5 Sep</strong> — paper deadline</td>
+<td>Submit.</td>
+<td>Submitted</td>
+</tr>
+</tbody>
+</table></div>
+<p>Register the abstract even if the numbers are placeholders: the site requires the qualifying result to be <em>stated</em> in the abstract, and the honest way to do that before the run is as a hypothesis under test.</p>
+<h3 id="abstract-drafts">Abstract drafts</h3>
+<p><strong>D2 (primary).</strong> "Learning-based game testers rely on hand-designed exploration objectives. We ask whether an autonomous code-evolution loop can discover a testing objective that generalizes — across games it never saw and across defect classes it was never searched on. We build a GPU-vectorized suite of Kinetix physics games with five classes of programmatically injected defects and witness-state oracles, freeze a sealed held-out split, and let an LLM-driven evolutionary loop propose intrinsic-reward programs whose fitness is expected steps-to-first-defect on the search set. <strong>Qualifying result:</strong> the discovered objective reduces steps-to-first-defect by <em>X</em>% relative to the best tuned hand-designed baseline on held-out games and a held-out defect class, while objectives evolved against task return transfer to <em>Y</em>% of classes; a distilled core retains <em>Z</em>% of the gain. Part 2 documents the loop, prompts, human interventions and the verification of every reported number."</p>
+<p><strong>D1.</strong> "We test whether an autonomous RL-research agent's pipeline recipe, induced on freshly generated PuzzleScript games, transfers to a sealed batch of further fresh games unseen by any model. <strong>Qualifying result:</strong> the agent's recipe raises fixed-budget solve rate from <em>X</em>% (default PPO) and <em>Y</em>% (published automation recipes) to <em>Z</em>%, and identifies the game properties on which every recipe fails."</p>
+<p><strong>D3.</strong> "An autonomous agent proposed and tested <em>K</em> design-feature hypotheses about RL unlearnability in generated XLand-MiniGrid games using compute-matched minimal pairs. <strong>Qualifying result:</strong> its learnability predictor reaches AUROC <em>X</em> on a sealed held-out design pool versus <em>Y</em> for PIC/POIC and <em>Z</em> for an LLM prior, and its repair rules raise the solve rate of predicted-unlearnable levels from <em>A</em>% to <em>B</em>%."</p>
+<h3 id="provenance-and-verification-checklist-part-2-material">Provenance and verification checklist (Part 2 material)</h3>
+<ul>
+<li>Session transcripts and hook logs for every agent action; one git commit per experiment with the generating prompt in the message [<a class="cite" href="#ref-4">4</a>].</li>
+<li>The evolutionary archive and every candidate's evaluation record (ShinkaEvolve persists this natively [<a class="cite" href="#ref-63">63</a>]).</li>
+<li>A timestamped ledger of every human intervention, including "we restarted the loop" and "we changed the prompt."</li>
+<li>Frozen evaluator and sealed split committed <em>before</em> the loop starts, with hashes in the paper.</li>
+<li>Every number in Part 1 recomputed by a script from logs; every figure regenerated from data; every citation resolved to a URL — the failure modes MLR-Bench, BadScientist and the fidelity audits document are exactly these [<a class="cite" href="#ref-5">5</a>, <a class="cite" href="#ref-48">48</a>, <a class="cite" href="#ref-31">31</a>]. A background reviewer that flags untraceable numbers is the pattern Anthropic's own research tooling now ships [<a class="cite" href="#ref-120">120</a>].</li>
+<li>Immutable experiment cards recording each hypothesis and its outcome before the result is seen [<a class="cite" href="#ref-30">30</a>].</li>
+</ul>
+<h3 id="part-3-seeds-one-page">Part 3 seeds (one page)</h3>
+<ul>
+<li><strong>Decisiveness is a spectrum, not a bit.</strong> In D2 the human designs the search space and the benchmark; the agent designs the objective and the analysis. The field needs a vocabulary for that split — and venues should ask for the ledger, not the label.</li>
+<li><strong>Oracles change the verification economics.</strong> Where claims are checkable by execution (witness states, solver certificates), a discussant can verify in minutes what took the agent hours. Autonomous research should prefer domains with cheap oracles first.</li>
+<li><strong>Held-out splits must be adversarial to the agent, not just to the model.</strong> Sealed evaluations, contamination hashes and frozen evaluators are the autonomous-research analogue of pre-registration.</li>
+<li><strong>Compute is now the cheap input; judgment is the scarce one.</strong> Nine days of unlimited GPUs produced the evidence; the human hours went to deciding what was worth asking and checking what came back — which is the workshop's own thesis.</li>
+</ul>
+<h3 id="what-to-decide-today">What to decide today</h3>
+<ol>
+<li>Direction (recommendation: D2). 2. Co-authors — the reviewer obligation is min(3, #authors) and one author must be in Sydney in December. 3. Substrate (Kinetix primary for D2). 4. Whether the abstract goes in tomorrow with placeholders (yes).</li>
+</ol>
+<h2 id="references">References</h2>
+<ol>
+<li id="ref-1">AutoMLR organizing committee. <em>Workshop for Autonomous Machine Learning Research (AutoMLR), NeurIPS 2026 — call for papers, format, dates and FAQ</em>. automlr.com, accessed 27 Aug 2026. <a href="https://automlr.com/">https://automlr.com/</a></li>
+<li id="ref-2">NeurIPS 2026. <em>NeurIPS 2026 Main Track Handbook — Author Use of Agents and Large Language Models</em>. neurips.cc, accessed 27 Aug 2026. <a href="https://neurips.cc/Conferences/2026/MainTrackHandbook">https://neurips.cc/Conferences/2026/MainTrackHandbook</a></li>
+<li id="ref-3">Serapio, Prakash, Xu, Wang, Greenwald. <em>Distilling Game Code World Model Generation into Lightweight Large Language Models</em>. arXiv:2605.24375, 2026. <a href="https://arxiv.org/abs/2605.24375">https://arxiv.org/abs/2605.24375</a></li>
+<li id="ref-4">Anthropic. <em>Claude Code hooks reference (PreToolUse / PostToolUse / SessionStart / Stop events)</em>. docs, accessed Aug 2026. <a href="https://code.claude.com/docs/en/hooks">https://code.claude.com/docs/en/hooks</a></li>
+<li id="ref-5">Chen, Xiong, Lu et al.. <em>MLR-Bench: Evaluating AI Agents on Open-Ended Machine Learning Research</em>. arXiv:2505.19955, 2025 (49 pages, 9 figures. Accepted by NeurIPS 2025 D&amp;B Track). <a href="https://arxiv.org/abs/2505.19955">https://arxiv.org/abs/2505.19955</a></li>
+<li id="ref-6">Kon, Liu, Zhu et al.. <em>EXP-Bench: Can AI Conduct AI Research Experiments?</em>. arXiv:2505.24785, 2025 (45 pages, 13 figures). <a href="https://arxiv.org/abs/2505.24785">https://arxiv.org/abs/2505.24785</a></li>
+<li id="ref-7">Garikaparthi, Patwardhan, Cohan. <em>ResearchGym: Evaluating Language Model Agents on Real-World AI Research</em>. arXiv:2602.15112, 2026 (ICLR 2026 Agents in the Wild workshop). <a href="https://arxiv.org/abs/2602.15112">https://arxiv.org/abs/2602.15112</a></li>
+<li id="ref-8">Wei, Shan, Miao et al.. <em>Agent^2: An Agent-Generates-Agent Framework for Reinforcement Learning Automation</em>. arXiv:2509.13368, 2025. <a href="https://arxiv.org/abs/2509.13368">https://arxiv.org/abs/2509.13368</a></li>
+<li id="ref-9">Nathani et al. (Meta). <em>MLGym: A New Framework and Benchmark for Advancing AI Research Agents</em>. arXiv:2502.14499, 2025. <a href="https://arxiv.org/abs/2502.14499">https://arxiv.org/abs/2502.14499</a></li>
+<li id="ref-10">Wijk et al. (METR). <em>RE-Bench: Evaluating Frontier AI R&amp;D Capabilities of Language Model Agents Against Human Experts</em>. arXiv:2411.15114, 2024. <a href="https://arxiv.org/abs/2411.15114">https://arxiv.org/abs/2411.15114</a></li>
+<li id="ref-11">Karten, Appapogu, Jin. <em>Automatic Generation of High-Performance RL Environments (LLM loop producing GPU environments)</em>. arXiv:2603.12145, 2026. <a href="https://arxiv.org/abs/2603.12145">https://arxiv.org/abs/2603.12145</a></li>
+<li id="ref-12">Unity Technologies. <em>Unity ML-Agents Toolkit</em>. GitHub, accessed Aug 2026 (PyPI release 1.1.0, Oct 2024). <a href="https://github.com/Unity-Technologies/ml-agents">https://github.com/Unity-Technologies/ml-agents</a></li>
+<li id="ref-13">Beeching et al.. <em>Godot RL Agents</em>. GitHub, accessed Aug 2026. <a href="https://github.com/edbeeching/godot_rl_agents">https://github.com/edbeeching/godot_rl_agents</a></li>
+<li id="ref-14">Earle, Todd, Li, Jiang, Khalifa, Nasir, Banburski-Fahey, Togelius. <em>PuzzleJAX: A Benchmark for Reasoning and Learning</em>. arXiv:2508.16821, 2025; code github.com/smearle/script-doctor. <a href="https://arxiv.org/abs/2508.16821">https://arxiv.org/abs/2508.16821</a></li>
+<li id="ref-15">Matthews, Beukman, Lu, Foerster. <em>Kinetix: Investigating the Training of General Agents through Open-Ended Physics-Based Control Tasks</em>. ICLR 2025 (oral); arXiv:2410.23208; code github.com/FLAIROx/Kinetix. <a href="https://arxiv.org/abs/2410.23208">https://arxiv.org/abs/2410.23208</a></li>
+<li id="ref-16">Nikulin et al.. <em>XLand-MiniGrid: Scalable Meta-Reinforcement Learning Environments in JAX</em>. arXiv:2312.12044; code github.com/corl-team/xland-minigrid. <a href="https://arxiv.org/abs/2312.12044">https://arxiv.org/abs/2312.12044</a></li>
+<li id="ref-17">Bergdahl, Gordillo, Tollmar, Gisslén (EA SEED). <em>Augmenting Automated Game Testing with Deep Reinforcement Learning</em>. IEEE CoG 2020; arXiv:2103.15819. <a href="https://arxiv.org/abs/2103.15819">https://arxiv.org/abs/2103.15819</a></li>
+<li id="ref-18">Gordillo, Bergdahl, Tollmar, Gisslén (EA SEED). <em>Improving Playtesting Coverage via Curiosity Driven Reinforcement Learning Agents</em>. IEEE CoG 2021; arXiv:2103.13798. <a href="https://arxiv.org/abs/2103.13798">https://arxiv.org/abs/2103.13798</a></li>
+<li id="ref-19">Sestini, Gisslén, Bergdahl, Tollmar, Bagdanov (EA SEED). <em>Automated Gameplay Testing and Validation with Curiosity-Conditioned Proximal Trajectories (CCPT)</em>. arXiv:2202.10057, 2022. <a href="https://arxiv.org/abs/2202.10057">https://arxiv.org/abs/2202.10057</a></li>
+<li id="ref-20">Fuchs, Gosselin-Grant, Skuin et al. (EA). <em>Reward-Adaptive Iterative Discovery: A Case Study on Automated Game Testing for NHL 26</em>. arXiv:2607.07498, 2026. <a href="https://arxiv.org/abs/2607.07498">https://arxiv.org/abs/2607.07498</a></li>
+<li id="ref-21">Zheng, Xie, Su et al. (NetEase Fuxi). <em>Wuji: Automatic Online Combat Game Testing Using Evolutionary Deep Reinforcement Learning</em>. ASE 2019. <a href="https://doi.org/10.1109/ASE.2019.00077">https://doi.org/10.1109/ASE.2019.00077</a></li>
+<li id="ref-22">Liu et al. (Microsoft). <em>Inspector: Pixel-Based Automated Game Testing via Exploration, Detection, and Investigation</em>. IEEE CoG 2022; arXiv:2207.08379. <a href="https://arxiv.org/abs/2207.08379">https://arxiv.org/abs/2207.08379</a></li>
+<li id="ref-23">modl.ai. <em>modl.ai — AI game testing (product pages)</em>. accessed Aug 2026. <a href="https://modl.ai/">https://modl.ai/</a></li>
+<li id="ref-24">Jiang, Chen, Chen. <em>GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers</em>. ICLR 2026 workshop; arXiv:2604.02648. <a href="https://arxiv.org/abs/2604.02648">https://arxiv.org/abs/2604.02648</a></li>
+<li id="ref-25">Lu, Lu, Lange, Foerster, Clune, Ha. <em>The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery</em>. arXiv:2408.06292, 2024. <a href="https://arxiv.org/abs/2408.06292">https://arxiv.org/abs/2408.06292</a></li>
+<li id="ref-26">Yamada, Lange, Lu, Hu, Lu, Foerster, Clune, Ha. <em>The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search</em>. arXiv:2504.08066, 2025. <a href="https://arxiv.org/abs/2504.08066">https://arxiv.org/abs/2504.08066</a></li>
+<li id="ref-27">Schmidgall et al.. <em>Agent Laboratory: Using LLM Agents as Research Assistants</em>. arXiv:2501.04227, 2025. <a href="https://arxiv.org/abs/2501.04227">https://arxiv.org/abs/2501.04227</a></li>
+<li id="ref-28">Mitchener et al.. <em>Kosmos: An AI Scientist for Autonomous Discovery</em>. arXiv:2511.02824, 2025. <a href="https://arxiv.org/abs/2511.02824">https://arxiv.org/abs/2511.02824</a></li>
+<li id="ref-29">Jansen et al. (AI2). <em>CodeScientist: End-to-End Semi-Automated Scientific Discovery with Code-based Experimentation</em>. arXiv:2503.22708, 2025. <a href="https://arxiv.org/abs/2503.22708">https://arxiv.org/abs/2503.22708</a></li>
+<li id="ref-30">Zhang, Zeng, Lee et al.. <em>An AI Scientist that Doesn't Drift: Taste, Structure, and Falsifiable Findings in a Quadruped Navigation Research Loop</em>. arXiv:2608.07542, 2026. <a href="https://arxiv.org/abs/2608.07542">https://arxiv.org/abs/2608.07542</a></li>
+<li id="ref-31">Yu, Xu, Zhou, He. <em>Beyond Execution: Auditing Experimental Fidelity in LLM-Driven Scientific Research</em>. arXiv:2608.26753, 2026. <a href="https://arxiv.org/abs/2608.26753">https://arxiv.org/abs/2608.26753</a></li>
+<li id="ref-32">Tang, Yang. <em>AI Research Agents Narrow Scientific Exploration</em>. arXiv:2605.27905, 2026. <a href="https://arxiv.org/abs/2605.27905">https://arxiv.org/abs/2605.27905</a></li>
+<li id="ref-33">Eulig. <em>Position: Correct Answer, Wrong Mechanism -- When AI Scientists Defend General Claims Their Own Data Contradicts</em>. arXiv:2606.23175, 2026 (8 pages body plus 12 pages references and appendix, non-archival uploa). <a href="https://arxiv.org/abs/2606.23175">https://arxiv.org/abs/2606.23175</a></li>
+<li id="ref-34">Li, Schultz, Hennes, Lanctot (Google DeepMind). <em>Discovering Multiagent Learning Algorithms with Large Language Models</em>. arXiv:2602.16928, 2026. <a href="https://arxiv.org/abs/2602.16928">https://arxiv.org/abs/2602.16928</a></li>
+<li id="ref-35">Sakana AI. <em>The AI Scientist Generates its First Peer-Reviewed Scientific Publication</em>. sakana.ai blog, 2025. <a href="https://sakana.ai/ai-scientist-first-publication/">https://sakana.ai/ai-scientist-first-publication/</a></li>
+<li id="ref-36">Matthews et al.. <em>Craftax: A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning</em>. ICML 2024; arXiv:2402.16801. <a href="https://arxiv.org/abs/2402.16801">https://arxiv.org/abs/2402.16801</a></li>
+<li id="ref-37">Pignatelli et al.. <em>NAVIX: Scaling MiniGrid Environments with JAX</em>. arXiv:2407.19396, 2024. <a href="https://arxiv.org/abs/2407.19396">https://arxiv.org/abs/2407.19396</a></li>
+<li id="ref-38">Bonnet et al. (InstaDeep). <em>Jumanji: a Diverse Suite of Scalable Reinforcement Learning Environments in JAX</em>. ICLR 2024; arXiv:2306.09884. <a href="https://arxiv.org/abs/2306.09884">https://arxiv.org/abs/2306.09884</a></li>
+<li id="ref-39">PufferAI. <em>PufferLib / Puffer Ocean environments</em>. GitHub, accessed Aug 2026. <a href="https://github.com/PufferAI/PufferLib">https://github.com/PufferAI/PufferLib</a></li>
+<li id="ref-40">Pérez-Liébana et al.. <em>General Video Game AI: a Multi-Track Framework for Evaluating Agents, Games and Content Generation Algorithms</em>. arXiv:1802.10363, 2018. <a href="https://arxiv.org/abs/1802.10363">https://arxiv.org/abs/1802.10363</a></li>
+<li id="ref-41">Hu, Zhao, Liu. <em>Game Generation via Large Language Models</em>. arXiv:2404.08706, 2024 (2024 IEEE Conference on Games). <a href="https://arxiv.org/abs/2404.08706">https://arxiv.org/abs/2404.08706</a></li>
+<li id="ref-42">Piette, Soemers, Stephenson et al.. <em>Ludii -- The Ludemic General Game System</em>. arXiv:1905.05013, 2019 (Accepted at ECAI 2020). <a href="https://arxiv.org/abs/1905.05013">https://arxiv.org/abs/1905.05013</a></li>
+<li id="ref-43">Todd, Padula, Soemers et al.. <em>Ludax: A GPU-Accelerated Domain Specific Language for Board Games</em>. arXiv:2506.22609, 2025 (25 pages, 6 figures). <a href="https://arxiv.org/abs/2506.22609">https://arxiv.org/abs/2506.22609</a></li>
+<li id="ref-44">Bamford. <em>Griddly: a platform for AI research in games (YAML game description language)</em>. GitHub. <a href="https://github.com/Bam4d/Griddly">https://github.com/Bam4d/Griddly</a></li>
+<li id="ref-45">SIMA team (Google DeepMind). <em>SIMA 2: A Generalist Embodied Agent for Virtual Worlds</em>. arXiv:2512.04797, Dec 2025. <a href="https://arxiv.org/abs/2512.04797">https://arxiv.org/abs/2512.04797</a></li>
+<li id="ref-46">Jiang, Schmidt, Srikanth et al.. <em>AIDE: AI-Driven Exploration in the Space of Code</em>. arXiv:2502.13138, 2025. <a href="https://arxiv.org/abs/2502.13138">https://arxiv.org/abs/2502.13138</a></li>
+<li id="ref-47">Stanford / Together AI organizers. <em>Agents4Science 2025 — Open Conference of AI Agents for Science (accepted papers)</em>. agents4science.stanford.edu, 2025. <a href="https://agents4science.stanford.edu/">https://agents4science.stanford.edu/</a></li>
+<li id="ref-48">Jiang, Feng, Li, Niu et al.. <em>BadScientist: Can a Research Agent Write Convincing but Unsound Papers that Fool LLM Reviewers?</em>. arXiv:2510.18003, 2025; accepted at Agents4Science 2025. <a href="https://arxiv.org/abs/2510.18003">https://arxiv.org/abs/2510.18003</a></li>
+<li id="ref-49">Karpathy. <em>autoresearch (agent-driven overnight training-script optimization loop)</em>. GitHub, 2026. <a href="https://github.com/karpathy/autoresearch">https://github.com/karpathy/autoresearch</a></li>
+<li id="ref-50">Chan et al. (OpenAI). <em>MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering</em>. arXiv:2410.07095, 2024. <a href="https://arxiv.org/abs/2410.07095">https://arxiv.org/abs/2410.07095</a></li>
+<li id="ref-51">Starace, Jaffe, Sherburn et al.. <em>PaperBench: Evaluating AI's Ability to Replicate AI Research</em>. arXiv:2504.01848, 2025 (30 pages, 14 figures). <a href="https://arxiv.org/abs/2504.01848">https://arxiv.org/abs/2504.01848</a></li>
+<li id="ref-52">Meta FAIR. <em>AI Research Agents for Machine Learning: Search, Exploration, and Generalization in MLE-bench (AIRA-dojo)</em>. arXiv:2507.02554, 2025. <a href="https://arxiv.org/abs/2507.02554">https://arxiv.org/abs/2507.02554</a></li>
+<li id="ref-53">Chen, Yang, Yang et al.. <em>Agent^2 RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</em>. arXiv:2604.10547, 2026. <a href="https://arxiv.org/abs/2604.10547">https://arxiv.org/abs/2604.10547</a></li>
+<li id="ref-54">Ma et al. (NVIDIA). <em>Eureka: Human-Level Reward Design via Coding Large Language Models</em>. arXiv:2310.12931, ICLR 2024. <a href="https://arxiv.org/abs/2310.12931">https://arxiv.org/abs/2310.12931</a></li>
+<li id="ref-55">Jaswal, Baghel, Chopra. <em>LIMEN: Discovering Reinforcement Learning Interfaces with Large Language Models</em>. arXiv:2605.03408, 2026. <a href="https://arxiv.org/abs/2605.03408">https://arxiv.org/abs/2605.03408</a></li>
+<li id="ref-56">Faldor, Zhang, Cully, Clune. <em>OMNI-EPIC: Open-endedness via Models of human Notions of Interestingness with Environments Programmed in Code</em>. arXiv:2405.15568, 2024. <a href="https://arxiv.org/abs/2405.15568">https://arxiv.org/abs/2405.15568</a></li>
+<li id="ref-57">Liang et al.. <em>Eurekaverse: Environment Curriculum Generation via Large Language Models</em>. arXiv:2411.01775, 2024. <a href="https://arxiv.org/abs/2411.01775">https://arxiv.org/abs/2411.01775</a></li>
+<li id="ref-58">Zala et al.. <em>EnvGen: Generating and Adapting Environments via LLMs for Training Embodied Agents</em>. arXiv:2403.12014, 2024. <a href="https://arxiv.org/abs/2403.12014">https://arxiv.org/abs/2403.12014</a></li>
+<li id="ref-59">Alet, Schneider, Lozano-Pérez, Kaelbling. <em>Meta-learning curiosity algorithms</em>. ICLR 2020; arXiv:2003.05325. <a href="https://arxiv.org/abs/2003.05325">https://arxiv.org/abs/2003.05325</a></li>
+<li id="ref-60">Lu et al. (Sakana AI). <em>Discovering Preference Optimization Algorithms with and for Large Language Models (DiscoPOP)</em>. NeurIPS 2024; arXiv:2406.08414. <a href="https://arxiv.org/abs/2406.08414">https://arxiv.org/abs/2406.08414</a></li>
+<li id="ref-61">Oh et al. (Google DeepMind). <em>Discovering state-of-the-art reinforcement learning algorithms (DiscoRL)</em>. Nature, 2025. <a href="https://www.nature.com/articles/s41586-025-09761-x">https://www.nature.com/articles/s41586-025-09761-x</a></li>
+<li id="ref-62">Novikov et al. (Google DeepMind). <em>AlphaEvolve: A coding agent for scientific and algorithmic discovery</em>. arXiv:2506.13131, 2025. <a href="https://arxiv.org/abs/2506.13131">https://arxiv.org/abs/2506.13131</a></li>
+<li id="ref-63">Lange, Imajuku, Cetin (Sakana AI). <em>ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution</em>. arXiv:2509.19349, 2025; code github.com/SakanaAI/ShinkaEvolve. <a href="https://arxiv.org/abs/2509.19349">https://arxiv.org/abs/2509.19349</a></li>
+<li id="ref-64">codelion et al.. <em>OpenEvolve: open-source implementation of AlphaEvolve-style evolutionary coding</em>. GitHub. <a href="https://github.com/codelion/openevolve">https://github.com/codelion/openevolve</a></li>
+<li id="ref-65">Sygkounas, Loutfi, Persson. <em>Evolutionary Discovery of Reinforcement Learning Algorithms via Large Language Models</em>. arXiv:2603.28416, 2026. <a href="https://arxiv.org/abs/2603.28416">https://arxiv.org/abs/2603.28416</a></li>
+<li id="ref-66">Parker-Holder et al.. <em>Automated Reinforcement Learning (AutoRL): A Survey and Open Problems</em>. JAIR 2022; arXiv:2201.03916. <a href="https://arxiv.org/abs/2201.03916">https://arxiv.org/abs/2201.03916</a></li>
+<li id="ref-67">Hu, Lu, Clune. <em>Automated Design of Agentic Systems</em>. arXiv:2408.08435, 2024. <a href="https://arxiv.org/abs/2408.08435">https://arxiv.org/abs/2408.08435</a></li>
+<li id="ref-68">Baek, Kim, Earle et al.. <em>PCGRLLM: Large Language Model-Driven Reward Design for Procedural Content Generation Reinforcement Learning</em>. arXiv:2502.10906, 2025 (14 pages, 8 figures, Acccepted to Transactions on Games). <a href="https://arxiv.org/abs/2502.10906">https://arxiv.org/abs/2502.10906</a></li>
+<li id="ref-69">Ariyurek, Betin-Can, Surer. <em>Automated Video Game Testing Using Synthetic and Humanlike Agents</em>. IEEE Transactions on Games, 2021. <a href="https://doi.org/10.1109/TG.2019.2947597">https://doi.org/10.1109/TG.2019.2947597</a></li>
+<li id="ref-70">Chen, Li, Chen et al. (NetEase). <em>GLIB: Towards Automated Test Oracle for Graphically-Rich Applications</em>. ESEC/FSE 2021. <a href="https://doi.org/10.1145/3468264.3468586">https://doi.org/10.1145/3468264.3468586</a></li>
+<li id="ref-71">Adaikkappan, Martineau, Romoff et al.. <em>CA2: Code-Aware Agent for Automated Game Testing</em>. arXiv:2605.13918, 2026. <a href="https://arxiv.org/abs/2605.13918">https://arxiv.org/abs/2605.13918</a></li>
+<li id="ref-72">Taesiri, Macklon, Wang, Shen, Bezemer. <em>Large Language Models are Pretty Good Zero-Shot Video Game Bug Detectors</em>. arXiv:2210.02506, 2022. <a href="https://arxiv.org/abs/2210.02506">https://arxiv.org/abs/2210.02506</a></li>
+<li id="ref-73">Taesiri, Feng, Nguyen, Bezemer. <em>GlitchBench: Can large multimodal models detect video game glitches?</em>. CVPR 2024; arXiv:2312.05291. <a href="https://arxiv.org/abs/2312.05291">https://arxiv.org/abs/2312.05291</a></li>
+<li id="ref-74">Wang, Tang, Yuan et al.. <em>Leveraging LLM Agents for Automated Video Game Testing</em>. arXiv:2509.22170, 2025 (17 pages). <a href="https://arxiv.org/abs/2509.22170">https://arxiv.org/abs/2509.22170</a></li>
+<li id="ref-75">Yapağcı, Öztürk, Tüzün. <em>Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft</em>. arXiv:2503.20036, 2025 (Accepted into ASE'25 (Automated Software Engineering). https://conf.re). <a href="https://arxiv.org/abs/2503.20036">https://arxiv.org/abs/2503.20036</a></li>
+<li id="ref-76">Mu, Yoda, Zhang et al.. <em>Synergizing Code Coverage and Gameplay Intent: Coverage-Aware Game Playtesting with LLM-Guided Reinforcement Learning</em>. arXiv:2512.12706, 2025. <a href="https://arxiv.org/abs/2512.12706">https://arxiv.org/abs/2512.12706</a></li>
+<li id="ref-77">He, Yang, Shi et al.. <em>CureFuzz: Curiosity-Driven Testing for Sequential Decision-Making Processes</em>. ICSE 2024; arXiv:2509.02025. <a href="https://arxiv.org/abs/2509.02025">https://arxiv.org/abs/2509.02025</a></li>
+<li id="ref-78">Wilkins, Stathis. <em>World of Bugs: A Platform for Automated Bug Detection in 3D Video Games</em>. IEEE CoG 2022; arXiv:2206.11037. <a href="https://arxiv.org/abs/2206.11037">https://arxiv.org/abs/2206.11037</a></li>
+<li id="ref-79">Chen, Hong, Gao, Lin et al.. <em>GameXpert-Bench: How Far Are Coding Agents from Expert Game Development?</em>. arXiv:2608.21833, 2026. <a href="https://arxiv.org/abs/2608.21833">https://arxiv.org/abs/2608.21833</a></li>
+<li id="ref-80">Sohail, Jilani, Butt. <em>Enhancing NeuroEvolution-Based Game Testing: A Branch Coverage Approach for Scratch Programs</em>. arXiv:2507.09414, 2025. <a href="https://arxiv.org/abs/2507.09414">https://arxiv.org/abs/2507.09414</a></li>
+<li id="ref-81">Politowski, Petrillo, Guéhéneuc. <em>A Survey of Video Game Testing</em>. arXiv:2103.06431, 2021. <a href="https://arxiv.org/abs/2103.06431">https://arxiv.org/abs/2103.06431</a></li>
+<li id="ref-82">Lewis, Whitehead, Wardrip-Fruin. <em>What Went Wrong: A Taxonomy of Video Game Bugs</em>. FDG 2010. <a href="https://dl.acm.org/doi/10.1145/1822348.1822363">https://dl.acm.org/doi/10.1145/1822348.1822363</a></li>
+<li id="ref-83">Tan et al.. <em>Cradle: Empowering Foundation Agents Towards General Computer Control</em>. arXiv:2403.03186, 2024. <a href="https://arxiv.org/abs/2403.03186">https://arxiv.org/abs/2403.03186</a></li>
+<li id="ref-84">Xu, Wang, Li et al. (Tencent). <em>PORTAL: Agents Play Thousands of 3D Video Games</em>. arXiv:2503.13356, 2025. <a href="https://arxiv.org/abs/2503.13356">https://arxiv.org/abs/2503.13356</a></li>
+<li id="ref-85">Paglieri et al.. <em>BALROG: Benchmarking Agentic LLM and VLM Reasoning On Games</em>. ICLR 2025; arXiv:2411.13543. <a href="https://arxiv.org/abs/2411.13543">https://arxiv.org/abs/2411.13543</a></li>
+<li id="ref-86">Zhang et al.. <em>VideoGameBench: Can Vision-Language Models complete popular video games?</em>. arXiv:2505.18134, 2025. <a href="https://arxiv.org/abs/2505.18134">https://arxiv.org/abs/2505.18134</a></li>
+<li id="ref-87">Hu et al.. <em>lmgame-Bench: How Good are LLMs at Playing Games?</em>. arXiv:2505.15146, 2025. <a href="https://arxiv.org/abs/2505.15146">https://arxiv.org/abs/2505.15146</a></li>
+<li id="ref-88">Park et al.. <em>Orak: A Foundational Benchmark for Training and Evaluating LLM Agents on Diverse Video Games</em>. arXiv:2506.03610, 2025. <a href="https://arxiv.org/abs/2506.03610">https://arxiv.org/abs/2506.03610</a></li>
+<li id="ref-89">Li, Lin, Nasir et al.. <em>GVGAI-LLM: Evaluating Large Language Model Agents with Infinite Games</em>. arXiv:2508.08501, 2025. <a href="https://arxiv.org/abs/2508.08501">https://arxiv.org/abs/2508.08501</a></li>
+<li id="ref-90">Verma, Huang, Chen, Klein, Tomlin. <em>Measuring General Intelligence with Generated Games (gg-bench)</em>. arXiv:2505.07215, 2025. <a href="https://arxiv.org/abs/2505.07215">https://arxiv.org/abs/2505.07215</a></li>
+<li id="ref-91">Earle et al.. <em>ScriptDoctor: Automatic Generation of PuzzleScript Games via Large Language Models and Tree Search</em>. arXiv:2506.06524, 2025. <a href="https://arxiv.org/abs/2506.06524">https://arxiv.org/abs/2506.06524</a></li>
+<li id="ref-92">Earle, Togelius. <em>Autoverse: An Evolvable Game Language for Learning Robust Embodied Agents</em>. arXiv:2407.04221, 2024 (9 pages, 4 figures). <a href="https://arxiv.org/abs/2407.04221">https://arxiv.org/abs/2407.04221</a></li>
+<li id="ref-93">Todd, Padula, Stephenson, Piette, Soemers, Togelius. <em>GAVEL: Generating Games Via Evolution and Language Models</em>. NeurIPS 2024; arXiv:2407.09388. <a href="https://arxiv.org/abs/2407.09388">https://arxiv.org/abs/2407.09388</a></li>
+<li id="ref-94">Nasir, James, Togelius. <em>Word2World: Generating Stories and Worlds through Large Language Models</em>. arXiv:2405.06686, 2024. <a href="https://arxiv.org/abs/2405.06686">https://arxiv.org/abs/2405.06686</a></li>
+<li id="ref-95">Gallotta, Todd, Zammit et al.. <em>Large Language Models and Games: A Survey and Roadmap</em>. arXiv:2402.18659, 2024 (Accepted for publication at the IEEE Transactions on Games (19 pages, ). <a href="https://arxiv.org/abs/2402.18659">https://arxiv.org/abs/2402.18659</a></li>
+<li id="ref-96">Google DeepMind. <em>Genie 3: A New Frontier for World Models</em>. blog, Aug 2025. <a href="https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/">https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/</a></li>
+<li id="ref-97">Roohi, Relas, Takatalo, Heiskanen, Hämäläinen. <em>Predicting Game Difficulty and Churn Without Players</em>. CHI PLAY 2020; arXiv:2008.12937. <a href="https://arxiv.org/abs/2008.12937">https://arxiv.org/abs/2008.12937</a></li>
+<li id="ref-98">Roohi, Guckelsberger, Relas, Heiskanen, Takatalo, Hämäläinen. <em>Predicting Game Engagement and Difficulty Using AI Players</em>. CHI PLAY 2021; arXiv:2107.12061. <a href="https://arxiv.org/abs/2107.12061">https://arxiv.org/abs/2107.12061</a></li>
+<li id="ref-99">Kristensen, Valdivia, Burelli (King). <em>Estimating Player Completion Rate in Mobile Puzzle Games Using Reinforcement Learning</em>. IEEE CoG 2020; arXiv:2306.14626. <a href="https://arxiv.org/abs/2306.14626">https://arxiv.org/abs/2306.14626</a></li>
+<li id="ref-100">Gudmundsson, Eisen, Poromaa et al. (King). <em>Human-Like Playtesting with Deep Learning</em>. IEEE CIG 2018. <a href="https://doi.org/10.1109/CIG.2018.8490442">https://doi.org/10.1109/CIG.2018.8490442</a></li>
+<li id="ref-101">Tomašev, Paquet, Hassabis, Kramnik (DeepMind). <em>Assessing Game Balance with AlphaZero: Exploring Alternative Rule Sets in Chess</em>. arXiv:2009.04374, 2020. <a href="https://arxiv.org/abs/2009.04374">https://arxiv.org/abs/2009.04374</a></li>
+<li id="ref-102">Wang, Guo, Guei et al.. <em>Evaluating Game Difficulty in Tetris Block Puzzle</em>. arXiv:2603.18994, 2026. <a href="https://arxiv.org/abs/2603.18994">https://arxiv.org/abs/2603.18994</a></li>
+<li id="ref-103">Pleiss, Schmidt, Schiffer. <em>Synthetic Monitoring Environments for Reinforcement Learning</em>. arXiv:2603.06252, 2026. <a href="https://arxiv.org/abs/2603.06252">https://arxiv.org/abs/2603.06252</a></li>
+<li id="ref-104">Rutherford et al.. <em>No Regrets: Investigating and Improving Regret Approximations for Curriculum Discovery (learnability / SFL)</em>. NeurIPS 2024; arXiv:2408.15099. <a href="https://arxiv.org/abs/2408.15099">https://arxiv.org/abs/2408.15099</a></li>
+<li id="ref-105">Cho, Im, Lee et al.. <em>TRACED: Transition-aware Regret Approximation with Co-learnability for Environment Design</em>. ICLR 2026. <a href="https://openreview.net/forum?id=J0OdFoOhSN">https://openreview.net/forum?id=J0OdFoOhSN</a></li>
+<li id="ref-106">Furuta et al.. <em>Policy Information Capacity: Information-Theoretic Measure for Task Complexity in Deep Reinforcement Learning</em>. ICML 2021; arXiv:2103.12726. <a href="https://arxiv.org/abs/2103.12726">https://arxiv.org/abs/2103.12726</a></li>
+<li id="ref-107">Conserva, Sasso, Rauber. <em>On the Limits of Tabular Hardness Metrics for Deep RL: A Study with the Pharos Benchmark</em>. arXiv:2509.17092, 2025. <a href="https://arxiv.org/abs/2509.17092">https://arxiv.org/abs/2509.17092</a></li>
+<li id="ref-108">Zeng, Liu, Liu et al.. <em>RuleSmith: Multi-Agent LLMs for Automated Game Balancing</em>. arXiv:2602.06232, 2026. <a href="https://arxiv.org/abs/2602.06232">https://arxiv.org/abs/2602.06232</a></li>
+<li id="ref-109">Xiao, Yang. <em>LLMs May Not Be Human-Level Players, But They Can Be Testers: Measuring Game Difficulty with LLM Agents</em>. Proc. ACM HCI (CHI PLAY) 2025. <a href="https://doi.org/10.1145/3748634">https://doi.org/10.1145/3748634</a></li>
+<li id="ref-110">Li, Li, Wang et al.. <em>MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences</em>. arXiv:2601.07251, 2026 (ACL 2026 MainConference). <a href="https://arxiv.org/abs/2601.07251">https://arxiv.org/abs/2601.07251</a></li>
+<li id="ref-111">Lu, Hu, Clune. <em>Automated Capability Discovery via Foundation Model Self-Exploration</em>. arXiv:2502.07577, 2025. <a href="https://arxiv.org/abs/2502.07577">https://arxiv.org/abs/2502.07577</a></li>
+<li id="ref-112">Zhang, Peng, Kong et al.. <em>AutoEnv: Automated Environments for Measuring Cross-Environment Agent Learning</em>. arXiv:2511.19304, 2025. <a href="https://arxiv.org/abs/2511.19304">https://arxiv.org/abs/2511.19304</a></li>
+<li id="ref-113">Huang, Wang, Han et al.. <em>EnvHarness: Awakening Static Worlds for Agent Learning</em>. arXiv:2608.19880, 2026. <a href="https://arxiv.org/abs/2608.19880">https://arxiv.org/abs/2608.19880</a></li>
+<li id="ref-114">Wu, Zhang, Liu et al.. <em>GIFT: LLM-Guided State-Reward Interface for Financial Reinforcement Learning</em>. arXiv:2606.08450, 2026 (25 pages, 7 figures. Code and data are available at https://). <a href="https://arxiv.org/abs/2606.08450">https://arxiv.org/abs/2606.08450</a></li>
+<li id="ref-115">Heng, Zhao, Wu et al.. <em>Boosting Universal LLM Reward Design through Heuristic Reward Observation Space Evolution</em>. arXiv:2504.07596, 2025 (7 pages, 5 figures). <a href="https://arxiv.org/abs/2504.07596">https://arxiv.org/abs/2504.07596</a></li>
+<li id="ref-116">Goldie, Wang, Hayler et al.. <em>DiscoGen: Procedural Generation of Algorithm Discovery Tasks in Machine Learning</em>. arXiv:2603.17863, 2026 (Accepted to ICML 2026). <a href="https://arxiv.org/abs/2603.17863">https://arxiv.org/abs/2603.17863</a></li>
+<li id="ref-117">Gao, Li, Yuan et al.. <em>Camyla: Scaling Autonomous Research in Medical Image Segmentation</em>. arXiv:2604.10696, 2026 (Project page: https://yifangao112.github.io/camyla-page/). <a href="https://arxiv.org/abs/2604.10696">https://arxiv.org/abs/2604.10696</a></li>
+<li id="ref-118">Wu, Zheng, Xiong. <em>LLM-ALSO: LLM-Driven Adaptive Learning-Signal Optimization for Multi-Agent Reinforcement Learning</em>. arXiv:2605.29293, 2026 (14 pages, 6 figures, 6 tables). <a href="https://arxiv.org/abs/2605.29293">https://arxiv.org/abs/2605.29293</a></li>
+<li id="ref-119">Wang, Tang, Liu et al.. <em>When LLM Reward Design Fails: Diagnostic-Driven Refinement for Sparse Structured RL</em>. arXiv:2605.28918, 2026. <a href="https://arxiv.org/abs/2605.28918">https://arxiv.org/abs/2605.28918</a></li>
+<li id="ref-120">Anthropic. <em>Claude Science (beta) — background reviewer and artifact provenance</em>. claude.com product page, accessed Aug 2026. <a href="https://claude.com/product/claude-science">https://claude.com/product/claude-science</a></li>
+</ol>
+  </main>
+</div>

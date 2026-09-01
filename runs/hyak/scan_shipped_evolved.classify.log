@@ -1,0 +1,34 @@
+WARNING:absl:Grain multiprocess worker profiling requires jaxlib extension version 448 or later (jaxlib >= 0.11.0). Current version: 397.
+m/h10_thrust_right_easy.json       cand1_gen037_0.6994 s0 BLOWUP    t=  83 dur=  3 depth=None oob_later=False -> C
+m/h10_thrust_right_easy.json       cand1_gen037_0.6994 s1 BLOWUP    t=  73 dur=  4 depth=None oob_later=False -> C
+m/h10_thrust_right_easy.json       cand1_gen037_0.6994 s2 BLOWUP    t=  69 dur=  4 depth=None oob_later=False -> C
+m/h11_thrust_left_easy.json        cand1_gen037_0.6994 s1 BLOWUP    t=  57 dur=  2 depth=None oob_later=False -> C
+m/h11_thrust_left_easy.json        cand1_gen037_0.6994 s2 BLOWUP    t=  63 dur=  3 depth=None oob_later=False -> C
+m/h15_thrustshoot.json             cand1_gen037_0.6994 s0 OOB       t=  48 dur=  4 depth=None oob_later=True -> B
+m/h15_thrustshoot.json             cand1_gen037_0.6994 s1 OOB       t=  52 dur= 41 depth=None oob_later=True -> A
+m/h18_thrust_right_very_easy.json  cand1_gen037_0.6994 s0 BLOWUP    t=  61 dur=  3 depth=None oob_later=False -> C
+m/h18_thrust_right_very_easy.json  cand1_gen037_0.6994 s1 BLOWUP    t=  54 dur=  3 depth=None oob_later=False -> C
+m/h18_thrust_right_very_easy.json  cand1_gen037_0.6994 s2 BLOWUP    t=  49 dur=  3 depth=None oob_later=False -> C
+m/h19_thrust_left_very_easy.json   cand1_gen037_0.6994 s2 BLOWUP    t=  90 dur=  2 depth=None oob_later=False -> C
+m/h3_car_thrust.json               cand1_gen037_0.6994 s0 BLOWUP    t=  46 dur=  5 depth=None oob_later=False -> C
+m/h3_car_thrust.json               cand1_gen037_0.6994 s1 BLOWUP    t=  52 dur=  1 depth=None oob_later=False -> C
+m/h3_car_thrust.json               cand1_gen037_0.6994 s2 BLOWUP    t=  48 dur=  4 depth=None oob_later=False -> C
+m/h6_thrust_over.json              cand1_gen037_0.6994 s0 BLOWUP    t=  73 dur=  3 depth=None oob_later=False -> C
+m/h6_thrust_over.json              cand1_gen037_0.6994 s1 BLOWUP    t=  40 dur=  3 depth=None oob_later=False -> C
+m/h6_thrust_over.json              cand1_gen037_0.6994 s2 BLOWUP    t=  53 dur=  4 depth=None oob_later=False -> C
+m/h7_car_flip.json                 cand1_gen037_0.6994 s1 BLOWUP    t=  64 dur=  3 depth=None oob_later=False -> C
+m/h7_car_flip.json                 cand1_gen037_0.6994 s2 BLOWUP    t=  86 dur=  3 depth=None oob_later=False -> C
+l/grasp_easy.json                  cand1_gen037_0.6994 s0 PENETRATE t=   8 dur=  6 depth=0.031 oob_later=False -> C
+l/grasp_easy.json                  cand1_gen037_0.6994 s1 PENETRATE t=   8 dur=  8 depth=0.032 oob_later=False -> C
+l/grasp_easy.json                  cand1_gen037_0.6994 s2 PENETRATE t=   8 dur=  8 depth=0.032 oob_later=False -> C
+l/grasp_hard.json                  cand1_gen037_0.6994 s0 PENETRATE t=   7 dur=  6 depth=0.035 oob_later=False -> C
+l/grasp_hard.json                  cand1_gen037_0.6994 s1 PENETRATE t=   7 dur=  6 depth=0.035 oob_later=False -> C
+l/grasp_hard.json                  cand1_gen037_0.6994 s2 PENETRATE t=   7 dur=  6 depth=0.035 oob_later=False -> C
+l/mjc_half_cheetah.json            cand1_gen037_0.6994 s0 PENETRATE t=  57 dur=  3 depth=0.018 oob_later=False -> C
+l/mjc_half_cheetah.json            cand1_gen037_0.6994 s1 PENETRATE t=  30 dur=  3 depth=0.013 oob_later=False -> C
+l/mjc_half_cheetah.json            cand1_gen037_0.6994 s2 PENETRATE t=  29 dur=  3 depth=0.019 oob_later=False -> C
+l/mjc_half_cheetah_easy.json       cand1_gen037_0.6994 s1 PENETRATE t=  15 dur=  2 depth=0.009 oob_later=False -> C
+l/rail.json                        cand1_gen037_0.6994 s0 PENETRATE t=  70 dur=  3 depth=0.033 oob_later=False -> C
+l/rail.json                        cand1_gen037_0.6994 s1 PENETRATE t= 116 dur=  3 depth=0.04 oob_later=False -> C
+l/rail.json                        cand1_gen037_0.6994 s2 PENETRATE t= 105 dur=  2 depth=0.021 oob_later=False -> C
+severity counts: {'C': 30, 'B': 1, 'A': 1} | distinct (level, flag) with A/B: 1

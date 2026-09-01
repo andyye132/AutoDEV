@@ -1,0 +1,35 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{lccc}
+\toprule
+Tester & Search & Held-out levels & Held-out class (OOB) \\
+\midrule
+Random & 0.464$\pm$0.003 (49\%) & 0.525$\pm$0.009 (55\%) & 0.103$\pm$0.006 (12\%) \\
+Action-repeat random & 0.566$\pm$0.005 (59\%) & 0.575$\pm$0.004 (60\%) & 0.266$\pm$0.009 (30\%) \\
+Go-Explore (seed) & 0.537$\pm$0.003 (57\%) & 0.559$\pm$0.002 (58\%) & 0.214$\pm$0.009 (25\%) \\
+Evolved run 1 gen 14 & 0.654$\pm$0.011 (70\%) & 0.619$\pm$0.007 (64\%) & 0.397$\pm$0.012 (44\%) \\
+Evolved run 1 gen 37 (best) & 0.666$\pm$0.015 (72\%) & 0.617$\pm$0.008 (64\%) & 0.418$\pm$0.007 (47\%) \\
+Evolved run 1 gen 1 & 0.655$\pm$0.013 (70\%) & 0.633$\pm$0.007 (65\%) & 0.397$\pm$0.010 (44\%) \\
+Opus: wallbreaker & 0.568$\pm$0.009 (63\%) & 0.570$\pm$0.013 (60\%) & 0.300$\pm$0.008 (37\%) \\
+Opus: resonator & 0.583$\pm$0.008 (62\%) & 0.561$\pm$0.005 (58\%) & 0.290$\pm$0.015 (33\%) \\
+Opus: macrosweep & 0.588$\pm$0.004 (61\%) & 0.573$\pm$0.006 (60\%) & 0.296$\pm$0.002 (34\%) \\
+Opus: contact-UCB & 0.530$\pm$0.008 (57\%) & 0.551$\pm$0.015 (59\%) & 0.198$\pm$0.011 (24\%) \\
+PPO+count & 0.487$\pm$0.016 (56\%) & 0.529$\pm$0.007 (57\%) & 0.184$\pm$0.014 (27\%) \\
+PPO+RND & 0.464$\pm$0.018 (51\%) & 0.493$\pm$0.017 (54\%) & 0.124$\pm$0.016 (17\%) \\
+PPO+ICM & 0.454$\pm$0.026 (50\%) & 0.483$\pm$0.010 (51\%) & 0.117$\pm$0.019 (16\%) \\
+PPO+curiosity-prox. & 0.492$\pm$0.013 (56\%) & 0.526$\pm$0.005 (56\%) & 0.179$\pm$0.016 (26\%) \\
+PPO+task & 0.482$\pm$0.031 (54\%) & 0.501$\pm$0.025 (54\%) & 0.161$\pm$0.003 (23\%) \\
+Evolved run 1 gen 14b & 0.657$\pm$0.014 (70\%) & 0.623$\pm$0.005 (64\%) & 0.396$\pm$0.008 (43\%) \\
+Evolved run 1 gen 35 & 0.653$\pm$0.003 (69\%) & 0.639$\pm$0.011 (66\%) & 0.425$\pm$0.012 (47\%) \\
+Portfolio of 4 & 0.628$\pm$0.010 (67\%) & 0.604$\pm$0.008 (62\%) & 0.370$\pm$0.008 (43\%) \\
+Portfolio of 7 & 0.620$\pm$0.003 (66\%) & 0.615$\pm$0.009 (64\%) & 0.356$\pm$0.002 (42\%) \\
+Evolved run 2 gen 48 (macrosweep seed) & 0.606$\pm$0.004 (63\%) & 0.587$\pm$0.008 (61\%) & 0.334$\pm$0.008 (37\%) \\
+Evolved run 2 gen 22 & 0.604$\pm$0.006 (64\%) & 0.585$\pm$0.009 (61\%) & 0.325$\pm$0.007 (36\%) \\
+Opus r2: target-cycle & 0.585$\pm$0.005 (62\%) & 0.574$\pm$0.004 (60\%) & 0.316$\pm$0.009 (36\%) \\
+Opus r2: pair-ladder & 0.630$\pm$0.008 (68\%) & 0.613$\pm$0.007 (65\%) & 0.382$\pm$0.016 (46\%) \\
+Opus r3: extremes archive & 0.588$\pm$0.006 (61\%) & 0.563$\pm$0.012 (58\%) & 0.322$\pm$0.007 (35\%) \\
+Opus r2: RRT-drive & 0.614$\pm$0.014 (65\%) & 0.578$\pm$0.014 (61\%) & 0.307$\pm$0.018 (36\%) \\
+\bottomrule
+\end{tabular}
+\caption{Score $=1-\min(\text{steps},\text{budget})/\text{budget}$ (mean $\pm$ 95\% CI over 5 seeds) and fraction of planted defects witnessed, per split; budget $128\times2048$ env steps per instance; size-l configuration, 74 shipped levels.}
+\label{tab:transfer_full}
+\end{table}

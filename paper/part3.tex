@@ -1,0 +1,19 @@
+% Reflections (<= 1 page). Draft by the agent; the author should rewrite in their own voice.
+\subsection*{What this project suggests about autonomous ML research}
+\textbf{Decisiveness is a spectrum, and the ledger is the unit of disclosure.} In this work the human posed the question,
+set constraints, and approved compute; the agent designed the benchmark, wrote the harness, ran the search, found and fixed its
+own oracle bugs, and wrote Part~1. Whether that is ``end-to-end'' is a matter of degree; what made it reviewable was a timestamped
+ledger of every human decision. We suggest venues ask for the ledger rather than a binary autonomy label.
+
+\textbf{Pick problems with cheap oracles first.} Every claim here is checkable by re-simulation: a reported bug is an action chain
+that re-triggers a predicate. The discussant can verify in minutes what took the agent hours. Domains with programmatic ground truth
+let autonomous research be \emph{audited}, not merely reviewed --- and they let the agent audit itself: the two oracle bugs we found
+(mechanism-internal overlaps; one-frame solver transients) were caught because the outputs were replayable.
+
+\textbf{Held-out design must be adversarial to the agent.} Sealed held-out levels and a held-out defect class were frozen before the
+search started; the search plateaued inside its own noise band within a few generations, and only the held-out evaluation could
+tell real gains from selection noise. Pre-registration for autonomous research is a frozen evaluator plus a hash.
+
+\textbf{Compute was cheap; judgment was not.} The search consumed GPU-hours; the human hours went to deciding what was worth asking,
+setting cluster rules, and reading the bug renders. The workshop's thesis --- autonomous research, human judgment --- was, for us,
+literally the division of labor.

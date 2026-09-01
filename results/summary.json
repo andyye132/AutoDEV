@@ -1,0 +1,1982 @@
+{
+ "eval": {
+  "random": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.46365342027559053,
+    "score_ci95": 0.0033837369315629076,
+    "detected": 0.4929133858267717,
+    "detected_ci95": 0.006173228346456681,
+    "median_steps_when_found": 5376.0,
+    "detected_per_class": {
+     "TUNNEL": 0.6285714285714286,
+     "SHORTCUT": 0.3548387096774194,
+     "ANOMALY": 0.5538461538461539,
+     "DISARMED": 0.41739130434782606
+    },
+    "per_class": {
+     "TUNNEL": 0.6053199404761905,
+     "SHORTCUT": 0.3358965473790323,
+     "ANOMALY": 0.5252103365384616,
+     "DISARMED": 0.36732761548913045
+    }
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.524852688029661,
+    "score_ci95": 0.009467804358210092,
+    "detected": 0.5491525423728814,
+    "detected_ci95": 0.0081372879590763,
+    "median_steps_when_found": 4864.0,
+    "detected_per_class": {
+     "TUNNEL": 0.35555555555555557,
+     "SHORTCUT": 0.5333333333333333,
+     "ANOMALY": 0.6363636363636364,
+     "DISARMED": 0.5538461538461539
+    },
+    "per_class": {
+     "TUNNEL": 0.32489149305555554,
+     "SHORTCUT": 0.5235807291666668,
+     "ANOMALY": 0.6183283025568181,
+     "DISARMED": 0.5065655048076922
+    }
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.10258855046452701,
+    "score_ci95": 0.006045080402947342,
+    "detected": 0.11756756756756759,
+    "detected_ci95": 0.0032439188485506956,
+    "median_steps_when_found": 14464.0,
+    "detected_per_class": {
+     "OOB": 0.11756756756756756
+    },
+    "per_class": {
+     "OOB": 0.10258855046452703
+    }
+   }
+  },
+  "repeat_random": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5661763348917322,
+    "score_ci95": 0.004795526094200423,
+    "detected": 0.5905511811023622,
+    "detected_ci95": 0.004880365522779571,
+    "median_steps_when_found": 4352.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7619047619047619,
+     "SHORTCUT": 0.44516129032258067,
+     "ANOMALY": 0.6192307692307693,
+     "DISARMED": 0.5652173913043478
+    },
+    "per_class": {
+     "TUNNEL": 0.7382068452380952,
+     "SHORTCUT": 0.4267987651209677,
+     "ANOMALY": 0.5961970402644231,
+     "DISARMED": 0.5290888247282609
+    }
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5752995895127118,
+    "score_ci95": 0.004359699374787167,
+    "detected": 0.5966101694915255,
+    "detected_ci95": 0.0066440677966101945,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.35555555555555557,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.6363636363636364,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.3227105034722222,
+     "SHORTCUT": 0.5662174479166667,
+     "ANOMALY": 0.6207874644886363,
+     "DISARMED": 0.6836688701923077
+    }
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.2661040434966216,
+    "score_ci95": 0.008690838540475641,
+    "detected": 0.29729729729729726,
+    "detected_ci95": 0.009364387102200228,
+    "median_steps_when_found": 8832.0,
+    "detected_per_class": {
+     "OOB": 0.2972972972972973
+    },
+    "per_class": {
+     "OOB": 0.26610404349662165
+    }
+   }
+  },
+  "goexplore": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5373723548228346,
+    "score_ci95": 0.003436129710253639,
+    "detected": 0.5716535433070866,
+    "detected_ci95": 0.003780314878626,
+    "median_steps_when_found": 5120.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7428571428571429,
+     "SHORTCUT": 0.39354838709677414,
+     "ANOMALY": 0.6230769230769231,
+     "DISARMED": 0.5391304347826087
+    },
+    "per_class": {
+     "TUNNEL": 0.70615234375,
+     "SHORTCUT": 0.3789503528225807,
+     "ANOMALY": 0.584795673076923,
+     "DISARMED": 0.48957625679347827
+    }
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5590787208686441,
+    "score_ci95": 0.002464363709962447,
+    "detected": 0.5796610169491526,
+    "detected_ci95": 0.006644067796610151,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.2888888888888889,
+     "SHORTCUT": 0.5733333333333334,
+     "ANOMALY": 0.6363636363636364,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.27350260416666666,
+     "SHORTCUT": 0.5484505208333333,
+     "ANOMALY": 0.6104447798295454,
+     "DISARMED": 0.6821213942307693
+    }
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.2138045027449324,
+    "score_ci95": 0.009120580723419026,
+    "detected": 0.25405405405405407,
+    "detected_ci95": 0.018061375760873157,
+    "median_steps_when_found": 10368.0,
+    "detected_per_class": {
+     "OOB": 0.254054054054054
+    },
+    "per_class": {
+     "OOB": 0.21380450274493243
+    }
+   }
+  },
+  "best_upto_gen014.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6540362020177165,
+    "score_ci95": 0.011060677306156567,
+    "detected": 0.6992125984251969,
+    "detected_ci95": 0.014962917355174785,
+    "median_steps_when_found": 5376.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7809523809523808,
+     "SHORTCUT": 0.5096774193548387,
+     "ANOMALY": 0.7576923076923077,
+     "DISARMED": 0.7478260869565219
+    },
+    "per_class": {
+     "TUNNEL": 0.7585844494047619,
+     "SHORTCUT": 0.47904485887096776,
+     "ANOMALY": 0.7024958683894231,
+     "DISARMED": 0.6848760190217391
+    },
+    "gain_vs_strongest_baseline": 0.08785986712598426,
+    "detected_gain_vs_strongest_baseline": 0.10866141732283474
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6190611758474576,
+    "score_ci95": 0.007172987697380497,
+    "detected": 0.6372881355932203,
+    "detected_ci95": 0.0081372879590763,
+    "median_steps_when_found": 3456.0,
+    "detected_per_class": {
+     "TUNNEL": 0.35555555555555557,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.7454545454545454,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.3450954861111111,
+     "SHORTCUT": 0.5852213541666667,
+     "ANOMALY": 0.716162109375,
+     "DISARMED": 0.6834510216346155
+    },
+    "gain_vs_strongest_baseline": 0.043761586334745806,
+    "detected_gain_vs_strongest_baseline": 0.04067796610169483
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.3968703811233108,
+    "score_ci95": 0.01197901140215513,
+    "detected": 0.4351351351351351,
+    "detected_ci95": 0.011545191796405029,
+    "median_steps_when_found": 11968.0,
+    "detected_per_class": {
+     "OOB": 0.4351351351351352
+    },
+    "per_class": {
+     "OOB": 0.3968703811233108
+    },
+    "gain_vs_strongest_baseline": 0.1307663376266892,
+    "detected_gain_vs_strongest_baseline": 0.13783783783783782
+   }
+  },
+  "cand1_gen037_0.6994.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6658579908956692,
+    "score_ci95": 0.015217020241891581,
+    "detected": 0.7165354330708662,
+    "detected_ci95": 0.0212730201213361,
+    "median_steps_when_found": 5632.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7714285714285714,
+     "SHORTCUT": 0.5483870967741934,
+     "ANOMALY": 0.7923076923076924,
+     "DISARMED": 0.7217391304347827
+    },
+    "per_class": {
+     "TUNNEL": 0.7548409598214286,
+     "SHORTCUT": 0.5001512096774193,
+     "ANOMALY": 0.7304499699519231,
+     "DISARMED": 0.661922554347826
+    },
+    "gain_vs_strongest_baseline": 0.09968165600393697,
+    "detected_gain_vs_strongest_baseline": 0.12598425196850405
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6173397775423728,
+    "score_ci95": 0.0075985370606849265,
+    "detected": 0.6372881355932203,
+    "detected_ci95": 0.0081372879590763,
+    "median_steps_when_found": 3456.0,
+    "detected_per_class": {
+     "TUNNEL": 0.35555555555555557,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.7454545454545454,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.3421115451388889,
+     "SHORTCUT": 0.5859244791666668,
+     "ANOMALY": 0.7136363636363637,
+     "DISARMED": 0.6811673677884615
+    },
+    "gain_vs_strongest_baseline": 0.04204018802966103,
+    "detected_gain_vs_strongest_baseline": 0.04067796610169483
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.4175352354307432,
+    "score_ci95": 0.006801896166617694,
+    "detected": 0.47027027027027024,
+    "detected_ci95": 0.009910335781185033,
+    "median_steps_when_found": 13632.0,
+    "detected_per_class": {
+     "OOB": 0.47027027027027024
+    },
+    "per_class": {
+     "OOB": 0.4175352354307433
+    },
+    "gain_vs_strongest_baseline": 0.15143119193412163,
+    "detected_gain_vs_strongest_baseline": 0.17297297297297298
+   }
+  },
+  "cand2_gen001_0.6943.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6554872047244095,
+    "score_ci95": 0.013330701073394655,
+    "detected": 0.7039370078740157,
+    "detected_ci95": 0.015889318957743724,
+    "median_steps_when_found": 5376.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7714285714285714,
+     "SHORTCUT": 0.4967741935483871,
+     "ANOMALY": 0.7923076923076924,
+     "DISARMED": 0.7217391304347825
+    },
+    "per_class": {
+     "TUNNEL": 0.7551432291666667,
+     "SHORTCUT": 0.47001953124999996,
+     "ANOMALY": 0.7285794771634616,
+     "DISARMED": 0.6492229959239131
+    },
+    "gain_vs_strongest_baseline": 0.08931086983267722,
+    "detected_gain_vs_strongest_baseline": 0.11338582677165354
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6334232653601696,
+    "score_ci95": 0.006587003764880499,
+    "detected": 0.6542372881355932,
+    "detected_ci95": 0.008137287959076351,
+    "median_steps_when_found": 3584.0,
+    "detected_per_class": {
+     "TUNNEL": 0.4222222222222222,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.7636363636363637,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.3971137152777778,
+     "SHORTCUT": 0.5841861979166667,
+     "ANOMALY": 0.734375,
+     "DISARMED": 0.6829927884615384
+    },
+    "gain_vs_strongest_baseline": 0.05812367584745781,
+    "detected_gain_vs_strongest_baseline": 0.057627118644067776
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.39685916385135134,
+    "score_ci95": 0.009988842036411158,
+    "detected": 0.44189189189189193,
+    "detected_ci95": 0.013634753429955768,
+    "median_steps_when_found": 12672.0,
+    "detected_per_class": {
+     "OOB": 0.44189189189189193
+    },
+    "per_class": {
+     "OOB": 0.39685916385135134
+    },
+    "gain_vs_strongest_baseline": 0.13075512035472975,
+    "detected_gain_vs_strongest_baseline": 0.14459459459459467
+   }
+  },
+  "wallbreaker.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.568384750246063,
+    "score_ci95": 0.009103890295728376,
+    "detected": 0.6251968503937008,
+    "detected_ci95": 0.006173228346456681,
+    "median_steps_when_found": 5632.0,
+    "detected_per_class": {
+     "TUNNEL": 0.6857142857142857,
+     "SHORTCUT": 0.36774193548387096,
+     "ANOMALY": 0.7115384615384617,
+     "DISARMED": 0.7217391304347827
+    },
+    "per_class": {
+     "TUNNEL": 0.6658761160714286,
+     "SHORTCUT": 0.34445249495967745,
+     "ANOMALY": 0.6478177584134616,
+     "DISARMED": 0.6016049592391305
+    },
+    "gain_vs_strongest_baseline": 0.002208415354330806,
+    "detected_gain_vs_strongest_baseline": 0.03464566929133861
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5699301509533898,
+    "score_ci95": 0.013263124353207166,
+    "detected": 0.6,
+    "detected_ci95": 0.008137287959076351,
+    "median_steps_when_found": 3456.0,
+    "detected_per_class": {
+     "TUNNEL": 0.24444444444444446,
+     "SHORTCUT": 0.5466666666666666,
+     "ANOMALY": 0.7272727272727273,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.24186197916666666,
+     "SHORTCUT": 0.49736328125000007,
+     "ANOMALY": 0.6952636718749999,
+     "DISARMED": 0.6686823918269231
+    },
+    "gain_vs_strongest_baseline": -0.005369438559321926,
+    "detected_gain_vs_strongest_baseline": 0.003389830508474523
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.3003048458614865,
+    "score_ci95": 0.007962163927316862,
+    "detected": 0.37432432432432433,
+    "detected_ci95": 0.014865503671777547,
+    "median_steps_when_found": 15104.0,
+    "detected_per_class": {
+     "OOB": 0.3743243243243244
+    },
+    "per_class": {
+     "OOB": 0.3003048458614865
+    },
+    "gain_vs_strongest_baseline": 0.03420080236486489,
+    "detected_gain_vs_strongest_baseline": 0.07702702702702707
+   }
+  },
+  "resonator.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5833622969980314,
+    "score_ci95": 0.008019696679467978,
+    "detected": 0.6173228346456693,
+    "detected_ci95": 0.011549052721380964,
+    "median_steps_when_found": 4480.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7523809523809524,
+     "SHORTCUT": 0.4129032258064516,
+     "ANOMALY": 0.6576923076923078,
+     "DISARMED": 0.6782608695652174
+    },
+    "per_class": {
+     "TUNNEL": 0.7252976190476191,
+     "SHORTCUT": 0.3937563004032258,
+     "ANOMALY": 0.6203650841346153,
+     "DISARMED": 0.6256666100543479
+    },
+    "gain_vs_strongest_baseline": 0.01718596210629919,
+    "detected_gain_vs_strongest_baseline": 0.026771653543307128
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5610632944915255,
+    "score_ci95": 0.00496790048316062,
+    "detected": 0.5830508474576271,
+    "detected_ci95": 0.0081372879590763,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.24444444444444446,
+     "SHORTCUT": 0.5466666666666666,
+     "ANOMALY": 0.6818181818181818,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.2289279513888889,
+     "SHORTCUT": 0.5324283854166667,
+     "ANOMALY": 0.6441938920454545,
+     "DISARMED": 0.6833608774038461
+    },
+    "gain_vs_strongest_baseline": -0.014236295021186285,
+    "detected_gain_vs_strongest_baseline": -0.013559322033898313
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.289576514991554,
+    "score_ci95": 0.015290171596944744,
+    "detected": 0.3310810810810811,
+    "detected_ci95": 0.015099620494556152,
+    "median_steps_when_found": 7040.0,
+    "detected_per_class": {
+     "OOB": 0.3310810810810811
+    },
+    "per_class": {
+     "OOB": 0.28957651499155407
+    },
+    "gain_vs_strongest_baseline": 0.023472471494932423,
+    "detected_gain_vs_strongest_baseline": 0.03378378378378383
+   }
+  },
+  "macrosweep.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5879167691929134,
+    "score_ci95": 0.004272103644569246,
+    "detected": 0.6141732283464567,
+    "detected_ci95": 0.008453041044961604,
+    "median_steps_when_found": 4480.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7619047619047619,
+     "SHORTCUT": 0.4,
+     "ANOMALY": 0.6576923076923076,
+     "DISARMED": 0.6695652173913044
+    },
+    "per_class": {
+     "TUNNEL": 0.7466657366071429,
+     "SHORTCUT": 0.3918850806451613,
+     "ANOMALY": 0.6182767427884616,
+     "DISARMED": 0.6385487432065218
+    },
+    "gain_vs_strongest_baseline": 0.02174043430118111,
+    "detected_gain_vs_strongest_baseline": 0.023622047244094557
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5725370762711864,
+    "score_ci95": 0.006001001060828819,
+    "detected": 0.5966101694915255,
+    "detected_ci95": 0.012429912674706663,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.37777777777777777,
+     "SHORTCUT": 0.56,
+     "ANOMALY": 0.6545454545454545,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.32761501736111115,
+     "SHORTCUT": 0.5438541666666666,
+     "ANOMALY": 0.6272727272727272,
+     "DISARMED": 0.6825646033653847
+    },
+    "gain_vs_strongest_baseline": -0.0027625132415253217,
+    "detected_gain_vs_strongest_baseline": 0.0
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.2963471283783784,
+    "score_ci95": 0.0017623440795611332,
+    "detected": 0.33783783783783783,
+    "detected_ci95": 0.007253623058852206,
+    "median_steps_when_found": 10560.0,
+    "detected_per_class": {
+     "OOB": 0.33783783783783783
+    },
+    "per_class": {
+     "OOB": 0.2963471283783784
+    },
+    "gain_vs_strongest_baseline": 0.03024308488175681,
+    "detected_gain_vs_strongest_baseline": 0.04054054054054057
+   }
+  },
+  "contact_ucb.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5298935777559055,
+    "score_ci95": 0.007867305100056595,
+    "detected": 0.5669291338582677,
+    "detected_ci95": 0.008453041044961604,
+    "median_steps_when_found": 5120.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7142857142857143,
+     "SHORTCUT": 0.3870967741935484,
+     "ANOMALY": 0.6269230769230768,
+     "DISARMED": 0.5391304347826086
+    },
+    "per_class": {
+     "TUNNEL": 0.6901274181547619,
+     "SHORTCUT": 0.37891570060483876,
+     "ANOMALY": 0.5740215594951923,
+     "DISARMED": 0.48731742527173916
+    },
+    "gain_vs_strongest_baseline": -0.03628275713582674,
+    "detected_gain_vs_strongest_baseline": -0.023622047244094446
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.551219875529661,
+    "score_ci95": 0.015241329642723424,
+    "detected": 0.5864406779661018,
+    "detected_ci95": 0.0081372879590763,
+    "median_steps_when_found": 3584.0,
+    "detected_per_class": {
+     "TUNNEL": 0.3111111111111111,
+     "SHORTCUT": 0.5866666666666667,
+     "ANOMALY": 0.6363636363636364,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.26787109374999996,
+     "SHORTCUT": 0.5393489583333333,
+     "ANOMALY": 0.5978293678977272,
+     "DISARMED": 0.6822040264423077
+    },
+    "gain_vs_strongest_baseline": -0.024079713983050754,
+    "detected_gain_vs_strongest_baseline": -0.01016949152542368
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.1976001636402027,
+    "score_ci95": 0.011491604236693086,
+    "detected": 0.23648648648648649,
+    "detected_ci95": 0.017767675280673998,
+    "median_steps_when_found": 14976.0,
+    "detected_per_class": {
+     "OOB": 0.23648648648648649
+    },
+    "per_class": {
+     "OOB": 0.19760016364020272
+    },
+    "gain_vs_strongest_baseline": -0.0685038798564189,
+    "detected_gain_vs_strongest_baseline": -0.06081081081081077
+   }
+  },
+  "ppo_count": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.48732006643700787,
+    "score_ci95": 0.01555445284326302,
+    "detected": 0.5564304461942258,
+    "detected_ci95": 0.018548242781914456,
+    "median_steps_when_found": 6912.0,
+    "detected_per_class": {
+     "TUNNEL": 0.6666666666666666,
+     "SHORTCUT": 0.3440860215053763,
+     "ANOMALY": 0.6282051282051282,
+     "DISARMED": 0.5797101449275361
+    },
+    "per_class": {
+     "TUNNEL": 0.6051122271825398,
+     "SHORTCUT": 0.31423261088709675,
+     "ANOMALY": 0.5664845002003205,
+     "DISARMED": 0.43408203125000006
+    },
+    "gain_vs_strongest_baseline": -0.07885626845472438,
+    "detected_gain_vs_strongest_baseline": -0.034120734908136385
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.528952043608757,
+    "score_ci95": 0.006945577788101047,
+    "detected": 0.5706214689265536,
+    "detected_ci95": 0.029297585139472296,
+    "median_steps_when_found": 5760.0,
+    "detected_per_class": {
+     "TUNNEL": 0.37037037037037035,
+     "SHORTCUT": 0.5333333333333333,
+     "ANOMALY": 0.6515151515151515,
+     "DISARMED": 0.6153846153846154
+    },
+    "per_class": {
+     "TUNNEL": 0.3332248263888889,
+     "SHORTCUT": 0.5154622395833333,
+     "ANOMALY": 0.6244747277462122,
+     "DISARMED": 0.5183668870192307
+    },
+    "gain_vs_strongest_baseline": -0.046347545903954734,
+    "detected_gain_vs_strongest_baseline": -0.025988700564971823
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.18388078019425677,
+    "score_ci95": 0.01351644351550316,
+    "detected": 0.268018018018018,
+    "detected_ci95": 0.024578419259339727,
+    "median_steps_when_found": 66944.0,
+    "detected_per_class": {
+     "OOB": 0.268018018018018
+    },
+    "per_class": {
+     "OOB": 0.18388078019425674
+    },
+    "gain_vs_strongest_baseline": -0.08222326330236482,
+    "detected_gain_vs_strongest_baseline": -0.029279279279279258
+   }
+  },
+  "ppo_rnd": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.4637069902395013,
+    "score_ci95": 0.0175680678990026,
+    "detected": 0.5118110236220472,
+    "detected_ci95": 0.0,
+    "median_steps_when_found": 6016.0,
+    "detected_per_class": {
+     "TUNNEL": 0.6190476190476191,
+     "SHORTCUT": 0.32258064516129026,
+     "ANOMALY": 0.596153846153846,
+     "DISARMED": 0.4782608695652174
+    },
+    "per_class": {
+     "TUNNEL": 0.6013532366071429,
+     "SHORTCUT": 0.29514238911290325,
+     "ANOMALY": 0.5540427183493589,
+     "DISARMED": 0.36098845108695654
+    },
+    "gain_vs_strongest_baseline": -0.10246934465223095,
+    "detected_gain_vs_strongest_baseline": -0.07874015748031493
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.4931502692443503,
+    "score_ci95": 0.017118820439111344,
+    "detected": 0.5423728813559322,
+    "detected_ci95": 0.0,
+    "median_steps_when_found": 5312.0,
+    "detected_per_class": {
+     "TUNNEL": 0.3333333333333333,
+     "SHORTCUT": 0.5333333333333333,
+     "ANOMALY": 0.6515151515151515,
+     "DISARMED": 0.5128205128205129
+    },
+    "per_class": {
+     "TUNNEL": 0.2886827256944444,
+     "SHORTCUT": 0.5009765625000001,
+     "ANOMALY": 0.6227139559659092,
+     "DISARMED": 0.4064127604166667
+    },
+    "gain_vs_strongest_baseline": -0.08214932026836147,
+    "detected_gain_vs_strongest_baseline": -0.05423728813559325
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.1238749736064189,
+    "score_ci95": 0.015728274056481858,
+    "detected": 0.17117117117117117,
+    "detected_ci95": 0.024578419259339738,
+    "median_steps_when_found": 35840.0,
+    "detected_per_class": {
+     "OOB": 0.17117117117117114
+    },
+    "per_class": {
+     "OOB": 0.12387497360641891
+    },
+    "gain_vs_strongest_baseline": -0.14222906989020268,
+    "detected_gain_vs_strongest_baseline": -0.1261261261261261
+   }
+  },
+  "ppo_icm": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.4535440760334645,
+    "score_ci95": 0.025774891324405146,
+    "detected": 0.5013123359580053,
+    "detected_ci95": 0.013610689159282386,
+    "median_steps_when_found": 5888.0,
+    "detected_per_class": {
+     "TUNNEL": 0.6507936507936508,
+     "SHORTCUT": 0.3333333333333333,
+     "ANOMALY": 0.5961538461538461,
+     "DISARMED": 0.3768115942028985
+    },
+    "per_class": {
+     "TUNNEL": 0.6117156498015873,
+     "SHORTCUT": 0.2906376008064516,
+     "ANOMALY": 0.5472193008814102,
+     "DISARMED": 0.31690868432971014
+    },
+    "gain_vs_strongest_baseline": -0.11263225885826772,
+    "detected_gain_vs_strongest_baseline": -0.08923884514435687
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.4825349796963277,
+    "score_ci95": 0.010359588417293952,
+    "detected": 0.5084745762711864,
+    "detected_ci95": 0.0,
+    "median_steps_when_found": 4480.0,
+    "detected_per_class": {
+     "TUNNEL": 0.2962962962962963,
+     "SHORTCUT": 0.5333333333333333,
+     "ANOMALY": 0.6515151515151515,
+     "DISARMED": 0.3846153846153847
+    },
+    "per_class": {
+     "TUNNEL": 0.2856807002314815,
+     "SHORTCUT": 0.5141167534722222,
+     "ANOMALY": 0.630023378314394,
+     "DISARMED": 0.3327824519230769
+    },
+    "gain_vs_strongest_baseline": -0.09276460981638407,
+    "detected_gain_vs_strongest_baseline": -0.08813559322033904
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.11708082594313063,
+    "score_ci95": 0.018656550815433298,
+    "detected": 0.16216216216216217,
+    "detected_ci95": 0.027568009182119064,
+    "median_steps_when_found": 47936.0,
+    "detected_per_class": {
+     "OOB": 0.16216216216216217
+    },
+    "per_class": {
+     "OOB": 0.11708082594313064
+    },
+    "gain_vs_strongest_baseline": -0.14902321755349096,
+    "detected_gain_vs_strongest_baseline": -0.1351351351351351
+   }
+  },
+  "ppo_curiosity_proximity": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.49202217642716534,
+    "score_ci95": 0.013298288215918897,
+    "detected": 0.5616797900262468,
+    "detected_ci95": 0.013610689159282385,
+    "median_steps_when_found": 7424.0,
+    "detected_per_class": {
+     "TUNNEL": 0.6984126984126984,
+     "SHORTCUT": 0.3870967741935484,
+     "ANOMALY": 0.6282051282051283,
+     "DISARMED": 0.5217391304347825
+    },
+    "per_class": {
+     "TUNNEL": 0.6331767733134922,
+     "SHORTCUT": 0.33151671706989244,
+     "ANOMALY": 0.5705472506009616,
+     "DISARMED": 0.4019403872282609
+    },
+    "gain_vs_strongest_baseline": -0.07415415846456691,
+    "detected_gain_vs_strongest_baseline": -0.02887139107611536
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.526218220338983,
+    "score_ci95": 0.004821565096178442,
+    "detected": 0.5649717514124294,
+    "detected_ci95": 0.029297585139472296,
+    "median_steps_when_found": 5568.0,
+    "detected_per_class": {
+     "TUNNEL": 0.37037037037037035,
+     "SHORTCUT": 0.5333333333333333,
+     "ANOMALY": 0.6515151515151515,
+     "DISARMED": 0.5897435897435898
+    },
+    "per_class": {
+     "TUNNEL": 0.32873987268518523,
+     "SHORTCUT": 0.5138563368055555,
+     "ANOMALY": 0.6284105705492423,
+     "DISARMED": 0.5042568108974359
+    },
+    "gain_vs_strongest_baseline": -0.04908136917372874,
+    "detected_gain_vs_strongest_baseline": -0.031638418079096065
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.1785206837697072,
+    "score_ci95": 0.015722771335534246,
+    "detected": 0.26126126126126126,
+    "detected_ci95": 0.028947251143315117,
+    "median_steps_when_found": 60672.0,
+    "detected_per_class": {
+     "OOB": 0.2612612612612613
+    },
+    "per_class": {
+     "OOB": 0.17852068376970723
+    },
+    "gain_vs_strongest_baseline": -0.08758335972691439,
+    "detected_gain_vs_strongest_baseline": -0.036036036036036
+   }
+  },
+  "ppo_task": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.48205406208989504,
+    "score_ci95": 0.030919818764702896,
+    "detected": 0.5406824146981627,
+    "detected_ci95": 0.03601049868766404,
+    "median_steps_when_found": 6720.0,
+    "detected_per_class": {
+     "TUNNEL": 0.6349206349206349,
+     "SHORTCUT": 0.3978494623655914,
+     "ANOMALY": 0.6153846153846153,
+     "DISARMED": 0.4782608695652174
+    },
+    "per_class": {
+     "TUNNEL": 0.5928586929563492,
+     "SHORTCUT": 0.3302093834005376,
+     "ANOMALY": 0.5682153946314102,
+     "DISARMED": 0.3907453011775362
+    },
+    "gain_vs_strongest_baseline": -0.0841222728018372,
+    "detected_gain_vs_strongest_baseline": -0.04986876640419946
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.5011034604519774,
+    "score_ci95": 0.024624960352230017,
+    "detected": 0.5423728813559322,
+    "detected_ci95": 0.0,
+    "median_steps_when_found": 5312.0,
+    "detected_per_class": {
+     "TUNNEL": 0.2962962962962963,
+     "SHORTCUT": 0.5111111111111112,
+     "ANOMALY": 0.6363636363636364,
+     "DISARMED": 0.5897435897435898
+    },
+    "per_class": {
+     "TUNNEL": 0.27260561342592593,
+     "SHORTCUT": 0.5016493055555555,
+     "ANOMALY": 0.6178829308712122,
+     "DISARMED": 0.46103766025641024
+    },
+    "gain_vs_strongest_baseline": -0.07419612906073436,
+    "detected_gain_vs_strongest_baseline": -0.05423728813559325
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 3,
+    "budget": 262144,
+    "score": 0.16086667722409909,
+    "score_ci95": 0.003223621236869142,
+    "detected": 0.22522522522522523,
+    "detected_ci95": 0.011679442724519358,
+    "median_steps_when_found": 61120.0,
+    "detected_per_class": {
+     "OOB": 0.2252252252252252
+    },
+    "per_class": {
+     "OOB": 0.16086667722409909
+    },
+    "gain_vs_strongest_baseline": -0.1052373662725225,
+    "detected_gain_vs_strongest_baseline": -0.07207207207207203
+   }
+  },
+  "cand3_gen014_0.6935.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.656922059547244,
+    "score_ci95": 0.014148378232440716,
+    "detected": 0.7023622047244095,
+    "detected_ci95": 0.018519685039370046,
+    "median_steps_when_found": 5376.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7809523809523808,
+     "SHORTCUT": 0.5161290322580645,
+     "ANOMALY": 0.7884615384615383,
+     "DISARMED": 0.6869565217391305
+    },
+    "per_class": {
+     "TUNNEL": 0.7585472470238096,
+     "SHORTCUT": 0.48402532762096784,
+     "ANOMALY": 0.7323617788461539,
+     "DISARMED": 0.6266092051630435
+    },
+    "gain_vs_strongest_baseline": 0.09074572465551178,
+    "detected_gain_vs_strongest_baseline": 0.11181102362204731
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6229790121822034,
+    "score_ci95": 0.005137083795695718,
+    "detected": 0.6406779661016949,
+    "detected_ci95": 0.00664406779661015,
+    "median_steps_when_found": 3456.0,
+    "detected_per_class": {
+     "TUNNEL": 0.35555555555555557,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.7545454545454546,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.34449869791666665,
+     "SHORTCUT": 0.5855338541666667,
+     "ANOMALY": 0.7266512784090909,
+     "DISARMED": 0.6835336538461537
+    },
+    "gain_vs_strongest_baseline": 0.047679422669491656,
+    "detected_gain_vs_strongest_baseline": 0.04406779661016946
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.395630542652027,
+    "score_ci95": 0.008256353451529246,
+    "detected": 0.43243243243243246,
+    "detected_ci95": 0.007253623058852206,
+    "median_steps_when_found": 12288.0,
+    "detected_per_class": {
+     "OOB": 0.43243243243243246
+    },
+    "per_class": {
+     "OOB": 0.395630542652027
+    },
+    "gain_vs_strongest_baseline": 0.12952649915540543,
+    "detected_gain_vs_strongest_baseline": 0.1351351351351352
+   }
+  },
+  "cand4_gen035_0.6934.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6527312992125984,
+    "score_ci95": 0.003013129216481464,
+    "detected": 0.6913385826771654,
+    "detected_ci95": 0.0030866141732283406,
+    "median_steps_when_found": 5120.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7809523809523808,
+     "SHORTCUT": 0.5032258064516129,
+     "ANOMALY": 0.776923076923077,
+     "DISARMED": 0.6695652173913044
+    },
+    "per_class": {
+     "TUNNEL": 0.7624488467261905,
+     "SHORTCUT": 0.4770917338709678,
+     "ANOMALY": 0.7243426983173078,
+     "DISARMED": 0.6273819633152175
+    },
+    "gain_vs_strongest_baseline": 0.08655496432086618,
+    "detected_gain_vs_strongest_baseline": 0.10078740157480326
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6394200211864407,
+    "score_ci95": 0.01051181574994582,
+    "detected": 0.6610169491525424,
+    "detected_ci95": 0.010505193582932249,
+    "median_steps_when_found": 3584.0,
+    "detected_per_class": {
+     "TUNNEL": 0.4444444444444444,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.7727272727272727,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.4140625,
+     "SHORTCUT": 0.5885416666666666,
+     "ANOMALY": 0.7413796164772727,
+     "DISARMED": 0.6815955528846154
+    },
+    "gain_vs_strongest_baseline": 0.06412043167372894,
+    "detected_gain_vs_strongest_baseline": 0.06440677966101693
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.4246859163851351,
+    "score_ci95": 0.01244251933988728,
+    "detected": 0.47297297297297297,
+    "detected_ci95": 0.015099620494556156,
+    "median_steps_when_found": 14336.0,
+    "detected_per_class": {
+     "OOB": 0.47297297297297297
+    },
+    "per_class": {
+     "OOB": 0.42468591638513514
+    },
+    "gain_vs_strongest_baseline": 0.1585818728885135,
+    "detected_gain_vs_strongest_baseline": 0.1756756756756757
+   }
+  },
+  "portfolio4.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6281942052165354,
+    "score_ci95": 0.009988822085193272,
+    "detected": 0.674015748031496,
+    "detected_ci95": 0.011549052721381002,
+    "median_steps_when_found": 4480.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7619047619047619,
+     "SHORTCUT": 0.45806451612903226,
+     "ANOMALY": 0.7423076923076923,
+     "DISARMED": 0.7304347826086957
+    },
+    "per_class": {
+     "TUNNEL": 0.7357933407738093,
+     "SHORTCUT": 0.4281943044354839,
+     "ANOMALY": 0.6850341796875001,
+     "DISARMED": 0.6710088315217392
+    },
+    "gain_vs_strongest_baseline": 0.062017870324803104,
+    "detected_gain_vs_strongest_baseline": 0.08346456692913384
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6043597722457628,
+    "score_ci95": 0.007890993296329352,
+    "detected": 0.6203389830508474,
+    "detected_ci95": 0.0081372879590763,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.3333333333333333,
+     "SHORTCUT": 0.5466666666666666,
+     "ANOMALY": 0.7454545454545454,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.31145833333333334,
+     "SHORTCUT": 0.5398632812499999,
+     "ANOMALY": 0.7213112571022727,
+     "DISARMED": 0.6836388221153846
+    },
+    "gain_vs_strongest_baseline": 0.029060182733051,
+    "detected_gain_vs_strongest_baseline": 0.023728813559321993
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.37008485536317565,
+    "score_ci95": 0.007898395304298757,
+    "detected": 0.43108108108108106,
+    "detected_ci95": 0.012839800703427032,
+    "median_steps_when_found": 10368.0,
+    "detected_per_class": {
+     "OOB": 0.43108108108108106
+    },
+    "per_class": {
+     "OOB": 0.37008485536317565
+    },
+    "gain_vs_strongest_baseline": 0.10398081186655406,
+    "detected_gain_vs_strongest_baseline": 0.1337837837837838
+   }
+  },
+  "portfolio7.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6201002706692913,
+    "score_ci95": 0.002605709486352574,
+    "detected": 0.6566929133858268,
+    "detected_ci95": 0.007869352950111732,
+    "median_steps_when_found": 4224.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7619047619047619,
+     "SHORTCUT": 0.44516129032258067,
+     "ANOMALY": 0.7000000000000001,
+     "DISARMED": 0.7478260869565218
+    },
+    "per_class": {
+     "TUNNEL": 0.7478283110119047,
+     "SHORTCUT": 0.4253055695564516,
+     "ANOMALY": 0.6585205078124999,
+     "DISARMED": 0.6791652513586957
+    },
+    "gain_vs_strongest_baseline": 0.05392393577755905,
+    "detected_gain_vs_strongest_baseline": 0.06614173228346465
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6146567134533898,
+    "score_ci95": 0.009095147364662187,
+    "detected": 0.6406779661016949,
+    "detected_ci95": 0.00664406779661015,
+    "median_steps_when_found": 3456.0,
+    "detected_per_class": {
+     "TUNNEL": 0.3333333333333333,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.7636363636363637,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.2978081597222222,
+     "SHORTCUT": 0.5822460937499999,
+     "ANOMALY": 0.7257812499999999,
+     "DISARMED": 0.6833533653846154
+    },
+    "gain_vs_strongest_baseline": 0.03935712394067803,
+    "detected_gain_vs_strongest_baseline": 0.04406779661016946
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.3560804212415541,
+    "score_ci95": 0.0017540124330692579,
+    "detected": 0.41621621621621624,
+    "detected_ci95": 0.013634753429955761,
+    "median_steps_when_found": 11520.0,
+    "detected_per_class": {
+     "OOB": 0.41621621621621624
+    },
+    "per_class": {
+     "OOB": 0.35608042124155403
+    },
+    "gain_vs_strongest_baseline": 0.0899763777449325,
+    "detected_gain_vs_strongest_baseline": 0.11891891891891898
+   }
+  },
+  "cand1_gen048_0.6210.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6056471456692913,
+    "score_ci95": 0.00361961708134233,
+    "detected": 0.6346456692913385,
+    "detected_ci95": 0.006173228346456681,
+    "median_steps_when_found": 4352.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7523809523809524,
+     "SHORTCUT": 0.41935483870967744,
+     "ANOMALY": 0.6576923076923076,
+     "DISARMED": 0.7652173913043478
+    },
+    "per_class": {
+     "TUNNEL": 0.7276320684523808,
+     "SHORTCUT": 0.4003465221774193,
+     "ANOMALY": 0.6257305438701923,
+     "DISARMED": 0.725573199728261
+    },
+    "gain_vs_strongest_baseline": 0.039470810777559096,
+    "detected_gain_vs_strongest_baseline": 0.04409448818897632
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5870034427966102,
+    "score_ci95": 0.007989386931119542,
+    "detected": 0.6067796610169491,
+    "detected_ci95": 0.012429912674706663,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.35555555555555557,
+     "SHORTCUT": 0.5733333333333334,
+     "ANOMALY": 0.6818181818181818,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.3335394965277778,
+     "SHORTCUT": 0.5574934895833333,
+     "ANOMALY": 0.6534135298295456,
+     "DISARMED": 0.6841421274038463
+    },
+    "gain_vs_strongest_baseline": 0.011703853283898447,
+    "detected_gain_vs_strongest_baseline": 0.01016949152542368
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.3341394372888513,
+    "score_ci95": 0.008115001793095074,
+    "detected": 0.372972972972973,
+    "detected_ci95": 0.007722071428308648,
+    "median_steps_when_found": 7936.0,
+    "detected_per_class": {
+     "OOB": 0.372972972972973
+    },
+    "per_class": {
+     "OOB": 0.33413943728885137
+    },
+    "gain_vs_strongest_baseline": 0.06803539379222973,
+    "detected_gain_vs_strongest_baseline": 0.07567567567567574
+   }
+  },
+  "cand2_gen022_0.6198.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6038301242618109,
+    "score_ci95": 0.0058880251577868884,
+    "detected": 0.6409448818897637,
+    "detected_ci95": 0.014312041142654792,
+    "median_steps_when_found": 4352.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7619047619047619,
+     "SHORTCUT": 0.43870967741935485,
+     "ANOMALY": 0.6653846153846155,
+     "DISARMED": 0.7478260869565218
+    },
+    "per_class": {
+     "TUNNEL": 0.7500232514880952,
+     "SHORTCUT": 0.410776839717742,
+     "ANOMALY": 0.6234243539663461,
+     "DISARMED": 0.6862516983695652
+    },
+    "gain_vs_strongest_baseline": 0.03765378937007868,
+    "detected_gain_vs_strongest_baseline": 0.050393700787401574
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5849758342161018,
+    "score_ci95": 0.00931083003357541,
+    "detected": 0.6101694915254237,
+    "detected_ci95": 0.010505193582932249,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.37777777777777777,
+     "SHORTCUT": 0.5866666666666667,
+     "ANOMALY": 0.6727272727272727,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.34352213541666665,
+     "SHORTCUT": 0.5569401041666667,
+     "ANOMALY": 0.6442693536931818,
+     "DISARMED": 0.6841421274038461
+    },
+    "gain_vs_strongest_baseline": 0.009676244703390013,
+    "detected_gain_vs_strongest_baseline": 0.013559322033898202
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.32532728040540543,
+    "score_ci95": 0.006778870570360374,
+    "detected": 0.35810810810810806,
+    "detected_ci95": 0.00936438710220022,
+    "median_steps_when_found": 9344.0,
+    "detected_per_class": {
+     "OOB": 0.3581081081081081
+    },
+    "per_class": {
+     "OOB": 0.32532728040540543
+    },
+    "gain_vs_strongest_baseline": 0.05922323690878384,
+    "detected_gain_vs_strongest_baseline": 0.0608108108108108
+   }
+  },
+  "targetcycle.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5854615218996064,
+    "score_ci95": 0.005242348021299437,
+    "detected": 0.6220472440944882,
+    "detected_ci95": 0.004880365522779537,
+    "median_steps_when_found": 4736.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7714285714285714,
+     "SHORTCUT": 0.45806451612903226,
+     "ANOMALY": 0.6269230769230769,
+     "DISARMED": 0.6956521739130435
+    },
+    "per_class": {
+     "TUNNEL": 0.7360584077380953,
+     "SHORTCUT": 0.4221774193548387,
+     "ANOMALY": 0.5970271183894231,
+     "DISARMED": 0.6418902853260869
+    },
+    "gain_vs_strongest_baseline": 0.019285187007874183,
+    "detected_gain_vs_strongest_baseline": 0.03149606299212604
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5743710275423729,
+    "score_ci95": 0.0037069657261477574,
+    "detected": 0.6033898305084746,
+    "detected_ci95": 0.013288135593220353,
+    "median_steps_when_found": 3520.0,
+    "detected_per_class": {
+     "TUNNEL": 0.37777777777777777,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.6454545454545454,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.3123372395833333,
+     "SHORTCUT": 0.5754687500000001,
+     "ANOMALY": 0.6160866477272727,
+     "DISARMED": 0.683916766826923
+    },
+    "gain_vs_strongest_baseline": -0.0009285619703388592,
+    "detected_gain_vs_strongest_baseline": 0.006779661016949157
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.3157668654983108,
+    "score_ci95": 0.009070867367948942,
+    "detected": 0.3648648648648648,
+    "detected_ci95": 0.007253623058852184,
+    "median_steps_when_found": 11456.0,
+    "detected_per_class": {
+     "OOB": 0.36486486486486486
+    },
+    "per_class": {
+     "OOB": 0.31576686549831084
+    },
+    "gain_vs_strongest_baseline": 0.0496628220016892,
+    "detected_gain_vs_strongest_baseline": 0.06756756756756754
+   }
+  },
+  "pairladder.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6298428272637795,
+    "score_ci95": 0.008073207184211098,
+    "detected": 0.6834645669291339,
+    "detected_ci95": 0.011340944635878002,
+    "median_steps_when_found": 4864.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7619047619047619,
+     "SHORTCUT": 0.49032258064516127,
+     "ANOMALY": 0.7538461538461539,
+     "DISARMED": 0.7130434782608696
+    },
+    "per_class": {
+     "TUNNEL": 0.7440801711309524,
+     "SHORTCUT": 0.44952116935483866,
+     "ANOMALY": 0.6784405048076925,
+     "DISARMED": 0.6587083899456522
+    },
+    "gain_vs_strongest_baseline": 0.06366649237204725,
+    "detected_gain_vs_strongest_baseline": 0.09291338582677178
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6129402807203389,
+    "score_ci95": 0.0073624169478947125,
+    "detected": 0.6508474576271187,
+    "detected_ci95": 0.008137287959076351,
+    "median_steps_when_found": 3968.0,
+    "detected_per_class": {
+     "TUNNEL": 0.37777777777777777,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.7727272727272727,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.3245876736111111,
+     "SHORTCUT": 0.5614127604166667,
+     "ANOMALY": 0.7249778053977273,
+     "DISARMED": 0.682421875
+    },
+    "gain_vs_strongest_baseline": 0.03764069120762714,
+    "detected_gain_vs_strongest_baseline": 0.05423728813559325
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.3822384396114865,
+    "score_ci95": 0.01568445853906754,
+    "detected": 0.46081081081081077,
+    "detected_ci95": 0.01139226859689429,
+    "median_steps_when_found": 13952.0,
+    "detected_per_class": {
+     "OOB": 0.4608108108108108
+    },
+    "per_class": {
+     "OOB": 0.3822384396114865
+    },
+    "gain_vs_strongest_baseline": 0.11613439611486492,
+    "detected_gain_vs_strongest_baseline": 0.1635135135135135
+   }
+  },
+  "elites.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5880413385826772,
+    "score_ci95": 0.005914097483942864,
+    "detected": 0.6094488188976378,
+    "detected_ci95": 0.006173228346456681,
+    "median_steps_when_found": 3840.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7238095238095238,
+     "SHORTCUT": 0.4129032258064516,
+     "ANOMALY": 0.6269230769230768,
+     "DISARMED": 0.7304347826086957
+    },
+    "per_class": {
+     "TUNNEL": 0.7073242187500001,
+     "SHORTCUT": 0.4013293850806452,
+     "ANOMALY": 0.6065711388221153,
+     "DISARMED": 0.6888926630434782
+    },
+    "gain_vs_strongest_baseline": 0.021865003690944906,
+    "detected_gain_vs_strongest_baseline": 0.018897637795275646
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.5634633209745763,
+    "score_ci95": 0.011902487888353373,
+    "detected": 0.5830508474576271,
+    "detected_ci95": 0.016939115672274355,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.3333333333333333,
+     "SHORTCUT": 0.5466666666666666,
+     "ANOMALY": 0.6454545454545454,
+     "DISARMED": 0.6923076923076923
+    },
+    "per_class": {
+     "TUNNEL": 0.28194444444444444,
+     "SHORTCUT": 0.5371223958333334,
+     "ANOMALY": 0.6253329190340909,
+     "DISARMED": 0.6840519831730769
+    },
+    "gain_vs_strongest_baseline": -0.011836268538135464,
+    "detected_gain_vs_strongest_baseline": -0.013559322033898313
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.32165329391891895,
+    "score_ci95": 0.007468324580800144,
+    "detected": 0.3527027027027027,
+    "detected_ci95": 0.01350551114411063,
+    "median_steps_when_found": 7552.0,
+    "detected_per_class": {
+     "OOB": 0.3527027027027027
+    },
+    "per_class": {
+     "OOB": 0.3216532939189189
+    },
+    "gain_vs_strongest_baseline": 0.05554925042229736,
+    "detected_gain_vs_strongest_baseline": 0.05540540540540545
+   }
+  },
+  "rrtdrive.py": {
+   "search": {
+    "n_instances": 127,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.6135580708661417,
+    "score_ci95": 0.013831597306445722,
+    "detected": 0.6519685039370078,
+    "detected_ci95": 0.014144643089942446,
+    "median_steps_when_found": 4608.0,
+    "detected_per_class": {
+     "TUNNEL": 0.7619047619047619,
+     "SHORTCUT": 0.43225806451612897,
+     "ANOMALY": 0.6846153846153846,
+     "DISARMED": 0.773913043478261
+    },
+    "per_class": {
+     "TUNNEL": 0.7390299479166667,
+     "SHORTCUT": 0.4090001260080645,
+     "ANOMALY": 0.6375845102163461,
+     "DISARMED": 0.7203846807065217
+    },
+    "gain_vs_strongest_baseline": 0.04738173597440942,
+    "detected_gain_vs_strongest_baseline": 0.06141732283464563
+   },
+   "heldout_levels_instances": {
+    "n_instances": 59,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.577585407838983,
+    "score_ci95": 0.013747361206997205,
+    "detected": 0.6067796610169491,
+    "detected_ci95": 0.01937061985406235,
+    "median_steps_when_found": 3328.0,
+    "detected_per_class": {
+     "TUNNEL": 0.3111111111111111,
+     "SHORTCUT": 0.6,
+     "ANOMALY": 0.6909090909090909,
+     "DISARMED": 0.676923076923077
+    },
+    "per_class": {
+     "TUNNEL": 0.25887586805555557,
+     "SHORTCUT": 0.58642578125,
+     "ANOMALY": 0.6592906605113636,
+     "DISARMED": 0.6497596153846155
+    },
+    "gain_vs_strongest_baseline": 0.002285818326271283,
+    "detected_gain_vs_strongest_baseline": 0.01016949152542368
+   },
+   "heldout_class_instances": {
+    "n_instances": 148,
+    "n_seeds": 5,
+    "budget": 262144,
+    "score": 0.3069454708614865,
+    "score_ci95": 0.017618151738292284,
+    "detected": 0.35540540540540544,
+    "detected_ci95": 0.017062725340798144,
+    "median_steps_when_found": 9216.0,
+    "detected_per_class": {
+     "OOB": 0.35540540540540544
+    },
+    "per_class": {
+     "OOB": 0.3069454708614865
+    },
+    "gain_vs_strongest_baseline": 0.0408414273648649,
+    "detected_gain_vs_strongest_baseline": 0.05810810810810818
+   }
+  }
+ },
+ "strongest_baseline": {
+  "search": "repeat_random",
+  "heldout_levels_instances": "repeat_random",
+  "heldout_class_instances": "repeat_random"
+ },
+ "bugs": {
+  "hyak_scan_shipped": {
+   "n_levels": 74,
+   "budget": 1048576,
+   "distinct_level_anomaly_pairs_per_program": {
+    "repeat_random": 10,
+    "goexplore": 11,
+    "random": 4
+   },
+   "union_pairs": 12,
+   "by_flag": {
+    "OOB": 1,
+    "PENETRATE": 7,
+    "BLOWUP": 4
+   },
+   "pairs": {
+    "repeat_random": [
+     [
+      "l/car_launch.json",
+      "PENETRATE"
+     ],
+     [
+      "l/grasp_easy.json",
+      "PENETRATE"
+     ],
+     [
+      "l/grasp_hard.json",
+      "PENETRATE"
+     ],
+     [
+      "l/mjc_half_cheetah_easy.json",
+      "PENETRATE"
+     ],
+     [
+      "l/rail.json",
+      "PENETRATE"
+     ],
+     [
+      "m/h10_thrust_right_easy.json",
+      "BLOWUP"
+     ],
+     [
+      "m/h15_thrustshoot.json",
+      "OOB"
+     ],
+     [
+      "m/h18_thrust_right_very_easy.json",
+      "BLOWUP"
+     ],
+     [
+      "m/h3_car_thrust.json",
+      "BLOWUP"
+     ],
+     [
+      "m/h6_thrust_over.json",
+      "BLOWUP"
+     ]
+    ],
+    "goexplore": [
+     [
+      "l/car_launch.json",
+      "PENETRATE"
+     ],
+     [
+      "l/grasp_easy.json",
+      "PENETRATE"
+     ],
+     [
+      "l/grasp_hard.json",
+      "PENETRATE"
+     ],
+     [
+      "l/mjc_half_cheetah.json",
+      "PENETRATE"
+     ],
+     [
+      "l/mjc_half_cheetah_easy.json",
+      "PENETRATE"
+     ],
+     [
+      "l/rail.json",
+      "PENETRATE"
+     ],
+     [
+      "m/h10_thrust_right_easy.json",
+      "BLOWUP"
+     ],
+     [
+      "m/h15_thrustshoot.json",
+      "OOB"
+     ],
+     [
+      "m/h15_thrustshoot.json",
+      "PENETRATE"
+     ],
+     [
+      "m/h18_thrust_right_very_easy.json",
+      "BLOWUP"
+     ],
+     [
+      "m/h6_thrust_over.json",
+      "BLOWUP"
+     ]
+    ],
+    "random": [
+     [
+      "l/grasp_easy.json",
+      "PENETRATE"
+     ],
+     [
+      "l/grasp_hard.json",
+      "PENETRATE"
+     ],
+     [
+      "l/rail.json",
+      "PENETRATE"
+     ],
+     [
+      "m/h15_thrustshoot.json",
+      "PENETRATE"
+     ]
+    ]
+   }
+  },
+  "hyak_scan_fresh": {
+   "n_levels": 64,
+   "budget": 1048576,
+   "distinct_level_anomaly_pairs_per_program": {
+    "random": 8,
+    "repeat_random": 13,
+    "goexplore": 13
+   },
+   "union_pairs": 17,
+   "by_flag": {
+    "BLOWUP": 6,
+    "PENETRATE": 6,
+    "OOB": 5
+   },
+   "pairs": {
+    "random": [
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0001.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0001.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0005.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0010.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0033.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0033.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0039.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0051.json",
+      "PENETRATE"
+     ]
+    ],
+    "repeat_random": [
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0001.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0001.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0005.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0008.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0010.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0033.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0039.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0049.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0051.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0074.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0076.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0076.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0078.json",
+      "PENETRATE"
+     ]
+    ],
+    "goexplore": [
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0001.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0001.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0005.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0008.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0010.json",
+      "OOB"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0010.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0034.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0039.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0049.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0051.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0074.json",
+      "PENETRATE"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0076.json",
+      "BLOWUP"
+     ],
+     [
+      "runs/hyak_fresh_levels/fresh_l_20260828_0076.json",
+      "OOB"
+     ]
+    ]
+   }
+  }
+ },
+ "design": {
+  "n_levels": 34,
+  "trivial_win": [
+   "s/h5_rotate_fall.json"
+  ],
+  "noop_death": 9
+ }
+}

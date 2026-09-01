@@ -1,0 +1,1007 @@
+{
+ "summary": {
+  "n_rows": 28,
+  "by_corpus": {
+   "shipped": 4,
+   "fresh": 24
+  },
+  "by_severity": {
+   "A": 7,
+   "B": 21
+  },
+  "spawn_time_generation_defects": [],
+  "per_program": {
+   "repeat_random": {
+    "distinct_AB_pairs": 18,
+    "shipped": 4,
+    "fresh": 14
+   },
+   "goexplore": {
+    "distinct_AB_pairs": 13,
+    "shipped": 3,
+    "fresh": 10
+   },
+   "cand2_gen001_0.6943": {
+    "distinct_AB_pairs": 3,
+    "shipped": 3,
+    "fresh": 0
+   },
+   "resonator": {
+    "distinct_AB_pairs": 15,
+    "shipped": 3,
+    "fresh": 12
+   },
+   "contact_ucb": {
+    "distinct_AB_pairs": 16,
+    "shipped": 3,
+    "fresh": 13
+   },
+   "cand1_gen037_0.6994": {
+    "distinct_AB_pairs": 12,
+    "shipped": 3,
+    "fresh": 9
+   },
+   "split_pump": {
+    "distinct_AB_pairs": 14,
+    "shipped": 4,
+    "fresh": 10
+   },
+   "saturate": {
+    "distinct_AB_pairs": 13,
+    "shipped": 3,
+    "fresh": 10
+   },
+   "velalign": {
+    "distinct_AB_pairs": 13,
+    "shipped": 3,
+    "fresh": 10
+   },
+   "random": {
+    "distinct_AB_pairs": 11,
+    "shipped": 2,
+    "fresh": 9
+   },
+   "macrosweep": {
+    "distinct_AB_pairs": 14,
+    "shipped": 2,
+    "fresh": 12
+   },
+   "wallbreaker": {
+    "distinct_AB_pairs": 13,
+    "shipped": 1,
+    "fresh": 12
+   }
+  },
+  "union_pairs": 28
+ },
+ "rows": [
+  {
+   "level": "m/h15_thrustshoot.json",
+   "corpus": "shipped",
+   "flag": "OOB",
+   "severity": "A",
+   "depth": 0,
+   "duration": 41,
+   "oob_later": true,
+   "finders": {
+    "repeat_random": [
+     73984,
+     1
+    ],
+    "goexplore": [
+     20480,
+     3
+    ],
+    "cand2_gen001_0.6943": [
+     9472,
+     1
+    ],
+    "resonator": [
+     3200,
+     1
+    ],
+    "contact_ucb": [
+     10880,
+     3
+    ],
+    "cand1_gen037_0.6994": [
+     12160,
+     2
+    ],
+    "split_pump": [
+     16768,
+     1
+    ],
+    "saturate": [
+     7040,
+     3
+    ]
+   }
+  },
+  {
+   "level": "l/grasp_hard.json",
+   "corpus": "shipped",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.05489472299814224,
+   "duration": 9,
+   "oob_later": false,
+   "finders": {
+    "random": [
+     2688,
+     3
+    ],
+    "repeat_random": [
+     1024,
+     3
+    ],
+    "goexplore": [
+     1024,
+     3
+    ],
+    "cand2_gen001_0.6943": [
+     1024,
+     3
+    ],
+    "macrosweep": [
+     1024,
+     3
+    ],
+    "wallbreaker": [
+     1024,
+     3
+    ],
+    "resonator": [
+     1664,
+     2
+    ],
+    "contact_ucb": [
+     1024,
+     3
+    ],
+    "cand1_gen037_0.6994": [
+     1024,
+     3
+    ],
+    "split_pump": [
+     1024,
+     3
+    ],
+    "saturate": [
+     1024,
+     3
+    ],
+    "velalign": [
+     1024,
+     3
+    ]
+   }
+  },
+  {
+   "level": "l/rail.json",
+   "corpus": "shipped",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.053272128105163574,
+   "duration": 4,
+   "oob_later": false,
+   "finders": {
+    "random": [
+     10880,
+     3
+    ],
+    "repeat_random": [
+     10496,
+     3
+    ],
+    "goexplore": [
+     18432,
+     3
+    ],
+    "cand2_gen001_0.6943": [
+     347392,
+     1
+    ],
+    "macrosweep": [
+     10624,
+     3
+    ],
+    "resonator": [
+     180864,
+     1
+    ],
+    "contact_ucb": [
+     13184,
+     2
+    ],
+    "cand1_gen037_0.6994": [
+     37248,
+     3
+    ],
+    "split_pump": [
+     11392,
+     3
+    ],
+    "saturate": [
+     10112,
+     3
+    ],
+    "velalign": [
+     10368,
+     3
+    ]
+   }
+  },
+  {
+   "level": "m/h15_thrustshoot.json",
+   "corpus": "shipped",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.09867668151855469,
+   "duration": 4,
+   "oob_later": false,
+   "finders": {
+    "repeat_random": [
+     66816,
+     1
+    ],
+    "split_pump": [
+     6016,
+     2
+    ],
+    "velalign": [
+     4992,
+     3
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0001.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "A",
+   "depth": 0,
+   "duration": 41,
+   "oob_later": true,
+   "finders": {
+    "repeat_random": [
+     101632,
+     2
+    ],
+    "goexplore": [
+     75648,
+     1
+    ],
+    "wallbreaker": [
+     103168,
+     2
+    ],
+    "resonator": [
+     733696,
+     1
+    ],
+    "macrosweep": [
+     5888,
+     1
+    ],
+    "contact_ucb": [
+     35968,
+     1
+    ],
+    "cand1_gen037_0.6994": [
+     52864,
+     1
+    ],
+    "saturate": [
+     20096,
+     1
+    ],
+    "velalign": [
+     3712,
+     3
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0076.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "A",
+   "depth": 0,
+   "duration": 41,
+   "oob_later": true,
+   "finders": {
+    "repeat_random": [
+     149120,
+     1
+    ],
+    "wallbreaker": [
+     47744,
+     2
+    ],
+    "resonator": [
+     423808,
+     2
+    ],
+    "macrosweep": [
+     153216,
+     1
+    ],
+    "cand1_gen037_0.6994": [
+     17024,
+     1
+    ],
+    "split_pump": [
+     80384,
+     1
+    ],
+    "saturate": [
+     16000,
+     1
+    ],
+    "velalign": [
+     8704,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0051.json",
+   "corpus": "fresh",
+   "flag": "JOINT_TEAR",
+   "severity": "A",
+   "depth": 0,
+   "duration": 8,
+   "oob_later": true,
+   "finders": {
+    "repeat_random": [
+     51840,
+     2
+    ],
+    "wallbreaker": [
+     28544,
+     1
+    ],
+    "resonator": [
+     472448,
+     1
+    ],
+    "contact_ucb": [
+     12800,
+     1
+    ],
+    "velalign": [
+     23680,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0084.json",
+   "corpus": "fresh",
+   "flag": "JOINT_TEAR",
+   "severity": "A",
+   "depth": 0,
+   "duration": 2,
+   "oob_later": false,
+   "finders": {
+    "random": [
+     643200,
+     1
+    ],
+    "contact_ucb": [
+     571776,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0033.json",
+   "corpus": "fresh",
+   "flag": "JOINT_TEAR",
+   "severity": "A",
+   "depth": 0,
+   "duration": 2,
+   "oob_later": false,
+   "finders": {
+    "wallbreaker": [
+     155392,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0085.json",
+   "corpus": "fresh",
+   "flag": "JOINT_TEAR",
+   "severity": "A",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": false,
+   "finders": {
+    "contact_ucb": [
+     155264,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0010.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 2,
+   "oob_later": true,
+   "finders": {
+    "random": [
+     783488,
+     1
+    ],
+    "repeat_random": [
+     69888,
+     2
+    ],
+    "goexplore": [
+     135424,
+     3
+    ],
+    "wallbreaker": [
+     49280,
+     3
+    ],
+    "resonator": [
+     464256,
+     2
+    ],
+    "macrosweep": [
+     11392,
+     3
+    ],
+    "contact_ucb": [
+     467072,
+     2
+    ],
+    "cand1_gen037_0.6994": [
+     142848,
+     1
+    ],
+    "split_pump": [
+     148224,
+     3
+    ],
+    "saturate": [
+     269312,
+     2
+    ],
+    "velalign": [
+     730112,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0051.json",
+   "corpus": "fresh",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.05549812316894531,
+   "duration": 3,
+   "oob_later": false,
+   "finders": {
+    "random": [
+     2304,
+     3
+    ],
+    "repeat_random": [
+     35200,
+     1
+    ],
+    "goexplore": [
+     6144,
+     3
+    ],
+    "wallbreaker": [
+     2304,
+     2
+    ],
+    "resonator": [
+     63744,
+     1
+    ],
+    "macrosweep": [
+     2432,
+     3
+    ],
+    "contact_ucb": [
+     28032,
+     2
+    ],
+    "cand1_gen037_0.6994": [
+     2432,
+     3
+    ],
+    "split_pump": [
+     2304,
+     3
+    ],
+    "saturate": [
+     2304,
+     2
+    ],
+    "velalign": [
+     2432,
+     2
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0001.json",
+   "corpus": "fresh",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.08791589736938477,
+   "duration": 3,
+   "oob_later": false,
+   "finders": {
+    "random": [
+     69504,
+     3
+    ],
+    "repeat_random": [
+     561280,
+     1
+    ],
+    "goexplore": [
+     119424,
+     2
+    ],
+    "wallbreaker": [
+     9984,
+     1
+    ],
+    "resonator": [
+     8960,
+     1
+    ],
+    "macrosweep": [
+     365440,
+     1
+    ],
+    "contact_ucb": [
+     77952,
+     2
+    ],
+    "cand1_gen037_0.6994": [
+     697600,
+     1
+    ],
+    "split_pump": [
+     677248,
+     1
+    ],
+    "saturate": [
+     794752,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0008.json",
+   "corpus": "fresh",
+   "flag": "BLOWUP",
+   "severity": "B",
+   "depth": 0,
+   "duration": 43,
+   "oob_later": false,
+   "finders": {
+    "repeat_random": [
+     3584,
+     2
+    ],
+    "goexplore": [
+     3840,
+     3
+    ],
+    "wallbreaker": [
+     2816,
+     3
+    ],
+    "resonator": [
+     2432,
+     3
+    ],
+    "macrosweep": [
+     2432,
+     3
+    ],
+    "contact_ucb": [
+     2560,
+     3
+    ],
+    "cand1_gen037_0.6994": [
+     2432,
+     3
+    ],
+    "split_pump": [
+     2432,
+     3
+    ],
+    "saturate": [
+     2432,
+     3
+    ],
+    "velalign": [
+     2432,
+     3
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0049.json",
+   "corpus": "fresh",
+   "flag": "BLOWUP",
+   "severity": "B",
+   "depth": 0,
+   "duration": 43,
+   "oob_later": false,
+   "finders": {
+    "repeat_random": [
+     324864,
+     1
+    ],
+    "goexplore": [
+     52352,
+     3
+    ],
+    "wallbreaker": [
+     586624,
+     1
+    ],
+    "resonator": [
+     28288,
+     3
+    ],
+    "macrosweep": [
+     42496,
+     2
+    ],
+    "contact_ucb": [
+     859008,
+     1
+    ],
+    "cand1_gen037_0.6994": [
+     52224,
+     3
+    ],
+    "split_pump": [
+     51968,
+     1
+    ],
+    "saturate": [
+     26624,
+     1
+    ],
+    "velalign": [
+     7936,
+     3
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0074.json",
+   "corpus": "fresh",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.07981541752815247,
+   "duration": 4,
+   "oob_later": false,
+   "finders": {
+    "repeat_random": [
+     5632,
+     3
+    ],
+    "goexplore": [
+     119808,
+     2
+    ],
+    "wallbreaker": [
+     721152,
+     1
+    ],
+    "resonator": [
+     11136,
+     3
+    ],
+    "macrosweep": [
+     126336,
+     3
+    ],
+    "contact_ucb": [
+     314880,
+     2
+    ],
+    "cand1_gen037_0.6994": [
+     20736,
+     2
+    ],
+    "split_pump": [
+     666496,
+     1
+    ],
+    "saturate": [
+     6912,
+     2
+    ],
+    "velalign": [
+     15360,
+     3
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0005.json",
+   "corpus": "fresh",
+   "flag": "BLOWUP",
+   "severity": "B",
+   "depth": 0,
+   "duration": 44,
+   "oob_later": false,
+   "finders": {
+    "random": [
+     103552,
+     1
+    ],
+    "repeat_random": [
+     694784,
+     1
+    ],
+    "goexplore": [
+     30592,
+     1
+    ],
+    "resonator": [
+     520064,
+     1
+    ],
+    "macrosweep": [
+     57856,
+     1
+    ],
+    "contact_ucb": [
+     655616,
+     1
+    ],
+    "saturate": [
+     10624,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0033.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": true,
+   "finders": {
+    "random": [
+     59648,
+     2
+    ],
+    "repeat_random": [
+     42624,
+     1
+    ],
+    "wallbreaker": [
+     213632,
+     1
+    ],
+    "split_pump": [
+     437376,
+     2
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0039.json",
+   "corpus": "fresh",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.2362145036458969,
+   "duration": 3,
+   "oob_later": false,
+   "finders": {
+    "random": [
+     175488,
+     1
+    ],
+    "goexplore": [
+     470528,
+     1
+    ],
+    "wallbreaker": [
+     7936,
+     1
+    ],
+    "velalign": [
+     60544,
+     2
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0067.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": true,
+   "finders": {
+    "random": [
+     628352,
+     1
+    ],
+    "goexplore": [
+     374528,
+     1
+    ],
+    "cand1_gen037_0.6994": [
+     889984,
+     1
+    ],
+    "split_pump": [
+     85760,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0039.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": true,
+   "finders": {
+    "random": [
+     574208,
+     1
+    ],
+    "repeat_random": [
+     145920,
+     1
+    ],
+    "resonator": [
+     341760,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0078.json",
+   "corpus": "fresh",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.06138134002685547,
+   "duration": 3,
+   "oob_later": true,
+   "finders": {
+    "repeat_random": [
+     59008,
+     1
+    ],
+    "contact_ucb": [
+     411264,
+     1
+    ],
+    "split_pump": [
+     816256,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0017.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": true,
+   "finders": {
+    "resonator": [
+     192256,
+     1
+    ],
+    "macrosweep": [
+     149888,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0039.json",
+   "corpus": "fresh",
+   "flag": "BLOWUP",
+   "severity": "B",
+   "depth": 0,
+   "duration": 14,
+   "oob_later": false,
+   "finders": {
+    "macrosweep": [
+     752000,
+     1
+    ],
+    "contact_ucb": [
+     945536,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0003.json",
+   "corpus": "fresh",
+   "flag": "PENETRATE",
+   "severity": "B",
+   "depth": 0.06525686383247375,
+   "duration": 3,
+   "oob_later": false,
+   "finders": {
+    "velalign": [
+     464768,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0058.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": true,
+   "finders": {
+    "macrosweep": [
+     90496,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0078.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": true,
+   "finders": {
+    "repeat_random": [
+     551424,
+     1
+    ]
+   }
+  },
+  {
+   "level": "runs/hyak/fresh_levels/fresh_l_20260828_0084.json",
+   "corpus": "fresh",
+   "flag": "OOB",
+   "severity": "B",
+   "depth": 0,
+   "duration": 1,
+   "oob_later": true,
+   "finders": {
+    "saturate": [
+     1016576,
+     1
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "program": "runs/evolve_overnight/candidates/cand1_gen037_0.6994.py",
+ "n": 8,
+ "workers": 64,
+ "steps": 1024,
+ "results": {
+  "fixed": {
+   "mode": "fixed",
+   "score": 0.465087890625,
+   "detected": 0.5,
+   "detected_per_class": {
+    "ANOMALY": 0.6666666666666666,
+    "DISARMED": 1.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 1.0
+   },
+   "names": [
+    "l_h0_angrybirds__SHORTCUT__0",
+    "l_h4_cartpole__SHORTCUT__0",
+    "l_hard_pinball__TUNNEL__1",
+    "m_h17_thrustcontrol_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h4_thrust_aim__DISARMED__0",
+    "s_h7_unicycle_left__ANOMALY__0"
+   ],
+   "chimera": [
+    {
+     "instance": "l_h0_angrybirds__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 0
+    },
+    {
+     "instance": "l_h4_cartpole__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 0
+    }
+   ],
+   "wall": 154.65889430046082
+  },
+  "legacy": {
+   "mode": "legacy",
+   "score": 0.471923828125,
+   "detected": 0.5,
+   "detected_per_class": {
+    "ANOMALY": 0.6666666666666666,
+    "DISARMED": 1.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 1.0
+   },
+   "names": [
+    "l_h0_angrybirds__SHORTCUT__0",
+    "l_h4_cartpole__SHORTCUT__0",
+    "l_hard_pinball__TUNNEL__1",
+    "m_h17_thrustcontrol_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h4_thrust_aim__DISARMED__0",
+    "s_h7_unicycle_left__ANOMALY__0"
+   ],
+   "chimera": [
+    {
+     "instance": "l_h0_angrybirds__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 0
+    },
+    {
+     "instance": "l_h4_cartpole__SHORTCUT__0",
+     "valid": 256,
+     "chimeras": 0
+    }
+   ],
+   "wall": 155.33814597129822
+  }
+ }
+}

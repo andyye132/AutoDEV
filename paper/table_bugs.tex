@@ -1,0 +1,27 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llllp{5.6cm}}
+\toprule
+Level & Anomaly & Sev. & Evidence (replay) & Found by (min.\ steps, seeds) \\
+\midrule
+m/h15\_thrustshoot & OOB & A & leaves arena, $\ge$41 steps (replay-window end) & Resonator (3k, 1), saturate (7k, 3), cand2\_gen001\_0.6943 (9k, 1), Contact-UCB (11k, 3), Evolved (12k, 2), split\_pump (17k, 1), Go-Explore (20k, 3), Action-repeat (74k, 1) \\
+l/grasp\_hard & PENETRATE & B & 5.5\,cm deep, 9 steps & Action-repeat (1k, 3), Go-Explore (1k, 3), cand2\_gen001\_0.6943 (1k, 3), Macrosweep (1k, 3), Wallbreaker (1k, 3), Contact-UCB (1k, 3), Evolved (1k, 3), split\_pump (1k, 3), saturate (1k, 3), velalign (1k, 3), Resonator (2k, 2), Random (3k, 3) \\
+l/rail & PENETRATE & B & 5.3\,cm deep, 4 steps & saturate (10k, 3), velalign (10k, 3), Action-repeat (10k, 3), Macrosweep (11k, 3), Random (11k, 3), split\_pump (11k, 3), Contact-UCB (13k, 2), Go-Explore (18k, 3), Evolved (37k, 3), Resonator (181k, 1), cand2\_gen001\_0.6943 (347k, 1) \\
+m/h15\_thrustshoot & PENETRATE & B & 9.9\,cm deep, 4 steps & velalign (5k, 3), split\_pump (6k, 2), Action-repeat (67k, 1) \\
+fresh/0001 & OOB & A & leaves arena, $\ge$41 steps (replay-window end) & velalign (4k, 3), Macrosweep (6k, 1), saturate (20k, 1), Contact-UCB (36k, 1), Evolved (53k, 1), Go-Explore (76k, 1), Action-repeat (102k, 2), Wallbreaker (103k, 2), Resonator (734k, 1) \\
+fresh/0076 & OOB & A & leaves arena, $\ge$41 steps (replay-window end) & velalign (9k, 1), saturate (16k, 1), Evolved (17k, 1), Wallbreaker (48k, 2), split\_pump (80k, 1), Action-repeat (149k, 1), Macrosweep (153k, 1), Resonator (424k, 2) \\
+fresh/0051 & JOINT\_TEAR & A & joint anchors separate & Contact-UCB (13k, 1), velalign (24k, 1), Wallbreaker (29k, 1), Action-repeat (52k, 2), Resonator (472k, 1) \\
+fresh/0084 & JOINT\_TEAR & A & joint anchors separate & Contact-UCB (572k, 1), Random (643k, 1) \\
+fresh/0033 & JOINT\_TEAR & A & joint anchors separate & Wallbreaker (155k, 1) \\
+fresh/0085 & JOINT\_TEAR & A & joint anchors separate & Contact-UCB (155k, 1) \\
+fresh/0010 & OOB & B & crosses wall face, ejected after 2 steps & Macrosweep (11k, 3), Wallbreaker (49k, 3), Action-repeat (70k, 2), Go-Explore (135k, 3), Evolved (143k, 1), split\_pump (148k, 3), saturate (269k, 2), Resonator (464k, 2), Contact-UCB (467k, 2), velalign (730k, 1), Random (783k, 1) \\
+fresh/0051 & PENETRATE & B & 5.5\,cm deep, 3 steps & Random (2k, 3), Wallbreaker (2k, 2), split\_pump (2k, 3), saturate (2k, 2), Macrosweep (2k, 3), Evolved (2k, 3), velalign (2k, 2), Go-Explore (6k, 3), Contact-UCB (28k, 2), Action-repeat (35k, 1), Resonator (64k, 1) \\
+fresh/0001 & PENETRATE & B & 8.8\,cm deep, 3 steps & Resonator (9k, 1), Wallbreaker (10k, 1), Random (70k, 3), Contact-UCB (78k, 2), Go-Explore (119k, 2), Macrosweep (365k, 1), Action-repeat (561k, 1), split\_pump (677k, 1), Evolved (698k, 1), saturate (795k, 1) \\
+fresh/0008 & BLOWUP & B & runaway speed/spin, 43 steps & Resonator (2k, 3), Macrosweep (2k, 3), Evolved (2k, 3), split\_pump (2k, 3), saturate (2k, 3), velalign (2k, 3), Contact-UCB (3k, 3), Wallbreaker (3k, 3), Action-repeat (4k, 2), Go-Explore (4k, 3) \\
+\multicolumn{5}{l}{\ldots and 14 more (results/bugs.json)} \\
+\midrule
+Distinct A/B pairs per tester & \multicolumn{4}{l}{Action-repeat 18 (4 shipped, 14 fresh); Contact-UCB 16 (3 shipped, 13 fresh); Resonator 15 (3 shipped, 12 fresh); split\_pump 14 (4 shipped, 10 fresh); Macrosweep 14 (2 shipped, 12 fresh); Go-Explore 13 (3 shipped, 10 fresh); saturate 13 (3 shipped, 10 fresh); velalign 13 (3 shipped, 10 fresh); Wallbreaker 13 (1 shipped, 12 fresh); Evolved 12 (3 shipped, 9 fresh); Random 11 (2 shipped, 9 fresh); cand2\_gen001\_0.6943 3 (3 shipped, 0 fresh)} \\
+\bottomrule
+\end{tabular}
+\caption{Replay-verified engine anomalies of severity A (sustained escape or joint tear) or B (momentary wall-face crossing, deep or persistent penetration, long runaway) on unmodified levels: 4 distinct level--anomaly pairs on the 74 shipped levels and 24 on 64 generated levels (0 further spawn-time pairs are level-generation defects, excluded). Each pair lists the testers that reached it, the fewest steps, and in how many seeds.}
+\label{tab:bugs}
+\end{table}

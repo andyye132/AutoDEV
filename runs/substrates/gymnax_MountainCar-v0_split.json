@@ -1,0 +1,71 @@
+{
+ "search": [
+  {
+   "name": "MountainCar-v0__seed0",
+   "seed": 0,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  },
+  {
+   "name": "MountainCar-v0__seed1",
+   "seed": 1,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  },
+  {
+   "name": "MountainCar-v0__seed2",
+   "seed": 2,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  },
+  {
+   "name": "MountainCar-v0__seed3",
+   "seed": 3,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  },
+  {
+   "name": "MountainCar-v0__seed4",
+   "seed": 4,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  },
+  {
+   "name": "MountainCar-v0__seed5",
+   "seed": 5,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "MountainCar-v0__seed6",
+   "seed": 6,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  },
+  {
+   "name": "MountainCar-v0__seed7",
+   "seed": 7,
+   "target": [
+    0.5
+   ],
+   "cls": "MountainCar-v0"
+  }
+ ],
+ "heldout_class_instances": []
+}

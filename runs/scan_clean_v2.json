@@ -1,0 +1,3969 @@
+{
+ "cfg": {
+  "workers": 64,
+  "steps": 2048,
+  "slots": 256,
+  "budget": 131072,
+  "size": "m"
+ },
+ "levels": [
+  {
+   "level": "s/h0_weak_thrust.json",
+   "hash": "905d9178b5795a8f",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    6.866998195648193,
+    0.4995277523994446
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 13.733996391296387,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 193
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 213
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h1_thrust_over_ball.json",
+   "hash": "214c02835dbb5e0f",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    7.642152786254883,
+    21.27385711669922
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 15.284305572509766,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 179
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 256
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h2_one_wheel_car.json",
+   "hash": "bb8eeb1ec303e3e4",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0008051384938880801,
+    0.9750197529792786,
+    5.592627048492432
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 64
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 129
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h3_point_the_thruster.json",
+   "hash": "b53489ebf3167af2",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0002330023271497339,
+    0.35792016983032227,
+    7.112837314605713
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 80
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 75
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h4_thrust_aim.json",
+   "hash": "e4f0138a838f3bc8",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    9.015761375427246,
+    20.574525833129883
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 18.031522750854492,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 150
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 158
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h5_rotate_fall.json",
+   "hash": "93ac63d18be2638d",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.04216044396162033,
+    9.374451637268066,
+    49.95328903198242
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 18.748903274536133,
+    "angvel_thr": 99.90657806396484
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 112
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 244
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h6_unicycle_right.json",
+   "hash": "9dcd15b9b17d68fe",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.007072522304952145,
+    1.6393017768859863,
+    6.264595985412598
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 69
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 175
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h7_unicycle_left.json",
+   "hash": "8df81fbc3a372f93",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.007072522304952145,
+    1.6393017768859863,
+    6.264595985412598
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 124
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 244
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h8_unicycle_balance.json",
+   "hash": "95c68365090a0ba6",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.011056022718548775,
+    8.174997329711914,
+    44.70811462402344
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 16.349994659423828,
+    "angvel_thr": 89.41622924804688
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 67
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 256
+     }
+    ]
+   }
+  },
+  {
+   "level": "s/h9_explode_then_thrust_over.json",
+   "hash": "70f411f2bb9dfbbc",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    8.415579795837402,
+    17.937705993652344
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 16.831159591674805,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 153
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 256
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/arm_hard.json",
+   "hash": "f9093f8f817a075d",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.018129201605916023,
+    6.957578659057617,
+    14.164649963378906
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 13.915157318115234,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 156
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 110
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/arm_left.json",
+   "hash": "0ca4f34071aa2304",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.018129201605916023,
+    6.957578659057617,
+    14.164649963378906
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 13.915157318115234,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 144
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 128
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/arm_right.json",
+   "hash": "6dba80a499297121",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.018129201605916023,
+    6.957578659057617,
+    14.164649963378906
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 13.915157318115234,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 118
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 165
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/arm_up.json",
+   "hash": "8e8cf67910d94c41",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.018288813531398773,
+    7.681743621826172,
+    14.012764930725098
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 15.363487243652344,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 147
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 142
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h0_unicycle.json",
+   "hash": "24dbdef3de214301",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.02199513278901577,
+    3.0701675415039062,
+    18.916027069091797
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 85
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 91
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h10_thrust_right_easy.json",
+   "hash": "1c047da807213f13",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    2.8545167446136475,
+    1.139691710472107
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 151
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 218
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h11_thrust_left_easy.json",
+   "hash": "e924d69192eae72d",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    1.673345685005188,
+    0.7838212251663208
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 238
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 145
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h12_thrustfall_left.json",
+   "hash": "6096c68a1fd7b4be",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    9.37188720703125,
+    0.00923919677734375
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 18.7437744140625,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 256
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 238
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h13_thrustfall_right.json",
+   "hash": "6c23f01a2e648cbe",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    9.37188720703125,
+    0.00923919677734375
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 18.7437744140625,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 188
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 245
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h14_thrustblock.json",
+   "hash": "68f2de7bb35abc14",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    8.828996658325195,
+    0.0008194499532692134
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 17.65799331665039,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 256
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 256
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h15_thrustshoot.json",
+   "hash": "632300d0b20c9616",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    8.774848937988281,
+    50.0
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 17.549697875976562,
+    "angvel_thr": 100.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": 4864.0,
+       "PENETRATE": 19136.0,
+       "JOINT_TEAR": null,
+       "BLOWUP": 4992.0
+      },
+      "found": true,
+      "slots": 0,
+      "flag": "OOB",
+      "t": 76,
+      "chain_len": 77,
+      "actions": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       8,
+       8,
+       8,
+       8,
+       8,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9
+      ],
+      "replay_verified": true,
+      "replay_first": 76
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": 9280.0,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": 9984.0
+      },
+      "found": true,
+      "slots": 0,
+      "flag": "OOB",
+      "t": 145,
+      "chain_len": 146,
+      "actions": [
+       5,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       4,
+       4,
+       4,
+       4,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       6,
+       6,
+       6,
+       6,
+       6,
+       3,
+       3,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       4,
+       4,
+       4,
+       4,
+       4,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       3,
+       3,
+       3,
+       3,
+       3,
+       0,
+       0,
+       0,
+       0,
+       9,
+       9,
+       9,
+       9,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       9,
+       2,
+       2,
+       2,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       4
+      ],
+      "replay_verified": true,
+      "replay_first": 145
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": 26176.0,
+       "PENETRATE": 26304.0,
+       "JOINT_TEAR": null,
+       "BLOWUP": 95168.0
+      },
+      "found": true,
+      "slots": 195,
+      "flag": "OOB",
+      "t": 409,
+      "chain_len": 38,
+      "actions": [
+       9,
+       9,
+       9,
+       9,
+       8,
+       8,
+       8,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       3,
+       3,
+       3,
+       9,
+       9,
+       3,
+       5,
+       5,
+       5,
+       5,
+       5,
+       5,
+       5,
+       8,
+       8,
+       4,
+       2,
+       2,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9
+      ],
+      "replay_verified": true,
+      "replay_first": 37
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": 13248.0,
+       "PENETRATE": 93504.0,
+       "JOINT_TEAR": null,
+       "BLOWUP": 13376.0
+      },
+      "found": true,
+      "slots": 256,
+      "flag": "OOB",
+      "t": 207,
+      "chain_len": 138,
+      "actions": [
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       7,
+       2,
+       2,
+       2,
+       2,
+       2,
+       7,
+       7,
+       7,
+       4,
+       3,
+       4,
+       4,
+       4,
+       4,
+       4,
+       4,
+       4,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       1,
+       1,
+       0,
+       0,
+       0,
+       0,
+       4,
+       4,
+       4,
+       5,
+       5,
+       5,
+       5,
+       5,
+       5,
+       5,
+       5,
+       5,
+       5,
+       1,
+       1,
+       5,
+       5,
+       5,
+       5,
+       4,
+       4,
+       4,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9
+      ],
+      "replay_verified": true,
+      "replay_first": 58
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h16_thrustcontrol_right.json",
+   "hash": "41dd8eead6502508",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    2.9777045249938965,
+    0.9550207257270813
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 142
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 158
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h17_thrustcontrol_left.json",
+   "hash": "b757571730ac966b",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    2.9424774646759033,
+    0.9556930661201477
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 195
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 123
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h18_thrust_right_very_easy.json",
+   "hash": "3fd4878309b980f7",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    2.8545167446136475,
+    1.139691710472107
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": 11584.0
+      },
+      "found": true,
+      "slots": 152,
+      "flag": "BLOWUP",
+      "t": 181,
+      "chain_len": 57,
+      "actions": [
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       5,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       6,
+       6,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       8,
+       1,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       3
+      ],
+      "replay_verified": true,
+      "replay_first": 54
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 186
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h19_thrust_left_very_easy.json",
+   "hash": "1561eff0e2d79e47",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    1.673345685005188,
+    0.7838212251663208
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 160
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 126
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h1_car_left.json",
+   "hash": "147a40328437f3f5",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.001846316852606833,
+    1.0896646976470947,
+    5.963202476501465
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 145
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 75
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h2_car_right.json",
+   "hash": "239413d1fdfd36f6",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.001846316852606833,
+    1.0896646976470947,
+    5.963202476501465
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 64
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 77
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h3_car_thrust.json",
+   "hash": "889dcd73bd60ab9e",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.00487257307395339,
+    2.2239444255828857,
+    7.660880088806152
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 82
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 217
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h4_thrust_the_needle.json",
+   "hash": "10632e465f60bcf7",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    8.501996994018555,
+    22.541351318359375
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 17.00399398803711,
+    "angvel_thr": 45.08270263671875
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 224
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 216
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h5_angry_birds.json",
+   "hash": "d26e9a09eace6ade",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.011163102462887764,
+    5.782070636749268,
+    30.443012237548828
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 60.886024475097656
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 79
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 243
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h6_thrust_over.json",
+   "hash": "49d3402cd2e9fdb2",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.0,
+    4.703611373901367,
+    10.29328441619873
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": 4928.0
+      },
+      "found": true,
+      "slots": 0,
+      "flag": "BLOWUP",
+      "t": 77,
+      "chain_len": 78,
+      "actions": [
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       8,
+       8,
+       8,
+       8,
+       8,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       6,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9
+      ],
+      "replay_verified": true,
+      "replay_first": 75
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": 60928.0
+      },
+      "found": true,
+      "slots": 0,
+      "flag": "BLOWUP",
+      "t": 952,
+      "chain_len": 84,
+      "actions": [
+       6,
+       0,
+       0,
+       0,
+       0,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       8,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       1,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       0,
+       0,
+       0,
+       0,
+       0,
+       6,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       0,
+       5,
+       5,
+       5,
+       5,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       2
+      ],
+      "replay_verified": true,
+      "replay_first": 81
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": 56384.0
+      },
+      "found": true,
+      "slots": 75,
+      "flag": "BLOWUP",
+      "t": 881,
+      "chain_len": 39,
+      "actions": [
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9
+      ],
+      "replay_verified": true,
+      "replay_first": 36
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": 75904.0
+      },
+      "found": true,
+      "slots": 188,
+      "flag": "BLOWUP",
+      "t": 1186,
+      "chain_len": 42,
+      "actions": [
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       10,
+       2,
+       6,
+       6,
+       6,
+       6,
+       6,
+       5,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9,
+       9
+      ],
+      "replay_verified": true,
+      "replay_first": 39
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h7_car_flip.json",
+   "hash": "ca0bbe741a460ff5",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.004896883852779865,
+    1.9823938608169556,
+    7.088345527648926
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 156
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 141
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h8_weird_vehicle.json",
+   "hash": "8d54f9c1abd18bbd",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.008796113543212414,
+    4.742742538452148,
+    10.752004623413086
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 12.0,
+    "angvel_thr": 45.0
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 71
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 101
+     }
+    ]
+   }
+  },
+  {
+   "level": "m/h9_spin_the_right_way.json",
+   "hash": "f8725ba69e420b2c",
+   "box": [
+    0.0,
+    5.0,
+    0.39999961853027344,
+    5.0
+   ],
+   "calib_max": [
+    0.005530509632080793,
+    9.136457443237305,
+    37.616790771484375
+   ],
+   "thr": {
+    "joint_tol": 0.20000000298023224,
+    "speed_thr": 18.27291488647461,
+    "angvel_thr": 75.23358154296875
+   },
+   "programs": {
+    "random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "repeat_random": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 0
+     }
+    ],
+    "goexplore": [
+     {
+      "seed": 0,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 86
+     },
+     {
+      "seed": 1,
+      "first_hit": {
+       "OOB": null,
+       "PENETRATE": null,
+       "JOINT_TEAR": null,
+       "BLOWUP": null
+      },
+      "found": false,
+      "slots": 185
+     }
+    ]
+   }
+  }
+ ]
+}

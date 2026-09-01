@@ -1,0 +1,66 @@
+{
+ "ANOMALY": [
+  [
+   "l_h11_obstacle_avoidance__ANOMALY__0",
+   4,
+   0,
+   18496.0
+  ],
+  [
+   "l_hard_cartpole_thrust__ANOMALY__0",
+   4,
+   0,
+   43008.0
+  ]
+ ],
+ "DISARMED": [
+  [
+   "l_h7_maze_1__DISARMED__1",
+   2,
+   0,
+   69632.0
+  ],
+  [
+   "m_h16_thrustcontrol_right__DISARMED__0",
+   5,
+   0,
+   4352.0
+  ]
+ ],
+ "SHORTCUT": [
+  [
+   "l_car_swing_around__SHORTCUT__1",
+   3,
+   0,
+   61184.0
+  ],
+  [
+   "l_mjc_walker_easy__SHORTCUT__0",
+   2,
+   0,
+   61376.0
+  ]
+ ],
+ "TUNNEL": [
+  [
+   "l_grasp_hard__TUNNEL__0",
+   1,
+   0,
+   55296.0
+  ]
+ ],
+ "OOB": [
+  [
+   "l_mjc_hopper_easy__OOB__0",
+   3,
+   0,
+   12800.0
+  ],
+  [
+   "l_mjc_hopper_easy__OOB__1",
+   3,
+   0,
+   17536.0
+  ]
+ ]
+}

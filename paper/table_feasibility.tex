@@ -1,0 +1,22 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{lcccccc}
+\toprule
+Tester & \multicolumn{2}{c}{Search} & \multicolumn{2}{c}{Held-out levels} & \multicolumn{2}{c}{Held-out class (OOB)} \\
+ & raw & feasible & raw & feasible & raw & feasible \\
+\midrule
+Feasible within budget (guided probe or any tester) & \multicolumn{2}{c}{82\% (104/127)} & \multicolumn{2}{c}{68\% (40/59)} & \multicolumn{2}{c}{64\% (94/148)} \\
+\midrule
+Random & 49\% & 60\% & 55\% & 81\% & 12\% & 19\% \\
+Action-repeat random & 59\% & 72\% & 60\% & 88\% & 30\% & 47\% \\
+Go-Explore (seed) & 57\% & 70\% & 58\% & 86\% & 25\% & 40\% \\
+Evolved run 1 gen 37 & 72\% & 88\% & 64\% & 94\% & 47\% & 74\% \\
+Opus: macrosweep & 61\% & 75\% & 60\% & 88\% & 34\% & 53\% \\
+PPO+count & 56\% & 68\% & 57\% & 84\% & 27\% & 42\% \\
+\midrule
+Union of all testers, any seed & \multicolumn{2}{c}{82\%} & \multicolumn{2}{c}{68\%} & \multicolumn{2}{c}{64\%} \\
+Unwitnessable by construction & \multicolumn{2}{c}{4 of 127} & \multicolumn{2}{c}{1 of 59} & \multicolumn{2}{c}{0 of 148} \\
+\bottomrule
+\end{tabular}
+\caption{Detection within budget, raw and normalized by the feasible set (instances the oracle-guided probe or any evaluated tester reaches in any seed). Feasible-but-never-found: 0 (search), 0 (held-out levels), 0 (held-out class (oob)).}
+\label{tab:feasibility}
+\end{table}

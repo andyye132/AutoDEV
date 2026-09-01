@@ -1,0 +1,71 @@
+{
+ "search": [
+  {
+   "name": "Acrobot-v1__seed0",
+   "seed": 0,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  },
+  {
+   "name": "Acrobot-v1__seed1",
+   "seed": 1,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  },
+  {
+   "name": "Acrobot-v1__seed2",
+   "seed": 2,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  },
+  {
+   "name": "Acrobot-v1__seed3",
+   "seed": 3,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  },
+  {
+   "name": "Acrobot-v1__seed4",
+   "seed": 4,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  },
+  {
+   "name": "Acrobot-v1__seed5",
+   "seed": 5,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "Acrobot-v1__seed6",
+   "seed": 6,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  },
+  {
+   "name": "Acrobot-v1__seed7",
+   "seed": 7,
+   "target": [
+    1.0
+   ],
+   "cls": "Acrobot-v1"
+  }
+ ],
+ "heldout_class_instances": []
+}

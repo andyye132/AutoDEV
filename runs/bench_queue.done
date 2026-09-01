@@ -1,0 +1,11 @@
+round1 evolve/methods/splitting.py,evolve/methods/cem_plans.py
+round2 evolve/methods/kpiece.py,evolve/methods/directed.py
+round3 evolve/methods/goexplore_zeta.py,evolve/methods/ucb_tree.py,evolve/methods/map_elites.py
+round4 evolve/methods/velmax.py,evolve/methods/contact_branch.py
+round5 evolve/methods/goexplore_plr.py
+round6 evolve/methods/split_pump.py
+round7 evolve/methods/goexplore_yield.py,evolve/methods/cem_root.py
+round8 evolve/methods/deathaware.py,evolve/methods/velalign.py,evolve/methods/steer.py
+round10 evolve/methods/split_pump_vel.py,evolve/methods/cem_root_ratchet.py
+round9 evolve/methods/resonance.py,evolve/methods/saturate.py
+round11 evolve/methods/schedule3.py

@@ -1,0 +1,36 @@
+% AutoMLR (NeurIPS 2026) submission skeleton — swap \documentclass/preamble for the official Overleaf template before submitting.
+% Part 1 (<=4 pages): agent-written research result. Part 2 (<=4 pages): human-written system account. Part 3 (<=1 page): reflections.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}\usepackage{graphicx,booktabs,amsmath,hyperref,xcolor}
+\title{Do Discovered Game-Testing Programs Generalize?\\Autonomous Discovery of Exploration Strategies That Find Real Bugs in Unseen Games}
+\author{Andy Ye \\ University of Washington}
+\begin{document}
+\maketitle
+\begin{abstract}
+Game studios use reinforcement-learning agents to test games, but the exploration strategies that drive those testers are designed by
+hand, and nobody knows whether a strategy that finds one kind of bug finds others. We ask whether an autonomous research loop can
+discover a better one. We take Kinetix, a suite of 2D physics games, deliberately break levels in five ways (missing boundaries,
+non-solid obstacles, unintended goals, runaway physics, disarmed hazards) with a witness state for each, and let an LLM-driven
+evolutionary loop write tester \emph{programs} --- full exploration procedures over save/restore-able simulator states --- keeping
+those that reach witness states fastest. The decisive test is transfer: 30\% of levels and one entire defect class (leaving the arena)
+were hidden from the search. \textbf{Qualifying result:} the discovered tester scores 0.666 on the search split vs.\ 0.566 for the strongest
+hand-designed tester (action-repeat random), 0.617 vs.\ 0.575 on held-out levels, and 0.418 vs.\ 0.266 on the held-out class (47\% vs.\ 30\% of escape defects witnessed; 5 seeds, 95\% CIs $\le$0.015); run on
+74 shipped and 64 freshly generated levels with generic engine oracles, the testers surface 12 replay-verified anomalies of severity A/B
+(2 on shipped levels, 10 on generated ones), including a block launched at 16\,m/s that passes through a boundary wall's face and buries itself
+10\,cm in the floor before the solver ejects it.
+The tester, the transfer analysis and Part~1 were produced by the autonomous loop; the authors built and verified the benchmark and
+document the process, every human intervention, and the recomputation of every number.
+\end{abstract}
+
+\section*{Part 1 --- Auto research result (agent-written)}
+\input{part1.tex}
+
+\section*{Part 2 --- System design (human-written)}
+\input{part2.tex}
+
+\section*{Part 3 --- Reflections}
+\input{part3.tex}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}

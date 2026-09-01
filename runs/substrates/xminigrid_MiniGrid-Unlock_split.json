@@ -1,0 +1,55 @@
+{
+ "search": [
+  {
+   "name": "MiniGrid-Unlock__seed0",
+   "env": "MiniGrid-Unlock",
+   "seed": 0,
+   "cls": "MiniGrid-Unlock"
+  },
+  {
+   "name": "MiniGrid-Unlock__seed1",
+   "env": "MiniGrid-Unlock",
+   "seed": 1,
+   "cls": "MiniGrid-Unlock"
+  },
+  {
+   "name": "MiniGrid-Unlock__seed2",
+   "env": "MiniGrid-Unlock",
+   "seed": 2,
+   "cls": "MiniGrid-Unlock"
+  },
+  {
+   "name": "MiniGrid-Unlock__seed3",
+   "env": "MiniGrid-Unlock",
+   "seed": 3,
+   "cls": "MiniGrid-Unlock"
+  },
+  {
+   "name": "MiniGrid-Unlock__seed4",
+   "env": "MiniGrid-Unlock",
+   "seed": 4,
+   "cls": "MiniGrid-Unlock"
+  },
+  {
+   "name": "MiniGrid-Unlock__seed5",
+   "env": "MiniGrid-Unlock",
+   "seed": 5,
+   "cls": "MiniGrid-Unlock"
+  }
+ ],
+ "heldout_levels_instances": [
+  {
+   "name": "MiniGrid-Unlock__seed6",
+   "env": "MiniGrid-Unlock",
+   "seed": 6,
+   "cls": "MiniGrid-Unlock"
+  },
+  {
+   "name": "MiniGrid-Unlock__seed7",
+   "env": "MiniGrid-Unlock",
+   "seed": 7,
+   "cls": "MiniGrid-Unlock"
+  }
+ ],
+ "heldout_class_instances": []
+}

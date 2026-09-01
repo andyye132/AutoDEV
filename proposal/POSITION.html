@@ -1,0 +1,539 @@
+<title>Where AutoDev Stands</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --paper: #F4F7F6; --surface: #FFFFFF; --ink: #182028; --ink-2: #3A4852; --slate: #5A6B77; --line: #D6DFE2;
+  --accent: #0E6F8E; --accent-soft: #DCEBF0; --signal: #B8541F; --signal-soft: #F6E4D8; --code-bg: #EAF0F1;
+  --rail-bg: #EDF2F2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+    --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+    --rail-bg: #141D25;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111920; --surface: #18222B; --ink: #E4ECF0; --ink-2: #C3CFD6; --slate: #8FA1AC; --line: #2A3842;
+  --accent: #63B6CF; --accent-soft: #163241; --signal: #E48A55; --signal-soft: #3A2417; --code-bg: #1E2A33;
+  --rail-bg: #141D25;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; font-size: 16.5px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); }
+a:hover, a:focus-visible { border-bottom-color: var(--accent); outline: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.shell { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 3rem; max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+.rail { position: sticky; top: 1.5rem; align-self: start; max-height: calc(100vh - 3rem); overflow-y: auto; font-size: 0.86rem; line-height: 1.4; padding: 1rem 1rem 1rem 0; border-right: 1px solid var(--line); }
+.rail .eyebrow { margin-bottom: 0.6rem; }
+.rail ul { list-style: none; margin: 0; padding: 0; }
+.rail > ul > li { margin: 0.35rem 0; }
+.rail > ul > li > ul { padding-left: 0.9rem; border-left: 1px solid var(--line); margin: 0.25rem 0 0.4rem; }
+.rail > ul > li > ul li { margin: 0.2rem 0; color: var(--slate); }
+.rail a { color: var(--ink-2); border: none; }
+.rail a:hover { color: var(--accent); }
+main { min-width: 0; max-width: 72ch; }
+.eyebrow { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); }
+header.masthead { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+header.masthead h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin: 0.4rem 0 0.8rem; letter-spacing: -0.01em; text-wrap: balance; }
+header.masthead p.dek { font-size: 1.1rem; color: var(--ink-2); margin: 0 0 1rem; max-width: 62ch; }
+header.masthead .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.85rem; color: var(--slate); }
+h1, h2, h3, h4 { text-wrap: balance; }
+main > h1 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2.1rem, 4vw, 2.9rem); line-height: 1.08; letter-spacing: -0.012em; margin: 0 0 0.9rem; }
+main > h1 + p { font-size: 1.12rem; line-height: 1.5; color: var(--ink-2); max-width: 62ch; margin-bottom: 0.9rem; }
+main > h1 + p + p { font-size: 0.86rem; color: var(--slate); padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); margin-bottom: 1.6rem; }
+a.cite { border: none; font-variant-numeric: tabular-nums; }
+h2#references + ol { padding-left: 2.2rem; font-size: 0.88rem; color: var(--ink-2); }
+h2#references + ol li { margin: 0.45rem 0; overflow-wrap: anywhere; }
+h2#references + ol li:target { background: var(--accent-soft); border-radius: 3px; }
+h2 { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-size: 1.8rem; line-height: 1.15; margin: 3rem 0 1rem; padding-top: 1.2rem; border-top: 1px solid var(--line); letter-spacing: -0.005em; }
+h3 { font-family: "Newsreader", Georgia, serif; font-weight: 600; font-size: 1.28rem; line-height: 1.25; margin: 2rem 0 0.6rem; }
+h4 { font-size: 0.95rem; font-weight: 600; margin: 1.4rem 0 0.4rem; color: var(--ink-2); }
+p { margin: 0 0 1rem; }
+ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+li { margin: 0.3rem 0; }
+li > ul, li > ol { margin: 0.3rem 0 0.3rem; }
+strong { font-weight: 600; }
+code { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86em; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 3px; }
+pre { background: var(--code-bg); padding: 1rem 1.1rem; overflow-x: auto; border-radius: 4px; font-size: 0.84rem; line-height: 1.5; margin: 0 0 1.2rem; }
+pre code { background: none; padding: 0; font-size: inherit; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+.table-wrap { overflow-x: auto; margin: 0 0 1.4rem; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; line-height: 1.4; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); }
+th { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); font-weight: 500; background: var(--rail-bg); }
+tr:last-child td { border-bottom: 0; }
+.callout { margin: 1.4rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 4px 4px 0; }
+.callout p:last-child { margin-bottom: 0; }
+.callout-warn { border-left-color: var(--signal); background: var(--signal-soft); }
+.callout-accent { border-left-color: var(--accent); background: var(--accent-soft); }
+.callout-note { border-left-color: var(--slate); }
+sup { font-size: 0.72em; }
+.footnote { font-size: 0.9rem; color: var(--ink-2); }
+.refs ol { padding-left: 2rem; font-size: 0.9rem; }
+.refs li { margin: 0.45rem 0; word-break: break-word; }
+@media (max-width: 860px) {
+  .shell { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem 1rem 4rem; }
+  .rail { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 1rem; }
+  main { max-width: none; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+<div class="shell">
+  <nav class="rail" aria-label="Contents">
+    <div class="eyebrow">Contents</div>
+    <div class="toc">
+<ul>
+<li><a href="#1-what-we-have-now">1. What we have now</a></li>
+<li><a href="#2-the-lay-of-the-land">2. The lay of the land</a><ul>
+<li><a href="#21-the-five-formulations-of-ai-finds-bugs-in-games">2.1 The five formulations of "AI finds bugs in games"</a></li>
+<li><a href="#22-the-rlsearch-playtesting-line-in-detail">2.2 The RL/search playtesting line in detail</a></li>
+<li><a href="#23-how-prior-work-handles-the-two-things-reviewers-will-ask-about">2.3 How prior work handles the two things reviewers will ask about</a></li>
+</ul>
+</li>
+<li><a href="#3-how-we-are-doing-against-the-field">3. How we are doing against the field</a></li>
+<li><a href="#4-framing-what-problem-are-we-actually-solving">4. Framing: what problem are we actually solving?</a></li>
+<li><a href="#5-recommendation">5. Recommendation</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+
+  </nav>
+  <main>
+    <h1 id="where-autodev-stands">Where AutoDev Stands</h1>
+<p>A positioning report: what we have built and measured so far, the lay of the land in automated game testing and bug finding, how we compare on the numbers people actually report, and how the problem and scope should be framed before we commit.</p>
+<p>Prepared 29 Aug 2026 (Saturday afternoon), six days before the AutoMLR deadline (Fri 4 Sep, 5 PM PDT). Numbers are from Hyak runs at the size-l configuration (74 shipped Kinetix levels, 337 planted instances, 5 seeds, 262,144 simulator steps per instance) unless marked <em>local</em>. Every citation was resolved through the arXiv / Semantic Scholar / OpenAlex / Crossref APIs today or in the two earlier surveys.</p>
+<h2 id="1-what-we-have-now">1. What we have now</h2>
+<p><strong>The object of study.</strong> Not a tester, but a <em>loop that discovers testers</em>: an LLM-driven program search (ShinkaEvolve [<a class="cite" href="#ref-1">1</a>]) writes the exploration procedure — the <code>act</code> / <code>restore</code> / <code>archive</code> hooks that drive B parallel workers over an archive of save/restore-able simulator states — and is scored by how fast the procedure reaches <em>witness states</em> of planted defects. Kinetix [<a class="cite" href="#ref-2">2</a>] is the substrate: 2D physics games with a JSON level format, a fully restorable state, and thousands of levels per GPU in parallel.</p>
+<p><strong>What is measured.</strong> Three things, kept separate on purpose:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Measurement</th>
+<th>What it is</th>
+<th>Where we are (single run of the run-1 best, 5 seeds)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planted-defect detection, <em>search split</em></td>
+<td>fraction of 127 planted instances (5 classes: missing wall, non-solid obstacle, unintended goal, runaway physics, disarmed hazard) whose witness state is reached within budget</td>
+<td><strong>72%</strong> (score 0.666) vs 59% action-repeat random, 57% Go-Explore seed, 56% best RL tester</td>
+</tr>
+<tr>
+<td>Held-out <em>levels</em> (22 of 74 levels never seen by the search)</td>
+<td>same, 59 instances</td>
+<td><strong>64%</strong> (0.617) vs 60% (0.575); paired per-instance gain +0.04 ± 0.05 (CI includes zero)</td>
+</tr>
+<tr>
+<td>Held-out <em>defect class</em> (arena escape; the search never scored it)</td>
+<td>148 instances</td>
+<td><strong>47%</strong> (0.418) vs 30% (0.266) action-repeat random, 25% seed; paired gain +0.15 ± 0.05</td>
+</tr>
+<tr>
+<td>Reachability (union of every tester, seed, and an oracle-guided probe)</td>
+<td>how much of the pool anything reaches at this budget</td>
+<td>81% / 66% / 62%; the guided probe adds nothing beyond the testers</td>
+</tr>
+<tr>
+<td>Feasibility-normalised detection</td>
+<td>detection over the reachable set</td>
+<td>evolved <strong>88% / 96% / 76%</strong> vs action-repeat random 73% / 90% / 48%</td>
+</tr>
+<tr>
+<td>Real anomalies on unmodified levels (replay-verified, severity A/B)</td>
+<td>generic oracles: leaves arena, inside a solid, joint tear, runaway/NaN; persistence rule; re-simulated from reset</td>
+<td>shipped levels: <strong>2 B-level pairs</strong> (one level, h15: a block at 16.5 m/s momentarily inside the right wall and 10 cm into the floor, ejected by the solver); generated levels: <strong>10 pairs</strong> (1 sustained escape, 4 wall-face crossings, 3 deep penetrations, 2 runaways)</td>
+</tr>
+<tr>
+<td>Design flaws</td>
+<td>no-input / random-play outcomes</td>
+<td>h5_rotate_fall is won by random play (62%, median 26 steps); no-input death is the intended challenge on 9 levels</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What the evidence supports today.</strong> (1) An LLM search finds a tester program that reaches planted defects faster than every hand-designed, LLM-designed (four Opus designs, three round-2 designs pending, four round-3 designs pending) and RL tester we tried, at equal budget, and the four candidates the search produced agree within 0.02 on every split. (2) The advantage transfers to a defect class the search never scored on — a large, instance-significant gain — and to unseen levels only modestly. (3) On unmodified levels the engine is mostly sound; the anomalies we can verify are momentary tunnelling of fast bodies into thin static geometry, plus one sustained escape on a generated level.</p>
+<p><strong>What it does not support (yet).</strong> A claim of "found N serious bugs in shipped games" (the shipped-level finding is one tunnelling failure, severity B); a claim that the search keeps improving (every run makes its big gain in the first generations and then moves within the noise band — run 4 with a cleaner GPU fitness gains 0.610 → 0.625 over 24 candidates); a claim about any engine other than Kinetix.</p>
+<p><strong>Corrections we made to our own claims today</strong>, because they affect how honest the framing must be: PhyFu [<a class="cite" href="#ref-3">3</a>] already fuzzes Brax with a penetration oracle (novelty narrowed); the "ceiling escape" was a momentary wall-face crossing (severity downgraded, rule tightened); 3 of 7 TUNNEL instances on the local pool are geometrically unreachable (pool hygiene needed); 15 scan hits did not reproduce in the CPU replay and were dropped.</p>
+<h2 id="2-the-lay-of-the-land">2. The lay of the land</h2>
+<p>Three reading agents (one Opus, two Sonnet; ~270 tool calls; every ID re-resolved through the arXiv, Semantic Scholar, OpenAlex or Crossref APIs today) mapped the field. WebSearch and Google Scholar were not reachable from this session, so citation counts are Semantic Scholar / Crossref (they undercount Google Scholar). "Not reported" means we could not confirm a number, not that it is zero.</p>
+<h3 id="21-the-five-formulations-of-ai-finds-bugs-in-games">2.1 The five formulations of "AI finds bugs in games"</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Formulation</th>
+<th>Who</th>
+<th>What is optimised</th>
+<th>Oracle</th>
+<th>Typical metric</th>
+<th>Best reported numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>RL / search testers with a hand-designed exploration objective</strong></td>
+<td>EA SEED (Bergdahl 2020 [<a class="cite" href="#ref-4">4</a>], Gordillo 2021 [<a class="cite" href="#ref-5">5</a>], CCPT 2022/24 [<a class="cite" href="#ref-6">6</a>], RAID 2026 [<a class="cite" href="#ref-7">7</a>]); NetEase Wuji (ASE 2019) [<a class="cite" href="#ref-8">8</a>]; Microsoft Inspector [<a class="cite" href="#ref-9">9</a>]; Ubisoft CA2 (2026) [<a class="cite" href="#ref-10">10</a>]; Ariyurek et al. (GVGAI, injected bugs) [<a class="cite" href="#ref-11">11</a>]</td>
+<td>curiosity, coverage, novelty, win-vs-explore, code coverage</td>
+<td>crash / stuck / injected bug / designer review</td>
+<td>coverage; bugs found in one game</td>
+<td>Ariyurek et al.: <strong>100% of 45 injected bugs</strong> (human-like MCTS, aggregated over 5 runs) vs 90% for humans; NEATEST 65.6% mutation score; CCPT 13/13 bugs vs 10/3 for curiosity-only; Go-Explore reachability 100% of nav-mesh goals; Wuji 3 / Inspector 2 / RAID 6 real bugs or exploits; Titan 82% vs Wuji 45.5% on 9 seeded bugs. Three published negative results: random beats RND asymptotically (Go-Explore reachability), more search made baseline MCTS <em>worse</em> at finding bugs (44% → 40%), and more coverage came with fewer highlighted bugs (CCPT).</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Bug / glitch detection from pixels or video</strong></td>
+<td>GlitchBench [<a class="cite" href="#ref-12">12</a>], VideoGameQA-Bench [<a class="cite" href="#ref-13">13</a>], VideoGlitchBench [<a class="cite" href="#ref-14">14</a>], TempGlitch [<a class="cite" href="#ref-15">15</a>], PhysGame/GameBench [<a class="cite" href="#ref-16">16</a>, <a class="cite" href="#ref-17">17</a>], EA's 19,738-keyframe field study [<a class="cite" href="#ref-18">18</a>], GLIB [<a class="cite" href="#ref-19">19</a>]</td>
+<td>a classifier / VLM prompt</td>
+<td>human-labelled glitch clips (real) or code-injected (TempGlitch)</td>
+<td>accuracy, F1, recall</td>
+<td>GPT-4V 43.4% (GlitchBench); GPT-4.1 81% on simple image glitches down to 19% on needle-in-haystack (VideoGameQA); 39% F1 with agentic grounding (VideoGlitchBench); <strong>54% = chance</strong> on temporal glitches (TempGlitch); precision 0.50 on real EA footage; the outlier is GLIB's learned oracle: 99.5% recall on 20 known-bug games, 48/53 confirmed in the field (NetEase, 2021)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Design evaluation by simulated players</strong></td>
+<td>procedural personas (Holmgård et al.) [<a class="cite" href="#ref-20">20</a>, <a class="cite" href="#ref-21">21</a>], Monster Carlo (MCTS in Unity) [<a class="cite" href="#ref-22">22</a>], Cicero [<a class="cite" href="#ref-23">23</a>], A*-agent playability in PCG (Volz et al.) [<a class="cite" href="#ref-24">24</a>], difficulty/churn prediction at King (Gudmundsson [<a class="cite" href="#ref-25">25</a>], Roohi [<a class="cite" href="#ref-26">26</a>, <a class="cite" href="#ref-27">27</a>], Kristensen [<a class="cite" href="#ref-28">28</a>]), AlphaZero rule-variant balance [<a class="cite" href="#ref-29">29</a>], softlock verification (Mawhorter &amp; Smith [<a class="cite" href="#ref-30">30</a>], Cooper &amp; Bazzaz [<a class="cite" href="#ref-31">31</a>]), PuzzleJAX/ScriptDoctor solvability [<a class="cite" href="#ref-32">32</a>, <a class="cite" href="#ref-33">33</a>], LLM difficulty proxies [<a class="cite" href="#ref-34">34</a>]</td>
+<td>play the level as a proxy player</td>
+<td>solvability, difficulty, balance, softlock (logical spec)</td>
+<td>correlation with human data; verified property</td>
+<td>best-5%-of-agent-runs move counts predict real per-level completion at King; CTL model checking proves softlock freedom on Metroid abstractions; RAID found 6 goalie exploits in NHL 26 in one run</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>LLM QA agents and benchmarks (closed loop, state-based)</strong></td>
+<td>GBQA (ICLR'26 wksp) [<a class="cite" href="#ref-35">35</a>], GameXpert-Bench [<a class="cite" href="#ref-36">36</a>], BugCraft (ASE'25) [<a class="cite" href="#ref-37">37</a>], Titan (MMORPG QA) [<a class="cite" href="#ref-38">38</a>], SMART (LLM-guided RL, code coverage) [<a class="cite" href="#ref-39">39</a>]</td>
+<td>an LLM agent's actions / test objective</td>
+<td>injected + human-verified bugs; real crash reports; code coverage</td>
+<td><strong>recall of verified bugs at a step budget</strong>; reproduction rate; coverage</td>
+<td><strong>48.4%</strong> of 124 verified bugs (Claude 4.6 Opus, 500 steps); 34.9% end-to-end crash reproduction vs 83% for humans; 39/100 Strict repair; SMART &gt;94% branch coverage of modified code (~2× plain RL); Titan claims 95% task completion and 4 new bugs (self-reported)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Searching over the tester / objective itself</strong></td>
+<td>meta-learned curiosity programs (Alet et al., ICLR 2020) [<a class="cite" href="#ref-40">40</a>]; LLM-evolved RL algorithms (REvolve) [<a class="cite" href="#ref-41">41</a>]; DeepMind's LLM-evolved multi-agent algorithms [<a class="cite" href="#ref-42">42</a>]; NEATEST co-evolves tests <em>and</em> oracles for Scratch [<a class="cite" href="#ref-43">43</a>]</td>
+<td>the exploration algorithm / reward / test program</td>
+<td>(none of these test games for bugs except NEATEST: mutation score)</td>
+<td>held-out task transfer; mutation score</td>
+<td>Alet: discovered curiosity on par with human designs and transfers across control tasks; DeepMind: <strong>evolved code overfits its training games</strong>, only a distilled core generalises; NEATEST: &gt;65% mutation score on 25 Scratch games. <strong>No published work searches over a game-testing exploration program with bug detection as fitness.</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Two adjacent lines matter for framing. <strong>Physics-engine fuzzing</strong> (PhyFu [<a class="cite" href="#ref-3">3</a>], IcFuzz [<a class="cite" href="#ref-44">44</a>]) treats the <em>engine</em> as numerical software with physics-law oracles — PhyFu already fuzzes Brax and uses a penetration example as its motivation — but has no levels, rules, win conditions, or exploration policy. <strong>Practitioner surveys</strong> [<a class="cite" href="#ref-45">45</a>, <a class="cite" href="#ref-46">46</a>, <a class="cite" href="#ref-47">47</a>] say the same thing from the other side: studios test manually, adopt autonomous testers reluctantly, and name the <em>oracle</em> (what counts as a bug) and the <em>goal</em> (what the agent should try to do) as the blockers — not the agent.</p>
+<h3 id="22-the-rlsearch-playtesting-line-in-detail">2.2 The RL/search playtesting line in detail</h3>
+<p>The line closest to ours. Coverage is its default metric because bug oracles are expensive; only a handful of papers use a countable denominator (injected faults), and only one has a human upper bound.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Paper (venue)</th>
+<th>Substrate</th>
+<th>Exploration objective</th>
+<th>Oracle / bug definition</th>
+<th>Headline number</th>
+<th>Transfer measured?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bergdahl et al., EA SEED (CoG 2020) [<a class="cite" href="#ref-4">4</a>]</td>
+<td>proprietary FPS sandboxes, state</td>
+<td>hand-authored reward per sandbox</td>
+<td>stuck heat-maps; designer inspection</td>
+<td>steps to 80% of max reward (88M–342M)</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Gordillo et al., EA SEED (CoG 2021) [<a class="cite" href="#ref-5">5</a>]</td>
+<td>proprietary 3D map, state</td>
+<td>count-based novelty over 3D cells</td>
+<td>coverage map, timeouts</td>
+<td>~24 h to 90% map coverage</td>
+<td>no</td>
+</tr>
+<tr>
+<td>CCPT, EA SEED (ToG 2024) [<a class="cite" href="#ref-6">6</a>]</td>
+<td>AAA-scale 3D nav env + VizDoom, state</td>
+<td>RND curiosity ⊕ imitation of expert demos</td>
+<td>inserted + real oversights; trajectories auto-highlighted</td>
+<td><strong>13/13 bugs found &amp; highlighted vs curiosity-only 10 found / 3 highlighted</strong> — with <em>less</em> coverage (1.91M vs 2.39M states)</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RAID, EA (RLC 2026 wksp) [<a class="cite" href="#ref-7">7</a>]</td>
+<td>NHL 26 dev build</td>
+<td>goal reward re-shaped with a diversity penalty per round</td>
+<td>goal rate vs goalie AI = exploit</td>
+<td>6 distinct exploits in one run, matching hours of human playtesting</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Wuji, NetEase (ASE 2019; 193 cites) [<a class="cite" href="#ref-8">8</a>]</td>
+<td>2 commercial combat games, state</td>
+<td>multi-objective EA over a policy population: win-rate × coverage</td>
+<td>4 oracles from 1,349 real bugs</td>
+<td>3 previously unknown bugs, developer-confirmed</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Inspector, Microsoft (CoG 2022) [<a class="cite" href="#ref-9">9</a>]</td>
+<td>UE4 sample games, <strong>pixels</strong></td>
+<td>RND on screenshots + object detector + imitation</td>
+<td>human inspection</td>
+<td>2 real bugs; "super-human" coverage (figures only)</td>
+<td>motivated, not measured</td>
+</tr>
+<tr>
+<td>Preference-conditioned agent, Xbox (CoG 2023) [<a class="cite" href="#ref-48">48</a>]</td>
+<td>proprietary open world, pixels</td>
+<td>style (imitation) ⊕ novelty reward</td>
+<td>objects-of-interest tested</td>
+<td>80% pathway coverage vs 16% (Inspector); 192/247 objects vs 19</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Go-Explore reachability, Microsoft (ToG 2022) [<a class="cite" href="#ref-49">49</a>]</td>
+<td>proprietary 3D maps up to 1.5 km², state + nav-mesh</td>
+<td>Go-Explore archive, random actions, nav-mesh resets, <strong>no learned policy</strong></td>
+<td>points &gt;3 m off nav-mesh = bug</td>
+<td>100% of nav-mesh goals &lt; 200k steps; 2 planted bugs found; <strong>random exploration asymptotically better than RND</strong></td>
+<td>3 maps, one game</td>
+</tr>
+<tr>
+<td>CA2, Ubisoft La Forge (2026) [<a class="cite" href="#ref-10">10</a>]</td>
+<td>Crafter + a Godot game, call-stack signal</td>
+<td>reach a target function (code coverage)</td>
+<td>function reached</td>
+<td>56% / 47% success vs weaker baselines</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Tufano et al. (ICSE 2022) [<a class="cite" href="#ref-50">50</a>]</td>
+<td>CartPole, MsPacman, one 3D game</td>
+<td>game reward <strong>+50 for entering the injected FPS-drop region</strong></td>
+<td>injected performance bugs (2 + 4)</td>
+<td>965/1000 episodes hit a bug vs 12 random — but the oracle is in the reward</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Ariyurek et al. (ToG 2021; CoG 2020) [<a class="cite" href="#ref-11">11</a>, <a class="cite" href="#ref-51">51</a>]</td>
+<td>GVGAI/VGDL, 3 games × 12 levels, state</td>
+<td>Sarsa(λ) / MCTS driven by test goals; human-like goals via IRL from 427 tester traces</td>
+<td><strong>45 injected bugs</strong> with a model-based oracle</td>
+<td>agents reach <strong>100% of the 45 bugs aggregated over 5 runs</strong>, humans 90%; baseline MCTS ≤44% and <strong>worse with more compute</strong></td>
+<td>3 games; goals re-derived per game</td>
+</tr>
+<tr>
+<td>NEATEST (ASE 2022) [<a class="cite" href="#ref-43">43</a>]</td>
+<td>25 Scratch games</td>
+<td>neuroevolved networks as executable tests + oracles</td>
+<td>243,835 mutants</td>
+<td>mutation score 65.6%, false positives 19.7%; coverage 94.6% vs 89.1% random</td>
+<td>robustness to program randomisation (+1.2% vs −8.2% static)</td>
+</tr>
+<tr>
+<td>iv4XR line (A-TEST 2021–25, ASE 2022) [<a class="cite" href="#ref-52">52</a>, <a class="cite" href="#ref-53">53</a>, <a class="cite" href="#ref-54">54</a>, <a class="cite" href="#ref-55">55</a>]</td>
+<td>Lab Recruits, Space Engineers</td>
+<td>tactical agents; curiosity; cooperative multi-agent</td>
+<td>coverage criteria</td>
+<td>2 agents ≈35% faster than 1</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GLIB, NetEase (ESEC/FSE 2021) [<a class="cite" href="#ref-19">19</a>]</td>
+<td>34 real games, pixels</td>
+<td><em>no exploration</em> — a learned visual-glitch oracle</td>
+<td>injected-glitch augmentation</td>
+<td>99.5% recall on 20 known-bug games; <strong>48/53 field bugs confirmed</strong></td>
+<td>across games</td>
+</tr>
+<tr>
+<td>Holmgård et al. (ToG 2019) [<a class="cite" href="#ref-20">20</a>]; Monster Carlo (CIG 2018/19) [<a class="cite" href="#ref-22">22</a>]</td>
+<td>MiniDungeons; Unity games</td>
+<td>evolved MCTS heuristics; MCTS + behaviour cloning</td>
+<td>designer inspection</td>
+<td>personas enact play styles; MC2 transfers experience across playthroughs</td>
+<td>across levels</td>
+</tr>
+<tr>
+<td>Reveal-More (CoG 2019) [<a class="cite" href="#ref-56">56</a>]</td>
+<td>two SNES games</td>
+<td>automated exploration seeded from human traces</td>
+<td>coverage</td>
+<td>"multiplicatively amplifies" human coverage</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Titan (2025) [<a class="cite" href="#ref-38">38</a>]</td>
+<td>2 commercial MMORPGs, abstracted state</td>
+<td>LLM agent with memory/reflection</td>
+<td>9 seeded bugs + LLM oracle</td>
+<td><strong>82% vs Wuji 45.5% vs ReAct 45.5%</strong> on the seeded bugs; 4 new bugs (self-reported)</td>
+<td>claimed, not controlled</td>
+</tr>
+<tr>
+<td>Meta-learned curiosity (ICLR 2020) [<a class="cite" href="#ref-40">40</a>]</td>
+<td>control tasks, not games</td>
+<td><strong>program search over the curiosity algorithm</strong></td>
+<td>RL return</td>
+<td>on par with human-designed curiosity; transfers across tasks</td>
+<td>yes — but no bug oracle</td>
+</tr>
+</tbody>
+</table></div>
+<p>Two structural facts. Coverage, the field's default, is <strong>falsified as a proxy in-paper</strong>: CCPT's curiosity-only baseline explores more states and surfaces fewer bugs. And the injected-fault formulation, the only one with a comparable denominator, is used with a stated N by five papers (Ariyurek 45, Tufano 6, NEATEST 243,835 mutants, GBQA 124, GameXpert 19–27 per level) — ours has 337.</p>
+<h3 id="23-how-prior-work-handles-the-two-things-reviewers-will-ask-about">2.3 How prior work handles the two things reviewers will ask about</h3>
+<p><strong>Oracles.</strong> Eight oracle types recur (crash; coverage-as-proxy; human-labelled; injected/mutated; formal spec; physics invariant; learned visual anomaly; agent play-rate as difficulty). Injected/mutated bugs — our choice — are the fastest-growing category (GBQA, GameXpert, World of Bugs [<a class="cite" href="#ref-57">57</a>], NEATEST, Ariyurek), all but two post-2021. Two named categories came back <strong>empty</strong> on direct search: metamorphic testing of games and differential build-vs-build / replay-desync testing have no dedicated papers (industry does "golden replay" comparisons but has not published them) — replay verification, which we use for every counted bug, is therefore citable as a gap rather than as prior art.</p>
+<p><strong>Are the injected bugs reachable?</strong> Prior work validates injected bugs three ways: human verification at construction (GBQA, GameXpert), a human-tester baseline on the <em>same</em> bugs (Ariyurek et al. — synthetic and human-like agents matched human testers' detection rate on 45 injected bugs), and mutation-score plus false-positive reporting (NEATEST). <strong>The check almost nobody runs is a random/brute-force floor on the same budget</strong> — which is exactly the check that exposed our own pool problem today (3 of 7 local TUNNEL instances are geometrically unreachable). We run that floor (random, action-repeat random, the guided probe) and should say so.</p>
+<p><strong>Transfer.</strong> Explicit transfer numbers are rare and, where present, are the headline: Ariyurek (agents vs humans on the same bugs), GBQA/GameXpert (difficulty tiers; self-discovery vs given-bug-list collapses by up to −33 points for weaker models), Holmgård personas re-applied dungeon → Match-3, NEATEST across 25 games, GameBench (glitch-trained VLMs transfer +2.5% to real-world physics benchmarks). <strong>No paper reports a tester's transfer to an unseen bug <em>class</em>.</strong></p>
+<h2 id="3-how-we-are-doing-against-the-field">3. How we are doing against the field</h2>
+<p>The honest way to compare is by formulation, because the numbers are not on the same scale.</p>
+<p><strong>Injected-fault detection (F2) — the formulation we share with Ariyurek, NEATEST, Tufano, GBQA, GameXpert.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Ariyurek et al. 2021</th>
+<th>NEATEST 2022</th>
+<th>GBQA 2026</th>
+<th><strong>AutoDev (now)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate</td>
+<td>GVGAI/VGDL, 3 games × 12 levels</td>
+<td>25 Scratch games</td>
+<td>30 LLM-built text games</td>
+<td>74 Kinetix physics levels + 64 generated</td>
+</tr>
+<tr>
+<td>Faults</td>
+<td>45 hand-injected (taxonomy-diversified)</td>
+<td>243,835 mutants (8 operators)</td>
+<td>124 injected, human-verified</td>
+<td>337 planted, 5 classes, each with a witness state</td>
+</tr>
+<tr>
+<td>Detectability check</td>
+<td>human testers on the same bugs (90–100%)</td>
+<td>mutation score + false-positive rate</td>
+<td>human verification at construction</td>
+<td>random / action-repeat / guided-probe floors; union reachability 81 / 66 / 62%; 3 of 7 local TUNNEL instances found unreachable</td>
+</tr>
+<tr>
+<td>Best detection</td>
+<td><strong>100%</strong> (aggregated over 5 MCTS runs); single agents 40–44%</td>
+<td>65.6% mutation score</td>
+<td>48.4% (Claude 4.6 Opus, 500 steps)</td>
+<td>72% single run (88% of reachable); union of everything 81%</td>
+</tr>
+<tr>
+<td>Baselines</td>
+<td>humans; baseline game-playing agents</td>
+<td>random tester (coverage)</td>
+<td>20 LLMs vs each other, no RL</td>
+<td>random, action-repeat, Go-Explore, 4 PPO objectives, 4 + 3 + 4 LLM-designed testers</td>
+</tr>
+<tr>
+<td>Who designed the tester</td>
+<td>hand-designed + IRL from 427 human traces</td>
+<td>neuroevolution per game</td>
+<td>prompted LLM</td>
+<td><strong>LLM search over the program</strong>, then frozen</td>
+</tr>
+<tr>
+<td>Transfer</td>
+<td>goals re-derived per game; not measured for bugs</td>
+<td>robustness to randomisation</td>
+<td>zero-shot across its 30 games (no trained policy)</td>
+<td><strong>held-out levels +0.04 ± 0.05; held-out class +0.15 ± 0.05</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Read straight, our single-run 72% is <em>below</em> Ariyurek's aggregated 100% and <em>above</em> GBQA's 48% — but neither comparison means much: Ariyurek's bugs were validated by humans as findable (ours include unreachable ones), their 100% is a 5-run union (our 5-seed union is 80%), and GBQA's agent has no simulator budget concept at all. The apples-to-apples statement is: <strong>under an injected-fault protocol with a countable denominator and a random floor, our discovered tester is the strongest tester we can construct or borrow, and it is the only one whose evaluation includes a sealed defect class.</strong></p>
+<p><strong>Coverage-maximising exploration (F1) — where a CoG/FDG reviewer will place us by default.</strong> Our hand-designed baselines are this line's objectives (count-based, RND, ICM, curiosity, Go-Explore), evaluated under our protocol: all of them lose to the discovered program, and the RL versions lose to <em>action-repeat random</em> — consistent with Microsoft's finding that random exploration beats RND asymptotically, and with CCPT's finding that coverage and bug-surfacing diverge. We do not report coverage as a metric. We should (as a secondary number), because it is their language and because our result <em>predicts</em> the CCPT inversion: the search improved bug-witnessing, not coverage.</p>
+<p><strong>Real-bug discovery (F3) — where we are weakest.</strong> Wuji found 3 developer-confirmed bugs in commercial games; GLIB confirmed 48 of 53 across 14 real games; RAID found 6 exploits in a shipping title; Inspector 2. We have one momentary tunnelling failure in a shipped research level and ten anomalies in generated levels. On this axis we are not competitive and should not pretend to be: Kinetix is a research substrate whose engine has been exercised by RL for a year, and our generic oracles are physics invariants, not a studio's bug taxonomy.</p>
+<p><strong>The route question, answered directly.</strong> Are we a worse version of something that exists? <em>As a tester</em>, yes: EA's, NetEase's and Microsoft's agents run on real games with real oracles and we would lose on every axis a studio cares about. <em>As a research loop that discovers testers and measures whether they transfer</em>, no — the survey found no paper that (i) searches over exploration-objective code, (ii) with detection of injected faults as fitness, (iii) reporting results on held-out games or held-out bug classes. Alet et al. own (i) without a game or an oracle; Ariyurek, NEATEST and GBQA own (ii) without (i) or (iii); nobody owns (iii). The three published negative results (random beats RND; more search hurts; coverage anti-correlates with bugs) are the reason (i)+(iii) is interesting: hand-designed exploration objectives are unreliable testers, and the field has no method for finding better ones.</p>
+<p><strong>What the field will ask that we do not yet have.</strong> (1) A CCPT-style baseline — curiosity blended with imitation of expert trajectories — evaluated under our protocol (we have no expert demonstrations; Kinetix's shipped solutions could stand in). (2) Coverage as a secondary metric. (3) A human anchor (Ariyurek's template): even a small human-tester sample on a few planted instances would be the strongest credibility signal. (4) A second game family, because every paper above is single-game and reviewers now read that as the norm rather than a flaw — which is exactly why our held-out-class result is worth more than it looks.</p>
+<h2 id="4-framing-what-problem-are-we-actually-solving">4. Framing: what problem are we actually solving?</h2>
+<p>There are four distinct problems that the phrase "AI finds bugs in games" hides, and prior work sits in different ones:</p>
+<ol>
+<li><strong>Tester-agent performance</strong> — given a game and a hand-designed exploration objective (curiosity, coverage, novelty), how much of the game does the agent cover and how many bugs (usually crashes, stuck states, or injected faults) does it trigger? This is the industrial RL line (EA, Ubisoft, NetEase) and the GVGAI/MCTS line. The metric is coverage or bugs-found on <em>one</em> game; generalization is rarely measured because the agent is retrained per game.</li>
+<li><strong>Bug detection from observations</strong> — given gameplay (pixels/video), decide whether a frame or clip shows a glitch. This is the VLM benchmark line; numbers are accuracy/recall on curated datasets, and the one field study says they do not transfer to real footage.</li>
+<li><strong>Design evaluation</strong> — is the level solvable, too easy, soft-lockable, exploitable? Procedural personas, MCTS playtesting, softlock model checking. The oracle is a design property, not an engine fault.</li>
+<li><strong>Autonomous QA loops</strong> — an agent that plays, detects, verifies and reports without a human in the loop, scored by recall of human-verified bugs at an interaction budget (GBQA) or by fix success (GameXpert). New (2026), state-based, artifacts unreleased.</li>
+</ol>
+<p>We are not in (2) at all, only marginally in (3), and our paper's actual contribution sits <em>between</em> (1) and (4): <strong>the exploration strategy is not hand-designed but discovered by a research loop, and the thing we measure is whether the discovered strategy transfers</strong> — to levels it never saw and to a defect class it was never scored on. Nobody in line (1) searches over the tester itself (the closest is meta-learned curiosity on control tasks [<a class="cite" href="#ref-40">40</a>]), and nobody in lines (1) or (4) reports a tester's transfer to unseen bug types. That is the framing that is both true and not already occupied — and it is <em>made</em> interesting by the field's own negative results: hand-designed exploration objectives are unreliable testers (random beats RND [<a class="cite" href="#ref-49">49</a>]; more search hurts [<a class="cite" href="#ref-51">51</a>]; coverage anti-correlates with highlighted bugs [<a class="cite" href="#ref-6">6</a>]).</p>
+<p><strong>Where we would be "a worse version of the same route".</strong> If the paper were framed as <em>"an RL/search agent that finds bugs in a game"</em>, it would be compared with Bergdahl/Gordillo/CCPT/Wuji on their terms — coverage of commercial 3D games, crashes found in production — and lose on every axis that matters to a game studio (their games are real, ours are 2D physics toys; their bugs are production bugs, ours are planted; their agents run in Unity/proprietary engines, ours needs a save/restore-able JAX state). Likewise, framed as <em>"finding real bugs in Kinetix"</em>, the finding is one momentary tunnelling failure, which no reviewer will find impressive next to Wuji's production bugs or GBQA's 124 verified web-game bugs.</p>
+<p><strong>Where we are not.</strong> Framed as <em>"can an autonomous loop discover a testing strategy that generalizes?"</em>, the relevant comparison is the hand-designed objectives of line (1) evaluated under our protocol (equal budget, sealed held-out class), and there we win by a wide margin on the held-out class, modestly on held-out levels, and honestly report the classes where nothing helps (TUNNEL) and why (pool infeasibility). The planted-defect benchmark with witness oracles, state-based and replay-verified, is itself a contribution line (4) lacks (GBQA and GameXpert released nothing), and it should be released.</p>
+<p><strong>Scope statement that survives review</strong> (proposed): <em>We study whether an LLM-driven research loop can discover game-testing exploration programs that transfer, using Kinetix as a fully observable, restorable, GPU-parallel test bed with planted defects and witness oracles; we do not claim to test commercial games, and the real anomalies we report are a by-product used to validate the oracles, not the headline.</em> Under that scope the AutoMLR fit is exact: the agent designed the benchmark, the search, the baselines and the analysis; the human verified.</p>
+<h2 id="5-recommendation">5. Recommendation</h2>
+<ul>
+<li><strong>Keep Path 1 with the framing above.</strong> Retitle toward "discovered testing strategies transfer" rather than "finds real bugs"; move the real-bug table to a validation role; add the benchmark release (planted-defect suite + witness oracles + replay verification) as a stated contribution, scored GBQA-style (recall at an interaction budget).</li>
+<li><strong>Add the comparisons the field expects:</strong> a CCPT-style curiosity ⊕ imitation tester (using Kinetix's shipped solution trajectories as the "expert demos"), coverage as a secondary metric next to detection, and — if at all possible before Friday — a small human-tester anchor on a handful of planted instances, which is the Ariyurek template and the single most credible number a reviewer from CoG/FDG will look for. The MCTS baseline that community expects is covered by macrosweep (Opus's macro tree search).</li>
+<li><strong>Do not chase real-bug counts before Friday.</strong> The shipped-level engine is sound; counting momentary penetrations as "bugs" would be the kind of overclaim that the field is tired of (see the VLM benchmarks' industrial reality check). Report what the oracles verified, with severities, and say the engine held up.</li>
+<li><strong>Second engine after the deadline</strong>, chosen to move from physics to <em>rules</em> (Craftax), where the "unseen defect class" story becomes "unseen rule class" — that is the generality claim the workshop paper can only promise.</li>
+</ul>
+<h2 id="references">References</h2>
+<ol>
+<li id="ref-1">Lange, Imajuku, Cetin (Sakana AI). <em>ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution</em>. arXiv:2509.19349, 2025; code github.com/SakanaAI/ShinkaEvolve. <a href="https://arxiv.org/abs/2509.19349">https://arxiv.org/abs/2509.19349</a></li>
+<li id="ref-2">Matthews, Beukman, Lu, Foerster. <em>Kinetix: Investigating the Training of General Agents through Open-Ended Physics-Based Control Tasks</em>. ICLR 2025 (oral); arXiv:2410.23208; code github.com/FLAIROx/Kinetix. <a href="https://arxiv.org/abs/2410.23208">https://arxiv.org/abs/2410.23208</a></li>
+<li id="ref-3">Xiao, Liu, Wang. <em>PHYFU: Fuzzing Modern Physics Simulation Engines</em>. arXiv:2307.10818, 2023. <a href="https://arxiv.org/abs/2307.10818">https://arxiv.org/abs/2307.10818</a></li>
+<li id="ref-4">Bergdahl, Gordillo, Tollmar, Gisslén (EA SEED). <em>Augmenting Automated Game Testing with Deep Reinforcement Learning</em>. IEEE CoG 2020; arXiv:2103.15819. <a href="https://arxiv.org/abs/2103.15819">https://arxiv.org/abs/2103.15819</a></li>
+<li id="ref-5">Gordillo, Bergdahl, Tollmar, Gisslén (EA SEED). <em>Improving Playtesting Coverage via Curiosity Driven Reinforcement Learning Agents</em>. IEEE CoG 2021; arXiv:2103.13798. <a href="https://arxiv.org/abs/2103.13798">https://arxiv.org/abs/2103.13798</a></li>
+<li id="ref-6">Sestini, Gisslén, Bergdahl, Tollmar, Bagdanov (EA SEED). <em>Automated Gameplay Testing and Validation with Curiosity-Conditioned Proximal Trajectories (CCPT)</em>. arXiv:2202.10057, 2022. <a href="https://arxiv.org/abs/2202.10057">https://arxiv.org/abs/2202.10057</a></li>
+<li id="ref-7">Fuchs, Gosselin-Grant, Skuin et al. (EA). <em>Reward-Adaptive Iterative Discovery: A Case Study on Automated Game Testing for NHL 26</em>. arXiv:2607.07498, 2026. <a href="https://arxiv.org/abs/2607.07498">https://arxiv.org/abs/2607.07498</a></li>
+<li id="ref-8">Zheng, Xie, Su et al. (NetEase Fuxi). <em>Wuji: Automatic Online Combat Game Testing Using Evolutionary Deep Reinforcement Learning</em>. ASE 2019. <a href="https://doi.org/10.1109/ASE.2019.00077">https://doi.org/10.1109/ASE.2019.00077</a></li>
+<li id="ref-9">Liu et al. (Microsoft). <em>Inspector: Pixel-Based Automated Game Testing via Exploration, Detection, and Investigation</em>. IEEE CoG 2022; arXiv:2207.08379. <a href="https://arxiv.org/abs/2207.08379">https://arxiv.org/abs/2207.08379</a></li>
+<li id="ref-10">Adaikkappan, Martineau, Romoff et al.. <em>CA2: Code-Aware Agent for Automated Game Testing</em>. arXiv:2605.13918, 2026. <a href="https://arxiv.org/abs/2605.13918">https://arxiv.org/abs/2605.13918</a></li>
+<li id="ref-11">Ariyurek, Betin-Can, Surer. <em>Automated Video Game Testing Using Synthetic and Humanlike Agents</em>. IEEE Transactions on Games, 2021. <a href="https://doi.org/10.1109/TG.2019.2947597">https://doi.org/10.1109/TG.2019.2947597</a></li>
+<li id="ref-12">Taesiri, Feng, Nguyen, Bezemer. <em>GlitchBench: Can large multimodal models detect video game glitches?</em>. CVPR 2024; arXiv:2312.05291. <a href="https://arxiv.org/abs/2312.05291">https://arxiv.org/abs/2312.05291</a></li>
+<li id="ref-13">Taesiri, Ghildyal, Zadtootaghaj et al.. <em>VideoGameQA-Bench: Evaluating Vision-Language Models for Video Game Quality Assurance</em>. NeurIPS 2025 Datasets &amp; Benchmarks; arXiv:2505.15952. <a href="https://arxiv.org/abs/2505.15952">https://arxiv.org/abs/2505.15952</a></li>
+<li id="ref-14">Zheng, Zhou, Wu et al.. <em>Open-Ended Video Game Glitch Detection with Agentic Reasoning and Temporal Grounding</em>. arXiv:2604.07818, 2026. <a href="https://arxiv.org/abs/2604.07818">https://arxiv.org/abs/2604.07818</a></li>
+<li id="ref-15">Yu, Wiens, Barahona-Ríos et al.. <em>TempGlitch: Evaluating Vision-Language Models for Temporal Glitch Detection in Gameplay Videos</em>. arXiv:2605.21443, 2026. <a href="https://arxiv.org/abs/2605.21443">https://arxiv.org/abs/2605.21443</a></li>
+<li id="ref-16">Cao, Tang, Zhao et al.. <em>PhysGame: Uncovering Physical Commonsense Violations in Gameplay Videos</em>. arXiv:2412.01800, 2024. <a href="https://arxiv.org/abs/2412.01800">https://arxiv.org/abs/2412.01800</a></li>
+<li id="ref-17">Cao, Tang, Zhao et al.. <em>Order from Chaos: Physical World Understanding from Glitchy Gameplay Videos</em>. arXiv:2601.16471, 2026. <a href="https://arxiv.org/abs/2601.16471">https://arxiv.org/abs/2601.16471</a></li>
+<li id="ref-18">Lu, Senchenko, Sayle et al.. <em>How Far Can VLMs Go for Visual Bug Detection? Studying 19,738 Keyframes from 41 Hours of Gameplay Videos</em>. arXiv:2603.22706, 2026. <a href="https://arxiv.org/abs/2603.22706">https://arxiv.org/abs/2603.22706</a></li>
+<li id="ref-19">Chen, Li, Chen et al.. <em>GLIB: Towards Automated Test Oracle for Graphically-Rich Applications</em>. ESEC/FSE 2021; arXiv:2106.10507. <a href="https://arxiv.org/abs/2106.10507">https://arxiv.org/abs/2106.10507</a></li>
+<li id="ref-20">Holmgård, Green, Liapis et al.. <em>Automated Playtesting with Procedural Personas through MCTS with Evolved Heuristics</em>. IEEE ToG 2019; arXiv:1802.06881. <a href="https://arxiv.org/abs/1802.06881">https://arxiv.org/abs/1802.06881</a></li>
+<li id="ref-21">Mugrai, Silva, Holmgård et al.. <em>Automated Playtesting of Matching Tile Games</em>. IEEE CoG 2019; arXiv:1907.06570. <a href="https://arxiv.org/abs/1907.06570">https://arxiv.org/abs/1907.06570</a></li>
+<li id="ref-22">Keehl, Smith. <em>Monster Carlo: An MCTS-based Framework for Machine Playtesting Unity Games</em>. IEEE CIG 2018, doi:10.1109/CIG.2018.8490363. <a href="https://doi.org/10.1109/CIG.2018.8490363">https://doi.org/10.1109/CIG.2018.8490363</a></li>
+<li id="ref-23">Machado, Gopstein, Nealen et al.. <em>AI-Assisted Game Debugging with Cicero</em>. IEEE CEC 2018, doi:10.1109/CEC.2018.8477829. <a href="https://doi.org/10.1109/CEC.2018.8477829">https://doi.org/10.1109/CEC.2018.8477829</a></li>
+<li id="ref-24">Volz, Schrum, Liu et al.. <em>Evolving Mario Levels in the Latent Space of a Deep Convolutional Generative Adversarial Network</em>. GECCO 2018; arXiv:1805.00728. <a href="https://arxiv.org/abs/1805.00728">https://arxiv.org/abs/1805.00728</a></li>
+<li id="ref-25">Gudmundsson, Eisen, Poromaa et al. (King). <em>Human-Like Playtesting with Deep Learning</em>. IEEE CIG 2018. <a href="https://doi.org/10.1109/CIG.2018.8490442">https://doi.org/10.1109/CIG.2018.8490442</a></li>
+<li id="ref-26">Roohi, Relas, Takatalo, Heiskanen, Hämäläinen. <em>Predicting Game Difficulty and Churn Without Players</em>. CHI PLAY 2020; arXiv:2008.12937. <a href="https://arxiv.org/abs/2008.12937">https://arxiv.org/abs/2008.12937</a></li>
+<li id="ref-27">Roohi, Guckelsberger, Relas, Heiskanen, Takatalo, Hämäläinen. <em>Predicting Game Engagement and Difficulty Using AI Players</em>. CHI PLAY 2021; arXiv:2107.12061. <a href="https://arxiv.org/abs/2107.12061">https://arxiv.org/abs/2107.12061</a></li>
+<li id="ref-28">Kristensen, Valdivia, Burelli (King). <em>Estimating Player Completion Rate in Mobile Puzzle Games Using Reinforcement Learning</em>. IEEE CoG 2020; arXiv:2306.14626. <a href="https://arxiv.org/abs/2306.14626">https://arxiv.org/abs/2306.14626</a></li>
+<li id="ref-29">Tomašev, Paquet, Hassabis, Kramnik (DeepMind). <em>Assessing Game Balance with AlphaZero: Exploring Alternative Rule Sets in Chess</em>. arXiv:2009.04374, 2020. <a href="https://arxiv.org/abs/2009.04374">https://arxiv.org/abs/2009.04374</a></li>
+<li id="ref-30">Mawhorter, Smith. <em>Softlock Detection for Super Metroid with Computation Tree Logic</em>. FDG 2021, doi:10.1145/3472538.3472542. <a href="https://doi.org/10.1145/3472538.3472542">https://doi.org/10.1145/3472538.3472542</a></li>
+<li id="ref-31">Cooper, Bazzaz. <em>Stuck in the Middle: Generating Levels without (or with) Softlocks</em>. FDG 2025, doi:10.1145/3723498.3723844. <a href="https://doi.org/10.1145/3723498.3723844">https://doi.org/10.1145/3723498.3723844</a></li>
+<li id="ref-32">Earle, Todd, Li, Jiang, Khalifa, Nasir, Banburski-Fahey, Togelius. <em>PuzzleJAX: A Benchmark for Reasoning and Learning</em>. arXiv:2508.16821, 2025; code github.com/smearle/script-doctor. <a href="https://arxiv.org/abs/2508.16821">https://arxiv.org/abs/2508.16821</a></li>
+<li id="ref-33">Earle et al.. <em>ScriptDoctor: Automatic Generation of PuzzleScript Games via Large Language Models and Tree Search</em>. arXiv:2506.06524, 2025. <a href="https://arxiv.org/abs/2506.06524">https://arxiv.org/abs/2506.06524</a></li>
+<li id="ref-34">Xiao, Yang. <em>LLMs May Not Be Human-Level Players, But They Can Be Testers: Measuring Game Difficulty with LLM Agents</em>. Proc. ACM HCI (CHI PLAY) 2025. <a href="https://doi.org/10.1145/3748634">https://doi.org/10.1145/3748634</a></li>
+<li id="ref-35">Jiang, Chen, Chen. <em>GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers</em>. ICLR 2026 workshop; arXiv:2604.02648. <a href="https://arxiv.org/abs/2604.02648">https://arxiv.org/abs/2604.02648</a></li>
+<li id="ref-36">Chen, Hong, Gao, Lin et al.. <em>GameXpert-Bench: How Far Are Coding Agents from Expert Game Development?</em>. arXiv:2608.21833, 2026. <a href="https://arxiv.org/abs/2608.21833">https://arxiv.org/abs/2608.21833</a></li>
+<li id="ref-37">Yapağcı, Öztürk, Tüzün. <em>Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft</em>. arXiv:2503.20036, 2025 (Accepted into ASE'25 (Automated Software Engineering). https://conf.re). <a href="https://arxiv.org/abs/2503.20036">https://arxiv.org/abs/2503.20036</a></li>
+<li id="ref-38">Wang, Tang, Yuan et al.. <em>Leveraging LLM Agents for Automated Video Game Testing</em>. arXiv:2509.22170, 2025 (17 pages). <a href="https://arxiv.org/abs/2509.22170">https://arxiv.org/abs/2509.22170</a></li>
+<li id="ref-39">Mu, Yoda, Zhang et al.. <em>Synergizing Code Coverage and Gameplay Intent: Coverage-Aware Game Playtesting with LLM-Guided Reinforcement Learning</em>. arXiv:2512.12706, 2025. <a href="https://arxiv.org/abs/2512.12706">https://arxiv.org/abs/2512.12706</a></li>
+<li id="ref-40">Alet, Schneider, Lozano-Pérez, Kaelbling. <em>Meta-learning curiosity algorithms</em>. ICLR 2020; arXiv:2003.05325. <a href="https://arxiv.org/abs/2003.05325">https://arxiv.org/abs/2003.05325</a></li>
+<li id="ref-41">Sygkounas, Loutfi, Persson. <em>Evolutionary Discovery of Reinforcement Learning Algorithms via Large Language Models</em>. arXiv:2603.28416, 2026. <a href="https://arxiv.org/abs/2603.28416">https://arxiv.org/abs/2603.28416</a></li>
+<li id="ref-42">Li, Schultz, Hennes, Lanctot (Google DeepMind). <em>Discovering Multiagent Learning Algorithms with Large Language Models</em>. arXiv:2602.16928, 2026. <a href="https://arxiv.org/abs/2602.16928">https://arxiv.org/abs/2602.16928</a></li>
+<li id="ref-43">Feldmeier, Fraser. <em>Neuroevolution-Based Generation of Tests and Oracles for Games</em>. arXiv:2208.13632, 2022. <a href="https://arxiv.org/abs/2208.13632">https://arxiv.org/abs/2208.13632</a></li>
+<li id="ref-44">Chen, Chen, Jia et al.. <em>IcFuzz: Fuzzing Isaac Sim with Semantic Stage Guidance and Multi-level Mutation</em>. arXiv 2026; arXiv:2608.06088. <a href="https://arxiv.org/abs/2608.06088">https://arxiv.org/abs/2608.06088</a></li>
+<li id="ref-45">Politowski, Petrillo, Guéhéneuc. <em>A Survey of Video Game Testing</em>. AST 2021; arXiv:2103.06431. <a href="https://arxiv.org/abs/2103.06431">https://arxiv.org/abs/2103.06431</a></li>
+<li id="ref-46">Politowski, Guéhéneuc, Petrillo. <em>Towards Automated Video Game Testing: Still a Long Way to Go</em>. ICSE GAS 2022; arXiv:2202.12777. <a href="https://arxiv.org/abs/2202.12777">https://arxiv.org/abs/2202.12777</a></li>
+<li id="ref-47">Kato, Yoshida, Makihara et al.. <em>Software Testing Beyond Closed Worlds: Open-World Games as an Extreme Case</em>. FSE 2026 (IVR); arXiv; arXiv:2604.04047. <a href="https://arxiv.org/abs/2604.04047">https://arxiv.org/abs/2604.04047</a></li>
+<li id="ref-48">Abdelfattah, Brown, Zhang. <em>Preference-conditioned Pixel-based AI Agent For Game Testing</em>. IEEE CoG 2023 (Xbox/MSR); arXiv:2308.09289. <a href="https://arxiv.org/abs/2308.09289">https://arxiv.org/abs/2308.09289</a></li>
+<li id="ref-49">Lu, Georgescu, Verwey. <em>Go-Explore Complex 3D Game Environments for Automated Reachability Testing</em>. IEEE ToG 2022 (Microsoft Research); arXiv:2209.00570. <a href="https://arxiv.org/abs/2209.00570">https://arxiv.org/abs/2209.00570</a></li>
+<li id="ref-50">Tufano, Scalabrino, Pascarella et al.. <em>Using Reinforcement Learning for Load Testing of Video Games</em>. ICSE 2022; arXiv:2201.06865. <a href="https://arxiv.org/abs/2201.06865">https://arxiv.org/abs/2201.06865</a></li>
+<li id="ref-51">Ariyurek, Betin-Can, Surer. <em>Enhancing the Monte Carlo Tree Search Algorithm for Video Game Testing</em>. IEEE CoG 2020; arXiv:2003.07813. <a href="https://arxiv.org/abs/2003.07813">https://arxiv.org/abs/2003.07813</a></li>
+<li id="ref-52">Prasetya. <em>Aplib: Tactical Programming of Intelligent Agents</em>. EMAS@AAMAS 2020; arXiv:1911.04710. <a href="https://arxiv.org/abs/1911.04710">https://arxiv.org/abs/1911.04710</a></li>
+<li id="ref-53">Prasetya, Ricós, Kifetew et al.. <em>An Agent-based Approach to Automated Game Testing: an Experience Report</em>. A-TEST 2022; arXiv:2211.06386. <a href="https://arxiv.org/abs/2211.06386">https://arxiv.org/abs/2211.06386</a></li>
+<li id="ref-54">Ferdous, Prasetya, Vos et al.. <em>Towards Agent-Based Testing of 3D Games using Reinforcement Learning</em>. ASE 2022, doi:10.1145/3551349.3560507. <a href="https://doi.org/10.1145/3551349.3560507">https://doi.org/10.1145/3551349.3560507</a></li>
+<li id="ref-55">Shirzadeh-hajimahmood, Prasteya, Dastani et al.. <em>Cooperative Multi-agent Approach for Automated Computer Game Testing</em>. EMAS 2024; arXiv:2405.11347. <a href="https://arxiv.org/abs/2405.11347">https://arxiv.org/abs/2405.11347</a></li>
+<li id="ref-56">Chang, Aytemiz, Smith. <em>Reveal-More: Amplifying Human Effort in Quality Assurance Testing Using Automated Exploration</em>. IEEE CoG 2019, doi:10.1109/CIG.2019.8848091. <a href="https://doi.org/10.1109/CIG.2019.8848091">https://doi.org/10.1109/CIG.2019.8848091</a></li>
+<li id="ref-57">Wilkins, Stathis. <em>World of Bugs: A Platform for Automated Bug Detection in 3D Video Games</em>. IEEE CoG 2022; arXiv:2206.11037. <a href="https://arxiv.org/abs/2206.11037">https://arxiv.org/abs/2206.11037</a></li>
+</ol>
+  </main>
+</div>

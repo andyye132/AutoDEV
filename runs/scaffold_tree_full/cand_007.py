@@ -1,0 +1,150 @@
+"""Tester program (evolvable). The four hooks below define how a batch of B workers explores a Kinetix level.
+Kinetix states are save/restore-able: the harness keeps K archive slots; `restore` may jump a worker to a stored
+state, `archive` may store the worker's current state. Everything must be pure JAX (jit/vmap-compatible, fixed shapes).
+Feature vector `feats` (per worker, F floats, oracle-blind):
+  [0:2] dyn_pos (centroid of moving shapes), [2:4] dyn_vel, [4] dyn_max_speed, [5:7] green_pos, [7] green_blue_dist,
+  [8] time_frac, [9:11] blue_pos, then per-polygon pos/vel/rot/active/role blocks, per-circle pos/vel/active/role blocks,
+  then contact flags. `obs` is Kinetix's symbolic observation. Actions: 0..2*NM-1 motor +/- (NM=4 motor bindings),
+  2*NM = no-op, 2*NM+1.. thrusters (2 bindings).
+Goal of the search: reach states that expose planted defects as fast as possible (steps-to-first-witness), and do so
+in a way that generalizes to defect classes the search never saw."""
+import jax, jax.numpy as jnp
+# EVOLVE-BLOCK-START
+BITS = 12            # hash bits for coverage-pool archive cells
+P_RESTORE = 0.08      # per-step probability that a worker jumps to an archived state
+MAX_SHORT = 5         # max repeat length for short random-exploration holds
+MAX_MED = 14          # max repeat length for medium thruster-biased holds
+MAX_LONG = 42         # max repeat length for long single-direction / thruster holds (energy pumping)
+MAX_PUMP = 60          # max repeat length for resonant motor-oscillation holds (swing-pump energy buildup)
+CELL_DIMS = (0, 1, 2, 3, 5, 6, 9, 10)   # feature dims used to define coverage cells
+CELL_RES = 0.32       # finer coarse grid resolution -> resolves subtler near-goal (shortcut) states
+POOL_FRAC = (0.50, 0.18, 0.32)   # coverage / speed / proximity pool fractions of K (more weight on proximity-to-goal,
+                                  # since SHORTCUT defects hinge on reaching the goal via an unintended near-goal state)
+EXTREME_BONUS = 0.5   # restore-logit bonus for speed/proximity pool slots (raised so near-goal states get revisited
+                       # and extended more often, rather than diluted by generic coverage restores)
+NM = 4                # motor bindings (fixed by env spec)
+P_REPEAT_ON_PROGRESS = 0.6   # when the last action reduced green_blue_dist, replay it (goal-directed hill-climb)
+DIST_EPS = 1e-4              # minimum distance decrease counted as "progress"
+PERTURB_PROB = 0.15           # chance to nudge the repeated hill-climb action to a neighboring one,
+                               # so near-goal exploration diverges off the intended path and can find
+                               # unintended (SHORTCUT) routes instead of just retracing the greedy path
+PROX_SPEED_WEIGHT = 0.2        # proximity pool favors close-AND-fast states (overshoot candidates are
+                               # more likely to trigger an unintended-goal SHORTCUT witness than a
+                               # merely-close but slow/settled state)
+def _split(K):
+    K1 = max(1, int(round(POOL_FRAC[0] * K)))
+    K2 = max(1, int(round(POOL_FRAC[1] * K)))
+    K1 = max(1, K - K2 - max(1, K - K1 - K2))
+    K3 = max(1, K - K1 - K2)
+    K1 = K - K2 - K3
+    return K1, K2, K3
+def init(rng, F, n_act, K, B):
+    K1, K2, K3 = _split(K)
+    return {"n_act": jnp.int32(n_act), "K": jnp.int32(K), "cur": jnp.zeros(B, jnp.int32),
+            "left": jnp.zeros(B, jnp.int32), "mode": jnp.zeros(B, jnp.int32),
+            "osc_motor": jnp.zeros(B, jnp.int32), "osc_period": jnp.ones(B, jnp.int32),
+            "last_dist": jnp.full(B, jnp.inf),
+            "proj": jax.random.normal(rng, (len(CELL_DIMS), BITS)),
+            "cell_slot": jnp.full(2 ** BITS, -1, jnp.int32), "next_free": jnp.int32(0)}
+def _cell(mem, feats):
+    x = jnp.round(feats[:, jnp.array(CELL_DIMS)] / CELL_RES) * CELL_RES
+    return ((x @ mem["proj"] > 0) * (2 ** jnp.arange(BITS))).sum(-1).astype(jnp.int32)
+def _prox_score(feats):
+    # lower is "better" (more archive-worthy): close to goal AND carrying speed (overshoot-prone)
+    return feats[:, 7] - PROX_SPEED_WEIGHT * jnp.clip(feats[:, 4], 0.0, None)
+def restore(mem, feats, arch_feats, arch_valid, arch_visits, rng):
+    B = feats.shape[0]; K = arch_valid.shape[0]
+    K1, K2, K3 = _split(K)
+    k1, k2 = jax.random.split(rng)
+    do = jax.random.uniform(k1, (B,)) < P_RESTORE
+    idx = jnp.arange(K)
+    bonus = jnp.where(idx >= K1, EXTREME_BONUS, 0.0)
+    logits = jnp.where(arch_valid, -0.5 * jnp.log1p(arch_visits.astype(jnp.float32)) + bonus, -jnp.inf)
+    slot = jnp.argmax(logits[None, :] + jax.random.gumbel(k2, (B, K)), axis=1)
+    return do & arch_valid.any(), slot, mem
+def act(mem, feats, obs, rng):
+    B = feats.shape[0]; n_act = mem["n_act"]
+    k1, k2, k3, k4, k5, k6, k7, k8, k9 = jax.random.split(rng, 9)
+    new = mem["left"] <= 0
+    # 0: short random exploration, 1: long single-motor energy pump, 2: medium thruster hold,
+    # 3: long thruster burst, 4: resonant motor oscillation (swing-pump for extra kinetic energy)
+    # Weight further toward modes 0/2 (short/medium, broad positional coverage near the goal region)
+    # since SHORTCUT is the weakest class and benefits from varied ordinary motion more than the
+    # energy-pumping modes 1/3/4 that mainly expose TUNNEL/ANOMALY.
+    mode_probs = jnp.array([0.30, 0.14, 0.24, 0.12, 0.20])
+    mode = jnp.where(new, jax.random.choice(k1, 5, (B,), p=mode_probs), mem["mode"])
+    rand_action = jax.random.randint(k2, (B,), 0, n_act)
+    thr_lo = 2 * NM + 1
+    thr_span = jnp.maximum(n_act - thr_lo, 1)
+    thr_action = thr_lo + jax.random.randint(k3, (B,), 0, thr_span)
+    thr_action = jnp.where(n_act > thr_lo, thr_action, rand_action)
+    is_thruster_mode = (mode == 2) | (mode == 3)
+    new_action = jnp.where(is_thruster_mode, thr_action, rand_action)
+    # goal-directed hill-climb: if the previous hold's action reduced green_blue_dist, replay it
+    # instead of drawing a fresh random direction, biasing exploration toward the goal region
+    # where unintended SHORTCUT witness states live. A small perturbation chance nudges the
+    # replayed action to a neighbor so we don't just retrace the same intended-path trajectory
+    # and instead sample divergent nearby routes into the goal (more likely to expose SHORTCUT).
+    progress = (mem["last_dist"] - feats[:, 7]) > DIST_EPS
+    use_repeat = new & progress & (jax.random.uniform(k8, (B,)) < P_REPEAT_ON_PROGRESS)
+    perturb = use_repeat & (jax.random.uniform(k9, (B,)) < PERTURB_PROB)
+    nudge = jnp.where(jax.random.bernoulli(k9, 0.5, (B,)), 1, -1)
+    repeat_action = jnp.where(perturb, jnp.mod(mem["cur"] + nudge, n_act), mem["cur"])
+    new_action = jnp.where(use_repeat, repeat_action, new_action)
+    short_len = jax.random.randint(k4, (B,), 1, MAX_SHORT + 1)
+    med_len = jax.random.randint(k4, (B,), 6, MAX_MED + 1)
+    long_len = jax.random.randint(k5, (B,), 15, MAX_LONG + 1)
+    pump_len = jax.random.randint(k5, (B,), 30, MAX_PUMP + 1)
+    rep_len = jnp.where(mode == 4, pump_len,
+                         jnp.where((mode == 1) | (mode == 3), long_len, jnp.where(mode == 2, med_len, short_len)))
+    osc_motor = jnp.where(new & (mode == 4), jax.random.randint(k6, (B,), 0, NM), mem["osc_motor"])
+    osc_period = jnp.where(new & (mode == 4), jax.random.randint(k7, (B,), 2, 17), mem["osc_period"])
+    left = jnp.where(new, rep_len, mem["left"]) - 1
+    osc_sign = jnp.mod(left // jnp.maximum(osc_period, 1), 2)
+    pump_action = 2 * osc_motor + osc_sign
+    cur = jnp.where(new, new_action, mem["cur"])
+    cur = jnp.where(mode == 4, pump_action, cur)
+    return cur, {**mem, "cur": cur, "left": left, "mode": mode, "osc_motor": osc_motor, "osc_period": osc_period,
+                 "last_dist": feats[:, 7]}
+def archive(mem, feats, done, arch_feats, arch_valid, rng):
+    K = arch_valid.shape[0]
+    K1, K2, K3 = _split(K)
+    live = ~done
+    # coverage pool: hash-grid novelty over first K1 slots
+    cell = _cell(mem, feats)
+    is_new_cell = (mem["cell_slot"][cell] < 0) & live
+    order = jnp.cumsum(is_new_cell) - 1
+    cov_slot = (mem["next_free"] + order) % K1
+    # speed pool: keep the K2 highest dyn_max_speed states seen
+    sub_speed = arch_feats[K1:K1 + K2, 4]
+    sub_speed_valid = arch_valid[K1:K1 + K2]
+    masked_speed = jnp.where(sub_speed_valid, sub_speed, -jnp.inf)
+    worst_speed_idx = jnp.argmin(masked_speed)
+    worst_speed_val = masked_speed[worst_speed_idx]
+    speed_beats = (feats[:, 4] > worst_speed_val) & live
+    speed_slot = K1 + worst_speed_idx
+    # proximity pool: keep the K3 states with the best (lowest) close-and-fast score, so
+    # overshoot-prone states near the goal (more likely to trip an unintended SHORTCUT win)
+    # are favored over merely-close, slow/settled states.
+    sub_score = _prox_score(arch_feats[K1 + K2:K])
+    sub_dist_valid = arch_valid[K1 + K2:K]
+    masked_score = jnp.where(sub_dist_valid, sub_score, jnp.inf)
+    worst_dist_idx = jnp.argmax(masked_score)
+    worst_dist_val = masked_score[worst_dist_idx]
+    cur_score = _prox_score(feats)
+    dist_beats = (cur_score < worst_dist_val) & live
+    dist_slot = K1 + K2 + worst_dist_idx
+    use_speed = speed_beats & ~is_new_cell
+    use_dist = dist_beats & ~is_new_cell & ~use_speed
+    do = is_new_cell | use_speed | use_dist
+    slot = jnp.where(is_new_cell, cov_slot, jnp.where(use_speed, speed_slot, dist_slot))
+    cell_slot = mem["cell_slot"].at[jnp.where(is_new_cell, cell, 0)].set(
+        jnp.where(is_new_cell, cov_slot, mem["cell_slot"][0]))
+    return do, slot, {**mem, "cell_slot": cell_slot, "next_free": (mem["next_free"] + is_new_cell.sum()) % K1}
+# EVOLVE-BLOCK-END
+def run_experiment(**kwargs):
+    """Called by the evaluation harness; returns the search-split fitness. Do not edit."""
+    import sys, os
+    sys.path.insert(0, os.environ.get("AUTODEV_ROOT", os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    from autodev.search_eval import evaluate_hooks
+    return evaluate_hooks(init, restore, act, archive, **kwargs)

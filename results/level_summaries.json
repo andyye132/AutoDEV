@@ -1,0 +1,681 @@
+{
+ "s_h1_thrust_over_ball": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 2,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "s_h2_one_wheel_car": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": false,
+  "n_live_hazards": 0,
+  "n_dyn": 3
+ },
+ "s_h4_thrust_aim": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 2,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "s_h6_unicycle_right": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": false,
+  "n_live_hazards": 0,
+  "n_dyn": 3
+ },
+ "s_h7_unicycle_left": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": false,
+  "n_live_hazards": 0,
+  "n_dyn": 3
+ },
+ "s_h8_unicycle_balance": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 3
+ },
+ "m_arm_left": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_arm_right": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_arm_up": {
+  "classes": [
+   "ANOMALY",
+   "TUNNEL"
+  ],
+  "n_instances": 2,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h0_unicycle": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 3
+ },
+ "m_h10_thrust_right_easy": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h11_thrust_left_easy": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h12_thrustfall_left": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 2,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h15_thrustshoot": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h16_thrustcontrol_right": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h17_thrustcontrol_left": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h19_thrust_left_very_easy": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h1_car_left": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 2,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 5
+ },
+ "m_h2_car_right": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 2,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 5
+ },
+ "m_h3_car_thrust": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 2,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h4_thrust_the_needle": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "m_h9_spin_the_right_way": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 3,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_car_launch": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 3,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_car_swing_around": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 5,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 2,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 7
+ },
+ "l_chain_thrust": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED",
+   "TUNNEL"
+  ],
+  "n_instances": 3,
+  "actuation": "thrust",
+  "thrust_to_weight": 3.67,
+  "n_motor": 0,
+  "agent_jointed": false,
+  "n_live_hazards": 1,
+  "n_dyn": 6
+ },
+ "l_grasp_hard": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 6,
+  "agent_jointed": false,
+  "n_live_hazards": 1,
+  "n_dyn": 7
+ },
+ "l_h0_angrybirds": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": false,
+  "n_live_hazards": 0,
+  "n_dyn": 5
+ },
+ "l_h11_obstacle_avoidance": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 3,
+  "actuation": "thrust",
+  "thrust_to_weight": 0.36,
+  "n_motor": 0,
+  "agent_jointed": false,
+  "n_live_hazards": 3,
+  "n_dyn": 1
+ },
+ "l_h15_swing_up": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": true,
+  "n_live_hazards": 0,
+  "n_dyn": 3
+ },
+ "l_h16_thruster_goal": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": "thrust",
+  "thrust_to_weight": 0.54,
+  "n_motor": 0,
+  "agent_jointed": false,
+  "n_live_hazards": 1,
+  "n_dyn": 1
+ },
+ "l_h17_unicycle": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 1,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 3
+ },
+ "l_h1_car_left": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_h3_car_right": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_h4_cartpole": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 3,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 2,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 5
+ },
+ "l_h5_flappy_bird": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 3,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_h7_maze_1": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 3,
+  "actuation": "thrust",
+  "thrust_to_weight": 1.02,
+  "n_motor": 0,
+  "agent_jointed": false,
+  "n_live_hazards": 3,
+  "n_dyn": 1
+ },
+ "l_h8_maze_2": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 3,
+  "actuation": "thrust",
+  "thrust_to_weight": 0.49,
+  "n_motor": 0,
+  "agent_jointed": false,
+  "n_live_hazards": 5,
+  "n_dyn": 1
+ },
+ "l_h9_morph_direction": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 4,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_hard_beam_balance": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_hard_cartpole_thrust": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 3,
+  "actuation": "thrust",
+  "thrust_to_weight": 1.67,
+  "n_motor": 0,
+  "agent_jointed": true,
+  "n_live_hazards": 3,
+  "n_dyn": 2
+ },
+ "l_hard_cartpole_wheels": {
+  "classes": [
+   "ANOMALY",
+   "DISARMED"
+  ],
+  "n_instances": 3,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 2,
+  "agent_jointed": true,
+  "n_live_hazards": 3,
+  "n_dyn": 4
+ },
+ "l_hard_lunar_lander": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_hard_pinball": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 5,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_lever_puzzle": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT",
+   "TUNNEL"
+  ],
+  "n_instances": 5,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_mjc_half_cheetah": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 4,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 7
+ },
+ "l_mjc_half_cheetah_easy": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 4,
+  "agent_jointed": true,
+  "n_live_hazards": 0,
+  "n_dyn": 7
+ },
+ "l_mjc_hopper": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 3,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 4
+ },
+ "l_mjc_hopper_easy": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 2,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 3,
+  "agent_jointed": true,
+  "n_live_hazards": 0,
+  "n_dyn": 4
+ },
+ "l_mjc_swimmer": {
+  "classes": [
+   "ANOMALY"
+  ],
+  "n_instances": 1,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ },
+ "l_mjc_walker": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 3,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 4,
+  "agent_jointed": true,
+  "n_live_hazards": 1,
+  "n_dyn": 7
+ },
+ "l_mjc_walker_easy": {
+  "classes": [
+   "ANOMALY",
+   "SHORTCUT"
+  ],
+  "n_instances": 3,
+  "actuation": "motor",
+  "thrust_to_weight": 0.0,
+  "n_motor": 4,
+  "agent_jointed": true,
+  "n_live_hazards": 0,
+  "n_dyn": 7
+ },
+ "l_rail": {
+  "classes": [
+   "ANOMALY",
+   "TUNNEL"
+  ],
+  "n_instances": 3,
+  "actuation": null,
+  "thrust_to_weight": null,
+  "n_motor": null,
+  "agent_jointed": null,
+  "n_live_hazards": null,
+  "n_dyn": null
+ }
+}

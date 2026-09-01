@@ -1,0 +1,170 @@
+{
+"l_car_launch__ANOMALY__0": {
+"s": 0.9746,
+"t_protocol": 3328.0
+},
+"l_car_swing_around__SHORTCUT__0": {
+"s": 0.9242,
+"t_protocol": 9932.8
+},
+"l_car_swing_around__TUNNEL__0": {
+"s": 0.9641,
+"t_protocol": 4710.4
+},
+"l_chain_thrust__ANOMALY__0": {
+"s": 0.0,
+"t_protocol": 225280.0
+},
+"l_chain_thrust__DISARMED__0": {
+"s": 0.9596,
+"t_protocol": 5299.2
+},
+"l_chain_thrust__TUNNEL__0": {
+"s": 0.9873,
+"t_protocol": 1664.0
+},
+"l_grasp_hard__TUNNEL__0": {
+"s": 0.0,
+"t_protocol": 187008.0
+},
+"l_h0_angrybirds__SHORTCUT__0": {
+"s": 0.05,
+"t_protocol": null
+},
+"l_h0_angrybirds__SHORTCUT__1": {
+"s": 0.05,
+"t_protocol": null
+},
+"l_h0_angrybirds__TUNNEL__0": {
+"s": 0.9713,
+"t_protocol": 3763.2
+},
+"l_h4_cartpole__ANOMALY__0": {
+"s": 0.0,
+"t_protocol": 236185.6
+},
+"l_h5_flappy_bird__DISARMED__0": {
+"s": 0.8092,
+"t_protocol": 25011.2
+},
+"l_h5_flappy_bird__DISARMED__1": {
+"s": 0.9521,
+"t_protocol": 6272.0
+},
+"l_h7_maze_1__ANOMALY__0": {
+"s": 0.4254,
+"t_protocol": 75315.2
+},
+"l_h7_maze_1__DISARMED__1": {
+"s": 0.9209,
+"t_protocol": 10368.0
+},
+"l_h9_morph_direction__ANOMALY__0": {
+"s": 0.9615,
+"t_protocol": 5043.2
+},
+"l_h9_morph_direction__SHORTCUT__0": {
+"s": 0.9082,
+"t_protocol": 12032.0
+},
+"l_h9_morph_direction__TUNNEL__1": {
+"s": 0.8861,
+"t_protocol": 14924.8
+},
+"l_hard_beam_balance__ANOMALY__0": {
+"s": 0.9736,
+"t_protocol": 3456.0
+},
+"l_hard_cartpole_thrust__DISARMED__0": {
+"s": 0.8271,
+"t_protocol": 22656.0
+},
+"l_hard_cartpole_thrust__DISARMED__1": {
+"s": 0.9473,
+"t_protocol": 6912.0
+},
+"l_hard_cartpole_wheels__DISARMED__1": {
+"s": 0.9051,
+"t_protocol": 12441.6
+},
+"l_hard_pinball__SHORTCUT__0": {
+"s": 0.9752,
+"t_protocol": 3251.2
+},
+"l_hard_pinball__SHORTCUT__1": {
+"s": 0.9754,
+"t_protocol": 3225.6
+},
+"l_hard_pinball__TUNNEL__0": {
+"s": 0.9732,
+"t_protocol": 3507.2
+},
+"l_hard_pinball__TUNNEL__1": {
+"s": 0.9682,
+"t_protocol": 4172.8
+},
+"l_lever_puzzle__ANOMALY__0": {
+"s": 0.9541,
+"t_protocol": 6016.0
+},
+"l_lever_puzzle__SHORTCUT__0": {
+"s": 0.5945,
+"t_protocol": 53145.6
+},
+"l_lever_puzzle__SHORTCUT__1": {
+"s": 0.9729,
+"t_protocol": 3558.4
+},
+"l_mjc_hopper_easy__ANOMALY__0": {
+"s": 0.9586,
+"t_protocol": 5427.2
+},
+"m_arm_left__DISARMED__0": {
+"s": 0.9676,
+"t_protocol": 4249.6
+},
+"m_arm_right__ANOMALY__0": {
+"s": 0.9408,
+"t_protocol": 7756.8
+},
+"m_arm_up__ANOMALY__0": {
+"s": 0.9682,
+"t_protocol": 4172.8
+},
+"m_h16_thrustcontrol_right__DISARMED__0": {
+"s": 0.9668,
+"t_protocol": 4352.0
+},
+"m_h16_thrustcontrol_right__TUNNEL__0": {
+"s": 0.9811,
+"t_protocol": 2483.2
+},
+"m_h17_thrustcontrol_left__ANOMALY__0": {
+"s": 0.9639,
+"t_protocol": 4736.0
+},
+"m_h17_thrustcontrol_left__TUNNEL__0": {
+"s": 0.9713,
+"t_protocol": 3763.2
+},
+"m_h1_car_left__DISARMED__0": {
+"s": 0.9598,
+"t_protocol": 5273.6
+},
+"m_h3_car_thrust__DISARMED__0": {
+"s": 0.9795,
+"t_protocol": 2688.0
+},
+"m_h9_spin_the_right_way__TUNNEL__0": {
+"s": 0.9863,
+"t_protocol": 1792.0
+},
+"s_h1_thrust_over_ball__DISARMED__0": {
+"s": 0.9805,
+"t_protocol": 2560.0
+},
+"s_h2_one_wheel_car__ANOMALY__0": {
+"s": 0.8955,
+"t_protocol": 13696.0
+}
+}

@@ -1,0 +1,23 @@
+{
+ "program": "runs/evolve_overnight/candidates/cand1_gen037_0.6994.py",
+ "base": 0.32945165094339623,
+ "results": [
+  {
+   "trial": 0,
+   "perturb": {},
+   "score": 0.32945165094339623,
+   "detected": 0.5094339622641509
+  },
+  {
+   "trial": 1,
+   "perturb": {
+    "MAX_SHORT": 5,
+    "MAX_MED": 22,
+    "MAX_PUMP": 21,
+    "NM": 4
+   },
+   "score": 0.34537146226415094,
+   "detected": 0.5094339622641509
+  }
+ ]
+}
