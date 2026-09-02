@@ -89,9 +89,12 @@ the LLM contributes real algorithmic content, and it generalizes across engines.
   no gain from 4×), only **ties** on FourRooms (0.83 vs 0.87), and **overtakes only on the reward-dense K-Goal** (crossing at 4×). So on the sparse-reward exploration tasks, RL does not
   catch up even with an order of magnitude more budget; on reward-dense tasks (K-Goal, Craftax) it does. The claim is
   strictly *equal-budget*, reported honestly — and the equal-budget win is not an artifact of under-training RL.
-- **PPO fairness.** PPO uses the SAME `feat_fn` observation the testers see (no observation handicap), best-of-5 intrinsic
-  objectives, 3 seeds. A wider hyperparameter sweep is the one remaining lever a reviewer could ask for; the budget
-  curves are the stronger defense (if the LLM tester still wins at 16×, tuning is moot).
+- **PPO fairness — tuned, not just default (LR × entropy sweep run).** The default PPO (entropy 0.01) was under-tuned; a
+  9+-config sweep on the two hardest tasks shows entropy is the key lever. **Best tuned PPO: DoorKey 0.83 (default 0.28),
+  Breakout 0.43 (default 0.33) — still below the LLM tester (1.00 on both).** Why PPO caps out: high entropy drives the
+  policy toward random, and random already gets 0.77 on DoorKey, so tuned PPO ≈ "random + a little intrinsic reward,"
+  which the LLM tester's structured save/restore exploration beats. So even a *tuned* PPO loses at equal budget — the win
+  is not an artifact of under-training. (Headline table is being re-run with the frozen tuned config across all tasks.)
 - **Some tasks are near-saturated for good testers** (MountainCar, Breakout at threshold 3), so the ceiling is 1.00; the
   discrimination is real on DoorKey/FourRooms/Sokoban where scores spread widely.
 

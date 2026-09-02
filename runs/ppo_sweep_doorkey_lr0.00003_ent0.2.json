@@ -46,5 +46,53 @@
     "MiniGrid-DoorKey-8x8__seed5"
    ]
   }
+ },
+ "ppo_curiosity_proximity": {
+  "search": {
+   "score": 0.2676866319444444,
+   "detected": 0.7777777777777778,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     103040.0,
+     55936.0,
+     65984.0
+    ],
+    [
+     131072.0,
+     120320.0,
+     59648.0
+    ],
+    [
+     89920.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     112000.0,
+     65664.0,
+     62464.0
+    ],
+    [
+     98176.0,
+     116480.0,
+     113984.0
+    ],
+    [
+     131072.0,
+     64640.0,
+     75200.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
  }
 }
