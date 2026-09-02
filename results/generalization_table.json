@@ -1,0 +1,52 @@
+[
+ {
+  "task": "MiniGrid DoorKey",
+  "family": "grid nav + subgoal",
+  "random": 0.7666666666666667,
+  "action_repeat": 0.3333333333333333,
+  "ppo_best": 0.2777777777777778,
+  "ppo_who": "ppo_icm",
+  "llm_best": 1.0,
+  "llm_who": "run7_best_gen035_0.5888.py"
+ },
+ {
+  "task": "MiniGrid FourRooms",
+  "family": "grid navigation",
+  "random": 0.26666666666666666,
+  "action_repeat": 0.4,
+  "ppo_best": 0.3888888888888889,
+  "ppo_who": "ppo_count",
+  "llm_best": 0.8666666666666666,
+  "llm_who": "run7_best_gen035_0.5888.py"
+ },
+ {
+  "task": "MinAtar Breakout",
+  "family": "arcade",
+  "random": 0.3333333333333333,
+  "action_repeat": 0.3333333333333333,
+  "ppo_best": 0.3333333333333333,
+  "ppo_who": "ppo_curiosity_proximity",
+  "llm_best": 1.0,
+  "llm_who": "run7_best_gen035_0.5888.py"
+ },
+ {
+  "task": "Jumanji Sokoban",
+  "family": "puzzle / planning",
+  "random": 0.6555555555555556,
+  "action_repeat": 0.5555555555555556,
+  "ppo_best": 0.2777777777777778,
+  "ppo_who": "ppo_count",
+  "llm_best": 0.788888888888889,
+  "llm_who": "run7_best_gen035_0.5888.py"
+ },
+ {
+  "task": "Gymnax MountainCar",
+  "family": "continuous control",
+  "random": 0.0,
+  "action_repeat": 1.0,
+  "ppo_best": 0.6111111111111112,
+  "ppo_who": "ppo_curiosity_proximity",
+  "llm_best": 1.0,
+  "llm_who": "split_pump.py"
+ }
+]

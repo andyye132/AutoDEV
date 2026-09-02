@@ -1,0 +1,352 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.18069118923611116,
+   "detected": 0.3888888888888889,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     124800.0,
+     131072.0,
+     38336.0
+    ],
+    [
+     31936.0,
+     75456.0,
+     111488.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     92224.0,
+     131072.0,
+     16960.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.40877278645833337,
+   "detected": 0.5,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     5568.0,
+     131072.0,
+     3776.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     62400.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed6",
+    "MiniGrid-FourRooms__seed7"
+   ]
+  }
+ },
+ "ppo_rnd": {
+  "search": {
+   "score": 0.11203342013888884,
+   "detected": 0.2222222222222222,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     131072.0,
+     131072.0,
+     24320.0
+    ],
+    [
+     131072.0,
+     98688.0,
+     126272.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     10688.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.32218424479166663,
+   "detected": 0.3333333333333333,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     4992.0,
+     131072.0,
+     3776.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed6",
+    "MiniGrid-FourRooms__seed7"
+   ]
+  }
+ },
+ "ppo_icm": {
+  "search": {
+   "score": 0.06689453125,
+   "detected": 0.16666666666666666,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     99904.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     10688.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     124800.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.32218424479166663,
+   "detected": 0.3333333333333333,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     4992.0,
+     131072.0,
+     3776.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed6",
+    "MiniGrid-FourRooms__seed7"
+   ]
+  }
+ },
+ "ppo_curiosity_proximity": {
+  "search": {
+   "score": 0.18069118923611116,
+   "detected": 0.3888888888888889,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     124800.0,
+     131072.0,
+     38336.0
+    ],
+    [
+     31936.0,
+     75456.0,
+     111488.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     92224.0,
+     131072.0,
+     16960.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.40877278645833337,
+   "detected": 0.5,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     5568.0,
+     131072.0,
+     3776.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     62400.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed6",
+    "MiniGrid-FourRooms__seed7"
+   ]
+  }
+ },
+ "ppo_task": {
+  "search": {
+   "score": 0.16867404513888884,
+   "detected": 0.2777777777777778,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     131072.0,
+     131072.0,
+     38336.0
+    ],
+    [
+     50304.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     95488.0,
+     49216.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     24064.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.32194010416666663,
+   "detected": 0.3333333333333333,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     5184.0,
+     131072.0,
+     3776.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed6",
+    "MiniGrid-FourRooms__seed7"
+   ]
+  }
+ }
+}
