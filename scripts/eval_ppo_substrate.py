@@ -23,6 +23,8 @@ ap.add_argument("--num_envs", type=int, default=128)
 ap.add_argument("--rollout", type=int, default=64)
 ap.add_argument("--num_updates", type=int, default=32)   # 32=1x (262144 steps); 128=4x; 512=16x
 ap.add_argument("--chunk", type=int, default=16)
+ap.add_argument("--lr", type=float, default=3e-4)
+ap.add_argument("--ent_coef", type=float, default=0.01)
 ap.add_argument("--out", required=True)
 a = ap.parse_args()
 
@@ -44,7 +46,7 @@ print(f"substrate={a.substrate} feat_dim={feat_dim} n_act={SUB.env.action_space(
 res = {}
 for name in a.objectives.split(","):
     ext = 1.0 if name == "zero" else 0.0; intc = 0.0 if name == "zero" else 1.0
-    cfg = PPOConfig(num_envs=a.num_envs, rollout=a.rollout, num_updates=a.num_updates, ext_coef=ext, int_coef=intc)
+    cfg = PPOConfig(num_envs=a.num_envs, rollout=a.rollout, num_updates=a.num_updates, ext_coef=ext, int_coef=intc, lr=a.lr, ent_coef=a.ent_coef)
     train = jax.jit(jax.vmap(make_train_substrate(SUB.env, SUB.ep, SUB.oracle, BASELINES[name](), SUB.feat_fn, feat_dim, cfg)))
     label = "ppo_task" if name == "zero" else f"ppo_{name}"
     res[label] = {}
