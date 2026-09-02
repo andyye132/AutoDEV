@@ -1,0 +1,5 @@
+[
+  {"name": "split_pump", "path": "evolve/methods/split_pump.py", "score_racy": 0.7827, "score_fixed": 0.6130},
+  {"name": "macrosweep", "path": "evolve/proposals/macrosweep.py", "score_racy": 0.6937, "score_fixed": 0.6937},
+  {"name": "go_explore", "path": "evolve/initial.py", "score_racy": 0.5908, "score_fixed": 0.5908}
+]
