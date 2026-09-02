@@ -87,3 +87,16 @@ This is the answer to "you're too narrow." The equal-budget/cost win — the use
 Kinetix curiosity; it is **a property of target-reaching RL testing in general**: at a fixed interaction budget, LLM-
 written exploration programs beat trained RL across six structurally distinct engines, and RL often trails even random.
 Part 1 leads with this table; the Kinetix planted-defect benchmark becomes the deep-dive substrate, not the whole story.
+
+## Fresh per-task evolution: weaker than transfer (an honest secondary result)
+
+We also tested the literal "LLM writes a fresh tester per task" framing: an 18-generation evolution seeded from the generic
+Go-Explore program, scored only on DoorKey, with a DoorKey-specific prompt (`evolve/task_doorkey.txt`). The champion,
+evaluated on the tester protocol (eval seeds 100–104), reaches **detected 0.33 on DoorKey** — it **beats PPO (0.28) and
+plain Go-Explore (0.10)** at equal budget, but **loses to random (0.77) and is far below the multi-engine transfer program
+`run7` (1.00).**
+
+**Lesson (this reinforces the headline):** a short single-task search does not discover a strong explorer; the dramatic
+generalization comes from **one program evolved on a multi-engine fitness that then transfers**. So the paper's claim is
+"evolve a multi-engine tester once and transfer it," not "evolve a fresh tester per task" — the transfer program is 3× the
+fresh per-task program on DoorKey. (A longer per-task search might close the gap; not worth the compute given transfer wins.)

@@ -1,0 +1,7 @@
+{
+ "best_upto_gen017.py": {
+  "search": {
+   "error": "Traceback (most recent call last):\n  File \"/Users/andy132/projects/research/ACT/AutoDev/scripts/eval_baselines.py\", line 52, in <module>\n    r = evaluate_with_restarts(hooks, sp, seeds, a.restarts) if a.restarts > 1 else evaluate_hooks(*hooks, which=sp, size=a.size, seeds=seeds, workers=a.workers, steps=a.steps, slots=a.slots, chunk=a.chunk, substrate=SUB, log=None)\n                                                                                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/andy132/projects/research/ACT/AutoDev/autodev/search_eval.py\", line 52, in evaluate_hooks\n    levels, metas, info = substrate.tasks(split_path, which)\n                          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"/Users/andy132/projects/research/ACT/AutoDev/autodev/substrate.py\", line 104, in tasks\n    sp = json.load(open(split_path)); rows = [r for r in sp[which] if r.get(\"env\", self.env_name) == self.env_name]\n                                                                      ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n"
+  }
+ }
+}
