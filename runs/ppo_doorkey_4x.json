@@ -1,0 +1,146 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.3248833550347222,
+   "detected": 0.5,
+   "n": 6,
+   "budget": 524288,
+   "first_hit": [
+    [
+     281344.0,
+     57024.0,
+     28928.0
+    ],
+    [
+     226368.0,
+     262528.0,
+     524288.0
+    ],
+    [
+     199552.0,
+     524288.0,
+     524288.0
+    ],
+    [
+     524288.0,
+     264512.0,
+     524288.0
+    ],
+    [
+     524288.0,
+     524288.0,
+     251648.0
+    ],
+    [
+     524288.0,
+     80704.0,
+     524288.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ },
+ "ppo_icm": {
+  "search": {
+   "score": 0.37544759114583337,
+   "detected": 0.5555555555555556,
+   "n": 6,
+   "budget": 524288,
+   "first_hit": [
+    [
+     109440.0,
+     524288.0,
+     30016.0
+    ],
+    [
+     380928.0,
+     212096.0,
+     524288.0
+    ],
+    [
+     193600.0,
+     524288.0,
+     524288.0
+    ],
+    [
+     524288.0,
+     121216.0,
+     120896.0
+    ],
+    [
+     524288.0,
+     524288.0,
+     524288.0
+    ],
+    [
+     145088.0,
+     284224.0,
+     102208.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ },
+ "ppo_curiosity_proximity": {
+  "search": {
+   "score": 0.3248833550347222,
+   "detected": 0.5,
+   "n": 6,
+   "budget": 524288,
+   "first_hit": [
+    [
+     281344.0,
+     57024.0,
+     28928.0
+    ],
+    [
+     226368.0,
+     262528.0,
+     524288.0
+    ],
+    [
+     199552.0,
+     524288.0,
+     524288.0
+    ],
+    [
+     524288.0,
+     264512.0,
+     524288.0
+    ],
+    [
+     524288.0,
+     524288.0,
+     251648.0
+    ],
+    [
+     524288.0,
+     80704.0,
+     524288.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ }
+}

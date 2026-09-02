@@ -71,10 +71,19 @@ the LLM contributes real algorithmic content, and it generalizes across engines.
   difference — a smarter exploration procedure vs a learned policy — and it is the same comparison the Kinetix result
   already makes. But it must be stated: the win is "archive-based exploration program > learned policy at equal budget,"
   not "same-class method A > B."
-- **Budget crossover (measured on K-Goal).** On Kinetix K-Goal the crossover is between 1× and 4×: LLM 0.673 vs PPO 0.558
-  at 1× (262k), but PPO **0.718 > LLM 0.673 at 4×** (1.05M) and 0.76 at 16×. So the claim is strictly *equal-budget*; RL
-  wins with 4–16× more interaction. The per-task 4×/16× curves for the five substrate tasks (`runs/ppo_*_{4x,16x}.json`,
-  running now) will show where each crosses — reported honestly, not hidden.
+- **Budget crossover (measured).** PPO improves with more budget but the crossover point is task-dependent, and at 4× it
+  is **still behind the LLM tester (which stays at 1×) on the substrate tasks**:
+
+  | task | LLM (1×) | PPO 1× | PPO 4× | PPO 16× |
+  |---|---|---|---|---|
+  | DoorKey | 1.00 | 0.28 | 0.56 | _running_ |
+  | FourRooms | 0.87 | 0.39 | 0.67 | _running_ |
+  | Breakout | 1.00 | 0.33 | 0.61 | _running_ |
+  | K-Goal | 0.67 | 0.56 | **0.72** | 0.76 |
+
+  So on K-Goal PPO overtakes at 4×; on DoorKey/FourRooms/Breakout it is still behind even at 4× (its budget curve is
+  climbing — the 16× points will show if/where it crosses). The claim is strictly *equal-budget*; we report the crossover
+  honestly rather than hiding it. Either way, **at the budget a tester actually gets, the zero-training LLM program wins.**
 - **PPO fairness.** PPO uses the SAME `feat_fn` observation the testers see (no observation handicap), best-of-5 intrinsic
   objectives, 3 seeds. A wider hyperparameter sweep is the one remaining lever a reviewer could ask for; the budget
   curves are the stronger defense (if the LLM tester still wins at 16×, tuning is moot).
