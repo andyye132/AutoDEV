@@ -1,6 +1,32 @@
 # AutoDev — Handoff / Full Context (for a fresh Claude session)
 
-_Last updated: 2026-09-01, ~19:30 PT. This is the single doc a new session should read first. Also read `CLAUDE.md` (rules), `PROJECT.md` (claims ledger), and `LOG.md` (timestamped decision ledger)._
+_Last updated: 2026-09-02, ~5 AM PT. This is the single doc a new session should read first. Also read `CLAUDE.md` (rules), `PROJECT.md` (claims ledger), and `LOG.md` (timestamped decision ledger)._
+
+---
+
+## ★ LATEST (Sep 2, overnight) — the new lead result; read `results/RESULTS_GENERALIZATION.md`
+
+**The framing pivoted (Andy's call) from the evaluator-fraud/steering-wheel thesis to the equal-budget win, made GENERAL** —
+because Andy judged the fraud angle "too narrow, not for RL testing." The decisive new result:
+
+**At an equal interaction budget, a zero-training LLM-written tester beats trained PPO at reaching target states on 7 of 8
+structurally different RL tasks (ties on the 8th, Craftax).** DoorKey 1.00/0.28, FourRooms 0.87/0.39, Breakout 1.00/0.33,
+Sokoban 0.79/0.28, MountainCar 1.00/0.61, DeepSea-24 1.00/0.78, K-Goal 0.67/0.56, Craftax 0.35/0.34 (tie). Built substrate-
+generic PPO (`autodev/ppo.py::make_train_substrate`, `scripts/eval_ppo_substrate.py`) — the existing PPO was Kinetix-only.
+Ran entirely on CPU (Hyak Duo dropped ~1 AM; nothing blocked). Defenses proven: (1) beats plain Go-Explore 5/6 (DoorKey 1.0
+vs 0.10) → it's the LLM's discovered strategy, not just save/restore; (2) even at **16× budget** PPO still loses on
+DoorKey (0.72) + Breakout (0.52) → kills "under-trained PPO"; (3) genuine held-out transfer (run7 evolved on multi-engine
+fitness, never saw MiniGrid/MinAtar/Sokoban). Honest boundary: reward-dense tasks (Craftax, K-Goal) let RL catch up; sparse-
+reward exploration it doesn't. Fresh-per-task evolution (0.33 DoorKey) is weaker than transfer → "evolve multi-engine once
+& transfer," not per-task. Artifacts: `results/RESULTS_GENERALIZATION.md`, `figures/generalization.png`, `results/generalization_table.json`, `scripts/make_generalization_table.py`, `scripts/fig_generalization.py`.
+
+**Recommended reframe:** Part 1 leads with the 8-task equal-budget table (Andy's favorite claim, now general); Kinetix's
+planted-defect benchmark becomes the deep substrate; the exploit/replay incident (see §6/§8) becomes Part 2's verification
+narrative. Also note: the earlier "exploit reproduces N=3 / +0.17" was WITHDRAWN (split-mismatch artifact) — the real exploit
+is N=1, +0.11 same-config (`results/RESULTS_EXPLOIT.md`).
+
+**Open next steps (Andy to steer):** lock the framing & start the Part-1 draft; optionally a 5-seed clean PPO table (currently
+3 seeds) and a hyperparameter-swept PPO to fully close the fairness question; re-auth Hyak for any GPU scale-up. `results/REALITY_CHECK.md` + the artifact hold the full reality check + 48h plan.
 
 ---
 
