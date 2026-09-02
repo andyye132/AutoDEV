@@ -1,5 +1,6 @@
 [
-  {"name": "split_pump", "path": "evolve/methods/split_pump.py", "score_racy": 0.7827, "score_fixed": 0.6130},
+  {"name": "cand1_gen037_EXPLOITER", "path": "runs/evolve_overnight/candidates/cand1_gen037_0.6994.py", "score_racy": 0.578, "score_fixed": 0.468},
+  {"name": "split_pump", "path": "evolve/methods/split_pump.py", "score_racy": 0.7827, "score_fixed": 0.7817},
   {"name": "macrosweep", "path": "evolve/proposals/macrosweep.py", "score_racy": 0.6937, "score_fixed": 0.6937},
   {"name": "go_explore", "path": "evolve/initial.py", "score_racy": 0.5908, "score_fixed": 0.5908}
 ]
