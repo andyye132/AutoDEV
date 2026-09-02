@@ -11,7 +11,10 @@
 # PPO+intrinsic RL testers on a substrate at matched budget.
 #   env: SUBSTRATE=..., SPLIT=..., WHICH=search,heldout_levels_instances, OBJ=count,rnd,icm,curiosity_proximity,zero,
 #        SEEDS=100,101,102, NUP=32 (1x; 128=4x; 512=16x), NENV=128, ROLL=64, CHUNK=16, OUT=runs/ppo_<task>.json
-source /gscratch/raivn/andy132/AutoDev/scripts/slurm/_common.sh
+cd /gscratch/raivn/andy132/AutoDev
+source /mmfs1/home/andy132/miniconda3/etc/profile.d/conda.sh
+conda activate /mmfs1/gscratch/raivn/andy132/conda_envs/autodev_multi
+export JAX_PLATFORMS=cuda
 SEEDS_="${SEEDS:-100,101,102}"; SEEDS_="${SEEDS_//:/,}"
 python scripts/eval_ppo_substrate.py --substrate "$SUBSTRATE" --split "$SPLIT" --which "${WHICH:-search,heldout_levels_instances}" \
   --objectives "${OBJ:-count,rnd,icm,curiosity_proximity,zero}" --seeds "$SEEDS_" \
