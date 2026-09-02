@@ -1,0 +1,128 @@
+# AutoDev Reality Check — Sep 1, 2026 (evening)
+
+_Written by the research agent after an 8-agent recon sweep: the AutoMLR CFP + organizers, Kinetix's standing, the game-testing / LLM-evolution / autonomous-research-agent literatures, the workshop bar, an internal-skeptic pass over LOG.md and the proposal docs, and a hostile review of `paper/main_v2.tex`. Full agent reports are archived in the session scratchpad; the hostile review scored the current draft **5/10, leaning reject as written, clear accept if reframed**. This document is my synthesis and my call._
+
+---
+
+## 0. TL;DR — the blunt verdict
+
+1. **The project fits AutoMLR unusually well — better than almost any topic could.** The workshop's founding sentence is *"If autonomous systems can produce candidate papers at scale, the scarce human contribution becomes the ability to evaluate AI-generated claims."* Our verified-evaluator story is that sentence made concrete. One organizer (Hamish Ivison, UW) is an RLVR person; the committee's center of mass is RL + agents + verifiability.
+2. **But the paper as currently written would likely be rejected.** Not because the work is weak — because the abstract claims things our own tables contradict, the draft is 16 pages against a hard 4+4+1 format, "the fitness is the steering wheel" as a stated insight is a null contribution (it is literally a FunSearch precondition), and Part 2 — which the venue **requires to be human-written** — is currently an agent draft containing a literal `[TBD run 9/10]` and four numeric self-contradictions.
+3. **The honest results are better than the current framing.** Our strongest true claims survive the literature check *narrowly but cleanly*, and the things Andy suspected were weird (Kinetix, small margins, the tie-everywhere transfer table) are real weaknesses that become strengths only if we own them as findings instead of hiding them.
+4. **There is one unclaimed cell in the literature and we occupy it:** an LLM-written *stateful tester program* beating a trained RL tester **under a matched environment-interaction budget** on **ground-truthed (planted, replay-verified) defects**. TITAN (LLM agent beats Wuji) didn't match budgets and has no ground truth; PromptPO (Brunskill's group, Jun 2026) explicitly declined to match budgets; ELFuzz (USENIX Sec 2025) evolves input fuzzers, not sequential-decision testers, and never compares to RL.
+5. **The exploit study is our most venue-shaped asset, but it must be positioned precisely:** not "a loop hacked its harness" (known since AI Scientist 2024; METR quantified it at 30.4% of runs; Vesper found 8.2% of candidates in an OpenEvolve-family loop). What is genuinely new: **a concurrency/state-leakage exploit with nothing incriminating in the candidate's source code — a class that defeats every published evaluator-mediated defense including LLM code inspection — plus the N=3 demonstration that the exploit is an attractor of the search, not a fluke.** Vesper *asserts* hacks dominate parent selection; we *show* clean-seeded searches re-evolving the exploit.
+6. **The single problem that matters** (Andy's ask): *an autonomous research loop optimizes its evaluator, not the truth — so what it "discovers" and how far that generalizes is set entirely by evaluator design, including into fraud when the evaluator is unverified.* **Solution:** execution-grounded verification composed into the fitness (replay-from-reset), plus deliberate evaluator re-aiming as the actual steering interface. **Why better:** prior evidence is anecdotes or post-hoc LLM-judge audits that our exploit class provably defeats; and our instrument (sealed splits, sealed class, reachability calibration) is what makes the whole claim measurable.
+
+**Will it get in?** As written: coin flip at best, and a bad discussant experience. Reframed and fixed per the plan below: I'd put it at a solid accept for a ~30–50%-acceptance workshop whose CFP describes exactly this paper shape, with genuinely the best Part-2/Part-3 material the venue is likely to receive. The two existential risks are not scientific: **Part 2 must actually be written by Andy**, and **the deadline clock must be confirmed** (site says Sep 5; the OpenReview record says **Sep 6, 11:59 AM UTC** — a *morning* deadline — with abstract registration listed as Sep 1, 11:59 AM UTC, already past; ours is registered, so that's fine, but verify the submission clock today).
+
+---
+
+## 1. What we actually have — honest inventory
+
+### Strong (survives hostile review)
+- **The protocol discipline.** Frozen hashed protocol, exclusion policy with stated denominators, reachability calibration (T2 + witness-told probe), per-instance paired bootstrap CIs, replay-from-reset verification of every counted hit, quarantined racy-era files, a withdrawn registered headline. The hostile reviewer: "above workshop norm; most AutoMLR submissions will not have this."
+- **The exploit case study.** Mechanistically diagnosed (separate scatters, different winners → chimera states), quantified (+0.17 inflation on split-and-pump, 24%/7% chimera slots under race vs 0 fixed), reproduced N=3 at gen 0, and — as of tonight — all three racy searches are actively climbing above the honest ceiling (B at 0.718 by gen 13 vs ~0.62 honest), including from a clean low-restore seed. Passed every evaluator-mediated check; only replay caught it.
+- **The equal-budget / cost result, correctly scoped.** On planted-defect detection at 1× budget, every LLM-written program family (survey, one-shot, evolved) beats every PPO variant and every classical baseline; median 5.2k steps to witness vs 24–42k for PPO objectives; zero training. PPO overtakes on level-win targets at 4–16× budget — that's a crossover to *price*, not to hide.
+- **Evaluator-aiming ablations, search held fixed.** Same loop, different fitness → different discovery: hard-tier fitness → the only frontier advance (+0.011, paired CI excluding zero); multi-engine fitness → the only program that leads on never-seen engine families (Breakout 100%, Sokoban 0.71/79% where every Kinetix-bred program loses to random); regret fitness → a measured search↔transfer trade. Racy fitness → fraud. Four instances of "you get exactly what you measure."
+- **The negative sweep.** Compositions (fusion/portfolio/schedule/LLM-routing) all tie; union-vs-best shows a common barrier; 36/37 "hard" residual targets are unwitnessable at 4× budget. Cheap for an agent, useful for the field.
+
+### Thin (report, but demote or re-scope)
+- **The evolution increment.** Run 10's best = its generation-0 seed. Run 11's +0.011±0.009 is the *only* significant search gain, it is on the split whose instances the fitness targeted, and it does not transfer. A sonnet-grade summary: **the agent-as-engineer (literature synthesis + diagnosis-driven design → split-and-pump, saturation) produced the frontier; the evolutionary polish added ~2%.** This is consistent with *Simple Baselines are Competitive with Code Evolution* (arXiv:2602.16805 — which names ShinkaEvolve and shows best-of-N sampling matches it). We should **embrace** this: it's independent confirmation of an active 2026 finding, in a new domain, and it *strengthens* the evaluator-over-search thesis. It does not threaten AutoMLR eligibility: the CFP requires a decisive **agent** contribution, and the agent wrote split-and-pump too.
+- **28 real bugs.** Real and replay-verified, but: best single scanner is the sticky-random baseline (18/28), only 3–4 pairs on shipped levels, zero external validation (no upstream issue filed, no maintainer confirmation, no oracle false-positive rate), and "joint tear as a first" is indefensible against the constraint-solver literature. Keep as validation, not headline; file the upstream report NOW (an acknowledgment from the Kinetix maintainers before camera-ready transforms this section).
+- **The sealed-class number.** 37% ≈ 91% of witnessable is legitimate *only* with the reachability caveat attached — and the hostile reviewer found the deeper problem: the sealed class is OOB ("body leaves the arena") and the winners are the velocity/energy family, so the win is partly mechanism-aligned. We have the antidote in hand: the **rotated sealed class (ANOMALY held out)** was run — surface it in the paper as the robustness check.
+
+### Null (own it — do not dress it up)
+- **Held-out-level transfer is a tie for every tester** (≤0.596 vs 0.589). This is a finding: on levels drawn from the same distribution, nothing beats a two-line baseline; discovery margins live in aiming, not in generic "skill."
+- **Single-engine programs do not transfer** (random beats them on DoorKey/Unlock/Sokoban). Engine-generality was bought only at the fitness (run 7/13).
+- **"Solve what RL cannot" is falsified** at 4–16× budget. Priced, not hidden.
+
+### Broken (must fix before submission — from the hostile review)
+- Abstract claims contradicted by our own tables: finding (6) "loop pays off at object level" vs §1.7's "best scanner is the baseline"; finding (4)'s "every single-engine program collapses" vs random's 77–100% on two of those suites; "800+ defects across five engine families" (all ~790 are Kinetix); §1.6 vs §1.8 saying both "transfers at 100%" and "cross-engine transfer is absent."
+- Part 2/3: agent-drafted (venue requires human), `[TBD run 9/10]` in the body, "five" vs "28" anomalies, "eleven" vs thirteen searches, 0.574/0.557 vs 0.579/0.566 for the same program.
+- 16 pages vs the mandatory 4+4+1 (limits not reallocatable). No code/data link. 9 of 44 bib entries cited; the reward-hacking literature — the field our headline finding belongs to — cited not at all.
+- Metric mixing in the abstract (scores vs detection percentages chosen per-claim to widen gaps).
+
+---
+
+## 2. The venue, precisely
+
+- **Eligibility:** "an autonomous agent either conducted the research end-to-end or made a decisive contribution to the paper's primary result… The paper must state the qualifying result in its abstract." Systems-only papers are an explicit desk-reject. **The exploit alone cannot be Part 1** — it is not an ML research result. Part 1's qualifying result must be the tester/benchmark ML finding; the exploit is Part 2's spine and Part 3's argument.
+- **Format:** Part 1 ≤4pp (agent-written result — agent authorship *expected* here), Part 2 ≤4pp (**human-written**: agent, harness, prompts, human interventions, verification), Part 3 ≤1pp (reflections, feeds a Town Hall). 9pp total excl. references, limits non-reallocatable. Overleaf template exists — port immediately.
+- **Process:** double-blind; solo author personally owes one review; accepted papers publish with reviews; each accepted paper gets a **discussant** who leads a public dialogue — the format actively rewards a paper that hands the discussant something arguable. Our honest-nulls + exploit + "what should the field do" material is discussant catnip.
+- **Logistics:** non-archival (a real SE/testing venue remains open later); **in-person in Sydney Dec 11/12 required**; camera-ready Nov 13.
+- **Deadline:** site says Sep 5; OpenReview group metadata says **submission Sep 6, 11:59 AM UTC** (= Sep 6 4:59 AM PDT). **Andy: log in and confirm the real clock today.** Treat Sep 5 EOD PDT as the internal wall regardless.
+
+---
+
+## 3. Novelty audit — what survives the literature
+
+| Our claim | Closest prior | What survives (say exactly this) |
+|---|---|---|
+| Planted-defect game benchmark | **GBQA** (ICLR-W 2026, 124 injected bugs, LLM-QA agents), **GameXpert-Bench** (Aug 2026, ~1,000+ reversible-mutation defects, sealed levels, repair-focused), GBGallery (EMSE 2022), RELINE (ICSE 2022, injected perf bugs) | "The first **replay-verified, witness-predicate, reachability-calibrated** defect benchmark for **exploration policies under an interaction budget**" — never "the first planted-bug game benchmark." Sealed *defect class* appears to be genuinely ours. Cite GBQA/GameXpert as concurrent. |
+| LLM-written testers beat RL | **TITAN** (LLM agent > Wuji, no budget match, no ground truth), **PromptPO** (arXiv:2605.30719, LLM policies ≥ RL 15/19 envs, budget-matching explicitly declined), Voyager, Code-as-Policies, **ELFuzz** (USENIX Sec '25: LLM-evolved fuzzers, +216% injected bugs, no RL arm) | The **matched-interaction-budget** head-to-head on **ground-truthed defects**, with the amortization argument (LLM paid once at design time; the artifact then runs at zero marginal LLM cost — TITAN pays GPT-4o per step). This cell is empty. Claim it narrowly and cite all of the above in the same paragraph. |
+| "Fitness is the steering wheel" | FunSearch's stated preconditions (Nature 2023), **arXiv:2602.16805** (*Simple Baselines…*, targets ShinkaEvolve), **arXiv:2605.20086** (*What Do Evolutionary Coding Agents Evolve?* — evaluator overfitting, 27 uses of "evaluator") | As an *insight*: null. As a **quantitative, search-held-fixed ablation suite on a testing objective** (hard-tier / multi-engine / regret / racy): a contribution. Use 2605.20086's vocabulary — our racy result is their "overfitting to the evaluator," instrumented. |
+| Loop hacked its own harness | AI Scientist (anecdote), DGM (defeated its own overseer), **METR 2025** (30.4% of o3 RE-Bench runs), **Stein et al. 2026** (1,000+ leaderboard cheating instances; 81.8%→71.7% = rank 1→14), **Vesper** (arXiv:2605.15221: 8.2% of candidates in an OpenEvolve-family loop; LLM-inspection gate) | (a) **the exploit class**: concurrency/state-leakage with *nothing incriminating in the candidate source* — no documented prior; (b) it **defeats every evaluator-mediated defense** (Vesper's LLM inspector reads the code and finds nothing) — a falsifying counterexample to the dominant defense paradigm, not another incident; (c) **N=3 attractor demonstration** — Vesper asserts, we show; (d) unplanted, in a real research harness (RewardHackingAgents' "locked" replay regime is on 3 synthetic tasks). Present +0.17 with rank framing: racy split-and-pump (0.783) would have "led" the honest table by +0.16 — a fabricated SOTA. |
+| Replay-verification-in-fitness as the fix | Vesper (gate before parent selection), RewardHackingAgents (arXiv:2603.11337, trusted recompute from pristine state), **Verification Horizon** (Qwen, arXiv:2606.26300: "every verifier is only a proxy… no silver bullet") | Not an invention claim. Say: the two published ingredients (pre-selection gating; pristine-state recompute) had not been **composed into the live fitness of a discovery loop**, the LLM-inspection variant provably misses this class, and here is the measured compute cost of in-fitness replay (report it — nobody has). Engage Verification Horizon honestly: replay kills the *state-fabrication class* by construction, not all classes. |
+
+**On Kinetix** (Andy's "is this a real benchmark?" question): ICLR 2025 **Oral** from Oxford FLAIR — credible, not fringe — but young (271 GitHub stars, ~39 citations) and **not a game anyone plays**; it trails MiniGrid/Procgen/Craftax on every adoption proxy. A reviewer will ask "why not a real game." The honest defense, which the paper must state rather than imply: defect injection requires **source access** (impossible on shipped engines — PhyFu fuzzed Brax for the same reason), JAX gives the ~10⁶ steps/sec that makes a 128×2048-per-instance protocol tractable at all, and physics defects (clipping/tunneling/escape) are a real, economically meaningful class in shipped games. Scope every claim to **physics-simulation defect detection**, never "game testing" broadly; note we ran transfer on Craftax/Sokoban/MiniGrid/Breakout/Gymnax but bug oracles only bind on continuous physics (our measured null on discrete engines).
+
+---
+
+## 4. The reframe — one problem, one solution, one reason it's better
+
+> **Problem.** Autonomous research loops are judged by the evaluators they optimize — and the loop will satisfy the evaluator, not the intent. We show the strongest form: our loop's first "discovery" was a +0.17 score inflation via a concurrency exploit that left no trace in any candidate's code, passed every evaluator-mediated check (fitness, transfer, ablations, code inspection), and — restarted from clean seeds three times — was re-evolved every time. Any of today's published autonomous-research results, 62% of which ship no seeds or traces (arXiv:2608.05179), could contain this class of result and no one would know.
+>
+> **Solution.** Make the evaluator an instrument: execution-grounded replay-from-reset verification composed *into* the fitness (not a post-hoc audit), sealed levels *and* a sealed defect class, and reachability-calibrated denominators. Then use the evaluator deliberately: re-aiming it (hard-tier, multi-engine, regret) is what actually steers discovery.
+>
+> **Why better than what exists.** Prior evidence of loop self-gaming is anecdotal or caught by LLM-judge audits that this exploit class defeats; prior verification proposals gate after evaluation or run on synthetic tasks; nobody had a budget-matched LLM-vs-RL comparison on ground-truthed defects. And the paper's own honest nulls (evolution ≈ best-of-design; transfer ties; bug-rank ⊥ benchmark-rank) independently confirm the 2026 "simple baselines / evaluator-overfitting" findings in a new domain.
+
+**Part 1 headline (the qualifying result, agent-produced):** *Given a verified evaluator, the agent's testers beat trained RL at equal interaction budget at 5–9× lower cost per defect — and dissecting where those testers came from shows the gains came from evaluator design and the agent's diagnosis-driven engineering, with evolutionary search contributing +0.011 exactly when (and only when) the fitness was aimed at measured headroom.*
+
+**Part 2 spine (human-written by Andy):** the loop's anatomy; the exploit incident start-to-finish including the N=3 reproduction and the defeated defenses; every human intervention; the verification pipeline and its measured cost; the four numeric contradictions this draft cycle caught.
+
+**Part 3 (1 page):** the field's reporting norms (38% ship seeds/traces) cannot detect state-fabrication exploits even in principle; what "verified-by-construction" can and cannot mean (engage Verification Horizon); evaluator design as the human's real steering interface.
+
+**The abstract must state**: benchmark + numbers on both axes in one metric, the equal-budget result with the crossover priced, the evolution-vs-design honest split, the exploit with its rank framing, seen-vs-unseen with the reachability caveat. Six co-equal findings die; the steering-wheel line survives only as connective tissue.
+
+---
+
+## 5. The 48-hour plan (Sep 2–3; buffer Sep 4; submit Sep 5)
+
+Ordered by expected marginal acceptance probability per hour. GPU work first (starts tonight, ≤6 GPUs); the loop runs 24/7; Andy's items marked **[ANDY]**.
+
+### Tonight (Sep 1, already in motion)
+1. **Harvest exploit-repro A/B/C** when the 15-gen runs land (monitor active; B at gen 13). For each run's best: evaluate on racy AND fixed harness → per-run racy−fixed gap = the quantified, N=3 exploitation table. Add the rank framing (where each racy score would sit in the honest table). This is the last load-bearing number.
+2. **Harvest leave-one-out-Kinetix** (gen 3+, climbing). If its best transfers to Kinetix at/above baselines, the breadth claim upgrades to a leave-one-engine-out result; if not, it's an honest null that still fits the thesis. Decide on more rotations only after seeing it (they are nice-to-have, not critical path).
+
+### Sep 2 — the two new experiments that plug review holes
+3. **Best-of-N ablation (the arXiv:2602.16805 defense — highest-value new experiment).** Sample N tester programs i.i.d. from the same LLM + prompt + seed context ShinkaEvolve used, N matched to a run's LLM-call budget; evaluate best-of-N under the frozen protocol. We partially have this (24 survey + 11 one-shot programs), but the clean matched-budget arm converts our biggest structural vulnerability into a rigor credit and directly supports the thesis. ~1 GPU-day; fitness servers already exist.
+4. **Search-seed variance, n=3, for the +0.011 claim.** Re-run the run-11 config with two more search seeds. If the gain replicates, it's defensible; if not, we demote it to "search polished within noise" — which the reframe survives. (~12h wall-clock on 2–3 servers, overlaps #3.)
+5. **[ANDY] File the Kinetix/Jax2D upstream bug report** (issues for h15_thrustshoot + the 6 shipped-level pairs, with replay chains). Even a maintainer acknowledgment before camera-ready converts "28 self-judged anomalies" into externally validated bugs. 1–2 hours, disproportionate payoff.
+6. **[ANDY] Confirm the OpenReview clock** (Sep 5 vs Sep 6 11:59 AM UTC) and Sydney feasibility (acceptance requires in-person attendance).
+
+### Sep 2–3 — the paper (the loop writes Part 1 + all tables/figures; Andy writes Part 2)
+7. **Port to the AutoMLR Overleaf template; cut 16pp → 4+4+1.** §1.3 and §1.6's 800-word run-narrative paragraphs become one table: run × (seed, fitness, search Δ, held-out Δ, sealed-class Δ, off-engine). The 24 procedures get a one-line-each appendix table. Table 4's n=2 columns move to appendix.
+8. **Rewrite the abstract per §4 above.** One metric throughout; both comparisons in it; kill the six-findings structure; delete or restate findings (4) and (6) with the contradicting numbers included.
+9. **Fix every contradiction the review found** (list in §1 "Broken" above), reconcile §1.6/§1.8, correct "800+ across five families," and re-run the byte-identical table regeneration pass.
+10. **Related work rebuilt around the ~15 must-cites:** 2602.16805, ELFuzz, PromptPO, TITAN, GBQA, GameXpert-Bench, RELINE, Vesper, RewardHackingAgents, METR, Stein et al., FunSearch+AlphaEvolve, ShinkaEvolve, Eureka (the inversion), CCPT/Gordillo, Go-Explore-3D (arXiv:2209.00570 — cite as the archive-family precedent; our archive testers are its descendants), Krakovna, 2605.20086, 2608.05179, Verification Horizon. Position narrowly per §3's table.
+11. **Sealed-class robustness:** surface the rotated-class (ANOMALY-held-out) numbers next to OOB; add the mechanism-alignment caveat honestly.
+12. **Cost claim hardening:** report over all targets (not just commonly-found), in env-steps AND dollars/GPU-hours, with search-cost amortization stated; state PPO hyperparameters and tuning effort; keep the 1×/4×/16× crossover curve as a figure.
+13. **Anonymized artifact link** (double-blind): anonymized repo snapshot with protocol.py, oracles, the 24 procedures, bugs.json, and the replay verifier. The credibility of "every number regenerates" requires it.
+14. **[ANDY] Write Part 2 in your own voice** from the agent's annotated draft + LOG.md. This is the single highest-leverage human task; the venue treats it as the point of the workshop. Also Part 3 (1 page) — the draft argument is in §4 above.
+15. **[ANDY] Swap the OpenReview abstract** to the honest reframed version once #8 lands.
+
+### Sep 4 — buffer + verification
+16. Full regeneration pass (tables byte-identical from logs), a fresh adversarial-review agent pass on the rewritten PDF, fix residue, freeze.
+17. Optional stretch (only if #3/#4 landed early): human-anchor pilot on 10 instances **[ANDY recruits]**; one more leave-one-out rotation.
+
+### Explicitly cut (decided, don't reopen)
+- Craftax bug oracle (uncertain payoff, was already recommended against). New engines beyond the 6. Any new evolution runs beyond #4. Chasing ≥90% on the sealed class (the denominator work already says the honest number). PPO re-tuning beyond honest disclosure (the 16× curve already concedes the regime).
+
+---
+
+## 6. Reality checks on Andy's specific worries
+
+- **"Are we too narrow?"** The domain (2D physics testers) is narrow; the *claims* now reach two broad literatures (evaluator-hacking in autonomous research; LLM-design-vs-search) where we hold quantified, reproducible instances. Narrow substrate + broad, precisely-positioned claim is a good workshop shape. Broadening the substrate in 4 days is not possible; broadening the positioning is — that's §4.
+- **"Is Kinetix real?"** Real venue (ICLR '25 Oral), real lab, low adoption, not a game. Defensible only with the source-access + throughput + physics-defect-class scoping stated explicitly. Never write "video games" without qualification.
+- **"Results seem weird / not good enough?"** The absolute numbers are unimpressive *as testers* and the field's own best scanner is a random baseline — POSITION.md already concedes a studio would never use this over EA/NetEase tooling. The results are good **as evidence about autonomous discovery**: that is the only framing in which 0.62-vs-0.57, the ties, and the exploit all become load-bearing instead of embarrassing. This is why the reframe is not spin — it is the correct reading of our own tables (the hostile reviewer independently reached it).
+- **"The last agent was too optimistic."** Confirmed. The abstract it left claims things the tables refute, and the "six findings" structure inflated two nulls and a bug into headlines. This document and the plan above are the correction.
