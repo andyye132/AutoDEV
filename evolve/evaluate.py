@@ -9,15 +9,20 @@ STEPS = int(os.environ.get("AUTODEV_STEPS", "1024")); WORKERS = int(os.environ.g
 
 
 def get_kwargs(run_idx):
-    return dict(split_path=os.environ.get("AUTODEV_SPLIT", "runs/split.json"), which="search", size=os.environ.get("AUTODEV_SIZE", "m"), seeds=SEEDS, workers=WORKERS, steps=STEPS)
+    kw = dict(split_path=os.environ.get("AUTODEV_SPLIT", "runs/split.json"), which="search", size=os.environ.get("AUTODEV_SIZE", "m"), seeds=SEEDS, workers=WORKERS, steps=STEPS)
+    spec = os.environ.get("AUTODEV_SUBSTRATE")
+    if spec:
+        from autodev.substrate import make_substrate
+        kw["substrate"] = make_substrate(spec)
+    return kw
 
 
 def aggregate(results):
     import os, json as _json
     import numpy as _np
     r = results[0]
-    pub = {"detected": r["detected"], **{f"cls_{k}": v for k, v in r["per_class"].items()},
-           **{f"det_{k}": v for k, v in r["detected_per_class"].items()}, "wall_s": r.get("wall", 0.0)}
+    pub = {"detected": r["detected"], **{f"cls_{k}": v for k, v in r.get("per_class", {}).items()},
+           **{f"det_{k}": v for k, v in r.get("detected_per_class", {}).items()}, "wall_s": r.get("wall", 0.0)}
     score = float(r["score"]); fb_lines = []
     # multi-engine result: compute per-substrate regret with a {kind: {name: {"s":..}}} norm table and weight-combine
     if r.get("per_substrate") and not r.get("names"):
@@ -75,7 +80,7 @@ def aggregate(results):
                             f"(better on {(d > 0.005).sum()} targets, worse on {(d < -0.005).sum()})")
         found = fh.min(1) < B * 0.999
         fb_lines.append(f"found {int(found.sum())}/{len(names)} targets; mean first-hit of found = {fh.min(1)[found].mean():,.0f} of {B:,} budget")
-    fb_lines.append("per-class detection: " + ", ".join(f"{k}={v:.2f}" for k, v in r["detected_per_class"].items()))
+    fb_lines.append("per-class detection: " + ", ".join(f"{k}={v:.2f}" for k, v in r.get("detected_per_class", {}).items()))
     return {"combined_score": score, "public": pub, "private": {},
             "text_feedback": " | ".join(fb_lines)}
 
