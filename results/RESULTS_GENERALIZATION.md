@@ -1,14 +1,13 @@
 # The generalization result: LLM-written testers beat trained RL across diverse RL tasks (Sep 2, 2026)
 
-_The decisive experiment for "does the equal-budget win generalize beyond Kinetix?" — run tonight. Answer: yes, on 5/5
-diverse tasks. Every number regenerates: `scripts/eval_ppo_substrate.py` (PPO on any substrate) + `results/breadth.json`
+_The decisive experiment for "does the equal-budget win generalize beyond Kinetix?" — run tonight. Answer: yes — LLM beats PPO clearly on 7 tasks and ties on the 8th (Craftax). Every number regenerates: `scripts/eval_ppo_substrate.py` (PPO on any substrate) + `results/breadth.json`
 (the LLM/evolved testers + baselines) → `scripts/make_generalization_table.py`._
 
 ## The claim, made general
 
 **At an equal environment-interaction budget, a zero-training LLM-written tester program beats a trained PPO explorer at
-reaching target states — not just on Kinetix physics, but across six structurally different RL tasks** (grid navigation,
-grid+subgoal, arcade, puzzle/planning, continuous control, and physics). This is the generalized form of the project's
+reaching target states — not just on Kinetix physics, but across eight structurally different RL tasks** (grid navigation, grid+subgoal, arcade,
+puzzle/planning, continuous control, deep-exploration, physics, and crafting/survival). This is the generalized form of the project's
 strongest claim, and it clears the "too narrow / one substrate" objection.
 
 ## Result (search split, detection fraction; each row budget-matched: LLM vs PPO at the SAME budget)

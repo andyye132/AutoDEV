@@ -16,18 +16,6 @@ data = [(r["task"].replace("MiniGrid ", "").replace("Gymnax ", "").replace("MinA
 # Kinetix K-Goal (verified: results/RESULTS_GENERALIZATION.md)
 data.append(("Kinetix K-Goal", 0.362, 0.558, 0.673))
 
-# Craftax if available
-cx = "runs/ppo_craftax.json"
-if os.path.exists(cx):
-    d = json.load(open(cx))
-    ppo = max((v["search"]["detected"] for v in d.values() if "search" in v), default=None)
-    br = json.load(open("results/breadth.json")).get("C-Ach", {}).get("search", {})
-    BASE = {"random", "repeat_random", "goexplore"}
-    llm = max((v["detected"] for k, v in br.items() if k not in BASE and "ppo" not in k), default=None)
-    rnd = br.get("random", {}).get("detected")
-    if ppo is not None and llm is not None:
-        data.append(("Craftax", rnd, ppo, llm))
-
 labels = [d[0] for d in data]
 rnd = [d[1] for d in data]; ppo = [d[2] for d in data]; llm = [d[3] for d in data]
 n = len(data); x = np.arange(n); w = 0.26
