@@ -1,0 +1,421 @@
+{
+ "config": {
+  "n": 40,
+  "seed_prog": "runs/evolve_run11_hard/exports/best_upto_gen000.py",
+  "out": "results/best_of_n.json",
+  "workdir": "runs/best_of_n",
+  "parallel": 6,
+  "n_sonnet": 25,
+  "n_opus": 15
+ },
+ "summary": {
+  "n": 40,
+  "valid": 37,
+  "best_of_n": 0.7824048239087301,
+  "seed_fitness": 0.7827,
+  "run11_best_fitness": 0.7917,
+  "run11_generations": 40,
+  "best_of_n_curve": [
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301,
+   0.7824048239087301
+  ],
+  "verdict": "evolution ahead of best-of-N"
+ },
+ "draws": [
+  {
+   "idx": 0,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7824048239087301,
+   "detected": 0.8650793650793651,
+   "status": "ok"
+  },
+  {
+   "idx": 1,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7711898561507936,
+   "detected": 0.8492063492063492,
+   "status": "ok"
+  },
+  {
+   "idx": 2,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7642764136904762,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 3,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7749255952380952,
+   "detected": 0.8650793650793651,
+   "status": "ok"
+  },
+  {
+   "idx": 4,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7671750992063492,
+   "detected": 0.8650793650793651,
+   "status": "ok"
+  },
+  {
+   "idx": 5,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7757161458333334,
+   "detected": 0.8571428571428571,
+   "status": "ok"
+  },
+  {
+   "idx": 6,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7415984623015873,
+   "detected": 0.8492063492063492,
+   "status": "ok"
+  },
+  {
+   "idx": 7,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.76513671875,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 8,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7648732018849206,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 9,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7501860119047619,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 10,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7596493675595238,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 11,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.746520027281746,
+   "detected": 0.8253968253968254,
+   "status": "ok"
+  },
+  {
+   "idx": 12,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.755340091765873,
+   "detected": 0.8333333333333334,
+   "status": "ok"
+  },
+  {
+   "idx": 13,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7594246031746031,
+   "detected": 0.8492063492063492,
+   "status": "ok"
+  },
+  {
+   "idx": 14,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7785838293650794,
+   "detected": 0.8571428571428571,
+   "status": "ok"
+  },
+  {
+   "idx": 15,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.738707527281746,
+   "detected": 0.8253968253968254,
+   "status": "ok"
+  },
+  {
+   "idx": 16,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.6596214657738095,
+   "detected": 0.7619047619047619,
+   "status": "ok"
+  },
+  {
+   "idx": 17,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7076202876984127,
+   "detected": 0.7857142857142857,
+   "status": "ok"
+  },
+  {
+   "idx": 18,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.6815476190476191,
+   "detected": 0.746031746031746,
+   "status": "ok"
+  },
+  {
+   "idx": 19,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7706938244047619,
+   "detected": 0.8492063492063492,
+   "status": "ok"
+  },
+  {
+   "idx": 20,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7525421626984127,
+   "detected": 0.8253968253968254,
+   "status": "ok"
+  },
+  {
+   "idx": 21,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7681051587301587,
+   "detected": 0.8571428571428571,
+   "status": "ok"
+  },
+  {
+   "idx": 22,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.754332527281746,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 23,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7493567088293651,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 24,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7757238963293651,
+   "detected": 0.8571428571428571,
+   "status": "ok"
+  },
+  {
+   "idx": 25,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7735537574404762,
+   "detected": 0.8650793650793651,
+   "status": "ok"
+  },
+  {
+   "idx": 26,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7645554315476191,
+   "detected": 0.8492063492063492,
+   "status": "ok"
+  },
+  {
+   "idx": 27,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7302594866071429,
+   "detected": 0.8174603174603174,
+   "status": "ok"
+  },
+  {
+   "idx": 28,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": "timeout",
+   "score": null,
+   "status": "gen_fail:timeout"
+  },
+  {
+   "idx": 29,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7663535466269841,
+   "detected": 0.8492063492063492,
+   "status": "ok"
+  },
+  {
+   "idx": 30,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7767469618055556,
+   "detected": 0.8650793650793651,
+   "status": "ok"
+  },
+  {
+   "idx": 31,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7175641741071429,
+   "detected": 0.8253968253968254,
+   "status": "ok"
+  },
+  {
+   "idx": 32,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": "timeout",
+   "score": null,
+   "status": "gen_fail:timeout"
+  },
+  {
+   "idx": 33,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7652064732142857,
+   "detected": 0.8650793650793651,
+   "status": "ok"
+  },
+  {
+   "idx": 34,
+   "model": "claude-sonnet-5",
+   "effort": "medium",
+   "gen_error": null,
+   "score": 0.7374286954365079,
+   "detected": 0.8412698412698413,
+   "status": "ok"
+  },
+  {
+   "idx": 35,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": "timeout",
+   "score": null,
+   "status": "gen_fail:timeout"
+  },
+  {
+   "idx": 36,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7511470734126984,
+   "detected": 0.8571428571428571,
+   "status": "ok"
+  },
+  {
+   "idx": 37,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7093331473214286,
+   "detected": 0.7857142857142857,
+   "status": "ok"
+  },
+  {
+   "idx": 38,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.0,
+   "detected": 0.0,
+   "status": "error:Traceback (most recent call last):\n  File \"/mmfs1/gscratch/raivn/andy132/AutoDev"
+  },
+  {
+   "idx": 39,
+   "model": "claude-opus-5",
+   "effort": "high",
+   "gen_error": null,
+   "score": 0.7247953869047619,
+   "detected": 0.7936507936507936,
+   "status": "ok"
+  }
+ ]
+}
