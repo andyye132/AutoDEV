@@ -26,8 +26,11 @@ between rows but every row compares LLM and PPO at one budget — no cross-budge
 | Gymnax DeepSea-24 | deep exploration (RL's home turf) | 0.00 | 1.00 | 0.78 (curiosity) | **1.00** (split-pump) | LLM > PPO |
 | Kinetix K-Goal | 2D physics | 0.36 | 0.58 | 0.56 (curiosity) | **0.67** (macrosweep) | LLM > PPO |
 
-**LLM-written tester beats the best-of-5-objectives PPO on 6/6 tasks, at equal budget, with zero training.** (K-Goal PPO
-from the earlier Kinetix run; the other five are tonight's `eval_ppo_substrate` runs at the matched 131k-step budget.)
+**LLM-written tester beats the best-of-5-objectives PPO clearly on 7 tasks and ties on Craftax (0.35 vs 0.34), at equal
+budget, zero training.** The Craftax boundary is illuminating: there the best PPO is `ppo_task` (pure external reward, 0.34),
+because Craftax's achievements give a reward signal RL can learn from — whereas on the sparse-reward exploration tasks
+(DoorKey, DeepSea, Sokoban) intrinsic-motivation PPO fails and the LLM tester dominates. So the honest scope is: **the
+zero-training LLM tester dominates on sparse-reward target-reaching; on reward-dense tasks, trained RL becomes competitive.**
 
 ## The honest reading (this is stronger AND more nuanced than "LLM beats RL")
 

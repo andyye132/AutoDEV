@@ -58,5 +58,15 @@
   "ppo_who": "ppo_curiosity_proximity",
   "llm_best": 1.0,
   "llm_who": "split_pump.py"
+ },
+ {
+  "task": "Craftax",
+  "family": "crafting/survival (most game-like)",
+  "random": 0.25,
+  "action_repeat": 0.15833333333333333,
+  "ppo_best": 0.3402777777777778,
+  "ppo_who": "ppo_task",
+  "llm_best": 0.3499999999999999,
+  "llm_who": "saturate.py"
  }
 ]

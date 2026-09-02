@@ -15,6 +15,7 @@ TASKS = [
     ("S-Sokoban", "runs/ppo_sokoban.json", "Jumanji Sokoban", "puzzle / planning"),
     ("G-MountainCar", "runs/ppo_mountaincar.json", "Gymnax MountainCar", "continuous control"),
     ("G-DeepSea24", "runs/ppo_deepsea24.json", "Gymnax DeepSea-24", "deep exploration (RL's home turf)"),
+    ("C-Ach", "runs/ppo_craftax.json", "Craftax", "crafting/survival (most game-like)"),
 ]
 br = json.load(open("results/breadth.json"))
 
