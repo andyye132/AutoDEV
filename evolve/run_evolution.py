@@ -34,6 +34,11 @@ ap.add_argument("--models", default="headless/claude@claude-sonnet-5?effort=medi
 ap.add_argument("--islands", type=int, default=2); ap.add_argument("--archive_size", type=int, default=40); ap.add_argument("--max_cost", type=float, default=60.0)
 args = ap.parse_args()
 
+import os as _os
+_tm = _os.environ.get("AUTODEV_TASK_MSG_FILE")
+if _tm and _os.path.exists(_tm):
+    TASK_SYS_MSG = open(_tm).read()
+
 evo = EvolutionConfig(task_sys_msg=TASK_SYS_MSG, num_generations=args.generations, job_type="local", language="python",
                       llm_models=args.models.split(","), init_program_path=os.environ.get("AUTODEV_INIT", os.path.join(ROOT, "evolve", "initial.py")),
                       results_dir=args.results_dir, max_api_costs=args.max_cost, embedding_model=None, meta_rec_interval=10,

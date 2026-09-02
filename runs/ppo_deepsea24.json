@@ -1,0 +1,190 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.6097005208333333,
+   "detected": 0.6666666666666666,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     26048.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     131072.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     1472.0
+    ],
+    [
+     1472.0,
+     131072.0,
+     1472.0
+    ],
+    [
+     89024.0,
+     131072.0,
+     1472.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed0",
+    "DeepSea-bsuite__seed1",
+    "DeepSea-bsuite__seed2",
+    "DeepSea-bsuite__seed3",
+    "DeepSea-bsuite__seed4",
+    "DeepSea-bsuite__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.457275390625,
+   "detected": 0.5,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     26048.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed6",
+    "DeepSea-bsuite__seed7"
+   ]
+  }
+ },
+ "ppo_rnd": {
+  "search": {
+   "score": 0.5621744791666667,
+   "detected": 0.6666666666666666,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     107456.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     131072.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     1472.0
+    ],
+    [
+     1472.0,
+     119744.0,
+     1472.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     1472.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed0",
+    "DeepSea-bsuite__seed1",
+    "DeepSea-bsuite__seed2",
+    "DeepSea-bsuite__seed3",
+    "DeepSea-bsuite__seed4",
+    "DeepSea-bsuite__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.353759765625,
+   "detected": 0.5,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     107456.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed6",
+    "DeepSea-bsuite__seed7"
+   ]
+  }
+ },
+ "ppo_icm": {
+  "search": {
+   "score": 0.5677897135416667,
+   "detected": 0.6111111111111112,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     82880.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     131072.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     1472.0
+    ],
+    [
+     1472.0,
+     131072.0,
+     1472.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     1472.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed0",
+    "DeepSea-bsuite__seed1",
+    "DeepSea-bsuite__seed2",
+    "DeepSea-bsuite__seed3",
+    "DeepSea-bsuite__seed4",
+    "DeepSea-bsuite__seed5"
+   ]
+  }
+ }
+}

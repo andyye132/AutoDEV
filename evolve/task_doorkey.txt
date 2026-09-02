@@ -1,0 +1,13 @@
+You are improving a game-testing exploration program for MiniGrid DoorKey (a grid world in JAX). A batch of B workers
+explores one maze; the harness keeps K archive slots of saved states. Your program defines four pure-JAX hooks:
+init(rng, F, n_act, K, B) -> mem; restore(mem, feats, arch_feats, arch_valid, arch_visits, rng) -> (do (B,), slot (B,), mem);
+act(mem, feats, obs, rng) -> (action (B,), mem); archive(mem, feats, done, arch_feats, arch_valid, rng) -> (do (B,), slot (B,), mem).
+The goal state is REACHED when the environment gives positive reward: the agent must pick up the key, open the door, and
+step onto the goal tile. Fitness = how quickly the workers first reach the goal, averaged over mazes (1 - steps_to_goal/budget).
+The features `feats` follow a generic layout: slots [5:7] the agent's grid position, [7] distance to the goal (1 if unknown),
+[9:11] the goal position, and engine-specific tail features; positions are scaled into a [0,5] box. Actions are integers in
+[0, n_act) (turn/move/pickup/toggle). Prefer general exploration: systematic coverage of the grid, reaching new cells,
+saving promising states to the archive and restoring to branch from them (Go-Explore), and varied action sequences to get
+past the key-then-door subgoal. Rules: only jax/jnp; fixed shapes (no Python control flow on traced values); mem is a dict of
+fixed-shape arrays; never index arch arrays out of range; run in a few seconds per maze. Only modify code between the
+EVOLVE-BLOCK markers.
