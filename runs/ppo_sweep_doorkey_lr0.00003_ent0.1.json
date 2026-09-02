@@ -1,0 +1,98 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.24202473958333337,
+   "detected": 0.6111111111111112,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     79232.0,
+     56960.0,
+     109376.0
+    ],
+    [
+     117824.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     119424.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     76992.0,
+     32576.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     40896.0
+    ],
+    [
+     105664.0,
+     69312.0,
+     62528.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ },
+ "ppo_curiosity_proximity": {
+  "search": {
+   "score": 0.24202473958333337,
+   "detected": 0.6111111111111112,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     79232.0,
+     56960.0,
+     109376.0
+    ],
+    [
+     117824.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     119424.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     76992.0,
+     32576.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     40896.0
+    ],
+    [
+     105664.0,
+     69312.0,
+     62528.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ }
+}
