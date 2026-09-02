@@ -4,6 +4,19 @@ _Written by the research agent after an 8-agent recon sweep: the AutoMLR CFP + o
 
 ---
 
+## UPDATE — Sep 1, ~11 PM: tonight's experiments + a MAJOR CORRECTION
+
+**The thesis is locked (Andy's call): _trustworthy evaluation for self-improving agents_.** The problem: a self-improving loop optimizes its evaluator, not the truth, and the gaming can be invisible to the candidate's own code — so the standard defense (LLM code-audit) misses it. Solution: execution-grounded replay verification composed into the fitness. Why better: prior evidence is anecdotal or caught by code-audits our exploit class defeats. Games are the **testbed**, not the application. Four legs, all measured tonight:
+
+- **R1 — the exploit (CORRECTED, and this is the reality-check you asked for).** The earlier session's headline "exploit reproduces N=3, +0.17 inflation" was a **split-mismatch artifact** — it compared split-pump's score on the easy 42-target split (0.783) to a fixed score from the hard 127-target protocol (0.613). I re-scored every exploit-repro program on **both** harnesses on the **same** split: **every gap ≈ 0. The exploit did NOT reproduce.** WITHDRAWN. What IS real (same-config, verified): the **original** run-1 program `cand1_gen037` inflates **+0.11** (racy 0.578 / fixed 0.468, with **62 of 256 archive slots directly observed as chimeras**), it fooled the **registered abstract** for ~10 h, and replay was the only thing that caught it. **N=1, program-specific — not a reliable attractor.** (`results/RESULTS_EXPLOIT.md`; GPU re-verify of the +0.11 running.)
+- **R2 — the defense-defeat (the "why better" backbone), NEW tonight.** An opus code-auditor shown the **complete harness including the race** flags the real +0.11 exploiter on **0/1 majority vote (1/3 individual)**, with **0/9 false alarms** on three legitimate look-alikes (split-pump/macrosweep/go-explore, which are indistinguishable in code). Replay separates them deterministically. Realistic (trusted-harness) condition running — expected ~0 detection. **This is the falsifying counterexample to the LLM-code-audit defense, and it does not depend on the withdrawn reproducibility.**
+- **R3 — cheap testers beat RL (Part 1 object-level result), VERIFIED solid.** Fixed harness, 5 seeds, non-overlapping CIs: **LLM-written 0.621 (66%) > best hand-designed 0.574 (60%) > best PPO 0.487 (56%)** at equal 128×2048 budget. The "5–9× cheaper" is a *sealed-class, commonly-found-targets* number — I'll scope it precisely, not float it.
+- **R4 — search is not the lever, NEW tonight.** Best-of-37 i.i.d. LLM draws from the split-pump seed top out at **0.782 — none beat the seed (0.783) or the evolved best (0.792)**. Evolution's edge over i.i.d. sampling is **+0.009, within the ±0.01 noise band.** Neither search operator moves off the hand-designed seed; the seed/fitness is the lever.
+
+**Net effect on viability:** the paper is still viable and the thesis is cleaner, but the exploit is an honest **N=1** incident, not the reproducible phenomenon the last agent sold. R3 (Part 1) is solid; R2 (the novelty backbone) is landing; R1 is real-but-singular; R4 supports the thesis. The rest of this document (recon, venue fit, novelty audit, plan) stands — but wherever it says "N=3 / +0.17 / attractor / climbing," read the corrected R1 above.
+
+---
+
 ## 0. TL;DR — the blunt verdict
 
 1. **The project fits AutoMLR unusually well — better than almost any topic could.** The workshop's founding sentence is *"If autonomous systems can produce candidate papers at scale, the scarce human contribution becomes the ability to evaluate AI-generated claims."* Our verified-evaluator story is that sentence made concrete. One organizer (Hamish Ivison, UW) is an RLVR person; the committee's center of mass is RL + agents + verifiability.
