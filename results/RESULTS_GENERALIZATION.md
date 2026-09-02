@@ -81,11 +81,12 @@ the LLM contributes real algorithmic content, and it generalizes across engines.
   | DoorKey | 1.00 | 0.28 | 0.56 | 0.72 |
   | FourRooms | 0.87 | 0.39 | 0.67 | 0.83 |
   | Breakout | 1.00 | 0.33 | 0.61 | 0.52 |
+  | Sokoban | 0.79 | 0.28 | 0.37 | 0.37 |
   | K-Goal | 0.67 | 0.56 | **0.72** | **0.76** |
 
   **This kills the "you under-trained PPO" objection.** Even at 16× the budget (16× more environment interaction than the
-  LLM tester gets), PPO **still loses** on DoorKey (0.72 vs 1.00) and Breakout (0.52 vs 1.00), only **ties** on FourRooms
-  (0.83 vs 0.87), and **overtakes only on K-Goal** (crossing at 4×). So on the sparse-reward exploration tasks, RL does not
+  LLM tester gets), PPO **still loses** on DoorKey (0.72 vs 1.00), Breakout (0.52 vs 1.00) and Sokoban (0.37 vs 0.79 — where it *plateaus*,
+  no gain from 4×), only **ties** on FourRooms (0.83 vs 0.87), and **overtakes only on the reward-dense K-Goal** (crossing at 4×). So on the sparse-reward exploration tasks, RL does not
   catch up even with an order of magnitude more budget; on reward-dense tasks (K-Goal, Craftax) it does. The claim is
   strictly *equal-budget*, reported honestly — and the equal-budget win is not an artifact of under-training RL.
 - **PPO fairness.** PPO uses the SAME `feat_fn` observation the testers see (no observation handicap), best-of-5 intrinsic
