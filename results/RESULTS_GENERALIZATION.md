@@ -44,6 +44,26 @@ from the earlier Kinetix run; the other five are tonight's `eval_ppo_substrate` 
    generalization claim in its strongest form: not "an LLM writes a fresh tester per task," but "one LLM-evolved tester
    transfers across RL tasks and beats task-specific RL."
 
+## The win is the LLM's *strategy*, not just save/restore (the key skeptic defense)
+
+The obvious objection: "the testers use a Go-Explore archive (save/restore) that PPO lacks — you've just shown Go-Explore
+beats PPO." **False, and the data kills it.** The plain `goexplore` baseline has the *same* save/restore capability, and it
+often *loses* to PPO and even random:
+
+| task | plain Go-Explore | best LLM tester | Δ |
+|---|---|---|---|
+| DoorKey | 0.10 | **1.00** | +0.90 |
+| Breakout | 0.33 | **1.00** | +0.67 |
+| FourRooms | 0.40 | **0.87** | +0.47 |
+| MountainCar | 0.67 | **1.00** | +0.33 |
+| Sokoban | 0.51 | **0.79** | +0.28 |
+| DeepSea-24 | 1.00 | 1.00 | +0.00 |
+
+The LLM-evolved tester beats **plain Go-Explore on 5/6 tasks** (tie on DeepSea). On DoorKey, plain Go-Explore scores 0.10 —
+*worse than PPO (0.28) and far worse than random (0.77)* — while the LLM tester scores 1.00. **So the advantage is the
+specific exploration strategy the LLM discovered, not the mere presence of an archive.** That is the load-bearing point:
+the LLM contributes real algorithmic content, and it generalizes across engines.
+
 ## Honest caveats (state these in the paper)
 
 - **Tester type vs learner type.** The LLM testers use a save/restore archive (Go-Explore-style); PPO is a policy that
