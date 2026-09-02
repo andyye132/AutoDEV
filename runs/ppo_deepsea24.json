@@ -185,6 +185,168 @@
     "DeepSea-bsuite__seed4",
     "DeepSea-bsuite__seed5"
    ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.385009765625,
+   "detected": 0.5,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     82880.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed6",
+    "DeepSea-bsuite__seed7"
+   ]
+  }
+ },
+ "ppo_curiosity_proximity": {
+  "search": {
+   "score": 0.64404296875,
+   "detected": 0.7777777777777778,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     87488.0,
+     22976.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     131072.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     1472.0
+    ],
+    [
+     1472.0,
+     131072.0,
+     1472.0
+    ],
+    [
+     73664.0,
+     112064.0,
+     1472.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed0",
+    "DeepSea-bsuite__seed1",
+    "DeepSea-bsuite__seed2",
+    "DeepSea-bsuite__seed3",
+    "DeepSea-bsuite__seed4",
+    "DeepSea-bsuite__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.5166015625,
+   "detected": 0.6666666666666666,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     87488.0,
+     22976.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed6",
+    "DeepSea-bsuite__seed7"
+   ]
+  }
+ },
+ "ppo_task": {
+  "search": {
+   "score": 0.54736328125,
+   "detected": 0.5555555555555556,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     131072.0
+    ],
+    [
+     1472.0,
+     1472.0,
+     1472.0
+    ],
+    [
+     1472.0,
+     131072.0,
+     1472.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     1472.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed0",
+    "DeepSea-bsuite__seed1",
+    "DeepSea-bsuite__seed2",
+    "DeepSea-bsuite__seed3",
+    "DeepSea-bsuite__seed4",
+    "DeepSea-bsuite__seed5"
+   ]
+  },
+  "heldout_levels_instances": {
+   "score": 0.32373046875,
+   "detected": 0.3333333333333333,
+   "n": 2,
+   "budget": 131072,
+   "first_hit": [
+    [
+     1472.0,
+     6080.0,
+     131072.0
+    ],
+    [
+     131072.0,
+     131072.0,
+     131072.0
+    ]
+   ],
+   "names": [
+    "DeepSea-bsuite__seed6",
+    "DeepSea-bsuite__seed7"
+   ]
   }
  }
 }

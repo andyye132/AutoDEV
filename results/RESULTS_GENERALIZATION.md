@@ -23,6 +23,7 @@ between rows but every row compares LLM and PPO at one budget — no cross-budge
 | MinAtar Breakout | arcade | 0.33 | 0.33 | 0.33 (curiosity) | **1.00** (run7) | LLM ≫ PPO |
 | Jumanji Sokoban | puzzle / planning | 0.66 | 0.56 | 0.28 (count) | **0.79** (run7) | LLM > PPO |
 | Gymnax MountainCar | continuous control | 0.00 | 1.00 | 0.61 (curiosity) | **1.00** (split-pump) | LLM > PPO |
+| Gymnax DeepSea-24 | deep exploration (RL's home turf) | 0.00 | 1.00 | 0.78 (curiosity) | **1.00** (split-pump) | LLM > PPO |
 | Kinetix K-Goal | 2D physics | 0.36 | 0.58 | 0.56 (curiosity) | **0.67** (macrosweep) | LLM > PPO |
 
 **LLM-written tester beats the best-of-5-objectives PPO on 6/6 tasks, at equal budget, with zero training.** (K-Goal PPO

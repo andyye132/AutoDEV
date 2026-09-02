@@ -48,5 +48,15 @@
   "ppo_who": "ppo_curiosity_proximity",
   "llm_best": 1.0,
   "llm_who": "split_pump.py"
+ },
+ {
+  "task": "Gymnax DeepSea-24",
+  "family": "deep exploration (RL's home turf)",
+  "random": 0.0,
+  "action_repeat": 1.0,
+  "ppo_best": 0.7777777777777778,
+  "ppo_who": "ppo_curiosity_proximity",
+  "llm_best": 1.0,
+  "llm_who": "split_pump.py"
  }
 ]
