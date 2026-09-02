@@ -1,0 +1,4547 @@
+{
+ "cfg": {
+  "size": "l",
+  "speed_thr": [
+   6.0,
+   9.0,
+   12.0,
+   16.0,
+   20.0,
+   25.0
+  ],
+  "restitution": 1.6,
+  "levels": [
+   "m/h10_thrust_right_easy.json",
+   "m/h11_thrust_left_easy.json",
+   "m/h12_thrustfall_left.json",
+   "m/h13_thrustfall_right.json",
+   "m/h14_thrustblock.json",
+   "m/h15_thrustshoot.json",
+   "m/h16_thrustcontrol_right.json",
+   "m/h17_thrustcontrol_left.json",
+   "m/h1_car_left.json",
+   "m/h2_car_right.json",
+   "m/h3_car_thrust.json",
+   "m/h4_thrust_the_needle.json",
+   "m/h5_angry_birds.json",
+   "m/h0_unicycle.json",
+   "s/h0_weak_thrust.json",
+   "s/h4_thrust_aim.json"
+  ],
+  "note": "graded ANOMALY bench"
+ },
+ "instances": [
+  {
+   "name": "h10_thrust_right_easy__ANOMALY__thr6__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h10_thrust_right_easy__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "ec3535959b1201f4",
+   "hash": "0db84818ea344952",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h10_thrust_right_easy__ANOMALY__thr9__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h10_thrust_right_easy__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "ec3535959b1201f4",
+   "hash": "0db84818ea344952",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h10_thrust_right_easy__ANOMALY__thr12__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h10_thrust_right_easy__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "ec3535959b1201f4",
+   "hash": "0db84818ea344952",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h10_thrust_right_easy__ANOMALY__thr16__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h10_thrust_right_easy__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "ec3535959b1201f4",
+   "hash": "0db84818ea344952",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h10_thrust_right_easy__ANOMALY__thr20__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h10_thrust_right_easy__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "ec3535959b1201f4",
+   "hash": "0db84818ea344952",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h10_thrust_right_easy__ANOMALY__thr25__0",
+   "level": "m/h10_thrust_right_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h10_thrust_right_easy__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "ec3535959b1201f4",
+   "hash": "0db84818ea344952",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h11_thrust_left_easy__ANOMALY__thr6__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h11_thrust_left_easy__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "5930f6e904877a4a",
+   "hash": "f6f21ff085dce3f9",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h11_thrust_left_easy__ANOMALY__thr9__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h11_thrust_left_easy__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "5930f6e904877a4a",
+   "hash": "f6f21ff085dce3f9",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h11_thrust_left_easy__ANOMALY__thr12__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h11_thrust_left_easy__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "5930f6e904877a4a",
+   "hash": "f6f21ff085dce3f9",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h11_thrust_left_easy__ANOMALY__thr16__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h11_thrust_left_easy__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "5930f6e904877a4a",
+   "hash": "f6f21ff085dce3f9",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h11_thrust_left_easy__ANOMALY__thr20__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h11_thrust_left_easy__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "5930f6e904877a4a",
+   "hash": "f6f21ff085dce3f9",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h11_thrust_left_easy__ANOMALY__thr25__0",
+   "level": "m/h11_thrust_left_easy.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h11_thrust_left_easy__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "5930f6e904877a4a",
+   "hash": "f6f21ff085dce3f9",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h12_thrustfall_left__ANOMALY__thr6__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h12_thrustfall_left__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "c5a39ea040b92cc0",
+   "hash": "1e794d5fb74b7d93",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h12_thrustfall_left__ANOMALY__thr9__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h12_thrustfall_left__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "c5a39ea040b92cc0",
+   "hash": "1e794d5fb74b7d93",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h12_thrustfall_left__ANOMALY__thr12__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h12_thrustfall_left__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "c5a39ea040b92cc0",
+   "hash": "1e794d5fb74b7d93",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h12_thrustfall_left__ANOMALY__thr16__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h12_thrustfall_left__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "c5a39ea040b92cc0",
+   "hash": "1e794d5fb74b7d93",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h12_thrustfall_left__ANOMALY__thr20__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h12_thrustfall_left__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "c5a39ea040b92cc0",
+   "hash": "1e794d5fb74b7d93",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h12_thrustfall_left__ANOMALY__thr25__0",
+   "level": "m/h12_thrustfall_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h12_thrustfall_left__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "c5a39ea040b92cc0",
+   "hash": "1e794d5fb74b7d93",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h13_thrustfall_right__ANOMALY__thr6__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h13_thrustfall_right__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "90324147da2ea07b",
+   "hash": "a763a64417e178ee",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h13_thrustfall_right__ANOMALY__thr9__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h13_thrustfall_right__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "90324147da2ea07b",
+   "hash": "a763a64417e178ee",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h13_thrustfall_right__ANOMALY__thr12__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h13_thrustfall_right__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "90324147da2ea07b",
+   "hash": "a763a64417e178ee",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h13_thrustfall_right__ANOMALY__thr16__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h13_thrustfall_right__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "90324147da2ea07b",
+   "hash": "a763a64417e178ee",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h13_thrustfall_right__ANOMALY__thr20__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h13_thrustfall_right__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "90324147da2ea07b",
+   "hash": "a763a64417e178ee",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h13_thrustfall_right__ANOMALY__thr25__0",
+   "level": "m/h13_thrustfall_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h13_thrustfall_right__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "90324147da2ea07b",
+   "hash": "a763a64417e178ee",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h14_thrustblock__ANOMALY__thr6__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h14_thrustblock__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "a108c75db3ea3c92",
+   "hash": "6ac6f8d96d4c12f1",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h14_thrustblock__ANOMALY__thr9__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h14_thrustblock__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "a108c75db3ea3c92",
+   "hash": "6ac6f8d96d4c12f1",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h14_thrustblock__ANOMALY__thr12__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h14_thrustblock__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "a108c75db3ea3c92",
+   "hash": "6ac6f8d96d4c12f1",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h14_thrustblock__ANOMALY__thr16__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h14_thrustblock__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "a108c75db3ea3c92",
+   "hash": "6ac6f8d96d4c12f1",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h14_thrustblock__ANOMALY__thr20__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h14_thrustblock__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "a108c75db3ea3c92",
+   "hash": "6ac6f8d96d4c12f1",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h14_thrustblock__ANOMALY__thr25__0",
+   "level": "m/h14_thrustblock.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h14_thrustblock__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "a108c75db3ea3c92",
+   "hash": "6ac6f8d96d4c12f1",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h15_thrustshoot__ANOMALY__thr6__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h15_thrustshoot__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "91c3679c23c09a1a",
+   "hash": "d7da93fafb9d9bc6",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h15_thrustshoot__ANOMALY__thr9__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h15_thrustshoot__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "91c3679c23c09a1a",
+   "hash": "d7da93fafb9d9bc6",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h15_thrustshoot__ANOMALY__thr12__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h15_thrustshoot__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "91c3679c23c09a1a",
+   "hash": "d7da93fafb9d9bc6",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h15_thrustshoot__ANOMALY__thr16__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h15_thrustshoot__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "91c3679c23c09a1a",
+   "hash": "d7da93fafb9d9bc6",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h15_thrustshoot__ANOMALY__thr20__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h15_thrustshoot__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "91c3679c23c09a1a",
+   "hash": "d7da93fafb9d9bc6",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h15_thrustshoot__ANOMALY__thr25__0",
+   "level": "m/h15_thrustshoot.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h15_thrustshoot__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "91c3679c23c09a1a",
+   "hash": "d7da93fafb9d9bc6",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__ANOMALY__thr6__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h16_thrustcontrol_right__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "dca6a19ecb4e1668",
+   "hash": "bffbb197e5aeb592",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__ANOMALY__thr9__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h16_thrustcontrol_right__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "dca6a19ecb4e1668",
+   "hash": "bffbb197e5aeb592",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__ANOMALY__thr12__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h16_thrustcontrol_right__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "dca6a19ecb4e1668",
+   "hash": "bffbb197e5aeb592",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__ANOMALY__thr16__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h16_thrustcontrol_right__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "dca6a19ecb4e1668",
+   "hash": "bffbb197e5aeb592",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__ANOMALY__thr20__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h16_thrustcontrol_right__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "dca6a19ecb4e1668",
+   "hash": "bffbb197e5aeb592",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__ANOMALY__thr25__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h16_thrustcontrol_right__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "dca6a19ecb4e1668",
+   "hash": "bffbb197e5aeb592",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__ANOMALY__thr6__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h17_thrustcontrol_left__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "57a1b7ec3b34e652",
+   "hash": "9850e72492a20d49",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__ANOMALY__thr9__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h17_thrustcontrol_left__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "57a1b7ec3b34e652",
+   "hash": "9850e72492a20d49",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__ANOMALY__thr12__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h17_thrustcontrol_left__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "57a1b7ec3b34e652",
+   "hash": "9850e72492a20d49",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__ANOMALY__thr16__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h17_thrustcontrol_left__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "57a1b7ec3b34e652",
+   "hash": "9850e72492a20d49",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__ANOMALY__thr20__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h17_thrustcontrol_left__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "57a1b7ec3b34e652",
+   "hash": "9850e72492a20d49",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__ANOMALY__thr25__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h17_thrustcontrol_left__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "57a1b7ec3b34e652",
+   "hash": "9850e72492a20d49",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h1_car_left__ANOMALY__thr6__0",
+   "level": "m/h1_car_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h1_car_left__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d8e90455eac50009",
+   "hash": "f02606fdd6a43e7a",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h1_car_left__ANOMALY__thr9__0",
+   "level": "m/h1_car_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h1_car_left__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d8e90455eac50009",
+   "hash": "f02606fdd6a43e7a",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h1_car_left__ANOMALY__thr12__0",
+   "level": "m/h1_car_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h1_car_left__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d8e90455eac50009",
+   "hash": "f02606fdd6a43e7a",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h1_car_left__ANOMALY__thr16__0",
+   "level": "m/h1_car_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h1_car_left__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d8e90455eac50009",
+   "hash": "f02606fdd6a43e7a",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h1_car_left__ANOMALY__thr20__0",
+   "level": "m/h1_car_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h1_car_left__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d8e90455eac50009",
+   "hash": "f02606fdd6a43e7a",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h1_car_left__ANOMALY__thr25__0",
+   "level": "m/h1_car_left.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h1_car_left__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d8e90455eac50009",
+   "hash": "f02606fdd6a43e7a",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h2_car_right__ANOMALY__thr6__0",
+   "level": "m/h2_car_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h2_car_right__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8c522889cc515093",
+   "hash": "c9c3059708c5799f",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h2_car_right__ANOMALY__thr9__0",
+   "level": "m/h2_car_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h2_car_right__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8c522889cc515093",
+   "hash": "c9c3059708c5799f",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h2_car_right__ANOMALY__thr12__0",
+   "level": "m/h2_car_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h2_car_right__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8c522889cc515093",
+   "hash": "c9c3059708c5799f",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h2_car_right__ANOMALY__thr16__0",
+   "level": "m/h2_car_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h2_car_right__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8c522889cc515093",
+   "hash": "c9c3059708c5799f",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h2_car_right__ANOMALY__thr20__0",
+   "level": "m/h2_car_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h2_car_right__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8c522889cc515093",
+   "hash": "c9c3059708c5799f",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h2_car_right__ANOMALY__thr25__0",
+   "level": "m/h2_car_right.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h2_car_right__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "8c522889cc515093",
+   "hash": "c9c3059708c5799f",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h3_car_thrust__ANOMALY__thr6__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h3_car_thrust__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "81fda154fc3bed7f",
+   "hash": "05bcf0a53d8986e8",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h3_car_thrust__ANOMALY__thr9__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h3_car_thrust__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "81fda154fc3bed7f",
+   "hash": "05bcf0a53d8986e8",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h3_car_thrust__ANOMALY__thr12__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h3_car_thrust__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "81fda154fc3bed7f",
+   "hash": "05bcf0a53d8986e8",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h3_car_thrust__ANOMALY__thr16__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h3_car_thrust__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "81fda154fc3bed7f",
+   "hash": "05bcf0a53d8986e8",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h3_car_thrust__ANOMALY__thr20__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h3_car_thrust__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "81fda154fc3bed7f",
+   "hash": "05bcf0a53d8986e8",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h3_car_thrust__ANOMALY__thr25__0",
+   "level": "m/h3_car_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h3_car_thrust__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "81fda154fc3bed7f",
+   "hash": "05bcf0a53d8986e8",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_the_needle__ANOMALY__thr6__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_the_needle__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9bbb960610330189",
+   "hash": "bd24106459bdd9f1",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_the_needle__ANOMALY__thr9__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_the_needle__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9bbb960610330189",
+   "hash": "bd24106459bdd9f1",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_the_needle__ANOMALY__thr12__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_the_needle__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9bbb960610330189",
+   "hash": "bd24106459bdd9f1",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_the_needle__ANOMALY__thr16__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_the_needle__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9bbb960610330189",
+   "hash": "bd24106459bdd9f1",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_the_needle__ANOMALY__thr20__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_the_needle__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9bbb960610330189",
+   "hash": "bd24106459bdd9f1",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_the_needle__ANOMALY__thr25__0",
+   "level": "m/h4_thrust_the_needle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_the_needle__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "base_hash": "9bbb960610330189",
+   "hash": "bd24106459bdd9f1",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__ANOMALY__thr6__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h5_angry_birds__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95ba29247c416b44",
+   "hash": "ff2e166ec5e7abd0",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__ANOMALY__thr9__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h5_angry_birds__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95ba29247c416b44",
+   "hash": "ff2e166ec5e7abd0",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__ANOMALY__thr12__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h5_angry_birds__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95ba29247c416b44",
+   "hash": "ff2e166ec5e7abd0",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__ANOMALY__thr16__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h5_angry_birds__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95ba29247c416b44",
+   "hash": "ff2e166ec5e7abd0",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__ANOMALY__thr20__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h5_angry_birds__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95ba29247c416b44",
+   "hash": "ff2e166ec5e7abd0",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__ANOMALY__thr25__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h5_angry_birds__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "95ba29247c416b44",
+   "hash": "ff2e166ec5e7abd0",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_unicycle__ANOMALY__thr6__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_unicycle__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f6ca293726d2fdea",
+   "hash": "02fb87bd300ce2d4",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_unicycle__ANOMALY__thr9__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_unicycle__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f6ca293726d2fdea",
+   "hash": "02fb87bd300ce2d4",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_unicycle__ANOMALY__thr12__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_unicycle__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f6ca293726d2fdea",
+   "hash": "02fb87bd300ce2d4",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_unicycle__ANOMALY__thr16__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_unicycle__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f6ca293726d2fdea",
+   "hash": "02fb87bd300ce2d4",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_unicycle__ANOMALY__thr20__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_unicycle__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f6ca293726d2fdea",
+   "hash": "02fb87bd300ce2d4",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_unicycle__ANOMALY__thr25__0",
+   "level": "m/h0_unicycle.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_unicycle__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "f6ca293726d2fdea",
+   "hash": "02fb87bd300ce2d4",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_weak_thrust__ANOMALY__thr6__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_weak_thrust__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3678cab384edc35d",
+   "hash": "b1be451bf8833fa5",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_weak_thrust__ANOMALY__thr9__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_weak_thrust__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3678cab384edc35d",
+   "hash": "b1be451bf8833fa5",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_weak_thrust__ANOMALY__thr12__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_weak_thrust__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3678cab384edc35d",
+   "hash": "b1be451bf8833fa5",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_weak_thrust__ANOMALY__thr16__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_weak_thrust__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3678cab384edc35d",
+   "hash": "b1be451bf8833fa5",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_weak_thrust__ANOMALY__thr20__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_weak_thrust__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3678cab384edc35d",
+   "hash": "b1be451bf8833fa5",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h0_weak_thrust__ANOMALY__thr25__0",
+   "level": "s/h0_weak_thrust.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h0_weak_thrust__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "3678cab384edc35d",
+   "hash": "b1be451bf8833fa5",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_aim__ANOMALY__thr6__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_aim__ANOMALY__thr6__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 6.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d910ef96714a37e5",
+   "hash": "00e91dd608a23979",
+   "difficulty": {
+    "speed_thr": 6.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_aim__ANOMALY__thr9__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_aim__ANOMALY__thr9__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 9.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d910ef96714a37e5",
+   "hash": "00e91dd608a23979",
+   "difficulty": {
+    "speed_thr": 9.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_aim__ANOMALY__thr12__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_aim__ANOMALY__thr12__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 12.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d910ef96714a37e5",
+   "hash": "00e91dd608a23979",
+   "difficulty": {
+    "speed_thr": 12.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_aim__ANOMALY__thr16__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_aim__ANOMALY__thr16__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 16.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d910ef96714a37e5",
+   "hash": "00e91dd608a23979",
+   "difficulty": {
+    "speed_thr": 16.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_aim__ANOMALY__thr20__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_aim__ANOMALY__thr20__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 20.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d910ef96714a37e5",
+   "hash": "00e91dd608a23979",
+   "difficulty": {
+    "speed_thr": 20.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  },
+  {
+   "name": "h4_thrust_aim__ANOMALY__thr25__0",
+   "level": "s/h4_thrust_aim.json",
+   "cls": "ANOMALY",
+   "seed": 0,
+   "path": "runs/graded/instances/h4_thrust_aim__ANOMALY__thr25__0.json",
+   "meta": {
+    "cls": 3,
+    "target_is_poly": true,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 25.0,
+    "contact_r": 0.0,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false,
+     false
+    ]
+   },
+   "base_hash": "d910ef96714a37e5",
+   "hash": "00e91dd608a23979",
+   "difficulty": {
+    "speed_thr": 25.0,
+    "restitution": 1.6
+   },
+   "probes": {}
+  }
+ ]
+}
