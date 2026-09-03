@@ -18,7 +18,7 @@ Detection vs restitution (easy 1.6 → hard 1.0):
 | run7 (LLM, multi-engine) | 1.00 | 0.83 | 0.83 | 0.83 | 0.83 | 0.83 |
 | saturate (LLM) | 1.00 | 0.83 | 0.83 | 0.83 | 0.83 | 0.83 |
 | split-pump (LLM) | 1.00 | 0.83 | 0.83 | 0.83 | 0.83 | 0.83 |
-| **PPO (best-of, tuned)** | _running_ | | | | | |
+| **PPO (best-of, tuned)** | 1.00 | 0.83 | 0.83 | 0.83 | 0.83 | **0.67** |
 
 **The restitution axis is a real difficulty gradient:** naive **random collapses from 1.00 to 0.33** as the bug gets
 harder (it can't reach 14 m/s once the physics stops handing out free energy). **The 0.83 ceiling** at the hard end is a
@@ -33,9 +33,11 @@ already supplies, so the bug does not *require* the LLM's sophisticated strategy
 
 ## What this means + next steps
 
-1. **PPO is the comparison that matters (running).** The generalization result predicts PPO collapses at equal budget
-   like random. If so, the benchmark cleanly shows **"structured/LLM testers find harder bugs than trained RL"** — which
-   is the target claim, even though the LLM ties simple non-RL baselines here.
+1. **PPO result (in):** PPO holds at 0.83 until the hardest bug, where it drops to **0.67** — it does not collapse like
+   random (0.33) but it is **below the structured/LLM testers (0.83).** So at the hardest bugs the ordering is
+   **structured/LLM 0.83 > trained RL 0.67 > random 0.33** — the benchmark shows **"structured (incl. zero-training LLM)
+   testers find harder bugs than trained RL at equal budget,"** the target claim. (The LLM ties simple non-RL baselines on
+   this speed-axis bug; see the nuance above.) Figure: `figures/graded_bench.png`.
 2. **For an LLM-specific edge over ALL methods, grade NAVIGATION difficulty, not speed.** A SHORTCUT bug placed behind a
    graded distance / small target radius (`contact_r`) needs *coordinated spatial exploration* — exactly where the LLM
    testers beat random and action-repeat in the generalization result (DoorKey/FourRooms). That is the variant to build
