@@ -1,0 +1,21 @@
+=== doorkey 16x (tuned) ===
+  substrate=xminigrid:MiniGrid-DoorKey-8x8 feat_dim=34 n_act=6
+  ppo_count              search                     score 0.958 detected 1.00
+  ppo_icm                search                     score 0.941 detected 1.00
+  ppo_curiosity_proximity search                     score 0.958 detected 1.00
+=== fourrooms 16x (tuned) ===
+  substrate=xminigrid:MiniGrid-FourRooms feat_dim=34 n_act=6
+  ppo_count              search                     score 0.685 detected 0.83
+  ppo_icm                search                     score 0.584 detected 0.67
+  ppo_curiosity_proximity search                     score 0.685 detected 0.83
+=== breakout 16x (tuned) ===
+  substrate=gymnax:Breakout-MinAtar feat_dim=17 n_act=3
+  ppo_count              search                     score 0.822 detected 0.96
+  ppo_icm                search                     score 0.821 detected 1.00
+  ppo_curiosity_proximity search                     score 0.874 detected 1.00
+=== sokoban 16x (tuned) ===
+  substrate=jumanji:Sokoban-v0 feat_dim=14 n_act=4
+  ppo_count              search                     score 0.704 detected 0.81
+  ppo_icm                search                     score 0.637 detected 0.78
+  ppo_curiosity_proximity search                     score 0.706 detected 0.78
+16X TUNED DONE

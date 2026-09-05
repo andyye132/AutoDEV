@@ -1,0 +1,74 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.19734700520833337,
+   "detected": 0.5,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     101568.0
+    ],
+    [
+     131072.0
+    ],
+    [
+     131072.0
+    ],
+    [
+     37824.0
+    ],
+    [
+     131072.0
+    ],
+    [
+     98624.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ]
+  }
+ },
+ "ppo_task": {
+  "search": {
+   "score": 0.0,
+   "detected": 0.0,
+   "n": 6,
+   "budget": 131072,
+   "first_hit": [
+    [
+     131072.0
+    ],
+    [
+     131072.0
+    ],
+    [
+     131072.0
+    ],
+    [
+     131072.0
+    ],
+    [
+     131072.0
+    ],
+    [
+     131072.0
+    ]
+   ],
+   "names": [
+    "MountainCar-v0__seed0",
+    "MountainCar-v0__seed1",
+    "MountainCar-v0__seed2",
+    "MountainCar-v0__seed3",
+    "MountainCar-v0__seed4",
+    "MountainCar-v0__seed5"
+   ]
+  }
+ }
+}

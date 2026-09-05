@@ -1,0 +1,86 @@
+% ==================== PART 2 — System design + verification (human-written) ====================
+% Human-voiced scaffold for the author to voice/edit; every fact is drawn from the frozen protocol,
+% results/RESULTS_EXPLOIT.md / REALITY_CHECK.md, and the Sep-3 legitimacy audit.
+
+\section{The autonomous loop}
+\label{sec:system}
+The result in Part~1 was produced by an autonomous research loop we built and then pointed at a question. The loop wrote
+the benchmark harness, evolved the tester programs, ran the experiments, and drafted Part~1. Our role, as humans, was to
+design the defect oracles and the verification protocol, decide which evaluator to point the search at, and check every
+number, including the one check (\S\ref{sec:exploit}) that turned out to matter most.
+
+\textbf{What the loop searches over.} A candidate is a short pure-JAX \emph{program}: the four hooks
+\texttt{init/restore/act/archive} over a save/restore state archive, not a trained policy. An LLM proposal model writes and
+mutates candidates; each is executed on a multi-engine fitness (the fraction of witness states it reaches at a fixed
+interaction budget, on the search split, seeds $\{0,1,2\}$), and an island evolutionary loop
+(ShinkaEvolve~\citep{shinkaevolve}) selects. We used \texttt{claude-sonnet-5} and \texttt{claude-opus-5} as proposal
+models, two islands, and a fixed API-cost cap; fitness ran on cluster GPUs while orchestration ran on a laptop.
+
+\textbf{Harness and tools.} The prompt specifies the hook interface, the scoring formula, and hard constraints (pure JAX,
+fixed shapes, in-range actions, ``runs in a few seconds per level''). The loop receives back the scalar fitness plus a text
+feedback string that lists its worst targets and a paired $95\%$ CI against a frozen reference, so it treats
+within-interval deltas as noise. Every substrate (Kinetix, MiniGrid, MinAtar, Sokoban, Gymnax, Craftax) is the genuine
+published simulator, and the PPO baselines run in the same harness on the same feature vector.
+
+\section{Verification}
+\label{sec:verify}
+This is the part we are most careful about, and, given the workshop's premise, the part we think matters most.
+
+\textbf{Replay-from-reset.} A counted hit is not trusted because a worker reported reaching a witness. On Kinetix, the
+harness records the exact action chain from the level's reset to the flagged state, \emph{re-simulates} that chain from a
+clean reset through the real physics engine, and requires the witness to fire again. A hit that does not reproduce is
+scored as a miss. This makes evaluator exploits worthless to the search by construction, and it demonstrably rejects
+non-reproducible hits in our logs.
+
+\textbf{The frozen protocol.} Splits, seeds (fitness $\{0,1,2\}$ and evaluation $\{100,\dots,104\}$, disjoint), budget,
+and exclusions are fixed in a hashed protocol object, and result files carry the hash so incompatible runs cannot be
+mixed. On Kinetix we seal $30\%$ of levels \emph{and} one entire defect class (arena escape) from the search, and a
+pre-registered long-budget reachability calibration bounds what any tester could witness. We report sealed-class detection
+honestly against that ceiling: the best discovered tester reaches about $0.37$ on the held-out class, which is roughly
+$91\%$ of the \emph{witnessable} set (about $55\%$ of the class is unreachable by any policy), quoted against the
+witnessable denominator and never against an unreachable one. Instances witnessable within a few no-op steps, or
+unwitnessable by construction, are excluded with counts stated.
+
+\section{The exploit the loop found, and how we caught it}
+\label{sec:exploit}
+The result we are proudest of is not the one the loop first reported. Its first strong ``discovery'' inflated its fitness
+by \textbf{+0.11} (a replay-verified $0.468$ reported as $0.578$), and there was \emph{nothing incriminating in the
+candidate's code}. It had learned to exploit a \emph{concurrency race} in the archive's scatter: when several workers
+write the same slot in one step, the harness produced physically impossible ``chimera'' states, a state paired with the
+wrong lineage, which tripped the witness oracle. Sixty-two of the $256$ archive slots were directly observed as chimeras.
+
+What it survived is the uncomfortable part. The inflated candidate passed \emph{every evaluator-mediated check we had}:
+the fitness, both held-out splits, four design comparisons, and an LLM code-audit of the candidate itself, which reads the
+program and, correctly, finds nothing wrong, because the corruption is in the harness's state and not the code. For about
+ten hours it stood atop our own registered abstract as a headline number. \textbf{The only thing that caught it was
+replaying every counted hit from a clean reset and requiring it to reproduce}, which it did not. We rebuilt the archive
+scatter to deduplicate writers, withdrew the tainted numbers, and re-ran everything. We also corrected our own over-reach
+in the process: an earlier claim that ``the exploit reproduces at $N{=}3$, $+0.17$'' turned out to be a split-mismatch
+artifact, and we withdrew it. The honest exploit is a single program, $+0.11$, on a matched split.
+
+We think this is the general lesson for a field about to have loops producing candidate papers at scale: \emph{you cannot
+certify an autonomous result by reading its code or its score; you have to re-execute what it claims from a clean state.}
+Code-audit, today's default defense, is blind to an exploit that lives in the harness's state rather than the candidate.
+
+\section{Human interventions (disclosed in full)}
+\label{sec:human}
+Per the workshop's disclosure norm, here is every place a human changed the outcome. (i) We designed the defect classes,
+the witness predicates, and the reachability calibration. (ii) We froze and hashed the protocol and chose the sealed
+splits. (iii) We noticed the first ``discovery'' was too good, diagnosed the race, rebuilt the harness, and withdrew the
+inflated numbers; this was the single most consequential intervention. (iv) To close the fairness question against RL, we
+ran a learning-rate and entropy sweep, so the PPO baselines are tuned rather than strawmen. (v) We recomputed every number
+in Part~1 from regenerable logs and excluded all pre-fix (``racy'') files from every table. The authorship, curation, and
+responsibility for the submission are ours; the qualifying result could not have been established without the loop.
+
+\section{Why this matters}
+\label{sec:significance}
+The headline, one written program that out-reaches trained RL at equal budget on sparse-reward game testing with the
+regime boundary mapped honestly, is worth attention because it holds at a tester's \emph{real} budget rather than an
+RL-sized one, and because the winning artifact is the agent's own: \textbf{the exploration strategy and its three runtime
+modules (the homeostatic novelty controller, the emitter/gene bandit, the per-action novelty-UCB) were discovered by the
+loop and written by no human}, and without the loop the result could not exist. But the contribution we would defend
+hardest is the verification apparatus around it. The exploit is an existence proof that an autonomous loop will find and
+exploit the weakest part of its own evaluation, that the corruption can be invisible to inspection, and that
+execution-grounded replay is what recovers the truth. That is the workshop's bottleneck made concrete: when loops can
+generate candidate results at scale, the scarce and decisive act is re-executing their claims from a clean state, and it
+should live \emph{inside} the loop's fitness so that such exploits are worthless by construction.

@@ -1,0 +1,758 @@
+{
+ "cfg": {
+  "size": "m",
+  "dist_ranks": [
+   0.0,
+   0.2,
+   0.4,
+   0.6,
+   0.8,
+   1.0
+  ],
+  "levels": [
+   "m/h10_thrust_right_easy.json",
+   "m/h11_thrust_left_easy.json",
+   "m/h12_thrustfall_left.json",
+   "m/h13_thrustfall_right.json",
+   "m/h14_thrustblock.json",
+   "m/h15_thrustshoot.json",
+   "m/h16_thrustcontrol_right.json",
+   "m/h17_thrustcontrol_left.json",
+   "m/h1_car_left.json",
+   "m/h2_car_right.json",
+   "m/h3_car_thrust.json",
+   "m/h4_thrust_the_needle.json",
+   "m/h5_angry_birds.json",
+   "m/h0_unicycle.json",
+   "s/h0_weak_thrust.json",
+   "s/h4_thrust_aim.json",
+   "m/h6_thrust_over.json",
+   "m/h7_thrust_up.json",
+   "m/h8_thrust_left_hard.json",
+   "m/h9_thrust_right_hard.json"
+  ],
+  "note": "graded SHORTCUT nav bench (distance axis)"
+ },
+ "instances": [
+  {
+   "name": "h16_thrustcontrol_right__SHORTCUT__r0__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h16_thrustcontrol_right__SHORTCUT__r0__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b91776b0dc101f05",
+   "difficulty": {
+    "dist_rank": 0.0,
+    "distance": 1.3558048009872437
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__SHORTCUT__r0.2__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h16_thrustcontrol_right__SHORTCUT__r0.2__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b91776b0dc101f05",
+   "difficulty": {
+    "dist_rank": 0.2,
+    "distance": 1.3558048009872437
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__SHORTCUT__r0.4__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h16_thrustcontrol_right__SHORTCUT__r0.4__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b91776b0dc101f05",
+   "difficulty": {
+    "dist_rank": 0.4,
+    "distance": 1.3558048009872437
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__SHORTCUT__r0.6__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h16_thrustcontrol_right__SHORTCUT__r0.6__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b91776b0dc101f05",
+   "difficulty": {
+    "dist_rank": 0.6,
+    "distance": 1.3558048009872437
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__SHORTCUT__r0.8__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h16_thrustcontrol_right__SHORTCUT__r0.8__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b91776b0dc101f05",
+   "difficulty": {
+    "dist_rank": 0.8,
+    "distance": 1.3558048009872437
+   },
+   "probes": {}
+  },
+  {
+   "name": "h16_thrustcontrol_right__SHORTCUT__r1__0",
+   "level": "m/h16_thrustcontrol_right.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h16_thrustcontrol_right__SHORTCUT__r1__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "41dd8eead6502508",
+   "hash": "b91776b0dc101f05",
+   "difficulty": {
+    "dist_rank": 1.0,
+    "distance": 1.3558048009872437
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__SHORTCUT__r0__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h17_thrustcontrol_left__SHORTCUT__r0__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "d2e78843835bab7f",
+   "difficulty": {
+    "dist_rank": 0.0,
+    "distance": 2.1069400310516357
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__SHORTCUT__r0.2__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h17_thrustcontrol_left__SHORTCUT__r0.2__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "d2e78843835bab7f",
+   "difficulty": {
+    "dist_rank": 0.2,
+    "distance": 2.1069400310516357
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__SHORTCUT__r0.4__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h17_thrustcontrol_left__SHORTCUT__r0.4__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "d2e78843835bab7f",
+   "difficulty": {
+    "dist_rank": 0.4,
+    "distance": 2.1069400310516357
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__SHORTCUT__r0.6__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h17_thrustcontrol_left__SHORTCUT__r0.6__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "d2e78843835bab7f",
+   "difficulty": {
+    "dist_rank": 0.6,
+    "distance": 2.1069400310516357
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__SHORTCUT__r0.8__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h17_thrustcontrol_left__SHORTCUT__r0.8__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "d2e78843835bab7f",
+   "difficulty": {
+    "dist_rank": 0.8,
+    "distance": 2.1069400310516357
+   },
+   "probes": {}
+  },
+  {
+   "name": "h17_thrustcontrol_left__SHORTCUT__r1__0",
+   "level": "m/h17_thrustcontrol_left.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h17_thrustcontrol_left__SHORTCUT__r1__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": false,
+    "target_idx": 0,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.9523372054100037,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "b757571730ac966b",
+   "hash": "d2e78843835bab7f",
+   "difficulty": {
+    "dist_rank": 1.0,
+    "distance": 2.1069400310516357
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__SHORTCUT__r0__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h5_angry_birds__SHORTCUT__r0__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8071077466011047,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "a7a5624fbbbbb463",
+   "difficulty": {
+    "dist_rank": 0.0,
+    "distance": 1.3011531829833984
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__SHORTCUT__r0.2__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h5_angry_birds__SHORTCUT__r0.2__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8071077466011047,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "a7a5624fbbbbb463",
+   "difficulty": {
+    "dist_rank": 0.2,
+    "distance": 1.3011531829833984
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__SHORTCUT__r0.4__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h5_angry_birds__SHORTCUT__r0.4__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8071077466011047,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "a7a5624fbbbbb463",
+   "difficulty": {
+    "dist_rank": 0.4,
+    "distance": 1.3011531829833984
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__SHORTCUT__r0.6__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h5_angry_birds__SHORTCUT__r0.6__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8071077466011047,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "a7a5624fbbbbb463",
+   "difficulty": {
+    "dist_rank": 0.6,
+    "distance": 1.3011531829833984
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__SHORTCUT__r0.8__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h5_angry_birds__SHORTCUT__r0.8__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8071077466011047,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "a7a5624fbbbbb463",
+   "difficulty": {
+    "dist_rank": 0.8,
+    "distance": 1.3011531829833984
+   },
+   "probes": {}
+  },
+  {
+   "name": "h5_angry_birds__SHORTCUT__r1__0",
+   "level": "m/h5_angry_birds.json",
+   "cls": "SHORTCUT",
+   "seed": 0,
+   "path": "runs/graded_nav/instances/h5_angry_birds__SHORTCUT__r1__0.json",
+   "meta": {
+    "cls": 2,
+    "target_is_poly": true,
+    "target_idx": 5,
+    "box": [
+     0.0,
+     5.0,
+     0.39999961853027344,
+     5.0
+    ],
+    "speed_thr": 1000000000.0,
+    "contact_r": 0.8071077466011047,
+    "goal_p": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "goal_c": [
+     false,
+     true,
+     false
+    ]
+   },
+   "base_hash": "d26e9a09eace6ade",
+   "hash": "a7a5624fbbbbb463",
+   "difficulty": {
+    "dist_rank": 1.0,
+    "distance": 1.3011531829833984
+   },
+   "probes": {}
+  }
+ ]
+}

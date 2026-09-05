@@ -23,7 +23,7 @@ n = len(data); x = np.arange(n); w = 0.26
 fig, ax = plt.subplots(figsize=(max(8, n * 1.25), 4.6))
 c_rnd, c_ppo, c_llm = "#9aa4ad", "#d98b3a", "#0e6e62"
 ax.bar(x - w, rnd, w, label="random", color=c_rnd)
-ax.bar(x, ppo, w, label="best PPO (5 objectives, trained)", color=c_ppo)
+ax.bar(x, ppo, w, label="best PPO (5 objectives, tuned)", color=c_ppo)
 ax.bar(x + w, llm, w, label="best LLM tester (zero training)", color=c_llm)
 
 for i in range(n):
@@ -32,7 +32,7 @@ for i in range(n):
 ax.set_ylabel("fraction of targets reached\n(detection, equal budget)")
 ax.set_ylim(0, 1.15)
 ax.set_xticks(x); ax.set_xticklabels(labels, rotation=25, ha="right", fontsize=9)
-ax.set_title("At equal interaction budget, a zero-training LLM-written tester beats trained PPO on 7 of 8 RL tasks\n(clear win on 7; tie on Craftax) — grid, arcade, puzzle, control, deep-exploration, physics, survival", fontsize=10)
+ax.set_title("At equal budget, a zero-training LLM-written tester matches or beats TUNED PPO on all 8 RL tasks\n(clear win on 6; ties on DeepSea-24 & Craftax) — grid, arcade, puzzle, control, deep-explore, physics, survival", fontsize=9.5)
 ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.22), ncol=3, fontsize=9, framealpha=0, columnspacing=1.8)
 ax.spines[["top", "right"]].set_visible(False)
 ax.grid(axis="y", alpha=0.25)

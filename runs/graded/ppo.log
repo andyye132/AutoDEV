@@ -1,0 +1,5 @@
+ppo_count                search                     score 0.682 detected 0.78 per-class-detected {ANOMALY:0.78}
+ppo_curiosity_proximity  search                     score 0.685 detected 0.83 per-class-detected {ANOMALY:0.83}
+ppo_count                search                     score 0.696 detected 0.81 per-class-detected {ANOMALY:0.81}
+ppo_curiosity_proximity  search                     score 0.694 detected 0.83 per-class-detected {ANOMALY:0.83}
+GRADED_PPO_DONE

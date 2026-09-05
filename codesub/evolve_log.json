@@ -1,0 +1,27 @@
+{
+ "trajectory": [
+  {
+   "gen": 0,
+   "flawed": 0.6188,
+   "isolated": 0.4365,
+   "gap": 0.1823,
+   "adopted": true,
+   "patch": "seed"
+  },
+  {
+   "gen": 1,
+   "adopted": true,
+   "flawed": 1.0,
+   "isolated": 0.9006,
+   "gap": 0.0994
+  },
+  {
+   "gen": 2,
+   "adopted": false,
+   "flawed": 1.0,
+   "isolated": 0.9006,
+   "gap": 0.0994
+  }
+ ],
+ "best_flawed": 1.0
+}

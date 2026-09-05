@@ -1,4 +1,4 @@
-"""Analyze + plot the graded bug-finding benchmark: detection accuracy vs bug difficulty (ANOMALY speed threshold),
+"""Analyze + plot the graded bug-finding benchmark: detection accuracy vs bug difficulty (physics restitution axis),
 per method. Reads runs/graded/eval_testers.json (+ eval_ppo_default/tuned.json) and runs/graded/pool.json.
 -> figures/graded_bench.png + results/graded_bench.json"""
 import json, os, glob
@@ -11,7 +11,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
 pool = {p["name"]: p for p in json.load(open("runs/graded/pool.json"))["instances"]}
-THRS = sorted({p["difficulty"]["speed_thr"] for p in pool.values()})
+RESTS = sorted({p["difficulty"]["restitution"] for p in pool.values()}, reverse=True)  # 1.6 easy -> 1.0 hard
+DIFF_IDX = list(range(len(RESTS)))
 
 
 def detected_by_instance(splitdata):
@@ -55,8 +56,8 @@ methods = load_methods()
 curves = {}
 for m, inst in methods.items():
     y = []
-    for thr in THRS:
-        names = [n for n, p in pool.items() if p["difficulty"]["speed_thr"] == thr and n in inst]
+    for r in RESTS:
+        names = [n for n, p in pool.items() if p["difficulty"]["restitution"] == r and n in inst]
         y.append(np.mean([inst[n] for n in names]) if names else np.nan)
     curves[m] = y
 
@@ -65,17 +66,19 @@ COLOR = {"run7": "#0e6e62", "saturate": "#1a9e8f", "split_pump": "#3bb9a8", "mac
          "PPO (best-of, tuned)": "#d98b3a", "random": "#9aa4ad", "repeat_random": "#b7bec4", "goexplore": "#6b7580"}
 fig, ax = plt.subplots(figsize=(7.5, 4.6))
 for m, y in sorted(curves.items(), key=lambda kv: -np.nanmean(kv[1])):
-    ax.plot(THRS, y, marker="o", lw=2 if "run7" in m or "PPO" in m else 1.4,
+    ax.plot(DIFF_IDX, y, marker="o", lw=2 if "run7" in m or "PPO" in m else 1.4,
             color=COLOR.get(m, "#888"), label=m, alpha=0.95)
-ax.set_xlabel("bug difficulty — ANOMALY speed threshold (m/s), higher = harder to trigger")
+ax.set_xticks(DIFF_IDX); ax.set_xticklabels([f"{r:g}" for r in RESTS])
+ax.set_xlabel("bug difficulty — physics restitution (1.6 = free energy, easy  ->  1.0 = must drive, hard)")
 ax.set_ylabel("detection rate (equal budget)")
 ax.set_ylim(-0.03, 1.05)
 ax.set_title("Detection accuracy vs bug difficulty: which methods find harder bugs?", fontsize=11)
 ax.legend(fontsize=8.5, loc="upper right", framealpha=0.95)
 ax.grid(alpha=0.25); ax.spines[["top", "right"]].set_visible(False)
 fig.tight_layout(); fig.savefig("figures/graded_bench.png", dpi=170, bbox_inches="tight")
-json.dump({"thresholds": THRS, "curves": {m: [None if np.isnan(v) else round(v, 3) for v in y] for m, y in curves.items()}},
+json.dump({"restitution_easy_to_hard": RESTS, "curves": {m: [None if np.isnan(v) else round(v, 3) for v in y] for m, y in curves.items()}},
           open("results/graded_bench.json", "w"), indent=1)
 print("wrote figures/graded_bench.png + results/graded_bench.json")
+print("difficulty (restitution) easy->hard:", RESTS)
 for m, y in sorted(curves.items(), key=lambda kv: -np.nanmean(kv[1])):
     print(f"  {m:22s} " + " ".join(f"{('%.2f'%v) if not np.isnan(v) else ' -- '}" for v in y))

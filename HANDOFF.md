@@ -9,9 +9,13 @@ _Last updated: 2026-09-02, ~5 AM PT. This is the single doc a new session should
 **The framing pivoted (Andy's call) from the evaluator-fraud/steering-wheel thesis to the equal-budget win, made GENERAL** —
 because Andy judged the fraud angle "too narrow, not for RL testing." The decisive new result:
 
-**At an equal interaction budget, a zero-training LLM-written tester beats trained PPO at reaching target states on 7 of 8
-structurally different RL tasks (ties on the 8th, Craftax).** DoorKey 1.00/0.28, FourRooms 0.87/0.39, Breakout 1.00/0.33,
-Sokoban 0.79/0.28, MountainCar 1.00/0.61, DeepSea-24 1.00/0.78, K-Goal 0.67/0.56, Craftax 0.35/0.34 (tie). Built substrate-
+**At an equal interaction budget, a zero-training LLM-written tester matches or beats a TUNED PPO explorer on all 8
+structurally different RL tasks — clear win on 6, tie on 2 (DeepSea-24, Craftax); it never loses.** Tuned PPO best-of-{5
+objectives}×{default, lr1e-4/ent0.2}: DoorKey LLM 1.00 / PPO 0.83, FourRooms 0.87/0.50, Breakout 1.00/0.42, Sokoban
+0.79/0.41, MountainCar 1.00/0.73, DeepSea-24 1.00/1.00 (tie), K-Goal 0.67/0.56, Craftax 0.35/0.34 (tie). The genuinely
+LLM-hard wins (LLM beats random+action-repeat+tuned PPO) are the 4 sparse-nav tasks: DoorKey, FourRooms, Breakout, Sokoban
+(MountainCar & DeepSea are also solved by action-repeat=1.00). HONEST crossover: tuned PPO reaches 1.00 on DoorKey at 4×
+budget — so the claim is strictly EQUAL-budget; "RL doesn't catch up at 16×" was a default-PPO artifact and is withdrawn. Built substrate-
 generic PPO (`autodev/ppo.py::make_train_substrate`, `scripts/eval_ppo_substrate.py`) — the existing PPO was Kinetix-only.
 Ran entirely on CPU (Hyak Duo dropped ~1 AM; nothing blocked). Defenses proven: (1) beats plain Go-Explore 5/6 (DoorKey 1.0
 vs 0.10) → it's the LLM's discovered strategy, not just save/restore; (2) even at **16× budget** PPO still loses on

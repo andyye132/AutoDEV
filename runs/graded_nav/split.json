@@ -1,0 +1,28 @@
+{
+ "pool": "runs/graded_nav/pool.json",
+ "budget": 262144,
+ "size": "m",
+ "search": [
+  "h16_thrustcontrol_right__SHORTCUT__r0__0",
+  "h16_thrustcontrol_right__SHORTCUT__r0.2__0",
+  "h16_thrustcontrol_right__SHORTCUT__r0.4__0",
+  "h16_thrustcontrol_right__SHORTCUT__r0.6__0",
+  "h16_thrustcontrol_right__SHORTCUT__r0.8__0",
+  "h16_thrustcontrol_right__SHORTCUT__r1__0",
+  "h17_thrustcontrol_left__SHORTCUT__r0__0",
+  "h17_thrustcontrol_left__SHORTCUT__r0.2__0",
+  "h17_thrustcontrol_left__SHORTCUT__r0.4__0",
+  "h17_thrustcontrol_left__SHORTCUT__r0.6__0",
+  "h17_thrustcontrol_left__SHORTCUT__r0.8__0",
+  "h17_thrustcontrol_left__SHORTCUT__r1__0",
+  "h5_angry_birds__SHORTCUT__r0__0",
+  "h5_angry_birds__SHORTCUT__r0.2__0",
+  "h5_angry_birds__SHORTCUT__r0.4__0",
+  "h5_angry_birds__SHORTCUT__r0.6__0",
+  "h5_angry_birds__SHORTCUT__r0.8__0",
+  "h5_angry_birds__SHORTCUT__r1__0"
+ ],
+ "heldout_levels_instances": [],
+ "heldout_class_instances": [],
+ "excluded": []
+}

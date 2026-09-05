@@ -1,0 +1,85 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Burda et~al.(2019)Burda, Edwards, Storkey, and Klimov]{rnd}
+Yuri Burda, Harrison Edwards, Amos Storkey, and Oleg Klimov.
+\newblock Exploration by random network distillation.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2019.
+\newblock URL \url{https://arxiv.org/abs/1810.12894}.
+
+\bibitem[Ecoffet et~al.(2021)Ecoffet, Huizinga, Lehman, Stanley, and
+  Clune]{goexplore}
+Adrien Ecoffet, Joost Huizinga, Joel Lehman, Kenneth~O. Stanley, and Jeff
+  Clune.
+\newblock First return, then explore.
+\newblock \emph{Nature}, 590:\penalty0 580--586, 2021.
+\newblock \doi{10.1038/s41586-020-03157-9}.
+
+\bibitem[Hatgis-Kessell and Brunskill(2026)]{promptpo}
+Stephane Hatgis-Kessell and Emma Brunskill.
+\newblock When are {LLM}s sufficient policy optimizers for sequential {RL}
+  tasks?
+\newblock \emph{arXiv preprint arXiv:2605.30719}, 2026.
+
+\bibitem[Lange et~al.(2025)Lange, Imajuku, and Cetin]{shinkaevolve}
+Robert~Tjarko Lange, Yuki Imajuku, and Edoardo Cetin.
+\newblock {ShinkaEvolve}: Towards open-ended and sample-efficient program
+  evolution.
+\newblock \emph{arXiv preprint arXiv:2509.19349}, 2025.
+
+\bibitem[Ma et~al.(2024)Ma, Liang, Wang, Huang, Bastani, Jayaraman, Zhu, Fan,
+  and Anandkumar]{eureka}
+Yecheng~Jason Ma, William Liang, Guanzhi Wang, De-An Huang, Osbert Bastani,
+  Dinesh Jayaraman, Yuke Zhu, Linxi Fan, and Anima Anandkumar.
+\newblock Eureka: Human-level reward design via coding large language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2024.
+
+\bibitem[Machado et~al.(2018)Machado, Bellemare, Talvitie, Veness, Hausknecht,
+  and Bowling]{machado2018}
+Marlos~C. Machado, Marc~G. Bellemare, Erik Talvitie, Joel Veness, Matthew
+  Hausknecht, and Michael Bowling.
+\newblock Revisiting the arcade learning environment: Evaluation protocols and
+  open problems for general agents.
+\newblock \emph{Journal of Artificial Intelligence Research}, 61:\penalty0
+  523--562, 2018.
+\newblock \doi{10.1613/jair.5699}.
+
+\bibitem[Pathak et~al.(2017)Pathak, Agrawal, Efros, and Darrell]{icm}
+Deepak Pathak, Pulkit Agrawal, Alexei~A. Efros, and Trevor Darrell.
+\newblock Curiosity-driven exploration by self-supervised prediction.
+\newblock In \emph{Proceedings of the 34th International Conference on Machine
+  Learning (ICML)}, 2017.
+
+\bibitem[Romera-Paredes et~al.(2024)Romera-Paredes, Barekatain, Novikov, Balog,
+  Kumar, Dupont, Ruiz, Ellenberg, Wang, Fawzi, Kohli, and Fawzi]{funsearch}
+Bernardino Romera-Paredes, Mohammadamin Barekatain, Alexander Novikov, Matej
+  Balog, M.~Pawan Kumar, Emilien Dupont, Francisco J.~R. Ruiz, Jordan~S.
+  Ellenberg, Pengming Wang, Omar Fawzi, Pushmeet Kohli, and Alhussein Fawzi.
+\newblock Mathematical discoveries from program search with large language
+  models.
+\newblock \emph{Nature}, 625\penalty0 (7995):\penalty0 468--475, 2024.
+\newblock \doi{10.1038/s41586-023-06924-6}.
+
+\bibitem[Tang et~al.(2017)Tang, Houthooft, Foote, Stooke, Chen, Duan, Schulman,
+  De~Turck, and Abbeel]{tang2017}
+Haoran Tang, Rein Houthooft, Davis Foote, Adam Stooke, Xi~Chen, Yan Duan, John
+  Schulman, Filip De~Turck, and Pieter Abbeel.
+\newblock {\#}exploration: A study of count-based exploration for deep
+  reinforcement learning.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2017.
+\newblock URL \url{https://arxiv.org/abs/1611.04717}.
+
+\bibitem[Wang et~al.(2025)Wang, Tang, Yuan, Yu, Xie, and Bu]{titan}
+Chengjia Wang, Lanling Tang, Ming Yuan, Jiongchi Yu, Xiaofei Xie, and Jiajun
+  Bu.
+\newblock Leveraging llm agents for automated video game testing.
+\newblock \emph{arXiv preprint arXiv:2509.22170}, 2025.
+
+\end{thebibliography}

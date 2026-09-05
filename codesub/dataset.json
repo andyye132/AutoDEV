@@ -1,0 +1,2856 @@
+[
+ {
+  "id": "e000",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e000",
+   "name": "  Jósé Alváréz ",
+   "email": "r.roy@Example.COM",
+   "phone": "+1 824-964-6932",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=r.roy@example.com|phone=+1-8249646932|tags=board,founder"
+ },
+ {
+  "id": "e000",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e000",
+   "name": "Jósé Alváréz",
+   "email": "r.roy﻿@Example.COM",
+   "phone": "+1 824-964-6932",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=r.roy@example.com|phone=+1-8249646932|tags=board,founder"
+ },
+ {
+  "id": "e001",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e001",
+   "name": "  Hákón Odégárd ",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 915-940-8443",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=r.roy@mail.example.org|phone=+1-9159408443|tags=reseller,warm"
+ },
+ {
+  "id": "e001",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e001",
+   "name": "Hákón Odégárd",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 915-940-8443",
+   "tags": [
+    "WARM",
+    "reseller",
+    "RESELLER"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=r.roy@mail.example.org|phone=+1-9159408443|tags=reseller,warm"
+ },
+ {
+  "id": "e001",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e001",
+   "name": "  Hákón  Odégárd\t",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 915-940-8443",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=r.roy@mail.example.org|phone=+1-9159408443|tags=reseller,warm"
+ },
+ {
+  "id": "e002",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e002",
+   "name": "  Emílé Chástáín ",
+   "email": "k.ng@Foo.Bar.COM",
+   "phone": "+1 585-551-7300",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=k.ng@foo.bar.com|phone=+1-5855517300|tags=staff"
+ },
+ {
+  "id": "e002",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e002",
+   "name": "  Emílé  Chástáín\t",
+   "email": "k.ng@Foo.Bar.COM",
+   "phone": "+1 585-551-7300",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=k.ng@foo.bar.com|phone=+1-5855517300|tags=staff"
+ },
+ {
+  "id": "e002",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e002",
+   "name": "  Emílé  Chástáín\t",
+   "email": "k.ng@Foo.Bar.COM",
+   "phone": "+1 585-551-7300",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=k.ng@foo.bar.com|phone=+1-5855517300|tags=staff"
+ },
+ {
+  "id": "e003",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e003",
+   "name": "  Rénéé Dúbóís ",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+81 945-303-6932",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@mail.example.org|phone=+81-9453036932|tags=beta"
+ },
+ {
+  "id": "e003",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e003",
+   "name": "  Rénéé  Dúbóís\t",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+81 945-303-6932",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@mail.example.org|phone=+81-9453036932|tags=beta"
+ },
+ {
+  "id": "e003",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e003",
+   "name": "  Rénéé  Dúbóís\t",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+81 945-303-6932",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@mail.example.org|phone=+81-9453036932|tags=beta"
+ },
+ {
+  "id": "e004",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e004",
+   "name": "  Emílé Chástáín ",
+   "email": "j.doe@Example.COM",
+   "phone": "+44 416-384-1613",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=j.doe@example.com|phone=+44-4163841613|tags=partner,vip"
+ },
+ {
+  "id": "e004",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e004",
+   "name": "  Emílé  Chástáín\t",
+   "email": "j.doe@Example.COM",
+   "phone": "+44 416-384-1613",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=j.doe@example.com|phone=+44-4163841613|tags=partner,vip"
+ },
+ {
+  "id": "e004",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e004",
+   "name": "Emílé Chástáín",
+   "email": "j.doe@Example.COM",
+   "phone": "+44 416-384-1613",
+   "tags": [
+    "PARTNER",
+    "VIP",
+    "partner"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=j.doe@example.com|phone=+44-4163841613|tags=partner,vip"
+ },
+ {
+  "id": "e005",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e005",
+   "name": "  Mátéús Fácánhá ",
+   "email": "j.doe@Test.IO",
+   "phone": "+49 367-369-5723",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=j.doe@test.io|phone=+49-3673695723|tags=partner,vip"
+ },
+ {
+  "id": "e005",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e005",
+   "name": "  Mátéús  Fácánhá\t",
+   "email": "j.doe@Test.IO",
+   "phone": "+49 367-369-5723",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=j.doe@test.io|phone=+49-3673695723|tags=partner,vip"
+ },
+ {
+  "id": "e005",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e005",
+   "name": "Mátéús Fácánhá",
+   "email": "j.doe​@Test.IO",
+   "phone": "+49 367-369-5723",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=j.doe@test.io|phone=+49-3673695723|tags=partner,vip"
+ },
+ {
+  "id": "e006",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e006",
+   "name": "  André Cítróén ",
+   "email": "m.lee@Foo.Bar.COM",
+   "phone": "+1 270-477-8938",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=André Cítróén|email=m.lee@foo.bar.com|phone=+1-2704778938|tags=reseller,warm"
+ },
+ {
+  "id": "e006",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e006",
+   "name": "  André  Cítróén\t",
+   "email": "m.lee@Foo.Bar.COM",
+   "phone": "+1 270-477-8938",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=André Cítróén|email=m.lee@foo.bar.com|phone=+1-2704778938|tags=reseller,warm"
+ },
+ {
+  "id": "e006",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e006",
+   "name": "  André  Cítróén\t",
+   "email": "m.lee@Foo.Bar.COM",
+   "phone": "+1 270-477-8938",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=André Cítróén|email=m.lee@foo.bar.com|phone=+1-2704778938|tags=reseller,warm"
+ },
+ {
+  "id": "e007",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e007",
+   "name": "  Núríá Sólá ",
+   "email": "k.ng@Test.IO",
+   "phone": "+44 786-792-9642",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=k.ng@test.io|phone=+44-7867929642|tags=staff"
+ },
+ {
+  "id": "e007",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e007",
+   "name": "  Núríá  Sólá\t",
+   "email": "k.ng@Test.IO",
+   "phone": "+44 786-792-9642",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=k.ng@test.io|phone=+44-7867929642|tags=staff"
+ },
+ {
+  "id": "e007",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e007",
+   "name": "  Núríá  Sólá\t",
+   "email": "k.ng@Test.IO",
+   "phone": "+44 786-792-9642",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=k.ng@test.io|phone=+44-7867929642|tags=staff"
+ },
+ {
+  "id": "e008",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e008",
+   "name": "  Rénéé Dúbóís ",
+   "email": "a.smith@Test.IO",
+   "phone": "+61 772-327-6803",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=a.smith@test.io|phone=+61-7723276803|tags=staff"
+ },
+ {
+  "id": "e008",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e008",
+   "name": "  Rénéé  Dúbóís\t",
+   "email": "a.smith@Test.IO",
+   "phone": "+61 772-327-6803",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=a.smith@test.io|phone=+61-7723276803|tags=staff"
+ },
+ {
+  "id": "e008",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e008",
+   "name": "Rénéé Dúbóís",
+   "email": "a.smith@Test.IO",
+   "phone": "+61 772-327-6803",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=a.smith@test.io|phone=+61-7723276803|tags=staff"
+ },
+ {
+  "id": "e009",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e009",
+   "name": "  André Cítróén ",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+61 923-398-6362",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=André Cítróén|email=a.smith@foo.bar.com|phone=+61-9233986362|tags=beta"
+ },
+ {
+  "id": "e009",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e009",
+   "name": "André Cítróén",
+   "email": "a.smith‌@Foo.Bar.COM",
+   "phone": "+61 923-398-6362",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=André Cítróén|email=a.smith@foo.bar.com|phone=+61-9233986362|tags=beta"
+ },
+ {
+  "id": "e009",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e009",
+   "name": "André Cítróén",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+61 923-398-6362",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=André Cítróén|email=a.smith@foo.bar.com|phone=+61-9233986362|tags=beta"
+ },
+ {
+  "id": "e010",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e010",
+   "name": "  Hákón Odégárd ",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+81 602-597-8700",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=k.ng@mail.example.org|phone=+81-6025978700|tags=board,founder"
+ },
+ {
+  "id": "e010",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e010",
+   "name": "  Hákón  Odégárd\t",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+81 602-597-8700",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=k.ng@mail.example.org|phone=+81-6025978700|tags=board,founder"
+ },
+ {
+  "id": "e011",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e011",
+   "name": "  Lárs Abérg ",
+   "email": "a.smith@Mail.Example.ORG",
+   "phone": "+1 332-461-5767",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@mail.example.org|phone=+1-3324615767|tags=partner,vip"
+ },
+ {
+  "id": "e011",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e011",
+   "name": "Lárs Abérg",
+   "email": "a.smith@Mail.Example.ORG",
+   "phone": "+1 332-461-5767",
+   "tags": [
+    "PARTNER",
+    "VIP",
+    "partner"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@mail.example.org|phone=+1-3324615767|tags=partner,vip"
+ },
+ {
+  "id": "e011",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e011",
+   "name": "  Lárs  Abérg\t",
+   "email": "a.smith@Mail.Example.ORG",
+   "phone": "+1 332-461-5767",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@mail.example.org|phone=+1-3324615767|tags=partner,vip"
+ },
+ {
+  "id": "e012",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e012",
+   "name": "  Béátríz Góncálvés ",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 940-251-6205",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Béátríz Góncálvés|email=j.doe@example.com|phone=+1-9402516205|tags=board,founder"
+ },
+ {
+  "id": "e012",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e012",
+   "name": "Béátríz Góncálvés",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 940-251-6205",
+   "tags": [
+    "FOUNDER",
+    "Founder",
+    "BOARD"
+   ]
+  },
+  "expected": "name=Béátríz Góncálvés|email=j.doe@example.com|phone=+1-9402516205|tags=board,founder"
+ },
+ {
+  "id": "e012",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e012",
+   "name": "  Béátríz  Góncálvés\t",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 940-251-6205",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Béátríz Góncálvés|email=j.doe@example.com|phone=+1-9402516205|tags=board,founder"
+ },
+ {
+  "id": "e013",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e013",
+   "name": "  Rénéé Dúbóís ",
+   "email": "k.ng@Test.IO",
+   "phone": "+61 636-721-1092",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@test.io|phone=+61-6367211092|tags=partner,vip"
+ },
+ {
+  "id": "e013",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e013",
+   "name": "  Rénéé  Dúbóís\t",
+   "email": "k.ng@Test.IO",
+   "phone": "+61 636-721-1092",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@test.io|phone=+61-6367211092|tags=partner,vip"
+ },
+ {
+  "id": "e014",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e014",
+   "name": "  Gúntér Gróss ",
+   "email": "k.ng@Example.COM",
+   "phone": "+1 361-743-8641",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Gúntér Gróss|email=k.ng@example.com|phone=+1-3617438641|tags=beta"
+ },
+ {
+  "id": "e014",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e014",
+   "name": "  Gúntér  Gróss\t",
+   "email": "k.ng@Example.COM",
+   "phone": "+1 361-743-8641",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Gúntér Gróss|email=k.ng@example.com|phone=+1-3617438641|tags=beta"
+ },
+ {
+  "id": "e014",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e014",
+   "name": "  Gúntér  Gróss\t",
+   "email": "k.ng@Example.COM",
+   "phone": "+1 361-743-8641",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Gúntér Gróss|email=k.ng@example.com|phone=+1-3617438641|tags=beta"
+ },
+ {
+  "id": "e015",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e015",
+   "name": "  Jósé Alváréz ",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 330-632-1976",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=r.roy@mail.example.org|phone=+1-3306321976|tags=reseller,warm"
+ },
+ {
+  "id": "e015",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e015",
+   "name": "Jósé Alváréz",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 330-632-1976",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=r.roy@mail.example.org|phone=+1-3306321976|tags=reseller,warm"
+ },
+ {
+  "id": "e015",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e015",
+   "name": "  Jósé  Alváréz\t",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 330-632-1976",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=r.roy@mail.example.org|phone=+1-3306321976|tags=reseller,warm"
+ },
+ {
+  "id": "e016",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e016",
+   "name": "  Máríá Péná ",
+   "email": "r.roy@Example.COM",
+   "phone": "+1 489-617-7149",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=r.roy@example.com|phone=+1-4896177149|tags=newsletter,prospect"
+ },
+ {
+  "id": "e016",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e016",
+   "name": "Máríá Péná",
+   "email": "r.roy@Example.COM",
+   "phone": "+1 489-617-7149",
+   "tags": [
+    "PROSPECT",
+    "NEWSLETTER",
+    "prospect"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=r.roy@example.com|phone=+1-4896177149|tags=newsletter,prospect"
+ },
+ {
+  "id": "e017",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e017",
+   "name": "  André Cítróén ",
+   "email": "j.doe@Foo.Bar.COM",
+   "phone": "+1 569-856-6791",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=André Cítróén|email=j.doe@foo.bar.com|phone=+1-5698566791|tags=staff"
+ },
+ {
+  "id": "e017",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e017",
+   "name": "  André  Cítróén\t",
+   "email": "j.doe@Foo.Bar.COM",
+   "phone": "+1 569-856-6791",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=André Cítróén|email=j.doe@foo.bar.com|phone=+1-5698566791|tags=staff"
+ },
+ {
+  "id": "e017",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e017",
+   "name": "André Cítróén",
+   "email": "j.doe​@Foo.Bar.COM",
+   "phone": "+1 569-856-6791",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=André Cítróén|email=j.doe@foo.bar.com|phone=+1-5698566791|tags=staff"
+ },
+ {
+  "id": "e018",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e018",
+   "name": "  Fráncóís Múllér ",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 639-707-8697",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=j.doe@example.com|phone=+1-6397078697|tags=partner,vip"
+ },
+ {
+  "id": "e018",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e018",
+   "name": "Fráncóís Múllér",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 639-707-8697",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=j.doe@example.com|phone=+1-6397078697|tags=partner,vip"
+ },
+ {
+  "id": "e019",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e019",
+   "name": "  Emílé Chástáín ",
+   "email": "j.doe@Foo.Bar.COM",
+   "phone": "+61 806-316-4914",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=j.doe@foo.bar.com|phone=+61-8063164914|tags=customer,vip"
+ },
+ {
+  "id": "e019",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e019",
+   "name": "Emílé Chástáín",
+   "email": "j.doe‌@Foo.Bar.COM",
+   "phone": "+61 806-316-4914",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=j.doe@foo.bar.com|phone=+61-8063164914|tags=customer,vip"
+ },
+ {
+  "id": "e020",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e020",
+   "name": "  Fráncóís Múllér ",
+   "email": "r.roy@Example.COM",
+   "phone": "+1 635-396-9332",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=r.roy@example.com|phone=+1-6353969332|tags=partner,vip"
+ },
+ {
+  "id": "e020",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e020",
+   "name": "  Fráncóís  Múllér\t",
+   "email": "r.roy@Example.COM",
+   "phone": "+1 635-396-9332",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=r.roy@example.com|phone=+1-6353969332|tags=partner,vip"
+ },
+ {
+  "id": "e021",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e021",
+   "name": "  Zóé Bystróm ",
+   "email": "j.doe@Corp.Example.NET",
+   "phone": "+1 886-424-4882",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=j.doe@corp.example.net|phone=+1-8864244882|tags=staff"
+ },
+ {
+  "id": "e021",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e021",
+   "name": "  Zóé  Bystróm\t",
+   "email": "j.doe@Corp.Example.NET",
+   "phone": "+1 886-424-4882",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=j.doe@corp.example.net|phone=+1-8864244882|tags=staff"
+ },
+ {
+  "id": "e022",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e022",
+   "name": "  Fráncóís Múllér ",
+   "email": "m.lee@Example.COM",
+   "phone": "+49 792-484-2595",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=m.lee@example.com|phone=+49-7924842595|tags=customer,vip"
+ },
+ {
+  "id": "e022",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e022",
+   "name": "  Fráncóís  Múllér\t",
+   "email": "m.lee@Example.COM",
+   "phone": "+49 792-484-2595",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=m.lee@example.com|phone=+49-7924842595|tags=customer,vip"
+ },
+ {
+  "id": "e022",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e022",
+   "name": "  Fráncóís  Múllér\t",
+   "email": "m.lee@Example.COM",
+   "phone": "+49 792-484-2595",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=m.lee@example.com|phone=+49-7924842595|tags=customer,vip"
+ },
+ {
+  "id": "e023",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e023",
+   "name": "  Núríá Sólá ",
+   "email": "p.kaur@Foo.Bar.COM",
+   "phone": "+1 976-395-4025",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@foo.bar.com|phone=+1-9763954025|tags=staff"
+ },
+ {
+  "id": "e023",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e023",
+   "name": "Núríá Sólá",
+   "email": "p.kaur‌@Foo.Bar.COM",
+   "phone": "+1 976-395-4025",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@foo.bar.com|phone=+1-9763954025|tags=staff"
+ },
+ {
+  "id": "e023",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e023",
+   "name": "Núríá Sólá",
+   "email": "p.kaur﻿@Foo.Bar.COM",
+   "phone": "+1 976-395-4025",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@foo.bar.com|phone=+1-9763954025|tags=staff"
+ },
+ {
+  "id": "e024",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e024",
+   "name": "  Chlóé Lévéqúé ",
+   "email": "p.kaur@Mail.Example.ORG",
+   "phone": "+49 354-995-5106",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=p.kaur@mail.example.org|phone=+49-3549955106|tags=staff"
+ },
+ {
+  "id": "e024",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e024",
+   "name": "Chlóé Lévéqúé",
+   "email": "p.kaur​@Mail.Example.ORG",
+   "phone": "+49 354-995-5106",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=p.kaur@mail.example.org|phone=+49-3549955106|tags=staff"
+ },
+ {
+  "id": "e024",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e024",
+   "name": "  Chlóé  Lévéqúé\t",
+   "email": "p.kaur@Mail.Example.ORG",
+   "phone": "+49 354-995-5106",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=p.kaur@mail.example.org|phone=+49-3549955106|tags=staff"
+ },
+ {
+  "id": "e025",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e025",
+   "name": "  Lárs Abérg ",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+61 440-705-7295",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@foo.bar.com|phone=+61-4407057295|tags=cold,lead"
+ },
+ {
+  "id": "e025",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e025",
+   "name": "Lárs Abérg",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+61 440-705-7295",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@foo.bar.com|phone=+61-4407057295|tags=cold,lead"
+ },
+ {
+  "id": "e025",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e025",
+   "name": "  Lárs  Abérg\t",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+61 440-705-7295",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@foo.bar.com|phone=+61-4407057295|tags=cold,lead"
+ },
+ {
+  "id": "e026",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e026",
+   "name": "  Núríá Sólá ",
+   "email": "p.kaur@Test.IO",
+   "phone": "+1 994-512-7499",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@test.io|phone=+1-9945127499|tags=staff"
+ },
+ {
+  "id": "e026",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e026",
+   "name": "  Núríá  Sólá\t",
+   "email": "p.kaur@Test.IO",
+   "phone": "+1 994-512-7499",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@test.io|phone=+1-9945127499|tags=staff"
+ },
+ {
+  "id": "e027",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e027",
+   "name": "  Ingríd Sórénsén ",
+   "email": "k.ng@Corp.Example.NET",
+   "phone": "+61 959-393-4657",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=k.ng@corp.example.net|phone=+61-9593934657|tags=beta"
+ },
+ {
+  "id": "e027",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e027",
+   "name": "Ingríd Sórénsén",
+   "email": "k.ng@Corp.Example.NET",
+   "phone": "+61 959-393-4657",
+   "tags": [
+    "BETA",
+    "beta"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=k.ng@corp.example.net|phone=+61-9593934657|tags=beta"
+ },
+ {
+  "id": "e028",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e028",
+   "name": "  André Cítróén ",
+   "email": "p.kaur@Corp.Example.NET",
+   "phone": "+49 508-971-2374",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=André Cítróén|email=p.kaur@corp.example.net|phone=+49-5089712374|tags=staff"
+ },
+ {
+  "id": "e028",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e028",
+   "name": "  André  Cítróén\t",
+   "email": "p.kaur@Corp.Example.NET",
+   "phone": "+49 508-971-2374",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=André Cítróén|email=p.kaur@corp.example.net|phone=+49-5089712374|tags=staff"
+ },
+ {
+  "id": "e028",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e028",
+   "name": "André Cítróén",
+   "email": "p.kaur@Corp.Example.NET",
+   "phone": "+49 508-971-2374",
+   "tags": [
+    "staff",
+    "STAFF"
+   ]
+  },
+  "expected": "name=André Cítróén|email=p.kaur@corp.example.net|phone=+49-5089712374|tags=staff"
+ },
+ {
+  "id": "e029",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e029",
+   "name": "  André Cítróén ",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 801-329-1065",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=André Cítróén|email=j.doe@example.com|phone=+1-8013291065|tags=newsletter,prospect"
+ },
+ {
+  "id": "e029",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e029",
+   "name": "André Cítróén",
+   "email": "j.doe﻿@Example.COM",
+   "phone": "+1 801-329-1065",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=André Cítróén|email=j.doe@example.com|phone=+1-8013291065|tags=newsletter,prospect"
+ },
+ {
+  "id": "e030",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e030",
+   "name": "  Mátéús Fácánhá ",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+1 849-347-5286",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=m.lee@mail.example.org|phone=+1-8493475286|tags=cold,lead"
+ },
+ {
+  "id": "e030",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e030",
+   "name": "Mátéús Fácánhá",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+1 849-347-5286",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=m.lee@mail.example.org|phone=+1-8493475286|tags=cold,lead"
+ },
+ {
+  "id": "e030",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e030",
+   "name": "  Mátéús  Fácánhá\t",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+1 849-347-5286",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=m.lee@mail.example.org|phone=+1-8493475286|tags=cold,lead"
+ },
+ {
+  "id": "e031",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e031",
+   "name": "  Lárs Abérg ",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 574-613-8644",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=j.doe@example.com|phone=+1-5746138644|tags=customer,vip"
+ },
+ {
+  "id": "e031",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e031",
+   "name": "  Lárs  Abérg\t",
+   "email": "j.doe@Example.COM",
+   "phone": "+1 574-613-8644",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=j.doe@example.com|phone=+1-5746138644|tags=customer,vip"
+ },
+ {
+  "id": "e032",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e032",
+   "name": "  Chlóé Lévéqúé ",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+49 421-245-6076",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=k.ng@mail.example.org|phone=+49-4212456076|tags=partner,vip"
+ },
+ {
+  "id": "e032",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e032",
+   "name": "Chlóé Lévéqúé",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+49 421-245-6076",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=k.ng@mail.example.org|phone=+49-4212456076|tags=partner,vip"
+ },
+ {
+  "id": "e032",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e032",
+   "name": "  Chlóé  Lévéqúé\t",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+49 421-245-6076",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=k.ng@mail.example.org|phone=+49-4212456076|tags=partner,vip"
+ },
+ {
+  "id": "e033",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e033",
+   "name": "  Hákón Odégárd ",
+   "email": "r.roy@Foo.Bar.COM",
+   "phone": "+1 712-436-2673",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=r.roy@foo.bar.com|phone=+1-7124362673|tags=customer,vip"
+ },
+ {
+  "id": "e033",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e033",
+   "name": "  Hákón  Odégárd\t",
+   "email": "r.roy@Foo.Bar.COM",
+   "phone": "+1 712-436-2673",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=r.roy@foo.bar.com|phone=+1-7124362673|tags=customer,vip"
+ },
+ {
+  "id": "e033",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e033",
+   "name": "Hákón Odégárd",
+   "email": "r.roy@Foo.Bar.COM",
+   "phone": "+1 712-436-2673",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=r.roy@foo.bar.com|phone=+1-7124362673|tags=customer,vip"
+ },
+ {
+  "id": "e034",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e034",
+   "name": "  Mátéús Fácánhá ",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+1 885-694-5581",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=a.smith@foo.bar.com|phone=+1-8856945581|tags=cold,lead"
+ },
+ {
+  "id": "e034",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e034",
+   "name": "  Mátéús  Fácánhá\t",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+1 885-694-5581",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=a.smith@foo.bar.com|phone=+1-8856945581|tags=cold,lead"
+ },
+ {
+  "id": "e035",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e035",
+   "name": "  Chlóé Lévéqúé ",
+   "email": "k.ng@Foo.Bar.COM",
+   "phone": "+1 287-312-4502",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=k.ng@foo.bar.com|phone=+1-2873124502|tags=partner,vip"
+ },
+ {
+  "id": "e035",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e035",
+   "name": "Chlóé Lévéqúé",
+   "email": "k.ng@Foo.Bar.COM",
+   "phone": "+1 287-312-4502",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=k.ng@foo.bar.com|phone=+1-2873124502|tags=partner,vip"
+ },
+ {
+  "id": "e036",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e036",
+   "name": "  Ingríd Sórénsén ",
+   "email": "m.lee@Example.COM",
+   "phone": "+44 301-384-5487",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=m.lee@example.com|phone=+44-3013845487|tags=beta"
+ },
+ {
+  "id": "e036",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e036",
+   "name": "Ingríd Sórénsén",
+   "email": "m.lee@Example.COM",
+   "phone": "+44 301-384-5487",
+   "tags": [
+    "beta",
+    "BETA"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=m.lee@example.com|phone=+44-3013845487|tags=beta"
+ },
+ {
+  "id": "e037",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e037",
+   "name": "  Zóé Bystróm ",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+61 981-621-9755",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=m.lee@mail.example.org|phone=+61-9816219755|tags=customer,vip"
+ },
+ {
+  "id": "e037",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e037",
+   "name": "Zóé Bystróm",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+61 981-621-9755",
+   "tags": [
+    "VIP",
+    "VIP",
+    "CUSTOMER"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=m.lee@mail.example.org|phone=+61-9816219755|tags=customer,vip"
+ },
+ {
+  "id": "e037",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e037",
+   "name": "  Zóé  Bystróm\t",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+61 981-621-9755",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=m.lee@mail.example.org|phone=+61-9816219755|tags=customer,vip"
+ },
+ {
+  "id": "e038",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e038",
+   "name": "  Emílé Chástáín ",
+   "email": "m.lee@Foo.Bar.COM",
+   "phone": "+49 404-427-2635",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=m.lee@foo.bar.com|phone=+49-4044272635|tags=cold,lead"
+ },
+ {
+  "id": "e038",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e038",
+   "name": "  Emílé  Chástáín\t",
+   "email": "m.lee@Foo.Bar.COM",
+   "phone": "+49 404-427-2635",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=m.lee@foo.bar.com|phone=+49-4044272635|tags=cold,lead"
+ },
+ {
+  "id": "e038",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e038",
+   "name": "  Emílé  Chástáín\t",
+   "email": "m.lee@Foo.Bar.COM",
+   "phone": "+49 404-427-2635",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Emílé Chástáín|email=m.lee@foo.bar.com|phone=+49-4044272635|tags=cold,lead"
+ },
+ {
+  "id": "e039",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e039",
+   "name": "  Jósé Alváréz ",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+1 390-539-5898",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=a.smith@foo.bar.com|phone=+1-3905395898|tags=customer,vip"
+ },
+ {
+  "id": "e039",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e039",
+   "name": "  Jósé  Alváréz\t",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+1 390-539-5898",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=a.smith@foo.bar.com|phone=+1-3905395898|tags=customer,vip"
+ },
+ {
+  "id": "e039",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e039",
+   "name": "Jósé Alváréz",
+   "email": "a.smith​@Foo.Bar.COM",
+   "phone": "+1 390-539-5898",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Jósé Alváréz|email=a.smith@foo.bar.com|phone=+1-3905395898|tags=customer,vip"
+ },
+ {
+  "id": "e040",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e040",
+   "name": "  Máríá Péná ",
+   "email": "r.roy@Corp.Example.NET",
+   "phone": "+1 540-615-6500",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=r.roy@corp.example.net|phone=+1-5406156500|tags=beta"
+ },
+ {
+  "id": "e040",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e040",
+   "name": "  Máríá  Péná\t",
+   "email": "r.roy@Corp.Example.NET",
+   "phone": "+1 540-615-6500",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=r.roy@corp.example.net|phone=+1-5406156500|tags=beta"
+ },
+ {
+  "id": "e041",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e041",
+   "name": "  André Cítróén ",
+   "email": "k.ng@Foo.Bar.COM",
+   "phone": "+1 474-446-3382",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=André Cítróén|email=k.ng@foo.bar.com|phone=+1-4744463382|tags=newsletter,prospect"
+ },
+ {
+  "id": "e041",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e041",
+   "name": "André Cítróén",
+   "email": "k.ng@Foo.Bar.COM",
+   "phone": "+1 474-446-3382",
+   "tags": [
+    "prospect",
+    "NEWSLETTER",
+    "PROSPECT"
+   ]
+  },
+  "expected": "name=André Cítróén|email=k.ng@foo.bar.com|phone=+1-4744463382|tags=newsletter,prospect"
+ },
+ {
+  "id": "e042",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e042",
+   "name": "  Máríá Péná ",
+   "email": "p.kaur@Corp.Example.NET",
+   "phone": "+81 699-524-8128",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=p.kaur@corp.example.net|phone=+81-6995248128|tags=newsletter,prospect"
+ },
+ {
+  "id": "e042",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e042",
+   "name": "Máríá Péná",
+   "email": "p.kaur@Corp.Example.NET",
+   "phone": "+81 699-524-8128",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=p.kaur@corp.example.net|phone=+81-6995248128|tags=newsletter,prospect"
+ },
+ {
+  "id": "e043",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e043",
+   "name": "  Mátéús Fácánhá ",
+   "email": "a.smith@Test.IO",
+   "phone": "+1 267-411-1801",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=a.smith@test.io|phone=+1-2674111801|tags=partner,vip"
+ },
+ {
+  "id": "e043",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e043",
+   "name": "  Mátéús  Fácánhá\t",
+   "email": "a.smith@Test.IO",
+   "phone": "+1 267-411-1801",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=a.smith@test.io|phone=+1-2674111801|tags=partner,vip"
+ },
+ {
+  "id": "e043",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e043",
+   "name": "  Mátéús  Fácánhá\t",
+   "email": "a.smith@Test.IO",
+   "phone": "+1 267-411-1801",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=a.smith@test.io|phone=+1-2674111801|tags=partner,vip"
+ },
+ {
+  "id": "e044",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e044",
+   "name": "  Ingríd Sórénsén ",
+   "email": "a.smith@Foo.Bar.COM",
+   "phone": "+1 714-830-1369",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=a.smith@foo.bar.com|phone=+1-7148301369|tags=reseller,warm"
+ },
+ {
+  "id": "e044",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e044",
+   "name": "Ingríd Sórénsén",
+   "email": "a.smith‌@Foo.Bar.COM",
+   "phone": "+1 714-830-1369",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=a.smith@foo.bar.com|phone=+1-7148301369|tags=reseller,warm"
+ },
+ {
+  "id": "e045",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e045",
+   "name": "  Lárs Abérg ",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 214-629-7643",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=m.lee@example.com|phone=+1-2146297643|tags=reseller,warm"
+ },
+ {
+  "id": "e045",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e045",
+   "name": "  Lárs  Abérg\t",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 214-629-7643",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=m.lee@example.com|phone=+1-2146297643|tags=reseller,warm"
+ },
+ {
+  "id": "e046",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e046",
+   "name": "  Béátríz Góncálvés ",
+   "email": "j.doe@Corp.Example.NET",
+   "phone": "+1 366-341-4095",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Béátríz Góncálvés|email=j.doe@corp.example.net|phone=+1-3663414095|tags=reseller,warm"
+ },
+ {
+  "id": "e046",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e046",
+   "name": "  Béátríz  Góncálvés\t",
+   "email": "j.doe@Corp.Example.NET",
+   "phone": "+1 366-341-4095",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Béátríz Góncálvés|email=j.doe@corp.example.net|phone=+1-3663414095|tags=reseller,warm"
+ },
+ {
+  "id": "e046",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e046",
+   "name": "  Béátríz  Góncálvés\t",
+   "email": "j.doe@Corp.Example.NET",
+   "phone": "+1 366-341-4095",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Béátríz Góncálvés|email=j.doe@corp.example.net|phone=+1-3663414095|tags=reseller,warm"
+ },
+ {
+  "id": "e047",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e047",
+   "name": "  Chlóé Lévéqúé ",
+   "email": "k.ng@Example.COM",
+   "phone": "+1 802-532-3391",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=k.ng@example.com|phone=+1-8025323391|tags=board,founder"
+ },
+ {
+  "id": "e047",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e047",
+   "name": "Chlóé Lévéqúé",
+   "email": "k.ng@Example.COM",
+   "phone": "+1 802-532-3391",
+   "tags": [
+    "Founder",
+    "BOARD",
+    "FOUNDER"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=k.ng@example.com|phone=+1-8025323391|tags=board,founder"
+ },
+ {
+  "id": "e048",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e048",
+   "name": "  Chlóé Lévéqúé ",
+   "email": "r.roy@Corp.Example.NET",
+   "phone": "+1 749-370-8199",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=r.roy@corp.example.net|phone=+1-7493708199|tags=partner,vip"
+ },
+ {
+  "id": "e048",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e048",
+   "name": "  Chlóé  Lévéqúé\t",
+   "email": "r.roy@Corp.Example.NET",
+   "phone": "+1 749-370-8199",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=r.roy@corp.example.net|phone=+1-7493708199|tags=partner,vip"
+ },
+ {
+  "id": "e048",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e048",
+   "name": "Chlóé Lévéqúé",
+   "email": "r.roy﻿@Corp.Example.NET",
+   "phone": "+1 749-370-8199",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=r.roy@corp.example.net|phone=+1-7493708199|tags=partner,vip"
+ },
+ {
+  "id": "e049",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e049",
+   "name": "  Rénéé Dúbóís ",
+   "email": "j.doe@Mail.Example.ORG",
+   "phone": "+1 363-491-8250",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=j.doe@mail.example.org|phone=+1-3634918250|tags=staff"
+ },
+ {
+  "id": "e049",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e049",
+   "name": "Rénéé Dúbóís",
+   "email": "j.doe@Mail.Example.ORG",
+   "phone": "+1 363-491-8250",
+   "tags": [
+    "staff",
+    "STAFF"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=j.doe@mail.example.org|phone=+1-3634918250|tags=staff"
+ },
+ {
+  "id": "e049",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e049",
+   "name": "Rénéé Dúbóís",
+   "email": "j.doe@Mail.Example.ORG",
+   "phone": "+1 363-491-8250",
+   "tags": [
+    "STAFF",
+    "staff"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=j.doe@mail.example.org|phone=+1-3634918250|tags=staff"
+ },
+ {
+  "id": "e050",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e050",
+   "name": "  Aóífé Bráónáín ",
+   "email": "a.smith@Corp.Example.NET",
+   "phone": "+1 434-712-5460",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Aóífé Bráónáín|email=a.smith@corp.example.net|phone=+1-4347125460|tags=beta"
+ },
+ {
+  "id": "e050",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e050",
+   "name": "Aóífé Bráónáín",
+   "email": "a.smith@Corp.Example.NET",
+   "phone": "+1 434-712-5460",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Aóífé Bráónáín|email=a.smith@corp.example.net|phone=+1-4347125460|tags=beta"
+ },
+ {
+  "id": "e051",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e051",
+   "name": "  Núríá Sólá ",
+   "email": "p.kaur@Example.COM",
+   "phone": "+61 636-741-3530",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@example.com|phone=+61-6367413530|tags=partner,vip"
+ },
+ {
+  "id": "e051",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e051",
+   "name": "  Núríá  Sólá\t",
+   "email": "p.kaur@Example.COM",
+   "phone": "+61 636-741-3530",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@example.com|phone=+61-6367413530|tags=partner,vip"
+ },
+ {
+  "id": "e051",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e051",
+   "name": "  Núríá  Sólá\t",
+   "email": "p.kaur@Example.COM",
+   "phone": "+61 636-741-3530",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Núríá Sólá|email=p.kaur@example.com|phone=+61-6367413530|tags=partner,vip"
+ },
+ {
+  "id": "e052",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e052",
+   "name": "  Fráncóís Múllér ",
+   "email": "p.kaur@Foo.Bar.COM",
+   "phone": "+1 366-875-2777",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=p.kaur@foo.bar.com|phone=+1-3668752777|tags=newsletter,prospect"
+ },
+ {
+  "id": "e052",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e052",
+   "name": "Fráncóís Múllér",
+   "email": "p.kaur﻿@Foo.Bar.COM",
+   "phone": "+1 366-875-2777",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=p.kaur@foo.bar.com|phone=+1-3668752777|tags=newsletter,prospect"
+ },
+ {
+  "id": "e052",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e052",
+   "name": "Fráncóís Múllér",
+   "email": "p.kaur@Foo.Bar.COM",
+   "phone": "+1 366-875-2777",
+   "tags": [
+    "PROSPECT",
+    "NEWSLETTER",
+    "prospect"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=p.kaur@foo.bar.com|phone=+1-3668752777|tags=newsletter,prospect"
+ },
+ {
+  "id": "e053",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e053",
+   "name": "  Cámíllé Néél ",
+   "email": "a.smith@Mail.Example.ORG",
+   "phone": "+44 357-487-4641",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Cámíllé Néél|email=a.smith@mail.example.org|phone=+44-3574874641|tags=cold,lead"
+ },
+ {
+  "id": "e053",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e053",
+   "name": "  Cámíllé  Néél\t",
+   "email": "a.smith@Mail.Example.ORG",
+   "phone": "+44 357-487-4641",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Cámíllé Néél|email=a.smith@mail.example.org|phone=+44-3574874641|tags=cold,lead"
+ },
+ {
+  "id": "e053",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e053",
+   "name": "Cámíllé Néél",
+   "email": "a.smith‌@Mail.Example.ORG",
+   "phone": "+44 357-487-4641",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Cámíllé Néél|email=a.smith@mail.example.org|phone=+44-3574874641|tags=cold,lead"
+ },
+ {
+  "id": "e054",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e054",
+   "name": "  Máríá Péná ",
+   "email": "p.kaur@Example.COM",
+   "phone": "+1 969-724-8041",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=p.kaur@example.com|phone=+1-9697248041|tags=cold,lead"
+ },
+ {
+  "id": "e054",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e054",
+   "name": "  Máríá  Péná\t",
+   "email": "p.kaur@Example.COM",
+   "phone": "+1 969-724-8041",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=p.kaur@example.com|phone=+1-9697248041|tags=cold,lead"
+ },
+ {
+  "id": "e054",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e054",
+   "name": "Máríá Péná",
+   "email": "p.kaur​@Example.COM",
+   "phone": "+1 969-724-8041",
+   "tags": [
+    "Lead",
+    "cold"
+   ]
+  },
+  "expected": "name=Máríá Péná|email=p.kaur@example.com|phone=+1-9697248041|tags=cold,lead"
+ },
+ {
+  "id": "e055",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e055",
+   "name": "  Lárs Abérg ",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+1 257-891-8556",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=k.ng@mail.example.org|phone=+1-2578918556|tags=newsletter,prospect"
+ },
+ {
+  "id": "e055",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e055",
+   "name": "  Lárs  Abérg\t",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+1 257-891-8556",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=k.ng@mail.example.org|phone=+1-2578918556|tags=newsletter,prospect"
+ },
+ {
+  "id": "e055",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e055",
+   "name": "  Lárs  Abérg\t",
+   "email": "k.ng@Mail.Example.ORG",
+   "phone": "+1 257-891-8556",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=k.ng@mail.example.org|phone=+1-2578918556|tags=newsletter,prospect"
+ },
+ {
+  "id": "e056",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e056",
+   "name": "  Hákón Odégárd ",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 663-844-3339",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=m.lee@example.com|phone=+1-6638443339|tags=staff"
+ },
+ {
+  "id": "e056",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e056",
+   "name": "Hákón Odégárd",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 663-844-3339",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=m.lee@example.com|phone=+1-6638443339|tags=staff"
+ },
+ {
+  "id": "e056",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e056",
+   "name": "  Hákón  Odégárd\t",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 663-844-3339",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=m.lee@example.com|phone=+1-6638443339|tags=staff"
+ },
+ {
+  "id": "e057",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e057",
+   "name": "  Rénéé Dúbóís ",
+   "email": "k.ng@Test.IO",
+   "phone": "+1 376-882-9240",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@test.io|phone=+1-3768829240|tags=board,founder"
+ },
+ {
+  "id": "e057",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e057",
+   "name": "  Rénéé  Dúbóís\t",
+   "email": "k.ng@Test.IO",
+   "phone": "+1 376-882-9240",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@test.io|phone=+1-3768829240|tags=board,founder"
+ },
+ {
+  "id": "e057",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e057",
+   "name": "Rénéé Dúbóís",
+   "email": "k.ng​@Test.IO",
+   "phone": "+1 376-882-9240",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=k.ng@test.io|phone=+1-3768829240|tags=board,founder"
+ },
+ {
+  "id": "e058",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e058",
+   "name": "  Fráncóís Múllér ",
+   "email": "j.doe@Mail.Example.ORG",
+   "phone": "+1 413-376-1025",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=j.doe@mail.example.org|phone=+1-4133761025|tags=reseller,warm"
+ },
+ {
+  "id": "e058",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e058",
+   "name": "Fráncóís Múllér",
+   "email": "j.doe‌@Mail.Example.ORG",
+   "phone": "+1 413-376-1025",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=j.doe@mail.example.org|phone=+1-4133761025|tags=reseller,warm"
+ },
+ {
+  "id": "e059",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e059",
+   "name": "  Mátéús Fácánhá ",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 722-644-1461",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=m.lee@example.com|phone=+1-7226441461|tags=board,founder"
+ },
+ {
+  "id": "e059",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e059",
+   "name": "  Mátéús  Fácánhá\t",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 722-644-1461",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=m.lee@example.com|phone=+1-7226441461|tags=board,founder"
+ },
+ {
+  "id": "e059",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e059",
+   "name": "Mátéús Fácánhá",
+   "email": "m.lee@Example.COM",
+   "phone": "+1 722-644-1461",
+   "tags": [
+    "Founder",
+    "board"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=m.lee@example.com|phone=+1-7226441461|tags=board,founder"
+ },
+ {
+  "id": "e060",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e060",
+   "name": "  Chlóé Lévéqúé ",
+   "email": "p.kaur@Corp.Example.NET",
+   "phone": "+1 570-980-2396",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=p.kaur@corp.example.net|phone=+1-5709802396|tags=staff"
+ },
+ {
+  "id": "e060",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e060",
+   "name": "  Chlóé  Lévéqúé\t",
+   "email": "p.kaur@Corp.Example.NET",
+   "phone": "+1 570-980-2396",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Chlóé Lévéqúé|email=p.kaur@corp.example.net|phone=+1-5709802396|tags=staff"
+ },
+ {
+  "id": "e061",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e061",
+   "name": "  Gúntér Gróss ",
+   "email": "p.kaur@Mail.Example.ORG",
+   "phone": "+1 238-598-1351",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Gúntér Gróss|email=p.kaur@mail.example.org|phone=+1-2385981351|tags=partner,vip"
+ },
+ {
+  "id": "e061",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e061",
+   "name": "  Gúntér  Gróss\t",
+   "email": "p.kaur@Mail.Example.ORG",
+   "phone": "+1 238-598-1351",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Gúntér Gróss|email=p.kaur@mail.example.org|phone=+1-2385981351|tags=partner,vip"
+ },
+ {
+  "id": "e062",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e062",
+   "name": "  Fráncóís Múllér ",
+   "email": "j.doe@Example.COM",
+   "phone": "+49 894-998-9777",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=j.doe@example.com|phone=+49-8949989777|tags=staff"
+ },
+ {
+  "id": "e062",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e062",
+   "name": "  Fráncóís  Múllér\t",
+   "email": "j.doe@Example.COM",
+   "phone": "+49 894-998-9777",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=j.doe@example.com|phone=+49-8949989777|tags=staff"
+ },
+ {
+  "id": "e062",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e062",
+   "name": "Fráncóís Múllér",
+   "email": "j.doe@Example.COM",
+   "phone": "+49 894-998-9777",
+   "tags": [
+    "staff",
+    "STAFF"
+   ]
+  },
+  "expected": "name=Fráncóís Múllér|email=j.doe@example.com|phone=+49-8949989777|tags=staff"
+ },
+ {
+  "id": "e063",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e063",
+   "name": "  Zóé Bystróm ",
+   "email": "m.lee@Test.IO",
+   "phone": "+49 964-606-8000",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=m.lee@test.io|phone=+49-9646068000|tags=staff"
+ },
+ {
+  "id": "e063",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e063",
+   "name": "  Zóé  Bystróm\t",
+   "email": "m.lee@Test.IO",
+   "phone": "+49 964-606-8000",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=m.lee@test.io|phone=+49-9646068000|tags=staff"
+ },
+ {
+  "id": "e063",
+  "member": 2,
+  "intl_phone": true,
+  "record": {
+   "id": "e063",
+   "name": "Zóé Bystróm",
+   "email": "m.lee@Test.IO",
+   "phone": "+49 964-606-8000",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Zóé Bystróm|email=m.lee@test.io|phone=+49-9646068000|tags=staff"
+ },
+ {
+  "id": "e064",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e064",
+   "name": "  Hákón Odégárd ",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+1 757-952-8753",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=m.lee@mail.example.org|phone=+1-7579528753|tags=customer,vip"
+ },
+ {
+  "id": "e064",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e064",
+   "name": "Hákón Odégárd",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+1 757-952-8753",
+   "tags": [
+    "VIP",
+    "customer"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=m.lee@mail.example.org|phone=+1-7579528753|tags=customer,vip"
+ },
+ {
+  "id": "e064",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e064",
+   "name": "Hákón Odégárd",
+   "email": "m.lee@Mail.Example.ORG",
+   "phone": "+1 757-952-8753",
+   "tags": [
+    "VIP",
+    "CUSTOMER",
+    "VIP"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=m.lee@mail.example.org|phone=+1-7579528753|tags=customer,vip"
+ },
+ {
+  "id": "e065",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e065",
+   "name": "  Ingríd Sórénsén ",
+   "email": "a.smith@Test.IO",
+   "phone": "+1 688-529-8963",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=a.smith@test.io|phone=+1-6885298963|tags=partner,vip"
+ },
+ {
+  "id": "e065",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e065",
+   "name": "Ingríd Sórénsén",
+   "email": "a.smith@Test.IO",
+   "phone": "+1 688-529-8963",
+   "tags": [
+    "partner",
+    "vip"
+   ]
+  },
+  "expected": "name=Ingríd Sórénsén|email=a.smith@test.io|phone=+1-6885298963|tags=partner,vip"
+ },
+ {
+  "id": "e066",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e066",
+   "name": "  Lárs Abérg ",
+   "email": "a.smith@Example.COM",
+   "phone": "+81 928-575-1362",
+   "tags": [
+    "prospect",
+    "newsletter"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@example.com|phone=+81-9285751362|tags=newsletter,prospect"
+ },
+ {
+  "id": "e066",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e066",
+   "name": "Lárs Abérg",
+   "email": "a.smith@Example.COM",
+   "phone": "+81 928-575-1362",
+   "tags": [
+    "PROSPECT",
+    "prospect",
+    "NEWSLETTER"
+   ]
+  },
+  "expected": "name=Lárs Abérg|email=a.smith@example.com|phone=+81-9285751362|tags=newsletter,prospect"
+ },
+ {
+  "id": "e067",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e067",
+   "name": "  Hákón Odégárd ",
+   "email": "j.doe@Corp.Example.NET",
+   "phone": "+44 978-354-7759",
+   "tags": [
+    "staff"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=j.doe@corp.example.net|phone=+44-9783547759|tags=staff"
+ },
+ {
+  "id": "e067",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e067",
+   "name": "Hákón Odégárd",
+   "email": "j.doe@Corp.Example.NET",
+   "phone": "+44 978-354-7759",
+   "tags": [
+    "STAFF",
+    "staff"
+   ]
+  },
+  "expected": "name=Hákón Odégárd|email=j.doe@corp.example.net|phone=+44-9783547759|tags=staff"
+ },
+ {
+  "id": "e068",
+  "member": 0,
+  "intl_phone": true,
+  "record": {
+   "id": "e068",
+   "name": "  Rénéé Dúbóís ",
+   "email": "r.roy@Example.COM",
+   "phone": "+61 845-500-5131",
+   "tags": [
+    "reseller",
+    "warm"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=r.roy@example.com|phone=+61-8455005131|tags=reseller,warm"
+ },
+ {
+  "id": "e068",
+  "member": 1,
+  "intl_phone": true,
+  "record": {
+   "id": "e068",
+   "name": "Rénéé Dúbóís",
+   "email": "r.roy@Example.COM",
+   "phone": "+61 845-500-5131",
+   "tags": [
+    "reseller",
+    "WARM",
+    "RESELLER"
+   ]
+  },
+  "expected": "name=Rénéé Dúbóís|email=r.roy@example.com|phone=+61-8455005131|tags=reseller,warm"
+ },
+ {
+  "id": "e069",
+  "member": 0,
+  "intl_phone": false,
+  "record": {
+   "id": "e069",
+   "name": "  Mátéús Fácánhá ",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 698-277-6138",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=r.roy@mail.example.org|phone=+1-6982776138|tags=beta"
+ },
+ {
+  "id": "e069",
+  "member": 1,
+  "intl_phone": false,
+  "record": {
+   "id": "e069",
+   "name": "  Mátéús  Fácánhá\t",
+   "email": "r.roy@Mail.Example.ORG",
+   "phone": "+1 698-277-6138",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=r.roy@mail.example.org|phone=+1-6982776138|tags=beta"
+ },
+ {
+  "id": "e069",
+  "member": 2,
+  "intl_phone": false,
+  "record": {
+   "id": "e069",
+   "name": "Mátéús Fácánhá",
+   "email": "r.roy​@Mail.Example.ORG",
+   "phone": "+1 698-277-6138",
+   "tags": [
+    "beta"
+   ]
+  },
+  "expected": "name=Mátéús Fácánhá|email=r.roy@mail.example.org|phone=+1-6982776138|tags=beta"
+ }
+]

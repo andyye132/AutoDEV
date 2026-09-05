@@ -1,0 +1,7 @@
+WARNING:absl:Grain multiprocess worker profiling requires jaxlib extension version 448 or later (jaxlib >= 0.11.0). Current version: 397.
+random               search                     score 0.658 detected 0.75 per-class-detected {ANOMALY:0.75} (133s)
+repeat_random        search                     score 0.778 detected 0.86 per-class-detected {ANOMALY:0.86} (121s)
+goexplore            search                     score 0.745 detected 0.86 per-class-detected {ANOMALY:0.86} (121s)
+run7_best_gen035_0.5888.py search                     score 0.800 detected 0.86 per-class-detected {ANOMALY:0.86} (122s)
+saturate.py          search                     score 0.808 detected 0.86 per-class-detected {ANOMALY:0.86} (116s)
+split_pump.py        search                     score 0.810 detected 0.86 per-class-detected {ANOMALY:0.86} (119s)

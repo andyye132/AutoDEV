@@ -1,0 +1,146 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.9580824110243056,
+   "detected": 1.0,
+   "n": 6,
+   "budget": 2097152,
+   "first_hit": [
+    [
+     70848.0,
+     51136.0,
+     24512.0
+    ],
+    [
+     59968.0,
+     74880.0,
+     37952.0
+    ],
+    [
+     52224.0,
+     201728.0,
+     135616.0
+    ],
+    [
+     52928.0,
+     37632.0,
+     18240.0
+    ],
+    [
+     100992.0,
+     117376.0,
+     56832.0
+    ],
+    [
+     425792.0,
+     15808.0,
+     47872.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ },
+ "ppo_icm": {
+  "search": {
+   "score": 0.9410603841145834,
+   "detected": 1.0,
+   "n": 6,
+   "budget": 2097152,
+   "first_hit": [
+    [
+     69248.0,
+     69440.0,
+     53312.0
+    ],
+    [
+     154688.0,
+     76672.0,
+     163456.0
+    ],
+    [
+     203200.0,
+     483008.0,
+     155712.0
+    ],
+    [
+     69824.0,
+     33344.0,
+     26944.0
+    ],
+    [
+     63424.0,
+     102400.0,
+     188608.0
+    ],
+    [
+     74624.0,
+     202752.0,
+     34240.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ },
+ "ppo_curiosity_proximity": {
+  "search": {
+   "score": 0.9580824110243056,
+   "detected": 1.0,
+   "n": 6,
+   "budget": 2097152,
+   "first_hit": [
+    [
+     70848.0,
+     51136.0,
+     24512.0
+    ],
+    [
+     59968.0,
+     74880.0,
+     37952.0
+    ],
+    [
+     52224.0,
+     201728.0,
+     135616.0
+    ],
+    [
+     52928.0,
+     37632.0,
+     18240.0
+    ],
+    [
+     100992.0,
+     117376.0,
+     56832.0
+    ],
+    [
+     425792.0,
+     15808.0,
+     47872.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ }
+}

@@ -1,0 +1,8 @@
+WARNING:absl:Grain multiprocess worker profiling requires jaxlib extension version 448 or later (jaxlib >= 0.11.0). Current version: 397.
+split_pump.py        search                     score 0.718 detected 0.75 per-class-detected {ANOMALY:0.79, DISARMED:1.00, SHORTCUT:0.55, TUNNEL:0.57} (248s)
+saturate.py          search                     score 0.715 detected 0.75 per-class-detected {ANOMALY:0.79, DISARMED:1.00, SHORTCUT:0.55, TUNNEL:0.57} (233s)
+macrosweep.py        search                     score 0.714 detected 0.77 per-class-detected {ANOMALY:0.79, DISARMED:1.00, SHORTCUT:0.64, TUNNEL:0.57} (425s)
+velmax.py            search                     score 0.710 detected 0.75 per-class-detected {ANOMALY:0.79, DISARMED:1.00, SHORTCUT:0.55, TUNNEL:0.57} (1297s)
+cem_root.py          search                     score 0.691 detected 0.74 per-class-detected {ANOMALY:0.79, DISARMED:1.00, SHORTCUT:0.55, TUNNEL:0.43} (284s)
+goexplore_yield.py   search                     score 0.636 detected 0.74 per-class-detected {ANOMALY:0.79, DISARMED:1.00, SHORTCUT:0.55, TUNNEL:0.43} (292s)
+run7_best_gen035_0.5888.py search                     score 0.686 detected 0.74 per-class-detected {ANOMALY:0.79, DISARMED:1.00, SHORTCUT:0.55, TUNNEL:0.43} (708s)

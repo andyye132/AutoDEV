@@ -1,0 +1,146 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.6854044596354167,
+   "detected": 0.8333333333333334,
+   "n": 6,
+   "budget": 2097152,
+   "first_hit": [
+    [
+     2097152.0,
+     664256.0,
+     2097152.0
+    ],
+    [
+     22976.0,
+     140224.0,
+     121024.0
+    ],
+    [
+     70336.0,
+     1384192.0,
+     56640.0
+    ],
+    [
+     1094336.0,
+     825344.0,
+     87616.0
+    ],
+    [
+     17856.0,
+     17088.0,
+     10176.0
+    ],
+    [
+     2097152.0,
+     887680.0,
+     184384.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  }
+ },
+ "ppo_icm": {
+  "search": {
+   "score": 0.5835452609592013,
+   "detected": 0.6666666666666666,
+   "n": 6,
+   "budget": 2097152,
+   "first_hit": [
+    [
+     292544.0,
+     2097152.0,
+     2097152.0
+    ],
+    [
+     203072.0,
+     114112.0,
+     445440.0
+    ],
+    [
+     262208.0,
+     2097152.0,
+     236032.0
+    ],
+    [
+     690944.0,
+     2097152.0,
+     607936.0
+    ],
+    [
+     31360.0,
+     22272.0,
+     14656.0
+    ],
+    [
+     217152.0,
+     2097152.0,
+     2097152.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  }
+ },
+ "ppo_curiosity_proximity": {
+  "search": {
+   "score": 0.6854044596354167,
+   "detected": 0.8333333333333334,
+   "n": 6,
+   "budget": 2097152,
+   "first_hit": [
+    [
+     2097152.0,
+     664256.0,
+     2097152.0
+    ],
+    [
+     22976.0,
+     140224.0,
+     121024.0
+    ],
+    [
+     70336.0,
+     1384192.0,
+     56640.0
+    ],
+    [
+     1094336.0,
+     825344.0,
+     87616.0
+    ],
+    [
+     17856.0,
+     17088.0,
+     10176.0
+    ],
+    [
+     2097152.0,
+     887680.0,
+     184384.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-FourRooms__seed0",
+    "MiniGrid-FourRooms__seed1",
+    "MiniGrid-FourRooms__seed2",
+    "MiniGrid-FourRooms__seed3",
+    "MiniGrid-FourRooms__seed4",
+    "MiniGrid-FourRooms__seed5"
+   ]
+  }
+ }
+}

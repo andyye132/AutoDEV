@@ -109,11 +109,13 @@ def inject_tunnel(state, sp, ep, rng):
     return new, _meta("TUNNEL", is_poly, i, box, state)
 
 
-def inject_shortcut(state, sp, ep, rng):
+def inject_shortcut(state, sp, ep, rng, dist_rank=None):
     """Give a neutral shape the goal role: touching it wins without reaching the intended goal.
-    Witness: reward > 0 while the agent is within contact range of the injected shape."""
+    Witness: reward > 0 while the agent is within contact range of the injected shape.
+    dist_rank (0.0=nearest .. 1.0=farthest) grades NAVIGATION difficulty: pick the injected shape at that
+    percentile of distance from the agent start, instead of at random (farther = needs coordinated exploration)."""
     box = world_box(state, sp)
-    from .kinetix_utils import min_gap_green_to
+    from .kinetix_utils import min_gap_green_to, role_centroid, shape_position
     cands = []
     for (ip, i) in _candidates(state, sp, ROLE_NONE, static_only=None):
         mp = jnp.zeros(sp.num_polygons, bool).at[i].set(True) if ip else jnp.zeros(sp.num_polygons, bool)
@@ -122,7 +124,13 @@ def inject_shortcut(state, sp, ep, rng):
             cands.append((ip, i))
     if not cands:
         return None
-    is_poly, i = cands[int(rng.integers(len(cands)))]
+    if dist_rank is None:
+        is_poly, i = cands[int(rng.integers(len(cands)))]
+    else:
+        ap = role_centroid(state, ROLE_AGENT)
+        dists = [float(jnp.linalg.norm(ap - shape_position(state, ip, ci))) for (ip, ci) in cands]
+        order = sorted(range(len(cands)), key=lambda j: dists[j])
+        is_poly, i = cands[order[min(len(order) - 1, int(round(float(dist_rank) * (len(order) - 1))))]]
     r = _shape_extent_radius(state, is_poly, i) + _agent_radius(state, sp) + 0.15
     if is_poly:
         new = state.replace(polygon_shape_roles=state.polygon_shape_roles.at[i].set(ROLE_GOAL))

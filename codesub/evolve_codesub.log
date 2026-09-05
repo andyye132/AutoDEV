@@ -1,0 +1,3 @@
+gen  0: flawed=0.6188 isolated=0.4365 gap=+0.1823  (seed)
+gen  1: flawed=1.0000 isolated=0.9006 gap=+0.0994  <- adopted (new champion)
+gen  2: flawed=1.0000 isolated=0.9006 gap=+0.0994

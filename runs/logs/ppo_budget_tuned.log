@@ -1,0 +1,22 @@
+tuned budget curves: lr=0.0001 ent=0.2
+=== doorkey 4x (tuned) ===
+  substrate=xminigrid:MiniGrid-DoorKey-8x8 feat_dim=34 n_act=6
+  ppo_count              search                     score 0.832 detected 1.00
+  ppo_icm                search                     score 0.764 detected 1.00
+  ppo_curiosity_proximity search                     score 0.832 detected 1.00
+=== fourrooms 4x (tuned) ===
+  substrate=xminigrid:MiniGrid-FourRooms feat_dim=34 n_act=6
+  ppo_count              search                     score 0.478 detected 0.56
+  ppo_icm                search                     score 0.361 detected 0.56
+  ppo_curiosity_proximity search                     score 0.478 detected 0.56
+=== breakout 4x (tuned) ===
+  substrate=gymnax:Breakout-MinAtar feat_dim=17 n_act=3
+  ppo_count              search                     score 0.509 detected 0.78
+  ppo_icm                search                     score 0.444 detected 0.67
+  ppo_curiosity_proximity search                     score 0.564 detected 0.91
+=== sokoban 4x (tuned) ===
+  substrate=jumanji:Sokoban-v0 feat_dim=14 n_act=4
+  ppo_count              search                     score 0.516 detected 0.65
+  ppo_icm                search                     score 0.419 detected 0.57
+  ppo_curiosity_proximity search                     score 0.518 detected 0.72
+=== doorkey 16x (tuned) ===

@@ -14,9 +14,9 @@ matched interaction budget on ground-truthed targets; ours is the budget-matched
 ## §1.1 — Result 1: the equal-budget win, generalized (≈1 pp, the LEAD; Fig. 1 = the 8-task bar chart)
 
 - The table/figure: LLM tester vs best-of-5 PPO vs random, detection at fixed budget, 8 tasks (DoorKey, FourRooms,
-  Breakout, Sokoban, MountainCar, DeepSea-24, Craftax, Kinetix K-Goal). **LLM wins 7/8, ties Craftax.**
+  Breakout, Sokoban, MountainCar, DeepSea-24, Craftax, Kinetix K-Goal). **LLM ≥ tuned PPO on all 8: clear win on 6, ties DeepSea-24 & Craftax; the 4 genuinely-hard wins (LLM beats action-repeat too) are DoorKey/FourRooms/Breakout/Sokoban.**
 - Three defenses, each one sentence + a number: (a) beats plain Go-Explore 5/6 (DoorKey 1.0 vs 0.10) → it's the discovered
-  strategy, not the archive; (b) 16× budget curve — RL still loses on 3/4 sparse-reward tasks (Fig. 2); (c) held-out
+  strategy, not the archive; (b) equal-budget only — tuned PPO catches up at ~4× budget on DoorKey, so we claim strictly equal-budget, not "RL never catches up" (Fig. 2, tuned curves); (c) held-out
   transfer — one multi-engine-evolved program beats task-specific PPO on engines it never saw.
 - The honest boundary as a *strength*: Craftax ties because dense achievement rewards let RL learn → precise thesis is
   "zero-training exploration dominates sparse-reward target-reaching; RL competes only when reward is dense."
@@ -63,8 +63,8 @@ matched interaction budget on ground-truthed targets; ours is the budget-matched
 > approach trains reinforcement-learning explorers. We show that an autonomous loop can instead *write* such a tester as a
 > short program, and that at an equal environment-interaction budget this zero-training program reaches target states
 > faster than a trained PPO explorer across **eight structurally different RL environments** (grid navigation, subgoal,
-> arcade, puzzle, continuous control, deep-exploration, 2D physics, and crafting/survival) — winning on seven and tying on
-> the eighth. The advantage is not the save/restore archive (a plain Go-Explore baseline loses to both PPO and random on
+> arcade, puzzle, continuous control, deep-exploration, 2D physics, and crafting/survival). Against a tuned PPO it never
+> loses — a clear win on six, a tie on two — and on the four sparse-reward tasks it is the single best method. The advantage is not the save/restore archive (a plain Go-Explore baseline loses to both PPO and random on
 > the hardest task) but the specific strategy the loop discovers, and it is a genuine held-out-engine transfer: one program
 > evolved on a multi-engine fitness beats *task-specific* PPO on engines it never saw. On sparse-reward tasks RL does not
 > catch up even with 16× more budget; on reward-dense tasks it does — a clean boundary. On a deep Kinetix substrate — a

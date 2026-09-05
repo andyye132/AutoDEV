@@ -4,8 +4,8 @@
   "family": "grid nav + subgoal",
   "random": 0.7666666666666667,
   "action_repeat": 0.3333333333333333,
-  "ppo_best": 0.2777777777777778,
-  "ppo_who": "ppo_icm",
+  "ppo_best": 0.8333333333333334,
+  "ppo_who": "ppo_count/tuned",
   "llm_best": 1.0,
   "llm_who": "run7_best_gen035_0.5888.py"
  },
@@ -14,8 +14,8 @@
   "family": "grid navigation",
   "random": 0.26666666666666666,
   "action_repeat": 0.4,
-  "ppo_best": 0.3888888888888889,
-  "ppo_who": "ppo_count",
+  "ppo_best": 0.5,
+  "ppo_who": "ppo_count/tuned",
   "llm_best": 0.8666666666666666,
   "llm_who": "run7_best_gen035_0.5888.py"
  },
@@ -24,8 +24,8 @@
   "family": "arcade",
   "random": 0.3333333333333333,
   "action_repeat": 0.3333333333333333,
-  "ppo_best": 0.3333333333333333,
-  "ppo_who": "ppo_curiosity_proximity",
+  "ppo_best": 0.4222222222222222,
+  "ppo_who": "ppo_task/tuned",
   "llm_best": 1.0,
   "llm_who": "run7_best_gen035_0.5888.py"
  },
@@ -34,8 +34,8 @@
   "family": "puzzle / planning",
   "random": 0.6555555555555556,
   "action_repeat": 0.5555555555555556,
-  "ppo_best": 0.2777777777777778,
-  "ppo_who": "ppo_count",
+  "ppo_best": 0.4111111111111111,
+  "ppo_who": "ppo_curiosity_proximity/tuned",
   "llm_best": 0.788888888888889,
   "llm_who": "run7_best_gen035_0.5888.py"
  },
@@ -44,8 +44,8 @@
   "family": "continuous control",
   "random": 0.0,
   "action_repeat": 1.0,
-  "ppo_best": 0.6111111111111112,
-  "ppo_who": "ppo_curiosity_proximity",
+  "ppo_best": 0.7333333333333333,
+  "ppo_who": "ppo_count/tuned",
   "llm_best": 1.0,
   "llm_who": "split_pump.py"
  },
@@ -54,8 +54,8 @@
   "family": "deep exploration (RL's home turf)",
   "random": 0.0,
   "action_repeat": 1.0,
-  "ppo_best": 0.7777777777777778,
-  "ppo_who": "ppo_curiosity_proximity",
+  "ppo_best": 1.0,
+  "ppo_who": "ppo_curiosity_proximity/tuned",
   "llm_best": 1.0,
   "llm_who": "split_pump.py"
  },
@@ -65,7 +65,7 @@
   "random": 0.25,
   "action_repeat": 0.15833333333333333,
   "ppo_best": 0.3402777777777778,
-  "ppo_who": "ppo_task",
+  "ppo_who": "ppo_task/default",
   "llm_best": 0.3499999999999999,
   "llm_who": "saturate.py"
  }

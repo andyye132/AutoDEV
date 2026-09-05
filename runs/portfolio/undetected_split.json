@@ -1,0 +1,89 @@
+{
+ "pool": "runs/pool.json",
+ "budget": 65536,
+ "heldout_class": [],
+ "search_levels": [],
+ "heldout_levels": [],
+ "search": [
+  "s_h0_weak_thrust__ANOMALY__0",
+  "s_h2_one_wheel_car__SHORTCUT__0",
+  "s_h6_unicycle_right__SHORTCUT__0",
+  "s_h7_unicycle_left__SHORTCUT__0",
+  "s_h8_unicycle_balance__ANOMALY__0",
+  "m_arm_left__TUNNEL__0",
+  "m_arm_right__TUNNEL__0",
+  "m_arm_up__TUNNEL__0",
+  "m_h0_unicycle__SHORTCUT__0",
+  "m_h0_unicycle__ANOMALY__0",
+  "m_h1_car_left__ANOMALY__0",
+  "m_h2_car_right__ANOMALY__0"
+ ],
+ "heldout_levels_instances": [],
+ "heldout_class_instances": [],
+ "excluded": [
+  [
+   "s_h8_unicycle_balance__SHORTCUT__0",
+   "trivial"
+  ],
+  [
+   "m_arm_left__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_arm_right__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_arm_up__SHORTCUT__0",
+   "trivial"
+  ],
+  [
+   "m_arm_up__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_h0_unicycle__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_h15_thrustshoot__TUNNEL__0",
+   "trivial"
+  ],
+  [
+   "m_h15_thrustshoot__SHORTCUT__0",
+   "trivial"
+  ],
+  [
+   "m_h15_thrustshoot__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_h1_car_left__SHORTCUT__0",
+   "trivial"
+  ],
+  [
+   "m_h1_car_left__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_h2_car_right__SHORTCUT__0",
+   "trivial"
+  ],
+  [
+   "m_h2_car_right__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_h3_car_thrust__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_h5_angry_birds__SHORTCUT__1",
+   "trivial"
+  ],
+  [
+   "m_h9_spin_the_right_way__SHORTCUT__1",
+   "trivial"
+  ]
+ ]
+}

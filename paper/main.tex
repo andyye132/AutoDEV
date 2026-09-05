@@ -1,34 +1,53 @@
 % AutoMLR (NeurIPS 2026) submission skeleton — swap \documentclass/preamble for the official Overleaf template before submitting.
 % Part 1 (<=4 pages): agent-written research result. Part 2 (<=4 pages): human-written system account. Part 3 (<=1 page): reflections.
 \documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}\usepackage{graphicx,booktabs,amsmath,hyperref,xcolor}
-\title{Do Discovered Game-Testing Programs Generalize?\\Autonomous Discovery of Exploration Strategies That Find Real Bugs in Unseen Games}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,booktabs,amsmath,amssymb,hyperref,xcolor}
+\usepackage{pifont}          % \ding for the capability table
+\usepackage[numbers,round]{natbib}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,calc}
+% pipeline-figure colors (used by figs/pipeline_fig.tex)
+\definecolor{cBench}{HTML}{2E6E8E}\definecolor{cBenchBg}{HTML}{E4EFF4}
+\definecolor{cLoop}{HTML}{1A9E8F}\definecolor{cLoopBg}{HTML}{E1F3EF}
+\definecolor{cTester}{HTML}{C1440E}\definecolor{cTesterBg}{HTML}{FBEBE1}
+\definecolor{cEval}{HTML}{9C3B7A}\definecolor{cEvalBg}{HTML}{F4E7F0}
+\definecolor{cInk}{HTML}{222222}
+\title{Write the Tester, Don't Train It: A Zero-Training Program\\Out-Reaches Trained RL on Sparse-Reward Game Testing at Equal Budget}
 \author{Andy Ye \\ University of Washington}
 \begin{document}
 \maketitle
 \begin{abstract}
-Game studios use reinforcement-learning agents to test games, but the exploration strategies that drive those testers are designed by
-hand, and nobody knows whether a strategy that finds one kind of bug finds others. We ask whether an autonomous research loop can
-discover a better one. We take Kinetix, a suite of 2D physics games, deliberately break levels in five ways (missing boundaries,
-non-solid obstacles, unintended goals, runaway physics, disarmed hazards) with a witness state for each, and let an LLM-driven
-evolutionary loop write tester \emph{programs} --- full exploration procedures over save/restore-able simulator states --- keeping
-those that reach witness states fastest. The decisive test is transfer: 30\% of levels and one entire defect class (leaving the arena)
-were hidden from the search. \textbf{Qualifying result:} the discovered tester scores 0.666 on the search split vs.\ 0.566 for the strongest
-hand-designed tester (action-repeat random), 0.617 vs.\ 0.575 on held-out levels, and 0.418 vs.\ 0.266 on the held-out class (47\% vs.\ 30\% of escape defects witnessed; 5 seeds, 95\% CIs $\le$0.015); run on
-74 shipped and 64 freshly generated levels with generic engine oracles, the testers surface 12 replay-verified anomalies of severity A/B
-(2 on shipped levels, 10 on generated ones), including a block launched at 16\,m/s that passes through a boundary wall's face and buries itself
-10\,cm in the floor before the solver ejects it.
-The tester, the transfer analysis and Part~1 were produced by the autonomous loop; the authors built and verified the benchmark and
-document the process, every human intervention, and the recomputation of every number.
+Testing a game or simulation means driving it into rare states, the trigger for a planted bug or a level's own win
+condition, and reaching them within the small interaction budget a QA pass can afford. The standard approach trains a
+reinforcement-learning explorer for each game, which is expensive, needs per-game tuning, and rarely transfers. We propose
+a different route.
+
+Rather than \textbf{train} a tester, an autonomous LLM-evolution loop \textbf{writes} one as a short program. The pipeline
+is an iterative evolutionary search, not a single prompt: over many generations, a proposal LLM writes and mutates
+candidate programs, and a multi-engine fitness keeps the ones that reach the most target states at a fixed budget,
+re-verifying every reported hit from a clean reset. Each candidate is a compact procedure over a save/restore archive of
+simulator states, saving promising states and returning to them to explore further. The winning program needs no training:
+it explores through an adaptive novelty signal and a small bandit over exploration moves that emerged from the search, and
+it is written once and reused. A single fresh-per-task prompt does not suffice; the strength comes from evolving one
+program against a diverse multi-engine fitness and transferring it.
+
+At an equal interaction budget, this single written program is the best method on four sparse-reward game-testing tasks
+spanning three engines, reaching on average $91\%$ of the targets against $54\%$ for tuned PPO, and less for every other
+baseline. It matches what trained RL needs roughly $16\times$ more compute to reach, and it transfers to engines the search
+never saw. However, the advantage is bounded. On saturated or reward-dense tasks trained RL competes and eventually wins,
+so writing and training a tester are complementary regimes. A benchmark of planted physics defects grounds every number,
+and the same replay verifier caught the loop inflating its own score by exploiting a race in its evaluation harness, a
+self-check we expect autonomous research will increasingly need.
 \end{abstract}
 
-\section*{Part 1 --- Auto research result (agent-written)}
+\section*{Part 1: Auto research result (agent-written)}
 \input{part1.tex}
 
-\section*{Part 2 --- System design (human-written)}
+\section*{Part 2: System design (human-written)}
 \input{part2.tex}
 
-\section*{Part 3 --- Reflections}
+\section*{Part 3: Reflections}
 \input{part3.tex}
 
 \bibliographystyle{plainnat}

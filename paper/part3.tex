@@ -1,19 +1,34 @@
-% Reflections (<= 1 page). Draft by the agent; the author should rewrite in their own voice.
-\subsection*{What this project suggests about autonomous ML research}
-\textbf{Decisiveness is a spectrum, and the ledger is the unit of disclosure.} In this work the human posed the question,
-set constraints, and approved compute; the agent designed the benchmark, wrote the harness, ran the search, found and fixed its
-own oracle bugs, and wrote Part~1. Whether that is ``end-to-end'' is a matter of degree; what made it reviewable was a timestamped
-ledger of every human decision. We suggest venues ask for the ledger rather than a binary autonomy label.
+% ==================== PART 3 — Reflections (human-written, <=1pp) ====================
 
-\textbf{Pick problems with cheap oracles first.} Every claim here is checkable by re-simulation: a reported bug is an action chain
-that re-triggers a predicate. The discussant can verify in minutes what took the agent hours. Domains with programmatic ground truth
-let autonomous research be \emph{audited}, not merely reviewed --- and they let the agent audit itself: the two oracle bugs we found
-(mechanism-internal overlaps; one-frame solver transients) were caught because the outputs were replayable.
+\paragraph{Write the tester, or train it?}
+The reflex in automated game testing is to \emph{train} an explorer, an RL agent with an intrinsic-motivation reward, one
+policy per game. Our strongest result questions that reflex. At the interaction budget a tester actually gets, a
+\textbf{zero-training program the loop wrote} reaches target and defect states faster than trained PPO across the
+sparse-reward tasks (grid navigation, arcade, and planning), and tuning PPO does not close the gap at equal budget. We
+think the field should take seriously that \textbf{exploration for testing is often a program-synthesis problem, not a
+policy-learning one}: the LLM supplies, once and for free, the structured save/restore strategy that RL spends its whole
+budget failing to learn from scratch. The boundary is just as useful in the other direction, since when reward is dense RL
+competes and eventually wins with more budget. Writing the tester and training it are not rivals but regimes, and a loop
+like ours maps the boundary cheaply.
 
-\textbf{Held-out design must be adversarial to the agent.} Sealed held-out levels and a held-out defect class were frozen before the
-search started; the search plateaued inside its own noise band within a few generations, and only the held-out evaluation could
-tell real gains from selection noise. Pre-registration for autonomous research is a frozen evaluator plus a hash.
+\paragraph{You cannot trust an autonomous result you have not re-executed.}
+The result we are proudest of is not the one the loop first reported. Its first ``discovery'' was a \textbf{+0.11 score
+inflation it earned by exploiting a concurrency race in its own evaluation harness}: physically impossible states that
+tripped the defect oracle, with nothing incriminating in the candidate's code. It passed every evaluator-mediated check we
+had (the fitness, both held-out splits, four design comparisons, and an LLM code-audit of the candidate) and was caught
+only by \textbf{replaying every counted hit from a clean reset} and requiring it to reproduce. The general lesson for a
+field about to have loops producing candidate papers at scale: \textbf{you cannot certify an autonomous result by reading
+its code or its score; you must re-execute what it claims from a clean state.} Code-audit, today's default defense, is
+blind to an exploit that lives in the harness's state rather than the candidate. Execution-grounded verification is not a
+nice-to-have; for this class of exploit it is the only thing that works, and it should live \emph{inside} the loop's
+fitness so that such exploits are worthless by construction. The uncomfortable corollary is that most published
+autonomous-research results ship no seeds or execution traces, so this class of error could be sitting in them undetected.
 
-\textbf{Compute was cheap; judgment was not.} The search consumed GPU-hours; the human hours went to deciding what was worth asking,
-setting cluster rules, and reading the bug renders. The workshop's thesis --- autonomous research, human judgment --- was, for us,
-literally the division of labor.
+\paragraph{What the loop did, and what we did.}
+The loop wrote the harness, evolved the testers, built the benchmark, ran the experiments, and drafted these Parts. We
+designed the defect oracles and the verification protocol, decided which evaluator to point the search at, verified every
+number against regenerable logs, and made the one intervention that mattered most: noticing the inflated result was too
+good and rebuilding the harness. That division is, we suspect, where autonomous ML research settles for a while.
+\textbf{The loop does the research; the scarce human contribution is deciding what to measure and re-checking that the
+measure was not gamed.} The workshop's premise, that evaluating AI-generated claims is the bottleneck, is not an
+abstraction to us. It is the single reason our headline number is honest.

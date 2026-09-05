@@ -21,14 +21,16 @@ br = json.load(open("results/breadth.json"))
 
 
 def best_ppo(path):
-    if not os.path.exists(path):
-        return None, None
-    d = json.load(open(path))
-    best, who = -1, None
-    for obj, splits in d.items():
-        sc = splits.get("search", {}).get("detected")
-        if sc is not None and sc > best:
-            best, who = sc, obj
+    """Best over PPO objectives AND over {default config, tuned (ent=0.2) config} per task — the fair tuned comparison."""
+    best, who = None, None
+    tuned_path = path.replace(".json", "_tuned.json")
+    for f, tag in [(path, "default"), (tuned_path, "tuned")]:
+        if not os.path.exists(f):
+            continue
+        for obj, splits in json.load(open(f)).items():
+            sc = splits.get("search", {}).get("detected")
+            if sc is not None and (best is None or sc > best):
+                best, who = sc, f"{obj}/{tag}"
     return best, who
 
 

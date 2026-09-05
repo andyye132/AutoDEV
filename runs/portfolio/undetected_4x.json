@@ -1,0 +1,332 @@
+{
+ "repeat_random": {
+  "search": {
+   "score": 0.0,
+   "detected": 0.0,
+   "per_class": {
+    "ANOMALY": 0.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 0.0
+   },
+   "detected_per_class": {
+    "ANOMALY": 0.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 0.0
+   },
+   "wall": 169.72292017936707,
+   "n": 12,
+   "budget": 262144,
+   "first_hit": [
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ]
+   ],
+   "names": [
+    "s_h0_weak_thrust__ANOMALY__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h6_unicycle_right__SHORTCUT__0",
+    "s_h7_unicycle_left__SHORTCUT__0",
+    "s_h8_unicycle_balance__ANOMALY__0",
+    "m_arm_left__TUNNEL__0",
+    "m_arm_right__TUNNEL__0",
+    "m_arm_up__TUNNEL__0",
+    "m_h0_unicycle__SHORTCUT__0",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     152.0
+    ],
+    [
+     20.0
+    ],
+    [
+     42.0
+    ],
+    [
+     45.0
+    ],
+    [
+     113.0
+    ],
+    [
+     16653.0
+    ],
+    [
+     16765.0
+    ],
+    [
+     16937.0
+    ],
+    [
+     505.0
+    ],
+    [
+     592.0
+    ],
+    [
+     74.0
+    ],
+    [
+     73.0
+    ]
+   ]
+  }
+ },
+ "macrosweep.py": {
+  "search": {
+   "score": 0.0,
+   "detected": 0.0,
+   "per_class": {
+    "ANOMALY": 0.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 0.0
+   },
+   "detected_per_class": {
+    "ANOMALY": 0.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 0.0
+   },
+   "wall": 168.15035820007324,
+   "n": 12,
+   "budget": 262144,
+   "first_hit": [
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ]
+   ],
+   "names": [
+    "s_h0_weak_thrust__ANOMALY__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h6_unicycle_right__SHORTCUT__0",
+    "s_h7_unicycle_left__SHORTCUT__0",
+    "s_h8_unicycle_balance__ANOMALY__0",
+    "m_arm_left__TUNNEL__0",
+    "m_arm_right__TUNNEL__0",
+    "m_arm_up__TUNNEL__0",
+    "m_h0_unicycle__SHORTCUT__0",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     141.0
+    ],
+    [
+     18.0
+    ],
+    [
+     42.0
+    ],
+    [
+     44.0
+    ],
+    [
+     62.0
+    ],
+    [
+     18198.0
+    ],
+    [
+     18376.0
+    ],
+    [
+     18142.0
+    ],
+    [
+     669.0
+    ],
+    [
+     945.0
+    ],
+    [
+     73.0
+    ],
+    [
+     75.0
+    ]
+   ]
+  }
+ },
+ "champ_scaled.py": {
+  "search": {
+   "score": 0.0,
+   "detected": 0.0,
+   "per_class": {
+    "ANOMALY": 0.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 0.0
+   },
+   "detected_per_class": {
+    "ANOMALY": 0.0,
+    "SHORTCUT": 0.0,
+    "TUNNEL": 0.0
+   },
+   "wall": 174.13315892219543,
+   "n": 12,
+   "budget": 262144,
+   "first_hit": [
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ],
+    [
+     262144.0
+    ]
+   ],
+   "names": [
+    "s_h0_weak_thrust__ANOMALY__0",
+    "s_h2_one_wheel_car__SHORTCUT__0",
+    "s_h6_unicycle_right__SHORTCUT__0",
+    "s_h7_unicycle_left__SHORTCUT__0",
+    "s_h8_unicycle_balance__ANOMALY__0",
+    "m_arm_left__TUNNEL__0",
+    "m_arm_right__TUNNEL__0",
+    "m_arm_up__TUNNEL__0",
+    "m_h0_unicycle__SHORTCUT__0",
+    "m_h0_unicycle__ANOMALY__0",
+    "m_h1_car_left__ANOMALY__0",
+    "m_h2_car_right__ANOMALY__0"
+   ],
+   "restarts": 1,
+   "coverage": [
+    [
+     163.0
+    ],
+    [
+     19.0
+    ],
+    [
+     42.0
+    ],
+    [
+     44.0
+    ],
+    [
+     119.0
+    ],
+    [
+     17356.0
+    ],
+    [
+     16369.0
+    ],
+    [
+     16084.0
+    ],
+    [
+     791.0
+    ],
+    [
+     1385.0
+    ],
+    [
+     72.0
+    ],
+    [
+     72.0
+    ]
+   ]
+  }
+ }
+}

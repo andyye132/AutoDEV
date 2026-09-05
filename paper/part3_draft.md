@@ -5,8 +5,8 @@
 The reflex in automated game/simulation testing is to *train* an explorer — an RL agent with an intrinsic-motivation
 reward, one policy per game. Our loop's strongest result questions that reflex: at the interaction budget a tester
 actually gets, a **zero-training program the loop wrote** reaches target and defect states faster than a trained PPO
-explorer across eight structurally different environments, and RL does not close the gap even with 16× more budget on
-sparse-reward tasks. The field should take seriously that **exploration for testing is often a program-synthesis problem,
+explorer across the sparse-reward navigation and planning environments, and tuning PPO's exploration does not close the
+gap at equal budget (it does flip the two easiest tasks to ties). The field should take seriously that **exploration for testing is often a program-synthesis problem,
 not a policy-learning problem** — the LLM supplies, once and for free, the structured save/restore/energy-pumping strategy
 that RL spends its whole budget failing to learn from scratch. The honest boundary is equally useful: when reward is
 dense (Craftax, level-win), RL competes and eventually wins. "Write the tester" and "train the tester" are not rivals but

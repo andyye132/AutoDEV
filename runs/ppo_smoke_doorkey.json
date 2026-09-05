@@ -1,0 +1,38 @@
+{
+ "ppo_count": {
+  "search": {
+   "score": 0.0,
+   "detected": 0.0,
+   "n": 6,
+   "budget": 4096,
+   "first_hit": [
+    [
+     4096.0
+    ],
+    [
+     4096.0
+    ],
+    [
+     4096.0
+    ],
+    [
+     4096.0
+    ],
+    [
+     4096.0
+    ],
+    [
+     4096.0
+    ]
+   ],
+   "names": [
+    "MiniGrid-DoorKey-8x8__seed0",
+    "MiniGrid-DoorKey-8x8__seed1",
+    "MiniGrid-DoorKey-8x8__seed2",
+    "MiniGrid-DoorKey-8x8__seed3",
+    "MiniGrid-DoorKey-8x8__seed4",
+    "MiniGrid-DoorKey-8x8__seed5"
+   ]
+  }
+ }
+}

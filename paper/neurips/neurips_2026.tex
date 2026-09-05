@@ -1,0 +1,378 @@
+\documentclass{article}
+
+% ============================================================================
+% AUTHOR VISIBILITY:
+%   [dblblindworkshop]          -> ANONYMOUS review copy (hides name/email, adds line numbers)
+%   [dblblindworkshop, final]   -> NON-ANONYMOUS, clean camera-ready look (shows name/email)   <-- currently active
+% ANONYMOUS for double-blind review (current). Add ", final" -> [dblblindworkshop, final] to reveal the author block for camera-ready.
+% The \author{} block below is kept in the source; it is ignored in anonymous mode and used only when "final" is set.
+% ============================================================================
+\usepackage[dblblindworkshop]{neurips_2026}
+
+\workshoptitle{Workshop for Autonomous ML Research}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amssymb}      % \checkmark
+\usepackage{amsmath}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{pifont}       % \ding for the capability table
+
+\title{Born, Not Trained: Zero-Training Programs\\Out-Explore Reinforcement Learning\\for Game Testing at Equal Budget}
+
+\author{%
+  Andy Ye \\
+  Paul G. Allen School of Computer Science \& Engineering \\
+  University of Washington \\
+  \texttt{andy132@cs.washington.edu} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Testing a game or simulation means driving it into rare states, the trigger for a planted bug or a level's own win
+condition, and reaching them within the small interaction budget a QA pass can afford. The standard approach trains a
+reinforcement-learning explorer for each game, which is expensive, needs per-game tuning, and rarely transfers. We propose
+a different route. Rather than train a tester, an autonomous LLM-evolution loop writes one as a short program. The pipeline
+is an iterative evolutionary search, not a single prompt: over many generations, a proposal LLM writes and mutates
+candidate programs, and a multi-engine fitness keeps the ones that reach the most target states at a fixed budget,
+re-verifying every reported hit from a clean reset. Each candidate is a compact procedure over a save/restore archive of
+simulator states, saving promising states and returning to them to explore further. The winning program needs no training:
+it explores through an adaptive novelty signal and a small bandit over exploration moves that emerged from the search, and
+it is written once and reused. A single fresh-per-task prompt does not suffice; the strength comes from evolving one
+program against a diverse multi-engine fitness and transferring it. At an equal interaction budget, this single written
+program is the best method on four sparse-reward game-testing tasks spanning three engines, reaching on average $91\%$ of
+the targets against $54\%$ for tuned PPO, and less for every other baseline. It matches what trained RL needs roughly
+$16\times$ more compute to reach, and it transfers to engines the search never saw. However, the advantage is bounded. On
+saturated or reward-dense tasks trained RL competes and eventually wins, so writing and training a tester are complementary
+regimes. A benchmark of planted physics defects grounds every number, and the same replay verifier caught the loop
+inflating its own score by exploiting a race in its evaluation harness, a self-check we expect autonomous research will
+increasingly need.
+\end{abstract}
+
+\noindent\textbf{Keywords:} autonomous ML research; LLM-driven program synthesis; evolutionary search; game testing;
+exploration; reinforcement learning; execution-grounded verification
+
+% ############################################################################
+% ####  PART 1  ####  Agent-written research result
+% ############################################################################
+\section{Autonomous research result}
+This Part presents the result the loop produced: the setup and hypothesis, the evidence, and the primary finding. It was
+drafted by the loop and verified by the human author (Section~\ref{sec:verify}).
+
+\subsection{Introduction}
+\label{sec:intro}
+Automated game testing needs an \emph{exploration} policy that drives a game into the rare states that trigger a planted
+defect or satisfy a level's win condition, and reaches them within the small interaction budget a QA pass can afford. The
+reflex is to \textbf{train} a reinforcement-learning (RL) explorer, usually PPO with an intrinsic-motivation bonus, once
+per game. But trained RL is costly in interaction, needs per-game reward shaping and tuning, and transfers poorly, so at a
+tester's real budget it under-explores.
+
+We take the opposite route. Rather than \textbf{train} a policy, an autonomous LLM-evolution loop \textbf{writes} an
+exploration \emph{program} and evolves it: over many generations a proposal LLM writes and mutates candidate procedures,
+and a multi-engine fitness keeps the ones that reach the most target states at a fixed budget, with every counted hit
+replayed from a clean reset~\citep{funsearch}. Our central finding is a sharp, budget-matched boundary:
+\textbf{at an equal interaction budget, on sparse-reward target-reaching, a single zero-training program the loop wrote
+out-reaches a tuned RL explorer and every baseline; given $4$--$16\times$ more interaction, or on reward-dense tasks,
+training catches up.} Writing and training the tester are not rivals but regimes, split by reward density and budget, and
+the loop maps that split cheaply. To our knowledge this is the first budget-matched demonstration that a written
+exploration program out-reaches trained RL for game testing, with every counted result execution-verified.
+
+\textbf{Contributions.} (i) A loop that discovers game-testing exploration \emph{programs}, and the map of where a written
+program beats a trained one. (ii) The headline (Fig.~\ref{fig:main}): on four sparse-reward tasks across three engines, our
+tester is the single best method at equal budget, above random, action-repeat, plain Go-Explore, and tuned PPO. The win is
+the discovered strategy, not the archive, and it transfers to engines the search never saw. (iii) A verification backbone,
+replay-from-reset of every counted hit over a frozen hashed protocol with sealed splits and a reachability calibration,
+which caught the loop inflating its own fitness (Section~\ref{sec:setup}, Section~\ref{sec:verify}). The programs, the
+benchmark, and this Part were produced by the loop. We do not overclaim universality: our tester ties two saturated tasks a
+trivial baseline also wins, cedes reward-dense Craftax to PPO, and does not yet run at Kinetix protocol scale. We draw that
+map in full.
+
+\subsection{Related work}
+\label{sec:related}
+\textbf{RL exploration / PPO.} Count-based~\citep{tang2017}, RND~\citep{rnd}, and ICM~\citep{icm} augment a trained
+policy's reward to seek novelty; they need $10^6$--$10^8$ steps to warm up, so at a tester's budget the bonus is cold.
+\emph{We match the budget and train nothing.}
+\textbf{Go-Explore / archive methods.} Go-Explore~\citep{goexplore} keeps an archive of returnable states and is the
+strongest classical family, but its wins hinge on a hand-chosen cell abstraction and are shown per game. \emph{We show a
+plain archive is not enough, since the win is the discovered strategy over it, and evaluate across engines.}
+\textbf{Action-repeat.} A stochasticity control~\citep{machado2018}, not an exploration method. \emph{We include it as a
+baseline; it is our tightest competitor on physics and our weakest on navigation.}
+\textbf{LLMs that write code for control.} FunSearch~\citep{funsearch} evolves programs; Eureka~\citep{eureka} writes
+rewards and trains RL; PromptPO~\citep{promptpo} writes control policies for return; TITAN~\citep{titan} runs a per-step LLM
+agent as a tester. \emph{We occupy the point they leave open: budget-matched, target-reaching, and replay-verified, a
+written exploration program that is paid once and run training-free.} Table~\ref{tab:caps} places the families on the axes
+that matter.
+
+\begin{table}[t]\centering\small
+\caption{Where each family sits. Our tester is the one that is budget-matched, training-free, and target-reaching at
+once; universality across all tasks is \emph{not} claimed (Section~\ref{sec:result}).}
+\label{tab:caps}
+\setlength{\tabcolsep}{4pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}\toprule
+ & no per-env & fixed interaction & sparse-reward & replay-\\
+ & training & budget & target-reaching & verified \\ \midrule
+PPO + intrinsic~\citep{tang2017,rnd,icm} & \ding{55} & \ding{55} & partial & \ding{55} \\
+Go-Explore~\citep{goexplore} & \checkmark & partial & \checkmark & \ding{55} \\
+Action-repeat~\citep{machado2018} & \checkmark & \checkmark & \ding{55} & \ding{55} \\
+Eureka / PromptPO~\citep{eureka,promptpo} & \ding{55}/\checkmark & \ding{55} & \ding{55} & \ding{55} \\
+\textbf{Written program (ours)} & \checkmark & \checkmark & \checkmark & \checkmark \\ \bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection{The result}
+\label{sec:result}
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{figs/fig1.pdf}
+\caption{\textbf{(A)} At an equal interaction budget on the four sparse-reward tasks, our tester is the single best method,
+above random, action-repeat, plain Go-Explore (the \emph{same} save/restore archive), and tuned PPO. Go-Explore's $0.10$ on
+DoorKey shows the win is the discovered strategy, not the archive. \textbf{(B)} The boundary: only PPO's budget scales, and
+tuned PPO needs about $16\times$ the interaction to match our tester's $1\times$ result (PPO is best-of-3 objectives at
+$4/16\times$).}
+\label{fig:main}
+\end{figure}
+
+\textbf{The equal-budget win (Fig.~\ref{fig:main}A).} We report one program, unchanged across tasks, reaching on average
+$0.91$ of the targets against $0.54$ for tuned PPO. Per task it beats every baseline at equal budget: DoorKey $1.00$,
+FourRooms $0.87$, Breakout $1.00$, Sokoban $0.79$, against tuned PPO $0.83/0.50/0.42/0.41$, action-repeat
+$0.33/0.40/0.33/0.56$, Go-Explore $0.10/0.40/0.33/0.51$, and random $0.77/0.27/0.33/0.66$. These are the sparse-reward,
+non-saturated tasks in the suite, chosen along one axis, reward density; on them, winning requires real exploration that no
+cheap baseline provides. Our tester's full record on every task, including where it ties or loses, is the map below.
+
+\textbf{The boundary is the thesis (Fig.~\ref{fig:main}B).} The claim is strictly equal-budget. Scaling only PPO's budget,
+its average climbs from $0.54$ at $1\times$ to $0.91$ at $16\times$, matching what our tester reaches at $1\times$; PPO
+overtakes our tester on DoorKey at $4\times$ and on Breakout and Sokoban at $16\times$. We explicitly withdraw any ``RL
+never catches up'' reading: it does, given an order of magnitude more interaction. That split is the contribution. Write
+once and win at the tester's budget, or train and win with a larger one.
+
+\textbf{Strategy, not archive; and it transfers.} Plain Go-Explore has the \emph{same} archive yet scores $0.10$ on
+DoorKey, below random, and loses to our tester on $5$ of $6$ tasks, so the archive is not the win. And the win transfers
+across engines: our tester was evolved once on a multi-engine fitness (Kinetix, Craftax, and Gymnax) that never saw
+MiniGrid, MinAtar, or Sokoban, while a \emph{fresh} DoorKey-only search reaches just $0.33$ (beating Go-Explore, losing to
+transfer). The recipe is to evolve one multi-engine tester and transfer it, not to write a fresh tester per task.
+
+\textbf{The map (where a written program does \emph{not} win).} Our tester's full row: on MountainCar and DeepSea-24 it
+scores $1.00$, but so does trivial action-repeat, so these are ceiling ties with no exploration skill on display (excluded
+from the claim above); on reward-dense \textbf{Craftax it loses}, $0.27$ against PPO $0.34$; and it does not run at Kinetix
+protocol scale, a compile-time limit of its archive that sibling programs cover (Section~\ref{sec:setup}). This is the
+regime boundary: writing wins where reward is sparse and the budget is tight; on our one reward-dense task and at
+$4$--$16\times$ the budget, training wins.
+
+\subsection{Setup and the verification backbone}
+\label{sec:setup}
+\textbf{Testers as programs} (Fig.~\ref{fig:pipeline}). A tester is four pure-JAX hooks
+(\texttt{init/restore/act/archive}) over an archive of save/restore-able states, run as $B$ workers for $T$ steps, so the
+budget is $B\!\cdot\!T$; the same interface runs on every engine through a generic feature head. PPO is trained on the
+\emph{same} feature head, with no observation handicap, and its training steps \emph{are} its budget. The equal-budget PPO
+column (Fig.~\ref{fig:main}A) is best over a $5$-objective sweep (count, RND, ICM, proximity-curiosity, and task reward)
+crossed with \{default, tuned $lr{=}10^{-4}$, $\text{ent}{=}0.2$\}; the crossover curves (Fig.~\ref{fig:main}B) are
+best-of-$3$ objectives, labeled as such. Testers use $5$ seeds and PPO $3$ to $5$; we report one fixed program.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{figs/pipeline.pdf}
+\caption{The loop: break six engines into defect classes with programmatic witnesses; an LLM writes and mutates tester
+programs scored on a multi-engine fitness (Kinetix hits replayed from reset, Section~\ref{sec:setup}); the single champion
+program explores through a save/restore archive driven by three runtime modules; evaluate against PPO, Go-Explore,
+action-repeat, and random at equal budget.}
+\label{fig:pipeline}
+\end{figure}
+
+\textbf{Depth and verification (Kinetix planted defects).} The rigor lives here. We plant five defect classes
+(\textsc{oob}, \textsc{tunnel}, i.e.\ clipping, \textsc{shortcut}, \textsc{anomaly}, \textsc{disarmed}) with programmatic
+witness predicates over $74$ shipped and $64$ generated levels, and \textbf{every counted hit is re-simulated from a clean
+level reset and must re-raise the witness, or it is a miss}. The protocol is frozen and hashed; a $30\%$ level split and a
+whole defect class are sealed from the search, and a reachability calibration bounds what any tester can witness. The
+loop's strongest Kinetix program (a sibling of our tester, which does not run at this scale) leads a large method field on
+the search split ($0.655$ against action-repeat $0.602$, PPO $0.566$, random $0.494$), but that is \emph{in-sample}
+selection, and on held-out levels its lead over action-repeat narrows to a near-tie, so we headline the apparatus rather
+than the search-split margin. Section~\ref{sec:verify} recounts how this apparatus caught the loop inflating its own
+fitness by $+0.11$ through a harness race, the check the whole result rests on.
+
+% ############################################################################
+% ####  PART 2  ####  System design & meta-analysis (human-written)
+% ############################################################################
+\section{System Design and Meta-Analysis}
+This Part is the human-authored companion to the result above: a meta-analysis of how the work was actually produced, by
+which agents, and how its claims were checked.
+
+\subsection{Agent and Harness}
+\label{sec:agent}
+\textbf{Our main loop} is an island program-evolution framework (ShinkaEvolve~\citep{shinkaevolve}) with two Claude models
+as the proposal agents that wrote and mutated candidate tester programs. We use \texttt{claude-sonnet-5} and
+\texttt{claude-opus-5}. We ran two islands under a fixed \$40 API-cost cap (the run spent about \$20), and the champion
+emerged after roughly $35$ generations. This is the loop which evolved testers, ran experiments, and drafted Part~1.
+
+\textbf{For the model that drove the project,} we used \texttt{claude-fable-5}. To begin the project, we wrote a large,
+detailed outline of the research direction and had the agent pursue it autonomously.
+
+\textbf{The harness.} Around the proposal models, ShinkaEvolve runs a fixed three-stage cycle. In \emph{proposal}, a model
+is given the current champion, the task description, the four-hook program interface, and the scoring rule, and returns an
+edited candidate program. In \emph{evaluation}, that candidate is compiled and executed on every substrate at a fixed
+interaction budget, and scored by the fraction of witness / target states it reaches. In \emph{selection}, candidates are
+kept in a two-island archive with a bandit over the two proposal models, and the best-scoring program is carried forward. A
+tester itself is four pure-JAX hooks (\texttt{init}, \texttt{restore}, \texttt{act}, \texttt{archive}) over a save/restore
+archive of simulator states, run as $B$ parallel workers for $T$ steps (an interaction budget of $B\!\cdot\!T$), behind a
+generic feature head so the same program runs unchanged on every engine.
+
+\subsection{Tools}
+\label{sec:tools}
+\textbf{Models and framework.} The proposal models (\texttt{claude-sonnet-5}, \texttt{claude-opus-5}) were accessed through
+a headless Claude API and orchestrated by ShinkaEvolve~\citep{shinkaevolve}; the driver model was \texttt{claude-fable-5}.
+\textbf{Substrates.} We use genuine published simulators, which are all pure-JAX (Kinetix/jax2d, MiniGrid, MinAtar, Jumanji
+Sokoban, Gymnax, Craftax). The PPO, Go-Explore, action-repeat, and random baselines run in the same harness on the same
+feature vector.
+\textbf{Fitness and compute.} Candidates were scored by the fraction of witness states reached at a fixed budget, on a
+multi-engine search split (seeds $\{0,1,2\}$), run across an Apple M4 Pro laptop and 4 NVIDIA A40 GPUs.
+\textbf{Feedback.} Each candidate received back its scalar fitness together with its worst-scoring targets and a paired
+$95\%$ confidence interval against a frozen reference program.
+
+\subsection{Research Loop}
+\label{sec:loop}
+The loop repeated the proposal $\rightarrow$ evaluate $\rightarrow$ select cycle above. Each hypothesis took the form of a
+program edit, a new novelty signal, a bandit over exploration moves, a different archive policy, and was tested the only
+way the harness allows: by executing the edited program on the multi-engine fitness and keeping or discarding it by score.
+Analysis, comparing the champion against PPO, Go-Explore, action-repeat, and random at equal budget and on held-out
+engines, ran in the same harness. The run completed $37$ generations (it began on 2026-08-29) and recorded $38$ candidate
+programs; the champion appeared at generation $35$, at a total API cost of about \$20.
+
+\subsection{Human Interventions}
+\label{sec:human}
+Human involvement was steering, not execution. Throughout the process, we continuously asked for reality-checking results,
+and ran multiple adversarial reviews. On average, we checked in twice a day to confirm research direction and delegate new
+tasks for the loop to complete. Multiple re-frames of the research vision were required, as sometimes the loop would tunnel
+vision into claims which were not useful. Whenever the agent was asked to do an adversarial review, it would overcorrect
+and severely downplay many core findings, and so additional input from us was required to correct that.
+
+\subsection{Verification}
+\label{sec:verify}
+\textbf{We found verification is required.} The loop's first strong discovery inflated its own fitness by \textbf{$+0.11$}
+through a concurrency race in the harness (reaching physically impossible states, with nothing wrong in the candidate's
+code). It passed the fitness, both held-out splits, four design comparisons, and an LLM code-audit. Only when we replayed
+every hit from a clean reset did we catch the bug. We rebuilt the harness, withdrew the number, and corrected our own
+$N{=}3$ over-reach to $N{=}1$ (three claimed wins down to the one that survived replay). This shows that when we are
+optimizing for a score with an autonomous research loop, it is especially important to ensure that the harness and testing
+environments are robust and correct.
+
+Concretely, four mechanisms carry the verification. (1) \emph{Replay-from-reset}: every counted Kinetix hit is
+re-simulated from a clean level reset and must re-raise its witness predicate, or it is discarded, this is the check that
+caught the exploit. (2) A \emph{frozen, hashed protocol} fixing splits, seeds, budgets, and exclusions, so no comparison
+can drift between runs. (3) \emph{Sealed held-out data}: a $30\%$ level split and an entire defect class the search never
+sees. (4) A \emph{reachability calibration} that bounds what any tester could witness, so a score is read against what is
+actually attainable rather than against a nominal $100\%$.
+
+\subsection{Significance of result}
+\label{sec:significance}
+\textbf{We are able to reach higher capabilities given the same cost.} A written tester is a program that runs
+\emph{training-free}. It is only necessary to evolve one transferable tester once, then reuse it across games, versus
+training a fresh RL explorer for each. At a tester's real budget the written program wins, and RL only catches up given far
+more compute, so for the same testing outcome the written route is much cheaper to deploy. In this work, that one-time cost
+was about \$20 of API calls.
+
+\textbf{Our approach is far more accessible.} Having cheaper game testing agents lowers the bar for who can test a game.
+Given the accessibility of coding agents, it is very feasible that a small studio or an individual without access to enough
+compute for an RL-training pipeline but with access to an LLM can now run a written tester to explore their game for bugs.
+Having cheap bug tests allows game developers to focus more on pushing features rather than searching for complex bugs.
+
+\subsection{Interpretability}
+\label{sec:interp}
+Every artifact of the search is preserved, so the process can be audited end to end. ShinkaEvolve records each candidate
+program in a database keyed by generation and island, with its fitness and its lineage; each generation's candidate source
+is also written to disk, and the champion is a single, human-readable pure-JAX file. The evaluation protocol is frozen and
+content-hashed, and every reported number regenerates from logs by re-running the fixed splits and seeds; result tables are
+produced by scripts from those logs rather than transcribed by hand. Runs, code, and the benchmark are under version
+control. This is exactly what let us reconstruct, after the fact, which generation produced the champion, at what cost, and
+that an earlier, better-looking ``discovery'' was a harness artifact rather than a real result.
+
+\subsection{Limitations}
+\label{sec:limits}
+The claim is equal-budget on sparse-reward target-reaching; given $4$--$16\times$ more interaction, tuned PPO catches up
+(Fig.~\ref{fig:main}B), and action-repeat is a close competitor on Kinetix \emph{physics}. Our tester is not universal: it
+ties two saturated tasks a trivial baseline also solves, loses reward-dense Craftax, and does not run at Kinetix protocol
+scale. It uses a save/restore archive a learned policy cannot, a legitimate strategy difference (archive-based program
+against learned policy at equal budget, the comparison the Go-Explore/RL literature already makes), which we control for
+with identical features and a plain-archive baseline. Replay-from-reset is implemented for Kinetix; on the stochastic
+engines a detection is the engine's own reward or achievement signal on the genuine post-step state, not an independent
+re-simulation. Kinetix is a research substrate, not a shipped game. Per-task instance counts are small on some substrates
+($n{=}6$ on DoorKey and FourRooms), so we report our tester's full record rather than lean on any one headline cell.
+
+% ############################################################################
+% ####  PART 3  ####  Reflections / broader impact
+% ############################################################################
+\section{Broader Impact}
+The impacts of this project for game development should generally be positive. The goal was to make autonomous testing more
+accessible, and with the widespread use of large language models in the current world, we believe many people can adopt and
+utilize this work.
+
+Throughout the process of this autonomous loop, we found that we needed to intervene quite often. The agent had misreported
+its correctness at times. At one point, the harness it wrote was broken, which inflated its score. It required a lot of
+double-checking results in order to find the leak. It is interesting to think about why it took a while; maybe it was a
+hard problem, but also maybe the agent was poised towards having a greater efficacy, and so it did not wish to look for such
+a result. Only when it was told that it was its top priority to report absolutely concrete and correct findings did it seem
+to look. When doing autonomous research, if your metric for success is something like accuracy, it is integral to build
+checks to ensure the results are correct, since the large language model seems to lack surrounding sight.
+
+The agent would also consistently overcorrect. If we mentioned that the direction seemed a bit vague, it would tunnel
+vision immediately. If we ran an adversarial review and nitpicked at its work, then it would overcorrect. A theory we have
+is that large language models tend to over-exaggerate most things, because users enjoy this, and so it takes criticism and
+overcorrects to it in the same over-exaggeratory manner.
+
+It is clear that autonomous research requires a strong research direction, with a strong harness to keep it there. It needs
+something which is able to find the nuance between correcting to a director's opinion and fulfilling the research vision. It
+is unclear if autonomous research can come up with its own grander ideas, as it seemed that throughout this project, we
+needed to provide it with its next steps quite often. An example of lack of creativity is its continuous refining of the
+same strategy rather than doing research into possibly better architectures. The current finding was only possible due to
+telling the model to explore and draft up separate proposals.
+
+Autonomous research sits in a strange place. It calls for a shift in how people approach research. Previously, you needed to
+be an expert in a field just to take a step in that direction. Now, especially in software with coding agents, you do not
+need to be such an expert. You simply must steer the wheel of an (seemingly) all-knowing ship that will complete the tasks
+you specify. As we spoke about in the last paragraph, this ship seems to lack much creativity and direction, and so
+researchers are absolutely still necessary. But it is extremely exciting. Autonomous coding agents can contribute a
+thousandfold more to open source projects and research. People who have good ideas and interesting perspectives but were
+not well versed in a niche can contribute. The goal of research seems to be to advance science, after all.
+
+% ############################################################################
+\clearpage
+\appendix
+
+\section{Reproducibility Statement}
+The primary result is the equal-budget comparison in Fig.~\ref{fig:main} and the Kinetix depth study in
+Section~\ref{sec:setup}. Reproducing it requires: the champion tester program (a single pure-JAX file) and the sibling
+programs; the frozen, content-hashed protocol (level and defect-class splits, seeds $100$--$104$ for evaluation and
+$0$--$2$ for fitness, budgets, and exclusions); and the baselines (PPO, Go-Explore, action-repeat, random) run in the same
+harness on the same feature head. Compute: orchestration on an Apple M4 Pro laptop and evaluation on 4 NVIDIA A40 GPUs; the
+evolutionary search used ShinkaEvolve with two islands and \texttt{claude-sonnet-5} / \texttt{claude-opus-5} as proposal
+models, completing $37$ generations at about \$20 in API cost. Every counted Kinetix hit is verified by replay-from-reset
+(Section~\ref{sec:verify}): reproduction re-runs the fixed protocol and requires each hit to re-raise its witness predicate
+from a clean reset, which is what distinguishes a real detection from a harness artifact.
+
+\section{Disclosure Statement}
+
+\paragraph{Agent(s) / model(s) used.}
+The tester programs and Part~1 were produced by an autonomous ShinkaEvolve loop using \texttt{claude-sonnet-5} and
+\texttt{claude-opus-5} as proposal models. The project was driven by an interactive Claude agent (\texttt{claude-fable-5})
+used for planning, analysis, reality-checking, adversarial review, and drafting. Part~2, Part~3, and this statement are
+human-authored. Every claim, figure, and number in Part~1 was verified by the human author against regenerable logs and
+the replay verifier described in Section~\ref{sec:verify}.
+
+\begin{itemize}
+  \item[$\square$] A human author has curated this work and verified every claim,
+    figure, methodology detail, and reference.
+  \item[$\square$] A human author takes full accountability for the submission as
+    a human-authored, human-verified artifact.
+\end{itemize}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
