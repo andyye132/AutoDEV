@@ -2,9 +2,9 @@
 
 % ============================================================================
 % AUTHOR VISIBILITY:
-%   [dblblindworkshop]          -> ANONYMOUS review copy (hides name/email, adds line numbers)
-%   [dblblindworkshop, final]   -> NON-ANONYMOUS, clean camera-ready look (shows name/email)   <-- currently active
-% ANONYMOUS for double-blind review (current). Add ", final" -> [dblblindworkshop, final] to reveal the author block for camera-ready.
+%   [dblblindworkshop]          -> ANONYMOUS review copy (hides name/email, adds line numbers)   <-- CURRENTLY ACTIVE
+%   [dblblindworkshop, final]   -> NON-ANONYMOUS, clean camera-ready look (shows name/email)
+% Anonymous for double-blind review. Add ", final" -> [dblblindworkshop, final] to reveal the author block for camera-ready.
 % The \author{} block below is kept in the source; it is ignored in anonymous mode and used only when "final" is set.
 % ============================================================================
 \usepackage[dblblindworkshop]{neurips_2026}
@@ -52,10 +52,8 @@ it is written once and reused. A single fresh-per-task prompt does not suffice; 
 program against a diverse multi-engine fitness and transferring it. At an equal interaction budget, this single written
 program is the best method on four sparse-reward game-testing tasks spanning three engines, reaching on average $91\%$ of
 the targets against $54\%$ for tuned PPO, and less for every other baseline. It matches what trained RL needs roughly
-$16\times$ more compute to reach, and it transfers to engines the search never saw. However, the advantage is bounded. On
-saturated or reward-dense tasks trained RL competes and eventually wins, so writing and training a tester are complementary
-regimes. A benchmark of planted physics defects grounds every number, and the same replay verifier caught the loop
-inflating its own score by exploiting a race in its evaluation harness, a self-check we expect autonomous research will
+$16\times$ more interaction to reach, and it transfers to engines the search never saw. However, the advantage is bounded. It ties two saturated tasks a trivial baseline also solves, loses the one reward-dense task to PPO, and is overtaken only when PPO is given several times more interaction, so writing and training a tester are complementary
+regimes. The Kinetix planted-defect benchmark contributes the replay-from-reset verification backbone, and that same replay verifier caught the loop inflating its own score through a race in its evaluation harness, a self-check we expect autonomous research will
 increasingly need.
 \end{abstract}
 
@@ -147,11 +145,10 @@ $0.91$ of the targets against $0.54$ for tuned PPO. Per task it beats every base
 FourRooms $0.87$, Breakout $1.00$, Sokoban $0.79$, against tuned PPO $0.83/0.50/0.42/0.41$, action-repeat
 $0.33/0.40/0.33/0.56$, Go-Explore $0.10/0.40/0.33/0.51$, and random $0.77/0.27/0.33/0.66$. These are the sparse-reward,
 non-saturated tasks in the suite, chosen along one axis, reward density; on them, winning requires real exploration that no
-cheap baseline provides. Our tester's full record on every task, including where it ties or loses, is the map below.
+cheap baseline provides. Our tester's full record on every task, including where it ties or loses, is the map below. On these engines the score is the fraction of designated target and win states reached (an exploration proxy); planted-defect detection with programmatic witness oracles is measured separately on Kinetix (Section~\ref{sec:setup}).
 
 \textbf{The boundary is the thesis (Fig.~\ref{fig:main}B).} The claim is strictly equal-budget. Scaling only PPO's budget,
-its average climbs from $0.54$ at $1\times$ to $0.91$ at $16\times$, matching what our tester reaches at $1\times$; PPO
-overtakes our tester on DoorKey at $4\times$ and on Breakout and Sokoban at $16\times$. We explicitly withdraw any ``RL
+its average climbs from $0.54$ at $1\times$ to $0.91$ at $16\times$, matching what our tester reaches at $1\times$. PPO reaches our tester's level on DoorKey by $4\times$ and on Breakout by $16\times$ (both at the $1.00$ ceiling) and marginally overtakes on Sokoban at $16\times$ ($0.81$ versus $0.79$); on FourRooms it does not match our tester even at $16\times$ ($0.83$ versus $0.87$). We explicitly withdraw any ``RL
 never catches up'' reading: it does, given an order of magnitude more interaction. That split is the contribution. Write
 once and win at the tester's budget, or train and win with a larger one.
 
@@ -164,7 +161,7 @@ transfer). The recipe is to evolve one multi-engine tester and transfer it, not 
 \textbf{The map (where a written program does \emph{not} win).} Our tester's full row: on MountainCar and DeepSea-24 it
 scores $1.00$, but so does trivial action-repeat, so these are ceiling ties with no exploration skill on display (excluded
 from the claim above); on reward-dense \textbf{Craftax it loses}, $0.27$ against PPO $0.34$; and it does not run at Kinetix
-protocol scale, a compile-time limit of its archive that sibling programs cover (Section~\ref{sec:setup}). This is the
+protocol scale, an unresolved scaling stall in its archive at full protocol size that sibling programs cover (Section~\ref{sec:setup}). This is the
 regime boundary: writing wins where reward is sparse and the budget is tight; on our one reward-dense task and at
 $4$--$16\times$ the budget, training wins.
 
@@ -173,7 +170,7 @@ $4$--$16\times$ the budget, training wins.
 \textbf{Testers as programs} (Fig.~\ref{fig:pipeline}). A tester is four pure-JAX hooks
 (\texttt{init/restore/act/archive}) over an archive of save/restore-able states, run as $B$ workers for $T$ steps, so the
 budget is $B\!\cdot\!T$; the same interface runs on every engine through a generic feature head. PPO is trained on the
-\emph{same} feature head, with no observation handicap, and its training steps \emph{are} its budget. The equal-budget PPO
+\emph{same} feature head, with no observation handicap, and its training steps \emph{are} its budget. The comparison is thus an archive-based (save/restore) exploration program against a learned policy at equal environment-step budget: PPO cannot reset to saved states, and the plain-archive Go-Explore baseline (which scores $0.10$ on DoorKey) controls for the archive itself. The equal-budget PPO
 column (Fig.~\ref{fig:main}A) is best over a $5$-objective sweep (count, RND, ICM, proximity-curiosity, and task reward)
 crossed with \{default, tuned $lr{=}10^{-4}$, $\text{ent}{=}0.2$\}; the crossover curves (Fig.~\ref{fig:main}B) are
 best-of-$3$ objectives, labeled as such. Testers use $5$ seeds and PPO $3$ to $5$; we report one fixed program.
@@ -239,7 +236,7 @@ $95\%$ confidence interval against a frozen reference program.
 \subsection{Research Loop}
 \label{sec:loop}
 The loop repeated the proposal $\rightarrow$ evaluate $\rightarrow$ select cycle above. Each hypothesis took the form of a
-program edit, a new novelty signal, a bandit over exploration moves, a different archive policy, and was tested the only
+program edit (a new novelty signal, a bandit over exploration moves, or a different archive policy), and each was tested the only
 way the harness allows: by executing the edited program on the multi-engine fitness and keeping or discarding it by score.
 Analysis, comparing the champion against PPO, Go-Explore, action-repeat, and random at equal budget and on held-out
 engines, ran in the same harness. The run completed $37$ generations (it began on 2026-08-29) and recorded $38$ candidate
@@ -264,7 +261,7 @@ optimizing for a score with an autonomous research loop, it is especially import
 environments are robust and correct.
 
 Concretely, four mechanisms carry the verification. (1) \emph{Replay-from-reset}: every counted Kinetix hit is
-re-simulated from a clean level reset and must re-raise its witness predicate, or it is discarded, this is the check that
+re-simulated from a clean level reset and must re-raise its witness predicate, or it is discarded; this is the check that
 caught the exploit. (2) A \emph{frozen, hashed protocol} fixing splits, seeds, budgets, and exclusions, so no comparison
 can drift between runs. (3) \emph{Sealed held-out data}: a $30\%$ level split and an entire defect class the search never
 sees. (4) A \emph{reachability calibration} that bounds what any tester could witness, so a score is read against what is
@@ -308,11 +305,11 @@ generalize further into real games with complex horizons and loops, much more wo
 \section{Broader Impact}
 The impacts of this project for game development should generally be positive. The goal was to make autonomous testing more
 accessible, and with the widespread use of large language models in the current world, we believe many people can adopt and
-utilize this work. Though additional work would be necessary to have it work on complex games.
+utilize this work, though additional work would be necessary to have it work on complex games.
 
 Throughout the process of this autonomous loop, we found that we needed to intervene quite often. The agent had misreported
 its correctness at times. At one point, the harness it wrote was broken, which inflated its score. It required a lot of
-double-checking results in order to find the leak. It is interesting to think about why it took a while; maybe it was a
+double-checking of results in order to find the leak. It is interesting to think about why it took a while; maybe it was a
 hard problem, but also maybe the agent was poised towards having a greater efficacy, and so it did not wish to look for such
 a result. Only when it was told that it was its top priority to report absolutely concrete and correct findings did it seem
 to look. When doing autonomous research, if your metric for success is something like accuracy, it is integral to build
@@ -332,10 +329,10 @@ telling the model to explore and draft up separate proposals.
 
 Autonomous research sits in a strange place. It calls for a shift in how people approach research. Previously, you needed to
 be an expert in a field just to take a step in that direction. Now, especially in software with coding agents, you do not
-need to be such an expert. You simply must steer the wheel of an (seemingly) all-knowing ship that will complete the tasks
+need to be such an expert. You simply must steer the wheel of a (seemingly) all-knowing ship that will complete the tasks
 you specify. As we spoke about in the last paragraph, this ship seems to lack much creativity and direction, and so
 researchers are absolutely still necessary. But it is extremely exciting. Autonomous coding agents can contribute a
-thousandfold more to open source projects and research. People who have good ideas and interesting perspectives but were
+thousandfold more to open source projects and research. People who have good ideas and interesting perspectives but are
 not well versed in a niche can contribute. The goal of research seems to be to advance science, after all.
 
 % ############################################################################
@@ -371,5 +368,7 @@ the replay verifier described in Section~\ref{sec:verify}.
 
 \bibliographystyle{plainnat}
 \bibliography{refs}
+
+\input{checklist}
 
 \end{document}

@@ -23,7 +23,7 @@
 
 % ===================== Stage 1: benchmark =====================
 \node[mod=cBench] (engines) {6 engines\\{\tiny Kinetix physics, MiniGrid,}\\{\tiny MinAtar, Sokoban,}\\{\tiny Gymnax, Craftax}};
-\node[mod=cBench, right=6mm of engines] (inject) {plant \textbf{5 defect}\\\textbf{classes} + witness\\{\tiny OOB, tunnel, shortcut,}\\{\tiny runaway, disarmed}};
+\node[mod=cBench, right=6mm of engines] (inject) {plant \textbf{5 defect}\\\textbf{classes} + witness\\{\tiny OOB, tunnel, shortcut,}\\{\tiny anomaly, disarmed}};
 \node[mod=cBench, below=3mm of inject] (inst) {\textbf{instances}\\{\tiny broken level +}\\{\tiny witness predicate}};
 \draw[flow=cBench] (engines) -- (inject);
 \draw[flow=cBench] (inject) -- (inst);
@@ -48,7 +48,7 @@
 % ===================== Stage 4: evaluation =====================
 \node[mod=cEval, right=15mm of ucb, yshift=6mm] (run) {run on \textbf{8}\\\textbf{environments}\\{\tiny at equal budget}};
 \node[mod=cEval, below=3mm of run] (vs) {vs \textbf{PPO}, Go-Explore,\\sticky, random};
-\node[mod=cEval, below=3mm of vs] (out) {\textbf{detection}\\{\tiny best on all 8}};
+\node[mod=cEval, below=3mm of vs] (out) {\textbf{detection}\\{\tiny per-task scores}};
 \draw[flow=cTester] (ucb.east) -- ($(ucb.east)+(6mm,0)$) |- (run.west);
 \draw[flow=cEval] (run) -- (vs);
 \draw[flow=cEval] (vs) -- (out);
