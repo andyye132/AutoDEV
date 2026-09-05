@@ -2,9 +2,9 @@
 
 % ============================================================================
 % AUTHOR VISIBILITY:
-%   [dblblindworkshop]          -> ANONYMOUS review copy (hides name/email, adds line numbers)   <-- CURRENTLY ACTIVE
-%   [dblblindworkshop, final]   -> NON-ANONYMOUS, clean camera-ready look (shows name/email)
-% Anonymous for double-blind review. Add ", final" -> [dblblindworkshop, final] to reveal the author block for camera-ready.
+%   [dblblindworkshop]          -> ANONYMOUS review copy (hides name/email, adds line numbers)
+%   [dblblindworkshop, final]   -> NON-ANONYMOUS, clean camera-ready look (shows name/email)   <-- currently active
+% ANONYMOUS for double-blind review (current). Add ", final" -> [dblblindworkshop, final] to reveal the author block for camera-ready.
 % The \author{} block below is kept in the source; it is ignored in anonymous mode and used only when "final" is set.
 % ============================================================================
 \usepackage[dblblindworkshop]{neurips_2026}
@@ -39,8 +39,8 @@
 \maketitle
 
 \begin{abstract}
-Testing a game or simulation means driving it into rare states, the trigger for a planted bug or a level's own win
-condition, and reaching them within the small interaction budget a QA pass can afford. The standard approach trains a
+Testing a game or simulation means driving it into rare states - the trigger for a planted bug or a level's own win
+condition - and reaching them within the small interaction budget a QA pass can afford. The standard approach trains a
 reinforcement-learning explorer for each game, which is expensive, needs per-game tuning, and rarely transfers. We propose
 a different route. Rather than train a tester, an autonomous LLM-evolution loop writes one as a short program. The pipeline
 is an iterative evolutionary search, not a single prompt: over many generations, a proposal LLM writes and mutates
@@ -199,15 +199,13 @@ fitness by $+0.11$ through a harness race, the check the whole result rests on.
 % ####  PART 2  ####  System design & meta-analysis (human-written)
 % ############################################################################
 \section{System Design and Meta-Analysis}
-This Part is the human-authored companion to the result above: a meta-analysis of how the work was actually produced, by
-which agents, and how its claims were checked.
 
 \subsection{Agent and Harness}
 \label{sec:agent}
-\textbf{Our main loop} is an island program-evolution framework (ShinkaEvolve~\citep{shinkaevolve}) with two Claude models
+\textbf{Our main research loop} is an island program-evolution framework (ShinkaEvolve~\citep{shinkaevolve}) with two Claude models
 as the proposal agents that wrote and mutated candidate tester programs. We use \texttt{claude-sonnet-5} and
 \texttt{claude-opus-5}. We ran two islands under a fixed \$40 API-cost cap (the run spent about \$20), and the champion
-emerged after roughly $35$ generations. This is the loop which evolved testers, ran experiments, and drafted Part~1.
+emerged after roughly $35$ generations.
 
 \textbf{For the model that drove the project,} we used \texttt{claude-fable-5}. To begin the project, we wrote a large,
 detailed outline of the research direction and had the agent pursue it autonomously.
@@ -215,62 +213,55 @@ detailed outline of the research direction and had the agent pursue it autonomou
 \textbf{The harness.} Around the proposal models, ShinkaEvolve runs a fixed three-stage cycle. In \emph{proposal}, a model
 is given the current champion, the task description, the four-hook program interface, and the scoring rule, and returns an
 edited candidate program. In \emph{evaluation}, that candidate is compiled and executed on every substrate at a fixed
-interaction budget, and scored by the fraction of witness / target states it reaches. In \emph{selection}, candidates are
-kept in a two-island archive with a bandit over the two proposal models, and the best-scoring program is carried forward. A
+interaction budget, and scored by the fraction of witness and target states it reaches. In \emph{selection}, we keep candidates in a two-island archive with a bandit over the two proposal models, and we carry the best scoring program forward. A
 tester itself is four pure-JAX hooks (\texttt{init}, \texttt{restore}, \texttt{act}, \texttt{archive}) over a save/restore
 archive of simulator states, run as $B$ parallel workers for $T$ steps (an interaction budget of $B\!\cdot\!T$), behind a
-generic feature head so the same program runs unchanged on every engine.
+generic feature head so the same program runs unchanged on whatever engine it is on.
 
 \subsection{Tools}
 \label{sec:tools}
 \textbf{Models and framework.} The proposal models (\texttt{claude-sonnet-5}, \texttt{claude-opus-5}) were accessed through
-a headless Claude API and orchestrated by ShinkaEvolve~\citep{shinkaevolve}; the driver model was \texttt{claude-fable-5}.
-\textbf{Substrates.} We use genuine published simulators, which are all pure-JAX (Kinetix/jax2d, MiniGrid, MinAtar, Jumanji
+a headless Claude API and orchestrated by ShinkaEvolve~\citep{shinkaevolve}. The driver model was \texttt{claude-fable-5}. The run completed $37$ generations and recorded $38$ candidate
+programs. The champion appeared at generation $35$, with a total API cost of about \$20.
+\textbf{Substrates.} We use published simulators, which are all pure-JAX (Kinetix/jax2d, MiniGrid, MinAtar, Jumanji
 Sokoban, Gymnax, Craftax). The PPO, Go-Explore, action-repeat, and random baselines run in the same harness on the same
 feature vector.
 \textbf{Fitness and compute.} Candidates were scored by the fraction of witness states reached at a fixed budget, on a
 multi-engine search split (seeds $\{0,1,2\}$), run across an Apple M4 Pro laptop and 4 NVIDIA A40 GPUs.
-\textbf{Feedback.} Each candidate received back its scalar fitness together with its worst-scoring targets and a paired
-$95\%$ confidence interval against a frozen reference program.
+\textbf{Feedback.} Each candidate received its scalar fitness together with its worst-scoring targets and a paired
+$95\%$ confidence interval against a frozen reference program. 
 
 \subsection{Research Loop}
 \label{sec:loop}
-The loop repeated the proposal $\rightarrow$ evaluate $\rightarrow$ select cycle above. Each hypothesis took the form of a
-program edit (a new novelty signal, a bandit over exploration moves, or a different archive policy), and each was tested the only
-way the harness allows: by executing the edited program on the multi-engine fitness and keeping or discarding it by score.
-Analysis, comparing the champion against PPO, Go-Explore, action-repeat, and random at equal budget and on held-out
-engines, ran in the same harness. The run completed $37$ generations (it began on 2026-08-29) and recorded $38$ candidate
-programs; the champion appeared at generation $35$, at a total API cost of about \$20.
+Our research loop repeated the proposal $\rightarrow$ evaluate $\rightarrow$ select cycle described in \textbf{2.1}. Each hypothesis took the form of a
+program edit, a new novelty signal, a bandit over exploration moves, or a different archive policy. Testing was done by executing the edited program on the multi-engine fitness and keeping or discarding it by score.
+Analysis by comparing the champion against PPO, Go-Explore, action-repeat, and random at equal budget and on held-out
+engines, all ran in the same harness.
 
 \subsection{Human Interventions}
 \label{sec:human}
-Human involvement was steering, not execution. Throughout the process, we continuously asked for reality-checking results,
-and ran multiple adversarial reviews. On average, we checked in twice a day to confirm research direction and delegate new
-tasks for the loop to complete. Multiple re-frames of the research vision were required, as sometimes the loop would tunnel
+Human involvement was steering, not execution. Throughout the process we asked for many reality-checks over results, methods, and framing. We conducted multiple adversarial reviews. On average, we checked in twice a day to confirm research direction and delegate new
+tasks and affirm the research direction that the loop was pointed at. Multiple re-frames of the research vision were required, as sometimes the loop would tunnel
 vision into claims which were not useful. Whenever the agent was asked to do an adversarial review, it would overcorrect
 and severely downplay many core findings, and so additional input from us was required to correct that.
 
 \subsection{Verification}
 \label{sec:verify}
-\textbf{We found verification is required.} The loop's first strong discovery inflated its own fitness by \textbf{$+0.11$}
-through a concurrency race in the harness (reaching physically impossible states, with nothing wrong in the candidate's
-code). It passed the fitness, both held-out splits, four design comparisons, and an LLM code-audit. Only when we replayed
-every hit from a clean reset did we catch the bug. We rebuilt the harness, withdrew the number, and corrected our own
+\textbf{We found verification is required.} The very first strong discovery the loop gave inflated its own fitness by \textbf{$+0.11$}, but it was only because of a concurrency race in the harness (reaching physically impossible states, with nothing wrong in the candidate's
+code). It passed the fitness, both splits, four design comparisons, and an LLM code-audit. It was necessary to replay every hit from a clean reset in order to catch the bug. Based off these findings, we rebuilt the harness, withdrew the number, and corrected our own
 $N{=}3$ over-reach to $N{=}1$ (three claimed wins down to the one that survived replay). This shows that when we are
 optimizing for a score with an autonomous research loop, it is especially important to ensure that the harness and testing
 environments are robust and correct.
 
-Concretely, four mechanisms carry the verification. (1) \emph{Replay-from-reset}: every counted Kinetix hit is
-re-simulated from a clean level reset and must re-raise its witness predicate, or it is discarded; this is the check that
-caught the exploit. (2) A \emph{frozen, hashed protocol} fixing splits, seeds, budgets, and exclusions, so no comparison
-can drift between runs. (3) \emph{Sealed held-out data}: a $30\%$ level split and an entire defect class the search never
+Concretely, four mechanisms carry the verification. (1) \emph{Replay From Scratch}: every counted Kinetix hit is
+re-simulated from a clean level reset and must re-raise its witness predicate, or it is discarded. (2) A \emph{frozen, hashed protocol} fixing splits, seeds, budgets, and exclusions. This is so no comparison can drift between runs. (3) \emph{Data Held Out}: we maintain a $30\%$ level split and an entire defect class the search never
 sees. (4) A \emph{reachability calibration} that bounds what any tester could witness, so a score is read against what is
-actually attainable rather than against a nominal $100\%$.
+actually attainable to compare if something is off.
 
 \subsection{Significance of result}
 \label{sec:significance}
 \textbf{We are able to reach higher capabilities given the same cost.} A written tester is a program that runs
-\emph{training-free}. It is only necessary to evolve one transferable tester once, then reuse it across games, versus
+\emph{without training}. It is only necessary to evolve one transferable tester once, then reuse it across games, versus
 training a fresh RL explorer for each. At a tester's real budget the written program wins, and RL only catches up given far
 more compute, so for the same testing outcome the written route is much cheaper to deploy. In this work, that one-time cost
 was about \$20 of API calls.
@@ -282,22 +273,16 @@ Having cheap bug tests allows game developers to focus more on pushing features 
 
 \subsection{Interpretability}
 \label{sec:interp}
-Every artifact of the search is preserved, so the process can be audited end to end. ShinkaEvolve records each candidate
-program in a database keyed by generation and island, with its fitness and its lineage; each generation's candidate source
-is also written to disk, and the champion is a single, human-readable pure-JAX file. The evaluation protocol is frozen and
-content-hashed, and every reported number regenerates from logs by re-running the fixed splits and seeds; result tables are
-produced by scripts from those logs rather than transcribed by hand. Runs, code, and the benchmark are under version
-control. This is exactly what let us reconstruct, after the fact, which generation produced the champion, at what cost, and
-that an earlier, better-looking ``discovery'' was a harness artifact rather than a real result.
+We preserve every artifact of the search, so the process can be audited end to end. ShinkaEvolve records each candidate
+program in a database keyed by generation and island, with its fitness and its lineage. We also write each generation's candidate source to disk, and provide a human readable JAX file. Every reported number regenerates from logs by re-running the fixed splits and seeds. Our result tables are
+produced by scripts from those logs. 
 
 \subsection{Limitations}
 \label{sec:limits}
-The claim is equal-budget on sparse-reward target-reaching. If we provide $4$--$16\times$ more interaction, tuned PPO
-catches up (Fig.~\ref{fig:main}B). Action-repeat is even cheaper than our method, and is a close competitor on Kinetix
-\emph{physics}. Our tester is also not universal. It ties two saturated tasks a trivial baseline also solves, loses
-reward-dense Craftax, and does not run at Kinetix protocol scale. It is also important to note that many of the games are
-very simple, and all are in 2D space. Some are not even games; Kinetix is a research substrate. In order to help this
-generalize further into real games with complex horizons and loops, much more work is required.
+The claim is equal-budget on sparse-reward target-reaching. If we provide $4$--$16\times$ more interaction, tuned PPO catches up
+(Fig.~\ref{fig:main}B). Action-repeat is even cheaper than our method, and is a close competitor on Kinetix \emph{physics}. Our tester is also not universal. It
+ties two saturated tasks a trivial baseline also solves, loses reward-dense Craftax, and does not run at Kinetix protocol
+scale. It is also important to note that many of the games are very simple, and all are in 2D space. Some are not even games; Kinetix is a research substrate. In order to help this generalize further into real games with complex horizons and loops, much more work is required.
 
 % ############################################################################
 % ####  PART 3  ####  Reflections / broader impact
@@ -305,12 +290,11 @@ generalize further into real games with complex horizons and loops, much more wo
 \section{Broader Impact}
 The impacts of this project for game development should generally be positive. The goal was to make autonomous testing more
 accessible, and with the widespread use of large language models in the current world, we believe many people can adopt and
-utilize this work, though additional work would be necessary to have it work on complex games.
+utilize this work. Though additional work would be necessary to have it work on complex games.
 
 Throughout the process of this autonomous loop, we found that we needed to intervene quite often. The agent had misreported
-its correctness at times. At one point, the harness it wrote was broken, which inflated its score. It required a lot of
-double-checking of results in order to find the leak. It is interesting to think about why it took a while; maybe it was a
-hard problem, but also maybe the agent was poised towards having a greater efficacy, and so it did not wish to look for such
+its correctness at times. At one point, the harness it wrote was broken, which inflated its score. It required finding inconsistencies in results in order to find the leak. It is interesting to think about why it took a while; maybe it was a
+hard problem, but also maybe the agent was poised and rewarded for having  better results, and so it did not wish to look for such
 a result. Only when it was told that it was its top priority to report absolutely concrete and correct findings did it seem
 to look. When doing autonomous research, if your metric for success is something like accuracy, it is integral to build
 checks to ensure the results are correct, since the large language model seems to lack surrounding sight.
@@ -329,10 +313,10 @@ telling the model to explore and draft up separate proposals.
 
 Autonomous research sits in a strange place. It calls for a shift in how people approach research. Previously, you needed to
 be an expert in a field just to take a step in that direction. Now, especially in software with coding agents, you do not
-need to be such an expert. You simply must steer the wheel of a (seemingly) all-knowing ship that will complete the tasks
+need to be such an expert. You simply must steer the wheel of an (seemingly) all-knowing ship that will complete the tasks
 you specify. As we spoke about in the last paragraph, this ship seems to lack much creativity and direction, and so
 researchers are absolutely still necessary. But it is extremely exciting. Autonomous coding agents can contribute a
-thousandfold more to open source projects and research. People who have good ideas and interesting perspectives but are
+thousandfold more to open source projects and research. People who have good ideas and interesting perspectives but were
 not well versed in a niche can contribute. The goal of research seems to be to advance science, after all.
 
 % ############################################################################
@@ -360,9 +344,9 @@ human-authored. Every claim, figure, and number in Part~1 was verified by the hu
 the replay verifier described in Section~\ref{sec:verify}.
 
 \begin{itemize}
-  \item[$\square$] A human author has curated this work and verified every claim,
+  \item[$\boxtimes$] A human author has curated this work and verified every claim,
     figure, methodology detail, and reference.
-  \item[$\square$] A human author takes full accountability for the submission as
+  \item[$\boxtimes$] A human author takes full accountability for the submission as
     a human-authored, human-verified artifact.
 \end{itemize}
 
