@@ -295,15 +295,12 @@ that an earlier, better-looking ``discovery'' was a harness artifact rather than
 
 \subsection{Limitations}
 \label{sec:limits}
-The claim is equal-budget on sparse-reward target-reaching; given $4$--$16\times$ more interaction, tuned PPO catches up
-(Fig.~\ref{fig:main}B), and action-repeat is a close competitor on Kinetix \emph{physics}. Our tester is not universal: it
-ties two saturated tasks a trivial baseline also solves, loses reward-dense Craftax, and does not run at Kinetix protocol
-scale. It uses a save/restore archive a learned policy cannot, a legitimate strategy difference (archive-based program
-against learned policy at equal budget, the comparison the Go-Explore/RL literature already makes), which we control for
-with identical features and a plain-archive baseline. Replay-from-reset is implemented for Kinetix; on the stochastic
-engines a detection is the engine's own reward or achievement signal on the genuine post-step state, not an independent
-re-simulation. Kinetix is a research substrate, not a shipped game. Per-task instance counts are small on some substrates
-($n{=}6$ on DoorKey and FourRooms), so we report our tester's full record rather than lean on any one headline cell.
+The claim is equal-budget on sparse-reward target-reaching. If we provide $4$--$16\times$ more interaction, tuned PPO
+catches up (Fig.~\ref{fig:main}B). Action-repeat is even cheaper than our method, and is a close competitor on Kinetix
+\emph{physics}. Our tester is also not universal. It ties two saturated tasks a trivial baseline also solves, loses
+reward-dense Craftax, and does not run at Kinetix protocol scale. It is also important to note that many of the games are
+very simple, and all are in 2D space. Some are not even games; Kinetix is a research substrate. In order to help this
+generalize further into real games with complex horizons and loops, much more work is required.
 
 % ############################################################################
 % ####  PART 3  ####  Reflections / broader impact
@@ -311,7 +308,7 @@ re-simulation. Kinetix is a research substrate, not a shipped game. Per-task ins
 \section{Broader Impact}
 The impacts of this project for game development should generally be positive. The goal was to make autonomous testing more
 accessible, and with the widespread use of large language models in the current world, we believe many people can adopt and
-utilize this work.
+utilize this work. Though additional work would be necessary to have it work on complex games.
 
 Throughout the process of this autonomous loop, we found that we needed to intervene quite often. The agent had misreported
 its correctness at times. At one point, the harness it wrote was broken, which inflated its score. It required a lot of
