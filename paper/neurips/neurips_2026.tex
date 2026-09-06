@@ -156,7 +156,7 @@ non-saturated tasks in the suite, chosen along one axis of reward density. With 
 cheap baseline provides. On these engines the score is the fraction of designated target and win states reached (an exploration proxy); planted-defect detection with programmatic witness oracles is measured separately on Kinetix (Section~\ref{sec:setup}).
 
 \textbf{The boundary is the thesis (Fig.~\ref{fig:main}B).} The claim is strictly for an equal budget scenario. Scaling only PPO's budget,
-its average climbs from $54\%$ at $1\times$ scaling to $91\%$ at $16\times$ scaling, matching what our tester reaches at $1\times$. PPO reaches our tester's level on DoorKey by $4\times$ and on Breakout by $16\times$ (both at the $100\%$ ceiling) and marginally overtakes on Sokoban at $16\times$ ($81\%$ versus $79\%$); on FourRooms it does not match our tester even at $16\times$ ($83\%$ versus $87\%$). Any reading that RL never catches up is wrong: it certainly does catch up, but only when given an order of magnitude more interaction. That split is the contribution. Write
+its average climbs from $54\%$ at $1\times$ scaling to $91\%$ at $16\times$ scaling, matching what our tester reaches at $1\times$. PPO reaches our tester's level on DoorKey by $4\times$ and on Breakout by $16\times$ (both at the $100\%$ ceiling) and marginally overtakes on Sokoban at $16\times$ ($81\%$ versus $79\%$); on FourRooms it does not match our tester even at $16\times$ ($83\%$ versus $87\%$). Any reading that RL never catches up is wrong. It certainly does catch up, but only when given an order of magnitude more interaction. That split is the contribution. Write
 once and win at the tester's budget, or train and win with a larger one.
 
 \textbf{We find that strategy matters more than archive, and this transfers.} Plain Go-Explore has the \emph{same} archive, yet scores $10\%$ on
@@ -175,7 +175,7 @@ $4$--$16\times$ the budget, training wins.
 \textbf{Testers as programs} (Fig.~\ref{fig:pipeline}). A tester is four pure-JAX hooks
 (\texttt{init/restore/act/archive}) over an archive of save/restore-able states, run as $B$ workers for $T$ steps, so the
 budget is $B\!\cdot\!T$; the same interface runs on every engine through a generic feature head. PPO is trained on the
-\emph{same} feature head, with no observation handicap, and its training steps \emph{are} its budget. The comparison is thus an archive-based (save/restore) exploration program against a learned policy at equal environment-step budget: PPO cannot reset to saved states, and the plain-archive Go-Explore baseline (which scores $10\%$ on DoorKey) controls for the archive itself. The equal-budget PPO
+\emph{same} feature head, with no observation handicap, and its training steps \emph{are} its budget. The comparison is thus an archive-based (save/restore) exploration program against a learned policy at equal environment-step budget. PPO cannot reset to saved states, and the plain-archive Go-Explore baseline (which scores $10\%$ on DoorKey) controls for the archive itself. The equal-budget PPO
 column (Fig.~\ref{fig:main}A) is best over a $5$-objective sweep (count, RND, ICM, proximity-curiosity, and task reward)
 crossed with \{default, tuned $lr{=}10^{-4}$, $\text{ent}{=}0.2$\}; the crossover curves (Fig.~\ref{fig:main}B) are
 best-of-$3$ objectives, labeled as such. Testers use $5$ seeds and PPO $3$ to $5$; we report one fixed program.
@@ -282,8 +282,7 @@ produced by scripts from those logs.
 
 \subsection{Limitations}
 \label{sec:limits}
-Our claim is on an equal budget. If we provide $4$--$16\times$ more interaction, tuned PPO catches up
-(Fig.~\ref{fig:main}B). Action-repeat is even cheaper than our method, and is a close competitor on Kinetix \emph{physics}. Our tester is also not universal. It is also important to note that many of the games are very simple, and all are in 2D space. Some are not even games, Kinetix is a research substrate. In order to help this generalize further into real games with complex horizons and loops, much more work is required.
+Our claim is on an equal budget. If we provide $4$--$16\times$ more interaction, tuned PPO catches up (Fig.~\ref{fig:main}B), and action-repeat, which is even cheaper than our method, is a close competitor on Kinetix \emph{physics}. Our tester is also not universal, in that it does not win on every task. On tasks that are already saturated, where even a trivial baseline reaches every target, it can only tie, and on reward-dense tasks it can lose to a trained policy, since a dense reward signal is what reinforcement learning exploits best. It is also important to note that many of the games are very simple, and all are in 2D space. Some are not even games, as Kinetix is a research substrate rather than a shipped title. In order to help this generalize further into real games with complex horizons and loops, much more work is required.
 
 % ############################################################################
 % ####  PART 3  ####  Reflections / broader impact
