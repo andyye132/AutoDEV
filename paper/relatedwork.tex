@@ -1,0 +1,57 @@
+% ============================================================================
+% Related Work (rewritten): survey the landscape as prose first; position OUR
+% contribution only in the final paragraph. Drop into Overleaf and either
+%   \input{relatedwork}
+% in place of the old "\subsection{Related work} ... \end{table}" block, or
+% paste the body below over it. Uses only refs already in refs.bib.
+% ============================================================================
+\subsection{Related work}
+\label{sec:related}
+Automated game testing has traditionally leaned on hand-written oracles: scripted assertions and record-and-replay
+regression suites that re-run fixed trajectories, invariant and property checks, and fuzzing that perturbs inputs to
+force a crash, all backed by human QA playthroughs. Such methods catch what their authors anticipated, but none
+\emph{explores} the state space on its own, so the rare states that trigger a bug, or a level's own win condition, are
+reached only when a person or a script already knew to go there. The open problem is therefore an exploration policy that
+drives a game into those rare states within the small interaction budget a testing pass can afford, and recent work
+attacks it by driving the game with an agent, including per-step large-language-model agents that act as
+testers~\citep{titan}.
+
+The dominant learned approach trains a reinforcement-learning explorer whose reward is augmented with an
+intrinsic-motivation bonus for novelty: count-based exploration~\citep{tang2017}, random network
+distillation~\citep{rnd}, and curiosity from prediction error~\citep{icm}. These are effective but sample-hungry,
+typically needing $10^6$--$10^8$ environment steps before the bonus becomes informative, far more interaction than a
+testing pass allocates. A complementary line stores and revisits promising states instead of learning a policy:
+Go-Explore~\citep{goexplore} keeps an archive of returnable states and is the strongest classical exploration family,
+though its results hinge on a hand-chosen cell abstraction and are reported per game. Simpler still, action-repeat
+(sticky actions), introduced as a stochasticity control for the Arcade Learning Environment~\citep{machado2018}, is not
+an exploration method at all, yet is a surprisingly strong baseline on physics-like dynamics.
+
+A separate thread has large language models \emph{write code} for control rather than act step by step.
+FunSearch~\citep{funsearch} evolves programs against an executable score; Eureka~\citep{eureka} writes reward functions
+that are then optimized by standard RL; and PromptPO~\citep{promptpo} asks when an LLM can itself serve as the policy
+optimizer for sequential RL tasks. Together these show that an LLM-authored artifact can rival hand-designed or trained
+controllers, but they target return maximization or reward design, and the resulting policy is still trained or the LLM
+is still in the loop at inference time.
+
+Our setting sits at a point none of these occupy. We ask for an exploration procedure that is evaluated at a fixed
+interaction budget, aimed at reaching sparse target and defect states rather than maximizing return, written once as a
+program and run \emph{training-free}, and execution-verified, with every counted hit replayed from a clean reset.
+Table~\ref{tab:caps} places the families above on exactly these axes; the region that is budget-matched, training-free,
+target-reaching, and replay-verified at once is the one our written tester occupies.
+
+\begin{table}[t]\centering\small
+\caption{Where each family sits. Our tester is the one that is budget-matched, training-free, and target-reaching at
+once; universality across all tasks is \emph{not} claimed (Section~\ref{sec:result}).}
+\label{tab:caps}
+\setlength{\tabcolsep}{4pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}\toprule
+ & no per-env & fixed interaction & sparse-reward & replay-\\
+ & training & budget & target-reaching & verified \\ \midrule
+PPO + intrinsic~\citep{tang2017,rnd,icm} & \ding{55} & \ding{55} & partial & \ding{55} \\
+Go-Explore~\citep{goexplore} & \checkmark & partial & \checkmark & \ding{55} \\
+Action-repeat~\citep{machado2018} & \checkmark & \checkmark & \ding{55} & \ding{55} \\
+Eureka / PromptPO~\citep{eureka,promptpo} & \ding{55}/\checkmark & \ding{55} & \ding{55} & \ding{55} \\
+\textbf{Written program (ours)} & \checkmark & \checkmark & \checkmark & \checkmark \\ \bottomrule
+\end{tabular}}
+\end{table}

@@ -95,38 +95,7 @@ benchmark, and this Part were produced by the loop. We do not overclaim universa
 trivial baseline also wins, cedes reward-dense Craftax to PPO, and does not yet run at Kinetix protocol scale. We draw that
 map in full.
 
-\subsection{Related work}
-\label{sec:related}
-\textbf{RL exploration / PPO.} Count-based~\citep{tang2017}, RND~\citep{rnd}, and ICM~\citep{icm} augment a trained
-policy's reward to seek novelty; they need $10^6$--$10^8$ steps to warm up, so at a tester's budget the bonus is cold.
-\emph{We match the budget and train nothing.}
-\textbf{Go-Explore / archive methods.} Go-Explore~\citep{goexplore} keeps an archive of returnable states and is the
-strongest classical family, but its wins hinge on a hand-chosen cell abstraction and are shown per game. \emph{We show a
-plain archive is not enough, since the win is the discovered strategy over it, and evaluate across engines.}
-\textbf{Action-repeat.} A stochasticity control~\citep{machado2018}, not an exploration method. \emph{We include it as a
-baseline; it is our tightest competitor on physics and our weakest on navigation.}
-\textbf{LLMs that write code for control.} FunSearch~\citep{funsearch} evolves programs; Eureka~\citep{eureka} writes
-rewards and trains RL; PromptPO~\citep{promptpo} writes control policies for return; TITAN~\citep{titan} runs a per-step LLM
-agent as a tester. \emph{We occupy the point they leave open: budget-matched, target-reaching, and replay-verified, a
-written exploration program that is paid once and run training-free.} Table~\ref{tab:caps} places the families on the axes
-that matter.
-
-\begin{table}[t]\centering\small
-\caption{Where each family sits. Our tester is the one that is budget-matched, training-free, and target-reaching at
-once; universality across all tasks is \emph{not} claimed (Section~\ref{sec:result}).}
-\label{tab:caps}
-\setlength{\tabcolsep}{4pt}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{@{}lcccc@{}}\toprule
- & no per-env & fixed interaction & sparse-reward & replay-\\
- & training & budget & target-reaching & verified \\ \midrule
-PPO + intrinsic~\citep{tang2017,rnd,icm} & \ding{55} & \ding{55} & partial & \ding{55} \\
-Go-Explore~\citep{goexplore} & \checkmark & partial & \checkmark & \ding{55} \\
-Action-repeat~\citep{machado2018} & \checkmark & \checkmark & \ding{55} & \ding{55} \\
-Eureka / PromptPO~\citep{eureka,promptpo} & \ding{55}/\checkmark & \ding{55} & \ding{55} & \ding{55} \\
-\textbf{Written program (ours)} & \checkmark & \checkmark & \checkmark & \checkmark \\ \bottomrule
-\end{tabular}}
-\end{table}
+\input{relatedwork}
 
 \subsection{The result}
 \label{sec:result}
