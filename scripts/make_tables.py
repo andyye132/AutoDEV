@@ -4,7 +4,7 @@ import numpy as np
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from autodev.exclusions import load_exclusions, mask_rows
-ap = argparse.ArgumentParser(); ap.add_argument("--evals", default="runs/hyak_eval_merged.json"); ap.add_argument("--out", default="paper/table_transfer.tex")
+ap = argparse.ArgumentParser(); ap.add_argument("--evals", default="runs/hyak_eval_merged.json"); ap.add_argument("--out", default="results/tables/table_transfer.tex")
 ap.add_argument("--only", default="", help="ordered subset of program keys; use '|' between keys to insert a midrule")
 ap.add_argument("--label", default="tab:transfer"); ap.add_argument("--caption_extra", default="")
 ap.add_argument("--exclusions", default="results/structural.json", help="structural file; unwitnessable + free-hit instances are dropped from denominators ('' = keep all)")

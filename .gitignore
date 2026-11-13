@@ -1,24 +1,47 @@
+# environments, caches, OS files
 .venv/
 __pycache__/
 *.pyc
+.DS_Store
+nohup.out
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+paper/*.log
+paper/figs/*.log
+paper/neurips_2026.pdf
+paper/_local/
+
+# search runs: large working folders. The files the paper needs are force-added individually
+# (runs/evolve_run7_multi/programs.sqlite and the best programs; see programs/README.md).
 runs/evolve_*/
+*.sqlite
 runs/hyak/evalq*/
 runs/hyak/fresh_levels/
 runs/*.log
 runs/bench_round*.log
 runs/update_bugs*.log
-*.sqlite
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.fls
-paper/*.fdb_latexmk
-paper/*.bbl
-paper/*.blg
-nohup.out
 runs/hyak/scan_*.json
 !runs/hyak/scan_*.classified.json
+
 # Benchmark answer-key leak: these filenames reveal which instances are the planted exploits.
 # NEVER commit them (they would compromise the benchmark for anyone with repo access).
 runs/audit_defense*/
 **/prompts/*EXPLOITER*
+
+# unrelated local files
+tv.json
+AGENTS.md
+
+# extra outputs of paper/figs/make_figs.py (previews and unused variants of Figure 3)
+paper/figs/*.png
+paper/figs/fig_evolution_A.pdf
+paper/figs/fig_evolution_B.pdf
+paper/figs/fig_evolution_C.pdf
+archive/**/*.log

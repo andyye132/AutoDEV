@@ -24,4 +24,4 @@ else
 fi
 FILES="${FILES#,}"
 echo "tables from: $FILES"
-python scripts/make_bug_table.py --classified "$FILES" --tex paper/table_bugs.tex --out results/bugs.json | tail -25
+python scripts/make_bug_table.py --classified "$FILES" --tex results/tables/table_bugs.tex --out results/bugs.json | tail -25

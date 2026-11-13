@@ -1,0 +1,15 @@
+# Versions installed in the environment the laptop-side results were produced with.
+jax==0.9.0
+jaxlib==0.9.0
+optax==0.2.8
+flax==0.12.6
+distrax==0.1.9
+chex==0.1.92
+numpy==2.5.2
+matplotlib==3.11.1
+kinetix-env==3.0.0
+gymnax==0.0.9
+xminigrid==0.9.3
+jumanji==1.1.2
+craftax==1.6.1
+shinka-evolve==0.0.7

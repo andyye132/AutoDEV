@@ -2,11 +2,11 @@
 hard bench, from results/bench/*.json (scripts/bench_methods.py output; fixed harness, verified hits).
 
     python scripts/methods_table.py --easy results/bench/gpu_round0.json,results/bench/gpu_round1.json,results/bench/gpu_round2.json \
-        --hard results/bench/gpu_hard0.json,results/bench/gpu_hard1.json --out paper/table_methods.tex
+        --hard results/bench/gpu_hard0.json,results/bench/gpu_hard1.json --out results/tables/table_methods.tex
 """
 import json, argparse
 ap = argparse.ArgumentParser(); ap.add_argument("--easy", required=True); ap.add_argument("--hard", required=True)
-ap.add_argument("--out", default="paper/table_methods.tex"); a = ap.parse_args()
+ap.add_argument("--out", default="results/tables/table_methods.tex"); a = ap.parse_args()
 
 NAMES = {  # program key -> (display name, family)
  "repeat_random": ("Action-repeat random (hand-designed)", "baseline"), "initial": ("Go-Explore seed", "baseline"),

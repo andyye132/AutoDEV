@@ -1,6 +1,6 @@
 """Cost per target (C5.2): for each tester and split, the median simulator steps to first witness over the instances that
 ALL compared testers find (so the comparison is on common ground), the fraction found, and the harness wall-clock per instance
-from the evaluation logs. Writes results/cost.json and paper/table_cost.tex.
+from the evaluation logs. Writes results/cost.json and results/tables/table_cost.tex.
 
     python scripts/cost_table.py --evals runs/hyak_eval_merged.json --programs repeat_random,goexplore,cand1_gen037_0.6994.py,macrosweep.py,ppo_count,ppo_rnd
 """
@@ -10,7 +10,7 @@ import numpy as np
 ap = argparse.ArgumentParser()
 ap.add_argument("--evals", default="runs/hyak_eval_merged.json"); ap.add_argument("--programs", default="repeat_random,goexplore,cand1_gen037_0.6994.py,macrosweep.py,ppo_count,ppo_rnd")
 ap.add_argument("--names", default="repeat_random=Action-repeat random,goexplore=Go-Explore (seed),cand1_gen037_0.6994.py=Discovered (run 1 best),macrosweep.py=Opus: macrosweep,ppo_count=PPO+count,ppo_rnd=PPO+RND")
-ap.add_argument("--out", default="results/cost.json"); ap.add_argument("--tex", default="paper/table_cost.tex")
+ap.add_argument("--out", default="results/cost.json"); ap.add_argument("--tex", default="results/tables/table_cost.tex")
 a = ap.parse_args(); names = dict(kv.split("=", 1) for kv in a.names.split(",") if kv)
 E = json.load(open(a.evals)); progs = [p for p in a.programs.split(",") if p in E]
 SPL = {"search": "Search", "heldout_levels_instances": "Held-out levels", "heldout_class_instances": "Held-out class"}

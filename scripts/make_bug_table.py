@@ -3,14 +3,14 @@ severity A/B, which testers reached them and after how many steps; spawn-time hi
 counted separately. Several classified files (hand-designed and evolved testers, shipped and fresh levels) are merged.
 
     python scripts/make_bug_table.py --classified runs/hyak_scan_shipped.classified.json,runs/hyak_scan_fresh.classified.json \
-        --tex paper/table_bugs.tex --out results/bugs.json
+        --tex results/tables/table_bugs.tex --out results/bugs.json
 """
 import os, json, argparse
 from collections import defaultdict
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--classified", default="runs/hyak_scan_shipped.classified.json,runs/hyak_scan_fresh.classified.json")
-ap.add_argument("--tex", default="paper/table_bugs.tex"); ap.add_argument("--out", default="results/bugs.json")
+ap.add_argument("--tex", default="results/tables/table_bugs.tex"); ap.add_argument("--out", default="results/bugs.json")
 ap.add_argument("--names", default="random=Random,repeat_random=Action-repeat,goexplore=Go-Explore,cand1_gen037_0.6994.py=Evolved,macrosweep.py=Macrosweep,"
                                    "wallbreaker.py=Wallbreaker,resonator.py=Resonator,contact_ucb.py=Contact-UCB")
 ap.add_argument("--max_rows", type=int, default=14)

@@ -1,6 +1,6 @@
 """Accuracy across breadth: one matrix of suites x programs from every evaluation file (Kinetix K-Defect / K-Goal / K-Fresh /
 rotated, Gymnax, XLand-MiniGrid, Craftax pilot). Detection within budget (mean over seeds) with a 95% CI over seeds, per split.
-Writes results/breadth.json and paper/table_breadth.tex. Runs on whatever files exist.
+Writes results/breadth.json and results/tables/table_breadth.tex. Runs on whatever files exist.
 
     python scripts/breadth_table.py
 """
@@ -17,7 +17,7 @@ ap.add_argument("--files", default="runs/hyak_eval_merged.json=K-Defect,runs/hya
                                    "runs/hyak/eval_xmini_doorkey.json=X-DoorKey,runs/hyak/eval_xmini_fourrooms.json=X-FourRooms,runs/hyak/eval_xmini_unlock.json=X-Unlock,runs/hyak/eval_craftax_pilot2.json=C-Ach")
 ap.add_argument("--programs", default="random,repeat_random,goexplore,cand1_gen037_0.6994.py,cand4_gen035_0.6934.py,macrosweep.py,elites.py,ppo_count,ppo_rnd")
 ap.add_argument("--names", default="random=Random,repeat_random=Action-repeat,goexplore=Go-Explore,cand1_gen037_0.6994.py=Discovered (r1 best),cand4_gen035_0.6934.py=Discovered (r1 g35),macrosweep.py=Opus macrosweep,elites.py=Elites,ppo_count=PPO+count,ppo_rnd=PPO+RND")
-ap.add_argument("--out", default="results/breadth.json"); ap.add_argument("--tex", default="paper/table_breadth.tex")
+ap.add_argument("--out", default="results/breadth.json"); ap.add_argument("--tex", default="results/tables/table_breadth.tex")
 a = ap.parse_args(); names = dict(kv.split("=", 1) for kv in a.names.split(",") if kv); progs = a.programs.split(",")
 M = {}   # suite -> split -> program -> (det, ci, n)
 for spec in a.files.split(","):

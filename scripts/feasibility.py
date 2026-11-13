@@ -3,14 +3,14 @@ within budget when the tester is told where the witness is; detection is then re
 split, next to the raw detection. Also reports how many feasible instances no evaluated tester ever finds.
 
     python scripts/feasibility.py --guided runs/hyak/guided_ceiling.json --evals runs/hyak_eval_merged.json \
-        --out results/feasibility.json --tex paper/table_feasibility.tex
+        --out results/feasibility.json --tex results/tables/table_feasibility.tex
 """
 import os, sys, json, argparse
 import numpy as np
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--guided", default="runs/hyak/guided_ceiling.json"); ap.add_argument("--evals", default="runs/hyak_eval_merged.json")
-ap.add_argument("--out", default="results/feasibility.json"); ap.add_argument("--tex", default="paper/table_feasibility.tex")
+ap.add_argument("--out", default="results/feasibility.json"); ap.add_argument("--tex", default="results/tables/table_feasibility.tex")
 ap.add_argument("--names", default="random=Random,repeat_random=Action-repeat random,goexplore=Go-Explore (seed),cand1_gen037_0.6994.py=Evolved run 1 gen 37,"
                                    "macrosweep.py=Opus: macrosweep,ppo_count=PPO+count")
 ap.add_argument("--programs", default="", help="comma-separated subset for the LaTeX table (default: those in --names)")
